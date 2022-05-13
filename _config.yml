@@ -1,6 +1,6 @@
 title: "Computer Science @ ShiShi AP Center"
 author: "Mr.Mou"
-description: "Mr.Mou" + "\n" + "Computer Science instructor"
+description: "Mr.Mou" #+ "\n" + "Computer Science instructor"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
