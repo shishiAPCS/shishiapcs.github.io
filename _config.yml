@@ -16,7 +16,7 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "cspced.pdf", title: "CSP CED"}
+  - {title: "CSP CED", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
   - {file: "csaced.pdf", title: "CSA CED"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
