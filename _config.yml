@@ -1,6 +1,6 @@
 title: "Computer Science @ ShiShi AP Center"
 author: "Mr.Mou"
-description: "Roy Mou"  #+ "Computer Science instructor" + "ShiShi AP Center"
+description: "Roy Mou" + "\n" + "Computer Science instructor"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -16,13 +16,13 @@ minimal: true             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "/cspced.pdf", title: "CSP官方指南", icon}
-  - {file: "/csaced.pdf", title: "CSA官方指南"}
+  - {file: "cspced.pdf", title: "CSP CED"}
+  - {file: "csaced.pdf", title: "CSA CED"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:roy612723@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/royhowtohack"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Subscribe, icon: rss, url: "https://weixin.qq.com/f/MLGtubJxdAmjxd7LyvwWjfA"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
