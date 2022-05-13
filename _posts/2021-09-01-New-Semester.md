@@ -1,5 +1,5 @@
 ---
-title: "New Semester"
+title: "新学期准备"
 layout: post
 ---
 
