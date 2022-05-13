@@ -1,3 +1,8 @@
+---
+title: "New Semester"
+layout: post
+---
+
 # 需要注册的网站：
 
 **教材1**
@@ -13,6 +18,5 @@
 
 **教材3**
 [可汗学院](https://www.khanacademy.org/computing/ap-computer-science-principles/x2d2f703b37b450a3:digital-information)
-
-**微信群： 2022_Fall_CSP**
+微信群： 2022_Fall_CSP
 
