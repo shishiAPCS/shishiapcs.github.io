@@ -16,8 +16,8 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {title: "CSP CED", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
-  - {title: "CSA CED", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
+  - {title: "CSP 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
+  - {title: "CSA 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:roy612723@gmail.com"}
