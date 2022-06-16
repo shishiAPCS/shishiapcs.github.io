@@ -18,6 +18,7 @@ minimal: false             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {title: "CSP 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
   - {title: "CSA 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
+  - {file: "post.md", title: "Posts"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:roy612723@gmail.com"}
