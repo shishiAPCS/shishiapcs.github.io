@@ -4,7 +4,7 @@ title: ""
 ---
 
 <h3>Welcom to the world of Computer Science. </h3>
-[Click here](https://github.com/shishiAPCS/shishiapcs.github.io/blob/b8f1140e844f97452986f5fb248fb37a3c7cc8fc/_posts/) to see the work of other students. 
+[Click here](https://shishiapcs.github.io/post/) to see the work of other students. 
 
 <p>Textbooks we need are:</p> 
   <ul>
