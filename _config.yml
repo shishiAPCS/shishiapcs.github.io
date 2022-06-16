@@ -31,4 +31,3 @@ comments:
 plugins:
  - jekyll-feed
  
-remote_theme: b2a3e8/jekyll-theme-console
