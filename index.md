@@ -12,4 +12,5 @@ title: ""
   <li><a href="https://runestone.academy/user/login?_next=/)">runestone.academy</a></li>
   <li><a href="https://www.w3schools.com">w3school</a></li>
   <li><a href="https://www.freecodecamp.org">freecodecamp</a></li>
+  <li><a href="https://codehs.com">CodeHs</a></li>
 </ul>
