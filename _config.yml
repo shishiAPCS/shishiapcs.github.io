@@ -24,7 +24,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Apple, icon: apple, url: "https://appleteacher.apple.com/#/home/rp/T006361A?backTo=home%2Fprofile%2Fprogress"}
   - {title: Github, icon: github, url: "https://github.com/royhowtohack"}
   - {title: Wexin, icon: weixin, url: "https://weixin.qq.com/f/MLGtubJxdAmjxd7LyvwWjfA"}
-  - {title: Bilibili, icon: bilibili, url: "https://space.bilibili.com/13596998"}
+  - {title: bilibili, icon: bilibili, url: "https://space.bilibili.com/13596998"}
   - {title: Mail, icon: envelope, url: "mailto:roy612723@gmail.com"}
 
 comments:
