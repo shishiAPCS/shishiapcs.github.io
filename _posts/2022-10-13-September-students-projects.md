@@ -11,8 +11,10 @@ layout: post
 
 ![Yeri](https://user-images.githubusercontent.com/105401427/195861688-69411645-0e1e-4040-92ca-85c7c9e54ec6.gif)
 
+![luccitta](https://user-images.githubusercontent.com/105401427/195861794-13ee77bd-d972-4e43-904c-1642d6d2ca72.gif)
+
 ![Doris](https://user-images.githubusercontent.com/105401427/195861756-8f8e66cb-7119-4b84-8367-0574c0b44e75.gif)
 
 ![Kyrie](https://user-images.githubusercontent.com/105401427/195861784-6122407c-45dc-4193-b39e-888918e51262.gif)
 
-![luccitta](https://user-images.githubusercontent.com/105401427/195861794-13ee77bd-d972-4e43-904c-1642d6d2ca72.gif)
+
