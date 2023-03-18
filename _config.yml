@@ -17,9 +17,9 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "intro_to_cs.md", title: "Intro to CS"}
-  - {title: "CSP 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
-  - {title: "CSP 官方页面", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-principles/assessment"}  
-  - {title: "CSA 官方指南", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
+  - {file: "APCSP.md", title: "AP CSP", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
+  - {file: "APCSA.md", title: "AP CSA", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-principles/assessment"}  
+  - {title: "ESL", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
   - {file: "post.md", title: "日志"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
