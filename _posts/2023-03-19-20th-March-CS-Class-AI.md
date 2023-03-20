@@ -9,7 +9,7 @@ https://github.com/Royhowtohack/stable-diffusion-webui-colab
 
 [Pandagpt](https://app.pandagpt.io/chat)
 
-[fastgpt](https://app.pandagpt.io/chat)
+[fastgpt](https://fastgpt.app/)
 
 [AI drawing Tool Playgrounai](https://playgroundai.com) 
 
