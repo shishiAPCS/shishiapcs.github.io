@@ -16,9 +16,9 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "intro_to_cs.md", title: "Intro to CS"}
-  - {file: "APCSP.md", title: "AP CSP", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf"}
-  - {file: "APCSA.md", title: "AP CSA", url: "https://apstudents.collegeboard.org/courses/ap-computer-science-principles/assessment"}  
+  - {file: "intro_to_cs.md", title: "Introduction to CS"}
+  - {file: "APCSP.md", title: "AP CSP"}
+  - {file: "APCSA.md", title: "AP CSA"}  
   - {title: "ESL", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
   - {file: "post.md", title: "日志"}
 
