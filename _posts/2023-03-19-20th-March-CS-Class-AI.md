@@ -1,20 +1,17 @@
 # AI Tools
 
-Google colab stable diffusion
+## Google colab stable diffusion
 
 https://github.com/Royhowtohack/stable-diffusion-webui-colab
 
 
-ChatGPT Based APP
+## ChatGPT Based APP
 
-https://app.pandagpt.io/chat
+[Pandagpt](https://app.pandagpt.io/chat)
 
-https://fastgpt.app
+[fastgpt](https://app.pandagpt.io/chat)
 
-AI drawing Tool 
+[AI drawing Tool Playgrounai](https://playgroundai.com) 
 
-https://playgroundai.com
+[AI Video generator D-ID](https://www.d-id.com)
 
-AI Video generator 
-
-https://www.d-id.com
