@@ -10,9 +10,9 @@
 
 On Windows, go to internet, or 网络. You'll see CS. 
 
-<img width="888" alt="1679383408800" src="https://user-images.githubusercontent.com/105401427/226541347-c781d401-ce85-4a5d-80d0-df03b2181277.png">
-<img width="885" alt="1679383418260" src="https://user-images.githubusercontent.com/105401427/226541374-ac855971-fa3c-4c6b-a016-b6a64632c77e.png">
-<img width="892" alt="1679383428073" src="https://user-images.githubusercontent.com/105401427/226541398-da1eb3e5-d9d4-49f7-abce-981cf6ce0855.png">
+![226541374-ac855971-fa3c-4c6b-a016-b6a64632c77e](https://user-images.githubusercontent.com/105401427/226609862-eddce91b-022d-476b-a13a-d659c8694e44.png)
+![226541347-c781d401-ce85-4a5d-80d0-df03b2181277](https://user-images.githubusercontent.com/105401427/226609878-b899b5d1-3402-4225-8194-80534a5cab39.png)
+![226541398-da1eb3e5-d9d4-49f7-abce-981cf6ce0855](https://user-images.githubusercontent.com/105401427/226609901-9de4892a-08bd-4009-a636-61e565fc615b.png)
 
 
 
