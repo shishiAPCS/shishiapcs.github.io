@@ -3,9 +3,10 @@
 1. Make sure you connected to **CS_5G** or **CS** . password: **helloworld**
 2. On mac, open finder, in your network, you'll see CS.
 
-<img width="913" alt="Screen Shot 2023-03-21 at 3 21 12 PM" src="https://user-images.githubusercontent.com/105401427/226540583-eda24225-baaf-4972-8f16-822e51f4760b.png">
-<img width="909" alt="Screen Shot 2023-03-21 at 3 19 31 PM" src="https://user-images.githubusercontent.com/105401427/226540306-abc12551-d437-4b90-8dc6-cb18a078e1ed.png">
-<img width="916" alt="Screen Shot 2023-03-21 at 3 19 40 PM" src="https://user-images.githubusercontent.com/105401427/226540318-8f8b4acb-fc20-4b9b-aa8a-f29bbf56637e.png">
+![226540583-eda24225-baaf-4972-8f16-822e51f4760b](https://user-images.githubusercontent.com/105401427/226609710-773395f3-b304-4c8a-9d32-1ad3e26bd43c.png)
+![226540306-abc12551-d437-4b90-8dc6-cb18a078e1ed](https://user-images.githubusercontent.com/105401427/226609732-9faaccb1-1c33-473b-8df8-b5558098db3f.png)
+![226540318-8f8b4acb-fc20-4b9b-aa8a-f29bbf56637e](https://user-images.githubusercontent.com/105401427/226609751-4cbeba7c-4ee5-4102-a41b-373ac2c15fd2.png)
+
 
 On Windows, go to internet, or 网络. You'll see CS. 
 
