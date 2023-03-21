@@ -1,6 +1,6 @@
 # How to connect to CS ClassRoom Sharing folder
 
-1. Make sure you connected to CS_5G or CS 
+1. Make sure you connected to **CS_5G** or **CS** . password: **helloworld**
 2. On mac, open finder, in your network, you'll see CS.
 
 <img width="913" alt="Screen Shot 2023-03-21 at 3 21 12 PM" src="https://user-images.githubusercontent.com/105401427/226540583-eda24225-baaf-4972-8f16-822e51f4760b.png">
