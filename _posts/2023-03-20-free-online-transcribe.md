@@ -6,6 +6,11 @@ Go to the website [https://editor.flixier.com/tools/all-tools](https://editor.fl
 
 ![Screen Shot 2023-03-21 at 4 33 35 PM](https://user-images.githubusercontent.com/105401427/226555392-714bbb12-0fa5-4e36-bebb-5be94ac3d806.jpg)
 
+<img width="191" alt="Screen Shot 2023-03-24 at 19 10 30" src="https://user-images.githubusercontent.com/105401427/227506258-10960aa3-5b09-4317-949d-b2cb52ff2b90.png">
+
+## if you don't see the page below, open a private tab(隐身模式)
+
+
 ![Screen Shot 2023-03-21 at 4 33 55 PM](https://user-images.githubusercontent.com/105401427/226555422-1a8b04d3-300d-4b8d-a082-8bd2cdee0a1a.jpg)
 
 
