@@ -19,7 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "intro_to_cs.md", title: "CS Intro"}
   - {file: "APCSP.md", title: "AP CSP"}
   - {file: "APCSA.md", title: "AP CSA"}  
-  - {title: "ESL", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
+  - {file: "esl.md",title: "ESL"}
   - {file: "post.md", title: "POSTS"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
