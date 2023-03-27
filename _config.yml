@@ -16,7 +16,7 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "intro_to_cs.md", title: "Intro to CS"}
+  - {file: "intro_to_cs.md", title: "CS Intro"}
   - {file: "APCSP.md", title: "AP CSP"}
   - {file: "APCSA.md", title: "AP CSA"}  
   - {title: "ESL", url: "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf"}
