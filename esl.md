@@ -88,6 +88,19 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 ```
 ![TPO59_L1_panorama](https://user-images.githubusercontent.com/105401427/227857933-c723f52d-9cdc-4164-87c9-1576ecbe0e04.jpg)
 
+#### Students' work:
+     - Ethan
+   ![ethan](https://user-images.githubusercontent.com/105401427/227861546-03d35202-196f-44f8-91e2-a228e317d95a.JPG)
+     
+     - Eileen
+   ![eileen](https://user-images.githubusercontent.com/105401427/227861579-20000265-be21-434b-9358-cd6b2a6d0e7e.JPG)
+
+     - Laura 
+   ![laura](https://user-images.githubusercontent.com/105401427/227861654-2fd0d45c-0289-4953-8c0e-791bc8d2b06e.JPG)
+
+     - Yvonne 
+   ![Yvonne](https://user-images.githubusercontent.com/105401427/227861677-0a7d1de3-4e8c-4678-810f-8563d96752ce.JPG)
+
 
 
 ## TPO62 
