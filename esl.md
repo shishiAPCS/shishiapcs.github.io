@@ -46,6 +46,8 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 ```
 ![TPO58_L3_Harlem Renaissance](https://user-images.githubusercontent.com/105401427/227852746-c177a2c3-5326-434e-a992-43d16faed31d.jpg)
 
+![Screen Shot 2023-03-27 at 2 12 30 PM](https://user-images.githubusercontent.com/105401427/227855921-8610cbf5-efce-4d80-a3dc-f9ea0c69b341.jpg)
+
 
 ## TPO59 
 
