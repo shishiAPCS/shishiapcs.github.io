@@ -4,7 +4,27 @@
 
 AI drawing Tool [Playgrounai](https://playgroundai.com) 
 
+
+
+
 AI drawing Tool [midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) 
+
+samples I made:
+
+prompt `Portrait_of_cannon_operator_centered_symmetry_painted`
+![D058_Portrait_of_cannon_operator_centered_symmetry_painted_intr_115ac811-7746-4910-9a40-55ff85f25d84](https://user-images.githubusercontent.com/105401427/227894538-02e8ff06-b7df-401e-8caa-2bc26733e1cd.png)
+
+prompt `ancient_roman_girl_in_armour_beautiful_holding_a_sword`
+![D058_ancient_roman_girl_in_armour_beautiful_holding_a_sword_33f9b477-7307-4600-b5ec-622980757dea](https://user-images.githubusercontent.com/105401427/227894660-42a29d28-01c1-44a9-8ccf-1015d7bb0bcc.png)
+
+prompt `a_painting_of_10_year_old_girl_in_a_white_dress_by_Jean-Au`
+![D058_a_painting_of_10_year_old_girl_in_a_white_dress_by_Jean-Au_201e4a91-aafb-41cc-bafb-3aa35e05ca8d](https://user-images.githubusercontent.com/105401427/227894698-25e86646-f8f1-4bb5-be64-966d16aed201.png)
+
+prompt `White_chubby_kitten_high_definition_sunshine_happy_running`
+
+![D058_White_chubby_kitten_high_definition_sunshine_happy_running_dbdf6297-e884-47af-9076-45bf87817e2a](https://user-images.githubusercontent.com/105401427/227895095-a9c9ec13-9c92-4900-99d4-9848560935e7.png)
+
+
 
 AI Video generator [D-ID](https://www.d-id.com)
 
