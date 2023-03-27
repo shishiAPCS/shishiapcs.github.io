@@ -44,8 +44,8 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 - Black World War I veterans faced discrimination after returning from the war
 - Defiance and assertiveness contributed to the mood of the Harlem Renaissance
 ```
+<img width="1471" alt="Screen Shot 2023-03-27 at 2 48 37 PM-min" src="https://user-images.githubusercontent.com/105401427/227863014-d13de8c8-4a88-4de3-b98b-4f1e7ce60444.png">
 
-![TPO58 L3 Harlem Renaissance mind map](https://user-images.githubusercontent.com/105401427/227855921-8610cbf5-efce-4d80-a3dc-f9ea0c69b341.jpg)
 
 
 ## TPO59 
@@ -86,7 +86,7 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 - Many panoramas were painted over, cut up, or sold, leaving few examples to be preserved
 
 ```
-![TPO59_L1_panorama](https://user-images.githubusercontent.com/105401427/227857933-c723f52d-9cdc-4164-87c9-1576ecbe0e04.jpg)
+<img width="1483" alt="Screen Shot 2023-03-27 at 2 48 59 PM-min" src="https://user-images.githubusercontent.com/105401427/227862578-83afdcdd-90f3-4026-ba42-ab1895bace47.png">
 
 #### Students' work:
      - Ethan
