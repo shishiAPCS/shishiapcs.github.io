@@ -48,6 +48,11 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 
 #### Students' work:
 
+
+     - Yuna
+     
+![IMG_2063](https://user-images.githubusercontent.com/105401427/228139054-41b9150c-3ac1-4356-915e-5f025e3207b0.PNG)     
+
      - Taylor
      
 ![IMG_2054-min](https://user-images.githubusercontent.com/105401427/227906745-27755f0f-8a15-46de-85b4-b9712e59051b.JPG)
