@@ -1,10 +1,8 @@
----
-layout: page
-title: ""
----
-
-<h3>Welcom to the world of Computer Science. </h3>
-[Click here](https://shishiapcs.github.io/post/) to see the work of other students. 
+# Welcom to the world of Computer Science 😄
+## Some works of earlier students:  
+  - [2020](_posts/2020-06-14-2020studentwork.md)
+  - [2021](_posts/2021-06-16-2021studentwork2.md)
+  - [2022](_posts/2022-06-16-2022studentwork.md)
 
 <p>Here are some of the textbooks we will be using: </p> 
   <ul>
@@ -15,8 +13,8 @@ title: ""
   <li><a href="https://codehs.com">CodeHs</a></li>
 </ul>
 
-<h4>高一入门计算机课程所需资料如下: </h4>
+<h4>Senior 1 intro to CS core concepts: </h4>
   <ul>
-  <li><a href="https://codehs.com/uploads/0fd5bfa950acbf0758214449a5a385ae">课程大纲</a></li>
-  <li><a href="https://codehs.com/textbook/introjs_textbook">主教材</a></li>
+  <li><a href="https://codehs.com/uploads/0fd5bfa950acbf0758214449a5a385ae">Topics</a></li>
+  <li><a href="https://codehs.com/textbook/introjs_textbook">textbook sample</a></li>
   </ul>
