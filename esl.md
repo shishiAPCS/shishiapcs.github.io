@@ -1,5 +1,35 @@
 # Mind Maps for TPO Listenings 
 
+## TPO56
+
+### TPO 56 L1 Jackson Pollock
+
+```
+# TPO 56 L1 Jackson Pollock Abstract Expressionism
+- **Main Idea**: Late 1940s and 1950s art movement in the United States
+- **Characteristics**: Revolt against tradition, focus on spontaneous freedom of expression, abstract imagery
+    - **Jackson Pollock**
+        - Most famous American Abstract Expressionist
+        - **Pour and Drip Technique**
+            - Laid canvas flat on the floor
+            - Poured and dripped paint without using a brush
+            - Created large-scale, groundbreaking works
+                - *Example*: Autumn Rhythm (1950)
+                    - Appears chaotic, but has definite structure
+        - **Action Painting**
+            - Emphasizes physical process of creating the painting
+            - Artist's control over materials
+    - **Perspective**
+        - Change from painting on the floor to viewing on a wall not significant
+        - Comparison to viewing photographs taken from different angles
+    - **Influence**
+        - Shift of the art world's focus from Paris to New York
+        - Impact on the development of Abstract Expressionism and the broader art community
+```
+
+<img width="2387" alt="Screen Shot 2023-04-03 at 08 42 15-min" src="https://user-images.githubusercontent.com/105401427/229388559-6001ba36-bd2b-4ecf-bb47-6377c0a03ded.png">
+
+
 ## TPO58
 
 ### [TPO58 L3 Harlem Renaissance](http://top.zhan.com/toefl/listen/intensive.html?appID=63432520%2C2371&backUrl=http%3A%2F%2Ftop.zhan.com%2Ftoefl%2Flisten%2Fjingting58.html)
