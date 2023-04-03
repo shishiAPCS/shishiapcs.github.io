@@ -137,5 +137,39 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 ![Yvonne](https://user-images.githubusercontent.com/105401427/227861677-0a7d1de3-4e8c-4678-810f-8563d96752ce.JPG)
 
 
+### TPO59 L2 Mass Wasting 
+
+```
+# TPO59 L2 Mass Wasting
+- **Main Idea**: Discussion of mass wasting, particularly creep and solifluction, and their impact on the environment and infrastructure
+
+## Creep
+- More common type of mass wasting
+- Soil moves slowly downhill due to gravity and water
+- *Example*: Curved trees or tilted fences as evidence of creep
+
+### Wet-Dry Cycles
+- Occurs in warmer areas
+- Wet conditions cause soil to expand, and dry conditions cause it to contract
+
+## Solifluction
+- Similar to creep, occurs in permafrost areas
+- Soil moves uniformly down the slope as one large mass
+- *Example*: Varying rates of solifluction in Spitsbergen, Norway, evidenced by stumps left over from a 1940 era structure
+
+## Building on Slopes
+- Not always the best idea
+- Slopes can be stabilized in various ways
+
+## Building on Permafrost
+- Risky and should be avoided or done carefully
+- Structures should be elevated on posts
+- *Example*: Improper elevation can cause solifluction to destabilize the ground, leading to slides or flows and related problems
+```
+<img width="1214" alt="Screen Shot 2023-04-03 at 08 30 31-min" src="https://user-images.githubusercontent.com/105401427/229387796-6851cbe0-8fe9-4215-864f-d83bca97bd93.png">
+
+
+
+
 
 ## TPO62 
