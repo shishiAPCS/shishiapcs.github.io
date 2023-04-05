@@ -1,8 +1,9 @@
 ## Projects from other students
 
 - [Pixelated Art Works](2022-11-28-November-students-projects.md)
-
 - [Code Drawing](2022-11-28-November-students-projects.md) 
+- [Ai Generated Pictures]()
+- [Ai Generated Videos]()
 
 #### AP Computer Science Principles Create Tasks 
   - [2020](_posts/2020-06-14-2020studentwork.md)
@@ -21,6 +22,6 @@
 ## Senior 1 core concepts:
   <ul>
   <li><a href="https://codehs.com/uploads/0fd5bfa950acbf0758214449a5a385ae">Topics</a></li>
-  <li><a href="https://codehs.com/textbook/introjs_textbook">textbook sample</a></li>
+  <li><a href="https://codehs.com/textbook/introjs_textbook">Textbook Sample</a></li>
   </ul>
   
