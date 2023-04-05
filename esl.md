@@ -198,6 +198,20 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 ```
 <img width="1214" alt="Screen Shot 2023-04-03 at 08 30 31-min" src="https://user-images.githubusercontent.com/105401427/229387796-6851cbe0-8fe9-4215-864f-d83bca97bd93.png">
 
+#### Students' work:
+
+     - Yvonne
+     
+![Yvonne mass wasting-min](https://user-images.githubusercontent.com/105401427/230042912-58ed5089-e945-4470-9486-64ded89b0408.jpeg)
+
+     - Laura 
+     
+<img width="1027" alt="IMG_2132-min" src="https://user-images.githubusercontent.com/105401427/230043422-5e6a3cb0-279c-4afa-8321-12d99d3c1231.PNG">
+
+     - Ethan 
+     
+![IMG_2114-min](https://user-images.githubusercontent.com/105401427/230044232-eacebed5-cf6d-4e10-8c30-6f8ce4f3302a.JPG)
+
 
 
 
