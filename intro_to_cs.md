@@ -1,9 +1,9 @@
 ## Projects from other students
 
-- [Pixelated Art Works](_posts/2022-11-28-November-students-projects.md)
+- [Pixelated Art Works](_posts/2022-10-13-September-students-projects.md)
 - [Code Drawing](_posts/2022-11-28-November-students-projects.md) 
 - [Ai Generated Pictures](_posts/2023-04-04-4th-April-Ai-Pictures.md)
-- [Ai Generated Videos]()
+- [Ai Generated Videos](_posts/2023-04-04-4th-April-Ai-Videos.md)
 
 #### AP Computer Science Principles Create Tasks 
   - [2020](_posts/2020-06-14-2020studentwork.md)
