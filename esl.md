@@ -243,6 +243,10 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 
 #### Students' work:
 
+     - Luccita 
+     
+![luccita-min](https://user-images.githubusercontent.com/105401427/230547417-9cb870ff-1c0b-4bbc-950d-a4f346a07000.JPG)
+
      - Yvonne
      
 ![Yvonne mass wasting-min](https://user-images.githubusercontent.com/105401427/230042912-58ed5089-e945-4470-9486-64ded89b0408.jpeg)
