@@ -64,3 +64,35 @@
     - minato 
     
 ![IMG_2109-min](https://user-images.githubusercontent.com/105401427/230045837-fbb7e015-2118-4de9-852a-900463e3d433.JPG)
+
+### TPO 56 L2 Archaeopteryx
+
+```
+# TPO56_L2_Archaeopteryx
+## 讲座主要讨论了古老的鸟类，特别是被称为始祖鸟（Archaeopteryx）的一种鸟类。始祖鸟是一种具有争议的古生物，因为它具有鸟类和恐龙的特征。讲座探讨了关于始祖鸟演化地位的争论以及它是否具有飞行能力的问题。
+
+## 主要观点和例子
+
+1. **始祖鸟的发现**：1861年在德国的一个采石场发现了第一块始祖鸟化石。化石非常精细，甚至能看到羽毛的印象。
+2. **为什么化石如此精细**：这是因为始祖鸟化石被发现于非常细粒的石灰岩中，这种石灰岩能以精美的细节保存化石。
+3. **始祖鸟与现代鸟类和恐龙的相似之处**：鸟类学家认为始祖鸟是现代鸟类的早期祖先，而古生物学家则认为它与某些恐龙物种相似。
+4. **关于始祖鸟地位的争论**：尽管它没有喙，尾巴像爬行动物一样长而骨质，但它仍被归类为鸟类。争论的焦点在于始祖鸟在演化上的位置：古生物学家认为它是恐龙与现代鸟类之间的一种联系，而鸟类学家认为它是具有特殊特征的鸟类。
+5. **始祖鸟的飞行能力**：关于始祖鸟是否能飞行，我们没有确凿的证据。尽管它具有一些现代鸟类的特征，但它可能在地面上起飞很笨拙，空中也不太优雅。
+6. **羽毛演化的原因**：最近的研究认为，始祖鸟的羽毛可能不是为了飞行而演化的，而是为了展示（雄性用鲜艳的羽毛吸引配偶）或保暖（羽毛在低温下保持体温很有用）。
+
+```
+<img width="1491" alt="Screen Shot 2023-04-10 at 8 33 44 AM-min" src="https://user-images.githubusercontent.com/105401427/230804230-1a185e47-3cd6-4a51-bcc3-dfb9a933a1aa.png">
+
+#### Questions:
+
+```
+1.  What does the professor mainly discuss? 答：教授主要讨论了叫做“archaeopteryx”的古代鸟类。 相关句子：FEMALE PROFESSOR: OK, we’ve been talking about birds, modern birds, and their environments. But it might be interesting to say something about ancient birds, especially the one called archaeopteryx.
+    
+2.  According to the professor, why was the first archaeopteryx fossil of unusually high quality? 答：第一个archaeopteryx化石之所以质量异常高，是因为它被发现于德国一座采石场的极细粒石灰岩中。 相关句子：FEMALE PROFESSOR: Well, I mentioned before that the archaeopteryx fossil was found in a quarry– you know, where people cut stone– in this case, exceptionally fine-grained limestone.
+    
+3.  Why does the professor mention the Mona Lisa? 答：教授提到蒙娜丽莎是为了说明不同的观众会根据自己的偏见对它有不同的理解，而archaeopteryx在科学界也有类似的地位。 相关句子：FEMALE PROFESSOR: It’s like, say, the Mona Lisa… you guys have seen copies of that painting, right? The Mona Lisa? Well, one of the great things about it is that each person who sees that painting understands it a little differently, according to their own biases. You might say that the archaeopteryx is a scientific Mona Lisa.
+    
+4.  What point does the professor make about the tail of the archaeopteryx? 答：教授指出archaeopteryx的尾巴长且骨质，类似爬行动物的尾巴，而不像现代鸟类的尾巴短且粗壮。 相关句子：FEMALE PROFESSOR: I mean, it is very different from modern birds in some important ways—there’s no beak, the tail is long and bony the way a reptile’s is, rather than short and stubby like a modern bird’s.
+    
+5.  What is the professor’s attitude toward the recent research on fossils discovered in China？ 答：教授认为，尽管这项最近基于中国发现的化石的研究尚未完成，但她觉得其结论非常有说服力。 相关句子：FEMALE PROFESSOR: Well, the most recent research is based on some fossils being found in China. It’s hardly complete, but I find its conclusions really compelling.
+```
