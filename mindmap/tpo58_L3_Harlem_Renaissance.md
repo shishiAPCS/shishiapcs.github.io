@@ -1,5 +1,3 @@
-## TPO58
-
 ### [TPO58 L3 Harlem Renaissance](http://top.zhan.com/toefl/listen/intensive.html?appID=63432520%2C2371&backUrl=http%3A%2F%2Ftop.zhan.com%2Ftoefl%2Flisten%2Fjingting58.html)
 
 ```
@@ -45,7 +43,6 @@ The lecture focuses on the Harlem Renaissance, its significance in the United St
 <img width="1471" alt="Screen Shot 2023-03-27 at 2 48 37 PM-min" src="https://user-images.githubusercontent.com/105401427/227863014-d13de8c8-4a88-4de3-b98b-4f1e7ce60444.png">
 
 #### Students' work:
-
 
      - Yuna
      
