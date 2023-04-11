@@ -98,25 +98,30 @@
 ```
 #### Students' work:
 
-
-   
     - Nancy 
+    
 <img width="1431" alt="Nancy TPO56L2-min" src="https://user-images.githubusercontent.com/105401427/231068252-03133986-f07c-4934-adfc-7abd626e7a91.png">
     
     
     - Yuna
+    
 ![IMG_2199-min](https://user-images.githubusercontent.com/105401427/231068296-96b05c34-1ed8-4ff8-9520-f936703d2b29.PNG)
   
     - Paul
-<img width="484" alt="IMG_2200-min" src="https://user-images.githubusercontent.com/105401427/231068322-93fb1d0a-61c3-4365-9cfc-1f85042a220e.PNG">
+    
+<img width="484" alt="IMG_2200-min" src="https://user-images.githubusercontent.com/105401427/231069662-95c2834d-ac78-45b6-a555-2dce2676bc75.PNG">
+    
  
     - Zoe
+    
 ![IMG_2183-min](https://user-images.githubusercontent.com/105401427/231067639-f0f8fdf0-9eba-4205-8c51-fa6d9939b3a4.JPG)
     
     - Amy
+    
 ![IMG_2184-min](https://user-images.githubusercontent.com/105401427/231067695-4cb3771d-1c07-4e32-abfe-8964d3960531.JPG)
 
     - Taylor
+    
 ![IMG_2185-min](https://user-images.githubusercontent.com/105401427/231067747-308c0601-9bc5-4e65-a610-21f40e220bfc.JPG)
     
     - Yancy 
@@ -124,15 +129,19 @@
 ![IMG_2186-min](https://user-images.githubusercontent.com/105401427/231067793-10ffde36-b3f1-4070-b226-81f93c09c03b.JPG)
     
     - Dia
+    
 ![IMG_2187-min](https://user-images.githubusercontent.com/105401427/231067813-7fb254c3-1f4c-43a5-b1f3-724fdbbda1a0.JPG)
     
     - Shelia 
+    
 ![IMG_2188-min](https://user-images.githubusercontent.com/105401427/231067850-80de44f4-f9ea-4fa6-ad66-7fbdf810327a.JPG)
     
     - Minato 
+    
 ![IMG_2189-min](https://user-images.githubusercontent.com/105401427/231067867-ad8718b7-3e5f-4c56-9d9a-f7babb209193.JPG)
     
     - David 
+    
 ![IMG_2190-min](https://user-images.githubusercontent.com/105401427/231067897-69dd352b-e5a9-434f-b3c9-2feae6e0ae5d.JPG)
     
     - Luca 
