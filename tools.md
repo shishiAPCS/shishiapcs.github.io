@@ -2,7 +2,7 @@
 
 ## Essentials 
 
-### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
+* ### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 
 ## Free online tools 
 
