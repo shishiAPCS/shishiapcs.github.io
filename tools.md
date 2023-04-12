@@ -26,3 +26,7 @@
 ### Image compression 
 
 * [https://compressjpeg.com](https://compressjpeg.com/)
+
+### Markdown table generartor 
+
+* [https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
