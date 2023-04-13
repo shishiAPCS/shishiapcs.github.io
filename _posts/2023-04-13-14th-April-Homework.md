@@ -10,9 +10,9 @@
 
 ## Due before Monday class time
 
-### put your <span style="color:red;">mind map</span> and _vocabulary collection_ under [https://shishiapcs.github.io/esl/](https://shishiapcs.github.io/esl/) 
+### put your <span style="color:red;">mind map</span> and <span style="color:red;">vocabulary collection</span> under [https://shishiapcs.github.io/esl/](https://shishiapcs.github.io/esl/) 
 
-### examples for the vocabulary collection 
+### Examples for the vocabulary collection 
 
 | Word | English Explanation | Chinese Explanation | Example Sentence |
 | --- | --- | --- | --- |
