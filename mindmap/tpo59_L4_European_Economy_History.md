@@ -49,19 +49,24 @@ Questions:
 #### Students' work:
 
      - Amber
+     
 ![Amber gulids-min](https://user-images.githubusercontent.com/105401427/231670701-06ef3a4a-aa3f-4559-8b7e-b9505bca16f7.png)
      
      - Laura 
+     
 ![Laura2 gulids-min](https://user-images.githubusercontent.com/105401427/231670728-f106906b-0458-438e-90fc-90263a2709fa.png)
      
      - Olivia 
+     
 ![Olivia European economic history-min](https://user-images.githubusercontent.com/105401427/231670742-9d29d49c-d0ca-4e45-9843-bb16ce5cf508.png)
      
      - Yvonne
+     
 ![Yvonne-min](https://user-images.githubusercontent.com/105401427/231670784-c652166f-102f-4ee1-b558-727853c94c94.jpeg)
      
      - Theo
-  <img width="1222" alt="theo" src="https://user-images.githubusercontent.com/105401427/231670799-0f880342-02b7-49dd-a6cf-12dcea65fdd6.png">
+     
+<img width="1222" alt="theo" src="https://user-images.githubusercontent.com/105401427/231670799-0f880342-02b7-49dd-a6cf-12dcea65fdd6.png">
    
      
 
