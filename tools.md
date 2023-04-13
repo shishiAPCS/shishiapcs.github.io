@@ -40,5 +40,9 @@
 
 * [https://profilepicturemaker.com/#quotemaker](https://profilepicturemaker.com/#quotemaker)
 
+### B站视频字幕提取
+
+* [greasyfork](https://greasyfork.org/zh-CN/scripts/378513-bilibili-cc%E5%AD%97%E5%B9%95%E5%B7%A5%E5%85%B7)
+
 
 
