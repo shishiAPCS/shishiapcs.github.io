@@ -42,7 +42,7 @@
 
 ### B站视频字幕提取
 
-* [greasyfork](https://greasyfork.org/zh-CN/scripts/378513-bilibili-cc%E5%AD%97%E5%B9%95%E5%B7%A5%E5%85%B7)
+* [greasyfork](https://www.bilibili.com/video/BV1L3411J7Yc/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 
 
 
