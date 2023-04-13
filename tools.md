@@ -4,7 +4,7 @@
 
 * ### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub Account](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-* ### [How to leave comments](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [How to leave comments on shishiapcs.github.io](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
 ## Free online tools 
 
