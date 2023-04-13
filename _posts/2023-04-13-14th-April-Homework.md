@@ -5,7 +5,7 @@
 
 # Lion 🦁️
 - [ ] [TPO 60 C2 French Film 法国电影](https://top.zhan.com/toefl/listen/review-2543-13.html?article_id=2543) (vocabulary, shadowing)
-- [ ] [TPO 60 L1 historical development and use of oil paint 油画的历史发展和使用](https://top.zhan.com/toefl/listen/review-2541-13.html?article_id=2541) ([vocabulary](mindmap/tpo60_L1_oil_paint.md), [mind map](main/mindmap/tpo60_L1_oil_paint.md), shadowing)
+- [ ] [TPO 60 L1 historical development and use of oil paint 油画的历史发展和使用](https://top.zhan.com/toefl/listen/review-2541-13.html?article_id=2541) ([vocabulary](https://github.com/shishiAPCS/shishiapcs.github.io/tree/main/mindmap/tpo60_L1_oil_paint.md), [mind map](https://github.com/shishiAPCS/shishiapcs.github.io/tree/main/mindmap/tpo60_L1_oil_paint.md), shadowing)
 
 
 ## Due before Monday class time
