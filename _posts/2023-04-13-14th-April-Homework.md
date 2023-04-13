@@ -10,7 +10,7 @@
 
 ## Due before Monday class time
 
-### put your _mind map_ and _vocabulary collection_ under [https://shishiapcs.github.io/esl/](https://shishiapcs.github.io/esl/) 
+### put your <span style="color:red;">mind map</span> and _vocabulary collection_ under [https://shishiapcs.github.io/esl/](https://shishiapcs.github.io/esl/) 
 
 ### examples for the vocabulary collection 
 
