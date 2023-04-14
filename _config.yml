@@ -27,7 +27,7 @@ external:                  # shows a footer with social links - for available ic
   - {title: Github, icon: github, url: "https://github.com/royhowtohack"}
   - {title: Wexin, icon: weixin, url: "https://weixin.qq.com/f/MLGtubJxdAmjxd7LyvwWjfA"}
   - {title: Mail, icon: envelope, url: "mailto:roy612723@gmail.com"}
-  - {title: bilibili, icon: bilibili, url: "https://space.bilibili.com/13596998/video"}
+  - {title: bilibili, icon: youtube, url: "https://space.bilibili.com/13596998/video"}
   
   
 
