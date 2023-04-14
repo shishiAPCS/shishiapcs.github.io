@@ -10,11 +10,11 @@
 
 ### Mind map
 
-* [https://app.mindmup.com](https://app.mindmup.com/)
+* [在线思维导图](https://app.mindmup.com/)
 
 ### Audio to text
 
-* [https://editor.flixier.com/tools/all-tools](https://editor.flixier.com/tools/all-tools)
+* [语音转文字](https://editor.flixier.com/tools/all-tools)
     - [how to use](_posts/2023-03-20-free-online-transcribe.md)         
 
 ### Text to audio 
@@ -27,7 +27,7 @@
 
 ### Image compression 
 
-* [https://compressjpeg.com](https://compressjpeg.com/)
+* [图片压缩](https://compressjpeg.com/)
 
 ### Markdown
 
@@ -40,7 +40,7 @@
 
 ### circular profile picture
 
-* [https://profilepicturemaker.com/#quotemaker](https://profilepicturemaker.com/#quotemaker)
+* [圆形头像](https://profilepicturemaker.com/#quotemaker)
 
 ### B站视频字幕提取
 
