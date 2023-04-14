@@ -18,3 +18,5 @@
 
 - ## TPO60
     - [tpo60_L1_oil_paint](mindmap/tpo60_L1_oil_paint.md) 
+    - [tpo60_L2_Building_Design](mindmap/tpo60_L2_Building_Design.md)
+    - [tpo60_L3_Psychological_Development](mindmap/tpo60_L3_Psychological_Development.md)
