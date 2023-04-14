@@ -29,9 +29,10 @@
 
 * [https://compressjpeg.com](https://compressjpeg.com/)
 
-### Markdown table generartor 
+### Markdown
 
-* [https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+* [Markdown table generartor ](https://www.tablesgenerator.com/markdown_tables)
+* [中文语法说明](https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/markdown-basics)
 
 ### m4a to mp4 
 
