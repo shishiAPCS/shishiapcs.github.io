@@ -1,6 +1,6 @@
 # Tools 
 
-## Essentials 
+## Essentials 必备
 
 * ### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub Account](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
@@ -8,7 +8,7 @@
 
 ## Ai Tools
 
-### ChatGpt 替代方案
+### Chatgpt alternatives 替代方案
 
 * [Poe](https://poe.com/)
 * [new bing](https://www.bing.com/new)
@@ -30,7 +30,7 @@
 
 ### pdf merge & pdf to word 
 
-* [https://smallpdf.com/](https://smallpdf.com/)
+* [smallpdf](https://smallpdf.com/)
 
 ### Image compression 
 
@@ -43,7 +43,7 @@
 
 ### m4a to mp4 
 
-* [https://www.freeconvert.com/m4a-to-mp4](https://www.freeconvert.com/m4a-to-mp4)
+* [freeconvert](https://www.freeconvert.com/m4a-to-mp4)
 
 ### circular profile picture
 
