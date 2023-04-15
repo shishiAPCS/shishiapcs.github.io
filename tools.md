@@ -6,6 +6,13 @@
 * ### [GitHub Account](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [How to leave comments on shishiapcs.github.io](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
+## Ai Tools
+
+### ChatGpt 替代方案
+
+* [Poe](https://poe.com/)
+* [new bing](https://www.bing.com/new)
+
 ## Free online tools 
 
 ### Mind map
