@@ -2,9 +2,10 @@
 
 ## Essentials 必备
 
-* ### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
-* ### [GitHub Account](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-* ### [shishiapcs.github.io 留言系统](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
+* ### [GitHub 账号](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
+* ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
+* ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
 ## Ai Tools
 
@@ -17,7 +18,8 @@
 
 ### Ai 绘画
 
-* midjourney 
+* [midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) 
+* [playgroundai](https://playgroundai.com)
 
 ### Ai 自动生成PPT
 
