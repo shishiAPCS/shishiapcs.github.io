@@ -11,10 +11,15 @@
 ### Chatgpt alternatives 替代方案
 
 * [Poe](https://poe.com/)
-* [new bing](https://www.bing.com/new)
+* [Microsoft new bing](https://www.bing.com/new)
+* [Google bard](https://bard.google.com/)
 
 ## Free online tools 
 
+### English 
+
+* [Youglish](https://youglish.com/)
+ 
 ### Mind map
 
 * [在线思维导图](https://app.mindmup.com/)
