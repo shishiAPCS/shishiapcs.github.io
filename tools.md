@@ -4,15 +4,24 @@
 
 * ### [Sharing folder](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub Account](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-* ### [How to leave comments on shishiapcs.github.io](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [shishiapcs.github.io 留言系统](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
 ## Ai Tools
 
-### Chatgpt alternatives 替代方案
+### chatbot 对话机器人
 
+* [Chatgpt](https://chat.openai.com)
 * [Poe](https://poe.com/)
 * [Microsoft new bing](https://www.bing.com/new)
 * [Google bard](https://bard.google.com/)
+
+### Ai 绘画
+
+* midjourney 
+
+### Ai 自动生成PPT
+
+* [Mindshow](https://www.mindshow.fun/#/login?inviteCode=6515025)
 
 ## Free online tools 
 
@@ -33,7 +42,7 @@
 
 * Edge browser 
 
-### pdf merge & pdf to word 
+### pdf 在线工具（合并 & 转 word …… etc） 
 
 * [smallpdf](https://smallpdf.com/)
 
