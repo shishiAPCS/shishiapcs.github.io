@@ -17,6 +17,18 @@
 * [Poe](https://poe.com/)
 * [Microsoft new bing](https://www.bing.com/new)
 * [Google bard](https://bard.google.com/)
+* [Claude](https://slack.com/get-started#/create)
+
+#### Claude 用法
+```
+Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台工作区。具体方法如下 ：
+
+1、在 https://slack.com/get-started#/create 建立工作空间，输入邮箱，写入验证码即可；
+
+2、给工作区取名字、邀请用户可以跳过或者按照实际情况操作；
+
+3、在工作区添加应用，点击 Claude 即可；或者是在已经登陆的工作区新开浏览器窗口 进入 https://www.anthropic.com/claude-in-slack 添加即可；
+```
 
 #### Prompts 咒语
 
