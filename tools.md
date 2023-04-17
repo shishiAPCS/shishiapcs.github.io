@@ -32,9 +32,9 @@ Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台
 
 #### Prompts 咒语
 
-* 查单词并放入markdown表格
+* 查单词并生成markdown表格
 ```
-I want you to act like an English teacher. You’ll need to explain some words or phrases for me in the format I provide later. All the words or phrases you need to explain are in “”. I’ll also give you a context, so you can have a better understanding, the contnext would be in {}. Now, you need to make a markdown table for me, out put as a code block like ``` ```, so i can copy. The table has 4 columns, the first column is the words or phrases needed to be explained, the second column is the English meaning for the words or phrases in the context I provide, the third column is the equivelent chinese expression, the forth column is one real life example sentence that has the same meaning as in the context I provide. 
+I want you to act like an English teacher. You’ll need to explain some words or phrases for me in the format I provide later. All the words or phrases you need to explain are in “”. I’ll also give you a context, so you can have a better understanding, the contnext would be in {}. Now, you need to make a markdown table for me, out put as a code block, so i can copy. The table has 4 columns, the first column is the words or phrases needed to be explained, the second column is the English meaning for the words or phrases in the context I provide, the third column is the equivelent chinese expression, the forth column is one real life example sentence that has the same meaning as in the context I provide. 
 
 Here are the phrases for you “生词放这里”,{语境放这里。句子，讲座都行} 
 ```
