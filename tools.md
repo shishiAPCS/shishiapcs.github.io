@@ -1,11 +1,13 @@
 # Tools 
-
+---
 ## Essentials 必备
 
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub 账号](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+
+----
 
 ## Ai Tools
 
@@ -16,6 +18,16 @@
 * [Microsoft new bing](https://www.bing.com/new)
 * [Google bard](https://bard.google.com/)
 
+#### Prompts 咒语
+
+* 查单词并放入markdown表格
+```
+I want you to act like an English teacher. You’ll need to explain some words or phrases for me in the format I provide later. All the words or phrases you need to explain are in “”. I’ll also give you a context, so you can have a better understanding, the contnext would be in {}. Now, you need to make a markdown table for me, out put as a code block like ``` ```, so i can copy. The table has 4 columns, the first column is the words or phrases needed to be explained, the second column is the English meaning for the words or phrases in the context I provide, the third column is the equivelent chinese expression, the forth column is one real life example sentence that has the same meaning as in the context I provide. 
+
+Here are the phrases for you “生词放这里”,{语境放这里。句子，讲座都行} 
+```
+
+
 ### Ai 绘画
 
 * [midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) 
@@ -24,6 +36,8 @@
 ### Ai 自动生成PPT
 
 * [Mindshow](https://www.mindshow.fun/#/login?inviteCode=6515025)
+
+---
 
 ## Free online tools 
 
