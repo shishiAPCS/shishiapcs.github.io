@@ -29,6 +29,7 @@
 
 ### English 
 
+* [新编英语阅读手册 叶永昌](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
 * [Youglish](https://youglish.com/)
  
 ### Mind map
@@ -43,6 +44,7 @@
 ### Text to audio 
 
 * Edge browser 
+* [elevenlabs](https://beta.elevenlabs.io/speech-synthesis)
 
 ### pdf 在线工具（合并 & 转 word …… etc） 
 
