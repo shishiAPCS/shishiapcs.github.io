@@ -7,6 +7,20 @@
 * ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
+    #### Example
+
+        # Cameron
+
+        ![Cameron](https://github.com/Royhowtohack/disk/blob/main/audiobook.png?raw=true)
+
+        
+        | Word | English Explanation | Chinese Explanation | Example Sentence |
+        | --- | --- | --- | --- |
+        | sentimental | having or showing tender, romantic, or nostalgic feelings | 情感细腻的，感伤的 | She became sentimental when she found her childhood toy. |
+        | interrupt | to stop or hinder by breaking in | 打断，中断 | Please don't interrupt me while I'm speaking. |
+        | contract | a written or spoken agreement that is intended to be enforceable by law | 合同，契约 | We signed a contract to buy the house. | 
+        
+
 ----
 
 ## Ai Tools
