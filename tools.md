@@ -2,6 +2,8 @@
 ---
 ## Essentials 必备
 
+* ### [美国 AppleID 注册](https://www.youtube.com/watch?v=Y51VMx4NOfk)
+* ### [🪜 规则](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/#%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%92%E5%88%86)
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub 账号](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
@@ -27,11 +29,11 @@
 
 ### chatbot 对话机器人
 
-* [Chatgpt](https://chat.openai.com)
-* [Poe](https://poe.com/)
-* [Microsoft new bing](https://www.bing.com/new)
+* [Chatgpt](https://chat.openai.com) ```新手不友好```
+* [Poe](https://poe.com/) ```好用```
+* [Microsoft new bing](https://www.bing.com/new) ```智障```
 * [Google bard](https://bard.google.com/)  ``` 需要美国IP```
-* [Claude](https://slack.com/get-started#/create)
+* [Claude](https://slack.com/get-started#/create) ```后起之秀```
 
 #### Claude 用法
 
