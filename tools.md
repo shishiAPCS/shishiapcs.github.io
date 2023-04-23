@@ -46,7 +46,8 @@ Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台
 
 2、给工作区取名字、邀请用户可以跳过或者按照实际情况操作；
 
-3、在工作区添加应用，点击 Claude 即可；或者是在已经登陆的工作区新开浏览器窗口 进入 https://www.anthropic.com/claude-in-slack 添加即可；
+3、在工作区添加应用，点击 Claude 即可；或者是在已经登陆的工作区新开浏览器窗口 进入 https://www.anthropic.com/claude-in-slack 添加即可。
+
 ```
 </details>
 
@@ -60,6 +61,7 @@ I want you to act like an English teacher. You’ll need to explain some words o
 
 Here are the phrases for you “生词放这里”,{语境放这里。句子，讲座都行} 
 ```
+
 </details>
 
 ### Ai 绘画
