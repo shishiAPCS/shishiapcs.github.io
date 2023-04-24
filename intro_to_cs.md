@@ -17,7 +17,8 @@
   <li><a href="https://www.w3schools.com">w3school</a></li>
   <li><a href="https://www.freecodecamp.org">freecodecamp</a></li>
   <li><a href="https://codehs.com">CodeHs</a></li>
-</ul>
+  <li><a href="https://replit.com">Replit</a><li>
+  </ul>
 
 ## Senior 1 core concepts:
   <ul>
