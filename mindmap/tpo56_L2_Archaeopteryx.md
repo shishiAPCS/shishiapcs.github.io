@@ -1,24 +1,24 @@
 ### TPO 56 L2 Archaeopteryx
 
-<svg id="markmap" style="width: 800px; height: 800px"></svg>
+<div id="markmap-container" style="width: 100%; height: 400px;"></div>
+
 <script>
-  const markdownContent = `# Your Markdown Content
+  document.addEventListener("DOMContentLoaded", function () {
+    const markdownContent = `
+# Your Markdown Content
 - Topic 1
   - Subtopic 1.1
   - Subtopic 1.2
 - Topic 2
-  - Subtopic 2.1`;
+  - Subtopic 2.1
+    `;
 
-  const { transform, fill } = window.markmap.lib;
-  const { Markmap, loadCSS, loadJS } = window.markmap.view;
-  const { root, features } = transform(markdownContent);
-  const { styles, scripts } = fill.features(features);
+    const { transform } = window.markmap.lib;
+    const { Markmap } = window.markmap;
 
-  if (styles) loadCSS(styles);
-  if (scripts) loadJS(scripts, { getMarkmap: () => window.markmap.view });
-
-  const svgEl = document.querySelector('#markmap');
-  Markmap.create(svgEl, undefined, root);
+    const data = transform(markdownContent);
+    const markmapInstance = Markmap.create("#markmap-container", null, data);
+  });
 </script>
 
 
