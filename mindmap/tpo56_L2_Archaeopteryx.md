@@ -1,9 +1,6 @@
 ### TPO 56 L2 Archaeopteryx
 
-<div id="markmap" style="width: 100%; height: 400px;"></div>
-<script>
-  const markdownContent = `
-  # TPO56_L2_Archaeopteryx
+<div class="markmap-container" data-markdown-content="# TPO56_L2_Archaeopteryx
 ## 讲座主要讨论了古老的鸟类，特别是被称为始祖鸟（Archaeopteryx）的一种鸟类。始祖鸟是一种具有争议的古生物，因为它具有鸟类和恐龙的特征。讲座探讨了关于始祖鸟演化地位的争论以及它是否具有飞行能力的问题。
 
 ## 主要观点和例子
@@ -13,11 +10,7 @@
 3. **始祖鸟与现代鸟类和恐龙的相似之处**：鸟类学家认为始祖鸟是现代鸟类的早期祖先，而古生物学家则认为它与某些恐龙物种相似。
 4. **关于始祖鸟地位的争论**：尽管它没有喙，尾巴像爬行动物一样长而骨质，但它仍被归类为鸟类。争论的焦点在于始祖鸟在演化上的位置：古生物学家认为它是恐龙与现代鸟类之间的一种联系，而鸟类学家认为它是具有特殊特征的鸟类。
 5. **始祖鸟的飞行能力**：关于始祖鸟是否能飞行，我们没有确凿的证据。尽管它具有一些现代鸟类的特征，但它可能在地面上起飞很笨拙，空中也不太优雅。
-6. **羽毛演化的原因**：最近的研究认为，始祖鸟的羽毛可能不是为了飞行而演化的，而是为了展示（雄性用鲜艳的羽毛吸引配偶）或保暖（羽毛在低温下保持体温很有用）。;
-
-  const container = document.getElementById('markmap');
-  const markmapInstance = Markmap.create(container, {}, markdownContent);
-</script>
+6. **羽毛演化的原因**：最近的研究认为，始祖鸟的羽毛可能不是为了飞行而演化的，而是为了展示（雄性用鲜艳的羽毛吸引配偶）或保暖（羽毛在低温下保持体温很有用）" style="width: 100%; height: 400px;"></div>
 
 
 
