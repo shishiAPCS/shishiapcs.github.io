@@ -9,23 +9,9 @@
 * ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 
-    #### Example
-
-        # Cameron
-
-        ![Cameron](https://github.com/Royhowtohack/disk/blob/main/audiobook.png?raw=true)
-
-        
-        | Word | English Explanation | Chinese Explanation | Example Sentence |
-        | --- | --- | --- | --- |
-        | sentimental | having or showing tender, romantic, or nostalgic feelings | 情感细腻的，感伤的 | She became sentimental when she found her childhood toy. |
-        | interrupt | to stop or hinder by breaking in | 打断，中断 | Please don't interrupt me while I'm speaking. |
-        | contract | a written or spoken agreement that is intended to be enforceable by law | 合同，契约 | We signed a contract to buy the house. | 
-        
-
 ----
 
-## Ai Tools
+## Ai
 
 ### chatbot 对话机器人
 
@@ -35,8 +21,8 @@
 * [Google bard](https://bard.google.com/)  ``` 需要美国IP```
 * [Claude](https://slack.com/get-started#/create) ```后起之秀```
 
-#### Claude 
-<details>
+
+<details> 
 <summary>Claude 注册</summary>
 
 ```
@@ -75,7 +61,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ---
 
-## Free online tools 
+## online tools
 
 ### English 
 
@@ -83,6 +69,12 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * [新编英语阅读手册 叶永昌](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
 * [Youglish](https://youglish.com/)
  
+### 打字练习
+
+* [10fastfingers](https://10fastfingers.com/typing-test/english)
+* [monkeytype](https://monkeytype.com/)
+
+
 ### Mind map
 
 * [在线思维导图](https://app.mindmup.com/)
@@ -98,7 +90,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * #### [elevenlabs](https://beta.elevenlabs.io/speech-synthesis)
     - ##### [教程](https://www.bilibili.com/video/BV1fv4y1E7gV/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 
-### pdf 在线工具（合并 & 转 word …… etc） 
+### pdf 工具（合并 & 转 word …… etc） 
 
 * [smallpdf](https://smallpdf.com/)
 
