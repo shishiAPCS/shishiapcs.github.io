@@ -1,25 +1,17 @@
 ### TPO 56 L2 Archaeopteryx
 
-<div id="markmap-container" style="width: 100%; height: 400px;"></div>
+<div class="markmap">
+  <script type="text/template">
+    # Your Markdown Content
+    - Topic 1
+      - Subtopic 1.1
+      - Subtopic 1.2
+    - Topic 2
+      - Subtopic 2.1
+  </script>
+</div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const markdownContent = `
-# Your Markdown Content
-- Topic 1
-  - Subtopic 1.1
-  - Subtopic 1.2
-- Topic 2
-  - Subtopic 2.1
-    `;
 
-    const { transform } = window.markmap.lib;
-    const { Markmap } = window.markmap;
-
-    const data = transform(markdownContent);
-    const markmapInstance = Markmap.create("#markmap-container", null, data);
-  });
-</script>
 
 
 
