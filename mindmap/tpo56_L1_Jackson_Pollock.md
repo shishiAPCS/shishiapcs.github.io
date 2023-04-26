@@ -1,27 +1,32 @@
+
 ### TPO 56 L1 Jackson Pollock
 
-```
-# TPO 56 L1 Jackson Pollock Abstract Expressionism
-- **Main Idea**: Late 1940s and 1950s art movement in the United States
-- **Characteristics**: Revolt against tradition, focus on spontaneous freedom of expression, abstract imagery
-    - **Jackson Pollock**
-        - Most famous American Abstract Expressionist
-        - **Pour and Drip Technique**
-            - Laid canvas flat on the floor
-            - Poured and dripped paint without using a brush
-            - Created large-scale, groundbreaking works
-                - *Example*: Autumn Rhythm (1950)
-                    - Appears chaotic, but has definite structure
-        - **Action Painting**
-            - Emphasizes physical process of creating the painting
-            - Artist's control over materials
-    - **Perspective**
-        - Change from painting on the floor to viewing on a wall not significant
-        - Comparison to viewing photographs taken from different angles
-    - **Influence**
-        - Shift of the art world's focus from Paris to New York
-        - Impact on the development of Abstract Expressionism and the broader art community
-```
+<div class="markmap-container">
+  <div class="markmap">
+    <script type="text/template">
+        # TPO 56 L1 Jackson Pollock 抽象表现主义
+            - **主要思想**：20世纪40年代末和50年代美国的艺术运动
+            - **特点**：反抗传统，专注于自发的表达自由，抽象图像
+                - **Jackson Pollock**
+                    - 最著名的美国抽象表现主义画家
+                    - **倾倒和滴落技术**
+                        - 把画布平放在地板上
+                        - 倾倒和滴落颜料，不使用画笔
+                        - 创作出大规模、具有突破性的作品
+                            - *例子*：秋日节奏（1950年）
+                                - 看似混乱，但具有明确的结构
+                    - **行动绘画**
+                        - 强调绘画过程中的物理过程
+                        - 艺术家对材料的控制
+                - **视角**
+                    - 从地板上绘画到墙上观看的转变并不重要
+                    - 与从不同角度拍摄的照片进行观看的比较
+                - **影响**
+                    - 艺术世界焦点从巴黎转向纽约
+                    - 对抽象表现主义和更广泛的艺术社区的发展产生影响
+    </script>
+  </div>
+</div>
 
 <img width="2387" alt="Screen Shot 2023-04-03 at 08 42 15-min" src="https://user-images.githubusercontent.com/105401427/229388559-6001ba36-bd2b-4ecf-bb47-6377c0a03ded.png">
 

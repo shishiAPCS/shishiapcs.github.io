@@ -18,8 +18,6 @@
   </div>
 </div>
 
-<img width="1491" alt="Screen Shot 2023-04-10 at 8 33 44 AM-min" src="https://user-images.githubusercontent.com/105401427/230804230-1a185e47-3cd6-4a51-bcc3-dfb9a933a1aa.png">
-
 #### Questions:
 
 | Question | 答 (Answer) | 相关句子 (Related Sentences from the Lecture) |
