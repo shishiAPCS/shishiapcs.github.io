@@ -1,45 +1,53 @@
+
+---
 ### [TPO58 L3 Harlem Renaissance](http://top.zhan.com/toefl/listen/intensive.html?appID=63432520%2C2371&backUrl=http%3A%2F%2Ftop.zhan.com%2Ftoefl%2Flisten%2Fjingting58.html)
 
-```
+<div class="markmap-container">
+  <div class="markmap">
+    <script type="text/template">
 
-# TPO58 L3
-The lecture focuses on the Harlem Renaissance, its significance in the United States culture and history, and its major figures and their works. It also discusses the factors that contributed to the Renaissance and the broader social context of the time.
+     # TPO58 L3
+     本讲座关注哈莱姆文艺复兴及其在美国文化和历史中的重要意义，还介绍了该时期的主要人物及其作品。此外，还讨论了促成文艺复兴的因素以及当时更广泛的社会背景。
 
-## Harlem Renaissance
-- Literary awakening among African Americans
-- Characterized by assertiveness and creativity
+     ## 哈莱姆文艺复兴
+     - 非洲裔美国人的文学觉醒
+     - 以果断和创造力为特点
 
-### Major Figures
-- Langston Hughes
-  - Captured African American folk traditions
-  - Incorporated blues, jazz, spirituals, and African American musical forms into his poetry
-  - First to write a gospel play
+     ### 主要人物
+     - Langston Hughes
+     - 捕捉非洲裔美国人的民间传统
+     - 在诗歌中融入了布鲁斯、爵士、灵歌和非洲裔美国人的音乐形式
+     - 第一个撰写福音剧的人
 
-- Zora Neale Hurston
-  - Celebrated African American folk traditions
-  - Published "Their Eyes Were Watching God" in 1937
-  - Infused dialect, folklore, and anthropology in her work
+     - Zora Neale Hurston
+     - 庆祝非洲裔美国人的民间传统
+     - 1937年出版了《他们的眼睛在看上帝》
+     - 在她的作品中融入了方言、民间传说和人类学
 
-### Geographical Scope
-- Not limited to Harlem, New York City
-- Also occurred in other urban areas (Washington, D.C., Chicago, Cleveland)
-- More general term: New Negro Renaissance
+     ### 地理范围
+     - 不仅限于纽约市的哈莱姆区
+     - 也发生在其他城市地区（华盛顿特区、芝加哥、克利夫兰）
+     - 更通用的术语：新黑人文艺复兴
 
-### Historical Debate
-- Some historians attribute the start of the Harlem Renaissance to movements in the early 1900s
-  - W.E.B. DuBois' publication of "The Souls of Black Folks" in 1903
-  - DuBois' concept of "double consciousness"
-  - The Niagara Movement in 1906 (led to the formation of civil rights organizations)
+     ### 历史争论
+     - 一些历史学家认为哈莱姆文艺复兴始于20世纪初的运动
+     - W.E.B. DuBois 1903年出版《黑人的灵魂》
+     - DuBois的“双重意识”概念
+     - 1906年的尼亚加拉运动（导致了民权组织的成立）
 
-### The Great Migration
-- Over 1 million African Americans moved from the rural South to urban areas in the North
-- Reasons: seeking economic opportunities and escaping racial inequities in the South
+     ### 大迁徙
+     - 超过100万非洲裔美国人从南部农村地区迁移到北部城市地区
+     - 原因：寻求经济机会，逃离南部的种族不平等
 
-### Discrimination
-- Existed both in the South and the North
-- Black World War I veterans faced discrimination after returning from the war
-- Defiance and assertiveness contributed to the mood of the Harlem Renaissance
-```
+     ### 歧视
+     - 南北方都存在歧视现象
+     - 一战黑人退伍军人在战后遭受歧视
+     - 对抗和果断性有助于哈莱姆文艺复兴的氛围形成
+  
+    </script>
+  </div>
+</div>
+
 <img width="1471" alt="Screen Shot 2023-03-27 at 2 48 37 PM-min" src="https://user-images.githubusercontent.com/105401427/227863014-d13de8c8-4a88-4de3-b98b-4f1e7ce60444.png">
 
 #### Students' work:
