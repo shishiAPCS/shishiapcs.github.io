@@ -1,5 +1,5 @@
 ---
-title: TPO58 L3 Harlem Renaissance
+title: "TPO58 L3 Harlem Renaissance"
 ---
 
 <div class="markmap-container">

@@ -1,5 +1,5 @@
 ---
-title: Intro to CS
+title: "Intro to CS"
 ---
 
 ## 计算机入门课学生作品
