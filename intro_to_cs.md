@@ -10,6 +10,7 @@
   - [2021](_posts/2021-06-16-2021studentwork2.md)
   - [2022](_posts/2022-06-16-2022studentwork.md)
 
+---
 ## Some textbooks we are using:
   <ul>
   <li><a href="https://code.org">Code.org</a></li>
@@ -20,6 +21,7 @@
   <li><a href="https://replit.com">Replit</a><li>
   </ul>
 
+---
 ## Senior 1 core concepts:
   <ul>
   <li><a href="https://codehs.com/uploads/0fd5bfa950acbf0758214449a5a385ae">Topics</a></li>
