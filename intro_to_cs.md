@@ -1,8 +1,7 @@
-
 ---
 # Intro to CS
-
 ---
+
 ## 计算机入门课学生作品
 
 - [Pixelated Art Works](_posts/2022-10-13-September-students-projects.md)
