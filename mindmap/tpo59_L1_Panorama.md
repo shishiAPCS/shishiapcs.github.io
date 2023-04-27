@@ -3,42 +3,42 @@
 <div class="markmap-container">
   <div class="markmap">
     <script type="text/template">
-     # TPO59 European Art Panorama
-     - The lecture discusses the history and significance of panoramas as a popular 19th-century art form that contributed to the realism movement in European art.
+    
+# TPO59 欧洲艺术全景
+   - 本讲座讨论了全景画作为19世纪流行艺术形式的历史和重要性，以及它对欧洲艺术现实主义运动的贡献。
 
-     ## Robert Barker
-     - Invented the panorama
-     - Painted the first official panorama in 1787
-     - Solved perspective problems in circular paintings
-     - Recognized the need for a special viewing space and obtained a patent
+   ## Robert Barker
+   - 发明了全景画
+   - 1787年绘制了第一幅官方全景画
+   - 解决了圆形画中的透视问题
+   - 认识到需要一个特殊的观赏空间，并获得了专利
 
-     ## Popularity and Expansion
-     - Panoramas became popular after 1800
-     - Special buildings were constructed to display them in major cities across Europe and North America
+   ## 受欢迎程度和扩展
+   - 全景画在1800年后开始流行
+   - 在欧洲和北美的主要城市修建了专门的建筑来展示全景画
 
-     ## Artistic Techniques
-     - Supervised by first-rate artists for faithful reproductions of scenes
-     - Techniques to intensify the illusion of reality
-     - Special lighting effects
-     - Hiding edges of the painting
-     - Placing plants and trees between the viewer and the painting
+   ## 艺术技巧
+   - 在一流艺术家的监督下，忠实再现场景
+   - 用以加强现实幻觉的技巧
+   - 特殊的照明效果
+   - 隐藏画的边缘
+   - 在观众和画之间摆放植物和树木
 
-     ## Innovative Perspectives
-     - Offered a full 360-degree view, often with a bird's-eye or aerial perspective
-     - Coincided with the debut of hot air balloons and the construction of the first high-rise buildings
+   ## 创新视角
+   - 提供全方位360度视野，通常带有鸟瞰或高空视角
+   - 与热气球首次亮相和第一座高楼大厦的建设相一致
 
-     ## Popular Subjects
-     - Detailed views of the cities in which panoramas were exhibited
-     - Familiarity with the scenes was part of the fascination
+   ## 受欢迎的主题
+   - 详细展示了展出全景画的城市景观
+   - 对场景的熟悉是吸引力的一部分
 
-     ## Decline in Popularity
-     - Waned in the second half of the 19th century due to illustrated newspapers and photography
-     - Many panoramas were painted over, cut up, or sold, leaving few examples to be preserved
+   ## 受欢迎程度下降
+   - 由于插图报纸和摄影的出现，19世纪下半叶全景画的受欢迎程度逐渐减弱
+   - 许多全景画被涂抹、剪裁或出售，留下很少的作品被保留
+
     </script>
   </div>
 </div>
-
-<img width="1483" alt="Screen Shot 2023-03-27 at 2 48 59 PM-min" src="https://user-images.githubusercontent.com/105401427/227862578-83afdcdd-90f3-4026-ba42-ab1895bace47.png">
 
 #### Students' work:
      - Ethan
