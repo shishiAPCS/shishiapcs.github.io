@@ -1,6 +1,6 @@
-
 ---
-### TPO 56 L1 Jackson Pollock
+title: TPO 56 L1 Jackson Pollock
+---
 
 <div class="markmap-container">
   <div class="markmap">

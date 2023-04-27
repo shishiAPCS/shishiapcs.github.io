@@ -1,6 +1,6 @@
-
 ---
-### [TPO58 L3 Harlem Renaissance](http://top.zhan.com/toefl/listen/intensive.html?appID=63432520%2C2371&backUrl=http%3A%2F%2Ftop.zhan.com%2Ftoefl%2Flisten%2Fjingting58.html)
+title: TPO58 L3 Harlem Renaissance
+---
 
 <div class="markmap-container">
   <div class="markmap">
