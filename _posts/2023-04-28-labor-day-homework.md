@@ -10,8 +10,8 @@ categories: media
 # Dragon and Lion 🐲 🦁️ 
 
 ## Listening
-- [tpo63 L1 Bryce Canyon](mindmap/tpo63_L1_Bryce_Canyon.md)
-- [tpo63 L2 American Gothic](mindmap/tpo63_L2_American_Gothic.md)
+- [tpo63 L1 Bryce Canyon](https://shishiapcs.github.io/mindmap/tpo63_L1_Bryce_Canyon/)
+- [tpo63 L2 American Gothic](https://shishiapcs.github.io/mindmap/tpo63_L2_American_Gothic/)
 
 1. 你的名字
 2. 思维导图(用软件做)
