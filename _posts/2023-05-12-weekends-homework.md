@@ -14,6 +14,7 @@ categories: media
 1. 画思维导图(电子版)， 放在ESL页面，TPO63下面。
 2. 收集一个动词短语, 一个生词。
 3. 一个对话练习，[https://smarter.igo1996.com](https://smarter.igo1996.com)
+
 ---
 
 # Lion 🦁️ 
@@ -23,6 +24,7 @@ categories: media
 1. 画思维导图(电子版)，放在ESL页面，TPO63下面。
 2. 收集一个动词短语, 一个生词。
 3. 一个对话练习，[https://smarter.igo1996.com](https://smarter.igo1996.com)
+
 ---
 
 ## 放在一个留言里， 切记<span style="color:red;">不要分成几个留言</span>
