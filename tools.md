@@ -18,11 +18,11 @@ title: "Tools"
 
 ### chatbot 对话机器人
 
-* [Chatgpt](https://chat.openai.com) ```新手不友好```
-* [Poe](https://poe.com/) ```好用```
-* [Microsoft new bing](https://www.bing.com/new) ```智障```
+* [Chatgpt](https://chat.openai.com) ```仍然是最强大```
+* [Poe](https://poe.com/) ```集成平台，好用```
+* [Microsoft new bing](https://www.bing.com/new) ```可以直接作图```
 * [Google bard](https://bard.google.com/)  ``` 需要美国IP```
-* [Claude](https://slack.com/get-started#/create) ```后起之秀```
+* [Claude](https://slack.com/get-started#/create) ```可输入文字量最大```
 
 
 <details> 
