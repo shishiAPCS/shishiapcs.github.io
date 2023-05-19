@@ -48,6 +48,10 @@ title: "ESL"
 ---
 # Mind Maps for TPO Listenings 
 
+## TPO18
+- [tpo18 L1 Sunspots](mindmap/tpo18_L1_sunspots.md)
+- [tpo18 L2 Copies of Greek Sculptures](mindmap/tpo18_L2_Copies_of_Greek_Sculptures.md)
+
 ## TPO55
 - [tpo55_L1_First_Public_Art_Museum](mindmap/tpo55_L1_First_Public_Art_Museum.md)
 
