@@ -3,49 +3,7 @@ title: "ESL"
 ---
 
 ---
-# Speaking
 
-## Task 1
-
-### 万能理由框架：
-* Money 
-* Time 
-* Convenience 
-* Friendship/ Social / Relationship 
-* Relax/ Stress 
-* Health 
-* Knowledge 
-* Experience 
-* Sense of Achievement 
-* Environment
-
-### Task 1 答题结构
-
-1. opinion 
-2. reason 1
-3. development 
-4. development 
-5. reason 2 
-6. development 
-7. development 
-8. conclusion (if there’s time)
-
----
-**留言格式**
-
-``` markdown
- # 你的名字
-
-![文件名](https://github.com/Royhowtohack/disk/blob/main/audiobook.png?raw=true)
-
-| Word | English Explanation | 中文解释 | Example Sentence |
-| --- | --- | --- | --- |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-
-```
----
 # Mind Maps for TPO Listenings 
 
 ## TPO18
@@ -81,4 +39,48 @@ title: "ESL"
 - [tpo63 L3 Arcadians](mindmap/tpo63_L3_Arcadians.md)
 - [tpo63 L4 Lens](mindmap/tpo63_L4_Lens.md)
 
+# Speaking
+
+## Task 1
+
+### 万能理由框架：
+* Money 
+* Time 
+* Convenience 
+* Friendship/ Social / Relationship 
+* Relax/ Stress 
+* Health 
+* Knowledge 
+* Experience 
+* Sense of Achievement 
+* Environment
+
+### Task 1 答题结构
+
+1. opinion 
+2. reason 1
+3. development 
+4. development 
+5. reason 2 
+6. development 
+7. development 
+8. conclusion (if there’s time)
+
+---
+
+# 留言格式
+
+``` markdown
+ # 你的名字
+
+![文件名](https://github.com/Royhowtohack/disk/blob/main/audiobook.png?raw=true)
+
+| Word | English Explanation | 中文解释 | Example Sentence |
+| --- | --- | --- | --- |
+| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
+| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
+| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
+
+```
+---
 
