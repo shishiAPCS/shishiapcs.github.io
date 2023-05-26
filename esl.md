@@ -44,7 +44,8 @@ title: "ESL"
 - [tpo64 L2 continental polar air mass](mindmap/tpo64_L2_continental_polar_air_mass.md)
 
 
---
+---
+
 # Speaking
 
 ## Task 1
@@ -71,6 +72,41 @@ title: "ESL"
 6. development 
 7. development 
 8. conclusion (if there’s time)
+
+## Task 2 
+
+### Task 2 答题结构
+
+1. The proposal 
+2. The two reasons/details of the proposal 
+3. The Speaker's opinion 
+4. The first reason from the speaker and its supporting information
+5. The second reason from the speaker and its suporting information
+6. Conslusion 
+
+## Task 3
+
+### Task 3 答题结构
+
+1. The academic term
+2. The definition
+3. The example (specific information from the lecture
+that can explain the definition)
+4. Conclusion
+
+## Task 4
+
+### Task 4 答题结构
+
+1. The topic
+2. The first aspect
+3. The example (specific information that can explain the topic
+& aspect)
+4. The second aspect
+5. The example (specific information that can explain the topic
+& aspect)
+6. Conclusion
+
 
 ---
 
