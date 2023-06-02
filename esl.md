@@ -41,7 +41,9 @@ title: "ESL"
 - [tpo63 L4 Lens](mindmap/tpo63_L4_Lens.md)
 
 ## TPO64
+- [tpo64 L1 international trade](mindmap/tpo64_L1_international_trade.md)
 - [tpo64 L2 continental polar air mass](mindmap/tpo64_L2_continental_polar_air_mass.md)
+- [tpo64 L3 Gila lizard](mindmap/tpo64_L3_Gila_lizard.md)
 
 
 ---
