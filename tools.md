@@ -16,13 +16,15 @@ title: "Tools"
 
 ## Ai
 
-### chatbot 对话机器人
+### [1小时快速入门对话机器人](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
+
+### 常用 chatbot 对话机器人
 
 * [Chatgpt](https://chat.openai.com) ```仍然是最强大```
 * [Poe](https://poe.com/) ```集成平台，好用```
 * [Microsoft new bing](https://www.bing.com/new) ```可以直接作图```
 * [Google bard](https://bard.google.com/)  ``` 需要美国IP```
-* [Claude](https://slack.com/get-started#/create) ```可输入文字量最大```
+* [Claude](https://slack.com/get-started#/create) 
 
 
 <details> 
@@ -55,6 +57,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### Ai 绘画
 
+* [leonardo.ai](https://leonardo.ai/)
 * [midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) 
 * [playgroundai](https://playgroundai.com)
 
