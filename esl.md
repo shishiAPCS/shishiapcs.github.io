@@ -56,6 +56,20 @@ categories: media
 ---
 ## 评分标准
 
+
+
+### Independent Speaking Rubrics<br>独立口语
+|SCORE分数|GENERAL DESCRIPTION一般描述|DELIVERY语言表达|LANGUAGE USE语言使用|TOPIC DEVELOPMENT主题发展|
+|-----|-------------------|--------|------------|-----------------|
+|4|The response fulfills the demands of the task, with at most minor lapses in completeness. It is highly intelligible and exhibits sustained, coherent discourse. A response at this level is characterized by all of the following: 回答满足任务的要求，最多只有微小的完整性缺失。回答的可理解性非常高，表现出持续的、连贯的话语。这个级别的回答具有以下所有特征：|Generally well-paced flow (fluid expression). Speech is clear. It may include minor lapses, or minor difficulties with pronunciation or intonation patterns, which do not affect overall intelligibility. 总体上节奏良好（流畅的表达）。语言清晰。可能包括小的疏漏，或者发音或语调模式的小困难，但不影响整体的可理解性。|The response demonstrates effective use of grammar and vocabulary. It exhibits a fairly high degree of automaticity with good control of basic and complex structures (as appropriate). Some minor (or systematic) errors are noticeable but do not obscure meaning. 回答显示出了有效的语法和词汇使用。它展示出相当高度的自动化，良好地控制了基本和复杂的结构（适当时）。一些小的（或系统性的）错误是可见的，但并不会模糊意义。|Response is sustained and sufficient to the task. It is generally well developed and coherent; relationships between ideas are clear (or there is a clear progression of ideas). 回答是持久且足够的。它通常是发展良好和连贯的；思想之间的关系是清晰的（或者有明确的思想发展）。|
+|3|The response addresses the task appropriately but may fall short of being fully developed. It is generally intelligible and coherent, with some fluidity of expression, though it exhibits some noticeable lapses in the expression of ideas. A response at this level is characterized by at least two of the following: 回答适当地处理了任务，但可能没有完全发展。它通常是可以理解和连贯的，有一些表达的流畅性，尽管在表达想法时表现出一些明显的疏漏。这个级别的回答至少具有以下两个特征：|Speech is generally clear, with some fluidity of expression, though minor difficulties with pronunciation, intonation, or pacing are noticeable and may require listener effort at times (though overall intelligibility is not significantly affected). 语言通常是清晰的，有一些表达的流畅性，尽管发音、语调或节奏的小困难是可以注意到的，并且有时可能需要听者的努力（尽管总体的可理解性并未显著受到影响）。|The response demonstrates fairly automatic and effective use of grammar and vocabulary, and fairly coherent expression of relevant ideas. Errors may be somewhat distracting, but they do not seriously obscure meaning. 回答展示出相当自动和有效的语法和词汇使用，以及相当连贯的相关想法表达。错误可能有些分散注意力，但它们并不严重地模糊含义。|Response is relevant and sufficient to the task, though development of the topic is sometimes noticeably incomplete. 思想之间的关系可能是模糊的；思想发展可能是不明确的，或者停止在一个不太满足任务的地方。|
+
+
+
+
+
+
+
 ### Independent Speaking Rubrics<br>独立口语
 |SCORE<br>分数|GENERAL DESCRIPTION<br>一般描述|DELIVERY<br>语言表达|LANGUAGE USE<br>语言使用|TOPIC DEVELOPMENT<br>主题发展|
 |-----|-------------------|--------|------------|-----------------|

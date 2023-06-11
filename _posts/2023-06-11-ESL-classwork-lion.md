@@ -1,5 +1,5 @@
 ---
-title:  "2023-06-12-ESL-classwork-lion"
+title:  "12th June ESL classwork lion"
 mathjax: true
 layout: post
 categories: media
