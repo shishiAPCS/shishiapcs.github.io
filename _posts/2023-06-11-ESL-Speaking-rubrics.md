@@ -8,6 +8,7 @@ categories: media
 
 
 # Independent Speaking Rubrics<br>独立口语
+
 |SCORE<br>分数|GENERAL DESCRIPTION<br>一般描述|DELIVERY<br>语言表达|LANGUAGE USE<br>语言使用|TOPIC DEVELOPMENT<br>主题发展|
 |-----|-------------------|--------|------------|-----------------|
 |4|The response fulfills the demands of the task, with at most minor lapses in completeness. It is highly intelligible and exhibits sustained, coherent discourse. A response at this level is characterized by all of the following:<br>回答满足任务的要求，最多只有微小的完整性缺失。回答的可理解性非常高，表现出持续的、连贯的话语。这个级别的回答具有以下所有特征：|Generally well-paced flow (fluid expression). Speech is clear. It may include minor lapses, or minor difficulties with pronunciation or intonation patterns, which do not affect overall intelligibility.<br>总体上节奏良好（流畅的表达）。语言清晰。可能包括小的疏漏，或者发音或语调模式的小困难，但不影响整体的可理解性。|The response demonstrates effective use of grammar and vocabulary. It exhibits a fairly high degree of automaticity with good control of basic and complex structures (as appropriate). Some minor (or systematic) errors are noticeable but do not obscure meaning.<br>回答显示出了有效的语法和词汇使用。它展示出相当高度的自动化，良好地控制了基本和复杂的结构（适当时）。一些小的（或系统性的）错误是可见的，但并不会模糊意义。|Response is sustained and sufficient to the task. It is generally well developed and coherent; relationships between ideas are clear (or there is a clear progression of ideas).<br>回答是持久且足够的。它通常是发展良好和连贯的；思想之间的关系是清晰的（或者有明确的思想发展）。|
@@ -20,6 +21,7 @@ categories: media
 ---
 
 # Integrated Speaking Rubrics<br>综合口语
+
 |SCORE<br>分数|GENERAL DESCRIPTION<br>一般描述|DELIVERY<br>语言表达|LANGUAGE USE<br>语言使用|TOPIC DEVELOPMENT<br>主题发展|
 |-----|-------------------|--------|------------|-----------------|
 |4|The response fulfills the demands of the task, with at most minor lapses in completeness. It is highly intelligible and exhibits sustained, coherent discourse. A response at this level is characterized by all of the following:<br>回答满足任务的要求，完整性上最多只有小的疏漏。它高度易于理解，并展示了持续的、连贯的话语。这个级别的回答具有以下所有特征：|Speech is generally clear, fluid and sustained. It may include minor lapses or minor difficulties with pronunciation or intonation. Pace may vary at times as the speaker attempts to recall information. Overall intelligibility remains high.<br>话语通常清晰、流畅并且持续。可能包括小的失误或发音或者语调的小困难。当发言人试图回忆信息时，语速可能有时会变化。整体的可理解性仍然很高。|The response demonstrates good control of basic and complex grammatical structures that allow for coherent, efficient (automatic) expression of relevant ideas. Contains generally effective word choice. Though some minor (or systematic) errors or imprecise use may be noticeable, they do not require listener effort (or obscure meaning).<br>回答显示了对基础和复杂语法结构的良好控制，这使得相关想法的连贯、有效（自动）表达成为可能。包含一般有效的单词选择。尽管可能会注意到一些小的（或系统性的）错误或使用不精确，但它们不需要听者的努力（或模糊意义）。|The response presents a clear progression of ideas and conveys the relevant information required by the task. It includes appropriate detail, though it may have minor errors or minor omissions.<br>回答提出了清晰的想法发展，并传达了任务所需的相关信息。它包含适当的细节，尽管可能有少量错误或遗漏。|
