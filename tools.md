@@ -119,5 +119,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 * [greasyfork](https://www.bilibili.com/video/BV1L3411J7Yc/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 
+### 随机密码生成
 
+* [random.org](https://www.random.org/passwords/)
 
