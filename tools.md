@@ -5,6 +5,7 @@ title: "Tools"
 ---
 ## Essentials 必备
 
+* ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
 * ### [美国 AppleID 注册](https://www.youtube.com/watch?v=Y51VMx4NOfk)
 * ### [🪜 规则](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/#%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%92%E5%88%86)
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
