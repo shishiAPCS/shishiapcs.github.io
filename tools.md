@@ -132,5 +132,5 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 个人网站搭建
 
-* [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
-* [Example1 Edward](https://californiumwu.github.io/)
+* #### [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
+    - ##### [Sample from Edward](https://californiumwu.github.io/)
