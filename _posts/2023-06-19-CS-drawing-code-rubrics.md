@@ -17,6 +17,9 @@ categories: media
 ## Put your code at **_2.19.3 Block Pyramid_**
 
 ## Example:
+### Piexl Mario
+
+<img width="667" alt="Screen Shot 2023-06-21 at 2 58 16 PM-min" src="https://github.com/Royhowtohack/disk/assets/52094557/ec2dbef1-cc89-4050-bcf5-7923940359b2">
 
 ```python
 speed(0)  # 设置画笔速度为最快
