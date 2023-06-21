@@ -4,6 +4,8 @@ title: "Tools"
 
 ---
 ## Essentials 必备
+---
+---
 
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
 * ### [美国 AppleID 注册](https://www.youtube.com/watch?v=Y51VMx4NOfk)
@@ -16,6 +18,8 @@ title: "Tools"
 ----
 
 ## Ai
+---
+---
 
 ### [1小时快速入门对话机器人](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
 
@@ -68,7 +72,9 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ---
 
-## online tools
+## Online Tools
+---
+---
 
 ### English 
 
@@ -124,3 +130,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 * [random.org](https://www.random.org/passwords/)
 
+### 个人网站搭建
+
+* [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
+* [Example1 Edward](https://californiumwu.github.io/)
