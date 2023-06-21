@@ -94,6 +94,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 语音转文字
 
+* #### [OpenAi Whisper](https://platform.openai.com/playground) ```异常强大，可以中英混合输入，需要openai账号```
+
 * #### [flixier](https://editor.flixier.com/tools/all-tools)
     - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)         
 
