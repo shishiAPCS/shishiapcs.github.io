@@ -25,7 +25,18 @@ Put your modification here.
 ## Deadline: 23rd, 周五晚12点
 
 
-## 仔细检查语法错误：<br>
+## Well done：
+```
+Olivia
+Yvonne
+Jerry
+Ivy
+Amber
+Shawn
+Laura
+Jessie
+```
+## 仔细分析语法错误
 
 OliviaTeng: # Olivia 
 
