@@ -121,6 +121,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 图片工具
 
+* #### [EXIF 信息查看](https://www.pic2map.com/)
+* #### [Add EXIF-GPS information to images](https://tool.geoimgr.com/)
 * #### [图片颜色信息提取](https://imagecolorpicker.com/)
 * #### [图片压缩](https://compressjpeg.com/)
 * #### [圆形头像](https://profilepicturemaker.com/#quotemaker)
