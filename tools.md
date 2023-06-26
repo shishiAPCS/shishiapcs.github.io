@@ -121,6 +121,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 图片工具
 
+* #### [360°全景图浏览器](https://renderstuff.com/tools/360-panorama-web-viewer/)
 * #### [EXIF 信息查看](https://www.pic2map.com/)
 * #### [Add EXIF-GPS information to images](https://tool.geoimgr.com/)
 * #### [图片颜色信息提取](https://imagecolorpicker.com/)
