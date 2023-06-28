@@ -1,11 +1,11 @@
 ---
-title:  "Pixel drawing challenge rubrics"
+title:  "Pixel Art Challenge"
 mathjax: true
 layout: post
 categories: media
 ---
 
-## Rubrics:
+## Rubrics:<br>评分标准:
 
 |Catagories:     |A working program|Creativity|Function|Loop|
 |-----------|------------|----------|--------|----|
