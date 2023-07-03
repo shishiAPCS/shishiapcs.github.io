@@ -69,6 +69,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ### Ai 自动生成PPT
 
 * [Mindshow](https://www.mindshow.fun/#/login?inviteCode=6515025)
+* [gamma.app](https://gamma.app/generate)
 
 ---
 
@@ -84,6 +85,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
  
 ### 打字练习
 
+* [Typing club](https://www.edclub.com/sportal/program-3.game)
 * [10fastfingers](https://10fastfingers.com/typing-test/english)
 * [monkeytype](https://monkeytype.com/)
 
@@ -94,8 +96,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 语音转文字
 
+* #### [otter.ai/](https://otter.ai/)```每月300分钟免费额度```
 * #### [OpenAi Whisper](https://platform.openai.com/playground) ```异常强大，可以中英混合输入，需要openai账号```
-
 * #### [flixier](https://editor.flixier.com/tools/all-tools)
     - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)         
 
@@ -140,3 +142,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 * #### [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
     - ##### [Sample from Edward](https://californiumwu.github.io/)
+
+
+### Music 
+
+* [去除音乐人声](https://vocalremover.org/)
