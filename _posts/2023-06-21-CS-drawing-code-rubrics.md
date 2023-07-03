@@ -16,11 +16,6 @@ categories: media
 
 ## Put your code at **_2.19.3 Block Pyramid_**
 
-# Shelia has the most elaborate work so far! Well done!! 
-
-![2023-06-28 12 59 46](https://github.com/Royhowtohack/disk/assets/52094557/9abf3d7b-469e-4eb6-b465-88dc494cc58c)
-
-
 
 
 
