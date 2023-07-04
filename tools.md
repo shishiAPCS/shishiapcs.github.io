@@ -1,19 +1,23 @@
 ---
 title: "Tools"
 ---
-
 ---
-## Essentials 必备
+---
+## [找老师 🙋‍♂️](_posts/2023-06-01-FAQ.md)
+---
+
+## Essentials 必备知识
 ---
 ---
 
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
 * ### [美国 AppleID 注册](https://www.youtube.com/watch?v=Y51VMx4NOfk)
-* ### [🪜 规则](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/#%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%92%E5%88%86)
+* ### [🪜 梯子规则](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/#%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%92%E5%88%86)
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub 账号](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [Thinkwave 交作业](https://www.bilibili.com/video/BV1xP411e74p/)
 
 ----
 
@@ -71,16 +75,23 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * [Mindshow](https://www.mindshow.fun/#/login?inviteCode=6515025)
 * [gamma.app](https://gamma.app/generate)
 
+### Ai 写作修改
+
+* [quillbot](https://quillbot.com/)
+
+
 ---
 
 ## Online Tools
 ---
 ---
 
-### English 
+### English
 
-* [TPO 1-70 在线](https://smarter.igo1996.com/tf-part-index)
-* [新编英语阅读手册 叶永昌](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
+* [英语学习底层逻辑](http://xiaolai.co/books/c558c667ad9f05ddce38f06df2d15aa3/index)
+* [如何写好英文书面比较句](http://xiaolai.co/books/8724bd963e758a48a168d955e711485b/comparison-in-english.html)
+* [托福TPO 1-70 ](https://smarter.igo1996.com/tf-part-index)
+* [新编英语阅读手册](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
 * [Youglish](https://youglish.com/)
  
 ### 打字练习
@@ -96,7 +107,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 语音转文字
 
-* #### [otter.ai/](https://otter.ai/)```每月300分钟免费额度```
+* #### [otter.ai](https://otter.ai/) ```每月300分钟免费额度```
 * #### [OpenAi Whisper](https://platform.openai.com/playground) ```异常强大，可以中英混合输入，需要openai账号```
 * #### [flixier](https://editor.flixier.com/tools/all-tools)
     - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)         
