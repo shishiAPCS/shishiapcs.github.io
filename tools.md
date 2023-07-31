@@ -10,14 +10,16 @@ title: "Tools"
 ---
 ---
 
+* ### [GPA查询网址](https://www.thinkwave.com)
+* ### [托福在线练习平台](https://smarter.igo1996.com/tf-part-index)
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
 * ### [美国 AppleID 注册](https://www.youtube.com/watch?v=Y51VMx4NOfk)
 * ### [🪜 梯子规则](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/#%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%92%E5%88%86)
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
-* ### [GitHub 账号](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-* ### [GitHub 仓库创建](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-* ### [shishiapcs.github.io 留言板](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
-* ### [Thinkwave 交作业](https://www.bilibili.com/video/BV1xP411e74p/)
+* ### [GitHub 账号视频教程](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
+* ### [GitHub 仓库创建视频教程](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
+* ### [shishiapcs.github.io 留言板视频教程](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [Thinkwave 交作业视频教程](https://www.bilibili.com/video/BV1xP411e74p/)
 
 ----
 
@@ -29,10 +31,10 @@ title: "Tools"
 
 ### 常用 chatbot 对话机器人
 
-* [Chatgpt](https://chat.openai.com) ```仍然是最强大```
-* [Poe](https://poe.com/) ```集成平台，好用```
-* [Microsoft new bing](https://www.bing.com/new) ```可以直接作图```
-* [Google bard](https://bard.google.com/)  ``` 需要美国IP```
+* [Chatgpt](https://chat.openai.com) ```综合最强大```
+* [Poe](https://poe.com/) ```集成平台```
+* [Microsoft new bing](https://www.bing.com/new) ```作图，图片识别，语音输出```
+* [Google bard](https://bard.google.com/)  ``` 需要美国IP，图片识别，语音输出```
 * [Claude](https://slack.com/get-started#/create) 
 
 
@@ -90,7 +92,6 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 * [英语学习底层逻辑](http://xiaolai.co/books/c558c667ad9f05ddce38f06df2d15aa3/index)
 * [如何写好英文书面比较句](http://xiaolai.co/books/8724bd963e758a48a168d955e711485b/comparison-in-english.html)
-* [托福TPO 1-70 ](https://smarter.igo1996.com/tf-part-index)
 * [新编英语阅读手册](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
 * [Youglish](https://youglish.com/)
  
