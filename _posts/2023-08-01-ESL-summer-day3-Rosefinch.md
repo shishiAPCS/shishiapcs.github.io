@@ -12,7 +12,6 @@ categories: media
 | 英文名   | KK音标   | 中文译名  | 名字起源（英） | 名字起源（中）|
 | ------ | ------ | ------- | --------- | --------- |
 | Karl   | kɑːrl | 卡尔    | Germanic, meaning "free man" | 日耳曼，意为"自由人" |
-| Zao    | zao   | 早      | Chinese, meaning "morning" | 中文，意为"早晨" |
 | Martin | ˈmɑːrtɪn | 马丁  | Latin, meaning "warlike" | 拉丁，意为"好战的" |
 | Joyce  | dʒɔɪs | 乔伊斯 | Latin, meaning "joyous" | 拉丁，意为"快乐的" |
 | Fielder | ˈfiːldər | 菲尔德 | English, meaning "one who works or plays in a field" | 英语，意为"在田野工作或玩耍的人" |
