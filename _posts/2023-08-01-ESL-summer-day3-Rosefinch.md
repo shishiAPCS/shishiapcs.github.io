@@ -34,6 +34,19 @@ categories: media
 | Raymond | ˈreɪmənd | 雷蒙德 | Germanic, meaning "protecting hand" | 日耳曼，意为"保护之手" |
 
 ---
-留言格式 <br>
-```# Name``` <br>
-```Response```
+# Day 3 ESL Homework ```任选一个问题回答，至少五句话``` 
+## 1. What breakfast did you have today? Why did you eat that?
+## 2. How do you typically get to school, and how long does it take?
+## 3. What is your daily morning routine before school?
+## 4. Who is your best friend and what do you like about them?
+## 5. What did you do after school yesterday?
+## 6. What is your favorite TV show or YouTube channel? Why do you like it?
+## 7. What chores do you have to do at home?
+## 8. What do you usually have for lunch at school?
+## 9. Do you participate in any sports or clubs? If yes, which ones and why do you like them?
+## 10. What is your favorite season of the year and why?
+## 11. What was the most interesting thing you learned at school this week?
+## 12. What is your favorite type of music and who is your favorite artist?
+## 13. Do you have any pets? If yes, what are they and what are their names? If no, would you like to have a pet?
+## 14. What is your favorite mobile app or game, and why do you like it?
+## 15. What did you do last weekend? Did you enjoy it?
