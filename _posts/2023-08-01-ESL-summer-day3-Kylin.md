@@ -5,6 +5,34 @@ layout: post
 categories: media
 ---
 
+# 课堂板书：
+
+```
+# 注意事项：
+## 称谓 title
+### 小朋友
+### doctor 
+### professor 
+## 微信 低效率  教授不用微信
+## 作业
+### 格式  不要使用 #
+### 提交时间 早点交作业 9PM
+### 惯例，逗号，点号之后有空格
+
+# Pronunciation workshop 发音练习
+## 短语
+## 发音 略读
+## coming out 出柜
+## bisexual 双性恋
+## homosexual 同性恋 
+## Guy gay
+## mean to 打算
+## as if 好像
+## My time has come. 大限已至
+## send shivers down my spine 让我不寒而栗/ 脊背发凉
+## truth 咬舌头
+
+```
 
 # All the names from your class
 ---

@@ -5,6 +5,37 @@ layout: post
 categories: media
 ---
 
+# 课堂板书：
+
+```
+2nd August Rosefinch 
+Agendas 课堂内容: 
+
+# Rules 课堂规则 
+# Tools 工具 
+
+# Theme: 
+## 课前准备 
+## 课前热身
+
+# Pronunciation workshop 发音练习20
+## as if 好像
+## th in English 
+## face 面对
+# 注意事项：10
+## 称谓
+### doctor 
+### professor 
+## 微信 低效率 
+## 作业
+### 格式  不要使用 #
+### 提交时间 早点交作业：   最晚：9PM
+### 惯例，逗号，点号之后有空格
+
+```
+
+
+
 
 # All the names from your class
 ---
