@@ -37,7 +37,7 @@ categories: media
 
 ---
 
-# Day 3 ESL Homework ```任选一个问题回答，至少五句话``` 
+# Day 3 ESL Homework ```任选一个问题回答，至少五句话。 如果你的GitHub账号不是自己的名字就在回答的前面加一个名字和:  如 Tim: ```  
 ## 1. What breakfast did you have today? Why did you eat that?
 ## 2. How do you typically get to school, and how long does it take?
 ## 3. What is your daily morning routine before school?
@@ -53,4 +53,4 @@ categories: media
 ## 13. Do you have any pets? If yes, what are they and what are their names? If no, would you like to have a pet?
 ## 14. What is your favorite mobile app or game, and why do you like it?
 ## 15. What did you do last weekend? Did you enjoy it?
-
+---
