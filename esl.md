@@ -262,19 +262,4 @@ that can explain the definition)
 
 ---
 
-# 留言格式
-
-``` markdown
- # 你的名字
-
-![文件名](https://github.com/Royhowtohack/disk/blob/main/audiobook.png?raw=true)
-
-| Word | English Explanation | 中文解释 | Example Sentence |
-| --- | --- | --- | --- |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-| 词汇写这里 | 英语解释写这里 | 中文解释写这里 | 例句写这里 |
-
-```
----
 
