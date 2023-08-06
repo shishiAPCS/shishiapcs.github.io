@@ -18,5 +18,4 @@ categories: media
 ```
 ## 留言格式：
 ```Name ``` <br>
-```逐字稿``` <br>
-```修改后的逐字稿```
+```Response```
