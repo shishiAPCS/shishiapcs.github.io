@@ -35,7 +35,7 @@ Agendas 课堂内容:
 ```
 # Homework:
 ```
-1. 继续改写 TPO12 Task1
+1. 继续改写 TPO12 Task1, 尽量 8:30 PM 之前给我
 2. 熟记 TPO56 Task2 听力生词，周三 quiz
 ```
 ## 留言格式：

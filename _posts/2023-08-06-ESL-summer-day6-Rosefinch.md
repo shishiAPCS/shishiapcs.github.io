@@ -41,7 +41,7 @@ I think music education is essential because it’s a good way to relax ourselve
 # Homework:
 
 ```
-1. 继续改写 TPO12 Task1
+1. 继续改写 TPO12 Task1，尽量 8:30 PM 之前给我
 2. 熟记 TPO56 Task2 听力生词，周三 quiz
 ```
 ## 留言格式：
