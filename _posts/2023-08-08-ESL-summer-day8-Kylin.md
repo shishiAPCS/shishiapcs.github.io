@@ -7,7 +7,10 @@ categories: media
 # TPO55 Task2 quiz 
 [传送门](https://quizizz.com) <br>
 ---
-[TPO55 Conversation 1 中英文本字幕，点此下载](https://raw.githubusercontent.com/Royhowtohack/disk/main/TPO55_C1_Campus%20Hotel.srt) <br>
+[TPO55 Conversation 1 中英文本字幕，点此下载](https://raw.githubusercontent.com/Royhowtohack/disk/main/TPO55_C1_Campus%20Hotel.srt)  <br>
+
+增加天翼网盘: https://cloud.189.cn/web/share?code=em6faybMBbyy（访问码：6d5w）
+
 <br>
 [苹果电脑可用播放器，点此下载](https://iina.io/)
 ---
