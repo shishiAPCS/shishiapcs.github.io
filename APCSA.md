@@ -2,11 +2,14 @@
 title: "AP CSA"
 ---
 
-# [CSA Exam 2023:](https://apstudents.collegeboard.org/courses/ap-computer-science-a)
+# [CSA Exam 2024:](https://apstudents.collegeboard.org/courses/ap-computer-science-a)
 
 ---
-  - paper based exam on Wed, May 3, 2023
+  - Paper based exam on Wed, May 8, 2024
   - [AP 分数计算器](https://examstrategist.com/ap-computer-science-a-score-calculator/)
+
+---
+  - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
 
 ---
 # Core Concepts:<br>核心知识点
