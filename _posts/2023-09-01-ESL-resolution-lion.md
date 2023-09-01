@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-# Leave your new semester's resolution here --Lion 🦁️
+# Leave your new semester's resolution here -- Lion 🦁️
 
 ## 留言格式：
 ```Name ``` <br>
