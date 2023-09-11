@@ -21,7 +21,7 @@ title: "Tools"
 * ### [shishiapcs.github.io 留言板视频教程](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
 * ### [Thinkwave 交作业视频教程](https://www.bilibili.com/video/BV1xP411e74p/)
 * ### [微软outlook邮箱注册地址](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook)
-* ### [微软outlook邮箱注册视频教程](【outlook 邮箱申请】 https://www.bilibili.com/video/BV1bu411P79D/?share_source=copy_web&vd_source=a7ed18508531908cbb2dc681efccf167)
+* ### [微软outlook邮箱注册视频教程](https://www.bilibili.com/video/BV1bu411P79D/?share_source=copy_web&vd_source=a7ed18508531908cbb2dc681efccf167)
 ----
 
 ## Ai
