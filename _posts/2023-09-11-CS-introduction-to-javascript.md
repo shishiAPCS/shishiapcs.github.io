@@ -56,7 +56,7 @@ if(answer == "20") {
 ```
 
 ```javascript
-// 把浏览器搞崩溃
+// 神秘代码
 const powerOn = true;
 while(powerOn) {
     console.log("  ")
