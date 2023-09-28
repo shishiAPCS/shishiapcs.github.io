@@ -109,9 +109,9 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 语音转文字
 
-* #### [otter.ai](https://otter.ai/) ```每月300分钟免费额度```
+* #### [otter.ai](https://otter.ai/) ~~每月300分钟免费额度~~
 * #### [OpenAi Whisper](https://platform.openai.com/playground) ```异常强大，可以中英混合输入，需要openai账号```
-* #### [flixier](https://editor.flixier.com/tools/all-tools)
+* #### [flixier](https://editor.flixier.com/tools/all-tools) ```仍然免费，无需账号```
     - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)         
 
 ### 文字转语音 
@@ -126,6 +126,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### Markdown
 
+* [Markdown转PDF](https://md2pdf.netlify.app/)
 * [Markdown to table](https://tableconvert.com/markdown-to-excel)
 * [CSV to Markdown](https://www.convertcsv.com/csv-to-markdown.htm)
 * [Markdown table generartor ](https://www.tablesgenerator.com/markdown_tables)
