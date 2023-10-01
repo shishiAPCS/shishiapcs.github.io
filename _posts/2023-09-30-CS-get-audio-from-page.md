@@ -21,6 +21,7 @@ categories: media
 
 在开发者工具窗口中，点击“Console”选项卡即可进入 Console 界面。
 
+{% include codeHeader.html %}
 ```javascript
 // Select all <audio> elements with a "src" attribute that ends with ".wav"
 // This is done using the CSS selector 'audio[src$=".wav"]'
