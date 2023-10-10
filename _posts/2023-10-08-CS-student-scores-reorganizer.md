@@ -5,6 +5,67 @@ layout: post
 categories: media
 ---
 
+<body>
+
+<h1>Tutorial: Using the Automated Score Entry System</h1>
+
+<h2>Purpose:</h2>
+<p>This system allows you to generate a list of student names along with their respective scores. You can then use this generated list, along with a piece of provided code, to automatically enter these scores into our ThinkWave.</p>
+
+<h2>Step-by-step Guide:</h2>
+
+<h3>Entering Data:</h3>
+<ol>
+    <li>In the "Class List" textbox, enter the names of students, one per line.</li>
+    <li>In the "Score List" textbox, input the student names followed by their scores, separated by a space. Each student and their score should be on a new line.</li>
+</ol>
+<div class="tip">
+    <strong>Tip:</strong> Ensure the format is as follows:
+    <pre><code>
+John 85
+Jane 90
+    </code></pre>
+</div>
+
+<h3>Generating the Student Scores List:</h3>
+<ol>
+    <li>Based on what you want to do, click one of the three buttons:
+        <ul>
+            <li><strong>Extract Scores:</strong> This will generate scores as they are entered, without any changes.</li>
+            <li><strong>Reorder Scores:</strong> This will reorder scores based on the provided class list.</li>
+            <li><strong>Convert TOEFL to GPA:</strong> If you've entered TOEFL scores, this button will convert them to GPA scores and list them.</li>
+        </ul>
+    </li>
+    <li>After clicking any of the buttons, you will see a list generated in the format: <code>const studentScores = [...];</code></li>
+</ol>
+
+<h3>Accessing Google Chrome's Console:</h3>
+<p>If you're unfamiliar with the Chrome Developer Console, it's a tool built right into Chrome that developers use to debug their websites. Here's how to open it:</p>
+<ol>
+    <li>Right-click on any part of a webpage.</li>
+    <li>From the context menu, select "Inspect" or "Inspect Element".</li>
+    <li>A window will pop up at the bottom or side of your screen. From the top menu of this window, select "Console".</li>
+</ol>
+<p><strong>Congratulations!</strong> You've accessed the console.</p>
+
+<h3>Pasting the Data into the ThinkWave:</h3>
+<ol>
+    <li>Copy the generated list from our system.</li>
+    <li>Below that list, there's a piece of code provided. Copy that code as well.</li>
+    <li>Go to the console in Google Chrome.</li>
+    <li>Paste both the list and the code into the console.</li>
+    <li>Press Enter.</li>
+</ol>
+<p>The scores will be automatically filled into our ThinkWave!</p>
+
+<div class="note">
+    <strong>Note:</strong> Ensure that you're on the ThinkWave's webpage when you're pasting the data and the code into the console.
+</div>
+
+</body>
+
+---
+---
 <style>
     /* Define styles for the textareas */
     textarea {
