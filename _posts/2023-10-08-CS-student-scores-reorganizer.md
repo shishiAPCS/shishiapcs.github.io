@@ -133,7 +133,9 @@ function reorderScores() {
     for (let student of classList) {
         let score = scoreMap.get(student.trim());
         if (score !== undefined) {
-            studentScores.push(score);
+            studentScores.push(score); // push the score of the student
+        } else {
+            studentScores.push("F"); // or whatever placeholder you want to use for missing scores
         }
     }
 
@@ -144,6 +146,7 @@ function reorderScores() {
     
     console.log(studentScores);
 }
+
 
 function extractScores() {
     const scoresWithName = extractRawScoresWithName(); 
