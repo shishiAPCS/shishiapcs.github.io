@@ -69,6 +69,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### Ai 绘画
 
+* [免费 DALL·E 3](https://www.bing.com/create)
 * [leonardo.ai](https://leonardo.ai/)
 * [midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F) 
 * [playgroundai](https://playgroundai.com)
