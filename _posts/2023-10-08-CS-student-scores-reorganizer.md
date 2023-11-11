@@ -350,11 +350,11 @@ function loadClassList(preset) {
 </style>
 
 ---
-{% include codeHeader.html %}
 
 <!-- Area to display the reordered results -->
 <ul id="resultList"></ul>
 
+{% include codeHeader.html %}
 ```javascript
 // put const studentScores = ["This is ordered studentScores"] here. 
 
