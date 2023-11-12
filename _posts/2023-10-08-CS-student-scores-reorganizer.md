@@ -7,47 +7,50 @@ categories: media
 
 <div id="wrapper">
     <!-- Collapsible Tutorial Section -->
-    <div id="tutorial-section">
+        <div id="tutorial-section">
         <div id="tutorial-header" onclick="toggleTutorial()">
             <h1>Tutorial <span id="triangle">&#9660;</span></h1>
         </div>
         <div id="tutorial-content" style="display: none;">
-            <!-- Tutorial content goes here -->
-            <!-- Your existing tutorial content -->
-                        <h1>Using the Automated Score Entry System</h1>
+            <h1>Using the Automated Score Entry System</h1>
 
             <h2>Purpose:</h2>
-            <p>This system allows you to generate a list of student names along with their respective scores. You can then use this generated list, along with a piece of provided code, to automatically enter these scores into our ThinkWave.</p>
+            <p>This system is designed for efficient management of student scores, allowing for easy organization of names and scores, conversion of TOEFL scores to GPA, and use of preset class lists.</p>
 
-            <h2>Step-by-step Guide:</h2>
+            <h2>Step-by-Step Guide:</h2>
 
             <h3>Entering Data:</h3>
             <ol>
                 <li>In the "Class List" textbox, enter the names of students, one per line.</li>
-                <li>In the "Score List" textbox, input the student names followed by their scores, separated by a space. Each student and their score should be on a new line.</li>
+                <li>In the "Score List" textbox, input the student names followed by their scores, separated by a space. Each entry should be on a new line.</li>
             </ol>
             <div class="tip">
-                <strong>Tip:</strong> Ensure the format is as follows:
+                <strong>Tip:</strong> The format should be like this:
                 <pre><code>
             John 85
             Jane 90
                 </code></pre>
             </div>
 
+            <h3>Using Preset Class Lists:</h3>
+            <p>Click on one of the preset buttons (e.g., ESL Lion, ESL Dragon) to load a predefined list of student names into the "Class List" textbox.</p>
+
             <h3>Generating the Student Scores List:</h3>
             <ol>
-                <li>Based on what you want to do, click one of the three buttons:
+                <li>Select from the function buttons:
                     <ul>
-                        <li><strong>Extract Scores:</strong> This will generate scores as they are entered, without any changes.</li>
-                        <li><strong>Reorder Scores:</strong> This will reorder scores based on the provided class list.</li>
-                        <li><strong>Convert TOEFL to GPA:</strong> If you've entered TOEFL scores, this button will convert them to GPA scores and list them.</li>
+                        <li><strong>Organize Names and Scores:</strong> Organizes scores according to the class list and identifies missing scores.</li>
+                        <li><strong>Convert TOEFL to GPA:</strong> Converts TOEFL scores to a GPA format for each student.</li>
                     </ul>
                 </li>
-                <li>After clicking any of the buttons, you will see a list generated in the format: <code>const studentScores = [...];</code></li>
+                <li>A list in the format <code>const studentScores = [...];</code> is generated after clicking a button.</li>
             </ol>
 
             <h3>Accessing Google Chrome's Console:</h3>
-            <p>If you're unfamiliar with the Chrome Developer Console, it's a tool built right into Chrome that developers use to debug their websites. Here's how to open it:</p>
+            <p>Instructions on how to open and use the Chrome Developer Console.</p>
+            <ol>
+                <!-- Existing steps to access the console -->
+                           <p>If you're unfamiliar with the Chrome Developer Console, it's a tool built right into Chrome that developers use to debug their websites. Here's how to open it:</p>
             <ol>
                 <li>Right-click on any part of a webpage.</li>
                 <li>From the context menu, select "Inspect" or "Inspect Element".</li>
@@ -55,19 +58,23 @@ categories: media
             </ol>
             <p><strong>Congratulations!</strong> You've accessed the console.</p>
 
-            <h3>Pasting the Data into the ThinkWave:</h3>
-            <ol>
-                <li>Copy the generated list from our system.</li>
-                <li>Below that list, there's a piece of code provided. Copy that code as well.</li>
-                <li>Go to the console in Google Chrome.</li>
-                <li>Paste both the list and the code into the console.</li>
-                <li>Press Enter.</li>
             </ol>
-            <p>The scores will be automatically filled into our ThinkWave!</p>
 
+            <h3>Pasting the Data into ThinkWave:</h3>
+            <ol>
+                <li>Copy the generated list and accompanying code.</li>
+                <li>Paste both into the console and press Enter.</li>
+                <li>The scores are automatically filled into ThinkWave.</li>
+            </ol>
             <div class="note">
-                <strong>Note:</strong> Ensure that you're on the ThinkWave's webpage when you're pasting the data and the code into the console.
+                <strong>Note:</strong> Ensure you are on the ThinkWave webpage when pasting the data and code.
             </div>
+
+            <h3>Copying Data to Clipboard:</h3>
+            <p>The system now automatically copies the generated data to the clipboard for easy pasting.</p>
+
+            <h3>Error Handling:</h3>
+            <p>The system includes error handling for the TOEFL to GPA conversion, ensuring data integrity.</p>
             ---
         </div>
     </div>
@@ -87,108 +94,83 @@ categories: media
 
     <!-- Function Buttons -->
     <div id="function-buttons">
-        <button id="extractButton" onclick="extractScores()">Extract Scores</button>
-        <button id="reorderButton" onclick="reorderScores()">Reorder Scores</button>
-        <button id="convertButton" onclick="convertAndOrderScores()">Convert TOEFL to GPA</button>
+        <button id="organizeButton">Organize Names and Scores</button>
+        <button id="convertButton">Convert TOEFL to GPA</button>
     </div>
+
+    <!-- New Output Text Area for CSV -->
+    <textarea id="csv-output" placeholder="Copy and convert to a table at tableconvert.com/csv-to-html" readonly></textarea>
+    
+
 
     <!-- Output Area -->
     <div id="output-area">
-        <!-- Placeholder for output -->
+        <!-- Placeholder for success message -->
+        <div id="output-message"></div>
     </div>
-
-    <!-- Include your existing script here -->
-    <!-- Make sure to add the new functions for the tutorial section and presets -->
+   
 </div>
 
 <script>
 
-//Extracts the numeric part from a string. If the string does not contain a numeric value, it returns the original string. Useful for parsing mixed-type data.
-function getNumericValueOrOriginal(str) {
-    if (typeof str !== "string") return str;  // Safety check
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('organizeButton').addEventListener('click', organizeNamesAndScores);
+    document.getElementById('convertButton').addEventListener('click', convertTOEFLtoGPA);
+});
 
-    const numericValue = str.match(/\d+(\.\d+)?/);
-    if (numericValue) {
-        return numericValue[0];
-    }
-    return str;
-}
+function processScoresAndGenerateOutput(scoresWithName) {
+    // Counters for present and missing scores
+    let scoresPresent = 0;
+    let scoresMissing = 0;
 
-function reorderScores() {
-    const classList = document.getElementById("class-list").value.split("\n");
-    
-    // Check if the classList is empty or contains only whitespace characters
-    if (classList.length === 0 || (classList.length === 1 && classList[0].trim() === "")) {
-        alert("Please enter the student names in the class list to reorder the scores properly.");
-        return;  // Exit the function early
-    }
-
-    const scoresWithName = extractRawScoresWithName();
-    let scoreMap = new Map(scoresWithName);
-
-    let resultList = document.getElementById("resultList");
-    resultList.innerHTML = "";
-
-    const studentScores = ["This is reordered studentScores"];
-    for (let student of classList) {
-        let score = scoreMap.get(student.trim());
-        if (score !== undefined) {
-            studentScores.push(score); // push the score of the student
+    // Generate CSV data and studentScores list
+    const csvData = scoresWithName.map(([name, score]) => {
+        if (score !== "M") {
+            scoresPresent++;
+            return `${name},${score}`;
         } else {
-            studentScores.push("M"); // or whatever placeholder you want to use for missing scores
+            scoresMissing++;
+            return `${name},"M"`;
         }
-    }
-
-    let wrappedScores = wrapStrings(studentScores);
-    let li = document.createElement("li");
-    li.textContent = `const studentScores = [${wrappedScores.join(', ')}];`;
-    resultList.appendChild(li);
+    }).join('\n');
     
-    console.log(studentScores);
+    // Format the studentScores list for the autofill code, including quotes around non-numerical values
+    const studentScoresList = scoresWithName.map(([name, score]) => isNaN(score) ? `"${score}"` : score);
+    const studentScores = `const studentScores = ["This is extracted studentScores", ${studentScoresList.join(', ')}];`;
+
+    // Copy to clipboard
+    // const codeToCopy = `${studentScores}\n${autofillCode}`;
+    const codeToCopy = `const studentScores = [${studentScores.join(', ')}];\n${autofillCode}`;
+    copyToClipboard(codeToCopy);
+
+    // Update the output area
+    document.getElementById('csv-output').value = csvData;
+    document.getElementById('output-message').textContent = `Operation successful. ${scoresPresent} scores present, ${scoresMissing} missing. List and autofill code copied to clipboard.`;
 }
 
-function extractScores() {
-    const scoresWithName = extractRawScoresWithName(); 
-    const studentScores = ["This is extracted studentScores"];
-    for (let [name, score] of scoresWithName) {
-        studentScores.push(score);
-    }
-
-    let wrappedScores = wrapStrings(studentScores);
-    let resultList = document.getElementById("resultList");
-    resultList.innerHTML = "";
-    let li = document.createElement("li");
-    li.textContent = `const studentScores = [${wrappedScores.join(', ')}];`;
-    resultList.appendChild(li);
-
-    console.log(studentScores);
-}
-
-function convertAndOrderScores() {
+function organizeNamesAndScores() {
     const scoresWithName = extractRawScoresWithName();
-    const convertedScoresWithName = scoresWithName.map(([name, score]) => [name, toeflToGPA(score)]);
-    
-    const classList = document.getElementById("class-list").value.split("\n");
-    let result;
-    if (classList.length > 1 || (classList.length === 1 && classList[0].trim() !== "")) {
-        result = reorderScoresByClassList(convertedScoresWithName);
+    let processedScores;
+    const classList = document.getElementById("class-list").value.trim().split("\n").filter(Boolean);
+
+    if (classList.length > 0) {
+        // If there are names in the class list, use them to reorder and identify missing scores
+        const scoresMap = new Map(scoresWithName.map(([name, score]) => [name.toLowerCase(), score]));
+        processedScores = classList.map(studentName => {
+            const score = scoresMap.get(studentName.toLowerCase());
+            return score ? [studentName, score] : [studentName, '"M"'];
+        });
     } else {
-        result = convertedScoresWithName;
-    }
-    
-    const studentScores = ["This is TOEFL converted to GPA"];
-    for (let [name, score] of result) {
-        studentScores.push(score);
+        // If class list is empty, use the scores as they are
+        processedScores = scoresWithName;
     }
 
-    let wrappedScores = wrapStrings(studentScores);
-    let resultList = document.getElementById("resultList");
-    resultList.innerHTML = "";
-    let li = document.createElement("li");
-    li.textContent = `const studentScores = [${wrappedScores.join(', ')}];`;
-    resultList.appendChild(li);
-
-    console.log(studentScores);
+    // Format into CSV and generate studentScores list
+    const csvData = formatToCSV(processedScores);
+    document.getElementById('csv-output').value = csvData;
+    generateStudentScoresList(processedScores);
+    document.getElementById('output-message').textContent = 
+        `Organized names and scores. Data copied to clipboard.`;
 }
 
 function extractRawScoresWithName() {
@@ -213,26 +195,130 @@ function extractRawScoresWithName() {
     return scores;
 }
 
-function reorderScoresByClassList(scoresWithName) {
-    const classList = document.getElementById("class-list").value.split("\n");
-    if (classList.length <= 1 && !classList[0]) return scoresWithName; 
+function generateStudentScoresList(scoresWithName) {
+    // Prepare the scores, adding quotes if the score is "M"
+    const studentScores = scoresWithName.map(([name, score]) => score !== '"M"' ? score : '"M"');
+    const formattedScores = `["This is extracted studentScores", ${studentScores.join(', ')}]`;
+    
+    // Generate the autofill code
+    // const codeToCopy = `${formattedScores};\n${autofillCode}`;
+    const codeToCopy = `const studentScores = [${studentScores.join(', ')}];\n${autofillCode}`;
+    copyToClipboard(codeToCopy);
+}
 
-    const reorderedScores = [];
-    const scoreMap = new Map(scoresWithName);
+function formatToCSV(scoresWithName) {
+    // CSV generation for display
+    return scoresWithName.map(([name, score]) => `${name},${score}`).join('\n');
+}
 
-    for (let student of classList) {
-        let score = scoreMap.get(student.trim());
-        if (score !== undefined) {
-            reorderedScores.push([student, score]);
+function copyToClipboard(text) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+            console.log('Copying to clipboard was successful!');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    } else {
+        // Clipboard API not available, provide a fallback to copy manually
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            console.log('Fallback: Copying text command was successful');
+        } catch (err) {
+            console.error('Fallback: Oops, unable to copy', err);
+        }
+        document.body.removeChild(textArea);
+    }
+}
+
+// Define the autofill code to be copied to the clipboard
+const autofillCode = `
+(function(studentScores) {
+    // Autofill code for ThinkWave
+    const inputFields = document.querySelectorAll('input.input-small[type="text"]');
+    for (let i = 0; i < inputFields.length; i++) { // Changed from 1 to 0 to match array indices
+        const inputField = inputFields[i];
+        if (inputField && studentScores[i + 1] !== undefined) { // Changed to i + 1 to skip the first item which is a string
+            inputField.value = studentScores[i + 1];
+            inputField.dispatchEvent(new Event('input', { 'bubbles': true }));
         }
     }
-    return reorderedScores;
+})(studentScores); // Immediately invoke the function with studentScores
+true;
+`;
+
+
+//Extracts the numeric part from a string. If the string does not contain a numeric value, it returns the original string. Useful for parsing mixed-type data.
+function getNumericValueOrOriginal(str) {
+    if (typeof str !== "string") return str;  // Safety check
+
+    const numericValue = str.match(/\d+(\.\d+)?/);
+    if (numericValue) {
+        return numericValue[0];
+    }
+    return str;
+}
+
+function convertTOEFLtoGPA() {
+    const scoresWithName = extractRawScoresWithName();
+    const classList = document.getElementById("class-list").value.trim().split("\n").filter(Boolean);
+    let conversionErrors = [];
+    let convertedScoresMap = new Map();
+
+    // Convert each score and store in a map with lowercase name for case-insensitive matching
+    scoresWithName.forEach(([name, score]) => {
+        const convertedScore = toeflToGPA(score);
+        if (typeof convertedScore === 'string' && convertedScore.startsWith('Error')) {
+            conversionErrors.push(`${name}: ${convertedScore}`);
+            convertedScoresMap.set(name.toLowerCase(), '"M"'); // Mark as missing if there's an error
+        } else {
+            convertedScoresMap.set(name.toLowerCase(), convertedScore);
+        }
+    });
+
+    let processedScores;
+
+    // Check if a class list is provided
+    if (classList.length > 0) {
+        // Use the class list to reorder and identify missing scores
+        processedScores = classList.map(studentName => {
+            const score = convertedScoresMap.get(studentName.toLowerCase());
+            return score ? [studentName, score] : [studentName, '"M"']; // Mark as missing if not found in the map
+        });
+    } else {
+        // If class list is empty, use the original names with converted scores
+        processedScores = scoresWithName.map(([name, _]) => {
+            const score = convertedScoresMap.get(name.toLowerCase());
+            return [name, score];
+        });
+    }
+
+    // Update the output textarea and copy to clipboard only if there are no errors
+    if (conversionErrors.length === 0) {
+        const csvData = formatToCSV(processedScores); 
+        document.getElementById('csv-output').value = csvData;
+        generateStudentScoresList(processedScores);
+        document.getElementById('output-message').textContent = "Converted TOEFL to GPA. Data copied to clipboard.";
+    } else {
+        // Display the conversion errors
+        document.getElementById('output-message').textContent = "Error: Unable to convert some TOEFL scores. " +
+            "Please ensure all scores are numeric and within the valid range.";
+        document.getElementById('csv-output').value = conversionErrors.join('\n');
+    }
 }
 
 function toeflToGPA(scoreInput) {
     const score = parseFloat(scoreInput);
+
+     console.log(`Converted input '${scoreInput}' to number: ${score}`); // For debugging
     
-    if (isNaN(score)) return scoreInput;
+     if (isNaN(score) || score < 0 || score > 30) {
+        return 'Error: TOEFL score out of range (0-30).'; // Indicate an invalid score was provided
+    }
 
     if (score < 7) return 55;
     else if (score == 7) return 60;
@@ -252,6 +338,8 @@ function toeflToGPA(scoreInput) {
     else if (score == 21) return 92.84;
     else if (score == 22) return 94.98;
     else if (score >= 23) return 95;
+    // If score does not meet any condition, return an error message
+    return 'Error: Conversion Error';
 }
 
 function wrapStrings(arr) {
@@ -262,12 +350,6 @@ function wrapStrings(arr) {
         return item;
     });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('extractButton').addEventListener('click', extractScores);
-    document.getElementById('reorderButton').addEventListener('click', reorderScores);
-    document.getElementById('convertButton').addEventListener('click', convertAndOrderScores);
-});
 
 // New functions for the updated interface
 function toggleTutorial() {
@@ -347,29 +429,18 @@ function loadClassList(preset) {
             margin: 5px; /* Smaller margin on smaller screens */
         }
     }
+
+    #csv-output {
+    width: 96%; /* Adjust as needed */
+    height: 450px; /* Adjust as needed */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
 </style>
 
 ---
 
 <!-- Area to display the reordered results -->
 <ul id="resultList"></ul>
-
-{% include codeHeader.html %}
-```javascript
-// put const studentScores = ["This is ordered studentScores"] here. 
-
-// Get all input fields with the class "input-small" and type "text".
-const inputFields = document.querySelectorAll('input.input-small[type="text"]');
-
-// Loop through each input field and populate the corresponding score.
-for (let i = 1; i < inputFields.length; i++) {
-  const inputField = inputFields[i];
-  if (inputField && studentScores[i] !== undefined) {
-    inputField.value = studentScores[i];
-    inputField.dispatchEvent(new Event('input', { 'bubbles': true }));
-  }
-}
-
-true
-
-```
