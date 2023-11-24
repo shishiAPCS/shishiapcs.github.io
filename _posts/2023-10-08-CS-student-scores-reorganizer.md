@@ -239,11 +239,12 @@ function copyToClipboard(text) {
 const autofillCode = `
 (function(studentScores) {
     // Autofill code for ThinkWave
-    const inputFields = document.querySelectorAll('input.input-small[type="text"]');
-    for (let i = 0; i < inputFields.length; i++) { // Changed from 1 to 0 to match array indices
-        const inputField = inputFields[i];
-        if (inputField && studentScores[i + 1] !== undefined) { // Changed to i + 1 to skip the first item which is a string
-            inputField.value = studentScores[i + 1];
+    // Select only input fields that are for grades
+    const scoreInputFields = document.querySelectorAll('input[name*="-grade"][type="text"]');
+    for (let i = 0; i < scoreInputFields.length; i++) {
+        const inputField = scoreInputFields[i];
+        if (inputField && studentScores[i] !== undefined) {
+            inputField.value = studentScores[i];
             inputField.dispatchEvent(new Event('input', { 'bubbles': true }));
         }
     }
