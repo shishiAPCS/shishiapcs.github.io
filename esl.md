@@ -27,6 +27,7 @@ categories: media
 
 ## TPO58
 - [tpo58 L3 Harlem Renaissance](mindmap/tpo58_L3_Harlem_Renaissance.md)
+- [tpo58 L3 Interferometers](mindmap/tpo58_L2_Interferometers.md)
 
 ## TPO59
 - [tpo59 L1 Panorama](mindmap/tpo59_L1_Panorama.md)
