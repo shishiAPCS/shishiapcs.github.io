@@ -374,7 +374,7 @@ function loadClassList(preset) {
     'ESLRosefinch': "Sword\nJoe\nZao\nClaire\nAugust\nRichard\nIsaiah\nJenny\nKevin\nMeredith\nSeanna\nLauren\nMartin\nJason\nGeorge\nSelina\nCamilia\nMichael\nRaymond\nJoyce\nAlice\nVicky\nAndy\nVictoria\nFlora\nMason",
     'ESLKylin': "Eric\nKarl\nFielder\nEvelyn\nLeon\nMike\nCicily\nKeven\nLynne\nRegina\nTom\nSteven\nWesley\nTina\nEvan\nHoward\nCarol\nWendy\nBobby",
     'S1': 
-    "Karl/Zao/Martin/Joyce/Fielder/Sword/Keven/Jenny/Lauren/Mike/Kevin/Joe/Eric/Andy/Tom/Meredith/August/Richard/Camilia/Wesley/Raymond/Jason/Steven/George/Isaiah/Leon/Seanna/Bobby/Michael/Regina/Carol/Evelyn/Vicky/Victoria/Lynne/Wendy/Alice/Selina/Evan/Howard/Tina/Cicily/Mason/Claire/Flora"
+    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora"
     };
 
     // Load the preset class list into the textarea
