@@ -145,6 +145,10 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * #### [图片压缩](https://compressjpeg.com/)
 * #### [圆形头像](https://profilepicturemaker.com/#quotemaker)
 
+### 海报
+
+* #### [canva](https://www.canva.com/)
+
 ### B站视频字幕提取
 
 * [greasyfork](https://www.bilibili.com/video/BV1L3411J7Yc/?vd_source=84a986f8292e7cdf31541219b6c7844c)
