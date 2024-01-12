@@ -1,5 +1,5 @@
 ---
-title:  "TPO60 L1 Oil Paint Vocabulaty"
+title:  "TPO60 L1 Oil Paint Vocabulary List"
 mathjax: true
 layout: post
 categories: media
