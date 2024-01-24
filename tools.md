@@ -106,7 +106,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### Mind map
 
-* [在线思维导图](https://app.mindmup.com/)
+* [markmap.js](https://markmap.js.org/repl)
 
 ### 语音转文字
 
