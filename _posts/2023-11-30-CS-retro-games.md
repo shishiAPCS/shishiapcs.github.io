@@ -5,9 +5,7 @@ layout: post
 categories: media
 ---
 
-## Introduction <br> 引言
-Dive into the world of classic handheld gaming with this comprehensive guide. Explore emulators, game recommendations, and resources for your favorite retro games. <br>
-深入经典掌上游戏世界，通过这份指南探索各种模拟器、游戏推荐。
+## [点此查看历代游戏主机](https://9ioldgame.com/games/GBA-games.html)
 
 ## Emulators for iOS Devices <br> iOS 设备模拟器
 - **TrollStore for iOS:** Sideload IPA files on iOS devices. <br> **TrollStore for iOS:** 在iOS设备上侧载IPA文件。[Visit TrollStore](https://trollstore.app/)
