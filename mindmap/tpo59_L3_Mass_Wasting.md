@@ -1,5 +1,5 @@
 ---
-title:  "TPO59 L3 Mass Wasting"
+title:  "TPO59 L3 Mass Wasting Mind Map"
 mathjax: true
 layout: post
 categories: media
