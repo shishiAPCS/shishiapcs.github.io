@@ -31,7 +31,7 @@ categories: media
 
 ## TPO59
 - [tpo59 L1 Panorama](mindmap/tpo59_L1_Panorama.md)
-- [tpo59 L2 Mass Wasting](mindmap/tpo59_L2_Mass_Wasting.md)
+- [tpo59 L3 Mass Wasting](mindmap/tpo59_L3_Mass_Wasting.md)
 - [tpo59 L4 European Economy History](mindmap/tpo59_L4_European_Economy_History.md)
 
 ## TPO60
