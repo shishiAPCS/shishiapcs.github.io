@@ -1,10 +1,21 @@
+---
+title:  "TPO59 L3 Mass Wasting"
+mathjax: true
+layout: post
+categories: media
+---
+
+
+---
+
+
 # [在线文本、听力](https://t.weixue100.com/toefl/listening/62004.html) 
 
 <div class="markmap-container">
 <div class="markmap">
 <script type="text/template">
 
-# TPO59_L2_Mass Wasting<br>TPO59_L2_块体运动
+# TPO59_L3_Mass Wasting<br>TPO59_L2_块体运动
 
 ## Introduction to Mass Wasting<br>块体运动介绍
 - Mass wasting refers to geological movements of land, including various forms such as landslides and rock falls.<br>块体运动指的是土地的地质移动，包括各种形式，如滑坡和岩石坠落。
