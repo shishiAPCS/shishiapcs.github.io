@@ -12,7 +12,7 @@ categories: media
 | well acquainted with | Familiar or knowledgeable about something. | 熟悉 | "You're probably well acquainted with mass wasting associated with steep hills." |
 | associated | Connected with something else. | 与...有关 | "Creep is another type of mass wasting, associated with gentle hills or slopes." |
 | steep hills | Hills with a sharp incline. | 陡峭的山丘 | "Mass wasting is often associated with steep hills and mountains." |
-| by a long shot | By far; clearly. | <span style="color: red;">远远地</span> | "Creep is, by a long shot, the more common process of mass wasting." |
+| by a long shot | By far; clearly. | <span style="color: red;">表示强调</span> | "Creep is, by a long shot, the more common process of mass wasting." |
 | slopes | Surfaces of land that incline. | 斜坡 | "There are a lot more gentle slopes where creep happens." |
 | ultimately | In the end; finally. | 最终 | "Gravity is ultimately responsible for mass wasting." |
 | affects | Has an effect on; makes a difference to. | 影响 | "Water affects the movement in mass wasting processes." |
@@ -23,7 +23,7 @@ categories: media
 | Thanks to | Because of; due to. | 多亏了 | "Thanks to gravity, this movement is almost imperceptible." |
 | imperceptible | Not noticeable or visible. | 难以察觉的 | "This movement is almost imperceptible and not exciting." |
 | forces | Physical power or strength. | 力量 | "You'll never see creep on a TV show about the dangerous forces of nature." |
-| curve | To form or cause to form a curve. | 使弯曲 | "Over the years, you may see curve trees as evidence of creep." |
+| curve | To form or cause to form a curve. | 弯曲 | "Over the years, you may see curve trees as evidence of creep." |
 | tilted fences | Fences that have become inclined or slanted. | 倾斜的栅栏 | "Tilted fences are another sign of the slow process of creep." |
 | colder regions | Areas with low temperatures. | 寒冷地区 | "Creep can happen in colder regions, especially regions with permafrost." |
 | uniformly | In a way that is the same in all cases and at all times. | 均匀地 | "In solifluction, the soil moves uniformly down the slope." |
