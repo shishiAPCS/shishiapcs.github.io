@@ -63,7 +63,7 @@ categories: media
 | forms | Types or kinds | 形式 | "There are different forms of inactivity, such as rest and sleep." |
 | regular | Normal or usual | 常规的 | "Insects engage in regular rest but do not sleep." |
 | for instance | For example | 例如 | "For instance, insects rest but don't sleep." |
-| specific | Clearly defined or identified | 特定的 | "Sleep is specific because it alters brain activity." |
+| specific | Clearly defined or identified | 特有的 | "What's specific to sleep is that the brain alters many of its usual activities, including its connection to sensory and motor organs, it shuts those connections down." |
 | alters | Changes | 改变 | "Sleep alters the brain's connection to sensory and motor organs." |
 | connection | A link or relationship | 连接 | "During sleep, the connection to sensory and motor organs is shut down." |
 | sensory | Relating to sensation | 感觉的 | "Sleep involves shutting down sensory connections." |
@@ -81,13 +81,13 @@ categories: media
 | tempted | Inclined or having the urge to | 忍不住 | "One might be tempted to say sleep is just for rest." |
 | mechanism | A process or technique | 机制 | "Sleep is a complex mechanism different from mere rest." |
 | physical activity | Bodily movement requiring energy | 身体活动 | "Sleep is not merely for recovery from physical activity." |
-| tone | The normal tension in muscles | 张力 | "During sleep, muscles lose their tone." |
+| tone | The normal tension in muscles | 结实度 | "During sleep, muscles lose their tone." |
 | focus | To concentrate attention on something | 集中 | "The focus of sleep's function is on the brain, not muscles." |
 | tell | To discern or distinguish | 辨别 | "We can tell a dolphin is sleeping by its brain activity." |
 | unique | Distinctive, unlike anything else | 独特的 | "Sleep has a unique pattern of brain activity." |
 | pattern | A regular and intelligible form or sequence | 模式 | "Sleep involves a unique pattern of brain activity." |
 | clue | A piece of evidence | 线索 | "Brain activity patterns give a clue to sleep's function." |
-| specifically | In a precise and explicit manner | 特别地 | "Sleep affects the brain specifically." |
+| specifically | In a precise and explicit manner | 具体来说 | "Sleep affects the brain specifically." |
 | general consensus | Widespread agreement | 普遍共识 | "There is a general consensus that sleep benefits the brain." |
 | characteristic | A distinguishing feature | 特征 | "Sleep is a characteristic of mammals and birds." |
 | complex | Complicated, not simple | 复杂的 | "Mammals and birds have complex brains that require sleep." |
