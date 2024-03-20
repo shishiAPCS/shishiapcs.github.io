@@ -82,11 +82,12 @@ categories: media
     <!-- Preset Class Names Section -->
     <div id="class-presets">
         <!-- Buttons to load preset class names into the class list textarea -->
-        <button onclick="loadClassList('ESLLion')">ESL Lion</button>
-        <button onclick="loadClassList('ESLDragon')">ESL Dragon</button>
-        <button onclick="loadClassList('ESLRosefinch')">ESL Rosefinch</button>
         <button onclick="loadClassList('ESLKylin')">ESL Kylin</button>
+        <button onclick="loadClassList('ESLRosefinch')">ESL Rosefinch</button>
+        <button onclick="loadClassList('ESLS2')">ESL S2</button>
+        <button onclick="loadClassList('ESLS2S')">ESL S2 S</button>
         <button onclick="loadClassList('S1')">TOEFL S1</button>
+        <button onclick="loadClassList('S2')">TOEFL S2</button>
     </div>
 
     <textarea id="class-list" placeholder="If you want to reorder the scores, enter student names separated by a newline"></textarea>
@@ -321,24 +322,37 @@ function toeflToGPA(scoreInput) {
         return 'Error: TOEFL score out of range (0-30).'; // Indicate an invalid score was provided
     }
 
-    if (score < 7) return 55;
-    else if (score == 7) return 60;
-    else if (score == 8) return 62.5;
-    else if (score == 9) return 65;
-    else if (score == 10) return 67.5;
-    else if (score == 11) return 70;
-    else if (score == 12) return 72.5;
-    else if (score == 13) return 75;
-    else if (score == 14) return 77.5;
-    else if (score == 15) return 80;
-    else if (score == 16) return 82.14;
-    else if (score == 17) return 84.28;
-    else if (score == 18) return 86.42;
-    else if (score == 19) return 88.56;
-    else if (score == 20) return 90.7;
-    else if (score == 21) return 92.84;
-    else if (score == 22) return 94.98;
-    else if (score >= 23) return 95;
+    // if (score < 7) return 55;
+    // else if (score == 7) return 60;
+    // else if (score == 8) return 62.5;
+    // else if (score == 9) return 65;
+    // else if (score == 10) return 67.5;
+    // else if (score == 11) return 70;
+    // else if (score == 12) return 72.5;
+    // else if (score == 13) return 75;
+    // else if (score == 14) return 77.5;
+    // else if (score == 15) return 80;
+    // else if (score == 16) return 82.14;
+    // else if (score == 17) return 84.28;
+    // else if (score == 18) return 86.42;
+    // else if (score == 19) return 88.56;
+    // else if (score == 20) return 90.7;
+    // else if (score == 21) return 92.84;
+    // else if (score == 22) return 94.98;
+    // else if (score >= 23) return 95;
+
+    if (score >= 28) return 100; // Exceptional listening skills (A+)
+    else if (score >= 25) return 96; // Very strong listening skills (A)
+    else if (score >= 22) return 92; // Strong listening skills (A-)
+    else if (score >= 19) return 89; // Good listening skills, above average (B+)
+    else if (score >= 17) return 86; // Slightly above average proficiency (B)
+    else if (score >= 14) return 82; // Average proficiency (B-)
+    else if (score >= 11) return 79; // Slightly below average proficiency (C+)
+    else if (score >= 6) return 76; // Below average proficiency, needs improvement (C)
+    else if (score >= 3) return 70; // Significantly below average, considerable improvement needed (C-)
+    else if (score >= 1) return 62; // D
+    else return 55;
+    // If score does not meet any condition, return an error message
     // If score does not meet any condition, return an error message
     return 'Error: Conversion Error';
 }
@@ -369,12 +383,14 @@ function loadClassList(preset) {
     var classListTextArea = document.getElementById('class-list');
     // Define presets
     var presets = {
-    'ESLLion': "Eileen\nPaul\nTaylor\nYuna\nLuca\nAshlyn\nJerry\nJessie\nIvy\nJay\nShawn",
-    'ESLDragon': "Zoe\nDaniel\nTony\nMinato\nCameron\nNancy\nYvonne\nShelia\nElson",
-    'ESLRosefinch': "Sword\nJoe\nZao\nClaire\nAugust\nRichard\nIsaiah\nJenny\nKevin\nMeredith\nSeanna\nLauren\nMartin\nJason\nGeorge\nSelina\nCamilia\nMichael\nRaymond\nJoyce\nAlice\nVicky\nAndy\nVictoria\nFlora\nMason",
-    'ESLKylin': "Eric\nKarl\nFielder\nEvelyn\nLeon\nMike\nCicily\nKeven\nLynne\nRegina\nTom\nSteven\nWesley\nTina\nEvan\nHoward\nCarol\nWendy\nBobby",
+    'ESLKylin':"Claire\nFielder\nLeon\nCicily\nSeanna\nLynne\nRegina\nTom\nSteven\nWesley\nTina\nMartin\nJason\nEvan\nHoward\nCarol\nWendy\nAlice\nVicky\nBobby\nVictoria",
+    'ESLRosefinch': "Eric\nJoe\nKarl\nZao\nAugust\nRichard\nIsaiah\nMike\nJenny\nKevin\nMeredith\nKeven\nLauren\nGeorge\nSelina\nCamilia\nMichael\nRaymond\nJoyce\nAndy\nFlora\nMason",
+    'ESLS2': "Eileen\nZoe\nDaniel\nTony\nMinato\nCameron\nNancy\nPaul\nTaylor\nYvonne\nShelia\nElson\nLuca\nAshlyn\nJessie\nIvy\nJay\nShawn",
+    'ESLS2S': "Sword\nAmber\nTheo\nLaura\nGrayson\nOlivia\nIvan\nYuna",
     'S1': 
-    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora"
+    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora",
+    'S2': 
+    "Theo\nIvan\nAmber\nKendrick\nIvy\nShawn\nAshlyn\nJay\nOlivia\nYvonne\nEileen\nTony\nJerry\nJessie\nDaniel\nDia\nPaul\nLuca\nMinato\nCameron\nNancy\nTaylor\nYuna\nShelia\nZoe\nLaura\nElson\nGrayson"
     };
 
     // Load the preset class list into the textarea
