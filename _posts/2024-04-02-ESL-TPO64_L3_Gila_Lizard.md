@@ -1,5 +1,5 @@
 ---
-title:  "TPO64 L3 Gila Lizard"
+title:  "TPO64 L3 Gila Monster"
 mathjax: true
 layout: post
 categories: media
