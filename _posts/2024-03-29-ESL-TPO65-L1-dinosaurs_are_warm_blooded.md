@@ -57,7 +57,7 @@ categories: media
 | inaccurate             | Not correct or precise                                                       | 不准确的             | The forecast was inaccurate.                                                     |
 | for the sake of        | For the purpose of                                                           | 为了                 | For the sake of consistency, let's keep the same format.                         |
 | consistency            | Being uniform, steady or the same throughout                                 | 一致性               | The consistency in the data is notable.                                          |
-| technically            | According to the exact meaning; strictly                                    | 严格来说             | Technically, tomatoes are fruits.                                                |
+| technically            | According to the exact meaning; strictly                                    | 根据确切意义地；严格按照事实地             | Technically, tomatoes are fruits.                                                |
 | metabolism             | The chemical processes within an organism to maintain life                   | 新陈代谢             | A high metabolism helps in burning calories.                                     |
 | relatively             | In comparison to other things                                                 | 相对地               | It's relatively easy to learn.                                                   |
 | generally              | Usually, or in most situations                                                | 通常                 | Generally, it's a safe area.                                                     |
@@ -78,7 +78,6 @@ categories: media
 | characteristic feature | A distinguishing quality or attribute                                         | 特征                 | The characteristic feature of a koala is its large nose.                         |
 | resemble               | To look like or be similar to                                                 | 类似于               | He resembles his father.                                                         |
 | reptiles               | Cold-blooded vertebrates typically laying eggs and having a scaly skin       | 爬行动物             | Snakes and lizards are common reptiles.                                          |
-| suggest                | Propose a theory or idea                                                      | 建议                 | He suggested a new approach.                                                     |
 | in fact                | Actually, in reality                                                         | 事实上               | In fact, it's not as hard as it seems.                                           |
 | a variety of           | Different kinds or types                                                     | 各种各样的           | There are a variety of solutions to this problem.                                |
 | range                  | The scope or extent                                                           | 范围                 | The topics range from history to science.                                        |
@@ -93,7 +92,6 @@ categories: media
 | remains                | The parts left over from something                                           | 遗迹                 | The remains of the ancient city were discovered.                                 |
 | latitudes              | The angular distance of a place north or south of the earth's equator        | 纬度                 | Plants at different latitudes have adapted to various amounts of sunlight.       |
 | arctic climates        | Extremely cold climates typical of the Arctic regions                        | 北极气候             | Arctic climates are challenging for most plants and animals.                     |
-| suggested              | Proposed or indicated                                                        | 建议了               | He suggested a new meeting time.                                                 |
 | anatomy                | The structure of living things                                                | 解剖学               | The anatomy of birds is specialized for flight.                                  |
 | similarities           | The state of being similar                                                    | 相似性               | The similarities between the two paintings are striking.                         |
 | That goes for          | That is also true for                                                        | 适用于               | That goes for everyone here.                                                     |
@@ -106,7 +104,7 @@ categories: media
 | significant            | Important; of consequence                                                     | 重要的               | The discovery was significant for the field of genetics.                         |
 | complicated            | Not simple or easy; involving many different parts                            | 复杂的               | The instructions were too complicated.                                           |
 | nasal cavity           | The large air-filled space behind the nose                                    | 鼻腔                 | The nasal cavity plays a key role in breathing.                                  |
-| lined                  | Covered or marked with lines                                                  | 衬里                 | The jacket is lined with silk.                                                   |
+| line                   | Covered or marked with lines                                                  | （在某物的内部）形成  | They are lined with soft tissue.                                                   |
 | soft tissue            | The softer parts of the body, not including bones and cartilage               | 软组织               | Soft tissue injuries can be quite painful.                                       |
 | curlicue               | A decorative curl or twist                                                    | 卷曲图案             | The ironwork had intricate curlicues.                                            |
 | passages               | Paths or channels through which something can pass                            | 通道                 | The narrow passages twisted and turned.                                          |
