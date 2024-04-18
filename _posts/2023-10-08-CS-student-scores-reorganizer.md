@@ -385,8 +385,8 @@ function loadClassList(preset) {
     var presets = {
     'ESLKylin':"Claire\nFielder\nLeon\nCicily\nSeanna\nLynne\nRegina\nTom\nSteven\nWesley\nTina\nMartin\nJason\nEvan\nHoward\nCarol\nWendy\nAlice\nVicky\nBobby\nVictoria",
     'ESLRosefinch': "Eric\nJoe\nKarl\nZao\nAugust\nRichard\nIsaiah\nMike\nJenny\nKevin\nMeredith\nKeven\nLauren\nGeorge\nSelina\nCamilia\nMichael\nRaymond\nJoyce\nAndy\nFlora\nMason",
-    'ESLS2': "Eileen\nZoe\nDaniel\nTony\nMinato\nCameron\nNancy\nPaul\nTaylor\nYvonne\nShelia\nElson\nLuca\nAshlyn\nJessie\nIvy\nJay\nShawn",
-    'ESLS2S': "Sword\nAmber\nTheo\nLaura\nGrayson\nOlivia\nIvan\nYuna",
+    'ESLS2': "Eileen\nZoe\nDaniel\nTony\nMinato\nCameron\nNancy\nPaul\nTaylor\nYvonne\nShelia\nLuca\nAshlyn\nJessie\nIvy\nJay\nShawn",
+    'ESLS2S': "Sword\nAmber\nTheo\nLaura\nGrayson\nOlivia\nIvan\nYuna\nElson",
     'S1': 
     "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora",
     'S2': 
