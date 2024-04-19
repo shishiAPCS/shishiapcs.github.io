@@ -64,7 +64,7 @@ categories: media
 | dissimilarity          | The state of being different or not alike                                      | 不同                 | Despite their dissimilarity, both solutions are effective.                          |
 | out of curiosity       | Driven by the desire to know or learn                                          | 出于好奇             | I asked him about his job out of curiosity.                                        |
 | jumps to my mind       | Immediately think of something                                                 | 立刻想到             | When you mention classical music, Beethoven jumps to my mind.                      |
-| acts                   | Behaves or takes action                                                        | 行动                 | The new law acts to protect endangered species.                                     |
+| act                   | Behaves or takes action                                                        |   表现得               | The Gila monster looks and acts a lot like other lizards.                                     |
 | share                  | Have or use something at the same time as someone else                         | 分享                 | They share a common interest in painting.                                           |
 | certain                | Specific but not explicitly named or stated                                    | 某些                 | Certain conditions must be met.                                                     |
 | characteristics        | Distinguishing traits or features                                              | 特性                 | Each species has its own unique characteristics.                                    |
