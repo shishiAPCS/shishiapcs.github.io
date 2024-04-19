@@ -52,7 +52,7 @@ categories: media
 
 | Word/Phrase       | Meaning in Context                                                                   | Chinese Translation | Example Sentence                                              |
 |-------------------|--------------------------------------------------------------------------------------|---------------------|---------------------------------------------------------------|
-| establish         | To set up or prove                                                                   | 建立                 | Research has established a strong link between emotions and memories. |
+| establish         | To set up or prove                                                                   | 确定                 | Research has established a strong link between emotions and memories. |
 | conduct           | To carry out or perform                                                              | 实施           | A study was conducted to explore the emotional impact on memory. |
 | affect            | To have an influence on                                                              | 影响                 | Emotions significantly affect our memory recall.              |
 | a series of       | A number of related events or items                                                  | 一系列               | Volunteers were shown a series of images in the study.        |
