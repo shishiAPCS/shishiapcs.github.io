@@ -95,7 +95,7 @@ categories: media
 | depress           | Press down                                                                           | 使沮丧               | Being depressed slows down activity in the prefrontal cortex. |
 | diminish          | Make or become less                                                                  | 减少                 | Depression diminishes the brain's output of thoughts.         |
 | except            | Not including; other than                                                            | 除了                 | Everyone was surprised, except for Steven Johnson.            |
-| insight           | An accurate and deep understanding                                                   | 洞察力               | Johnson gained a new insight into his own mental processes.   |
+| insight           | An accurate and deep understanding                                                   | 了解 / 顿悟               | Johnson gained a new insight into his own mental processes.   |
 | relieved          | No longer feeling distressed or anxious                                              | 松了一口气的         | He was relieved to learn the scientific reason behind his feelings. |
 | unexpected        | Not expected or regarded as likely to happen                                         | 意外的               | The experiment had some unexpected results.                   |
 | prolong           | Extend the duration of                                                               | 延长                 | His bad mood was prolonged by negative thoughts.              |
