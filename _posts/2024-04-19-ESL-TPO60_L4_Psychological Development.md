@@ -99,5 +99,5 @@ categories: media
 | chart               | A visual display of information or data                    | 图表                   | Development charts in books help track growth milestones.         |
 | exact               | Precise, not varying                                       | 精确的                 | The exact timing of developmental stages varies among individuals. |
 | concerns            | Matters of interest or importance                          | 涉及                   | The study concerns the variability in children's growth rates.    |
-| variability         | The quality of being subject to variation                  | 变异性                 | There is significant variability in how individuals develop.      |
+| variability         | The quality of being subject to variation                  | 可变性；易变性；反复不定                 | There is significant variability in how individuals develop.      |
 | simply              | Merely, just                                               | 仅仅                   | Development simply does not follow the same pattern for everyone. |
