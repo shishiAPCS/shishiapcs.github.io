@@ -66,6 +66,20 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 </details>
 
+### 语音转文字
+
+* #### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```暂时用这个```
+* #### [otter.ai](https://otter.ai/) 每月300分钟免费额度
+* #### [OpenAi Whisper](https://platform.openai.com/playground) ~~```异常强大，可以中英混合输入，需要openai账号```~~
+* #### [flixier](https://editor.flixier.com/tools/all-tools) ```仍然免费，无需账号```
+    - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)   
+
+### 文字转语音 
+
+* #### Edge browser 
+* #### [elevenlabs](https://beta.elevenlabs.io/speech-synthesis)
+    - ##### [教程](https://www.bilibili.com/video/BV1fv4y1E7gV/?vd_source=84a986f8292e7cdf31541219b6c7844c)
+
 ### Ai 绘画
 
 * [免费 DALL·E 3](https://www.bing.com/create)
@@ -89,6 +103,10 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ---
 ---
 
+### 思维导图
+
+* [markmap.js](https://markmap.js.org/repl)
+
 ### English
 
 * [时态讲解PPT](https://www.icloud.com.cn/keynote/0p1VUCEKbTys8MuAIOAAUi5Zg#时态) ```谷歌浏览器无法打开```
@@ -103,26 +121,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * [Typing club](https://www.edclub.com/sportal/program-3.game)
 * [10fastfingers](https://10fastfingers.com/typing-test/english)
 * [monkeytype](https://monkeytype.com/)
-
-### Mind map
-
-* [markmap.js](https://markmap.js.org/repl)
-
-### 语音转文字
-
-
-* #### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```用我做的这个```
-* #### [otter.ai](https://otter.ai/) 每月300分钟免费额度
-* #### [OpenAi Whisper](https://platform.openai.com/playground) ~~```异常强大，可以中英混合输入，需要openai账号```~~
-* #### [flixier](https://editor.flixier.com/tools/all-tools) ```仍然免费，无需账号```
-    - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)         
-
-### 文字转语音 
-
-* #### Edge browser 
-* #### [elevenlabs](https://beta.elevenlabs.io/speech-synthesis)
-    - ##### [教程](https://www.bilibili.com/video/BV1fv4y1E7gV/?vd_source=84a986f8292e7cdf31541219b6c7844c)
-
+       
 ### pdf 工具（合并 & 转 word …… etc） 
 
 * [smallpdf](https://smallpdf.com/)
