@@ -14,10 +14,7 @@ categories: media
 <details>
 <summary>Click to expand/collapse the table</summary>
 
-<html><head><style>body {
-   color: black;
-}
-</style></head><body><table>
+<table>
 <thead>
 <tr>
 <th>Student's name</th>
@@ -207,7 +204,6 @@ categories: media
 </tr>
 </tbody>
 </table>
-</body></html>
 
 
 </details>
