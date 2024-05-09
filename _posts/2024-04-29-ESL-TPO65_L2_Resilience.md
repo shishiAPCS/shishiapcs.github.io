@@ -72,7 +72,7 @@ categories: media
 | victim                | A person harmed, injured, or killed as a result of an event      | 受害者               | Resilient people do not view themselves as victims.                                |
 | complain              | To express dissatisfaction or annoyance                         | 抱怨                 | He does not complain when faced with difficulties.                                 |
 | cope                  | To deal effectively with something difficult                    | 应对                 | Resilient individuals cope with stress by seeking support.                         |
-| reframe               | To change the way something is expressed or considered           | <del>重新框架</del> <span style="color: red;">重新定义</span>                   | Reframing a problem in a positive light can change our response to it.             |
+| reframe               | To change the way something is expressed or considered           | <span style="color: red;"><del>重新框架</del></span> 重新定义| Reframing a problem in a positive light can change our response to it.             |
 | in a positive light   | In a way that makes something seem pleasant or acceptable        | 以积极的角度         | Viewing challenges in a positive light is a sign of resilience.                    |
 | scenario              | A hypothetical or imagined sequence of events                    | 剧本，情景           | The scenario described involves adapting to online learning.                       |
 | department            | A division of a large organization, such as a university         | 系，部门             | The psychology department offers various courses.                                  |
