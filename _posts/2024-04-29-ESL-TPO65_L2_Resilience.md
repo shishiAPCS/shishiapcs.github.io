@@ -81,7 +81,7 @@ categories: media
 | complicated           | Complex and difficult to understand                             | 复杂的               | The technology required for online courses is quite complicated.                   |
 | perceive              | To see, recognize, or become aware of something                 | 察觉                 | Some students perceive the technical requirements as insurmountable.               |
 | insurmountable        | Impossible to overcome                                          | 无法克服的           | The challenge seemed insurmountable at first.                                      |
-| throw up their hands  | To give up                                                      | 举手投降             | When faced with difficulty, they just throw up their hands.                        |
+| throw up their hands  | To give up                                                      | 举手投降、放弃             | When faced with difficulty, they just throw up their hands.                        |
 | persistence           | The quality of continuing steadily despite problems or difficulties | 坚持                 | Persistence is crucial for success in many fields.                                 |
 | aspect                | A particular part or feature of something                       | 方面                 | Persistence is an important aspect of resiliency.                                  |
 | resiliency            | The ability to spring back into shape; elasticity               | 弹性                 | Resiliency involves bouncing back from tough situations.                           |
@@ -105,7 +105,7 @@ categories: media
 | to some degree        | To a certain extent                                             | 在某种程度上         | Personality traits can change to some degree over a lifetime.                      |
 | survey                | A detailed study or investigation of something                  | 调查                 | The survey included questions about personal growth.                               |
 | alter                 | To change or modify                                             | 改变                 | Experiences like parenting can alter a person's outlook on life.                   |
-| conscientious         | Wishing to do one's work well and thoroughly                    | 认真的               | Being conscientious is important in any profession.                                |
+| conscientious         | Wishing to do one's work well and thoroughly                    | 认真的、负责的               | Being conscientious is important in any profession.                                |
 | identify              | To recognize or establish the identity of                      | 识别                 | To become more resilient, first identify less helpful traits.                      |
 | category              | A class or division of people or things regarded as having particular shared characteristics | 类别                 | Fear of failure falls into the category of traits that hinder resilience.          |
 | impatience            | The tendency to be quickly irritated or provoked               | 不耐烦               | Impatience can hinder effective problem-solving.                                   |
