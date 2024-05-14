@@ -6,6 +6,7 @@ categories: media
 ---
 ---
 
+
 ## Rubric 评分标准(Total: 100 points)
 
 **Category** | **Extensive Evidence** | **Convincing Evidence** | **Limited Evidence** | **No Evidence**  
