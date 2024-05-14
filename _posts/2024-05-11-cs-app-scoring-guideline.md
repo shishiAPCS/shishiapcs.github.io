@@ -6,14 +6,6 @@ categories: media
 ---
 ---
 
-# 作品提交地址：
-
-```
-Unit 8 - Create PT Prep 
-Lesson 4: Create PT - Complete the Task (12 hrs)
-Level 2 Create PT Coding Workspace
-```
-
 ## Rubric 评分标准(Total: 100 points)
 
 **Category** | **Extensive Evidence** | **Convincing Evidence** | **Limited Evidence** | **No Evidence**  
@@ -28,9 +20,17 @@ Level 2 Create PT Coding Workspace
 **Storage: Variables (5 points) 存储：变量（5分）** | Variables are created and appropriately used for all pieces of information used in the app. 为应用程序中使用的所有信息创建并适当使用了变量。 | Most information is stored in a variable and appropriately updated throughout the app. 大部分信息存储在变量中，并在整个应用程序中适当更新。 | Some information is stored in a variable and appropriately updated throughout the app. 部分信息存储在变量中，并在整个应用程序中适当更新。 | There are no variables which store the necessary information for the app to work correctly. 没有变量存储应用程序正常工作所需的信息。  
 **Coding Comments (5 points) 代码注释（5分）** | Comments are used to correctly explain the purpose and function of all `onEvents` and conditional logic. 使用注释正确解释了所有`onEvents`和条件逻辑的目的和功能。 | Comments are used to explain the purpose and function of most `onEvents` and conditional logic. 使用注释解释了大部分`onEvents`和条件逻辑的目的和功能。 | Comments are used to explain the purpose and function of some `onEvents` and conditional logic. 使用注释解释了部分`onEvents`和条件逻辑的目的和功能。 | Comments are not present. 无注释。
 
+---
+---
+## 作品提交地址：
 
-
-
+```
+Unit 8 - Create PT Prep 
+Lesson 4: Create PT - Complete the Task (12 hrs)
+Level 2 Create PT Coding Workspace
+```
+---
+---
 
 
 
