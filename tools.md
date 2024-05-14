@@ -169,3 +169,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ### Music 
 
 * [去除音乐人声](https://vocalremover.org/)
+
+### 在线视频抓取
+
+* [Youtube 视频下载](https://clipgrabber.net/)
+* [B站 视频下载](https://snapany.com/zh/bilibili)
