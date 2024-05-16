@@ -5,12 +5,15 @@ layout: post
 categories: media
 ---
 
+## 16th May 2024 Update:
+### 中国区App Store 已上架 [PSP模拟器](https://apps.apple.com/cn/app/ppsspp-psp-emulator/id6496972903?l=en-GB) [GBA、NDS模拟器](https://apps.apple.com/cn/app/delta-game-emulator/id1048524688?l=en-GB) [全能模拟器](https://apps.apple.com/cn/app/retroarch/id6499539433?l=en-GB)
+
 ## [点此查看历代游戏主机](https://9ioldgame.com/games/GBA-games.html)
 
 ## Emulators for iOS Devices <br> iOS 设备模拟器
 - **TrollStore for iOS:** Sideload IPA files on iOS devices. <br> **TrollStore for iOS:** 在iOS设备上侧载IPA文件。[Visit TrollStore](https://trollstore.app/)
 
-## Versatile Gaming with RetroArch <br> RetroArch的全能游戏体验
+## Versatile Gaming with RetroArch <br> RetroArch 全能模拟器介绍
 - **RetroArch:** An all-in-one emulator. <br> **RetroArch:** 一个全能的模拟器。[Download RetroArch](https://www.retroarch.com/index.php)
 - **Demonstration Video:** See RetroArch in action. <br> **效果演示:** 观看RetroArch实际运行效果。[Watch on Bilibili](https://www.bilibili.com/video/BV1h34y1c7jC/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 
