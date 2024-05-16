@@ -7,6 +7,7 @@ title: "AP CSA"
 ---
   - Paper based exam on Wed, May 8, 2024
   - [AP 分数计算器](https://examstrategist.com/ap-computer-science-a-score-calculator/)
+  - [主教材](https://runestone.academy/ns/books/published/csawesome/index.html?mode=browsing)
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
