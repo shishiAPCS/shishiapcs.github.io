@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-## 16th May 2024 Update:
+## <span style="color: red;">16th May 2024 Update:</span>
 ### 中国区App Store 已上架 [PSP模拟器](https://apps.apple.com/cn/app/ppsspp-psp-emulator/id6496972903?l=en-GB) [GBA、NDS模拟器](https://apps.apple.com/cn/app/delta-game-emulator/id1048524688?l=en-GB) [全能模拟器](https://apps.apple.com/cn/app/retroarch/id6499539433?l=en-GB)
 
 ## [点此查看历代游戏主机](https://9ioldgame.com/games/GBA-games.html)
