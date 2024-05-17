@@ -11,16 +11,17 @@ title: "Tools"
 ---
 
 * ### [GPA查询网址](https://www.thinkwave.com)
-* ### [托福在线练习平台](https://smarter.igo1996.com/tf-part-index)
+* ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
+* ### [Chrome下载](https://www.google.cn/chrome/)
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
-* ### [美国 AppleID 注册](https://zhuanlan.zhihu.com/p/367821925?utm_id=0)
-* ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 * ### [GitHub 账号视频教程](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [GitHub 仓库创建视频教程](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [shishiapcs.github.io 留言板视频教程](https://www.bilibili.com/video/BV1XM41157xV/?vd_source=84a986f8292e7cdf31541219b6c7844c) 
+* ### [美国 AppleID 注册](https://zhuanlan.zhihu.com/p/367821925?utm_id=0)
 * ### [Thinkwave 交作业视频教程](https://www.bilibili.com/video/BV1xP411e74p/)
 * ### [微软outlook邮箱注册地址](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook)
 * ### [微软outlook邮箱注册视频教程](https://www.bilibili.com/video/BV1bu411P79D/?share_source=copy_web&vd_source=a7ed18508531908cbb2dc681efccf167)
+* ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
 ----
 
 ## Ai
