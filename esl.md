@@ -5,10 +5,52 @@ layout: post
 categories: media
 ---
 
-
----
 ---
 # Speaking 
+
+## 托福口语所需要的能力
+
+<div class="markmap-container">
+<div class="markmap">
+<script type="text/template">
+
+# TOEFL Speaking Skills <br> 能力图
+
+## All the tasks <br> 4道题都需要的能力
+
+### Effective choice of vocabulary <br> 有效的词汇选择
+
+### Effective use of sentences <br> 有效的句子使用
+
+### Speak fluently <br> 流利表达
+
+## TASK 1 <br> 第一题需要的能力
+
+### Provide reasons to support opinion <br> 提供理由支持观点
+
+#### Learn the common reasons <br> 学习常见的理由
+
+### Develop reasons <br> 发展理由
+
+#### Learn how to develop the reasons <br> 学习如何发展理由
+
+## TASK 2 3 4 <br> 2 3 4题需要的能力
+
+### Understand the reading passage <br> 理解阅读材料
+
+#### Read for main ideas and important details efficiently <br> 高效地阅读主要观点和重要细节
+
+### Understand the listening materials <br> 理解听力材料
+
+#### Understand the speaker's reasons/examples/lectures <br> 理解演讲者的理由/例子/讲座
+
+### Identify the key points <br> 识别关键点
+
+### Take good notes that aid your response <br> 做好有助于你回答的笔记
+
+</script>
+</div>
+</div>
 
 ## Task 1
 
@@ -76,7 +118,6 @@ that can explain the definition)
 <details> 
 <summary>点击箭头展开独立口语评分标准</summary>
 
-### Independent Speaking Rubrics<br>独立口语
 <table>
     <tr>
         <th>SCORE<br>分数</th>
@@ -129,7 +170,6 @@ that can explain the definition)
 <details> 
 <summary>点击箭头展开综合口语评分标准</summary>
 
-### Integrated Speaking Rubrics<br>综合口语
 <table>
   <tr>
     <th>SCORE<br>分数</th>
@@ -178,50 +218,6 @@ that can explain the definition)
 </details> 
 
 ---
-## 托福口语所需要的能力
-
-<div class="markmap-container">
-<div class="markmap">
-<script type="text/template">
-
-# TOEFL Speaking Skills <br> 能力图
-
-## All the tasks <br> 4道题都需要的能力
-
-### Effective choice of vocabulary <br> 有效的词汇选择
-
-### Effective use of sentences <br> 有效的句子使用
-
-### Speak fluently <br> 流利表达
-
-## TASK 1 <br> 第一题需要的能力
-
-### Provide reasons to support opinion <br> 提供理由支持观点
-
-#### Learn the common reasons <br> 学习常见的理由
-
-### Develop reasons <br> 发展理由
-
-#### Learn how to develop the reasons <br> 学习如何发展理由
-
-## TASK 2 3 4 <br> 2 3 4题需要的能力
-
-### Understand the reading passage <br> 理解阅读材料
-
-#### Read for main ideas and important details efficiently <br> 高效地阅读主要观点和重要细节
-
-### Understand the listening materials <br> 理解听力材料
-
-#### Understand the speaker's reasons/examples/lectures <br> 理解演讲者的理由/例子/讲座
-
-### Identify the key points <br> 识别关键点
-
-### Take good notes that aid your response <br> 做好有助于你回答的笔记
-
-</script>
-</div>
-</div>
-
 
 # Mind Maps for TPO Listenings 
 
