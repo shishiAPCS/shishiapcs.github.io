@@ -83,7 +83,7 @@ categories: media
 | supportive           | Providing encouragement or emotional help                       | 支撑的               | The sand is not supportive enough for building structures.                         |
 | tidal                | Relating to or affected by tides                                 | 潮汐的               | Daily tidal fluctuations make beach building difficult.                            |
 | fluctuations         | Irregular rising and falling in number or amount                 | 波动                 | Tidal fluctuations affect the stability of beach structures.                       |
-| shifting             | Changing or moving                                               | 移动的               | The sands are always shifting, making the shoreline unstable.                      |
+| shifting             | Changing or moving                                               | 移动               | The sands are always shifting, making the shoreline unstable.                      |
 | peninsula            | A piece of land almost surrounded by water or projecting out into a body of water | 半岛                 | Sandy Peninsula is an example of how coastlines change over time.                  |
 | inshore              | Towards or near the shore                                        | 近岸的               | Coastal zones protect inshore areas from flooding.                                 |
 | flooded              | Covered or submerged with water                                  | 被淹                 | Coastal zones prevent inland areas from being flooded with salt water.             |
@@ -92,7 +92,7 @@ categories: media
 | vegetations          | Plants in general, especially those found in a particular area   | 植被                 | Coastal zones allow vegetations to grow further inland.                            |
 | inland               | Situated away from the coast                                     | 内陆的               | Vegetation grows more inland thanks to coastal protection.                         |
 | buffer zone          | An area that serves to separate or protect                       | 缓冲区               | Coastal zones act as a buffer zone against wind and salt spray.                    |
-| spray                | Liquid that is blown or driven through the air in the form of tiny drops | 喷雾                 | Coastal zones protect inland areas from salt spray.                                |
+| spray                | Liquid that is blown or driven through the air in the form of tiny drops | <span style="color: red;"><del>喷雾</del></span>浪花 | Coastal zones protect inland areas from salt spray.                                |
 | recreation           | Activity done for enjoyment when one is not working              | 娱乐                 | The beach is suitable for recreation but not for building.                         |
 | sensitive            | Easily affected or harmed by something                           | 敏感的               | The primary dune is very sensitive and cannot support much activity.               |
 | windblown            | Carried or moved by the wind                                     | 被风吹的             | Sand dunes are often thought of as just windblown piles of sand.                   |
