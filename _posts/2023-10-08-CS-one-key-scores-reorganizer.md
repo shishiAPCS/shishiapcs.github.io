@@ -342,15 +342,15 @@ function toeflToGPA(scoreInput) {
     // else if (score >= 23) return 95;
 
     if (score >= 28) return 100; // Exceptional listening skills (A+)
-    else if (score >= 25) return 96; // Very strong listening skills (A)
-    else if (score >= 22) return 92; // Strong listening skills (A-)
-    else if (score >= 19) return 89; // Good listening skills, above average (B+)
-    else if (score >= 17) return 86; // Slightly above average proficiency (B)
-    else if (score >= 14) return 82; // Average proficiency (B-)
-    else if (score >= 11) return 79; // Slightly below average proficiency (C+)
-    else if (score >= 6) return 76; // Below average proficiency, needs improvement (C)
-    else if (score >= 3) return 70; // Significantly below average, considerable improvement needed (C-)
-    else if (score >= 1) return 62; // D
+    else if (score >= 25) return 97; // Very strong listening skills (A)
+    else if (score >= 22) return 94; // Strong listening skills (A-)
+    else if (score >= 19) return 90; // Good listening skills, above average (B+)
+    else if (score >= 17) return 89; // Slightly above average proficiency (B)
+    else if (score >= 14) return 85; // Average proficiency (B-)
+    else if (score >= 11) return 80; // Slightly below average proficiency (C+)
+    else if (score >= 6) return 75; // Below average proficiency, needs improvement (C)
+    else if (score >= 3) return 65; // Significantly below average, considerable improvement needed (C-)
+    else if (score >= 1) return 60; // D
     else return 55;
     // If score does not meet any condition, return an error message
     // If score does not meet any condition, return an error message
