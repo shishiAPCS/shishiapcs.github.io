@@ -25,3 +25,4 @@ categories: media
 <div style="text-align: center;">
   <img src="https://github.com/Royhowtohack/disk/blob/cde23e4c9628fefebe8510e11aa324fac34ab51b/91b40eb413f704ebb4ffc785f9462005.JPG" alt="Centered Image" style="max-width: 100%; height: auto;">
 </div>
+
