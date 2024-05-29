@@ -26,5 +26,3 @@ categories: media
   <img src="https://github.com/shishiAPCS/shishiapcs.github.io/assets/105401427/7f7e756b-d342-4681-a604-94f4f464e5c1" alt="Centered Image" style="max-width: 100%; height: auto;">
 </div>
 
-
-![91b40eb413f704ebb4ffc785f9462005](https://github.com/shishiAPCS/shishiapcs.github.io/assets/105401427/7f7e756b-d342-4681-a604-94f4f464e5c1)
