@@ -177,3 +177,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 * [Youtube 视频下载](https://clipgrabber.net/)
 * [B站 视频下载](https://snapany.com/zh/bilibili)
 * [Youtube 字幕下载](https://downsub.com/)
+
+### 二维码生成
+
+* [QR code 生成器](https://me-qr.com/zh)
