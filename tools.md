@@ -140,16 +140,6 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 * #### [m4a to mp4 ](https://www.freeconvert.com/m4a-to-mp4)
 
-### 图片工具
-
-* #### [360°全景图浏览器](https://renderstuff.com/tools/360-panorama-web-viewer/)
-* #### [EXIF 信息查看](https://www.pic2map.com/)
-* #### [Add EXIF-GPS information to images](https://tool.geoimgr.com/)
-* #### [图片颜色信息提取](https://imagecolorpicker.com/)
-* #### [图片压缩](https://compressjpeg.com/)
-* #### [圆形头像](https://profilepicturemaker.com/#quotemaker)
-* #### [PNG图片生成](https://www.adobe.com/express/feature/image/remove-background/png/transparent)
-
 ### 海报
 
 * #### [canva](https://www.canva.com/)
@@ -181,3 +171,14 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ### 二维码生成
 
 * [QR code 生成器](https://me-qr.com/zh)
+
+### 图片工具
+
+* [在线图片编辑](https://www.befunky.com/create/photo-editor/)```免费，不用注册```
+* [360°全景图浏览器](https://renderstuff.com/tools/360-panorama-web-viewer/)
+* [EXIF 信息查看](https://www.pic2map.com/)
+* [Add EXIF-GPS information to images](https://tool.geoimgr.com/)
+* [图片颜色信息提取](https://imagecolorpicker.com/)
+* [图片压缩](https://compressjpeg.com/)
+* [圆形头像](https://profilepicturemaker.com/#quotemaker)
+* [PNG图片生成](https://www.adobe.com/express/feature/image/remove-background/png/transparent)
