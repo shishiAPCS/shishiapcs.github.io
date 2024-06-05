@@ -10,6 +10,7 @@ title: "Tools"
 ---
 ---
 
+* ### [背单词](https://superct.streamlit.app/)
 * ### [GPA查询网址](https://www.thinkwave.com)
 * ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
 * ### [Chrome下载](https://www.google.cn/chrome/)
