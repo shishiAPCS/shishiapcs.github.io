@@ -72,7 +72,7 @@ categories: media
 | seed                 | The beginning or starting point of an idea or event             | 种子                   | The seeds for green marketing were planted during the first Earth Day in 1970.     |
 | rally                | A mass meeting of people making a political protest or showing support | 集会                   | Rallies were organized to protest environmental degradation on Earth Day.          |
 | degradation          | The process of something being damaged or worsened              | 退化                   | Environmental degradation was a key issue during the first Earth Day.               |
-| some                 | An unspecified amount or number of                              | 一些                   | Some 20 million demonstrators participated in the first Earth Day.                 |
+| some                 | An unspecified amount or number of                              | 大约                   | Some 20 million demonstrators participated in the first Earth Day.                 |
 | demonstrator         | A person who takes part in a public protest                     | 示威者                 | Demonstrators on Earth Day demanded new environmental laws.                        |
 | spark                | To trigger or initiate                                          | 引发                   | Earth Day helped spark the creation of environmental laws.                         |
 | act                  | A law or formal decision made by a legislature                  | 法案                   | The Endangered Species Act of 1973 protects imperiled animal species.              |
