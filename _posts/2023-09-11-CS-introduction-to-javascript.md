@@ -54,7 +54,7 @@ categories: media
 ---
 ---
 
-### Beginner 初级
+### Beginner 网页元素
 
 ---
 
@@ -103,14 +103,9 @@ document.querySelectorAll('img').forEach(img => img.style.display = 'none');
 
 
 ---
-### Intermediate 中级
+### Intermediate 函数
 ---
 
-```javascript
-// Replaces the entire webpage content with a heading
-// 将整个网页内容替换为一个标题
-document.body.innerHTML = "<h1>Hello, my name is: Mr.Mou </h1>"; 
-```
 
 ```javascript
 // A simple elementary math question program
@@ -155,7 +150,7 @@ document.body.innerHTML = '<button onclick="speak(\'Hello! Welcome to our JavaSc
 ```
 
 ---
-### Advanced 高级
+### Advanced 动态效果
 ---
 
 ```javascript
