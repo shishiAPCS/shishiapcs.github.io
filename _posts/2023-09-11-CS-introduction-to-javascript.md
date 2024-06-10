@@ -298,6 +298,75 @@ setInterval(createDrop, 300);
 ```
 
 ```javascript
+// Create the Triforce element
+// 创建一个旋转的《塞尔达传说》三角力量符号
+var triforce = document.createElement('div');
+triforce.id = 'triforce';
+document.body.appendChild(triforce);
+
+// Set the Triforce styles
+triforce.style.position = 'absolute';
+triforce.style.width = '0';
+triforce.style.height = '0';
+triforce.style.top = '50%';
+triforce.style.left = '50%';
+triforce.style.transform = 'translate(-50%, -50%)';
+triforce.style.perspective = '500px';
+triforce.style.transformStyle = 'preserve-3d';
+triforce.style.animation = 'rotate 5s infinite linear';
+
+// Function to create a triangle
+function createTriangle(color) {
+    var triangle = document.createElement('div');
+    triangle.style.position = 'absolute';
+    triangle.style.width = '0';
+    triangle.style.height = '0';
+    triangle.style.borderLeft = '16.66vw solid transparent';
+    triangle.style.borderRight = '16.66vw solid transparent';
+    triangle.style.borderBottom = `28.87vw solid ${color}`;
+    return triangle;
+}
+
+// Create and position the three triangles of the Triforce
+var topTriangle = createTriangle('rgba(255, 215, 0, 0.8)');
+topTriangle.style.transform = 'translate(-16.66vw, -28.87vw)';
+triforce.appendChild(topTriangle);
+
+var leftTriangle = createTriangle('rgba(255, 215, 0, 0.8)');
+leftTriangle.style.transform = 'translate(-33.32vw, 0)';
+triforce.appendChild(leftTriangle);
+
+var rightTriangle = createTriangle('rgba(255, 215, 0, 0.8)');
+rightTriangle.style.transform = 'translate(0, 0)';
+triforce.appendChild(rightTriangle);
+
+// Add keyframes for rotation
+var css = document.createElement('style');
+css.type = 'text/css';
+css.innerHTML = `
+    @keyframes rotate { 
+        from { transform: rotateY(0deg); } 
+        to { transform: rotateY(360deg); } 
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+
+    #triforce {
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite linear;
+    }
+`;
+document.head.appendChild(css);
+```
+
+```javascript
 // A mysterious code snippet
 // 神秘代码
 const powerOn = true;
