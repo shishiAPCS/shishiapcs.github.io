@@ -63,8 +63,6 @@ categories: media
 
 | Word/Phrase          | Meaning in Context                                              | Chinese Translation   | Example Sentence                                                                   |
 |----------------------|-----------------------------------------------------------------|-----------------------|------------------------------------------------------------------------------------|
-| encourage            | To stimulate or promote something                               | 鼓励                   | Green building programs encourage environmentally friendly construction.            |
-| minimum              | The least or smallest amount possible                           | 最小值                 | The goal is to produce a minimum of pollution.                                     |
 | solar                | Relating to or derived from the sun                             | 太阳能的               | Using solar energy for heating homes is part of green building technology.         |
 | advocate             | To publicly recommend or support                                | 提倡                   | These programs advocate for the use of sustainable materials.                      |
 | concerned            | Interested or involved with                                     | 关注的                 | Green building standards are concerned with resource conservation.                 |
