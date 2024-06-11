@@ -101,20 +101,19 @@ categories: media
 | brick                | A small rectangular block used in building                      | 砖块                   | Straw bales are stacked like bricks to build walls.                                |
 | exterior             | The outer surface or structure of something                     | 外部的                 | The exterior walls of the house are made from straw bales.                         |
 | seal                 | To close tightly so that air or liquid cannot get in or out     | 密封                   | The walls are sealed with stucco to protect them.                                  |
-| finish               | The final coating or surface of a structure                     | 表面                   | Stucco provides a durable finish to the straw bale walls.                          |
+| finish               | The final coating or surface of a structure                     | 末道漆                   | Stucco provides a durable finish to the straw bale walls.                          |
 | cement               | A powdery substance made with calcined lime and clay            | 水泥                   | Stucco is similar to cement and is used to coat straw bale walls.                  |
 | plaster              | A soft mixture of lime with sand or cement and water for spreading on walls | 灰泥                   | Plaster is another material that can be used to finish straw bale walls.           |
 | roof                 | The structure forming the upper covering of a building          | 屋顶                   | The straw bale walls support the roof of the house.                                |
 | shell                | A tough outer covering                                          | 外壳                   | The stucco shell makes the straw bale walls stable and durable.                    |
 | composite            | Made up of various parts or elements                            | 复合的                 | The composite effect of straw and stucco creates an energy-efficient building.     |
 | passive              | Requiring no active intervention                                | 被动的                 | Straw bale houses can be designed as passive solar buildings.                      |
-| oriented             | Aligned or positioned in a certain direction                    | 定向的                 | Passive solar buildings need to be correctly oriented to the sun.                  |
+| oriented             | Aligned or positioned in a certain direction                    | 使朝向                 | Passive solar buildings need to be correctly oriented to the sun.                  |
 | shade                | An area of darkness created by blocking light                   | 阴影                   | Proper orientation to sun and shade is crucial for passive solar buildings.        |
 | largely              | To a great extent; mostly                                       | 大部分                 | The house can largely heat and cool itself without modern systems.                 |
 | consume              | To use up a resource                                            | 消耗                   | Modern heating systems consume a lot of energy.                                    |
 | fire hazard          | Something that increases the likelihood of a fire               | 火灾隐患               | People often think straw bale houses are a fire hazard.                            |
 | fire-resistant       | Not easily set on fire                                          | 耐火的                 | Compressed straw bales are actually quite fire-resistant.                          |
-| stock                | The main stem of a plant                                        | 茎                     | Individual stalks of straw burn easily, but bales do not.                          |
 | oxygen               | A chemical element necessary for combustion                     | 氧气                   | Compressed straw bales resist burning because oxygen can't circulate through them. |
 | circulate            | To move continuously through a system                           | 循环                   | Oxygen cannot circulate through tightly packed straw bales.                        |
 | dense                | Closely compacted in substance                                  | 密集的                 | Dense bales of straw are difficult to ignite.                                      |
