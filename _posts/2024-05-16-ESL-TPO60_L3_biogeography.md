@@ -75,14 +75,8 @@ categories: media
 | sustain              | To support or maintain                                           | 维持                   | Larger islands can sustain a greater number of species.                            |
 | depend on            | To be controlled or determined by                                | 取决于                 | The diversity of species on an island depends on its size and proximity to the mainland. |
 | mainland             | The principal landmass of a country or continent                 | 大陆                   | Species richness on islands is influenced by their distance from the mainland.     |
-| opposing force       | Forces that act in contradiction to each other                   | 相对的力量             | The opposing forces of immigration and extinction shape island biogeography.       |
-| work                 | To function or operate                                           | 工作                   | These ecological principles work to maintain balance in island ecosystems.         |
 | track                | To follow or monitor the progress of something                   | 跟踪                   | Ecologists track the number of species on islands to study biogeographic patterns. |
 | decline              | To decrease in quantity or importance                            | 减少                   | The immigration rate declines as the island's capacity for new species fills.      |
-| early on             | In the initial stage of a process                                | 早期                   | Early on, islands have lower competition, allowing easier species colonization.    |
-| empty                | Not filled or unoccupied                                         | 空的                   | Newly formed islands are essentially empty, lacking established ecosystems.        |
-| progress             | To develop towards an improved or more advanced condition        | 进展                   | As ecosystems progress, the ecological dynamics on islands change.                |
-| establish            | To set up or bring about                                         | 建立                   | Once species establish themselves, they begin to impact the island's ecology.      |
 | tough                | Difficult or requiring resilience                                | 困难的                 | It's tough for new species to invade an established ecosystem.                     |
 | in contrast with     | Differing from                                                   | 与...形成对比          | In contrast with early stages, later stages see increased competition.             |
 | get settled          | To become established in a place                                 | 定居                   | Once species get settled on an island, they form stable communities.               |
@@ -106,4 +100,3 @@ categories: media
 | behave               | To act in a particular way                                       | 表现                   | The ecosystem behaved in accordance with the equilibrium theory.                   |
 | correspond with      | To be in agreement or conformity with                            | 与...一致              | The observed data corresponds with the theoretical predictions.                    |
 | stable               | Firm and steady                                                  | 稳定的                 | The island's ecosystem eventually became stable and self-sustaining.               |
-| suggest              | To propose a hypothesis or possibility                           | 建议                   | Recent findings suggest additional factors influence island biogeography.          |
