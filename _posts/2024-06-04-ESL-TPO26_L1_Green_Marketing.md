@@ -82,7 +82,7 @@ categories: media
 | mainstream           | The ideas, attitudes, or activities that are regarded as normal or conventional | 主流                   | Environmental issues began to enter the mainstream after Earth Day.                 |
 | ecological           | Relating to the relationship between living organisms and their environment | 生态的                 | The first workshop on ecological marketing was held in 1975.                       |
 | tap                  | To make use of a resource or supply                             | 利用                   | Ads began tapping into people's environmental concerns.                            |
-| learn the hard way   | To learn something by experiencing difficulties                 | 吃一堑长一智           | Green marketers learned the hard way that traditional marketing principles still apply. |
+| learn the hard way   | To learn something by experiencing difficulties                 | 历经挫折才明白［学会]（某事）         | Green marketers learned the hard way that traditional marketing principles still apply. |
 | compact              | Small and efficiently designed                                  | 紧凑的                 | The eco-light is a compact fluorescent light bulb.                                 |
 | fluorescent          | Emitting light while being exposed to external radiation        | 荧光的                 | Fluorescent light bulbs are more energy-efficient than incandescent bulbs.         |
 | regular              | Usual or normal                                                | 普通的                 | The eco-light cost more than a regular incandescent bulb.                          |
