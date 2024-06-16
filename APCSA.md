@@ -2,18 +2,17 @@
 title: "AP CSA"
 ---
 
-# [CSA Exam 2024:](https://apstudents.collegeboard.org/courses/ap-computer-science-a)
-
 ---
-  - Paper based exam on Wed, May 8, 2024
+  - [课前需注册服务](https://shishiapcs.github.io/New-Semester/)
+  - [主教材 runestone.academy](https://runestone.academy/)
   - [AP 分数计算器](https://examstrategist.com/ap-computer-science-a-score-calculator/)
-  - [主教材](https://runestone.academy/ns/books/published/csawesome/index.html?mode=browsing)
+  - [CSA 考试详情页:](https://apstudents.collegeboard.org/courses/ap-computer-science-a)
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
 
 ---
-# Core Concepts:<br>核心知识点
+## Core Concepts:<br>核心知识点
 
 <div class="markmap-container">
 <div class="markmap">
@@ -105,30 +104,3 @@ title: "AP CSA"
 
 ---
 
-## CB官方样题：
----
-
-Consider the following code segment.
-```
-ArrayList<String> items = new ArrayList<String>(); 
-items.add("A");
-items.add("B");
-items.add("C");
-items.add(0, "D");
-items.remove(3);
-items.add(0, "E");
-System.out.println(items);
-```
-What is printed as a result of executing the code segment?<br>
-(A) [A,B,C,E]<br>
-(B) [A,B,D,E]<br>
-(C) [E,D,A,B]<br>
-(D) [E,D,A,C]<br>
-(E) [E,D,C,B]<br>
-
----
-
-
-# Computer Science A course topics 
-<img width="1171" alt="Screen Shot 2023-03-31 at 12 30 35 PM-min" src="https://user-images.githubusercontent.com/105401427/229023232-c370319a-36d3-42c9-b3d0-ccb7962f42dd.png">
-<img width="1227" alt="Screen Shot 2023-03-31 at 12 31 22 PM-min" src="https://user-images.githubusercontent.com/105401427/229023238-18ebc515-4942-43a1-b2c1-fb6a70d0e0bd.png">
