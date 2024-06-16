@@ -20,10 +20,9 @@ Confirm Password:
 Course Name:       [CSA_2023_Fall]
 I Agree:            I have read and accepted your privacy policy, terms, and conditions. [勾选]
 Create Course:     Make course after registering (instructors only) [**不要**勾选这条]
-```
 
 支持 Runestone Academy：[点 sorry, not Today]
-
+```
 完成后，点击 `Textbooks` ➡️ `AP CSAwesome` 进入主教材。
 
 ## 在线笔记网站 Hypothes.is
