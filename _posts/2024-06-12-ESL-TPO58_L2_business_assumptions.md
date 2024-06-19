@@ -87,8 +87,9 @@ categories: media
 | shape                | To influence or determine                                       | 影响                   | Managers' past experiences shape their management assumptions.                      |
 | promote              | To raise to a higher position or rank                           | 晋升                   | Some managers are promoted from within the company.                                 |
 | perspective          | A particular attitude toward something                          | 视角                   | New managers bring different perspectives to the company.                           |
-| neatly               | In a tidy or orderly manner                                     | 整齐地                 | New perspectives may not fit neatly with existing assumptions.                      |
-| business sector      | A part of the economy                                            | 商业部门               | Managers from different business sectors may bring unique assumptions.              |
+| neatly               | In a tidy or orderly manner                                     | 恰好地                 | New perspectives may not fit neatly with existing assumptions.                      |
+| business sector      | A part of the economy                                           | 商业部门               | Managers from different business sectors may bring unique assumptions.              |
+| can't help (doing) something      | someone is unable to change their behaviour or feelings, or to prevent themselves from doing something                                           | 某人忍不住做某事              | An executive with a financial background can't help viewing the world differently from a manager whose training is mostly in production.|
 | operate              | To function or behave in a specified way                        | 运作                   | Companies operate under different rules and assumptions depending on their sector.  |
 | automobile           | A car                                                           | 汽车                   | Moving from making automobiles to selling insurance involves different assumptions. |
 | insurance            | Protection against financial loss                               | 保险                   | Managers from the insurance sector may have different business strategies.          |
