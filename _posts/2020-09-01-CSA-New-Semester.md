@@ -28,3 +28,7 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 ## 在线笔记网站 Hypothes.is
 注册网址：[hypothes.is/signup](https://hypothes.is/signup)
 - 完成注册后加入讨论组：[https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes](https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes)
+
+
+## IDE
+- [blueJ](https://www.bluej.org/)
