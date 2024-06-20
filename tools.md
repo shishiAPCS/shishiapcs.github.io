@@ -13,7 +13,8 @@ title: "Tools"
 * ### [背单词](https://superct.streamlit.app/)
 * ### [GPA查询网址](https://www.thinkwave.com)
 * ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
-* ### [Chrome下载](https://www.google.cn/chrome/)
+* ### [谷歌浏览器下载](https://www.google.cn/chrome/) ```苹果电脑```
+* ### [谷歌浏览器下载](https://static.shinyway.com/base/common/software/202307261754352696.exe) ```Windows电脑```
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
 * ### [GitHub 账号视频教程](https://www.bilibili.com/video/BV19c411p7En/?vd_source=84a986f8292e7cdf31541219b6c7844c)
 * ### [GitHub 仓库创建视频教程](https://www.bilibili.com/video/BV1624y1F7qi/?vd_source=84a986f8292e7cdf31541219b6c7844c)
