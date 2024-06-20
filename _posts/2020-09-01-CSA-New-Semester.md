@@ -32,3 +32,4 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 
 ## IDE
 - [blueJ](https://www.bluej.org/)
+- [Codehs辅助教材](https://codehs.com/go/71DF7)
