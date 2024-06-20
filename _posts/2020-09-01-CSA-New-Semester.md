@@ -25,6 +25,9 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 ```
 完成后，点击 `Textbooks` ➡️ `AP CSAwesome` 进入主教材。
 
+## 辅助教材1
+- [AP Computer Science A (Nitro) 2023](https://codehs.com/go/71DF7)
+
 ## 在线笔记网站 Hypothes.is
 注册网址：[hypothes.is/signup](https://hypothes.is/signup)
 - 完成注册后加入讨论组：[https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes](https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes)
@@ -32,4 +35,3 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 
 ## IDE
 - [blueJ](https://www.bluej.org/)
-- [Codehs辅助教材](https://codehs.com/go/71DF7)
