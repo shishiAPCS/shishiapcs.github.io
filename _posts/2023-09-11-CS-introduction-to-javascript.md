@@ -101,6 +101,15 @@ document.querySelectorAll('p').forEach(p => p.style.transform = 'rotate(180deg)'
 document.querySelectorAll('img').forEach(img => img.style.display = 'none');
 ```
 
+```javascript
+// A mysterious code snippet
+// 神秘代码
+const powerOn = true;
+while(powerOn) {
+    console.log("  ")
+}
+
+```
 
 ---
 ### Intermediate 函数
@@ -330,21 +339,11 @@ css.innerHTML = `
 document.head.appendChild(css);
 ```
 
+---
+### Advanced 井字棋（Tic-Tac-Toe）游戏 🎮
+---
 
 ```javascript
-// A mysterious code snippet
-// 神秘代码
-const powerOn = true;
-while(powerOn) {
-    console.log("  ")
-}
-
-```
-
-
-```javascript
-// 一个 井字棋（Tic-Tac-Toe）游戏 🎮
-
 // Create and style the game board
 document.body.innerHTML = `
     <div>
