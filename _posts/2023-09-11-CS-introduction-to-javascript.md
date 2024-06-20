@@ -153,38 +153,7 @@ document.body.innerHTML = '<button onclick="speak(\'Hello! Welcome to our JavaSc
 ### Advanced 动态效果
 ---
 
-```javascript
-// 3D Rotating Cube
-// 3D 旋转立方体
-//Create a simple 3D rotating cube using CSS3 and JavaScript, which introduces basic concepts of 3D graphics programming.
-var cube = document.createElement('div');
-cube.style.width = '100px';
-cube.style.height = '100px';
-document.body.appendChild(cube);
 
-cube.style.position = 'relative';
-cube.style.perspective = '500px';
-
-var faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
-faces.forEach((face) => {
-    var faceDiv = document.createElement('div');
-    faceDiv.style.position = 'absolute';
-    faceDiv.style.width = '100px';
-    faceDiv.style.height = '100px';
-    faceDiv.style.border = '1px solid black';
-    faceDiv.style.background = 'rgba(255, 165, 0, 0.6)';
-    faceDiv.style.boxSizing = 'border-box';
-    cube.appendChild(faceDiv);
-});
-
-cube.innerHTML = cube.innerHTML + cube.innerHTML; // Duplicate faces for 3D effect
-cube.style.transformStyle = 'preserve-3d';
-cube.style.animation = 'rotate 5s infinite linear';
-
-var css = document.createElement('style');
-css.innerHTML = '@keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }';
-document.head.appendChild(css);
-```
 
 ```javascript
 // Creates a firework effect on click
@@ -361,6 +330,7 @@ css.innerHTML = `
 document.head.appendChild(css);
 ```
 
+
 ```javascript
 // A mysterious code snippet
 // 神秘代码
@@ -369,4 +339,172 @@ while(powerOn) {
     console.log("  ")
 }
 
+```
+
+
+```javascript
+// 一个 井字棋（Tic-Tac-Toe）游戏 🎮
+
+// Create and style the game board
+document.body.innerHTML = `
+    <div>
+        <div class="board" id="board"></div>
+        <div class="message" id="message"></div>
+    </div>
+`;
+
+const style = document.createElement('style');
+style.textContent = `
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    .board {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 5px;
+    }
+    .cell {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    .cell.disabled {
+        pointer-events: none;
+    }
+    .message {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+`;
+document.head.appendChild(style);
+
+const board = Array(9).fill(null);
+const player = 'O';
+const computer = 'X';
+
+const boardElement = document.getElementById('board');
+const messageElement = document.getElementById('message');
+
+board.forEach((_, index) => {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    cell.addEventListener('click', () => handlePlayerMove(index));
+    boardElement.appendChild(cell);
+});
+
+computerMove();
+
+function handlePlayerMove(index) {
+    if (board[index] || checkWinner(board)) return;
+    board[index] = player;
+    render();
+    if (checkWinner(board)) {
+        messageElement.textContent = 'You win!';
+        return;
+    }
+    if (board.every(cell => cell)) {
+        messageElement.textContent = 'It\'s a draw!';
+        return;
+    }
+    computerMove();
+}
+
+function computerMove() {
+    const bestMove = findBestMove(board);
+    board[bestMove] = computer;
+    render();
+    if (checkWinner(board)) {
+        messageElement.textContent = 'Computer wins!';
+    }
+}
+
+function render() {
+    board.forEach((mark, index) => {
+        const cell = boardElement.children[index];
+        cell.textContent = mark;
+        cell.classList.toggle('disabled', !!mark);
+    });
+}
+
+function findBestMove(board) {
+    let bestScore = -Infinity;
+    let move;
+    for (let i = 0; i < board.length; i++) {
+        if (!board[i]) {
+            board[i] = computer;
+            let score = minimax(board, 0, false);
+            board[i] = null;
+            if (score > bestScore) {
+                bestScore = score;
+                move = i;
+            }
+        }
+    }
+    return move;
+}
+
+function minimax(board, depth, isMaximizing) {
+    const scores = { 'X': 1, 'O': -1, 'tie': 0 };
+    const winner = checkWinner(board);
+    if (winner !== null) {
+        return scores[winner];
+    }
+
+    if (isMaximizing) {
+        let bestScore = -Infinity;
+        for (let i = 0; i < board.length; i++) {
+            if (!board[i]) {
+                board[i] = computer;
+                let score = minimax(board, depth + 1, false);
+                board[i] = null;
+                bestScore = Math.max(score, bestScore);
+            }
+        }
+        return bestScore;
+    } else {
+        let bestScore = Infinity;
+        for (let i = 0; i < board.length; i++) {
+            if (!board[i]) {
+                board[i] = player;
+                let score = minimax(board, depth + 1, true);
+                board[i] = null;
+                bestScore = Math.min(score, bestScore);
+            }
+        }
+        return bestScore;
+    }
+}
+
+function checkWinner(board) {
+    const winPatterns = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 4, 8], [2, 4, 6]
+    ];
+
+    for (const pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+            return board[a];
+        }
+    }
+
+    if (board.every(cell => cell)) {
+        return 'tie';
+    }
+
+    return null;
+}
 ```
