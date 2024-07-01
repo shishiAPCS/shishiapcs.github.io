@@ -11,17 +11,15 @@ categories: media
 ## The woman expresses her opinion about the university’s plan. Briefly summarize the plan. Then state her opinion about the plan and explain the reasons she gives for holding that opinion.
 
 ## Reading
-```
+
 University to Create a Lounge for Commuter Students
 Many students at our university do not live in dormitories. These students live in town or in the suburbs and travel to campus every day The university has decided to provide these commuter students with a special lounge in the student center - with couches, chairs, and a television. University officials hope that this lounge - a place to socialize and relax - will give commuter students some of the same advantages that dormitory residents now have. An important additional feature of the lounge will be a bulletin board on the wall for posting and sharing information that may be especially useful to commuter students and their particular needs.
 
-```
 
 ## Listening
-```
+
 Narrator: Now listen to two students discussing the article. Woman: Hey, it's nice that they're gonna do this. Man: It's not a bad idea, but do you think it will accomplish what they're hoping? Woman: Sure, I mean, the dormitories all have their own lounges, and think about how much time students spent there and how many people they meet. Man: Yeah, I got to know a lot of people in my dorm during my first semester, just watching TV and taking study breaks in the lounge. Woman: Right. Those dorm lounges are really central to student life. and I met people there that really helped me with my schoolwork, too. Students who live off campus don't have anything like that. Man: That's true. Woman: Plus, I like the idea of posting stuff. You know, things like notices from students who want to get together with other students to share car rides to campus. Man: Yeah, ride share information could be helpful. Woman: Absolutely. If students knew about ride shares, they could save money getting to campus, 'cause a few of them could travel in one car.
 
-```
 
 ### S1 
 <details>
