@@ -150,8 +150,8 @@ that can explain the definition)
         <td>1</td>
         <td>The response is very limited in content and/or coherence or is only minimally connected to the task, or speech is largely unintelligible. A response at this level is characterized by at least two of the following:<br>回答在内容和/或连贯性上非常有限，或者与任务只有最小的连接，或者语言大部分是无法理解的。这个级别的回答至少具有以下两个特征：</td>
         <td>Consistent pronunciation, stress and intonation difficulties cause considerable listener effort; delivery is choppy, fragmented, or telegraphic; frequent pauses and hesitations.<br>持续的发音、重音和语调问题使听者需要付出相当大的努力；表达断断续续、支离破碎或像电报般简短；频繁的停顿和犹豫。</td>
-        <td>Range and control of grammar and vocabulary severely limit or prevent expression of ideas and connections among ideas. Some low-level responses may rely heavily on practiced or formulaic expressions.<br>语法和词汇的范围和控制严重限制或防止了想法和思想之间联系的表达。一些低级的回答可能严重依赖于练习过的或公式化的表达。</td>
-        <td>Limited relevant content is expressed. The response generally lacks substance beyond expression of very basic ideas. Speaker may be unable to sustain speech to complete the task and may rely heavily on repetition of the prompt.<br>表达了有限的相关内容。回答通常缺乏除了表达非常基本的想法之外的实质内容。说话者可能无法维持语言完成任务，可能严重依赖于重复提示。</td>
+        <td>Range and control of grammar and vocabulary severely limit or prevent expression of ideas and connections among ideas. Some low-level responses may rely heavily on practiced or formulaic expressions.<br>语法和词汇的范围和控制严重限制或阻碍了思想的表达及其之间的联系。一些低水平的回答可能严重依赖于预先练习或公式化的表达。</td>
+        <td>Limited relevant content is expressed. The response generally lacks substance beyond expression of very basic ideas. Speaker may be unable to sustain speech to complete the task and may rely heavily on repetition of the prompt.<br>表达的相关内容有限。回答通常缺乏除非常基本的想法表达之外的实质性内容。说话者可能无法持续讲话以完成任务，并可能严重依赖于重复问题。</td>
     </tr>
     <tr>
         <td>0</td>
