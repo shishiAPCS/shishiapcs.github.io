@@ -3,6 +3,7 @@ title: "AP CSA"
 ---
 
 ---
+  - 考试时间：Wed, May 7, 2025
   - [课堂规则](https://shishiapcs.github.io/CSA-Class-Rules/)
   - [课前需注册服务](https://shishiapcs.github.io/CSA-New-Semester/)
   - [主教材 runestone.academy](https://runestone.academy/)
@@ -12,6 +13,91 @@ title: "AP CSA"
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
+
+
+---
+## Java Class Sample:
+```java
+//This is a Cat class. It is like a blueprint for making Cat objects.
+// A class defines the characteristics(color and breed) and actions(meowing) of the objects.
+public class Cat{
+    //Characteristics of the Cat class
+    //instance variables 
+    private String color;
+    private String breed;
+    private int age;
+    private boolean isHungry;
+    private String name;
+    private double weight;
+    private double height;
+    
+    // Default Constructor
+    public Cat(){
+        //This is a constructor. It is used to create a Cat object
+        //with some default values.
+        color = "unkown";
+        breed = "unkown";
+        age = 0;
+        isHungry = true;
+    }
+    
+    // Constructor with parameters
+    public Cat(int a){
+        age = a;
+        
+    }
+    
+    public Cat(int a, String c){
+        age = a;
+        color = c;
+    }
+    
+    public Cat(String c, int a){
+        color = c;
+        age = a;
+    }
+    
+    // Methods
+    public void showAge(){
+        System.out.println("Age: " + age);
+    }
+    
+    
+    public void meow(){
+        System.out.println("Meow!!!");
+        
+    } 
+    
+    public void eat(int foodAmount){
+        System.out.println("I eat " + foodAmount + " a day");
+        
+    }
+    
+    // Main method
+    public static void main(String[] args){
+        //int num = 2;
+        //System.out.println("num: " + num);
+        //int num2 = num;
+        //System.out.println("num2: " + num2);
+        //num = 9; //changing num later does not affect num2
+        //System.out.println("num2 after num change: " + num2);
+        //System.out.println("num after num change: " + num);
+        Cat littleCat = new Cat(20, "black");
+        //System.out.println("littleCat's color: " + littleCat.color);
+        Cat bigCat = littleCat;
+        //System.out.println("bigCat's color: " + bigCat.color);
+        littleCat.color = "pink";
+        //bigCat.showAge();
+        bigCat.eat(50);
+        //System.out.println("littleCat's color after change: " + littleCat.color);
+        //System.out.println("bigCat's color after change littleCat: " + bigCat.color);
+    }
+    
+    
+}
+
+```
+
 
 ---
 ## Core Concepts:<br>核心知识点
