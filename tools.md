@@ -10,7 +10,7 @@ title: "Tools"
 ---
 ---
 
-* ### [背单词](https://superct.streamlit.app/)
+* ### [背单词](https://superct.streamlit.app/) ```By Tom class 2026 ```
 * ### [GPA查询网址](https://www.thinkwave.com)
 * ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
 * ### [谷歌浏览器下载](https://www.google.cn/chrome/) ```苹果电脑```
