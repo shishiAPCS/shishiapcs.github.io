@@ -82,8 +82,8 @@ categories: media
     <!-- Preset Class Names Section -->
     <div id="class-presets">
         <!-- Buttons to load preset class names into the class list textarea -->
-        <button onclick="loadClassList('ESLKylin')">ESL Kylin</button>
-        <button onclick="loadClassList('ESLRosefinch')">ESL Rosefinch</button>
+        <button onclick="loadClassList('class2027Dragon')">class2027 Dragon</button>
+        <button onclick="loadClassList('class2027Lion')">class2027 Lion</button>
         <button onclick="loadClassList('ESLS2')">ESL S2</button>
         <button onclick="loadClassList('ESLS2S')">ESL S2 S</button>
         <button onclick="loadClassList('S1')">TOEFL S1</button>
@@ -383,14 +383,14 @@ function loadClassList(preset) {
     var classListTextArea = document.getElementById('class-list');
     // Define presets
     var presets = {
-    'ESLKylin':"Claire\nFielder\nLeon\nCicily\nSeanna\nLynne\nRegina\nTom\nSteven\nWesley\nTina\nMartin\nJason\nEvan\nHoward\nCarol\nWendy\nAlice\nVicky\nBobby\nVictoria",
-    'ESLRosefinch': "Eric\nJoe\nKarl\nZao\nAugust\nRichard\nIsaiah\nMike\nJenny\nKevin\nMeredith\nKeven\nLauren\nGeorge\nSelina\nCamilia\nMichael\nRaymond\nJoyce\nAndy\nFlora\nMason",
+    'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYuki Wu\nHanbo Yang\nStanley\nGloria",
+    'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia",
     'ESLS2': "Eileen\nZoe\nDaniel\nTony\nMinato\nCameron\nNancy\nPaul\nTaylor\nYvonne\nShelia\nLuca\nAshlyn\nJessie\nIvy\nJay\nShawn",
     'ESLS2S': "Sword\nAmber\nTheo\nLaura\nGrayson\nOlivia\nIvan\nYuna\nElson",
-    'S1': 
-    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora",
     'S2': 
-    "Theo\nIvan\nAmber\nKendrick\nIvy\nShawn\nAshlyn\nJay\nOlivia\nYvonne\nEileen\nTony\nJerry\nJessie\nDaniel\nDia\nPaul\nLuca\nMinato\nCameron\nNancy\nTaylor\nYuna\nShelia\nZoe\nLaura\nElson\nGrayson"
+    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora",
+    'S1': 
+    "Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYukiWu\nHanbo\nStanley\nGloria\nKevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia"
     };
 
     // Load the preset class list into the textarea
