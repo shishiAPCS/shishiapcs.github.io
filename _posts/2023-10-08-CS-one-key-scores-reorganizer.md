@@ -82,10 +82,10 @@ categories: media
     <!-- Preset Class Names Section -->
     <div id="class-presets">
         <!-- Buttons to load preset class names into the class list textarea -->
-        <button onclick="loadClassList('class2027Dragon')">class2027 Dragon</button>
-        <button onclick="loadClassList('class2027Lion')">class2027 Lion</button>
-        <button onclick="loadClassList('ESLS2')">ESL S2</button>
-        <button onclick="loadClassList('ESLS2S')">ESL S2 S</button>
+        <button onclick="loadClassList('class2027Dragon')">2027 Dragon</button>
+        <button onclick="loadClassList('class2027Lion')">2027 Lion</button>
+        <button onclick="loadClassList('2026Kylin')">2026 Kylin</button>
+        <button onclick="loadClassList('2026Rosefinch')">2026 Rosefinch</button>
         <button onclick="loadClassList('S1')">TOEFL S1</button>
         <button onclick="loadClassList('S2')">TOEFL S2</button>
     </div>
@@ -385,10 +385,10 @@ function loadClassList(preset) {
     var presets = {
     'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYukiWu\nHanbo\nStanley\nGloria",
     'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia",
-    'ESLS2': "Eileen\nZoe\nDaniel\nTony\nMinato\nCameron\nNancy\nPaul\nTaylor\nYvonne\nShelia\nLuca\nAshlyn\nJessie\nIvy\nJay\nShawn",
-    'ESLS2S': "Sword\nAmber\nTheo\nLaura\nGrayson\nOlivia\nIvan\nYuna\nElson",
-    'S2': 
-    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nEvelyn\nVicky\nVictoria\nLynne\nWendy\nAlice\nSelina\nEvan\nHoward\nTina\nCicily\nMason\nClaire\nFlora",
+    '2026Kylin': "Fielder\nLeon\nCicily\nSeanna\nRegina\nTom\nSteven\nMartin\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
+    '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nRichard\nIsaiah\nKevin\nLauren\nWesley\nTina\nCamilia\nMichael\nJoyce\nAlice\nAndy",
+    'S2':                      
+    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nVicky\nVictoria\nAlice\nSelina\nTina\nCicily\nMason\nClaire",
     'S1': 
     "Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYukiWu\nHanbo\nStanley\nGloria\nKevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia"
     };
