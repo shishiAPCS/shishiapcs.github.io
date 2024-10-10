@@ -86,6 +86,7 @@ categories: media
         <button onclick="loadClassList('class2027Lion')">2027 Lion</button>
         <button onclick="loadClassList('2026Kylin')">2026 Kylin</button>
         <button onclick="loadClassList('2026Rosefinch')">2026 Rosefinch</button>
+        <button onclick="loadClassList('2026Phoenix')">2026 Phoenix</button>
         <button onclick="loadClassList('S1')">TOEFL S1</button>
         <button onclick="loadClassList('S2')">TOEFL S2</button>
     </div>
@@ -387,6 +388,7 @@ function loadClassList(preset) {
     'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia",
     '2026Kylin': "Fielder\nLeon\nCicily\nSeanna\nRegina\nTom\nSteven\nMartin\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
     '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nRichard\nIsaiah\nKevin\nLauren\nWesley\nTina\nCamilia\nMichael\nJoyce\nAlice\nAndy",
+    '2026Phoenix': "Sword\nKarl\nAugust\nMike\nJenny\nMeredith\nKeven\nGeorge\nMason",
     'S2':                      
     "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nVicky\nVictoria\nAlice\nSelina\nTina\nCicily\nMason\nClaire",
     'S1': 
