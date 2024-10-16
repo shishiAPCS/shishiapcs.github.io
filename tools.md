@@ -159,7 +159,15 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ### 个人网站搭建
 
 * #### [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
-    - ##### [Sample from Edward](https://californiumwu.github.io/)
+    - ##### [Edward](https://californiumwu.github.io/)
+    - ##### [https://honosv.fun/](https://honosv.fun/)
+    - ##### [https://f-loat.github.io/caption2text/](https://f-loat.github.io/caption2text/)
+    - ##### [https://apcslowell.github.io/](https://apcslowell.github.io/)
+    - ##### [https://bakerfranke.github.io/codePrint/](https://bakerfranke.github.io/codePrint/)
+    - ##### [https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html](https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html)
+    - ##### [https://shen-huang.github.io/WoP-Notes-Win/#/](https://shen-huang.github.io/WoP-Notes-Win/#/)
+    - ##### [https://longbaonguyen.github.io/courses/platformer/platformer.html](https://longbaonguyen.github.io/courses/platformer/platformer.html)
+    - ##### [https://computer-programming-a.github.io/](https://computer-programming-a.github.io/)
 
 
 ### Music 
