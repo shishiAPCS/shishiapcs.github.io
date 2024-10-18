@@ -121,9 +121,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
  
 ### 打字练习
 
-* [nitrotype](https://www.nitrotype.com/)
-* [typerush](https://www.typerush.com/leaderboard.html) ```国家选 Mayotte```
-* [Typing club](https://www.edclub.com/sportal/program-3.game)
+* [shishi.edclub.com](https://shishi.edclub.com)
 * [10fastfingers](https://10fastfingers.com/typing-test/english)
 * [monkeytype](https://monkeytype.com/)
        
