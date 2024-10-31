@@ -9,20 +9,7 @@ categories: media
 
 ## 交作业
 
-<form action="https://script.google.com/macros/s/AKfycbzatpjyx2NrKETjZ9r00u3YaYLzRuFPlN_Ef9JJXQmmGn9IVPIVjzLDDgC7u3Licx_kug/exec" method="post">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-  
-  <label for="essay">Essay:</label>
-  <textarea id="essay" name="essay" required></textarea>
-  
-  <label for="assignment">Assignment:</label>
-  <input type="text" id="assignment" name="assignment">
-  
-  <button type="submit">Submit</button>
-</form>
-
-
+<iframe src="https://airtable.com/appUar4uOeBYd1kol/shrWMVg905K3x7ivG" width="100%" height="600" style="border:none;"></iframe>
 
 
 ## 托福口语所需要的能力
