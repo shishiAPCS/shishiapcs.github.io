@@ -7,6 +7,24 @@ categories: media
 
 ---
 
+## 交作业
+
+<form action="https://script.google.com/macros/s/AKfycbzatpjyx2NrKETjZ9r00u3YaYLzRuFPlN_Ef9JJXQmmGn9IVPIVjzLDDgC7u3Licx_kug/exec" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  
+  <label for="essay">Essay:</label>
+  <textarea id="essay" name="essay" required></textarea>
+  
+  <label for="assignment">Assignment:</label>
+  <input type="text" id="assignment" name="assignment">
+  
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
 ## 托福口语所需要的能力
 
 <div class="markmap-container">
