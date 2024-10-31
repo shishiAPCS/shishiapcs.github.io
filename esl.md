@@ -6,12 +6,6 @@ categories: media
 ---
 
 ---
-
-## 交作业
-
-<iframe src="https://airtable.com/appUar4uOeBYd1kol/shrWMVg905K3x7ivG" width="100%" height="600" style="border:none;"></iframe>
-
-
 ## 托福口语所需要的能力
 
 <div class="markmap-container">
