@@ -11,12 +11,191 @@ categories: media
 
 ## Reading
 
-Near-Field Sound Detection 
+### Near-Field Sound Detection 
 Some animals are able to use sound to avoid predators. When sound is produced, it creates vibrations in the surrounding air. These vibrations are known as near-field sounds because they originate, or begin, near the sound source. Most animals are unable to detect these kinds of sounds; however, some animals have an ability known as near-field sound detection. This ability allows certain animals to detect vibrations or near-field sounds produced by potential predators. Animals with near-field sound detection abilities have special physical features that allow them to sense an approaching predator and take action to protect themselves.
+
+**1. Near-Field Sound Detection**  
+   - **直译**：近场声音探测  
+   - **句子结构分析**：该句是一个名词短语，结构为“形容词 + 名词 + 名词”。“Near-Field”是形容词短语，修饰“Sound Detection”，表明声音检测的特定范围，即“近场”。  
+   - **词汇和短语解释**：  
+     - **Near-Field**：意思是“近场的，靠近声音源的区域”。  
+     - **Sound Detection**：表示“声音探测”，即通过某种方式识别或感知声音。
+
+**2. Some animals are able to use sound to avoid predators.**  
+   - **直译**：一些动物能够利用声音来躲避捕食者。  
+   - **句子结构分析**：简单句，主语是“Some animals”，谓语是“are able to use”，宾语是“sound”，补语是“不定式短语 to avoid predators”。  
+     - “are able to”是表示能力的短语结构，表明主语“Some animals”具备某种能力。  
+     - “to avoid predators”是不定式短语，作目的状语，解释这些动物使用声音的目的。  
+   - **词汇和短语解释**：  
+     - **use sound**：意为“利用声音”，这里“sound”是名词，指的是声音的概念。  
+     - **avoid predators**：指“躲避捕食者”，其中“predators”是“捕食者、天敌”的意思。
+
+**3. When sound is produced, it creates vibrations in the surrounding air.**  
+   - **直译**：当声音产生时，它在周围空气中产生振动。  
+   - **句子结构分析**：复合句，主句为“it creates vibrations in the surrounding air”，从句为“when sound is produced”。  
+     - **从句**“when sound is produced”是时间状语从句，“when”引导，从句表明事件发生的时间。  
+     - **主句**“it creates vibrations in the surrounding air”：主语为“it”（代指“sound”），谓语“creates”表示“产生”，宾语“vibrations”表示“振动”。  
+   - **词汇和短语解释**：  
+     - **vibrations**：振动，指声音引起的空气中的物理变化。  
+     - **surrounding air**：意为“周围空气”，表明振动的作用范围。
+
+**4. These vibrations are known as near-field sounds because they originate, or begin, near the sound source.**  
+   - **直译**：这些振动被称为近场声音，因为它们起源或开始于声音源附近。  
+   - **句子结构分析**：复合句，主句是“These vibrations are known as near-field sounds”，从句是“because they originate, or begin, near the sound source”。  
+     - **主句**“These vibrations are known as near-field sounds”结构为“主语 + 系动词(be) + 表语”，其中“known as”表示“被称为”。  
+     - **从句**“because they originate, or begin, near the sound source”是原因状语从句，由“because”引导，表明振动为何被称为“near-field sounds”。“originate”是“起源”的意思，“begin”在这里是同义补充说明。  
+   - **词汇和短语解释**：  
+     - **known as**：被称为，指的是一个命名或定义的过程。  
+     - **originate**：起源，表明事物的发生或出现的位置。  
+     - **sound source**：声音源，指声音发出的起点或源头。
+
+**5. Most animals are unable to detect these kinds of sounds; however, some animals have an ability known as near-field sound detection.**  
+   - **直译**：大多数动物无法探测到这些声音；然而，一些动物具有一种被称为近场声音探测的能力。  
+   - **句子结构分析**：复合句，由分号隔开，前一句为“大多数动物无法探测这些声音”，后一句为“一些动物具有一种能力”。  
+     - **前句**“Most animals are unable to detect these kinds of sounds”结构为“主语 + 系动词(be) + 补语”，其中“unable to detect”表明能力的缺乏。  
+     - **后句**“some animals have an ability known as near-field sound detection”结构为“主语 + 动词 + 宾语 + 宾补”，宾补为“known as near-field sound detection”，修饰“an ability”。  
+   - **词汇和短语解释**：  
+     - **unable to detect**：无法探测，说明大多数动物缺乏这种能力。  
+     - **known as**：被称为，这里用于命名一种能力。  
+     - **near-field sound detection**：近场声音探测，是特指某些动物用来探测声音的方法。
+
+**6. This ability allows certain animals to detect vibrations or near-field sounds produced by potential predators.**  
+   - **直译**：这种能力使某些动物能够探测到潜在捕食者产生的振动或近场声音。  
+   - **句子结构分析**：简单句，主语为“This ability”，谓语为“allows”，宾语为“certain animals”，宾语补语为“to detect vibrations or near-field sounds produced by potential predators”。  
+     - **宾补**部分“to detect vibrations or near-field sounds”解释了能力的功能。  
+     - **定语从句**“produced by potential predators”修饰“vibrations or near-field sounds”，说明声音或振动的来源。  
+   - **词汇和短语解释**：  
+     - **allows**：使能够，表示提供某种可能性或权限。  
+     - **produced by potential predators**：由潜在捕食者产生，指声音或振动的具体来源。
+
+**7. Animals with near-field sound detection abilities have special physical features that allow them to sense an approaching predator and take action to protect themselves.**  
+   - **直译**：具有近场声音探测能力的动物拥有特殊的身体特征，使它们能够感知接近的捕食者并采取措施保护自己。  
+   - **句子结构分析**：复合句，主句为“Animals with near-field sound detection abilities have special physical features”，从句为“that allow them to sense an approaching predator and take action to protect themselves”。  
+     - **主句**“Animals with near-field sound detection abilities have special physical features”主语为“Animals with near-field sound detection abilities”，谓语“have”，宾语“special physical features”。  
+     - **从句**“that allow them to sense an approaching predator and take action to protect themselves”是定语从句，修饰“special physical features”，其中“that”引导从句，指代前面的“features”。  
+   - **词汇和短语解释**：  
+     - **special physical features**：特殊的身体特征，指某些特定动物体内具有的物理结构。  
+     - **sense**：感知，意思是通过身体特征察觉到外部刺激。  
+     - **approaching predator**：接近的捕食者
 
 ## Listening
 
 Now , listen to part of a lecture in a biology class . Okay , so let's look at an example of this with insects . Take caterpillars , for example . Some caterpillars have this ability . Now , say there's a caterpillar crawling along on a branch in a tree , just mining its own business . And then some dangerous insect , like a wasp , flies toward the tree . The caterpillar could be in trouble . The wasp might try to eat the caterpillar . It is a threat . Now , a lot of other animals may not hear the wasp or know that it's close by . But fortunately , for the caterpillar , there are these really tiny hairs on the caterpillar skin , little hairs that stick out into the air around the caterpillar . And when the wasp flies toward the tree , the beating of its wings makes a sound which sends out vibrations or small movements in the air , which make the caterpillars tiny hairs move . So it senses the presence of the wasp . So once the caterpillar realizes something is flying toward it , and it might be a wasp , the caterpillar will just drop off the branch it's been crawling on and fall to a lower branch or to the ground . And this way , the wasp is likely to just fly right by without ever catching the caterpillar . And the caterpillar will be safe .
+
+**1. Now, listen to part of a lecture in a biology class.**  
+   - **直译**：现在，听一段生物课的讲座。  
+   - **句子结构分析**：简单句，主语为“you”（省略），谓语“listen to”，宾语为“part of a lecture in a biology class”。  
+     - “Now”是时间状语，用来引导和强调当前的指令。  
+     - “part of a lecture”是名词短语，“in a biology class”是介词短语，修饰“lecture”。  
+   - **词汇和短语解释**：  
+     - **lecture**：讲座，通常用于课堂教学。  
+     - **biology class**：生物课，指生物学相关的课程。
+
+**2. Okay, so let's look at an example of this with insects.**  
+   - **直译**：好的，我们来看看一个关于昆虫的例子。  
+   - **句子结构分析**：简单句，主语是“we”（在“let’s”中隐含），谓语“look at”，宾语“an example of this with insects”。  
+     - “let’s”是“let us”的缩写，表示建议。  
+   - **词汇和短语解释**：  
+     - **look at**：表示“看”，这里是“来观察”的意思。  
+     - **an example of this with insects**：用昆虫做的一个例子，“of this”指代讲座内容中的一个特定概念。
+
+**3. Take caterpillars, for example.**  
+   - **直译**：例如，拿毛毛虫来说。  
+   - **句子结构分析**：简单句，省略了主语“you”，结构为“take + 宾语”。  
+   - **词汇和短语解释**：  
+     - **take…for example**：用于举例，表示“拿…作为例子”。
+
+**4. Some caterpillars have this ability.**  
+   - **直译**：一些毛毛虫具有这种能力。  
+   - **句子结构分析**：简单句，主语是“Some caterpillars”，谓语“have”，宾语“this ability”。  
+   - **词汇和短语解释**：  
+     - **this ability**：指代之前提到的感知危险的能力。
+
+**5. Now, say there's a caterpillar crawling along on a branch in a tree, just minding its own business.**  
+   - **直译**：现在，假设有一只毛毛虫在树上的树枝上爬行，做着自己的事。  
+   - **句子结构分析**：复合句，主句为“say there’s a caterpillar”，后面“crawling along on a branch in a tree, just minding its own business”是现在分词短语，补充说明毛毛虫的状态。  
+     - “say”表示假设情境，省略了“let us”。  
+   - **词汇和短语解释**：  
+     - **crawling along**：沿着…爬行。  
+     - **minding its own business**：做着自己的事，表示专注于自己的事情。
+
+**6. And then some dangerous insect, like a wasp, flies toward the tree.**  
+   - **直译**：然后，一只危险的昆虫，比如一只黄蜂，朝树飞去。  
+   - **句子结构分析**：简单句，主语“some dangerous insect, like a wasp”，谓语“flies toward”，宾语是“the tree”。  
+     - “like a wasp”是解释性插入，补充说明危险昆虫的例子。  
+   - **词汇和短语解释**：  
+     - **dangerous insect**：危险的昆虫，指可能对毛毛虫构成威胁的昆虫。  
+     - **flies toward**：飞向，表示朝某个方向移动。
+
+**7. The caterpillar could be in trouble.**  
+   - **直译**：毛毛虫可能会有麻烦。  
+   - **句子结构分析**：简单句，主语为“The caterpillar”，谓语为“could be”，补语“in trouble”。  
+   - **词汇和短语解释**：  
+     - **in trouble**：处于麻烦之中，表示遇到危险。
+
+**8. The wasp might try to eat the caterpillar.**  
+   - **直译**：黄蜂可能会试图吃掉毛毛虫。  
+   - **句子结构分析**：简单句，主语“The wasp”，谓语“might try to eat”，宾语“the caterpillar”。  
+   - **词汇和短语解释**：  
+     - **might try to**：可能尝试做某事，表示一种潜在的动作。
+
+**9. It is a threat.**  
+   - **直译**：它是一个威胁。  
+   - **句子结构分析**：简单句，主语为“It”，系动词“is”，表语“a threat”。  
+   - **词汇和短语解释**：  
+     - **threat**：威胁，表示可能造成伤害的来源。
+
+**10. Now, a lot of other animals may not hear the wasp or know that it's close by.**  
+   - **直译**：现在，许多其他动物可能听不到黄蜂的声音，也不知道它在附近。  
+   - **句子结构分析**：复合句，主句为“a lot of other animals may not hear the wasp or know that it’s close by”，并列谓语“may not hear…or know…”表示两种可能的情况。  
+   - **词汇和短语解释**：  
+     - **close by**：在附近，表示距离近。
+
+**11. But fortunately, for the caterpillar, there are these really tiny hairs on the caterpillar’s skin, little hairs that stick out into the air around the caterpillar.**  
+   - **直译**：但幸运的是，对于毛毛虫来说，毛毛虫皮肤上有这些非常细小的毛发，伸出到毛毛虫周围的空气中。  
+   - **句子结构分析**：复合句，主句为“there are these really tiny hairs on the caterpillar’s skin”，后接一个同位语从句“little hairs that stick out into the air around the caterpillar”来进一步描述“hairs”。  
+   - **词汇和短语解释**：  
+     - **tiny hairs**：细小的毛发，用于感知。  
+     - **stick out**：伸出，突出。
+
+**12. And when the wasp flies toward the tree, the beating of its wings makes a sound which sends out vibrations or small movements in the air, which make the caterpillar's tiny hairs move.**  
+   - **直译**：当黄蜂飞向树时，它翅膀的拍打产生一种声音，这种声音在空气中发出振动或小的移动，使毛毛虫的细小毛发产生移动。  
+   - **句子结构分析**：复合句，主句“the beating of its wings makes a sound”，后接两个由“which”引导的定语从句，逐步解释振动对毛毛虫的影响。  
+   - **词汇和短语解释**：  
+     - **beating**：拍打，指黄蜂翅膀的动作。  
+     - **vibrations or small movements**：振动或小的移动，是声音在空气中的表现。
+
+**13. So it senses the presence of the wasp.**  
+   - **直译**：因此，它感知到了黄蜂的存在。  
+   - **句子结构分析**：简单句，主语“it”，谓语“senses”，宾语“the presence of the wasp”。  
+   - **词汇和短语解释**：  
+     - **senses**：感知，表示通过触觉或其他感觉察觉到。  
+     - **presence**：存在，表示黄蜂就在附近。
+
+**14. So once the caterpillar realizes something is flying toward it, and it might be a wasp, the caterpillar will just drop off the branch it’s been crawling on and fall to a lower branch or to the ground.**  
+   - **直译**：所以，一旦毛毛虫意识到有东西朝它飞来，可能是黄蜂，毛毛虫就会从它爬行的树枝上掉下来，落到更低的树枝或地面上。  
+   - **句子结构分析**：复杂句，包含主句和多个从句：  
+     - 主句“the caterpillar will just drop off…”；  
+     - 时间从句“once the caterpillar realizes something is flying…”；  
+     - 宾语从句“something is flying toward it”和“it might be a wasp”说明毛毛虫的意识。  
+   - **词汇和短语解释**：  
+     - **realizes**：意识到，表示认知。  
+     - **drop off**：掉落。
+
+**15. And this way
+
+, the wasp is likely to just fly right by without ever catching the caterpillar.**  
+   - **直译**：这样的话，黄蜂可能会直接飞过去，根本抓不到毛毛虫。  
+   - **句子结构分析**：复合句，主句“the wasp is likely to fly right by…”，状语“in this way”表明方法或途径。  
+   - **词汇和短语解释**：  
+     - **fly right by**：直接飞过。  
+     - **without ever catching**：表示不会抓住。
+
+**16. And the caterpillar will be safe.**  
+   - **直译**：毛毛虫就会安全了。  
+   - **句子结构分析**：简单句，主语“the caterpillar”，谓语“will be”，补语“safe”。  
+   - **词汇和短语解释**：  
+     - **safe**：安全的，表示处于保护状态。
 
 
 <html lang="en">
