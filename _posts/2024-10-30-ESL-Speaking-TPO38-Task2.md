@@ -11,14 +11,210 @@ categories: media
 
 ## Reading
 
-Student Play Should Be Free for Everyone
+### Student Play Should Be Free for Everyone
 Thanks to our superb theater program here at the university, we are fortunate to be able to see many plays that are put on by student actors. However, while all employees and students at the university may attend these plays for free, anyone who is not directly associated with the university must play a fee to attend. I think student plays should be open to everyone free of charge. That way, people in the local community could benefit from having a free entertainment opinion in town. It would also be good for the student actors, since it would help to ensure larger audiences at the plays.
 Sincerely, Marie Jones
 
+**1. Student Play Should Be Free for Everyone**  
+   - **直译**：学生剧应该对所有人免费。  
+   - **句子结构分析**：简单句，主语为“Student Play”，谓语为“Should Be Free”，补语为“for Everyone”。“Should be”是情态动词结构，表示建议。  
+   - **词汇和短语解释**：  
+     - **student play**：学生剧，由学生表演的戏剧。  
+     - **free for everyone**：对所有人免费，表示无需付费即可观看。
+
+**2. Thanks to our superb theater program here at the university, we are fortunate to be able to see many plays that are put on by student actors.**  
+   - **直译**：多亏了我们大学出色的戏剧项目，我们有幸能够看到许多由学生演员表演的剧目。  
+   - **句子结构分析**：复合句，主句为“we are fortunate to be able to see many plays”，状语为“Thanks to our superb theater program here at the university”，定语从句“that are put on by student actors”修饰“many plays”。  
+     - **状语**“Thanks to…”表示原因，说明幸运的来源。  
+     - **定语从句**“that are put on by student actors”解释了这些剧目由谁表演。  
+   - **词汇和短语解释**：  
+     - **thanks to**：多亏，表示原因。  
+     - **put on**：上演，展示。
+
+**3. However, while all employees and students at the university may attend these plays for free, anyone who is not directly associated with the university must pay a fee to attend.**  
+   - **直译**：然而，虽然大学的所有员工和学生可以免费参加这些剧目，但任何与大学没有直接关系的人必须付费才能参加。  
+   - **句子结构分析**：复合句，主句为“anyone…must pay a fee to attend”，从句为“while all employees and students…may attend these plays for free”，从句表达条件或对比。  
+     - “who is not directly associated with the university”是定语从句，修饰“anyone”。  
+   - **词汇和短语解释**：  
+     - **associated with**：与…有关，表示关系。  
+     - **pay a fee**：支付费用。
+
+**4. I think student plays should be open to everyone free of charge.**  
+   - **直译**：我认为学生剧应该对所有人免费开放。  
+   - **句子结构分析**：简单句，主语“I”，谓语“think”，宾语从句“student plays should be open to everyone free of charge”。  
+     - 从句主语“student plays”，情态动词“should be”，补语“open to everyone free of charge”。  
+   - **词汇和短语解释**：  
+     - **open to everyone**：对所有人开放，表示允许任何人参加。  
+     - **free of charge**：免费，表示无需付费。
+
+**5. That way, people in the local community could benefit from having a free entertainment option in town.**  
+   - **直译**：这样，本地社区的人们可以从城里一个免费的娱乐选择中受益。  
+   - **句子结构分析**：简单句，主语“people in the local community”，情态动词“could”，谓语“benefit from”，宾语“having a free entertainment option in town”。  
+   - **词汇和短语解释**：  
+     - **benefit from**：受益于，从中获得好处。  
+     - **entertainment option**：娱乐选择，表示活动选择。
+
+**6. It would also be good for the student actors, since it would help to ensure larger audiences at the plays.**  
+   - **直译**：这对学生演员也有好处，因为它将有助于确保剧目的观众人数更多。  
+   - **句子结构分析**：复合句，主句为“It would also be good for the student actors”，原因状语从句“since it would help to ensure larger audiences at the plays”。  
+     - **状语从句**“since it would help to ensure…”表明原因。  
+   - **词汇和短语解释**：  
+     - **ensure**：确保，保证某事发生。  
+     - **larger audiences**：更多观众，指人群数量的增加。
+
+**7. Sincerely, Marie Jones**  
+   - **直译**：此致，玛丽·琼斯。  
+   - **句子结构分析**：这是一封信件的结尾，表明礼貌的结束语。  
+   - **词汇和短语解释**：  
+     - **Sincerely**：此致，常用于信件结尾。
+    
 ## Listening
 
 Now listen to two students discussing the letter . Hey , Paul . You're an actor , right ? What do you think about this idea ? That I think it's great . oh yeah Absolutely . I mean for the people in town , there's sometimes not a lot going on , not a lot to do . There's not even a movie theater nearby . And if you want to see a professional show , you have to travel . I think the nearest professional theaters like an hour away 。 yeah plus those professional plays can be really expensive . I saw one last semester and the ticket cost me like $40 . Right . So it will be good for people to have another entertainment option and an opportunity to see live shows that won't be so expensive . Sure . Plus it would definitely be helpful for us actors . Yeah Yeah , because on some nights , there's not a lot of people that go , not a lot of people there to watch us and that can have a bad effect on the show . It might not be as good . Yeah I can imagine it must be a completely different energy for you and the other actors if the seats are half empty . Exactly . Like if the show was a comedy and it's supposed to be funny in order for it to really seem funny , there needs to be a lot of people there to laugh at the jokes . Otherwise it just doesn't seem as humorous . Having a crowd there laughing at the jokes really helps the show along , helps it to be good . That makes sense . So this proposal would help that . Yeah help make it more likely that there be a full house , a lot of people watching .
 
+
+**1. Now listen to two students discussing the letter.**  
+   - **直译**：现在听两位学生讨论这封信。  
+   - **句子结构分析**：简单句，主语为“you”（省略），谓语为“listen to”，宾语为“two students discussing the letter”。  
+     - “discussing the letter”是现在分词短语，修饰“two students”，表示学生们的讨论内容。  
+   - **词汇和短语解释**：  
+     - **letter**：信件，指的是学生们讨论的内容对象。
+
+**2. Hey, Paul. You're an actor, right?**  
+   - **直译**：嘿，保罗。你是个演员，对吧？  
+   - **句子结构分析**：两句简单句，第一句“Hey, Paul”是呼语，第二句“You're an actor, right?”是带有附加问句的陈述句。  
+   - **词汇和短语解释**：  
+     - **actor**：演员，从事表演职业的人。  
+     - **right?**：表示附加疑问，征求确认。
+
+**3. What do you think about this idea?**  
+   - **直译**：你觉得这个主意怎么样？  
+   - **句子结构分析**：一般疑问句，由“what”引导的宾语从句作“think”的宾语。  
+   - **词汇和短语解释**：  
+     - **idea**：主意，指这封信中提到的建议或概念。
+
+**4. I think it’s great.**  
+   - **直译**：我觉得这很好。  
+   - **句子结构分析**：简单句，主语“I”，谓语“think”，宾语从句“it’s great”。  
+   - **词汇和短语解释**：  
+     - **great**：很棒的，用于表达积极评价。
+
+**5. Oh yeah, absolutely.**  
+   - **直译**：哦，是的，完全同意。  
+   - **句子结构分析**：简单句，两个感叹词短语表达同意。  
+   - **词汇和短语解释**：  
+     - **absolutely**：完全地，表示强烈的同意。
+
+**6. I mean for the people in town, there’s sometimes not a lot going on, not a lot to do.**  
+   - **直译**：我的意思是，对城里的人来说，有时没有太多活动，也没有太多可做的事。  
+   - **句子结构分析**：复合句，主句“I mean”，补充说明内容“for the people in town, there’s sometimes not a lot going on”。  
+     - “not a lot going on”是“there’s”的主语补语，意指活动稀少。  
+   - **词汇和短语解释**：  
+     - **going on**：发生，通常指活动或事件。
+
+**7. There’s not even a movie theater nearby.**  
+   - **直译**：附近甚至连电影院都没有。  
+   - **句子结构分析**：简单句，主语为“a movie theater”，谓语“there’s not even”，补充说明“nearby”。  
+   - **词汇和短语解释**：  
+     - **movie theater**：电影院，供人观影的场所。
+
+**8. And if you want to see a professional show, you have to travel.**  
+   - **直译**：如果你想看专业的表演，你必须出行。  
+   - **句子结构分析**：复合句，条件从句“if you want to see a professional show”，主句“you have to travel”。  
+   - **词汇和短语解释**：  
+     - **professional show**：专业表演，通常指由专业人员举办的演出。  
+     - **travel**：旅行，指需离开本地才能观赏。
+
+**9. I think the nearest professional theater's like an hour away.**  
+   - **直译**：我想最近的专业剧院大约在一小时车程之外。  
+   - **句子结构分析**：简单句，主语“I”，谓语“think”，宾语从句“the nearest professional theater’s like an hour away”。  
+   - **词汇和短语解释**：  
+     - **nearest**：最近的，指距离最近的剧院。  
+     - **an hour away**：距离一小时车程。
+
+**10. Yeah, plus those professional plays can be really expensive.**  
+   - **直译**：是的，而且那些专业表演可能真的很贵。  
+   - **句子结构分析**：并列句，主句为“Yeah, plus those professional plays can be really expensive”，其中“plus”表示附加信息。  
+   - **词汇和短语解释**：  
+     - **expensive**：昂贵的，表示高成本。
+
+**11. I saw one last semester and the ticket cost me like $40.**  
+   - **直译**：上学期我看了一场，票价大约40美元。  
+   - **句子结构分析**：复合句，主句“I saw one last semester”，并列句“the ticket cost me like $40”描述票价。  
+   - **词汇和短语解释**：  
+     - **cost me**：花费我，用于表达个人支出的成本。
+
+**12. Right. So it will be good for people to have another entertainment option and an opportunity to see live shows that won’t be so expensive.**  
+   - **直译**：对，因此人们有另一个娱乐选择以及观看不那么贵的现场表演的机会将是好的。  
+   - **句子结构分析**：复合句，主句“it will be good for people”，补语不定式短语“to have another entertainment option and an opportunity to see live shows that won’t be so expensive”。  
+     - 定语从句“that won’t be so expensive”修饰“live shows”。  
+   - **词汇和短语解释**：  
+     - **entertainment option**：娱乐选择，提供多样选择。  
+     - **live shows**：现场表演，指当场观看的演出。
+
+**13. Sure. Plus it would definitely be helpful for us actors.**  
+   - **直译**：当然。而且这对我们演员肯定有帮助。  
+   - **句子结构分析**：并列句，前句“Sure”表示认同，后句“it would definitely be helpful for us actors”表达看法。  
+   - **词汇和短语解释**：  
+     - **helpful**：有帮助的，指能带来积极影响。
+
+**14. Yeah, because on some nights, there’s not a lot of people that go, not a lot of people there to watch us and that can have a bad effect on the show.**  
+   - **直译**：是的，因为有些晚上来看的人不多，没有多少人来看我们演出，这会对演出产生负面影响。  
+   - **句子结构分析**：复合句，主句“that can have a bad effect on the show”，原因从句“because on some nights…”。  
+   - **词汇和短语解释**：  
+     - **bad effect**：负面影响，表示不利结果。
+
+**15. It might not be as good.**  
+   - **直译**：可能不会那么好。  
+   - **句子结构分析**：简单句，主语“It”，情态动词“might”，谓语“not be as good”。  
+   - **词汇和短语解释**：  
+     - **not be as good**：不如预期，表示质量欠佳。
+
+**16. Yeah, I can imagine it must be a completely different energy for you and the other actors if the seats are half empty.**  
+   - **直译**：是的，我可以想象，如果座位空了一半，对你和其他演员来说肯定是完全不同的氛围。  
+   - **句子结构分析**：复合句，主句“I can imagine”，宾语从句“it must be a completely different energy for you and the other actors if the seats are half empty”。  
+     - 条件从句“if the seats are half empty”描述特定情况。  
+   - **词汇和短语解释**：  
+     - **half empty**：半空，表示观众稀少。
+
+**17. Exactly. Like if the show was a comedy and it’s supposed to be funny, in order for it to really seem funny, there needs to be a lot of people there to laugh at the jokes.**  
+   - **直译**：确实。就像如果演出是喜剧，应该很有趣，为了让它真的显得有趣，需要有很多人在那笑话。  
+   - **句子结构分析**：复合句，主句“there needs to be a lot of people there”，条件从句“if the show was a comedy and it’s supposed to be funny”，目的状语从句“in order for it to really seem funny”。  
+
+
+   - **词汇和短语解释**：  
+     - **comedy**：喜剧，旨在引发观众笑声的戏剧类型。  
+     - **supposed to be**：应该是，表示预期效果。
+
+**18. Otherwise it just doesn’t seem as humorous.**  
+   - **直译**：否则它就不那么幽默了。  
+   - **句子结构分析**：简单句，主语“it”，谓语“doesn’t seem as humorous”。“otherwise”引导对比条件。  
+   - **词汇和短语解释**：  
+     - **humorous**：幽默的，有趣的。
+
+**19. Having a crowd there laughing at the jokes really helps the show along, helps it to be good.**  
+   - **直译**：有观众在那笑话真的帮助了表演，帮助它更好。  
+   - **句子结构分析**：简单句，由“Having a crowd there laughing at the jokes”作为主语从句。  
+   - **词汇和短语解释**：  
+     - **helps along**：推进，促进更好进展。
+
+**20. That makes sense.**  
+   - **直译**：那有道理。  
+   - **句子结构分析**：简单句，主语“That”，谓语“makes sense”。  
+   - **词汇和短语解释**：  
+     - **makes sense**：合乎逻辑，有道理。
+
+**21. So this proposal would help that.**  
+   - **直译**：所以这个提议会有所帮助。  
+   - **句子结构分析**：简单句，主语“this proposal”，谓语“would help”，宾语“that”指代之前提到的问题。  
+   - **词汇和短语解释**：  
+     - **proposal**：提议，提出的建议。
+
+**22. Yeah, help make it more likely that there be a full house, a lot of people watching.**  
+   - **直译**：是的，帮助提高满座的可能性，有很多人来看。  
+   - **句子结构分析**：简单句，“help make it more likely that…”是句子的主结构。  
+   - **词汇和短语解释**：  
+     - **full house**：满座，表示观众满场。
 
 <html lang="en">
 <head>
