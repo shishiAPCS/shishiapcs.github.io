@@ -13,6 +13,107 @@ categories: media
 
 Listen to part of a lecture from a history class . So we've been talking about life in ancient times . And today I want to discuss an important aspect of ancient civilizations，the economy As the economies of ancient civilizations developed over time and became more complex . Certain changes tended to occur . Let's talk about a couple of the changes that happened as the economies of ancient civilizations developed . One of the key economic changes was in the way that people paid for goods and services . As their civilizations developed . Many began to use currency of money to pay for goods and services rather than trading with each other . A monetary system made it easier to make purchases , because people could buy from anyone , not just those who wanted to trade . So for example , say a man who baked bread wanted a new coat . Well with a monetary system , the man could buy a new coat from the coat maker with money . This was better than trading because the coat maker might not want to trade a coat for the bread makers bread . Now , another economic change was that ancient civilizations began to acquire items from far away . In the past , people would only trade locally , but as their civilizations developed , they began trading with other people in distant places , so they were able to acquire goods . They wouldn't have otherwise . For example , the ancient Romans never had silk fabric until they started trading with the Chinese who lived a great distance from them . Once the Romans started traveling far away to China , they could acquire silk , which was highly prized by the Romans , because you just couldn't get it anywhere nearby .
 
+**1. Listen to part of a lecture from a history class.**  
+   - **直译**：听一段历史课的讲座。  
+   - **句子结构分析**：简单句，主语“you”省略，谓语“listen to”，宾语为“part of a lecture from a history class”。  
+   - **词汇和短语解释**：  
+     - **lecture**：讲座，授课形式。  
+     - **history class**：历史课。
+
+**2. So, we've been talking about life in ancient times, and today I want to discuss an important aspect of ancient civilizations: the economy.**  
+   - **直译**：我们一直在讨论古代的生活，今天我想讨论古代文明的一个重要方面：经济。  
+   - **句子结构分析**：复合句，主句“we've been talking about life in ancient times”和“today I want to discuss…”。冒号后面补充说明“the economy”是“aspect of ancient civilizations”的具体内容。  
+   - **词汇和短语解释**：  
+     - **ancient times**：古代时期。  
+     - **aspect**：方面，特定事物的一部分。  
+     - **economy**：经济。
+
+**3. As the economies of ancient civilizations developed over time and became more complex, certain changes tended to occur.**  
+   - **直译**：随着古代文明的经济随时间发展并变得更复杂，某些变化倾向于发生。  
+   - **句子结构分析**：复合句，主句“certain changes tended to occur”，时间状语从句“As the economies…developed over time and became more complex”。  
+   - **词汇和短语解释**：  
+     - **develop over time**：随着时间发展。  
+     - **tended to**：倾向于。  
+     - **occur**：发生。
+
+**4. Let's talk about a couple of the changes that happened as the economies of ancient civilizations developed.**  
+   - **直译**：让我们来谈谈一些随着古代文明经济发展而发生的变化。  
+   - **句子结构分析**：复合句，主句“Let's talk about a couple of the changes”，从句“that happened as the economies of ancient civilizations developed”修饰“changes”。  
+   - **词汇和短语解释**：  
+     - **a couple of**：一些，几个。  
+     - **happen**：发生，表示事件的出现。
+
+**5. One of the key economic changes was in the way that people paid for goods and services.**  
+   - **直译**：其中一个关键的经济变化在于人们支付商品和服务的方式。  
+   - **句子结构分析**：简单句，主语“one of the key economic changes”，系动词“was”，表语“in the way that people paid…”。  
+   - **词汇和短语解释**：  
+     - **key economic changes**：关键经济变化。  
+     - **goods and services**：商品和服务。
+
+**6. As their civilizations developed, many began to use currency or money to pay for goods and services rather than trading with each other.**  
+   - **直译**：随着他们的文明发展，许多人开始使用货币支付商品和服务，而不是互相交换。  
+   - **句子结构分析**：复合句，主句“many began to use currency or money to pay for goods and services”，时间状语从句“As their civilizations developed”。  
+   - **词汇和短语解释**：  
+     - **currency**：货币。  
+     - **rather than**：而不是。
+
+**7. A monetary system made it easier to make purchases because people could buy from anyone, not just those who wanted to trade.**  
+   - **直译**：货币系统使得购买更容易，因为人们可以向任何人购买，而不仅限于想交易的人。  
+   - **句子结构分析**：复合句，主句“A monetary system made it easier to make purchases”，原因状语从句“because people could buy from anyone…”。  
+   - **词汇和短语解释**：  
+     - **monetary system**：货币系统。  
+     - **make purchases**：进行购买。
+
+**8. So, for example, say a man who baked bread wanted a new coat.**  
+   - **直译**：比如，假设一个烤面包的人想要一件新外套。  
+   - **句子结构分析**：复合句，省略“let us”后的祈使结构“say a man…”，定语从句“who baked bread”修饰“a man”。  
+   - **词汇和短语解释**：  
+     - **bake bread**：烘焙面包。  
+     - **want a new coat**：想要一件新外套。
+
+**9. Well, with a monetary system, the man could buy a new coat from the coat maker with money.**  
+   - **直译**：有了货币系统，这个人可以用钱向制衣人买一件新外套。  
+   - **句子结构分析**：简单句，主语“the man”，情态动词“could”，谓语“buy…from the coat maker with money”。  
+   - **词汇和短语解释**：  
+     - **buy…from**：从…购买。  
+     - **with money**：用钱。
+
+**10. This was better than trading because the coat maker might not want to trade a coat for the bread maker's bread.**  
+   - **直译**：这比交换好，因为制衣人可能不愿意用外套换面包。  
+   - **句子结构分析**：复合句，主句“This was better than trading”，原因状语从句“because the coat maker might not want to trade…”。  
+   - **词汇和短语解释**：  
+     - **better than**：比…更好。  
+     - **might not want to**：可能不愿意。
+
+**11. Now, another economic change was that ancient civilizations began to acquire items from far away.**  
+   - **直译**：另一个经济变化是古代文明开始从远处获取物品。  
+   - **句子结构分析**：复合句，主句“another economic change was”，表语从句“that ancient civilizations began to acquire items from far away”。  
+   - **词汇和短语解释**：  
+     - **acquire items**：获得物品。  
+     - **far away**：遥远的地方。
+
+**12. In the past, people would only trade locally, but as their civilizations developed, they began trading with other people in distant places, so they were able to acquire goods they wouldn’t have otherwise.**  
+   - **直译**：过去，人们只在本地交易，但随着文明的发展，他们开始与远方的人交易，因此能获得他们原本无法得到的商品。  
+   - **句子结构分析**：复合句，主句“people would only trade locally”，并列句“but as their civilizations…”。从句“so they were able…”解释交易的结果。  
+   - **词汇和短语解释**：  
+     - **trade locally**：本地交易。  
+     - **distant places**：遥远的地方。  
+     - **wouldn’t have otherwise**：否则不会有。
+
+**13. For example, the ancient Romans never had silk fabric until they started trading with the Chinese, who lived a great distance from them.**  
+   - **直译**：例如，古罗马人从未拥有丝绸，直到他们开始与远在他们很远的中国人交易。  
+   - **句子结构分析**：复合句，主句“the ancient Romans never had silk fabric…”，从句“until they started trading with the Chinese, who…”补充说明丝绸的来源。  
+   - **词汇和短语解释**：  
+     - **silk fabric**：丝绸。  
+     - **a great distance**：很远的距离。
+
+**14. Once the Romans started traveling far away to China, they could acquire silk, which was highly prized by the Romans because you just couldn’t get it anywhere nearby.**  
+   - **直译**：一旦罗马人开始前往遥远的中国，他们就能获得丝绸，这种丝绸在罗马人中备受推崇，因为你在附近找不到它。  
+   - **句子结构分析**：复合句，主句“they could acquire silk”，从句“which was highly prized…because…”详细描述丝绸的重要性和稀缺性。  
+   - **词汇和短语解释**：  
+     - **highly prized**：高度重视的。  
+     - **nearby**：附近。
+
 
 <html lang="en">
 <head>
