@@ -7,11 +7,6 @@ categories: media
 
 ---
 
-## 交作业
-
-<iframe class="airtable-embed" src="https://airtable.com/embed/appUar4uOeBYd1kol/pag9xmpUkd2BGlASS/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-
-
 ## 托福口语所需要的能力
 
 <div class="markmap-container">
