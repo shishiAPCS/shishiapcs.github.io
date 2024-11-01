@@ -121,9 +121,7 @@ Listen to part of a lecture in a business class . Large companies are organized 
    - **词汇和短语解释**：  
      - **return clothing**：退回衣物。
 
-**18. Most stores allow customers to do this, but if one store
-
- decides not to accept returns, customers at that store may get upset if they can’t return clothes and get their money back.**  
+**18. Most stores allow customers to do this, but if one store decides not to accept returns, customers at that store may get upset if they can’t return clothes and get their money back.**  
    - **直译**：大多数店允许顾客退货，但如果某家店不接受退货，顾客可能会不满。  
    - **句子结构分析**：复合句，主句“Most stores allow…”，从句“if one store decides…”修饰特定情况。  
    - **词汇和短语解释**：  
