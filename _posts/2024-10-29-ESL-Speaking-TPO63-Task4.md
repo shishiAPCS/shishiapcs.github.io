@@ -13,6 +13,122 @@ categories: media
 
 Listen to part of a lecture in a business class . Large companies are organized in different ways . In some large companies that have more than one branch or location , responsibility and authority are spread throughout the entire company . So instead of managers at the central headquarters making all the decisions , managers at local branches can make decisions about how to run their branches . This is known as decentralization . Decentralization can sometimes be effective for companies with multiple locations , but it also has some possible disadvantages . One disadvantage of decentralization is that decisions made by local managers can sometimes harm the overall company . When local managers make decisions , they only consider what's best for their particular location . They don't have to think about what's good for the company in general . So a good decision for a local branch can sometimes be a bad decision for the company as a whole . For example , take a major clothing company with multiple stores , say there's one store that's not doing well . The manager may decide to spend a lot of the company's money on advertising to attract more customers to the store . But if the central office were in control , it would probably choose to close the struggling store to save money and invest in its more successful branches . Another disadvantage of decentralization is that company policies might be carried out differently in different locations . If local managers are allowed to make decisions about policies , then policies may vary from location to location . And if the policies aren't what customers are expecting , they may be unhappy . So back to the clothing company , say customers want to return clothing and get their money back , because it didn't fit right or something . And most stores allow customers to do this , but one store decides not to accept returns . Customers at that store may get upset if they can't return clothes and get their money back .
 
+**1. Listen to part of a lecture in a business class.**  
+   - **直译**：听一部分商业课的讲座。  
+   - **句子结构分析**：简单句，主语为“you”（省略），谓语为“listen to”，宾语为“part of a lecture in a business class”。  
+     - **句型**为祈使句，省略了“you”。  
+   - **词汇和短语解释**：  
+     - **lecture**：讲座，课程形式的内容讲解。  
+     - **business class**：商业课程。
+
+**2. Large companies are organized in different ways.**  
+   - **直译**：大公司以不同的方式组织起来。  
+   - **句子结构分析**：简单句，主语“Large companies”，系动词“are”，补语“organized in different ways”。  
+   - **词汇和短语解释**：  
+     - **organized**：被组织或安排的状态。  
+     - **in different ways**：以不同的方式，表示多种可能的结构方式。
+
+**3. In some large companies that have more than one branch or location, responsibility and authority are spread throughout the entire company.**  
+   - **直译**：在一些拥有多个分支或地点的大公司中，责任和权力分散在整个公司中。  
+   - **句子结构分析**：复合句，主句为“responsibility and authority are spread throughout the entire company”，定语从句“that have more than one branch or location”修饰“some large companies”。  
+   - **词汇和短语解释**：  
+     - **responsibility and authority**：责任和权力。  
+     - **spread throughout**：分布在整个范围内。
+
+**4. So, instead of managers at the central headquarters making all the decisions, managers at local branches can make decisions about how to run their branches.**  
+   - **直译**：因此，与其让总部的管理者做所有决策，地方分支的管理者可以决定如何运营他们的分支。  
+   - **句子结构分析**：复合句，主句为“managers at local branches can make decisions”，状语“instead of managers at the central headquarters making all the decisions”表示一种对比。  
+   - **词汇和短语解释**：  
+     - **instead of**：替代或对比。  
+     - **run their branches**：管理分支机构。
+
+**5. This is known as decentralization.**  
+   - **直译**：这被称为去中心化。  
+   - **句子结构分析**：简单句，主语“this”，系动词“is”，表语“known as decentralization”。  
+   - **词汇和短语解释**：  
+     - **decentralization**：权力或决策分散化。
+
+**6. Decentralization can sometimes be effective for companies with multiple locations, but it also has some possible disadvantages.**  
+   - **直译**：去中心化有时对多地点公司有效，但它也有一些可能的缺点。  
+   - **句子结构分析**：复合句，主句“Decentralization can sometimes be effective”，并列从句“but it also has some possible disadvantages”。  
+   - **词汇和短语解释**：  
+     - **effective**：有效的。  
+     - **disadvantages**：缺点。
+
+**7. One disadvantage of decentralization is that decisions made by local managers can sometimes harm the overall company.**  
+   - **直译**：去中心化的一个缺点是地方管理者的决策有时会损害整个公司。  
+   - **句子结构分析**：复合句，主句“one disadvantage…is”，表语从句“that decisions…can sometimes harm the overall company”说明缺点。  
+   - **词汇和短语解释**：  
+     - **overall company**：整个公司。
+
+**8. When local managers make decisions, they only consider what's best for their particular location; they don't have to think about what's good for the company in general.**  
+   - **直译**：当地方管理者做决定时，他们只考虑对自己分支的最优决策；他们不必考虑对整个公司的好处。  
+   - **句子结构分析**：复合句，主句为“they only consider…”，时间状语从句“when local managers make decisions”。分号后连接并列句，表达对比。  
+   - **词汇和短语解释**：  
+     - **in general**：整体而言。
+
+**9. So, a good decision for a local branch can sometimes be a bad decision for the company as a whole.**  
+   - **直译**：因此，对地方分支有利的决策有时对整个公司却不利。  
+   - **句子结构分析**：简单句，主语“a good decision”，谓语“can…be”，补语“a bad decision for the company as a whole”。  
+   - **词汇和短语解释**：  
+     - **as a whole**：整体上。
+
+**10. For example, take a major clothing company with multiple stores.**  
+   - **直译**：例如，拿一个有多家门店的大型服装公司来说。  
+   - **句子结构分析**：简单句，省略“we can”，结构为“take + 宾语”。  
+   - **词汇和短语解释**：  
+     - **take…for example**：用于举例。
+
+**11. Say there's one store that's not doing well.**  
+   - **直译**：假设有一家店经营不佳。  
+   - **句子结构分析**：简单句，省略“let us”，结构为“say + 主语 + 谓语”。  
+   - **词汇和短语解释**：  
+     - **not doing well**：表示经营不善。
+
+**12. The manager may decide to spend a lot of the company's money on advertising to attract more customers to the store.**  
+   - **直译**：经理可能决定花公司大量的钱做广告，吸引更多顾客到店。  
+   - **句子结构分析**：简单句，主语“the manager”，谓语“may decide to spend”，宾语“a lot of the company's money”。不定式短语“to attract more customers”作目的状语。  
+   - **词汇和短语解释**：  
+     - **advertising**：广告活动。  
+
+**13. But if the central office were in control, it would probably choose to close the struggling store to save money and invest in its more successful branches.**  
+   - **直译**：但如果总部掌控，它可能会选择关闭表现不佳的店面以节省资金并投资于更成功的分店。  
+   - **句子结构分析**：条件句，主句“it would probably choose…”，从句“if the central office were in control”。  
+   - **词汇和短语解释**：  
+     - **struggling store**：经营困难的店面。
+
+**14. Another disadvantage of decentralization is that company policies might be carried out differently in different locations.**  
+   - **直译**：去中心化的另一个缺点是公司政策在不同地点可能会以不同方式执行。  
+   - **句子结构分析**：复合句，主句为“Another disadvantage…is”，表语从句“that company policies might be carried out differently in different locations”。  
+   - **词汇和短语解释**：  
+     - **carried out**：执行。
+
+**15. If local managers are allowed to make decisions about policies, then policies may vary from location to location.**  
+   - **直译**：如果允许地方管理者对政策做决定，那么政策可能会因地而异。  
+   - **句子结构分析**：条件句，主句“policies may vary from location to location”，条件从句“if local managers are allowed”。  
+   - **词汇和短语解释**：  
+     - **vary from location to location**：因地而异。
+
+**16. And if the policies aren’t what customers are expecting, they may be unhappy.**  
+   - **直译**：如果政策不符合顾客预期，他们可能会不满意。  
+   - **句子结构分析**：条件句，主句“they may be unhappy”，条件从句“if the policies aren’t”。  
+   - **词汇和短语解释**：  
+     - **expecting**：期望，期待。
+
+**17. So, back to the clothing company: say customers want to return clothing and get their money back because it didn’t fit right or something.**  
+   - **直译**：回到那家服装公司：假设顾客想退货并退款，因为衣服不合身或其他原因。  
+   - **句子结构分析**：复合句，主句“say customers want to return clothing”，原因状语“because it didn’t fit right or something”。  
+   - **词汇和短语解释**：  
+     - **return clothing**：退回衣物。
+
+**18. Most stores allow customers to do this, but if one store
+
+ decides not to accept returns, customers at that store may get upset if they can’t return clothes and get their money back.**  
+   - **直译**：大多数店允许顾客退货，但如果某家店不接受退货，顾客可能会不满。  
+   - **句子结构分析**：复合句，主句“Most stores allow…”，从句“if one store decides…”修饰特定情况。  
+   - **词汇和短语解释**：  
+     - **get upset**：表示不满。
+
 
 <html lang="en">
 <head>
