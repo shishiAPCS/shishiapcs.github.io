@@ -5,6 +5,8 @@ title: "Tools"
 ---
 ## [找老师 🙋‍♂️](_posts/2023-06-01-FAQ.md)
 ---
+## [交作业 📝](https://shishiapcs.github.io/CS-Homework-Collection/)
+---
 
 ## Essentials 必备知识
 ---
