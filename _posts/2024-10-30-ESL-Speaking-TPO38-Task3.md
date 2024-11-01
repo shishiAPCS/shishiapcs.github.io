@@ -11,12 +11,186 @@ categories: media
 
 ## Reading
 
-Phoresy
+### Phoresy
 Animals often have to move from place to place to obtain resources. Most animals do so using their own physical effort, but animals of certain species may not be able to transport themselves efficiently in order to access the resources they need. These animals may make use of another animal species to transport them, without causing any injury to the other species. This relationship is known as phoresy. Phoresy, which is a temporary relationship, benefits the passenger species and causes little or no harm to the species doing the transporting.
+
+**1. Animals often have to move from place to place to obtain resources.**  
+   - **直译**：动物们经常需要从一个地方移动到另一个地方以获得资源。  
+   - **句子结构分析**：简单句，主语为“Animals”，谓语为“have to move”，目的状语为“不定式短语 to obtain resources”。  
+     - **谓语**“have to move”表示一种必要性。  
+     - **目的状语**“to obtain resources”解释了移动的原因。  
+   - **词汇和短语解释**：  
+     - **move from place to place**：从一个地方移动到另一个地方。  
+     - **obtain resources**：获取资源。
+
+**2. Most animals do so using their own physical effort, but animals of certain species may not be able to transport themselves efficiently in order to access the resources they need.**  
+   - **直译**：大多数动物通过自身的体力来做到这一点，但某些物种的动物可能无法有效地自行移动以获取它们所需的资源。  
+   - **句子结构分析**：复合句，主句为“Most animals do so using their own physical effort”，并列句“but animals of certain species may not be able to transport themselves efficiently in order to access the resources they need”。  
+     - **并列结构**表示对比，主句描述大多数动物，而从句描述特定物种的例外情况。  
+     - **不定式短语**“in order to access the resources they need”作目的状语，解释为何需要移动。  
+   - **词汇和短语解释**：  
+     - **do so**：这样做，指代前面的“move from place to place”。  
+     - **transport themselves**：自行移动。  
+     - **efficiently**：有效地，高效地。  
+     - **access the resources**：接触资源。
+
+**3. These animals may make use of another animal species to transport them, without causing any injury to the other species.**  
+   - **直译**：这些动物可能会利用另一物种将它们运输，而不对其他物种造成伤害。  
+   - **句子结构分析**：复合句，主句为“These animals may make use of another animal species to transport them”，方式状语“without causing any injury to the other species”解释这种利用的特点。  
+     - **主句**的谓语“make use of”表示利用，后接宾语“another animal species”。  
+     - **不定式**“to transport them”作目的状语，解释使用目的。  
+   - **词汇和短语解释**：  
+     - **make use of**：利用，表示使用资源。  
+     - **without causing any injury**：不造成伤害。
+
+**4. This relationship is known as phoresy.**  
+   - **直译**：这种关系被称为“搭载”。  
+   - **句子结构分析**：简单句，主语“this relationship”，系动词“is”，表语“known as phoresy”。  
+     - **“known as”结构**用于介绍术语。  
+   - **词汇和短语解释**：  
+     - **relationship**：关系。  
+     - **phoresy**：搭载，指一种动物借助另一种动物进行移动的关系。
+
+**5. Phoresy, which is a temporary relationship, benefits the passenger species and causes little or no harm to the species doing the transporting.**  
+   - **直译**：搭载关系，这是一种临时关系，使得被运输的物种受益，并几乎不会对提供运输的物种造成伤害。  
+   - **句子结构分析**：复合句，主句为“Phoresy benefits the passenger species and causes little or no harm to the species doing the transporting”，其中“which is a temporary relationship”是非限制性定语从句，补充说明“phoresy”的性质。  
+     - **主句**的谓语“benefits”和“causes”描述了搭载关系的影响。  
+     - **定语从句**“which is a temporary relationship”提供背景信息。  
+   - **词汇和短语解释**：  
+     - **temporary relationship**：临时关系，表示时间上的短暂性。  
+     - **passenger species**：被运输的物种，即借助另一物种移动的生物。  
+     - **little or no harm**：几乎无伤害。  
+     - **the species doing the transporting**：提供运输的物种。
 
 ## Listening
 
 Now , listen to part of a lecture on this topic in a biology class . So here's a good example of this . Mites are very small insect like creatures . Mites live in tropical climates and feed on nectar and pollen and flowers . But these tropical flowers don't last long . They wilt and fall off quickly . And so the mites need to find new flowers in order to get more nectar and pollen to eat . But the mites can't fly . And they are so small that it would take them a while , and a lot of effort to climb down one flower , crawl to another one , and climb all the way up again . So how do they get to the next flower ? Well, where's a bird ,the hummingbird. Hummingbirds eat the nectar from the same flowers as the mites . So When a hummingbird comes around and sticks its beak into the flowers to get the nectar out , the mites quickly climb onto the hummingbird . Well, as I mentioned , mites are pretty tiny . So the hummingbird isn't harmed in any way . And all they do is stick to the hummingbird . Since the hummingbird also goes from flower to flower for nectar , it takes the mites along . Once the hummingbird gets to the next flower , the mites climb off and eat some pollen and nectar there on the new flower . Without the hummingbird , carrying them from one flower to another . The mites would find it much more difficult getting food .
+
+**1. Now, listen to part of a lecture on this topic in a biology class.**  
+   - **直译**：现在，听一段关于该主题的生物课讲座。  
+   - **句子结构分析**：简单句，主语为“you”（省略），谓语“listen to”，宾语为“part of a lecture on this topic in a biology class”。  
+     - “on this topic”是介词短语，修饰“lecture”，表明讲座的主题。  
+   - **词汇和短语解释**：  
+     - **lecture**：讲座，指的是课堂上的知识传授。  
+     - **biology class**：生物课。
+
+**2. So here's a good example of this.**  
+   - **直译**：所以这是一个很好的例子。  
+   - **句子结构分析**：简单句，主语“here”作为代词引导强调结构，谓语“is”，补语“a good example of this”。  
+   - **词汇和短语解释**：  
+     - **example**：例子，说明前文提到的概念或主题。
+
+**3. Mites are very small insect-like creatures.**  
+   - **直译**：螨虫是非常小的类似昆虫的生物。  
+   - **句子结构分析**：简单句，主语“mites”，系动词“are”，表语“very small insect-like creatures”。  
+   - **词汇和短语解释**：  
+     - **mite**：螨虫，一种微小的无脊椎生物。  
+     - **insect-like**：类似昆虫的。
+
+**4. Mites live in tropical climates and feed on nectar and pollen in flowers.**  
+   - **直译**：螨虫生活在热带气候中，以花中的花蜜和花粉为食。  
+   - **句子结构分析**：并列句，主语为“mites”，并列谓语“live in tropical climates”和“feed on nectar and pollen in flowers”。  
+   - **词汇和短语解释**：  
+     - **tropical climates**：热带气候，指高温高湿的气候区域。  
+     - **feed on**：以…为食。  
+     - **nectar and pollen**：花蜜和花粉，植物的两种营养来源。
+
+**5. But these tropical flowers don’t last long.**  
+   - **直译**：但是这些热带花卉不会持续很长时间。  
+   - **句子结构分析**：简单句，主语“these tropical flowers”，谓语“don’t last long”。  
+   - **词汇和短语解释**：  
+     - **last long**：持续很长时间。
+
+**6. They wilt and fall off quickly.**  
+   - **直译**：它们很快凋谢并脱落。  
+   - **句子结构分析**：简单句，主语“They”指代“tropical flowers”，并列谓语“wilt and fall off”。  
+   - **词汇和短语解释**：  
+     - **wilt**：凋谢，枯萎。  
+     - **fall off**：脱落。
+
+**7. And so the mites need to find new flowers in order to get more nectar and pollen to eat.**  
+   - **直译**：因此，螨虫需要寻找新的花朵以获取更多的花蜜和花粉。  
+   - **句子结构分析**：简单句，主语“the mites”，谓语“need to find”，不定式短语“to get more nectar and pollen to eat”作目的状语，解释螨虫寻找花朵的原因。  
+   - **词汇和短语解释**：  
+     - **in order to**：为了，表示目的。  
+     - **get more nectar and pollen to eat**：获取更多的食物来源。
+
+**8. But the mites can't fly.**  
+   - **直译**：但螨虫不会飞。  
+   - **句子结构分析**：简单句，主语“the mites”，谓语“can’t fly”。  
+   - **词汇和短语解释**：  
+     - **fly**：飞行，指移动能力。
+
+**9. And they are so small that it would take them a while, and a lot of effort to climb down one flower, crawl to another one, and climb all the way up again.**  
+   - **直译**：而且它们非常小，以至于需要花费时间和大量精力才能爬下一个花朵，爬到另一个花朵，再爬上去。  
+   - **句子结构分析**：复合句，主句为“they are so small”，从句“that it would take them a while, and a lot of effort…”表原因和影响。  
+     - “to climb down… and climb all the way up again”作为不定式短语，解释具体的动作。  
+   - **词汇和短语解释**：  
+     - **so…that…**：如此…以至于…  
+     - **a lot of effort**：大量精力。
+
+**10. So how do they get to the next flower?**  
+   - **直译**：那么它们是如何到达下一个花朵的呢？  
+   - **句子结构分析**：疑问句，疑问词“how”用来询问方式。  
+   - **词汇和短语解释**：  
+     - **get to**：到达，指完成移动。
+
+**11. Well, there's a bird, the hummingbird.**  
+   - **直译**：那么，有一种鸟，蜂鸟。  
+   - **句子结构分析**：简单句，主语“there’s a bird”，后接“the hummingbird”作为解释。  
+   - **词汇和短语解释**：  
+     - **hummingbird**：蜂鸟，以吸取花蜜为主食的鸟类。
+
+**12. Hummingbirds eat the nectar from the same flowers as the mites.**  
+   - **直译**：蜂鸟吃与螨虫同一花朵的花蜜。  
+   - **句子结构分析**：简单句，主语“hummingbirds”，谓语“eat”，宾语“the nectar from the same flowers as the mites”。  
+   - **词汇和短语解释**：  
+     - **from the same flowers as**：与…相同的花。
+
+**13. So when a hummingbird comes around and sticks its beak into the flowers to get the nectar out, the mites quickly climb onto the hummingbird.**  
+   - **直译**：所以当蜂鸟靠近并将喙插入花中取蜜时，螨虫迅速爬到蜂鸟上。  
+   - **句子结构分析**：复合句，主句“the mites quickly climb onto the hummingbird”，时间状语从句“when a hummingbird comes around and sticks its beak into the flowers to get the nectar out”。  
+   - **词汇和短语解释**：  
+     - **stick**：插入，表示蜂鸟的喙进入花朵。  
+     - **climb onto**：爬上。
+
+**14. Well, as I mentioned, mites are pretty tiny.**  
+   - **直译**：如我所提到的，螨虫非常小。  
+   - **句子结构分析**：简单句，主语“mites”，系动词“are”，表语“pretty tiny”。  
+   - **词汇和短语解释**：  
+     - **pretty tiny**：非常小。
+
+**15. So the hummingbird isn't harmed in any way.**  
+   - **直译**：因此，蜂鸟没有受到任何伤害。  
+   - **句子结构分析**：简单句，主语“the hummingbird”，系动词“isn't”，表语“harmed in any way”。  
+   - **词汇和短语解释**：  
+     - **harmed in any way**：以任何方式受伤。
+
+**16. And all they do is stick to the hummingbird.**  
+   - **直译**：它们只做了一件事，就是紧贴蜂鸟。  
+   - **句子结构分析**：简单句，“all they do is”后跟动词不定式“stick to the hummingbird”。  
+   - **词汇和短语解释**：  
+     - **stick to**：紧贴。
+
+**17. Since the hummingbird also goes from flower to flower for nectar, it takes the mites along.**  
+   - **直译**：由于蜂鸟也在花间飞来飞去吸取花蜜，它带着螨虫一起。  
+   - **句子结构分析**：复合句，原因状语从句“Since the hummingbird also goes from flower to flower for nectar”，主句“it takes the mites along”。  
+   - **词汇和短语解释**：  
+     - **take…along**：带上，表示顺带携带。
+
+**18. Once the humming
+
+bird gets to the next flower, the mites climb off and eat some pollen and nectar there on the new flower.**  
+   - **直译**：一旦蜂鸟到达下一个花朵，螨虫就爬下来并在新花上吃些花粉和花蜜。  
+   - **句子结构分析**：复合句，时间状语从句“Once the hummingbird gets to the next flower”，主句“the mites climb off and eat some pollen and nectar”。  
+   - **词汇和短语解释**：  
+     - **climb off**：爬下来。
+
+**19. Without the hummingbird carrying them from one flower to another, the mites would find it much more difficult getting food.**  
+   - **直译**：如果没有蜂鸟将它们从一朵花带到另一朵花，螨虫会发现获取食物更加困难。  
+   - **句子结构分析**：复合句，主句“the mites would find it much more difficult getting food”，条件状语短语“Without the hummingbird carrying them from one flower to another”。  
+   - **词汇和短语解释**：  
+     - **find it difficult**：发现困难。
 
 
 <html lang="en">
