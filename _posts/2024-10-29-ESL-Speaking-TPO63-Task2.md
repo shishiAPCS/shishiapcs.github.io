@@ -11,14 +11,237 @@ categories: media
 
 ## Reading
 
-New Degree Navigator Web Site 
+### New Degree Navigator Web Site 
 Students must complete certain courses in their fields of study in order to meet the requirements for graduation. Currently, students meet with academic advisors to discuss these requirements. Soon,though,students will be able to use a new degree navigator Web site to keep track of their requirements. The Web site will make it easier for students to monitor which courses they have already completed and which ones they still need to take before graduating, so they can plan their schedules accordingly.Also, the Web site will help reduce the workload for academic advisors, who will not need to meet with students as often.
+
+### 1. New Degree Navigator Web Site  
+**直译**：新的学位导航网站
+
+**分析**：
+- 这是一个名词短语，指一个新的、专门用于学位导航的网站。
+- “New Degree Navigator”是形容词+名词短语结构，其中“New”修饰“Degree Navigator”（学位导航），“Web Site”表示网站。这一短语没有动词，直接作为标题。
+
+### 2. Students must complete certain courses in their fields of study in order to meet the requirements for graduation.  
+**直译**：学生们必须完成自己学习领域中的某些课程以满足毕业要求。
+
+**句子结构**：  
+- 主句：`Students must complete certain courses in their fields of study`
+  - 主语：“Students”，表示“学生们”。
+  - 情态动词：“must”，表示“必须”，表明一种义务或必须的条件。
+  - 谓语：“complete”，表示“完成”，与情态动词“must”构成复合谓语。
+  - 宾语：“certain courses in their fields of study”，其中“certain courses”是“特定课程”，“in their fields of study”作为介词短语，修饰“courses”，说明课程是属于学生们的学习领域内的。
+- 不定式目的状语：`in order to meet the requirements for graduation`
+  - “in order to”表示目的，相当于“为了”，引出不定式短语“to meet the requirements for graduation”，表示完成某事的目的。
+  - “meet the requirements”表示“满足要求”，“for graduation”修饰“requirements”，表示这些要求是为毕业设置的。
+
+**词汇和短语解释**：  
+- “in order to”是一个表示目的的固定搭配，意思是“为了”。
+- “meet the requirements”是一个常用短语，表示“满足要求”，其中“requirements”指“毕业的必修要求”。
+
+### 3. Currently, students meet with academic advisors to discuss these requirements.  
+**直译**：目前，学生们与学术顾问会面以讨论这些要求。
+
+**句子结构**：  
+- 主句：`students meet with academic advisors to discuss these requirements`
+  - 主语：“students”，表示“学生们”。
+  - 谓语：“meet with”，表示“会见/会面”，是一个短语动词。
+  - 宾语：“academic advisors”，表示“学术顾问”。
+  - 不定式目的状语：“to discuss these requirements”，表示学生与学术顾问见面的目的，是为了“讨论这些要求”。
+
+**词汇和短语解释**：  
+- “meet with”是一个动词短语，表示“与…会面”。
+- “academic advisors”指学术顾问，负责指导学生的学习和课程选择。
+- “to discuss these requirements”中的“to”引导不定式，表示目的。
+
+### 4. Soon, though, students will be able to use a new degree navigator Web site to keep track of their requirements.  
+**直译**：然而，很快学生们将能够使用一个新的学位导航网站来追踪他们的要求。
+
+**句子结构**：  
+- 主句：`students will be able to use a new degree navigator Web site`
+  - 主语：“students”，表示“学生们”。
+  - 谓语：“will be able to use”，是将来时态的结构，表示“将能够”，其中“will”表未来，“be able to”表示能力。
+  - 宾语：“a new degree navigator Web site”，表示“一个新的学位导航网站”。
+- 不定式目的状语：“to keep track of their requirements”
+  - 不定式“to keep track of”表示目的，是“使用学位导航网站”的目的。
+  - “keep track of”是一个固定短语，表示“追踪/记录”，这里指学生记录自己已经完成的要求。
+
+**词汇和短语解释**：  
+- “will be able to”表示未来的能力，译为“将能够”。
+- “keep track of”是一个固定短语，表示“记录/追踪”，意在监控某些信息。
+
+### 5. The Web site will make it easier for students to monitor which courses they have already completed and which ones they still need to take before graduating, so they can plan their schedules accordingly.  
+**直译**：这个网站将让学生更容易监控他们已经完成的课程以及毕业前还需要修的课程，以便他们能够相应地计划课程安排。
+
+**句子结构**：  
+- 主句：`The Web site will make it easier for students`
+  - 主语：“The Web site”，表示“这个网站”。
+  - 谓语：“will make”，是将来时态结构，表示“将会使得…”。
+  - 宾语：“it easier for students to monitor”，其中“it”是形式宾语，真正的宾语是不定式短语“to monitor… and … before graduating”。
+- 从句：`which courses they have already completed and which ones they still need to take before graduating`
+  - 此句中包含两个并列的“which”引导的宾语从句。
+  - 第一个从句：“which courses they have already completed”
+    - “which courses”是连接代词引导的宾语从句，作动词“monitor”的宾语。
+    - 动词短语“have already completed”表示完成时态，说明“已经完成的课程”。
+  - 第二个从句：“which ones they still need to take before graduating”
+    - “which ones”作从句的宾语，指未完成的课程。
+    - 动词“still need to take”表示尚需完成的课程，其中“before graduating”是时间状语。
+- 结果状语从句：`so they can plan their schedules accordingly`
+  - “so”引导结果状语从句，说明目的或结果，“accordingly”表示“相应地”。
+
+**词汇和短语解释**：  
+- “make it easier for”结构意指“让…更容易”，其中“it”是形式宾语。
+- “monitor”在这里表示“监控”或“检查”。
+- “accordingly”表示“相应地”，是连接上下文的一个副词。
+
+### 6. Also, the Web site will help reduce the workload for academic advisors, who will not need to meet with students as often.  
+**直译**：此外，这个网站将有助于减少学术顾问的工作量，他们将不再需要频繁地与学生会面。
+
+**句子结构**：  
+- 主句：`the Web site will help reduce the workload for academic advisors`
+  - 主语：“the Web site”表示“这个网站”。
+  - 谓语：“will help reduce”，是将来时态结构，表示“将帮助减少”。
+  - 宾语：“the workload for academic advisors”，其中“for academic advisors”是介词短语，修饰“workload”。
+- 定语从句：`who will not need to meet with students as often`
+  - “who”引导定语从句，修饰“academic advisors”。
+  - 从句谓语：“will not need to meet with”，表示将来不再需要“与学生见面”，“as often”作为频率状语。
+
+**词汇和短语解释**：  
+- “workload”指工作量，在这里特指学术顾问的工作量。
+- “help reduce”是一个固定搭配，表示“帮助减少”
 
 ## Listening
 
 Now listen to two students discussing the article . Hey , this is great . Did you see this article ? Oh yeah , I saw that . But do you think we really need it ? Well , yeah , I think it will be really helpful because there's actually a lot of different classes you need for some of the degree programmes . And It can be hard to stay organized . Um , I guess that's true . I'm studying business and there are a lot of math and economics courses I have to take . Right . And sometimes students miss a certain course . Like my friend had to stay on campus over the summer break after his final year to take a class to complete his history degree . He had to graduate a few months later . Oh , wow , his graduation was delayed ? Yeah , because he didn't realize it was something he needed to take until it was too late . Wow , well , hopefully this will help people avoid that kind of mistake since they can just see it online . I guess that's good for the advisers too . Yeah , definitely since they're so busy . I mean all the academic advisers are professors . So they have a lot of other work to do . That's true . They don't have a lot of extra time . Right . And this way , they could have more time to talk to students about more serious issues where students might really need advice , like if students have questions about switching majors or doing an internship .
 
+**1. Now listen to two students discussing the article.**  
+   - **直译**：现在听两位学生讨论这篇文章。  
+   - **句子结构分析**：简单句，主语为“you”（省略），谓语“listen to”，宾语为“two students discussing the article”。  
+     - “discussing the article”是“two students”的现在分词短语，用来说明学生在做的动作。  
+   - **词汇和短语解释**：  
+     - **discussing**：讨论，表示交流对文章的看法。  
+     - **article**：文章，通常指一篇在学习或新闻中的文本。
 
+**2. Hey, this is great.**  
+   - **直译**：嘿，这真是太好了。  
+   - **句子结构分析**：简单句，主语为“this”，系动词“is”，表语“great”。  
+   - **词汇和短语解释**：  
+     - **great**：很棒，表示对事物的积极评价。
+
+**3. Did you see this article?**  
+   - **直译**：你看到这篇文章了吗？  
+   - **句子结构分析**：一般疑问句，助动词“Did”引导，主语“you”，谓语“see”，宾语“this article”。  
+   - **词汇和短语解释**：  
+     - **see**：看到，表示接触到或注意到某事物。  
+
+**4. Oh yeah, I saw that. But do you think we really need it?**  
+   - **直译**：哦，是的，我看到了。但是你认为我们真的需要它吗？  
+   - **句子结构分析**：复合句，前句“oh yeah, I saw that”是陈述句，后面为“but”引导的并列疑问句“do you think we really need it”。  
+     - “do you think”表示征求对方的意见，宾语从句“we really need it”说明询问的内容。  
+   - **词汇和短语解释**：  
+     - **need**：需要，表示需求或必要性。
+
+**5. Well, yeah, I think it will be really helpful because there's actually a lot of different classes you need for some of the degree programmes.**  
+   - **直译**：嗯，是的，我认为它会非常有帮助，因为实际上有很多不同的课程是一些学位项目需要的。  
+   - **句子结构分析**：复合句，主句为“I think it will be really helpful”，原因状语从句“because there's actually a lot of different classes you need for some of the degree programmes”。  
+     - 主句“it will be really helpful”是“我认为…”的宾语从句。  
+     - 从句“there's a lot of different classes…”描述具体原因。  
+   - **词汇和短语解释**：  
+     - **degree programmes**：学位项目，指获得特定学位的学习课程。
+
+**6. And it can be hard to stay organized.**  
+   - **直译**：而且保持条理可能很难。  
+   - **句子结构分析**：简单句，主语“it”，情态动词“can”，谓语“be hard”，不定式短语“to stay organized”作表语。  
+   - **词汇和短语解释**：  
+     - **stay organized**：保持有条理，表示高效管理任务的状态。
+
+**7. Um, I guess that's true.**  
+   - **直译**：嗯，我想那是真的。  
+   - **句子结构分析**：简单句，主语“I”，谓语“guess”，宾语“that’s true”。  
+   - **词汇和短语解释**：  
+     - **guess**：猜想，表示不确定的肯定。
+
+**8. I'm studying business, and there are a lot of math and economics courses I have to take.**  
+   - **直译**：我在学习商科，并且我必须修很多数学和经济学课程。  
+   - **句子结构分析**：并列句，前句“I’m studying business”陈述专业，后句为“there are a lot of…courses I have to take”。  
+     - “I have to take”是修饰“courses”的定语从句。  
+   - **词汇和短语解释**：  
+     - **courses**：课程，表示学术课程内容。  
+
+**9. Right. And sometimes students miss a certain course.**  
+   - **直译**：对，有时候学生会错过某些课程。  
+   - **句子结构分析**：并列句，前句“Right”是同意回答，后句“students miss a certain course”结构为“主语 + 谓语 + 宾语”。  
+   - **词汇和短语解释**：  
+     - **miss**：错过，未参与某事。
+
+**10. Like my friend had to stay on campus over the summer break after his final year to take a class to complete his history degree.**  
+   - **直译**：比如，我朋友在毕业后不得不在暑假期间留在校园修一门课来完成历史学位。  
+   - **句子结构分析**：复合句，主句“my friend had to stay on campus”，不定式短语“to take a class to complete his history degree”作目的状语。  
+   - **词汇和短语解释**：  
+     - **stay on campus**：留在校园中，表示不离校。  
+
+**11. He had to graduate a few months later.**  
+   - **直译**：他不得不推迟几个月毕业。  
+   - **句子结构分析**：简单句，主语“he”，谓语“had to graduate”，补语“a few months later”。  
+   - **词汇和短语解释**：  
+     - **graduate**：毕业，完成学位。
+
+**12. Oh, wow, his graduation was delayed?**  
+   - **直译**：哦，哇，他的毕业被延迟了？  
+   - **句子结构分析**：疑问句，主语“his graduation”，系动词“was”，补语“delayed”。  
+   - **词汇和短语解释**：  
+     - **delayed**：延迟，表示时间上的推迟。
+
+**13. Yeah, because he didn't realize it was something he needed to take until it was too late.**  
+   - **直译**：是的，因为他直到太晚了才意识到这是他需要上的课程。  
+   - **句子结构分析**：复合句，原因状语从句“because he didn’t realize…”包含宾语从句“it was something he needed to take until it was too late”。  
+   - **词汇和短语解释**：  
+     - **realize**：意识到，表示认知行为。  
+
+**14. Wow, well, hopefully this will help people avoid that kind of mistake since they can just see it online.**  
+   - **直译**：哇，希望这能帮助人们避免这种错误，因为他们可以直接在线查看。  
+   - **句子结构分析**：复合句，主句“hopefully this will help people avoid…”说明愿望，原因状语从句“since they can just see it online”。  
+   - **词汇和短语解释**：  
+     - **avoid**：避免，防止不良事件发生。
+
+**15. I guess that's good for the advisers too.**  
+   - **直译**：我想这对顾问也有好处。  
+   - **句子结构分析**：简单句，主语“I”，谓语“guess”，宾语从句“that's good for the advisers too”。  
+   - **词汇和短语解释**：  
+     - **advisers**：顾问，帮助学生完成课程规划的人员。
+
+**16. Yeah, definitely since they're so busy.**  
+   - **直译**：是的，确实，因为他们非常忙。  
+   - **句子结构分析**：复合句，主句“yeah, definitely”表同意，原因状语从句“since they’re so busy”。  
+   - **词汇和短语解释**：  
+     - **busy**：忙碌，形容工作繁重。
+
+**17. I mean all the academic advisers are professors.**  
+   - **直译**：我的意思是，所有学术顾问都是教授。  
+   - **句子结构分析**：简单句，主语“all the academic advisers”，系动词“are”，表语“professors”。  
+   - **词汇和短语解释**：  
+     - **academic advisers**：学术顾问，指导学生课程的教师。
+
+**18. So they have a lot of other work to do.**  
+   - **直译**：所以他们还有很多其他的工作要做。  
+   - **句子结构分析**：简单句，主语“they”，谓语“have”，宾语“a lot of other work to do”。  
+   - **词汇和短语解释**：
+
+  
+     - **other work**：其他工作，指顾问的其他职责。
+
+**19. That's true. They don't have a lot of extra time.**  
+   - **直译**：是的，他们没有很多额外时间。  
+   - **句子结构分析**：简单句，两个并列句表达同意和解释。  
+   - **词汇和短语解释**：  
+     - **extra time**：额外时间，指富余的时间。
+
+**20. Right. And this way, they could have more time to talk to students about more serious issues where students might really need advice, like if students have questions about switching majors or doing an internship.**  
+   - **直译**：对，这样他们可以有更多时间与学生讨论更严肃的问题，比如学生可能会需要关于换专业或实习的建议。  
+   - **句子结构分析**：复合句，主句“they could have more time to talk to students”，定语从句“where students might really need advice”修饰“issues”，由“like”引出解释性短语“if students have questions about switching majors or doing an internship”。  
+   - **词汇和短语解释**：  
+     - **switching majors**：换专业，学生转向另一学科。
+
+    
 <html lang="en">
 <head>
     <style>
