@@ -100,6 +100,8 @@ public class Cat{
 
 ---
 ## 加分Project
+<details>
+<summary>点这里查看详情</summary>
 从AP Classroom 中选一个已经做过的 FRQ，写出可执行代码，在blueJay中成功运行，具体要求和评分标准如下：
 ---
 ### FRQ Coding Project Rubric / FRQ 编程项目评分标准
@@ -123,8 +125,8 @@ public class Cat{
      - How did you approach solving the main problem? / **如何解决主要问题？**  
      - Describe one challenge you faced and how you overcame it. / **描述遇到的一个挑战及如何克服。**
 
+</details>
 
- 
 
 ---
 ## Core Concepts:<br>核心知识点
