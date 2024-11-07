@@ -98,6 +98,33 @@ public class Cat{
 
 ```
 
+---
+## 加分Project
+从AP Classroom 中选一个已经做过的 FRQ，写出可执行代码，在blueJay中成功运行，具体要求和评分标准如下：
+---
+### FRQ Coding Project Rubric / FRQ 编程项目评分标准
+
+| **Grade** | **Guidelines** | **Criteria** |
+|-----------|----------------|--------------|
+| **A+** (9-10) | Exceptional work. Shows clear understanding and full mastery of the problem, and code is executed flawlessly. <br> **出色的作品。展现了对问题的深入理解和完整掌握，代码运行无误。** | - Code is **100% correct** for all test cases, including edge cases. <br> **代码对所有测试用例（包括边界情况）均完全正确。** <br> - Code is **well-structured, clean, and highly readable** with clear variable and method names. <br> **代码结构清晰，整洁，且具备高度可读性，变量和方法命名合理。** <br> - **Detailed comments** explaining purpose, logic, and major steps. <br> **提供详细注释，解释代码目的、逻辑和主要步骤。** <br> - **Creative enhancements** or extra features beyond the requirements (if any). <br> **增加了创新性改进或额外功能（如有）。** <br> - **No detectable AI patterns** (e.g., overly generic, verbose comments). <br> **无明显 AI 痕迹（如过于通用或冗长的注释）。** |
+| **A** (8) | Excellent work. Code is accurate and runs without errors, with some minor style or completeness issues. <br> **优秀作品。代码正确，运行无误，只有些微样式或完整性问题。** | - Code produces **correct output for most test cases**, with minor issues in one or two edge cases. <br> **代码对大部分测试用例产生正确输出，少数边界情况可能有小问题。** <br> - **Good structure and readability** with mostly clear variable/method names. <br> **代码结构合理且可读性高，变量/方法命名清晰。** <br> - Includes **appropriate comments** that clarify the code. <br> **包含适当的注释，能够帮助理解代码。** <br> - **Efficiently coded** with minimal redundancy. <br> **代码高效，冗余最小化。** <br> - Little evidence of AI assistance. <br> **几乎没有 AI 协助的痕迹。** |
+| **A-** (7) | Strong work, but may have minor flaws in logic or structure. Code generally runs well. <br> **表现良好，但在逻辑或结构上有小瑕疵。代码整体运行正常。** | - Code produces **mostly correct results**, with issues only in a few cases. <br> **代码在大部分情况下输出正确，少数情况可能有问题。** <br> - **Readable and organized structure**, though may have minor issues in clarity. <br> **代码结构清晰有序，但清晰度可能略有不足。** <br> - Includes **some comments**, but they may lack detail. <br> **包含一些注释，但细节不足。** <br> - Code is **mostly efficient**, with minor inefficiencies. <br> **代码基本高效，少量低效部分。** <br> - Minimal indicators of AI involvement. <br> **几乎没有 AI 参与的迹象。** |
+| **B+** (6) | Good effort with noticeable flaws. Code runs, but may have errors or inefficiencies. <br> **有明显缺陷的良好尝试。代码可以运行，但可能有错误或低效部分。** | - Code produces **correct output for main cases**, but **fails on some edge cases**. <br> **代码在主要情况中输出正确，但在某些边界情况中失败。** <br> - Structure is mostly clear, but some parts are hard to follow. <br> **代码结构大部分清晰，但部分难以理解。** <br> - **Basic comments** are provided, but **lacking detail or clarity**. <br> **有基本注释，但缺乏细节或清晰性。** <br> - Some **inefficiencies or redundant code** present. <br> **存在部分低效或冗余代码。** <br> - Some signs of AI involvement may be noticeable. <br> **可能有明显的 AI 痕迹。** |
+| **B** (5) | Satisfactory but needs improvement. Code has a mix of correct and incorrect results. <br> **基本合格，但需改进。代码结果有正确和错误混合。** | - Code produces **partially correct output**, but fails on a significant number of cases. <br> **代码输出部分正确，但在许多情况中失败。** <br> - Structure is **inconsistent or hard to follow**. <br> **结构不一致，难以理解。** <br> - Few comments, and they **don’t explain the logic well**. <br> **注释少，且不能很好地解释逻辑。** <br> - Several **redundancies or inefficient methods** are present. <br> **存在多处冗余或低效代码。** <br> - Noticeable AI-generated patterns in style, structure, or comments. <br> **在样式、结构或注释中有明显的 AI 痕迹。** |
+| **B-** (4) | Acceptable, but with significant issues in execution, structure, or clarity. <br> **可接受，但在执行、结构或清晰度上有重大问题。** | - Code produces **partially correct output**, with **frequent errors** or failures. <br> **代码输出部分正确，但经常出错或失败。** <br> - **Messy or unclear structure**; difficult to read. <br> **结构混乱或不清晰，难以阅读。** <br> - **Lacks comments**, or comments are unhelpful. <br> **缺少注释，或注释无用。** <br> - Code shows **significant inefficiencies**. <br> **代码存在明显的低效部分。** <br> - Code appears **potentially AI-assisted** with unusual language or generic comments. <br> **代码可能有 AI 痕迹，例如语言不自然或使用通用注释。** |
+| **C+** (3) | Limited success. Code runs but with minimal correctness, clarity, or efficiency. <br> **成功有限。代码运行，但正确性、清晰度或效率低。** | - Code produces **incorrect results for most cases**, with only minor correct output. <br> **代码在大多数情况下不正确，仅少量输出正确。** <br> - **Poor structure and readability**. <br> **结构和可读性差。** <br> - **Little to no comments** explaining the code. <br> **几乎没有解释代码的注释。** <br> - Code is **highly inefficient** and appears rushed. <br> **代码低效且草率。** <br> - Clear indications of AI-generated code (e.g., unnatural explanations or syntax). <br> **有明显的 AI 痕迹（例如不自然的解释或语法）。** |
+| **C** (2) | Minimal success. Code compiles, but has many issues in logic and readability. <br> **成功极少。代码可以编译，但逻辑和可读性有很多问题。** | - Code **barely compiles** but fails in almost all cases. <br> **代码勉强编译，但几乎所有情况都失败。** <br> - Structure is **chaotic and unclear**. <br> **结构混乱且不清晰。** <br> - **No comments or explanations**. <br> **没有注释或解释。** <br> - **Severely inefficient or redundant** methods. <br> **存在极度低效或冗余的方法。** <br> - Highly probable AI patterns; further investigation warranted. <br> **明显的 AI 痕迹；需要进一步调查。** |
+| **C-** (1) | Very limited or incomplete. Code is far from functional and poorly constructed. <br> **极其有限或不完整。代码几乎无法正常运行且结构糟糕。** | - Code **does not compile** or crashes immediately. <br> **代码无法编译或立即崩溃。** <br> - **Unreadable structure** and **no logic** in place. <br> **结构无法阅读，缺乏逻辑。** <br> - **No comments**. <br> **没有注释。** <br> - **Not executable or far from correct**. <br> **无法运行或远非正确。** <br> - Appears to be copied or heavily AI-generated without understanding. <br> **疑似复制或大量 AI 生成，没有理解。** |
+
+---
+
+**Ask for Reflection** / **提交时可能问你的问题**:  
+     - Why did you choose this particular FRQ? / **为什么选择这个特定的 FRQ？**  
+     - How did you approach solving the main problem? / **如何解决主要问题？**  
+     - Describe one challenge you faced and how you overcame it. / **描述遇到的一个挑战及如何克服。**
+
+
+ 
 
 ---
 ## Core Concepts:<br>核心知识点
