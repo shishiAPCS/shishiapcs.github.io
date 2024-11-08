@@ -37,7 +37,7 @@ categories: media
 
 <p><strong>4. Verb Tense and Aspect Errors</strong></p>
 <p>Common Issues: Incorrect verb tenses and the inappropriate use of aspects. For example, students often use present simple where present continuous or past tense would be more accurate.</p>
-<p><strong>常见问题：</strong>动词时态和体的使用错误。例如，学生常在需要现在进行时或过去时的地方使用一般现在时。</p>
+<p><strong>常见问题：</strong>动词时态使用错误。例如，常在需要现在进行时或过去时的地方使用一般现在时。</p>
 
 <p>示例：“When I read the book and I can’t address some problems, then maybe in the second time I will address them.”</p>
 
@@ -45,7 +45,7 @@ categories: media
 
 <p><strong>5. Singular and Plural Agreement Errors</strong></p>
 <p>Common Issues: Students frequently use incorrect singular/plural forms, such as “knowledge” (a non-count noun) with “a,” or “a lot of time” when referring to multiple occasions.</p>
-<p><strong>常见问题：</strong>学生经常在单复数上使用错误的形式，例如将不可数名词 “knowledge” 前加 “a”，或在表示多个场合时使用 “a lot of time”。</p>
+<p><strong>常见问题：</strong>经常在单复数上使用错误的形式，例如将不可数名词 “knowledge” 前加 “a”，或在表示多个场合时使用 “a lot of time”。</p>
 
 <p>示例：“I can save many time.”</p>
 
