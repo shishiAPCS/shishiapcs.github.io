@@ -11,8 +11,7 @@ categories: media
 #### 1. 加载模型
 - 打开工具后，首先需加载一个转录模型。网速好，选 `tiny.en` 下载即可。
 - 网速慢，则需要手动下载。
-- 点击这个网站 [https://ggml.ggerganov.com/](https://ggml.ggerganov.com/)
-- 下载 ggml-model-whisper-tiny.en.bin 17-Oct-2022 15:59 74M
+- 点击下载 [ggml-model-whisper-tiny.en.bin 17-Oct-2022 15:59 74M](https://ggml.ggerganov.com/ggml-model-whisper-tiny.en.bin)
 - 然后 在 Whisper models: 处选 `Choose File` 选中刚下载的 tiny.en.bin 模型。
 - 模型文件不要删除，下次还需要。
 
