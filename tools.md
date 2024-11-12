@@ -176,7 +176,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 在线视频抓取
 
-* [Youtube 视频下载](https://clipgrabber.net/)
+* [Youtube 视频下载 save.tube](https://save.tube/)
+    - 直接把当前视频网页的 youtube.com/xxxxx 网址加个 zz ，改成 youtubezz.com/xxx 
 * [B站 视频下载](https://snapany.com/zh/bilibili)
 * [Youtube 字幕下载](https://downsub.com/)
 
