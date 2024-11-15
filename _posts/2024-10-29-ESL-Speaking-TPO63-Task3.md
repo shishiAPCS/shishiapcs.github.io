@@ -112,7 +112,7 @@ Now , listen to part of a lecture in a biology class . Okay , so let's look at a
      - **this ability**：指代之前提到的感知危险的能力。
 
 **5. Now, say there's a caterpillar crawling along on a branch in a tree, just minding its own business.**  
-   - **直译**：现在，假设有一只毛毛虫在树上的树枝上爬行，做着自己的事。  
+   - **直译**：那么，现在来看一下，假设有一只毛毛虫在树上的树枝上爬行，做着自己的事。  
    - **句子结构分析**：复合句，主句为“say there’s a caterpillar”，后面“crawling along on a branch in a tree, just minding its own business”是现在分词短语，补充说明毛毛虫的状态。  
      - “say”表示假设情境，省略了“let us”。  
    - **词汇和短语解释**：  
@@ -146,7 +146,7 @@ Now , listen to part of a lecture in a biology class . Okay , so let's look at a
      - **threat**：威胁，表示可能造成伤害的来源。
 
 **10. Now, a lot of other animals may not hear the wasp or know that it's close by.**  
-   - **直译**：现在，许多其他动物可能听不到黄蜂的声音，也不知道它在附近。  
+   - **直译**：许多其他动物可能听不到黄蜂的声音，也不知道它在附近。  
    - **句子结构分析**：复合句，主句为“a lot of other animals may not hear the wasp or know that it’s close by”，并列谓语“may not hear…or know…”表示两种可能的情况。  
    - **词汇和短语解释**：  
      - **close by**：在附近，表示距离近。
