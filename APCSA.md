@@ -13,92 +13,7 @@ title: "AP CSA"
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
-
-
----
-## Java Class Sample:
-```java
-//This is a Cat class. It is like a blueprint for making Cat objects.
-// A class defines the characteristics(color and breed) and actions(meowing) of the objects.
-public class Cat{
-    //Characteristics of the Cat class
-    //instance variables 
-    private String color;
-    private String breed;
-    private int age;
-    private boolean isHungry;
-    private String name;
-    private double weight;
-    private double height;
-    
-    // Default Constructor
-    public Cat(){
-        //This is a constructor. It is used to create a Cat object
-        //with some default values.
-        color = "unkown";
-        breed = "unkown";
-        age = 0;
-        isHungry = true;
-    }
-    
-    // Constructor with parameters
-    public Cat(int a){
-        age = a;
-        
-    }
-    
-    public Cat(int a, String c){
-        age = a;
-        color = c;
-    }
-    
-    public Cat(String c, int a){
-        color = c;
-        age = a;
-    }
-    
-    // Methods
-    public void showAge(){
-        System.out.println("Age: " + age);
-    }
-    
-    
-    public void meow(){
-        System.out.println("Meow!!!");
-        
-    } 
-    
-    public void eat(int foodAmount){
-        System.out.println("I eat " + foodAmount + " a day");
-        
-    }
-    
-    // Main method
-    public static void main(String[] args){
-        //int num = 2;
-        //System.out.println("num: " + num);
-        //int num2 = num;
-        //System.out.println("num2: " + num2);
-        //num = 9; //changing num later does not affect num2
-        //System.out.println("num2 after num change: " + num2);
-        //System.out.println("num after num change: " + num);
-        Cat littleCat = new Cat(20, "black");
-        //System.out.println("littleCat's color: " + littleCat.color);
-        Cat bigCat = littleCat;
-        //System.out.println("bigCat's color: " + bigCat.color);
-        littleCat.color = "pink";
-        //bigCat.showAge();
-        bigCat.eat(50);
-        //System.out.println("littleCat's color after change: " + littleCat.color);
-        //System.out.println("bigCat's color after change littleCat: " + bigCat.color);
-    }
-    
-    
-}
-
-```
-
----
+  - 必考 Array 算法
 
 <details>
   <summary>Array Algorithms with Different Loop Versions</summary>
@@ -389,6 +304,8 @@ public class ShiftRight {
   {% endhighlight %}
   
   <h3>10. Reverse the Order of the Elements</h3>
+
+   <h4>1. Using a Two-Pointer Technique </h4>
   {% highlight java %}
 import java.util.Arrays;
 
@@ -396,7 +313,6 @@ public class ReverseArray {
     public static void main(String[] args) {
         int[] numbers = {3, 5, 1, 7, 9};
 
-        // Using for loop
         for (int i = 0; i < numbers.length / 2; i++) {
             int temp = numbers[i];
             numbers[i] = numbers[numbers.length - 1 - i];
@@ -416,10 +332,27 @@ public class ReverseArray {
     }
 }
   {% endhighlight %}
+
+     <h4>2. Using an Auxiliary Array</h4>
+  {% highlight java %}
+import java.util.Arrays;
+
+public class ReverseArray {
+    public static void main(String[] args) {
+        // Create a new array
+        int[] numbers2 = {3, 5, 1, 7};
+        int[] reversed = new int[numbers2.length];
+
+        for (int i = 0; i < numbers2.length; i++) {
+            reversed[i] = numbers2[numbers2.length - 1 - i];
+        }
+
+        System.out.println("Reversed array: " + Arrays.toString(reversed));
+    }
+}
+  {% endhighlight %}
   
 </details>
-
-
 
 ---
 <h2>加分Project</h2>
@@ -565,8 +498,6 @@ public class ReverseArray {
     </ul>
 </details>
 
-
-
 ---
 ## Core Concepts:<br>核心知识点
 
@@ -659,4 +590,86 @@ public class ReverseArray {
 </div>
 
 ---
+
+## Java Class Sample:
+```java
+//This is a Cat class. It is like a blueprint for making Cat objects.
+// A class defines the characteristics(color and breed) and actions(meowing) of the objects.
+public class Cat{
+    //Characteristics of the Cat class
+    //instance variables 
+    private String color;
+    private String breed;
+    private int age;
+    private boolean isHungry;
+    private String name;
+    private double weight;
+    private double height;
+    
+    // Default Constructor
+    public Cat(){
+        //This is a constructor. It is used to create a Cat object
+        //with some default values.
+        color = "unkown";
+        breed = "unkown";
+        age = 0;
+        isHungry = true;
+    }
+    
+    // Constructor with parameters
+    public Cat(int a){
+        age = a;
+        
+    }
+    
+    public Cat(int a, String c){
+        age = a;
+        color = c;
+    }
+    
+    public Cat(String c, int a){
+        color = c;
+        age = a;
+    }
+    
+    // Methods
+    public void showAge(){
+        System.out.println("Age: " + age);
+    }
+    
+    
+    public void meow(){
+        System.out.println("Meow!!!");
+        
+    } 
+    
+    public void eat(int foodAmount){
+        System.out.println("I eat " + foodAmount + " a day");
+        
+    }
+    
+    // Main method
+    public static void main(String[] args){
+        //int num = 2;
+        //System.out.println("num: " + num);
+        //int num2 = num;
+        //System.out.println("num2: " + num2);
+        //num = 9; //changing num later does not affect num2
+        //System.out.println("num2 after num change: " + num2);
+        //System.out.println("num after num change: " + num);
+        Cat littleCat = new Cat(20, "black");
+        //System.out.println("littleCat's color: " + littleCat.color);
+        Cat bigCat = littleCat;
+        //System.out.println("bigCat's color: " + bigCat.color);
+        littleCat.color = "pink";
+        //bigCat.showAge();
+        bigCat.eat(50);
+        //System.out.println("littleCat's color after change: " + littleCat.color);
+        //System.out.println("bigCat's color after change littleCat: " + bigCat.color);
+    }
+    
+    
+}
+
+```
 
