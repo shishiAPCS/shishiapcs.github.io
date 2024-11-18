@@ -99,6 +99,256 @@ public class Cat{
 ```
 
 ---
+<details>
+<summary>Array Algorithms with Different Loop Versions</summary>
+
+```java
+### 1. Determine the Minimum or Maximum Value in an Array
+
+#### Find Maximum Value
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Using for loop
+int max = numbers[0];
+for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+}
+System.out.println("Max value (for loop): " + max);
+
+// Using enhanced for loop
+max = numbers[0];
+for (int num : numbers) {
+    if (num > max) {
+        max = num;
+}
+System.out.println("Max value (enhanced for loop): " + max);
+```
+
+### 2. Compute a Sum or Average of Array Elements
+
+#### Compute Sum
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Using for loop
+int sum = 0;
+for (int i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+System.out.println("Sum (for loop): " + sum);
+
+// Using enhanced for loop
+sum = 0;
+for (int num : numbers) {
+    sum += num;
+}
+System.out.println("Sum (enhanced for loop): " + sum);
+```
+
+#### Compute Average
+```java
+double average = (double) sum / numbers.length;
+System.out.println("Average: " + average);
+```
+
+### 3. Search for a Particular Element in the Array
+
+#### Search for the Number 7
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+int target = 7;
+boolean found = false;
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] == target) {
+        found = true;
+        break;
+}
+System.out.println("Found (for loop): " + found);
+
+// Using enhanced for loop
+found = false;
+for (int num : numbers) {
+    if (num == target) {
+        found = true;
+        break;
+}
+System.out.println("Found (enhanced for loop): " + found);
+```
+
+### 4. Determine if At Least One Element Has a Particular Property
+
+#### Check if at Least One Element is Even
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+boolean hasEven = false;
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+        hasEven = true;
+        break;
+}
+System.out.println("Has even (for loop): " + hasEven);
+
+// Using enhanced for loop
+hasEven = false;
+for (int num : numbers) {
+    if (num % 2 == 0) {
+        hasEven = true;
+        break;
+}
+System.out.println("Has even (enhanced for loop): " + hasEven);
+```
+
+### 5. Determine if All Elements Have a Particular Property
+
+#### Check if All Elements are Positive
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+boolean allPositive = true;
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] <= 0) {
+        allPositive = false;
+        break;
+}
+System.out.println("All positive (for loop): " + allPositive);
+
+// Using enhanced for loop
+allPositive = true;
+for (int num : numbers) {
+    if (num <= 0) {
+        allPositive = false;
+        break;
+}
+System.out.println("All positive (enhanced for loop): " + allPositive);
+```
+
+### 6. Access All Consecutive Pairs of Elements
+
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Using for loop
+for (int i = 0; i < numbers.length - 1; i++) {
+    System.out.println("Pair: " + numbers[i] + ", " + numbers[i + 1]);
+}
+
+// Enhanced for loop is not ideal for this task because it does not provide access to indices.
+```
+
+### 7. Determine the Presence or Absence of Duplicate Elements
+
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+boolean hasDuplicate = false;
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    for (int j = i + 1; j < numbers.length; j++) {
+        if (numbers[i] == numbers[j]) {
+            hasDuplicate = true;
+            break;
+        }
+    }
+    if (hasDuplicate) break;
+}
+System.out.println("Has duplicate (for loop): " + hasDuplicate);
+
+// Enhanced for loop is not ideal for this task due to the need for two indices.
+```
+
+### 8. Determine the Number of Elements Meeting Specific Criteria
+
+#### Count Odd Numbers
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+int oddCount = 0;
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 != 0) {
+        oddCount++;
+    }
+}
+System.out.println("Odd count (for loop): " + oddCount);
+
+// Using enhanced for loop
+oddCount = 0;
+for (int num : numbers) {
+    if (num % 2 != 0) {
+        oddCount++;
+    }
+}
+System.out.println("Odd count (enhanced for loop): " + oddCount);
+```
+
+### 9. Shift or Rotate Elements Left or Right
+
+#### Shift Elements Left by One Position
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Using for loop
+int first = numbers[0];
+for (int i = 0; i < numbers.length - 1; i++) {
+    numbers[i] = numbers[i + 1];
+}
+numbers[numbers.length - 1] = first;
+
+System.out.println("Shifted left (for loop): " + Arrays.toString(numbers));
+
+// Shift Elements right by One Position
+
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Save the last element since it will wrap around to the front
+int last = numbers[numbers.length - 1];
+
+// Shift each element to the right by 1 position
+for (int i = numbers.length - 1; i > 0; i--) {
+    numbers[i] = numbers[i - 1];
+}
+
+// Place the last element in the first position
+numbers[0] = last;
+
+System.out.println("Shifted right by 1: " + Arrays.toString(numbers));
+
+```
+
+### 10. Reverse the Order of the Elements
+
+```java
+int[] numbers = {3, 5, 1, 7, 9};
+
+// Using for loop
+for (int i = 0; i < numbers.length / 2; i++) {
+    int temp = numbers[i];
+    numbers[i] = numbers[numbers.length - 1 - i];
+    numbers[numbers.length - 1 - i] = temp;
+}
+System.out.println("Reversed (for loop): " + Arrays.toString(numbers));
+
+
+// Create a new array
+int[] numbers = {3, 5, 1, 7};
+int[] reversed = new int[numbers.length];
+
+for (int i = 0; i < numbers.length; i++) {
+    reversed[i] = numbers[numbers.length - 1 - i];
+}
+
+System.out.println("Reversed array: " + Arrays.toString(reversed));
+
+```
+</details>
+---
 <h2>加分Project</h2>
 <details>
     <summary>点这里查看详情</summary>
