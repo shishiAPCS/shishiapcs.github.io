@@ -319,16 +319,6 @@ public class ReverseArray {
             numbers[numbers.length - 1 - i] = temp;
         }
         System.out.println("Reversed (for loop): " + Arrays.toString(numbers));
-
-        // Create a new array
-        int[] numbers2 = {3, 5, 1, 7};
-        int[] reversed = new int[numbers2.length];
-
-        for (int i = 0; i < numbers2.length; i++) {
-            reversed[i] = numbers2[numbers2.length - 1 - i];
-        }
-
-        System.out.println("Reversed array: " + Arrays.toString(reversed));
     }
 }
   {% endhighlight %}
@@ -339,8 +329,9 @@ import java.util.Arrays;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        // Create a new array
+    
         int[] numbers2 = {3, 5, 1, 7};
+        // Create a new array
         int[] reversed = new int[numbers2.length];
 
         for (int i = 0; i < numbers2.length; i++) {
