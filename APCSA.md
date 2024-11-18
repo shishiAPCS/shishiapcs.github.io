@@ -100,13 +100,14 @@ public class Cat{
 
 ---
 <details>
-<summary>Array Algorithms with Different Loop Versions</summary>
+  <summary>Array Algorithms with Different Loop Versions</summary>
+  
+  <h3>1. Determine the Minimum or Maximum Value in an Array</h3>
+  
+  <h4>Find Maximum Value</h4>
+  <pre><code class="language-java">
+import java.util.Arrays;
 
-```java
-### 1. Determine the Minimum or Maximum Value in an Array
-
-#### Find Maximum Value
-```java
 int[] numbers = {3, 5, 1, 7, 9};
 
 // Using for loop
@@ -114,6 +115,7 @@ int max = numbers[0];
 for (int i = 1; i < numbers.length; i++) {
     if (numbers[i] > max) {
         max = numbers[i];
+    }
 }
 System.out.println("Max value (for loop): " + max);
 
@@ -122,14 +124,15 @@ max = numbers[0];
 for (int num : numbers) {
     if (num > max) {
         max = num;
+    }
 }
 System.out.println("Max value (enhanced for loop): " + max);
-```
-
-### 2. Compute a Sum or Average of Array Elements
-
-#### Compute Sum
-```java
+  </code></pre>
+  
+  <h3>2. Compute a Sum or Average of Array Elements</h3>
+  
+  <h4>Compute Sum</h4>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 
 // Using for loop
@@ -145,18 +148,18 @@ for (int num : numbers) {
     sum += num;
 }
 System.out.println("Sum (enhanced for loop): " + sum);
-```
-
-#### Compute Average
-```java
+  </code></pre>
+  
+  <h4>Compute Average</h4>
+  <pre><code class="language-java">
 double average = (double) sum / numbers.length;
 System.out.println("Average: " + average);
-```
-
-### 3. Search for a Particular Element in the Array
-
-#### Search for the Number 7
-```java
+  </code></pre>
+  
+  <h3>3. Search for a Particular Element in the Array</h3>
+  
+  <h4>Search for the Number 7</h4>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 int target = 7;
 boolean found = false;
@@ -166,6 +169,7 @@ for (int i = 0; i < numbers.length; i++) {
     if (numbers[i] == target) {
         found = true;
         break;
+    }
 }
 System.out.println("Found (for loop): " + found);
 
@@ -175,14 +179,15 @@ for (int num : numbers) {
     if (num == target) {
         found = true;
         break;
+    }
 }
 System.out.println("Found (enhanced for loop): " + found);
-```
-
-### 4. Determine if At Least One Element Has a Particular Property
-
-#### Check if at Least One Element is Even
-```java
+  </code></pre>
+  
+  <h3>4. Determine if At Least One Element Has a Particular Property</h3>
+  
+  <h4>Check if at Least One Element is Even</h4>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 boolean hasEven = false;
 
@@ -191,6 +196,7 @@ for (int i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 == 0) {
         hasEven = true;
         break;
+    }
 }
 System.out.println("Has even (for loop): " + hasEven);
 
@@ -200,14 +206,15 @@ for (int num : numbers) {
     if (num % 2 == 0) {
         hasEven = true;
         break;
+    }
 }
 System.out.println("Has even (enhanced for loop): " + hasEven);
-```
-
-### 5. Determine if All Elements Have a Particular Property
-
-#### Check if All Elements are Positive
-```java
+  </code></pre>
+  
+  <h3>5. Determine if All Elements Have a Particular Property</h3>
+  
+  <h4>Check if All Elements are Positive</h4>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 boolean allPositive = true;
 
@@ -216,6 +223,7 @@ for (int i = 0; i < numbers.length; i++) {
     if (numbers[i] <= 0) {
         allPositive = false;
         break;
+    }
 }
 System.out.println("All positive (for loop): " + allPositive);
 
@@ -225,13 +233,13 @@ for (int num : numbers) {
     if (num <= 0) {
         allPositive = false;
         break;
+    }
 }
 System.out.println("All positive (enhanced for loop): " + allPositive);
-```
-
-### 6. Access All Consecutive Pairs of Elements
-
-```java
+  </code></pre>
+  
+  <h3>6. Access All Consecutive Pairs of Elements</h3>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 
 // Using for loop
@@ -240,11 +248,10 @@ for (int i = 0; i < numbers.length - 1; i++) {
 }
 
 // Enhanced for loop is not ideal for this task because it does not provide access to indices.
-```
-
-### 7. Determine the Presence or Absence of Duplicate Elements
-
-```java
+  </code></pre>
+  
+  <h3>7. Determine the Presence or Absence of Duplicate Elements</h3>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 boolean hasDuplicate = false;
 
@@ -261,12 +268,12 @@ for (int i = 0; i < numbers.length; i++) {
 System.out.println("Has duplicate (for loop): " + hasDuplicate);
 
 // Enhanced for loop is not ideal for this task due to the need for two indices.
-```
-
-### 8. Determine the Number of Elements Meeting Specific Criteria
-
-#### Count Odd Numbers
-```java
+  </code></pre>
+  
+  <h3>8. Determine the Number of Elements Meeting Specific Criteria</h3>
+  
+  <h4>Count Odd Numbers</h4>
+  <pre><code class="language-java">
 int[] numbers = {3, 5, 1, 7, 9};
 int oddCount = 0;
 
@@ -286,12 +293,14 @@ for (int num : numbers) {
     }
 }
 System.out.println("Odd count (enhanced for loop): " + oddCount);
-```
+  </code></pre>
+  
+  <h3>9. Shift or Rotate Elements Left or Right</h3>
+  
+  <h4>Shift Elements Left by One Position</h4>
+  <pre><code class="language-java">
+import java.util.Arrays;
 
-### 9. Shift or Rotate Elements Left or Right
-
-#### Shift Elements Left by One Position
-```java
 int[] numbers = {3, 5, 1, 7, 9};
 
 // Using for loop
@@ -302,8 +311,11 @@ for (int i = 0; i < numbers.length - 1; i++) {
 numbers[numbers.length - 1] = first;
 
 System.out.println("Shifted left (for loop): " + Arrays.toString(numbers));
-
-// Shift Elements right by One Position
+  </code></pre>
+  
+  <h4>Shift Elements Right by One Position</h4>
+  <pre><code class="language-java">
+import java.util.Arrays;
 
 int[] numbers = {3, 5, 1, 7, 9};
 
@@ -319,12 +331,12 @@ for (int i = numbers.length - 1; i > 0; i--) {
 numbers[0] = last;
 
 System.out.println("Shifted right by 1: " + Arrays.toString(numbers));
+  </code></pre>
+  
+  <h3>10. Reverse the Order of the Elements</h3>
+  <pre><code class="language-java">
+import java.util.Arrays;
 
-```
-
-### 10. Reverse the Order of the Elements
-
-```java
 int[] numbers = {3, 5, 1, 7, 9};
 
 // Using for loop
@@ -335,7 +347,6 @@ for (int i = 0; i < numbers.length / 2; i++) {
 }
 System.out.println("Reversed (for loop): " + Arrays.toString(numbers));
 
-
 // Create a new array
 int[] numbers = {3, 5, 1, 7};
 int[] reversed = new int[numbers.length];
@@ -345,9 +356,10 @@ for (int i = 0; i < numbers.length; i++) {
 }
 
 System.out.println("Reversed array: " + Arrays.toString(reversed));
-
-```
+  </code></pre>
+  
 </details>
+
 ---
 <h2>加分Project</h2>
 <details>
