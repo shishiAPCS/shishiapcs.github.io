@@ -409,7 +409,7 @@ Listen to part of a lecture in a business class . Large companies are organized 
     <td><span class="speaker" onclick="document.getElementById('audio_Vary').play();">&#9658;</span><audio id="audio_Vary"><source src="https://media.merriam-webster.com/audio/prons/en/us/mp3/v/vary0001.mp3" type="audio/mpeg"></audio></td>
     <td>Verb</td>
     <td>To differ in size, amount, degree, or nature from something else of the same general class.</td>
-    <td>变化。</td>
+    <td>(彼此)相异，存在不同之处</td>
     <td>"The flavors of ice cream can vary greatly from one shop to another."</td>
 </tr>
     </table>
