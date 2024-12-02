@@ -97,20 +97,48 @@ Listen to part of a lecture in a business class . Large companies are organized 
    - **词汇和短语解释**：  
      - **struggling store**：经营困难的店面。
      - 
-   ### 为什么用 "were"？
+---
+
+**Why use "were"?**
+
+- **Hypothetical situation**:  
+  The sentence describes "If the central office were in control..." This is a hypothetical situation, as the central office does not actually have control.
+
+- **Subjunctive form**:  
+  In English, when describing hypothetical or contrary-to-fact situations, **"to be"** uses the subjunctive form **"were"** for all subjects (singular or plural).
+
+> This use of **"were"** clarifies that the scenario is imagined or contrary to reality.
+
+---
+
+**Examples for comparison**
+
+1. **Real situation**:  
+   - "If the central office **is** in control, it **will** close the store."  
+     (This describes a factual situation.)
+
+2. **Hypothetical situation**:  
+   - "If the central office **were** in control, it **would** close the store."  
+     (This describes an imagined or contrary-to-fact situation.)
+
+---
+
+**为什么用 "were"?**
    - 这句话描述的是一个假设的情景：“如果中央办公室掌控局面……”（但事实是中央办公室没有掌控权）。
    - 在英文中，当描述假设或与现实不符的情况时，**动词"to be"在所有主语下的虚拟语气形式都是"were"**（无论主语是单数还是复数）。
-     
+
    因此，这句话的意思是：“如果中央办公室掌控局面（但事实并非如此），它可能会选择关闭亏损的店铺。”通过使用 **"were"**，清楚地表明这是一个假设的、不符合事实的情况。
-   
-   ### 对比例子：
-   1. **真实情况**：
-      - "If the central office **is** in control, it **will** close the store."  
-      （如果中央办公室掌控局面，它会关闭店铺——说明这是当前事实。）
-   
-   2. **假设情况**：
-      - "If the central office **were** in control, it **would** close the store."  
-      （如果中央办公室掌控局面，它可能会关闭店铺——但事实是中央办公室并没有掌控权。）
+
+---
+
+**对比例子：**
+1. **真实情况**：  
+   - "If the central office **is** in control, it **will** close the store."  
+     （如果中央办公室掌控局面，它会关闭店铺——说明这是当前事实。）
+
+2. **假设情况**：  
+   - "If the central office **were** in control, it **would** close the store."  
+     （如果中央办公室掌控局面，它可能会关闭店铺——但事实是中央办公室并没有掌控权。）
 
 **14. Another disadvantage of decentralization is that company policies might be carried out differently in different locations.**  
    - **直译**：去中心化的另一个缺点是公司政策在不同地点可能会以不同方式执行。  
