@@ -5,7 +5,6 @@ layout: post
 categories: media
 ---
 
----
 
 {% include svg-animation-stroke.svg %}
 
