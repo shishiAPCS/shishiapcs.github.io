@@ -6,6 +6,9 @@ categories: media
 ---
 
 ---
+
+{% include svg-animation-stroke.svg %}
+
 # 编程语言与厨房工具的类比<br>The analogy of programming languages to kitchen tools
 
 - **Python** 会像是一个搅拌机：多功能，易于使用，非常适合许多快速的任务，但对于专门的工作可能不是最高效的。
