@@ -387,10 +387,10 @@ function loadClassList(preset) {
     'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYukiWu\nHanbo\nStanley\nGloria",
     'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia",
     '2026Kylin': "Fielder\nLeon\nCicily\nSeanna\nRegina\nTom\nSteven\nMartin\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
-    '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nRichard\nIsaiah\nKevin\nLauren\nWesley\nTina\nCamilia\nMichael\nJoyce\nAlice\nAndy",
-    '2026Phoenix': "Sword\nKarl\nAugust\nMike\nJenny\nMeredith\nKeven\nGeorge\nMason",
+    '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nIsaiah\nKevin\nLauren\nWesley\nTina\nCamilia\nMichael\nJoyce\nAlice\nTomZhang\nAndy",
+    '2026Phoenix': "Sword\nKarl\nAugust\nRichard\nMike\nJenny\nMeredith\nKeven\nGeorge\nMason",
     'S2':                      
-    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nVicky\nVictoria\nAlice\nSelina\nTina\nCicily\nMason\nClaire",
+    "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nVicky\nVictoria\nAlice\nSelina\nTina\nCicily\nMason\nClaire\nTomZhang",
     'S1': 
     "Melody\nAmanda\nHarry\nSky\nEmily\nIsabella\nAlexander\nJimmy\nBetty\nTrinity\nYukiWu\nHanbo\nStanley\nGloria\nKevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerryTu\nNina\nBill\nSelina\nYukiYu\nTracy\nCordelia"
     };
