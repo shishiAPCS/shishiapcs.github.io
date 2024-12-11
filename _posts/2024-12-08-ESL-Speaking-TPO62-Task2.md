@@ -16,346 +16,155 @@ I was very pleased to read about the university's plans to build a new parking l
 Sincerely,
 Jason Hill
 
-### **1. New Parking Lot Location**  
-**中文译文：新停车场位置**  
-**句子结构：**  
-- 此标题为简单名词短语，由形容词修饰名词构成：  
-  - **New** 是形容词，修饰名词 **Parking Lot**（停车场）。  
-  - **Location** 是中心词，表示“位置”。  
-- 整体结构简单，用于概述主题，表明信件讨论的是关于“新停车场位置”的话题。
+### **困难句分析**
 
----
+1. **句子编号**：1  
+   **原文**：I was very pleased to read about the university's plans to build a new parking lot to accommodate the growing number of student cars on campus.  
+   **直译中文**：我很高兴看到大学计划建造一个新停车场，以容纳校园内越来越多的学生车辆。  
+   **句子结构分析**：  
+   - **主句**：I was very pleased。  
+   - **不定式短语**：`to read about the university's plans`，作表语，进一步说明主句。  
+   - **不定式短语**：`to build a new parking lot`，作 `plans` 的补充说明。  
+   - **不定式短语**：`to accommodate the growing number of student cars on campus`，作 `parking lot` 的补充说明。  
+   - **分词短语**：`growing number of student cars`，作定语修饰 `number`。  
+   **词汇和短语解释**：  
+   - **accommodate**：容纳；适应。  
+   - **growing**：增加的；用于修饰数量，表示持续上升的趋势。  
 
-### **2. I was very pleased to read about the university's plans to build a new parking lot to accommodate the growing number of student cars on campus.**  
-**中文译文：我很高兴读到大学计划建造一个新停车场，以容纳校园内日益增加的学生车辆数量。**
+2. **句子编号**：2  
+   **原文**：Since the location for the new lot has not yet been determined, I would like to suggest that Sanders Field be used.  
+   **直译中文**：由于新停车场的位置尚未确定，我想建议使用桑德斯球场。  
+   **句子结构分析**：  
+   - **主句**：I would like to suggest。  
+   - **原因状语从句**：`Since the location for the new lot has not yet been determined`，用来解释主句的背景原因。  
+   - **宾语从句**：`that Sanders Field be used`，作 `suggest` 的宾语，使用虚拟语气，表示建议的语气。  
+   **词汇和短语解释**：  
+   - **determined**：决定；此处为过去分词，表示被动语态。  
+   - **suggest**：建议；后接宾语从句时，常用虚拟语气，谓语动词用原形。  
 
-**句子结构：**  
-1. **主句**  
-   - **I was very pleased**：  
-     - 主语：**I**（我）。  
-     - 谓语：**was**（系动词）。  
-     - 表语：**very pleased**（非常高兴，形容词短语）。  
-   
-2. **不定式短语作补充说明**  
-   - **to read about the university's plans**：  
-     - **to read**（不定式）作 **pleased** 的补足成分，表示“为什么感到高兴”。  
-     - **about the university's plans** 是介词短语修饰 **read**，表示“关于大学的计划”。  
+3. **句子编号**：3  
+   **原文**：Sanders Field has not been used for sports events since the new stadium was built two years ago.  
+   **直译中文**：自从两年前新体育场建成以来，桑德斯球场就没有被用于体育赛事。  
+   **句子结构分析**：  
+   - **主句**：`Sanders Field has not been used for sports events`。  
+     - 主语：`Sanders Field`。  
+     - 谓语：`has not been used`，现在完成时，被动语态，表示到现在为止的状态。  
+     - 状语：`for sports events`，表示用途。  
+   - **状语从句**：`since the new stadium was built two years ago`，用来说明主句的时间背景。  
+     - 主语：`the new stadium`。  
+     - 谓语：`was built`，一般过去时，表示过去的动作。  
+     - 时间状语：`two years ago`，补充说明具体时间点。  
+   **词汇和短语解释**：  
+   - **has not been used**：现在完成时的被动语态，表示到现在为止某物未被使用的状态。  
+   - **since**：自从；引导时间状语从句，表示从某一时间点开始。  
+   - **was built**：一般过去时，描述动作发生的时间为过去某个具体时间。  
 
-3. **从句修饰 plans**  
-   - **to build a new parking lot to accommodate the growing number of student cars on campus**：  
-     - **to build**（不定式）修饰 **plans**，表示计划的具体内容。  
-     - **to accommodate**（不定式）进一步修饰 **build**，说明建造停车场的目的。  
-     - **the growing number of student cars on campus** 是宾语 **number** 的修饰成分：  
-       - **growing**（现在分词）修饰 **number**，表示“正在增长的数量”。  
-       - **of student cars**（学生车辆的）。  
-       - **on campus**（在校园内的）。  
-
-**词汇和短语解释：**  
-- **pleased**：形容词，表示“高兴的、满意的”。  
-- **accommodate**：动词，表示“容纳、满足……的需求”。  
-- **growing number**：固定表达，表示“不断增加的数量”。  
-
----
-
-### **3. Since the location for the new lot has not yet been determined, I would like to suggest that Sanders Field be used.**  
-**中文译文：由于新停车场的位置尚未确定，我建议使用桑德斯球场。**
-
-**句子结构：**  
-1. **主句**  
-   - **I would like to suggest that Sanders Field be used**：  
-     - 主语：**I**（我）。  
-     - 谓语：**would like to suggest**，表示“建议”。  
-     - 宾语从句：**that Sanders Field be used**：  
-       - **Sanders Field** 是主语，**be used** 是被动语态，表示“被使用”。  
-   
-2. **原因状语从句**  
-   - **Since the location for the new lot has not yet been determined**：  
-     - 从属连词：**Since**（由于）。  
-     - 主语：**the location for the new lot**（新停车场的位置）。  
-     - 谓语：**has not yet been determined**：  
-       - **has been determined** 是现在完成时的被动语态。  
-       - **not yet** 表示“尚未”。  
-
-**词汇和短语解释：**  
-- **suggest that**：固定搭配，后接虚拟语气，谓语动词用原形。  
-- **be used**：被动结构，表示“被使用”。  
-- **determined**：动词过去分词，作谓语表示“确定”。
-
----
-
-### **4. Sanders Field has not been used for sports events since the new stadium was built two years ago.**  
-**中文译文：自从两年前新体育场建成以来，桑德斯球场就没有被用于体育赛事了。**
-
-**句子结构：**  
-1. **主句**  
-   - **Sanders Field has not been used for sports events**：  
-     - 主语：**Sanders Field**（桑德斯球场）。  
-     - 谓语：**has not been used**，现在完成时被动语态，表示“没有被使用”。  
-     - **for sports events**（用于体育赛事），介词短语作状语。  
-   
-2. **时间状语从句**  
-   - **since the new stadium was built two years ago**：  
-     - 连词：**since**（自从）。  
-     - 主语：**the new stadium**（新体育场）。  
-     - 谓语：**was built**（过去时被动语态，表示“被建造”）。  
-     - **two years ago**（两年前），时间状语。
-
-**词汇和短语解释：**  
-- **has not been used**：现在完成时被动，表示动作自过去持续到现在。  
-- **since**：引导时间从句，表示“自从……”。  
-
----
-
-### **5. Right now, it is wasted space, so it would be an ideal area to turn into something useful like a parking lot.**  
-**中文译文：目前，这是一块被浪费的空间，因此可以作为理想的区域，改造成停车场等有用的设施。**
-
-**句子结构：**  
-1. **主句**  
-   - **Right now, it is wasted space**：  
-     - 状语：**Right now**（目前）。  
-     - 主语：**it**（指代桑德斯球场）。  
-     - 谓语：**is**（系动词）。  
-     - 表语：**wasted space**（被浪费的空间，名词短语）。  
-   
-2. **并列句**  
-   - **so it would be an ideal area to turn into something useful like a parking lot**：  
-     - 连词：**so**（因此）。  
-     - 主语：**it**（指代桑德斯球场）。  
-     - 谓语：**would be**（情态动词 + 动词原形，表示可能性）。  
-     - 表语：**an ideal area**（一个理想的区域）。  
-     - 不定式短语：**to turn into something useful** 修饰 **area**，表示用途。  
-     - **like a parking lot**（例如停车场），表举例。  
-
-**词汇和短语解释：**  
-- **wasted space**：浪费的空间。  
-- **ideal area**：理想的区域。  
-- **turn into**：动词短语，表示“转变成”。  
-
----
-
-### **6. Students who live in the dorms really need a place to park their cars.**  
-**中文译文：住在宿舍的学生非常需要一个停车的地方。**
-
-**句子结构：**  
-1. **主句**  
-   - **Students really need a place to park their cars**：  
-     - 主语：**Students**（学生）。  
-     - 谓语：**really need**，表示“确实需要”。  
-     - 宾语：**a place**（一个地方）。  
-     - 不定式短语：**to park their cars**，修饰 **place**，表示用途。  
-
-2. **定语从句**  
-   - **who live in the dorms**：  
-     - 引导词：**who**，指代 **Students**。  
-     - 谓语：**live in the dorms**（住在宿舍里）。  
-
-**词汇和短语解释：**  
-- **really need**：动词短语，表示“非常需要”。  
-- **a place to park their cars**：不定式修饰 **place**，具体说明需要的地方。
-
----
-
-### **7. Students living off campus could really use the extra parking, too.**  
-**中文译文：住在校外的学生也非常需要额外的停车位。**
-
-**句子结构：**  
-1. **主句**  
-   - **Students living off campus could really use the extra parking, too**：  
-     - 主语：**Students living off campus**：  
-       - **Students**（学生）为主语。  
-       - **living off campus** 是现在分词短语作定语，修饰 **Students**，表示住在校外的学生。  
-     - 谓语：**could really use**，表示“非常需要”。  
-     - 宾语：**the extra parking**（额外的停车位）。  
-     - 副词：**too**（也），强调递进。  
-
-**词汇和短语解释：**  
-- **living off campus**：分词短语，表示“住在校外”。  
-- **could really use**：固定表达，表示“非常需要”。  
-
+4. **句子编号**：4  
+   **原文**：Right now, it is wasted space, so it would be an ideal area to turn into something useful like a parking lot.  
+   **直译中文**：目前，这是一块被浪费的空间，因此将其变成有用的东西，比如停车场，是个理想的选择。  
+   **句子结构分析**：  
+   - **主句 1**：It is wasted space。  
+   - **连词**：`so` 连接两个主句，表示因果关系。  
+   - **主句 2**：It would be an ideal area。  
+   - **不定式短语**：`to turn into something useful like a parking lot` 作表语，进一步补充说明 `ideal area`。  
+   - **分词短语**：`wasted space`，过去分词短语作定语修饰 `space`。  
+   **词汇和短语解释**：  
+   - **wasted**：被浪费的；此处为过去分词作定语。  
+   - **turn into**：转变为；表示将某物变为其他用途。  
 
 ## Listening
 
 Now listen to two students discussing the letter. Did you see Jason's letter in the paper? What do you think? I think he's wrong. I feel it is useful to students. It's used all the time. To speak as it isn't used for sports anymore, doesn't mean it's useless. Plenty of people go there to relax or study and stuff, don't you? Yeah, sometimes. I think students who live in the nearby dorms hang out there a lot. It's a nice spot. That's what I'm saying. And it's great to just have an open area like that, some place you can study outside or take a nap or whatever. We don't have enough places like that on campus. I don't want to see it covered over with pavement and a bunch of cars. Guess it would be kind of a shame. And I don't believe what he says about needing it either. What do you mean? It's right next to all the dorms. But there's already enough parking in every dorm, and those lots are never full as it is. True. But some students commute and... Most of them would rather park in the lots that are closer to the classroom buildings. It's at least a fifteen-minute walk from Sander's Field. Yeah, it's not that close to the main part of campus.
 
+### **困难句分析**
 
-### **1. Did you see Jason's letter in the paper? What do you think?**  
-**中文译文：你看到报纸上的杰森的信了吗？你怎么看？**
+1. **句子编号**：5  
+   **原文**：To speak as it isn't used for sports anymore, doesn't mean it's useless.  
+   **直译中文**：仅仅因为它不再用于体育活动，并不意味着它无用。  
+   **句子结构分析**：  
+   - **主句**：`doesn't mean it's useless`。  
+   - **不定式短语**：`To speak as it isn't used for sports anymore` 作主语，表示“仅仅因为某事”的原因。  
+   - **从句**：`as it isn't used for sports anymore` 是原因状语从句，解释 `To speak` 的内容。  
+   **词汇和短语解释**：  
+   - **To speak**：用于表达观点时的结构，意为“说起来”。  
+   - **as**：因为，用于引导原因状语从句。  
+   - **useless**：无用的。  
 
-**句子结构分析：**  
-1. **主句**  
-   - **Did you see Jason's letter in the paper?**  
-     - 助动词：**Did** 表示一般过去时的疑问句形式。  
-     - 主语：**you**（你）。  
-     - 谓语：**see**（看到）。  
-     - 宾语：**Jason's letter**（杰森的信）。  
-     - 状语：**in the paper**（在报纸上），介词短语修饰 **letter**。  
+2. **句子编号**：8  
+   **原文**：I think students who live in the nearby dorms hang out there a lot.  
+   **直译中文**：我认为住在附近宿舍的学生经常在那里闲逛。  
+   **句子结构分析**：  
+   - **主句**：`I think`，主语是 `I`，谓语是 `think`。  
+   - **宾语从句**：`students who live in the nearby dorms hang out there a lot` 作 `think` 的宾语。  
+     - 主语：`students`。  
+     - 定语从句：`who live in the nearby dorms` 修饰 `students`，描述这些学生的居住地点。  
+     - 谓语：`hang out`，表示“闲逛”的动作。  
+     - 状语：`there a lot`，表示动作发生的地点和频率。  
+   **词汇和短语解释**：  
+   - **nearby dorms**：附近的宿舍。  
+   - **hang out**：闲逛；非正式用语，表示轻松地待在某处。  
+   - **a lot**：常常；表示频率。  
 
-2. **补充问句**  
-   - **What do you think?**  
-     - 疑问词：**What**（什么）。  
-     - 主语：**you**（你）。  
-     - 谓语：**do think**（认为），现在时强调询问观点。
+3. **句子编号**：9  
+   **原文**：And it's great to just have an open area like that, some place you can study outside or take a nap or whatever.  
+   **直译中文**：有一个像这样的开放区域真是太好了，一个你可以在外面学习、打盹或者做其他事情的地方。  
+   **句子结构分析**：  
+   - **主句**：`it’s great to just have an open area like that`。  
+   - **不定式短语**：`to just have an open area like that` 作表语，补充说明 `great` 的原因。  
+   - **定语从句**：`some place you can study outside or take a nap or whatever` 修饰 `some place`，描述该地点的具体用途。  
+     - 从句中主语为 `you`，谓语为 `can study` 或 `take a nap`。  
+   **词汇和短语解释**：  
+   - **open area**：开放区域，指供人活动的空地。  
+   - **take a nap**：小睡，打盹。  
+   - **whatever**：无论什么，表列举未尽的其他可能性。  
 
-**词汇和短语解释：**  
-- **letter in the paper**：指刊登在报纸上的读者信件。  
-- **What do you think?**：固定表达，询问对某事的看法。
+4. **句子编号**：10  
+   **原文**：That's what I'm saying.  
+   **直译中文**：那就是我想说的。  
+   **句子结构分析**：  
+   - **主句**：`That's what I'm saying`。  
+     - 主语：`That`，指代上文提到的内容。  
+     - 系动词：`is`，连接主语和表语。  
+     - 表语：`what I'm saying`，为名词性从句，作表语，描述 `That` 的具体内容。  
+   - **名词性从句**：`what I'm saying` 作表语，`what` 充当从句中的宾语，表示“我所说的内容”。  
+   **词汇和短语解释**：  
+   - **That's**：That is 的缩写，表示“那就是”。  
+   - **what I'm saying**：我所说的；用于强调观点或回应他人。  
 
----
+5. **句子编号**：12  
+   **原文**：But there's already enough parking in every dorm, and those lots are never full as it is.  
+   **直译中文**：但是每栋宿舍楼已经有足够的停车位，而且这些停车场实际上从未满过。  
+   **句子结构分析**：  
+   - **主句**：`there's already enough parking in every dorm`。  
+   - **并列主句**：`those lots are never full as it is`，与前句通过 `and` 连接。  
+   - **短语结构**：`as it is`，用于加强语气，表示“实际上”或“就目前而言”。  
+   **词汇和短语解释**：  
+   - **enough parking**：足够的停车位。  
+   - **as it is**：表示现状，强调“事实上”。  
+   - **lots**：停车场。  
 
-### **2. I think he's wrong. I feel it is useful to students.**  
-**中文译文：我觉得他错了。我认为它对学生有用。**
+6. **句子编号**：15  
+   **原文**：Most of them would rather park in the lots that are closer to the classroom buildings.  
+   **直译中文**：他们中的大多数更愿意把车停在更靠近教学楼的停车场。  
+   **句子结构分析**：  
+   - **主句**：`Most of them would rather park in the lots`。  
+   - **定语从句**：`that are closer to the classroom buildings` 修饰 `lots`，描述停车场的位置特征。  
+   **词汇和短语解释**：  
+   - **would rather**：更愿意；表达偏好。  
+   - **closer to**：更靠近；表示相对位置的接近。  
+   - **classroom buildings**：教学楼。  
 
-**句子结构分析：**  
-1. **第一句：I think he's wrong.**  
-   - 主语：**I**（我）。  
-   - 谓语：**think**（认为）。  
-   - 宾语从句：**he's wrong**：  
-     - 主语：**he**（他）。  
-     - 谓语：**is wrong**（是错的）。  
-
-2. **第二句：I feel it is useful to students.**  
-   - 主语：**I**（我）。  
-   - 谓语：**feel**（觉得）。  
-   - 宾语从句：**it is useful to students**：  
-     - 主语：**it**（指代前文的提议）。  
-     - 谓语：**is useful**（是有用的）。  
-     - 补语：**to students**（对学生）。
-
-**词汇和短语解释：**  
-- **useful to**：表示“对……有用”。  
-- **wrong**：形容词，表示“错误的”。
-
----
-
-### **3. It's used all the time. To speak as it isn't used for sports anymore, doesn't mean it's useless.**  
-**中文译文：它一直在被使用。仅仅因为它不再用于体育活动，并不意味着它没有用处。**
-
-**句子结构分析：**  
-1. **第一句：It's used all the time.**  
-   - 主语：**It**（指代桑德斯球场）。  
-   - 谓语：**is used**（被使用），现在时被动语态。  
-   - 状语：**all the time**（一直）。  
-
-2. **第二句：To speak as it isn't used for sports anymore, doesn't mean it's useless.**  
-   - **To speak as...** 是不定式短语，用作主语。  
-   - 主句：**doesn't mean it's useless**：  
-     - 主语：**To speak as it isn't used for sports anymore**。  
-     - 谓语：**doesn't mean**（并不意味着）。  
-     - 宾语：**it's useless**：  
-       - 主语：**it**（指代球场）。  
-       - 谓语：**is useless**（没有用处）。  
-
-**词汇和短语解释：**  
-- **to speak as**：一种引申表达，意为“因为”。  
-- **useless**：形容词，表示“无用的”。  
-
----
-
-### **4. Plenty of people go there to relax or study and stuff, don't you?**  
-**中文译文：很多人去那里放松或学习等等，你也去吧？**
-
-**句子结构分析：**  
-1. **主句**  
-   - **Plenty of people go there to relax or study and stuff**：  
-     - 主语：**Plenty of people**（许多人）。  
-     - 谓语：**go**（去）。  
-     - 状语：**there**（那里）。  
-     - 不定式短语：**to relax or study**，修饰 **go**，表示目的。  
-     - **and stuff**：非正式表达，表示“等等”。  
-
-2. **附加疑问句**  
-   - **don't you?**：  
-     - 助动词：**don't**，反映主句时态（一般现在时）。  
-     - 主语：**you**（你）。  
-
-**词汇和短语解释：**  
-- **plenty of**：表示“大量的”。  
-- **and stuff**：非正式用语，表示“等等”。  
-
----
-
-### **5. I think students who live in the nearby dorms hang out there a lot.**  
-**中文译文：我觉得住在附近宿舍的学生经常在那里闲逛。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **I think**：  
-     - 主语：**I**（我）。  
-     - 谓语：**think**（认为）。  
-
-2. **宾语从句**  
-   - **students who live in the nearby dorms hang out there a lot**：  
-     - 主语：**students who live in the nearby dorms**：  
-       - **students** 是主语。  
-       - **who live in the nearby dorms** 是定语从句，修饰 **students**。  
-     - 谓语：**hang out**（闲逛）。  
-     - 状语：**there a lot**（经常在那里）。
-
-**词汇和短语解释：**  
-- **hang out**：俚语，表示“闲逛、聚会”。  
-- **nearby dorms**：指“附近的宿舍”。  
-
----
-
-### **6. It's a nice spot. That's what I'm saying.**  
-**中文译文：这是个不错的地方。这就是我想说的。**
-
-**句子结构分析：**  
-1. **第一句：It's a nice spot.**  
-   - 主语：**It**（指代桑德斯球场）。  
-   - 谓语：**is**（是）。  
-   - 表语：**a nice spot**（一个好地方）。  
-
-2. **第二句：That's what I'm saying.**  
-   - 主语：**That**（这）。  
-   - 谓语：**is**（是）。  
-   - 表语：**what I'm saying**（我在说的）。  
-     - **what I'm saying** 是一个名词性从句，作表语，指代作者的观点。
-
-**词汇和短语解释：**  
-- **spot**：名词，表示“地点”。  
-- **what I'm saying**：强调说话者的观点或立场。
-
----
-
-### **7. And it's great to just have an open area like that, some place you can study outside or take a nap or whatever.**  
-**中文译文：能有一个像这样的开放区域真的很好，可以在外面学习、小憩或做其他事情。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **And it's great to just have an open area like that**：  
-     - 主语：**it**（代指有这样一个区域的事实）。  
-     - 谓语：**is great**（很好）。  
-     - 不定式短语：**to just have an open area like that**，作表语补充说明。  
-
-2. **同位语**  
-   - **some place you can study outside or take a nap or whatever**：  
-     - **some place** 是主语补充，表示区域的用途。  
-     - **you can study outside or take a nap** 是定语从句，修饰 **some place**。  
-     - **or whatever** 表示其他类似活动。
-
-**词汇和短语解释：**  
-- **open area**：开放区域。  
-- **take a nap**：短时间打盹。  
-- **or whatever**：非正式用语，表示“或者其他类似的事情”。  
-
----
-
-### **8. I don't want to see it covered over with pavement and a bunch of cars.**  
-**中文译文：我不想看到它被铺上水泥，停满了汽车。**
-
-**句子结构分析：**  
-- 主语：**I**（我）。  
-- 谓语：**don't want to see**（不想看到）。  
-- 宾语：**it covered over with pavement and a bunch of cars**：  
-  - **it** 是宾语（桑德斯球场）。  
-  - **covered over** 是过去分词短语作宾语补足，表示状态。  
-  - **with pavement and a bunch of cars** 是伴随状语。
-
-**词汇和短语解释：**  
-- **covered over**：指“覆盖上”。  
-- **pavement**：名词，表示“人行道、水泥地面”。  
-- **a bunch of cars**：一堆汽车。
+7. **句子编号**：16  
+   **原文**：It's at least a fifteen-minute walk from Sander's Field.  
+   **直译中文**：从桑德斯球场步行至少需要十五分钟。  
+   **句子结构分析**：  
+   - **主句**：`It’s at least a fifteen-minute walk from Sander’s Field`。  
+     - 主语为 `It`，形式主语。  
+     - 表语为 `a fifteen-minute walk`，用以描述时间距离。  
+   - **介词短语**：`from Sander’s Field` 作补充说明，表示步行的起点。  
+   **词汇和短语解释**：  
+   - **at least**：至少，表示最低限度。  
+   - **a fifteen-minute walk**：十五分钟的步行距离。  
 
 
 <html lang="en">
