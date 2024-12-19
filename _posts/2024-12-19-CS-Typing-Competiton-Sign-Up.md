@@ -12,8 +12,7 @@ categories: media
   }
 
   table {
-    width: 100%; /* Set width to match the iframe */
-    max-width: 800px; /* Optional: Restrict maximum width for readability */
+    width: 80%; /* Same width as iframe */
     margin: 20px auto;
     border-collapse: collapse;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
@@ -49,15 +48,6 @@ categories: media
       --table-cell-bg: #444;
       --table-cell-text: #fff;
     }
-  }
-
-  iframe {
-    width: 100%; /* Match the width of the HTML table */
-    max-width: 800px; /* Optional: Restrict maximum width */
-    height: 600px; /* Set a fixed height */
-    margin: 20px auto;
-    display: block; /* Center the iframe */
-    border: none;
   }
 </style>
 
@@ -98,5 +88,16 @@ categories: media
     </tr>
   </tbody>
 </table>
+
+<style>
+  /* Make the iframe match the table width */
+  iframe {
+    width: 80%;
+    height: 600px; /* You can adjust this as needed */
+    display: block;
+    margin: 20px auto;
+    border: none;
+  }
+</style>
 
 <iframe src="https://docs.google.com/spreadsheets/d/1W9_qkcIMun32ZWmewj8yRBrO1Fpe2tjYgU_JLNNKU30/edit?usp=sharing"></iframe>
