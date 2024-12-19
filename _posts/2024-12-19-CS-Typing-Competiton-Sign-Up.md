@@ -6,26 +6,48 @@ categories: media
 ---
 
 <style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
   }
+
+  table {
+    width: 80%; /* Adjust width to match Google table */
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+
   th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    font-size: 14px;
   }
+
   th {
-    background-color: #f4f4f4;
+    background-color: var(--table-header-bg, #f4f4f4); /* Default for light theme */
+    color: var(--table-header-text, #333);
   }
-  .instructions {
-    font-weight: bold;
-    margin-bottom: 10px;
+
+  td {
+    background-color: var(--table-cell-bg, #fff); /* Default for light theme */
+    color: var(--table-cell-text, #333);
   }
+
   .example-row {
     color: #666;
     font-style: italic;
+  }
+
+  /* Dark theme compatibility */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-header-bg: #333;
+      --table-header-text: #fff;
+      --table-cell-bg: #444;
+      --table-cell-text: #fff;
+    }
   }
 </style>
 
@@ -66,6 +88,7 @@ categories: media
     </tr>
   </tbody>
 </table>
+
 
 <style>
   /* Ensure the iframe fills the full width and height of the screen */
