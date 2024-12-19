@@ -12,8 +12,8 @@ categories: media
   }
 
   table {
-    width: 80%; /* Same width as iframe */
-    margin: 20px auto;
+    width: 100%; /* Make table span full width */
+    margin: 0; /* Remove margin for full-width appearance */
     border-collapse: collapse;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
   }
@@ -26,12 +26,12 @@ categories: media
   }
 
   th {
-    background-color: var(--table-header-bg, #f4f4f4); /* Default for light theme */
+    background-color: var(--table-header-bg, #f4f4f4);
     color: var(--table-header-text, #333);
   }
 
   td {
-    background-color: var(--table-cell-bg, #fff); /* Default for light theme */
+    background-color: var(--table-cell-bg, #fff);
     color: var(--table-cell-text, #333);
   }
 
@@ -90,12 +90,11 @@ categories: media
 </table>
 
 <style>
-  /* Make the iframe match the table width */
   iframe {
-    width: 80%;
-    height: 600px; /* You can adjust this as needed */
+    width: 100%; /* Make iframe span full width of the screen */
+    height: 600px; /* Adjust as needed */
     display: block;
-    margin: 20px auto;
+    margin: 0; /* Remove margin for full-width appearance */
     border: none;
   }
 </style>
