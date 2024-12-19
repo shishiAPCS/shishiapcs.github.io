@@ -14,4 +14,4 @@ categories: media
   }
 </style>
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSA5zelCRzLSGKD6flpI7mw5MIZm66mLYVBNHNoqGBlo-5OTyOuWsMieFjCvaqmAE4wTeITh3IepOMO/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1W9_qkcIMun32ZWmewj8yRBrO1Fpe2tjYgU_JLNNKU30/edit?usp=sharing"></iframe>
