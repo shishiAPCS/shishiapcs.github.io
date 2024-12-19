@@ -6,12 +6,11 @@ categories: media
 ---
 
 <style>
-  /* Ensure the iframe fills the full height of the screen */
-  .airtable-embed {
+  /* Ensure the iframe fills the full width and height of the screen */
+  iframe {
     width: 100%;
     height: 100vh; /* Full viewport height */
-    border: 1px solid #ccc;
-    background: transparent;
+    border: none;
   }
 </style>
 
