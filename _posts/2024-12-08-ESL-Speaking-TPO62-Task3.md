@@ -181,173 +181,175 @@ When we experience strong emotions, we often believe, falsely, that other people
 ## Listening
 
 Now listen to part of a lecture in a psychology class. Now, before we get into some of the research in this area, let me tell you about something that just happened to me. That's a good example of this. The other night, I was invited to a dinner party at a friend's house. Now you should know that this friend, Mary, she's a really great cook, and I was really looking forward to this dinner. So that night everything was going great until she served the main dish. I could tell from the smell that she used a certain spice that I really dislike. It's garlic. I can't stand even the smell of it. And it was clear that this dish had a lot of garlic in it. Now, of course, I didn't want to offend my friend. I didn't want her to know I didn't like the food, so I tried to behave normally and eat as much as I could. But I was sure she could tell I wasn't enjoying it. Well, later, I was walking home with another friend, Mike. He'd also been at the dinner. I started telling him how worried I was that I had offended Mary. I told him, you know, about how I really hated garlic and how I was sure that Mary had noticed that I didn't like the meal, that I was sure I had insulted our host. Well, he was really surprised. He hadn't noticed that at all. In fact, he thought I seemed to be enjoying the meal. That made me feel a little better. But anyway, the next day, I called Mary to thank her for inviting me to the dinner. She was really pleased and talked about how nice the party was and how glad she was that everyone had liked the food so much. It was pretty clear from our conversation that she hadn't noticed anything. I guess my feelings hadn't been as obvious to Mary or to Mike as I thought they were.
+ 
 
-### **1. Now, before we get into some of the research in this area, let me tell you about something that just happened to me.**  
-**中文译文：接下来，在我们进入这个领域的一些研究之前，我来讲一件刚刚发生在我身上的事情。**
+**困难句分析**
+
+**(2) 原文**：Now, before we get into some of the research in this area, let me tell you about something that just happened to me.  
+**直译中文**：接下来，在我们开始深入探讨这一领域的一些研究之前，让我先告诉你们一件刚刚发生在我身上的事情。  
 **"Now" 并不是严格意义上的“现在”时间概念，而是用来引出话题或吸引听众注意力的常用表达，相当于中文里的“那么”或“接下来”。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **let me tell you about something that just happened to me**：  
-     - 主语：省略的 **you**（你）。  
-     - 谓语：**let me tell**（让我告诉）。  
-     - 宾语：**you**（你）。  
-     - 补语：**about something that just happened to me**：  
-       - **something**（某事）是 **about** 的宾语。  
-       - **that just happened to me** 是定语从句，修饰 **something**，表示“刚刚发生在我身上的事情”。  
-
-2. **状语从句**  
-   - **before we get into some of the research in this area**：  
-     - 从属连词：**before**（在……之前）。  
-     - 主语：**we**（我们）。  
-     - 谓语：**get into**（进入，探讨）。  
-     - 宾语：**some of the research in this area**（这个领域的一些研究）。  
-
-**词汇和短语解释：**  
-- **get into**：动词短语，表示“深入讨论”。  
-- **happened to me**：表示“发生在我身上”。  
+**句子结构分析**：  
+- 主句为 “let me tell you about something”  
+- “before we get into some of the research in this area” 为时间状语从句（从属从句），修饰主句动作发生的时间。  
+- 时态语态：主句为一般现在时的祈使（let me …），从句为一般现在时（we get into）。  
+**词汇和短语解释**：  
+- get into：开始研究/探讨  
+- in this area：在这个领域
 
 ---
 
-### **2. That’s a good example of this.**  
-**中文译文：这是一个很好的例子。**
-
-**句子结构分析：**  
-- 主语：**That**（指代作者提到的事件）。  
-- 谓语：**is**（是）。  
-- 表语：**a good example of this**，表示“这方面的一个好例子”。  
-
-**词汇和短语解释：**  
-- **example of this**：指代后文讨论的透明性错觉现象。  
-
----
-
-### **3. The other night, I was invited to a dinner party at a friend's house.**  
-**中文译文：前几天晚上，我被邀请去一个朋友家参加晚宴。**
-
-**句子结构分析：**  
-- 主语：**I**（我）。  
-- 谓语：**was invited**（被邀请），过去时被动语态。  
-- 宾语：**to a dinner party**（参加晚宴）。  
-- 状语：**at a friend’s house**（在朋友家），介词短语修饰 **party**。  
-
-**词汇和短语解释：**  
-- **dinner party**：正式或半正式的晚宴。  
-- **was invited**：被动语态，表示动作的承受者。
+**(5) 原文**：Now you should know that this friend, Mary, she’s a really great cook, and I was really looking forward to this dinner.  
+**直译中文**：现在你应该知道，这位朋友，玛丽，她是个很棒的厨师，而且我非常期待这顿晚餐。  
+**句子结构分析**：  
+- 主句为 “you should know … and I was really looking forward …”  
+- “that this friend, Mary, she’s a really great cook” 为名词性从句，作 know 的宾语。  
+- 插入语 “Mary” 对 “this friend” 进行同位说明。  
+- 时态语态：should know（情态动词+动词原形），she’s（一般现在时），was looking forward（过去进行形式）。  
+**词汇和短语解释**：  
+- look forward to：期待  
+- a really great cook：一个非常出色的厨师
 
 ---
 
-### **4. Now you should know that this friend, Mary, she's a really great cook, and I was really looking forward to this dinner.**  
-**中文译文：现在你应该知道，这位朋友玛丽是一位很棒的厨师，我非常期待这次晚餐。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **you should know that this friend, Mary, she's a really great cook**：  
-     - 主语：**you**（你）。  
-     - 谓语：**should know**（应该知道）。  
-     - 宾语从句：**that this friend, Mary, she's a really great cook**：  
-       - **this friend, Mary** 是同位语结构，说明“这位朋友玛丽”。  
-       - **she's a really great cook** 是描述 **Mary** 的补充信息。  
-
-2. **并列句**  
-   - **and I was really looking forward to this dinner**：  
-     - 主语：**I**（我）。  
-     - 谓语：**was looking forward to**（非常期待）。  
-     - 宾语：**this dinner**（这次晚餐）。  
-
-**词汇和短语解释：**  
-- **really great cook**：表示“非常棒的厨师”。  
-- **look forward to**：短语，表示“期待”。  
+**(6) 原文**：So that night everything was going great until she served the main dish.  
+**直译中文**：所以那天晚上，一切都很顺利，直到她上了主菜。  
+**句子结构分析**：  
+- 主句为 “everything was going great”  
+- “until she served the main dish” 为时间状语从句。  
+- 时态语态：was going（过去进行时），served（一般过去时）。  
+**词汇和短语解释**：  
+- main dish：主菜
 
 ---
 
-### **5. So that night everything was going great until she served the main dish.**  
-**中文译文：所以那天晚上，一切都很顺利，直到她端上主菜。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **everything was going great**：  
-     - 主语：**everything**（一切）。  
-     - 谓语：**was going**（进行得）。  
-     - 表语：**great**（很好）。  
-
-2. **时间状语从句**  
-   - **until she served the main dish**：  
-     - 从属连词：**until**（直到）。  
-     - 主语：**she**（她）。  
-     - 谓语：**served**（端上）。  
-     - 宾语：**the main dish**（主菜）。  
-
-**词汇和短语解释：**  
-- **was going great**：进行得很顺利。  
-- **main dish**：主菜。  
+**(7) 原文**：I could tell from the smell that she used a certain spice that I really dislike.  
+**直译中文**：我能从气味中判断出，她用了一种我非常不喜欢的香料。  
+**句子结构分析**：  
+- 主句为 “I could tell (something)”  
+- “that she used a certain spice” 为宾语从句，作 tell 的宾语。  
+- “that I really dislike” 为定语从句，修饰 spice。  
+- 时态语态：could tell（情态动词过去时），used（一般过去时），dislike（一般现在时表述一般事实）。  
+**词汇和短语解释**：  
+- a certain spice：某种特定的香料  
+- dislike：不喜欢
 
 ---
 
-### **6. I could tell from the smell that she used a certain spice that I really dislike.**  
-**中文译文：从气味中我就能察觉，她用了我非常讨厌的一种香料。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **I could tell from the smell**：  
-     - 主语：**I**（我）。  
-     - 谓语：**could tell**（能判断）。  
-     - 状语：**from the smell**（从气味中）。  
-
-2. **宾语从句**  
-   - **that she used a certain spice that I really dislike**：  
-     - 主语：**she**（她）。  
-     - 谓语：**used**（用了）。  
-     - 宾语：**a certain spice**（某种香料）。  
-     - 定语从句：**that I really dislike** 修饰 **spice**，表示“我非常讨厌的”。  
-
-**词汇和短语解释：**  
-- **a certain spice**：某种特定的香料。  
-- **dislike**：动词，表示“不喜欢，讨厌”。  
+**(10) 原文**：And it was clear that this dish had a lot of garlic in it.  
+**直译中文**：而且很明显，这道菜里有许多大蒜。  
+**句子结构分析**：  
+- 主句为 “it was clear (something)”  
+- “that this dish had a lot of garlic in it” 为表语从句，补充说明 what was clear。  
+- 时态语态：was clear（一般过去时），had（一般过去时）。  
+**词汇和短语解释**：  
+- clear：明显的  
+- dish：菜肴  
+- garlic：大蒜
 
 ---
 
-### **7. It's garlic. I can't stand even the smell of it.**  
-**中文译文：是大蒜。我甚至不能忍受它的气味。**
-
-**句子结构分析：**  
-1. **第一句：It's garlic.**  
-   - 主语：**It**（指代香料）。  
-   - 谓语：**is**（是）。  
-   - 表语：**garlic**（大蒜）。  
-
-2. **第二句：I can’t stand even the smell of it.**  
-   - 主语：**I**（我）。  
-   - 谓语：**can’t stand**（不能忍受）。  
-   - 宾语：**even the smell of it**（甚至它的气味）。  
-
-**词汇和短语解释：**  
-- **garlic**：名词，大蒜。  
-- **can’t stand**：固定表达，表示“无法忍受”。  
+**(12) 原文**：I didn’t want her to know I didn’t like the food, so I tried to behave normally and eat as much as I could.  
+**直译中文**：我不想让她知道我不喜欢这道菜，所以我尽力表现得正常，并尽可能多地吃。  
+**句子结构分析**：  
+- 主句为 “I didn’t want her to know (something) … so I tried to behave … and eat …”  
+- “I didn’t like the food” 为间接宾语内容（隐含 that 的宾语从句），“her to know I didn’t like the food” 为复合结构（want sb to do sth），其中“I didn’t like the food” 是宾语从句。  
+- “as much as I could” 为比较状语从句。  
+- 时态语态：didn’t want（一般过去时），didn’t like（一般过去时），tried（一般过去时），could（情态动词过去时）。  
+**词汇和短语解释**：  
+- behave normally：表现得正常  
+- as much as I could：尽我所能地多
 
 ---
 
-### **8. And it was clear that this dish had a lot of garlic in it.**  
-**中文译文：很明显，这道菜里用了很多大蒜。**
+**(13) 原文**：But I was sure she could tell I wasn’t enjoying it.  
+**直译中文**：但我确信她能看出来我没有在享受。  
+**句子结构分析**：  
+- 主句为 “I was sure (something)”  
+- “she could tell (that) I wasn’t enjoying it” 为间接宾语从句（that 从句省略）。  
+- 时态语态：was sure（过去时），could tell（情态动词过去时），wasn’t enjoying（过去进行时）。  
+**词汇和短语解释**：  
+- be sure：确定  
+- tell：看出，察觉  
+- enjoy：享受
 
-**句子结构分析：**  
-1. **主句**  
-   - **it was clear**：  
-     - 主语：**it**（形式主语）。  
-     - 谓语：**was**（是）。  
-     - 表语：**clear**（明显的）。  
+---
 
-2. **宾语从句**  
-   - **that this dish had a lot of garlic in it**：  
-     - 主语：**this dish**（这道菜）。  
-     - 谓语：**had**（有）。  
-     - 宾语：**a lot of garlic**（许多大蒜）。  
-     - 状语：**in it**（在其中）。  
+**(16) 原文**：I started telling him how worried I was that I had offended Mary.  
+**直译中文**：我开始告诉他我有多担心，因为我可能冒犯了玛丽。  
+**句子结构分析**：  
+- 主句为 “I started telling him (something)”  
+- “how worried I was” 为宾语从句（名词性从句，说明程度），后接 “that I had offended Mary” 为进一步补充说明原因的从句。  
+- 时态语态：started（一般过去时），was（一般过去时），had offended（过去完成时）。  
+**词汇和短语解释**：  
+- how worried I was：我有多担心  
+- offend：冒犯
 
-**词汇和短语解释：**  
-- **clear**：形容词，表示“清楚的、明显的”。  
-- **a lot of garlic**：大量大蒜。  
+---
 
+**(17) 原文**：I told him, you know, about how I really hated garlic and how I was sure that Mary had noticed that I didn’t like the meal, that I was sure I had insulted our host.  
+**直译中文**：我告诉了他，你知道的，关于我多么讨厌大蒜，以及我多么肯定玛丽已经注意到我不喜欢那顿饭，还有我多么肯定我冒犯了我们的女主人。  
+**句子结构分析**：  
+- 主句为 “I told him (something)”  
+- “about how I really hated garlic” 为介词 about 后的名词从句（说明我恨大蒜的程度）。  
+- “how I was sure that Mary had noticed that I didn’t like the meal” 为另一层名词从句，其中包含 “that Mary had noticed (something)” 和 “that I didn’t like the meal” 两个从属从句。  
+- “that I was sure I had insulted our host” 为另一个名词性从句，继续补充说明我当时的想法。  
+- 时态语态：told（过去时），hated（过去时），was sure（过去时），had noticed（过去完成时），didn’t like（过去时），had insulted（过去完成时）。  
+**词汇和短语解释**：  
+- how I really hated garlic：我多么讨厌大蒜  
+- notice：注意到  
+- insult：侮辱，冒犯  
+- host：女主人/主人
+
+---
+
+**(20) 原文**：In fact, he thought I seemed to be enjoying the meal.  
+**直译中文**：事实上，他认为我似乎很享受那顿饭。  
+**句子结构分析**：  
+- 主句为 “he thought (something)”  
+- “I seemed to be enjoying the meal” 为thought 的宾语从句（that 从句省略）。  
+- 时态语态：thought（过去时），seemed（过去时），to be enjoying（动词不定式进行形式）。  
+**词汇和短语解释**：  
+- seem to be doing：似乎正在做某事  
+- enjoy the meal：享用这顿饭
+
+---
+
+**(23) 原文**：She was really pleased and talked about how nice the party was and how glad she was that everyone had liked the food so much.  
+**直译中文**：她非常高兴，并谈到了聚会有多么美好，以及她有多么高兴每个人都如此喜欢这道菜。  
+**句子结构分析**：  
+- 主干为 “She was really pleased and talked about (something)”  
+- “how nice the party was” 与 “how glad she was that everyone had liked the food so much” 均为名词从句，作为 talked about 的宾语内容。  
+- 在 “how glad she was” 从句中又包含从句 “that everyone had liked the food so much”。  
+- 时态语态：was pleased（过去时），talked（过去时），was（过去时），had liked（过去完成时）。  
+**词汇和短语解释**：  
+- pleased：高兴的  
+- how nice the party was：聚会有多好  
+- glad：高兴的  
+- had liked：已经喜欢过（过去完成）
+
+---
+
+**(24) 原文**：It was pretty clear from our conversation that she hadn’t noticed anything.  
+**直译中文**：从我们的对话中很明显，她并没有注意到任何事情。  
+**句子结构分析**：  
+- 主句为 “It was pretty clear (something)”  
+- “that she hadn’t noticed anything” 为表语从句说明 “what was clear”。  
+- 时态语态：was（过去时），hadn’t noticed（过去完成时）。  
+**词汇和短语解释**：  
+- clear：明显的  
+- notice：注意到
+
+---
+
+**(25) 原文**：I guess my feelings hadn’t been as obvious to Mary or to Mike as I thought they were.  
+**直译中文**：我想，我的感受并没有像我想的那样对玛丽或迈克显而易见。  
+**句子结构分析**：  
+- 主句为 “I guess (something)”  
+- “my feelings hadn’t been as obvious … as I thought they were” 为主句中所猜测的内容，其中 “as I thought they were” 为比较状语从句，与 as…as 结构配合使用，对照我所想的程度。  
+- 时态语态：guess（一般现在时），hadn’t been（过去完成时），thought（过去时），were（过去时）。  
+**词汇和短语解释**：  
+- obvious：明显的  
+- as … as I thought：像我所想的那样
 
 <html lang="en">
 <head>
