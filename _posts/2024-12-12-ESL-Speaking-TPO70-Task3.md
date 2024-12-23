@@ -412,9 +412,9 @@ Now, listen to part of a lecture in a psychology class. Ok. So scientists did an
 <tr>
     <td>Process</td>
     <td><span class="speaker" onclick="document.getElementById('audio_Process').play();">&#9658;</span><audio id="audio_Process"><source src="https://media.merriam-webster.com/audio/prons/en/us/mp3/p/proces02.mp3" type="audio/mpeg"></audio></td>
-    <td>Noun</td>
+    <td>Verb</td>
     <td>A series of actions or steps taken to achieve a particular end, especially in terms of cognitive functions.</td>
-    <td>过程，特别是指认知功能中的一系列行为或步骤。</td>
+    <td>处理</td>
     <td>"When studying, I find that my ability to process information improves when I wear my favorite hoodie."</td>
 </tr>
 <tr>
