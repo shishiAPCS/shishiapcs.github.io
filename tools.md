@@ -12,6 +12,10 @@ title: "Tools"
 ---
 ---
 
+* ### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```本地转，速度取决于电脑性能```
+* ### [flixier](https://editor.flixier.com/tools/all-tools) ```在线转换，仍然免费，无需账号```
+    - #### [教程](_posts/2023-03-20-free-online-transcribe.md)  
+* ### [在线录音机](https://vocalremover.org/zh/voice-recorder)
 * ### [背单词](https://superct.streamlit.app/) ```By Tom class 2026 ```
 * ### [GPA查询网址](https://www.thinkwave.com)
 * ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
@@ -73,11 +77,8 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 ### 语音转文字
 
-* #### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```暂时用这个```
 * #### [otter.ai](https://otter.ai/) 每月300分钟免费额度
-* #### [OpenAi Whisper](https://platform.openai.com/playground) ~~```异常强大，可以中英混合输入，需要openai账号```~~
-* #### [flixier](https://editor.flixier.com/tools/all-tools) ```仍然免费，无需账号```
-    - ##### [教程](_posts/2023-03-20-free-online-transcribe.md)   
+* #### [OpenAi Whisper](https://platform.openai.com/playground) ~~```异常强大，可以中英混合输入，需要openai账号```~~ 
 
 ### 文字转语音 
 
