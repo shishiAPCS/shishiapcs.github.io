@@ -280,6 +280,57 @@ Now listen to part of a lecture in a psychology class. Now, before we get into s
 
 ---
 
+**(15) 原文**：He’d also been at the dinner.
+
+**直译中文**：他也曾参加过那次晚宴。
+
+**句子结构分析**：
+- 主句为 “He had also been at the dinner.”
+- “He’d” 是 “He had” 的缩写，构成过去完成时，表示在叙述的过去时间点之前，他已经参加了晚宴。
+- 时态语态：过去完成时（had been），主动语态。
+- 使用过去完成时强调动作发生的先后顺序，表明他在晚宴上已经在场，与后续叙述形成时间上的对比。
+
+**词汇和短语解释**：
+- **He’d**：缩写形式，意为 "He had"。
+- **been**：动词 “be” 的过去分词，用于完成时态，表示状态或经历。
+- **dinner**：晚宴，指特定的正式晚餐活动。
+
+**这里能否使用 He was also at the dinner？**
+
+**对比分析**
+
+**句子一**：He’d also been at the dinner.
+**句子二**：He was also at the dinner.
+
+### 语法和表意的区别
+
+#### **句子一：He’d also been at the dinner.**
+- **语法**：
+  - **’d** 是 **had** 的缩写，构成 **过去完成时**（Past Perfect Tense）。
+  - **结构**：主语（He） + 助动词（had） + 过去分词（been） + 其他成分（also at the dinner）。
+- **表意**：
+  - 表示“他”在某个过去的时间点之前已经参加过晚宴。
+  - 强调动作发生的时间顺序，即“他”参加晚宴的动作先于叙述中的其他过去事件。
+
+#### **句子二：He was also at the dinner.**
+- **语法**：
+  - **结构**：主语（He） + 系动词（was） + 其他成分（also at the dinner）。
+  - **时态**：**一般过去时**（Simple Past Tense）。
+- **表意**：
+  - 简单陈述“他”也参加了晚宴。
+  - 不强调时间顺序，仅作为一个过去的事实陈述。
+
+#### 在原文中：
+- **“Well, later, I was walking home with another friend, Mike, he’d also been at the dinner.”**
+  - **“later”** 表示后续发生的事件，即“walking home”。
+  - **“He’d also been at the dinner.”** 使用过去完成时，明确说明Mike在“walking home”之前已经参加了晚宴。
+  - 这种时态的选择帮助听者理解事件的先后顺序，使叙述更加连贯和清晰。
+
+#### 如果改为：
+- **“Well, later, I was walking home with another friend, Mike, he was also at the dinner.”**
+  - 虽然仍传达了Mike也参加了晚宴的信息，但缺乏对时间先后的明确强调。
+  - 听者需要依赖上下文来推断时间关系，而不是通过时态本身。
+
 **(16) 原文**：I started telling him how worried I was that I had offended Mary.  
 **直译中文**：我开始告诉他我有多担心，因为我可能冒犯了玛丽。  
 **句子结构分析**：  
@@ -356,6 +407,38 @@ Now listen to part of a lecture in a psychology class. Now, before we get into s
 **词汇和短语解释**：  
 - obvious：明显的  
 - as … as I thought：像我所想的那样
+- **过去完成时态的使用**：
+- **原因**：
+  - **时间顺序**：首先，“I thought my feelings were obvious” 发生在更早的过去时态（“thought”是一般过去时），而“my feelings hadn’t been as obvious” 强调的是在“thought”之前，感受并不明显。
+  - **逻辑关系**：使用过去完成时，明确了感受不明显的状态是在“我认为它们显而易见”之前的时间点。
+  
+---
+
+### 补充：**什么时候使用过去完成时**
+
+过去完成时主要在以下几种情况下使用：
+
+#### **a. 描述过去的过去（Past of the Past）**
+当谈论两个过去发生的事件时，过去完成时用于描述较早发生的那个事件。
+
+**例子**：
+- By the time the meeting started, everyone **had arrived**.
+  - 会议开始时，大家都已经到了。
+
+#### **b. 表示条件句中的过去完成**
+在虚拟语气的条件句中，过去完成时用于表达与过去事实相反的假设。
+
+**例子**：
+- If I **had known** about the meeting, I would have attended.
+  - 如果我知道有会议，我就会参加。
+
+#### **c. 表示过去的原因**
+用于解释某个过去事件发生的原因。
+
+**例子**：
+- She was tired because she **had worked** all day.
+  - 她很累，因为她整天都在工作。
+
 
 <html lang="en">
 <head>
