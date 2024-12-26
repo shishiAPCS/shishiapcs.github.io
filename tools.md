@@ -10,7 +10,6 @@ title: "Tools"
 
 ## Essentials 必备知识
 ---
----
 
 * ### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```本地转，速度取决于电脑性能```
 * ### [flixier](https://editor.flixier.com/tools/all-tools) ```在线转换，仍然免费，无需账号```
@@ -30,10 +29,19 @@ title: "Tools"
 * ### [微软outlook邮箱注册地址](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook)
 * ### [微软outlook邮箱注册视频教程](https://www.bilibili.com/video/BV1bu411P79D/?share_source=copy_web&vd_source=a7ed18508531908cbb2dc681efccf167)
 * ### [Sharing folder 文件共享](_posts/2023-03-20-Connecting-to-CS_Sharing.md) 
-----
+---
+
+## 英语基础
+
+* [新编英语阅读手册](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) ```买一本实体书，随时翻阅```
+* [中国程序员容易发音错误的单词](https://cpwp.netlify.app/)
+* [时态讲解PPT](https://www.icloud.com.cn/keynote/0p1VUCEKbTys8MuAIOAAUi5Zg#时态) ```谷歌浏览器无法打开```
+* [英语学习底层逻辑](http://xiaolai.co/books/c558c667ad9f05ddce38f06df2d15aa3/index)
+* [如何写好英文书面比较句](http://xiaolai.co/books/8724bd963e758a48a168d955e711485b/comparison-in-english.html)
+* [Youglish](https://youglish.com/)
+
 
 ## Ai
----
 ---
 
 ### [1小时快速入门对话机器人](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/)
@@ -112,15 +120,6 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 ### 思维导图
 
 * [markmap.js](https://markmap.js.org/repl)
-
-### English
-
-* [中国程序员容易发音错误的单词](https://cpwp.netlify.app/)
-* [时态讲解PPT](https://www.icloud.com.cn/keynote/0p1VUCEKbTys8MuAIOAAUi5Zg#时态) ```谷歌浏览器无法打开```
-* [英语学习底层逻辑](http://xiaolai.co/books/c558c667ad9f05ddce38f06df2d15aa3/index)
-* [如何写好英文书面比较句](http://xiaolai.co/books/8724bd963e758a48a168d955e711485b/comparison-in-english.html)
-* [新编英语阅读手册](http://xiaolai.co/books/f79b2a287ab8547ec641a4960ea1ff62/index.html) 
-* [Youglish](https://youglish.com/)
  
 ### 打字练习
 
