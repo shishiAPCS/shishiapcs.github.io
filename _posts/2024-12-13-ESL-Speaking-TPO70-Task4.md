@@ -39,21 +39,6 @@ Listen to part of a lecture in a biology class. So we usually think of plants tr
 
 ---
 
-#### 5. Let’s talk about a couple reasons why.  
-1. **直译中文**  
-   让我们来讨论几个原因以及为什么会这样。  
-2. **句子结构分析**  
-   - **主干**：Let’s talk about a couple reasons why.  
-     - “reasons why” 中 “why” 引导定语从句，修饰 “reasons”（虽然后文未展开完整从句，但此处“why”用作关系副词）。  
-   - **时态**：一般现在时（祈使句形式）。  
-   - **从句类型**：定语从句（“why” 作关系副词）。  
-   - **特殊结构**：无分词短语、倒装或强调句。  
-3. **词汇和短语解释**  
-   - **a couple reasons why**：几个原因（为什么如此的原因）  
-   - **Let’s…**：让我们……（祈使句，用于提议或引导话题）
-
----
-
 #### 7. These plants are attracted to the dark shadows that tall objects cast on the ground.  
 1. **直译中文**  
    这些植物会被高大物体投射在地面上的黑影所吸引。  
