@@ -13,183 +13,232 @@ categories: media
 
 Listen to part of a talk in a biology class. Okay, so on the topic of animal survival strategies, one type of strategy that's fascinated people for centuries is protective resemblance. That's when animals resemble their environment in some way or another by taking on the color or shape or both of the physical objects that are behind or beneath them. Today we'll talk about two kinds. Which kind of protective resemblance an animal has, well, it depends on whether the animal moves through different environments in the course of its life, or whether its environment is more or less permanent. For example, animals like the horned frog. Well, they've got the permanent kind of protective resemblance, which is fine, because well, during the course of their lives, they don't visit other places. So the horned frog is brown, just like the dead leaves on the forest floor where it lives. And it's got brown lines running down its body, just like the veins of the leaves. The color and shape of its protective resemblance is fixed, like its environment. So when the horned frog is on the forest floor, it's almost impossible for predators to see it. Now, other animals like the Anole lizard, display a different sort of protective resemblance. They actually change color, which is important for them, because they travel through different environments as they live and grow. So the protective resemblance they exhibit is adaptive, depending on the environment they're in. The Anole lizard has special moving pigments in its cells, which change to match the color of whatever environment it's currently occupying. If the Anole lizard is walking among the dead leaves of the forest floor, it'll turn the same brown color as the leaves. But if the Anole lizard runs into some green shrubs, well, it'll turn green.
 
+### 难句分析
 
-### **1. Okay, so on the topic of animal survival strategies, one type of strategy that's fascinated people for centuries is protective resemblance.**  
-**中文译文：好的，那么关于动物生存策略的话题，有一种策略几个世纪以来一直让人们着迷，那就是保护性伪装。**
+**2. 原文**  
+Okay, so on the topic of animal survival strategies, one type of strategy that's fascinated people for centuries is protective resemblance.
 
-**句子结构分析：**  
-1. **主句**  
-   - **one type of strategy is protective resemblance**：  
-     - 主语：**one type of strategy**（一种策略）。  
-     - 谓语：**is**（是）。  
-     - 表语：**protective resemblance**（保护性伪装）。  
+1. **直译中文**  
+   好，所以在讨论动物生存策略这个话题时，有一种策略几个世纪以来都让人们着迷，那就是保护性相似。
 
-2. **定语从句**  
-   - **that's fascinated people for centuries**：修饰 **strategy**，描述该策略的特点：  
-     - 主语：**that**（指代 **strategy**）。  
-     - 谓语：**has fascinated**（使……着迷），现在完成时。  
-     - 宾语：**people**（人们）。  
-     - 状语：**for centuries**（几个世纪以来）。  
+2. **句子结构分析**  
+   - 主干：one type of strategy … is protective resemblance  
+   - 定语从句：that’s fascinated people for centuries 修饰 one type of strategy  
+   - 时态：that’s fascinated 为现在完成时（that has fascinated）
 
-3. **介词短语**  
-   - **on the topic of animal survival strategies**：修饰全句，表示主题。  
-
-**词汇和短语解释：**  
-- **animal survival strategies**：动物生存策略，表示动物为适应环境采取的行为或特征。  
-- **protective resemblance**：保护性伪装，指动物通过外观与环境相似来隐藏自己。  
-- **fascinated**：过去分词，表示“使……着迷”。  
+3. **词汇和短语解释**  
+   - **on the topic of**：关于……的主题  
+   - **fascinated people for centuries**：几个世纪以来一直让人们着迷  
+   - **protective resemblance**：保护性相似（指动物通过外形或颜色与环境相似以保护自己的策略）
 
 ---
 
-### **2. That's when animals resemble their environment in some way or another by taking on the color or shape or both of the physical objects that are behind or beneath them.**  
-**中文译文：这指的是动物以某种方式模仿它们的环境，通过呈现其身后或身下的物体的颜色、形状或两者的结合。**
+**3. 原文**  
+That's when animals resemble their environment in some way or another by taking on the color or shape or both of the physical objects that are behind or beneath them.
 
-**句子结构分析：**  
-1. **主句**  
-   - **That's when animals resemble their environment**：  
-     - 主语：**That**（指代 **protective resemblance**）。  
-     - 谓语：**is**（是）。  
-     - 表语：**when animals resemble their environment**：一个时间状语从句，定义 **That**。  
+1. **直译中文**  
+   那就是指动物通过采用其身后或脚下的物体的颜色或形状，或者二者兼具，从而在某种程度上与环境相似。
 
-2. **方式状语**  
-   - **in some way or another**：修饰 **resemble**，表示“以某种方式”。  
+2. **句子结构分析**  
+   - 主干：That’s when animals resemble their environment …  
+   - 动词短语：by taking on the color or shape or both …（介词短语作方式状语）  
+   - 定语从句：that are behind or beneath them 修饰 the physical objects  
+   - 时态：一般现在时
 
-3. **通过动词短语扩展句意**  
-   - **by taking on the color or shape or both**：  
-     - **by** 引导方式状语，表示通过……的方式。  
-     - **taking on**（呈现）。  
-     - 宾语：**the color or shape or both**（颜色、形状或两者）。  
-
-4. **定语短语**  
-   - **of the physical objects that are behind or beneath them**：  
-     - **of the physical objects** 修饰 **color or shape**，表示来源。  
-     - **that are behind or beneath them** 是定语从句，修饰 **objects**：  
-       - 主语：**that**（指代物体）。  
-       - 谓语：**are**（位于）。  
-       - 状语：**behind or beneath them**（在它们身后或身下）。  
-
-**词汇和短语解释：**  
-- **resemble**：动词，表示“类似，模仿”。  
-- **take on**：短语动词，表示“呈现”。  
-- **behind or beneath**：分别表示“在……后面”和“在……下面”。  
+3. **词汇和短语解释**  
+   - **resemble**：与……相似  
+   - **in some way or another**：以这样或那样的方式  
+   - **take on**：呈现出……（颜色、形状等）  
+   - **physical objects that are behind or beneath them**：在它们身后或脚下的物体（定语从句修饰 objects）
 
 ---
 
-### **3. Today we'll talk about two kinds.**  
-**中文译文：今天我们将讨论两种类型。**
+**5. 原文**  
+Which kind of protective resemblance an animal has, well, it depends on whether the animal moves through different environments in the course of its life, or whether its environment is more or less permanent.
 
-**句子结构分析：**  
-- 主语：**we**（我们）。  
-- 谓语：**will talk about**（将讨论）。  
-- 宾语：**two kinds**（两种类型）。  
+1. **直译中文**  
+   动物所拥有的哪一种保护性相似，这取决于它在其一生中是否会穿越不同的环境，或者它所处的环境是否相对固定。
 
-**词汇解释：**  
-- **two kinds**：表示两种保护性伪装的类型。  
-- **talk about**：短语动词，表示“讨论”。  
+2. **句子结构分析**  
+   - 主干：it depends on …  
+   - 宾语从句：whether the animal moves … / whether its environment is …（并列结构）  
+   - 时态：一般现在时
 
----
-
-### **4. Which kind of protective resemblance an animal has, well, it depends on whether the animal moves through different environments in the course of its life, or whether its environment is more or less permanent.**  
-**中文译文：动物具有什么类型的保护性伪装，这取决于动物是否在其一生中穿越不同环境，或者其环境是否相对固定。**
-
-**句子结构分析：**  
-1. **主句**  
-   - **it depends on**：  
-     - 主语：**it**（指代 **which kind of protective resemblance**）。  
-     - 谓语：**depends on**（取决于）。  
-
-2. **宾语从句**  
-   - **whether the animal moves through different environments in the course of its life, or whether its environment is more or less permanent**：  
-     - 连词：**whether** 引导选择性的宾语从句。  
-     - 第一部分：**the animal moves through different environments**：  
-       - 主语：**the animal**（动物）。  
-       - 谓语：**moves through**（穿越）。  
-       - 宾语：**different environments**（不同环境）。  
-     - 状语：**in the course of its life**（在其一生中）。  
-     - 第二部分：**its environment is more or less permanent**：  
-       - 主语：**its environment**（它的环境）。  
-       - 谓语：**is**（是）。  
-       - 表语：**more or less permanent**（或多或少是固定的）。  
-
-**词汇和短语解释：**  
-- **moves through**：表示“穿越”。  
-- **permanent**：形容词，表示“永久的，固定的”。  
-- **more or less**：短语，表示“或多或少，大体上”。  
+3. **词汇和短语解释**  
+   - **protective resemblance**：保护性相似  
+   - **in the course of its life**：在其一生/生命过程中  
+   - **more or less permanent**：或多或少是固定的/永久的
 
 ---
 
-### **5. For example, animals like the horned frog. Well, they've got the permanent kind of protective resemblance, which is fine, because well, during the course of their lives, they don't visit other places.**  
-**中文译文：例如，像角蛙这样的动物。它们具有固定类型的保护性伪装，这很好，因为在它们的一生中，它们不会到其他地方。**
+**7. 原文**  
+Well, they've got the permanent kind of protective resemblance, which is fine, because well, during the course of their lives, they don't visit other places.
 
-**句子结构分析：**  
-1. **第一句**  
-   - **animals like the horned frog**：主语部分，表示“像角蛙这样的动物”。  
-   - 句子不完整，但后续内容展开补充说明。  
+1. **直译中文**  
+   嗯，它们具有永久性的保护性相似，这很好，因为在它们的一生中，它们不会去其他地方。
 
-2. **第二句**  
-   - **They've got the permanent kind of protective resemblance**：  
-     - 主语：**They**（它们）。  
-     - 谓语：**have got**（拥有）。  
-     - 宾语：**the permanent kind of protective resemblance**（固定类型的保护性伪装）。  
+2. **句子结构分析**  
+   - 主干：They’ve got the permanent kind of protective resemblance  
+   - 非限制性/非限定性定语从句：which is fine 修饰前面的名词短语  
+   - 原因状语从句：because … they don’t visit other places  
+   - 时态：现在完成时（They’ve got）+一般现在时（don’t visit）
 
-3. **原因状语从句**  
-   - **because during the course of their lives, they don't visit other places**：  
-     - **because** 表原因。  
-     - 主语：**they**（它们）。  
-     - 谓语：**don't visit**（不会去）。  
-     - 宾语：**other places**（其他地方）。  
-
-**词汇和短语解释：**  
-- **horned frog**：角蛙，一种栖息在森林地面的动物。  
-- **permanent kind**：指固定的保护性伪装类型。  
+3. **词汇和短语解释**  
+   - **the permanent kind of protective resemblance**：永久性的保护性相似  
+   - **which is fine**：这很好（非限定性定语从句）  
+   - **during the course of their lives**：在它们的一生中
 
 ---
 
-### **6. So the horned frog is brown, just like the dead leaves on the forest floor where it lives.**  
-**中文译文：所以角蛙是棕色的，就像它栖息的森林地面的枯叶一样。**
+**8. 原文**  
+So the horned frog is brown, just like the dead leaves on the forest floor where it lives.
 
-**句子结构分析：**  
-- 主语：**the horned frog**（角蛙）。  
-- 谓语：**is**（是）。  
-- 表语：**brown**（棕色）。  
-- 比较状语：**just like the dead leaves on the forest floor**：  
-  - **just like**（就像）。  
-  - **dead leaves**（枯叶）。  
-  - **on the forest floor** 修饰 **dead leaves**，表示“在森林地面上的枯叶”。  
+1. **直译中文**  
+   因此，角蛙是棕色的，就像它所生活的森林地面上的那些枯叶一样。
 
----
+2. **句子结构分析**  
+   - 主干：the horned frog is brown  
+   - 状语：just like the dead leaves on the forest floor  
+   - 定语从句：where it lives 修饰 the forest floor  
+   - 时态：一般现在时
 
-### **7. Now, other animals like the Anole lizard, display a different sort of protective resemblance.**  
-**中文译文：现在，像变色蜥蜴这样的动物展示了一种不同类型的保护性伪装。**
-
-**句子结构分析：**  
-- 主语：**other animals like the Anole lizard**（像变色蜥蜴这样的其他动物）。  
-- 谓语：**display**（展示）。  
-- 宾语：**a different sort of protective resemblance**（一种不同类型的保护性伪装）。  
+3. **词汇和短语解释**  
+   - **the horned frog**：角蛙  
+   - **just like**：就像……一样  
+   - **forest floor**：森林地面  
+   - **where it lives**：它生活的地方（定语从句修饰 forest floor）
 
 ---
 
-### **8. They actually change color, which is important for them, because they travel through different environments as they live and grow.**  
-**中文译文：它们实际上会改变颜色，这对它们来说很重要，因为它们在生活和成长过程中穿越不同的环境。**
+**9. 原文**  
+And it's got brown lines running down its body, just like the veins of the leaves.
 
-**句子结构分析：**  
-1. **主句**  
-   - **They actually change color**：  
-     - 主语：**They**（它们）。  
-     - 谓语：**change**（改变）。  
-     - 宾语：**color**（颜色）。  
+1. **直译中文**  
+   而且它身上有顺着身体往下延伸的棕色纹理，就像树叶的叶脉一样。
 
-2. **定语从句**  
-   - **which is important for them**：修饰 **change color**，表示其重要性。  
+2. **句子结构分析**  
+   - 主干：it’s got brown lines …  
+   - 分词短语：running down its body（现在分词短语作定语，修饰 brown lines）  
+   - 状语：just like the veins of the leaves  
+   - 时态：现在完成时（it’s got = it has got）
 
-3. **原因状语从句**  
-   - **because they travel through different environments as they live and grow**：  
-     - **because** 表原因。  
-     - 主语：**they**（它们）。  
-     - 谓语：**travel through**（穿越）。  
-     - 宾语：**different environments**（不同环境）。  
-     - 状语：**as they live and grow**（随着它们生活和成长）。  
+3. **词汇和短语解释**  
+   - **brown lines running down its body**：顺着身体延伸的棕色纹理（running down its body 为分词短语）  
+   - **veins of the leaves**：叶脉
 
+---
+
+**11. 原文**  
+So when the horned frog is on the forest floor, it's almost impossible for predators to see it.
+
+1. **直译中文**  
+   因此，当角蛙在森林地面上时，捕食者几乎不可能看到它。
+
+2. **句子结构分析**  
+   - 主干：it’s almost impossible for predators to see it  
+   - 时间状语从句：when the horned frog is on the forest floor  
+   - 时态：一般现在时
+
+3. **词汇和短语解释**  
+   - **it’s almost impossible for predators to see it**：捕食者几乎不可能发现它  
+   - **when … is on the forest floor**：当……在森林地面上（引导时间状语从句）
+
+---
+
+**13. 原文**  
+They actually change color, which is important for them, because they travel through different environments as they live and grow.
+
+1. **直译中文**  
+   它们实际上会改变颜色，这对它们很重要，因为它们在生长过程中会穿越不同的环境。
+
+2. **句子结构分析**  
+   - 主干：They actually change color  
+   - 非限制性定语从句：which is important for them 修饰前句的内容  
+   - 原因状语从句：because they travel through different environments …  
+   - 状语从句：as they live and grow（时间或伴随状语从句）  
+   - 时态：一般现在时
+
+3. **词汇和短语解释**  
+   - **change color**：改变颜色  
+   - **which is important for them**：这对它们很重要（非限定性定语从句）  
+   - **travel through different environments**：穿越不同的环境  
+   - **as they live and grow**：当它们生活并成长时
+
+---
+
+**14. 原文**  
+So the protective resemblance they exhibit is adaptive, depending on the environment they're in.
+
+1. **直译中文**  
+   因此，它们所表现出的保护性相似是可适应的，这取决于它们所处的环境。
+
+2. **句子结构分析**  
+   - 主干：the protective resemblance they exhibit is adaptive  
+   - 定语从句：they exhibit 修饰 the protective resemblance  
+   - 分词短语：depending on the environment they’re in（现在分词短语作状语）  
+   - 时态：一般现在时
+
+3. **词汇和短语解释**  
+   - **the protective resemblance they exhibit**：它们所表现的保护性相似（they exhibit 为定语从句）  
+   - **is adaptive**：是具有适应性的  
+   - **depending on the environment they’re in**：取决于它们所处环境（现在分词短语）
+
+---
+
+**15. 原文**  
+The Anole lizard has special moving pigments in its cells, which change to match the color of whatever environment it's currently occupying.
+
+1. **直译中文**  
+   变色蜥蜴细胞中拥有特殊的可移动色素，这些色素会改变以匹配它当前所处环境的颜色。
+
+2. **句子结构分析**  
+   - 主干：The Anole lizard has special moving pigments in its cells  
+   - 非限制性定语从句：which change to match the color of whatever environment it’s currently occupying 修饰 pigments  
+   - 名词性从句：whatever environment it’s currently occupying 作介词 of 的宾语  
+   - 时态：一般现在时
+
+3. **词汇和短语解释**  
+   - **the Anole lizard**：变色蜥蜴（此处 Anole lizard 指一类会变色的蜥蜴）  
+   - **special moving pigments**：特殊的可移动色素  
+   - **which change to match**：它们会改变以匹配……（非限定性定语从句）  
+   - **whatever environment it’s currently occupying**：无论它当前所处的是哪种环境（whatever 引导名词性从句）
+
+---
+
+**16. 原文**  
+If the Anole lizard is walking among the dead leaves of the forest floor, it'll turn the same brown color as the leaves.
+
+1. **直译中文**  
+   如果变色蜥蜴在森林地面的枯叶中行走，它就会变成与那些叶子相同的棕色。
+
+2. **句子结构分析**  
+   - 主干：it’ll turn the same brown color as the leaves  
+   - 条件状语从句：If the Anole lizard is walking among the dead leaves …  
+   - 时态：一般现在时（从句）+一般将来时（主句）
+
+3. **词汇和短语解释**  
+   - **if the Anole lizard is walking among the dead leaves**：如果变色蜥蜴正走在枯叶中（条件从句）  
+   - **turn the same brown color as**：变成与……相同的棕色
+
+---
+
+**17. 原文**  
+But if the Anole lizard runs into some green shrubs, well, it'll turn green.
+
+1. **直译中文**  
+   可是如果变色蜥蜴跑到一些绿色灌木丛里，那么它就会变成绿色。
+
+2. **句子结构分析**  
+   - 主干：it’ll turn green  
+   - 条件状语从句：if the Anole lizard runs into some green shrubs  
+   - 时态：一般现在时（从句）+一般将来时（主句）
+
+3. **词汇和短语解释**  
+   - **runs into**：跑进/进入  
+   - **green shrubs**：绿色灌木丛  
+   - **turn green**：变为绿色
+
+---
 
 <html lang="en">
 <head>
