@@ -5,6 +5,8 @@ title: "Intro to CS"
 ## 高一教材
 
 - [互动式教材 Javascript](https://codehs.com/textbook/introjs_textbook) ```英文```
+- [thejsway](https://thejsway.net/intro01/)```英文```
+- [eloquentjavascript](https://eloquentjavascript.net/)```英文```
 - [互动式教材 Python](https://github.com/selfteaching/the-craft-of-selfteaching) ```中文```
 
 ---
