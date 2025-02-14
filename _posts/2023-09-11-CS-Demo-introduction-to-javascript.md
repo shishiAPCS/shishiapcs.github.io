@@ -356,20 +356,26 @@ document.body.innerHTML = `
 
 const style = document.createElement('style');
 style.textContent = `
+    /* Body styling */
     body {
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     }
+
+    /* Board container */
     .board {
         display: grid;
         grid-template-columns: repeat(3, 100px);
         grid-template-rows: repeat(3, 100px);
         gap: 5px;
     }
+
+    /* Individual cells */
     .cell {
         width: 100px;
         height: 100px;
@@ -378,19 +384,43 @@ style.textContent = `
         align-items: center;
         font-size: 2em;
         background-color: #fff;
-        border: 1px solid #000;
+        border-radius: 8px;
+        border: 2px solid #4A4A4A;
         cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
     }
+
+    .cell:hover {
+        background-color: #dceefc;
+        transform: scale(1.03);
+    }
+
+    /* Disable pointer events when cell is used */
     .cell.disabled {
         pointer-events: none;
+        opacity: 0.7;
     }
+
+    /* Color coding for marks */
+    .cell.X {
+        color: #e74c3c; /* Red for X */
+    }
+    .cell.O {
+        color: #3498db; /* Blue for O */
+    }
+
+    /* Message styling */
     .message {
         margin-top: 20px;
         font-size: 1.5em;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
     }
 `;
 document.head.appendChild(style);
 
+/* -- Game Logic -- */
 const board = Array(9).fill(null);
 const player = 'O';
 const computer = 'X';
@@ -398,6 +428,7 @@ const computer = 'X';
 const boardElement = document.getElementById('board');
 const messageElement = document.getElementById('message');
 
+// Create cells
 board.forEach((_, index) => {
     const cell = document.createElement('div');
     cell.classList.add('cell');
@@ -405,6 +436,7 @@ board.forEach((_, index) => {
     boardElement.appendChild(cell);
 });
 
+// The computer goes first
 computerMove();
 
 function handlePlayerMove(index) {
@@ -434,11 +466,19 @@ function computerMove() {
 function render() {
     board.forEach((mark, index) => {
         const cell = boardElement.children[index];
-        cell.textContent = mark;
+        cell.textContent = mark ? mark : '';
+        // Disable cell if it has a mark
         cell.classList.toggle('disabled', !!mark);
+
+        // Remove old mark classes, then add new if needed
+        cell.classList.remove('X', 'O');
+        if (mark) {
+            cell.classList.add(mark);
+        }
     });
 }
 
+/* Minimax AI */
 function findBestMove(board) {
     let bestScore = -Infinity;
     let move;
@@ -488,10 +528,11 @@ function minimax(board, depth, isMaximizing) {
     }
 }
 
+/* Check winner */
 function checkWinner(board) {
     const winPatterns = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], 
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
     ];
 
@@ -509,3 +550,251 @@ function checkWinner(board) {
     return null;
 }
 ```
+
+---
+### Big Bang Simulation Demo  大爆炸模拟演示 🌌
+---
+
+#### Instructions  使用说明
+1. Save the above code to a file named index.html.  
+   将上述代码保存为名为 index.html 的文件。  
+2. Open it in a modern web browser (e.g., Chrome, Firefox, Edge).  
+   在现代网页浏览器中打开该文件（例如 Chrome、Firefox、Edge）。  
+3. Click "Start" to trigger the Big Bang expansion.  
+   点击“Start”按钮触发大爆炸膨胀。  
+4. Click "Reset" to bring particles back to a singularity and stop expansion.  
+   点击“Reset”按钮让粒子回到奇点并停止膨胀。
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Big Bang Simulation</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+      font-family: sans-serif;
+    }
+    #gui {
+      position: absolute;
+      z-index: 999;
+      margin: 10px;
+    }
+    button {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 8px 16px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+<div id="gui">
+  <button id="startBtn">Start</button>
+  <button id="resetBtn">Reset</button>
+</div>
+
+<!-- Three.js (from a CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+
+<script>
+  let scene, camera, renderer;
+  let particles, particlePositions, particleVelocities;
+  let clock;
+  let isExpanding = false;
+
+  // Number of particles in the simulation
+  const NUM_PARTICLES = 2000;
+
+  // Create the three.js scene
+  init();
+  animate();
+
+  // Attach event listeners for buttons
+  document.getElementById("startBtn").addEventListener("click", startExpansion);
+  document.getElementById("resetBtn").addEventListener("click", resetSimulation);
+
+  function init() {
+    // Scene
+    scene = new THREE.Scene();
+
+    // Camera
+    camera = new THREE.PerspectiveCamera(
+      60,               // FOV
+      window.innerWidth / window.innerHeight,  // Aspect
+      0.1,              // Near
+      1000              // Far
+    );
+    camera.position.set(0, 0, 60);
+
+    // Renderer
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Handle window resize
+    window.addEventListener("resize", onWindowResize, false);
+
+    // Create a particle system to represent cosmic matter
+    createParticles();
+
+    // Optional: Add a soft ambient light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    scene.add(ambientLight);
+
+    // Optional: Add a point light to add some interesting lighting
+    const pointLight = new THREE.PointLight(0xffffff, 1);
+    pointLight.position.set(50, 50, 50);
+    scene.add(pointLight);
+
+    // Clock for timing
+    clock = new THREE.Clock();
+
+    // Start with a reset state (all particles at singularity)
+    resetSimulation();
+  }
+
+  function createParticles() {
+    // Geometry
+    const geometry = new THREE.BufferGeometry();
+
+    // Position array (x, y, z per particle)
+    particlePositions = new Float32Array(NUM_PARTICLES * 3);
+    // Color array (r, g, b per particle)
+    const colors = new Float32Array(NUM_PARTICLES * 3);
+
+    // We'll store velocities in a separate array
+    particleVelocities = new Float32Array(NUM_PARTICLES * 3);
+
+    for (let i = 0; i < NUM_PARTICLES; i++) {
+      // Initially set positions to (0,0,0); actual arrangement
+      // will be handled in resetSimulation()
+      const i3 = i * 3;
+      particlePositions[i3 + 0] = 0;
+      particlePositions[i3 + 1] = 0;
+      particlePositions[i3 + 2] = 0;
+
+      // Random colors for visual variety
+      colors[i3 + 0] = Math.random() * 1.0; // R
+      colors[i3 + 1] = Math.random() * 1.0; // G
+      colors[i3 + 2] = Math.random() * 1.0; // B
+
+      // Velocities array will be set during reset or start
+      particleVelocities[i3 + 0] = 0;
+      particleVelocities[i3 + 1] = 0;
+      particleVelocities[i3 + 2] = 0;
+    }
+
+    geometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(particlePositions, 3)
+    );
+    geometry.setAttribute(
+      "color",
+      new THREE.BufferAttribute(colors, 3)
+    );
+
+    // Material
+    const material = new THREE.PointsMaterial({
+      size: 0.7,
+      vertexColors: true,
+      blending: THREE.AdditiveBlending,
+      transparent: true,
+      depthWrite: false
+    });
+
+    // Create the Points object and add to scene
+    particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+  }
+
+  function startExpansion() {
+    isExpanding = true;
+  }
+
+  function resetSimulation() {
+    isExpanding = false;
+
+    // Move all particles to the center
+    for (let i = 0; i < NUM_PARTICLES; i++) {
+      const i3 = i * 3;
+
+      // Reset positions to (0,0,0)
+      particlePositions[i3 + 0] = 0;
+      particlePositions[i3 + 1] = 0;
+      particlePositions[i3 + 2] = 0;
+
+      // Give each particle a random velocity direction and speed,
+      // but set it to 0 for now. We'll re-randomize on Start for the "Bang".
+      particleVelocities[i3 + 0] = 0;
+      particleVelocities[i3 + 1] = 0;
+      particleVelocities[i3 + 2] = 0;
+    }
+    particles.geometry.attributes.position.needsUpdate = true;
+  }
+
+  function randomizeVelocities() {
+    // Give each particle a random velocity for the expansion
+    for (let i = 0; i < NUM_PARTICLES; i++) {
+      const i3 = i * 3;
+      // Random direction in 3D
+      const theta = Math.random() * 2 * Math.PI;
+      const phi = Math.acos((Math.random() * 2) - 1);
+      const speed = Math.random() * 0.5 + 0.5; // minimum speed + range
+
+      particleVelocities[i3 + 0] = speed * Math.sin(phi) * Math.cos(theta);
+      particleVelocities[i3 + 1] = speed * Math.sin(phi) * Math.sin(theta);
+      particleVelocities[i3 + 2] = speed * Math.cos(phi);
+    }
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const delta = clock.getDelta();
+
+    // If we just started expansion, randomize velocities only once
+    if (isExpanding) {
+      // If the velocities are still zeroed, let's randomize them
+      if (particleVelocities[0] === 0 && particleVelocities[1] === 0 && particleVelocities[2] === 0) {
+        randomizeVelocities();
+      }
+
+      // Update particle positions based on velocity
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        const i3 = i * 3;
+        particlePositions[i3 + 0] += particleVelocities[i3 + 0] * delta * 15;
+        particlePositions[i3 + 1] += particleVelocities[i3 + 1] * delta * 15;
+        particlePositions[i3 + 2] += particleVelocities[i3 + 2] * delta * 15;
+      }
+      particles.geometry.attributes.position.needsUpdate = true;
+    }
+
+    // Simple camera rotation for a more dynamic view
+    const time = Date.now() * 0.0001;
+    camera.position.x = 60 * Math.sin(time);
+    camera.position.z = 60 * Math.cos(time);
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+  }
+
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  }
+</script>
+</body>
+</html>
+```
+
