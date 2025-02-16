@@ -2,6 +2,56 @@
 title: "AP CSA"
 ---
 
+# 离开考还有：
+
+<div id="countdown"></div>
+
+<script>
+  (function(){
+    // Target date: set month/day/year/time
+    const targetDate = new Date("May 8, 2025 08:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      const countdownElement = document.getElementById("countdown");
+      countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      // Optional: Change color if under 24 hours
+      if (distance < 24 * 60 * 60 * 1000 && distance > 0) {
+        countdownElement.style.color = "red";
+      } else {
+        countdownElement.style.color = "";
+      }
+
+      // When the countdown reaches 0
+      if (distance < 0) {
+        countdownElement.textContent = "Exam Started!";
+        clearInterval(timerInterval);
+      }
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  })();
+</script>
+
+<style>
+  /* Lightweight styling for demonstration */
+  #countdown {
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 20px;
+    transition: color 0.5s ease;
+  }
+</style>
+
 ---
   - 考试时间：Wed, May 7, 2025
   - [课堂规则](https://shishiapcs.github.io/CSA-Class-Rules/)
