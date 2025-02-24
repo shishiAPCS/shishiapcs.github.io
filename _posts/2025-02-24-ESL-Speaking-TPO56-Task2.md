@@ -1,5 +1,5 @@
 ---
-title: "TPO64 Task2"
+title: "TPO56 Task2"
 mathjax: true
 layout: post
 categories: media
@@ -190,7 +190,7 @@ Female Student: Did you see Julia’s letter? Male Student: Yeah, I did! Female 
 
 
 <details>
-<summary>class2026修改文稿点这里</summary>
+<summary>class2027修改文稿点这里</summary>
 
 <p><strong>Amanda</strong></p>
 <p>I <span style='color:red;font-weight:700;text-decoration:line-through;'>think this </span><span style='color:green;font-weight:700;'>believe that Julia's proposal </span>is <span style='color:green;font-weight:700;'>to open </span>a <span style='color:red;font-weight:700;text-decoration:line-through;'>painting kit, but </span><span style='color:green;font-weight:700;'>student-run snack shop on campus. The man agrees with her opinion because he thinks </span>it <span style='color:red;font-weight:700;text-decoration:line-through;'>also has a design advantage. The first opinion is that although the snake campus could lead their </span><span style='color:green;font-weight:700;'>would provide </span>students <span style='color:red;font-weight:700;text-decoration:line-through;'>to know </span><span style='color:green;font-weight:700;'>with valuable job experience, such as learning </span>how to <span style='color:red;font-weight:700;text-decoration:line-through;'>help </span><span style='color:green;font-weight:700;'>manage schedules and inventory. He also mentions that </span>the <span style='color:red;font-weight:700;text-decoration:line-through;'>master </span><span style='color:green;font-weight:700;'>current cafeteria has long lines, </span>and <span style='color:red;font-weight:700;text-decoration:line-through;'>they could have more wonderful experience </span><span style='color:green;font-weight:700;'>a snack shop would be a quicker option </span>for <span style='color:red;font-weight:700;text-decoration:line-through;'>their future jobs. So it could include nursing schedules for the jobs and so on. But the second opinion is that because we have </span><span style='color:green;font-weight:700;'>students who need </span>a <span style='color:red;font-weight:700;text-decoration:line-through;'>university have the snake store. Many students will go </span><span style='color:green;font-weight:700;'>quick bite </span>to <span style='color:red;font-weight:700;text-decoration:line-through;'>the bike so they would have a long term. So it will be very crowded and students meet with a lot of time.</span><span style='color:green;font-weight:700;'>eat.</span></p>
