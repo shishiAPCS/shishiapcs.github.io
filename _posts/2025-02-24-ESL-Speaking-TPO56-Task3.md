@@ -1,5 +1,5 @@
 ---
-title: "TPO64 Task3"
+title: "TPO56 Task3"
 mathjax: true
 layout: post
 categories: media
@@ -272,7 +272,7 @@ Finally, the last group of ants takes over, and their job is to bring the leaf p
 
 
 <details>
-<summary>class2026修改文稿点这里</summary>
+<summary>class2027修改文稿点这里</summary>
 
 <p><strong>Amanda</strong></p>
 <p>In <span style='color:red;font-weight:700;text-decoration:line-through;'>this </span><span style='color:green;font-weight:700;'>the </span>lecture, the speaker <span style='color:red;font-weight:700;text-decoration:line-through;'>told a </span><span style='color:green;font-weight:700;'>explained how leaf-cutter ants demonstrate </span>task <span style='color:red;font-weight:700;text-decoration:line-through;'>group for counting, and this is meant that some of others </span><span style='color:green;font-weight:700;'>partitioning. The ants </span>are <span style='color:red;font-weight:700;text-decoration:line-through;'>different with two or nice ones. And he said there are </span><span style='color:green;font-weight:700;'>divided into </span>three groups, <span style='color:green;font-weight:700;'>each with a specific job. The first group climbs up </span>the <span style='color:red;font-weight:700;text-decoration:line-through;'>first one is two candidates, </span><span style='color:green;font-weight:700;'>tree to cut off pieces of leaves. Instead of carrying the leaves down, they let them fall to the ground. The second group waits at the bottom </span>and <span style='color:red;font-weight:700;text-decoration:line-through;'>also </span><span style='color:green;font-weight:700;'>cuts </span>the <span style='color:red;font-weight:700;text-decoration:line-through;'>other three groups. So this is the finished job, and the signal one is cat leaf color. Then they finish it and </span><span style='color:green;font-weight:700;'>leaves into smaller pieces that are easier to carry. Finally, </span>the third <span style='color:red;font-weight:700;text-decoration:line-through;'>one, they also hold this way </span><span style='color:green;font-weight:700;'>group takes these smaller pieces back to the nest. This system </span>of <span style='color:red;font-weight:700;text-decoration:line-through;'>soul, </span><span style='color:green;font-weight:700;'>dividing tasks makes their work more efficient because each group specializes in a specific part of the process, allowing them to work faster </span>and <span style='color:red;font-weight:700;text-decoration:line-through;'>all those three groups, and also did it just so it is, so they all go nice to it will.</span><span style='color:green;font-weight:700;'>conserve energy.</span></p>
