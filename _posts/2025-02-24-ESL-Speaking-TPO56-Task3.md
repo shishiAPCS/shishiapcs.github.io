@@ -10,6 +10,11 @@ categories: media
 
 
 ## Reading
+<!-- Embed Audio Player -->
+<audio controls>
+  <source src="/assets/audio/TPO56_Task3_Task_Partitioning.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 ### Task Partitioning
 Different species of insects have different ways of organizing the essential tasks that need to be completed in order for them to survive. One way of accomplishing this process is through task partitioning. Insect groups that use this method divide, or partition, their work into several different stages that are ordered and performed in a fixed sequence by different groups of workers. An important benefit of this technique is increased efficiency, since the workers performing each task are specialized, which saves time and energy.
