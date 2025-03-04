@@ -72,6 +72,8 @@ Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台
 
 #### 对话机器人 Prompts 
 
+{% raw %}
+
 <details> 
 <summary>查单词并生成markdown表格</summary>
 
@@ -125,6 +127,8 @@ Provide the output in the following structured format:
 Now, improve the response based on these criteria.
 ````
 </details>
+
+{% endraw %}
 
 ### 语音转文字
 
