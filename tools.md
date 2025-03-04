@@ -71,8 +71,6 @@ Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台
 
 #### 对话机器人 Prompts 
 
-{% raw %}
-
 <details> 
 <summary>查单词并生成markdown表格</summary>
     
@@ -87,7 +85,7 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 <details> 
 <summary>托福口语稿修改</summary>
     
-````markdown
+<pre><code>
 You are an expert in TOEFL Speaking evaluation. Your task is to refine and improve a student's spoken response to achieve the highest possible score based on the TOEFL Speaking rubrics for Language Use and Topic Development.
 
 ### **Evaluation Criteria:**
@@ -124,10 +122,9 @@ Provide the output in the following structured format:
 **Listening Transcript (if applicable):** "[填写听力文本]"
 
 Now, improve the response based on these criteria.
-````
-</details>
+</code></pre>
 
-{% endraw %}
+</details>
 
 ### 语音转文字
 
