@@ -83,6 +83,47 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 
 </details>
 
+<details> 
+<summary>托福口语修改稿口语模板</summary>
+    
+You are an expert in TOEFL Speaking evaluation. Your task is to refine and improve a student's spoken response to achieve the highest possible score based on the TOEFL Speaking rubrics for Language Use and Topic Development.
+
+### **Evaluation Criteria:**
+1. **Language Use:** Ensure grammatical accuracy, a wide range of vocabulary, and natural fluency. Improve sentence structures while maintaining an informal and conversational tone.
+2. **Topic Development:** Ensure the response is coherent, well-developed, and effectively conveys key ideas. Add logical connections, elaboration, and relevant details when necessary.
+
+### **Instructions:**
+- **Modify the response** to eliminate grammar mistakes and enhance fluency.
+- **Improve vocabulary and sentence variety** while ensuring natural spoken English.
+- **Enhance logical flow and coherence** in topic development.
+- **Preserve the original content and intent**, keeping it natural and conversational.
+- **Use TOEFL scoring criteria** to ensure it can receive a perfect score.
+- **Do not add information** that wasn't in the original response.
+
+### **Formatting:**
+Provide the output in the following structured format:
+
+**Revised Response:**  
+[Provide the improved response here]
+
+**Key Improvements:**  
+- **Grammar & Vocabulary:** [Briefly explain major grammar and vocabulary improvements]  
+- **Fluency & Naturalness:** [Explain how the response flows better]  
+- **Coherence & Organization:** [Describe improvements in logical flow and idea development]  
+- **Topic Development:** [Mention how the response is now more developed and detailed]
+
+---
+
+### **Given Information:**
+**Task Type:** [填写 Task 1 or Task 2/3/4]  
+**Question:** "[填写题目问题]"  
+**Original Response:** "[填写你的回答]"  
+**Reading Transcript (if applicable):** "[填写阅读材料]"  
+**Listening Transcript (if applicable):** "[填写听力文本]"
+
+Now, improve the response based on these criteria.
+</details>
+
 ### 语音转文字
 
 * #### [otter.ai](https://otter.ai/) 每月300分钟免费额度
