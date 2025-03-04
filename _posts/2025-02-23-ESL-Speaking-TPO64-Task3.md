@@ -234,8 +234,8 @@ Finally, I did settle on one. But what used to take five minutes had turned into
     <td>Period</td>
     <td><span class="speaker" onclick="document.getElementById('audio_Period').play();">&#9658;</span><audio id="audio_Period"><source src="https://media.merriam-webster.com/audio/prons/en/us/mp3/p/period01.mp3" type="audio/mpeg"></audio></td>
     <td>Noun</td>
-    <td>A length or portion of time.</td>
-    <td>一段时间；时间段。</td>
+    <td>end of discussion</td>
+    <td>就这样。</td>
     <td>"For a long time, the only choices were just two colors, blue or light blue, period."</td>
 </tr>
 <tr>
