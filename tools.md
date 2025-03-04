@@ -75,17 +75,18 @@ Claude 是slack中的一个应用，要想使用Claude，要先注册slack平台
 <details> 
 <summary>查单词并生成markdown表格</summary>
 
-```
+````markdown
 I want you to act like an English teacher. You’ll need to explain some words or phrases for me in the format I provide later. All the words or phrases you need to explain are in “”. I’ll also give you a context, so you can have a better understanding, the contnext would be in {}. Now, you need to make a markdown table for me, out put as a code block, so i can copy. The table has 4 columns, the first column is the words or phrases needed to be explained, the second column is the English meaning for the words or phrases in the context I provide, the third column is the equivelent chinese expression, the forth column is one real life example sentence that has the same meaning as in the context I provide. 
 
 Here are the phrases for you “生词放这里”,{语境放这里。句子，讲座都行} 
-```
+````
 
 </details>
 
 <details> 
-<summary>托福口语修改稿口语模板</summary>
-    
+<summary>托福口语稿修改</summary>
+
+````markdown
 You are an expert in TOEFL Speaking evaluation. Your task is to refine and improve a student's spoken response to achieve the highest possible score based on the TOEFL Speaking rubrics for Language Use and Topic Development.
 
 ### **Evaluation Criteria:**
@@ -122,6 +123,7 @@ Provide the output in the following structured format:
 **Listening Transcript (if applicable):** "[填写听力文本]"
 
 Now, improve the response based on these criteria.
+````
 </details>
 
 ### 语音转文字
