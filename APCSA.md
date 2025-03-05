@@ -395,6 +395,187 @@ public class ReverseArray {
   
 </details>
 
+<details>
+  <summary>AP CSA Sorting Algorithms (AP CSA 排序算法)</summary>
+
+  <h3>1. Merge Sort (归并排序)</h3>
+
+  <h4>Merge Sort Implementation (归并排序实现)</h4>
+  {% highlight java %}
+import java.util.Arrays;
+
+public class MergeSortAPCSA {
+    // Public method to start the merge sort process
+    // 公共方法，开始归并排序
+    public static void mergeSort(int[] arr) {
+        if (arr.length <= 1) {
+            return; // Base case: A single-element array is already sorted
+            // 基本情况：单元素数组已经是有序的
+        }
+
+        // Step 1: Create a temporary array for merging
+        // 第一步：创建一个临时数组用于归并
+        int[] temp = new int[arr.length];
+
+        // Step 2: Call the recursive helper method to perform merge sort
+        // 第二步：调用递归辅助方法执行归并排序
+        mergeSortHelper(arr, 0, arr.length - 1, temp);
+    }
+
+    // Recursive helper method that splits the array into smaller subarrays
+    // 递归辅助方法，将数组拆分成更小的子数组
+    private static void mergeSortHelper(int[] arr, int left, int right, int[] temp) {
+        if (left < right) { // Base case: If left == right, there's only one element, so stop.
+            // 基本情况：如果 left == right，说明只有一个元素，无需继续
+            int mid = (left + right) / 2; // Find the middle index
+            // 找到中间索引
+
+            // Recursively sort the left half of the array
+            // 递归排序左半部分
+            mergeSortHelper(arr, left, mid, temp);
+
+            // Recursively sort the right half of the array
+            // 递归排序右半部分
+            mergeSortHelper(arr, mid + 1, right, temp);
+
+            // Merge the two sorted halves
+            // 归并两个已排序的部分
+            merge(arr, left, mid, right, temp);
+        }
+    }
+
+    // Merges two sorted halves of the array into a single sorted section
+    // 归并两个已排序的部分，使其成为一个有序部分
+    private static void merge(int[] arr, int left, int mid, int right, int[] temp) {
+        int i = left, j = mid + 1, k = left;
+        // i 指向左半部分的起始位置 (left)
+        // j 指向右半部分的起始位置 (mid + 1)
+        // k 指向临时数组 temp 的起始位置 (left)
+
+        // Step 1: Compare elements from both halves and place the smaller one in temp[]
+        // 第一步：比较左右两部分的元素，把较小的元素放入 temp[]
+        while (i <= mid && j <= right) {
+            if (arr[i] < arr[j]) {
+                temp[k] = arr[i++];
+            } else {
+                temp[k] = arr[j++];
+            }
+            k++;
+        }
+
+        // Step 2: Copy remaining elements from the left half
+        // 第二步：复制左半部分的剩余元素
+        while (i <= mid) {
+            temp[k++] = arr[i++];
+        }
+
+        // Step 3: Copy remaining elements from the right half
+        // 第三步：复制右半部分的剩余元素
+        while (j <= right) {
+            temp[k++] = arr[j++];
+        }
+
+        // Step 4: Copy sorted elements from temp[] back into the original array
+        // 第四步：将 temp[] 中的有序元素复制回原数组
+        for (k = left; k <= right; k++) {
+            arr[k] = temp[k];
+        }
+    }
+
+    // Main method to test Merge Sort
+    // 主方法，用于测试归并排序
+    public static void main(String[] args) {
+        int[] arr = {7, 2, 5, 3}; // Example array
+        // 示例数组
+        System.out.println("Before sorting: " + Arrays.toString(arr));
+        mergeSort(arr);
+        System.out.println("After sorting: " + Arrays.toString(arr));
+    }
+}
+  {% endhighlight %}
+
+  <h3>2. Selection Sort (选择排序)</h3>
+
+  <h4>Selection Sort Implementation (选择排序实现)</h4>
+  {% highlight java %}
+import java.util.Arrays;
+
+public class SortTest {
+    public static void selectionSort(int[] arr) {
+        // Iterate through each element of the array
+        // 遍历数组中的每个元素
+        for (int i = 0; i < arr.length - 1; i++) {
+            int minIndex = i; // Assume the first unsorted element is the smallest
+            // 假设第一个未排序的元素是最小的
+            
+            // Find the index of the smallest element in the unsorted part
+            // 在未排序部分中找到最小元素的索引
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j; // Update minIndex if a smaller element is found
+                    // 如果找到更小的元素，则更新 minIndex
+                }
+            }
+
+            // Swap the smallest element found with the first unsorted element
+            // 交换找到的最小元素与当前未排序部分的第一个元素
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {3, 86, -20, 14, 40}; // Example array
+        System.out.println("Before sorting: " + Arrays.toString(arr1));
+        selectionSort(arr1);
+        System.out.println("After sorting: " + Arrays.toString(arr1));
+    }
+}
+  {% endhighlight %}
+
+  <h3>3. Insertion Sort (插入排序)</h3>
+
+  <h4>Insertion Sort Implementation (插入排序实现)</h4>
+  {% highlight java %}
+import java.util.Arrays;
+
+public class SortTest {
+    public static void insertionSort(int[] arr) {
+        // Start from the second element and move through the array
+        // 从数组的第二个元素开始遍历
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i]; // The element to be inserted into the sorted portion
+            // 要插入到已排序部分的元素
+            int j = i - 1; // Start comparing with elements before the current one
+            // 从当前元素之前的元素开始比较
+
+            // Shift elements to the right to make space for insertion
+            // 将元素向右移动，为插入元素腾出空间
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j]; // Shift larger elements one position to the right
+                // 将较大的元素右移一个位置
+                j--; // Move the comparison index backward
+                // 继续向前比较
+            }
+            arr[j + 1] = key; // Insert the key at the correct position
+            // 将 key 插入到正确的位置
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {3, 86, -20, 14, 40, 55}; // Example array
+        System.out.println("Before sorting: " + Arrays.toString(arr1));
+        insertionSort(arr1);
+        System.out.println("After sorting: " + Arrays.toString(arr1));
+    }
+}
+  {% endhighlight %}
+
+</details>
+
+
+
 ---
 <h2>加分Project</h2>
 <details>
