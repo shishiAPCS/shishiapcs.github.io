@@ -122,6 +122,25 @@ Provide the output in the following structured format:
 **Listening Transcript (if applicable):** "[填写听力文本]"
 
 Now, improve the response based on these criteria.
+
+--- 
+### 例子
+
+### **Given Information:**
+**Task Type:** [Task3]  
+**Question:** "[Explain how the example of leaf-cutter ants illustrates the concept of task partitioning.]"  
+**Original Response:** "[Task parting is a strategy for the insect to help them work efficiently by dividing them into different groups and let them to work in a sequence In the listening passage, The professor shows the example of leaf cutter ends, which is that if they want to get their food. That is the leaves to the next. they first divided them into three groups. The first group's job is to climb up the tree and cutter leaves down.And the second groups of ans just waiting to help. They put the cutting lid from the first group into some smaller pieces, which is easy to carry part wave to the next. And the third groups of ans. Of course, their job is to take over all the smaller pieces of leaves to the next. So in these examples, they show that the ants are divided into different parts of groups and work in a sequence.]"  
+**Reading Transcript (if applicable):** "[Task Partitioning
+Different species of insects have different ways of organizing the essential tasks that need to be completed in order for them to survive. One way of accomplishing this process is through task partitioning. Insect groups that use this method divide, or partition, their work into several different stages that are ordered and performed in a fixed sequence by different groups of workers. An important benefit of this technique is increased efficiency, since the workers performing each task are specialized, which saves time and energy.]"  
+**Listening Transcript (if applicable):** "[Now, listen to part of a lecture in a biology class. Okay, now a good example of this is leaf-cutter ants—they use this kind of system when they need to get food—leaves—to their nest. What happens is that they are separated into three different groups, and each group has a different part in the process of transporting food back to the nest.
+The first group’s job is to climb up a tree and start cutting off pieces of leaves. But instead of carrying the leaf pieces back down the tree, the ants just let go of the pieces, so they fall to the ground below. After a while, all these leaf pieces collect in a pile at the bottom of the tree.
+Then there's a second group of ants waiting to help. This group’s job is to cut the leaves down into smaller, more manageable pieces that are easier to carry. Then they take these smaller pieces of leaves to a place that's partway back to the nest.
+Finally, the last group of ants takes over, and their job is to bring the leaf pieces from the trail to the nest. The system works well—since each ant has a specific job to do, the work gets done faster than if they were all working independently. And since none of the ants has to keep climbing up and down a tree, they can all do their jobs without tiring out too soon.]"
+
+Now, improve the response based on these criteria.
+
+---
+
 {% endhighlight %}
 
 </details>
