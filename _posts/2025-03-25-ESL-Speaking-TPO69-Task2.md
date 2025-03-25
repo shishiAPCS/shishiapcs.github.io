@@ -11,7 +11,7 @@ categories: media
 
 ## Reading
 
-Graduate Study Lounge Now Open to All Students 
+### Graduate Study Lounge Now Open to All Students 
 The university has decided to change its policy about Perkins Lounge. Previously, this study space was reserved for graduate students, but the university will now allow undergraduates to use Perkins Lounge as well. The Dean of Students explained: “The space is underutilized right now—there aren't a lot of graduate students making use of it—so there's room to allow additional students.” She also noted that the university has a problem with insufficient study space for undergraduates, since undergraduate enrollment at the university has increased in the last few years.
 
 ## Listening
