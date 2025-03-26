@@ -386,8 +386,8 @@ function loadClassList(preset) {
     var presets = {
     'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nAlexander\nJimmy\nTrinity\nHoward\nHanbo\nGloria\nCordelia",
     'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerry\nNina\nBill\nYukiWu\nSelina\nYukiYu\nTracy",
-    '2026Kylin': "Fielder\nLeon\nCicily\nSeanna\nRegina\nTom\nSteven\nMartin\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
-    '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nIsaiah\nKevin\nLauren\nWesley\nTina\nCamilia\nMichael\nJoyce\nAlice\nTomZhang\nAndy",
+    '2026Kylin': "Leon\nCicily\nSeanna\nRegina\nTom\nSteven\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
+    '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nAugust\nIsaiah\nMike\nKevin\nMeredith\nLauren\nWesley\nTina\nGeorge\nCamilia\nMichael\nJoyce\nAlice\nAndy\nMason",
     '2026Phoenix': "Sword\nKarl\nAugust\nRichard\nMike\nJenny\nMeredith\nKeven\nGeorge\nMason",
     'S2':                      
     "Karl\nZao\nMartin\nJoyce\nFielder\nSword\nKeven\nJenny\nLauren\nMike\nKevin\nJoe\nEric\nAndy\nTom\nMeredith\nAugust\nRichard\nCamilia\nWesley\nRaymond\nJason\nSteven\nGeorge\nIsaiah\nLeon\nSeanna\nBobby\nMichael\nRegina\nCarol\nVicky\nVictoria\nAlice\nSelina\nTina\nCicily\nMason\nClaire\nTomZhang",
