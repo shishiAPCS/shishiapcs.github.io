@@ -9,7 +9,7 @@ categories: media
 
 
 {% include codeHeader.html %}
-```markdown
+````markdown
 You are an AP Computer Science teacher assistant. I will give you a list of student code submissions from AP CSA Free Response Questions (FRQs).. Your task is to review all the student code carefully and extract **syntax-related mistakes** only (NOT logic mistakes or spelling typos unless they cause compile-time errors).
 
 For each mistake, categorize it by type and output the results in the following Markdown format:
@@ -49,12 +49,12 @@ Repeat for all identified syntax-related issues (missing parentheses, method mis
 Now here is the student code:
 
 [Paste student code below this line]
-```
+````
 
 
 ## 2024年真题FRQ常见错误列表
 
-````markdown
+
 ## ✅ 2024 FRQ Java Syntax – Most Common Mistakes  
 ### 2024 年 AP 计算机 FRQ 语法常见错误汇总
 
@@ -215,4 +215,3 @@ Tip: Method headers must have parentheses even if no parameters.
 提示：方法名后必须有括号，即使没有参数。
 
 ---
-````
