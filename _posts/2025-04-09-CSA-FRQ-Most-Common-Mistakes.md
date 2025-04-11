@@ -1,18 +1,18 @@
 ---
-title:  "CSA FRQ Java Syntax – Most Common Mistakes"
+title:  "CSA FRQ Java Syntax Most Common Mistakes"
 mathjax: true
 layout: post
 categories: media
 ---
 
-## CSA FRQ 语法常见错误汇总 Prompt：
+# CSA FRQ 语法常见错误汇总 Prompt：
 
 
 {% include codeHeader.html %}
 ````markdown
 You are an AP Computer Science teacher assistant. I will give you a list of student code submissions from AP CSA Free Response Questions (FRQs).. Your task is to review all the student code carefully and extract **syntax-related mistakes** only (NOT logic mistakes or spelling typos unless they cause compile-time errors).
 
-For each mistake, categorize it by type and output the results in the following Markdown format:
+For each mistake, categorize it by type and output the results in the following Markdown format code block:
 
 ## ✅ 2024 FRQ Java Syntax – Most Common Mistakes  
 ### 2024 年 AP 计算机 FRQ 语法常见错误汇总
@@ -48,11 +48,12 @@ Repeat for all identified syntax-related issues (missing parentheses, method mis
 
 Now here is the student code:
 
-[Paste student code below this line]
 ````
 
+---
+---
 
-## 2024年真题FRQ常见错误列表
+# 2024年真题FRQ常见错误列表
 
 
 ## ✅ 2024 FRQ Java Syntax – Most Common Mistakes  
@@ -215,3 +216,170 @@ Tip: Method headers must have parentheses even if no parameters.
 提示：方法名后必须有括号，即使没有参数。
 
 ---
+
+
+Here is the updated syntax mistake report for the **2023 FRQ Java submissions** you provided:
+
+---
+---
+
+# 2023年真题FRQ常见错误列表
+## ✅ 2023 FRQ Java Syntax – Most Common Mistakes  
+### 2023 年 AP 计算机 FRQ 语法常见错误汇总
+
+---
+
+## 🔍 Summary | 总览
+
+| **Mistake 错误类型** | **Description 描述** |
+|----------------------|----------------------|
+| **For Loop Syntax** | Incorrect separator in for loop conditions / for 循环条件中使用错误的分隔符 |
+| **ArrayList Access** | Using array syntax `[]` instead of `.get()` / 用数组语法访问 ArrayList |
+| **Return Type Mismatch** | Returning wrong type (e.g., `boolean` in `int` method) / 返回类型不匹配 |
+| **Misspelled Method Names** | Typos in method names causing compilation errors / 方法名拼写错误导致编译失败 |
+| **Missing Return Statement** | Method lacks required `return` statement / 方法缺少 return 语句 |
+| **Incorrect Assignment in Conditionals** | Using `=` instead of `==` in conditionals / 条件语句中误用赋值符号 |
+| **Constructor Variable Initialization** | Incorrect instance variable initialization / 构造函数中实例变量初始化错误 |
+| **Class Naming Convention** | Class name not capitalized / 类名未大写 |
+| **Enhanced For Loop Modification** | Modifying list during enhanced for loop / 在增强 for 循环中修改集合 |
+
+---
+
+### 1. 🧩 For Loop Syntax  
+#### for 循环语法错误
+
+```java
+// 错误示例
+for (int i = temperatures.size() -1, i >= 0, i--) 
+
+// 正确示例
+for (int i = temperatures.size() -1; i >= 0; i--)
+
+Tip: Use semicolons `;` to separate for loop clauses.  
+提示：for 循环的条件部分用分号分隔。
+```
+
+⸻
+
+### 2. 🧩 ArrayList Access  
+#### ArrayList 访问方式错误
+
+```java
+// 错误示例
+if (temperatures[i] < lower) 
+
+// 正确示例
+if (temperatures.get(i) < lower)
+
+Tip: Use `.get(index)` to access ArrayList elements.  
+提示：ArrayList 必须用 `.get(index)` 访问元素。
+```
+
+⸻
+
+### 3. 🧩 Return Type Mismatch  
+#### 返回类型不匹配
+
+```java
+// 错误示例
+public int findFreeBlock(...) {
+    return false; // 返回 boolean 给 int 方法
+}
+
+// 正确示例
+public int findFreeBlock(...) {
+    return -1; 
+}
+```
+
+⸻
+
+### 4. 🧩 Misspelled Method Names  
+#### 方法名拼写错误
+
+```java
+// 错误示例
+public int finFreeBlock(...) // 拼写错误: fin → find
+
+// 正确示例
+public int findFreeBlock(...)
+```
+
+⸻
+
+### 5. 🧩 Missing Return Statement  
+#### 缺少 return 语句
+
+```java
+// 错误示例
+public String getLines() {
+    // 没有 return 语句
+}
+
+// 正确示例
+public String getLines() {
+    return result;
+}
+```
+
+⸻
+
+### 6. 🧩 Incorrect Assignment in Conditionals  
+#### 条件语句中的赋值错误
+
+```java
+// 错误示例
+if (numberLine = 1) // 误用 = 代替 ==
+
+// 正确示例
+if (numberLine == 1)
+```
+
+⸻
+
+### 7. 🧩 Constructor Variable Initialization  
+#### 构造函数变量初始化错误
+
+```java
+// 错误示例
+public Sign(String w, int s) {
+    String word = w; // 创建了局部变量而非初始化实例变量
+}
+
+// 正确示例
+public Sign(String w, int s) {
+    this.word = w; // 正确初始化实例变量
+}
+```
+
+⸻
+
+### 8. 🧩 Class Naming Convention  
+#### 类名命名规范错误
+
+```java
+// 错误示例
+public class sign // 类名未大写
+
+// 正确示例
+public class Sign
+```
+
+⸻
+
+### 9. 🧩 Enhanced For Loop Modification  
+#### 增强 for 循环中修改集合
+
+```java
+// 错误示例
+for (double w : temperatures) {
+    temperatures.remove(w); // 运行时抛出 ConcurrentModificationException
+}
+
+// 正确示例
+for (int i = temperatures.size()-1; i >= 0; i--) {
+    temperatures.remove(i); // 倒序遍历删除
+}
+```
+
+⸻
