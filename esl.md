@@ -6,6 +6,48 @@ categories: media
 ---
 
 ---
+---
+
+## 托福和雅思成绩对照表
+<h2>Total Score Comparison Table</h2>
+<p>The table shows how TOEFL iBT total scores align with IELTS Academic overall band scores.</p>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; text-align: center;">
+  <thead>
+    <tr>
+      <th>TOEFL iBT Score<br>(0–120)</th>
+      <th>IELTS Band<br>(0–9)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>118</td><td>9</td></tr>
+    <tr><td>115</td><td>8.5</td></tr>
+    <tr><td>110</td><td>8</td></tr>
+    <tr><td>102</td><td>7.5</td></tr>
+    <tr><td>94</td><td>7</td></tr>
+    <tr><td>79</td><td>6.5</td></tr>
+    <tr><td>60</td><td>6</td></tr>
+    <tr><td>46</td><td>5.5</td></tr>
+    <tr><td>35</td><td>5</td></tr>
+    <tr><td>32</td><td>4.5</td></tr>
+    <tr><td>0–31</td><td>0–4</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top: 1.5em;">
+  🔗 <strong>Official Source / 官方网站：</strong> 
+  <a href="https://www.ets.org/toefl/institutions/ibt/compare-scores.html" target="_blank" rel="noopener noreferrer">
+    ETS: Compare TOEFL iBT and IELTS Scores / 托福和雅思成绩对照表
+  </a>
+</p>
+
+<p>
+  📘 <strong>Tip for Students / 小贴士：</strong> 
+  Want to check how each TOEFL section (Reading, Listening, Speaking, Writing) compares to IELTS? 
+  想知道托福每个部分（阅读、听力、口语、写作）大概相当于雅思几分？<br>
+  Just click the link above and scroll down a bit! 👉 上面这个链接点进去，往下滑就能看到啦～
+</p>
+
 
 ## 托福口语所需要的能力
 
