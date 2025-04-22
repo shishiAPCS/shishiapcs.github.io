@@ -8,7 +8,7 @@ categories: media
 ---
 ---
 
-## 托福和雅思成绩对照表
+## 托福雅思成绩换算
 <h2>Total Score Comparison Table</h2>
 <p>The table shows how TOEFL iBT total scores align with IELTS Academic overall band scores.</p>
 
@@ -48,7 +48,8 @@ categories: media
   Just click the link above and scroll down a bit! 👉 上面这个链接点进去，往下滑就能看到啦～
 </p>
 
-
+---
+---
 ## 托福口语所需要的能力
 
 <div class="markmap-container">
