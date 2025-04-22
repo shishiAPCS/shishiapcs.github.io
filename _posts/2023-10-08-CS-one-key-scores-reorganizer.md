@@ -384,7 +384,7 @@ function loadClassList(preset) {
     var classListTextArea = document.getElementById('class-list');
     // Define presets
     var presets = {
-    'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nAlexander\nJimmy\nTrinity\nHoward\nHanbo\nGloria\nCordelia",
+    'class2027Dragon':"Melody\nAmanda\nHarry\nSky\nEmily\nAlexander\nJimmy\nHanbo\nGloria\nCordelia",
     'class2027Lion':"KevinCai\nAngela\nClara\nJarvis\nRachel\nDorcas\nBianca\nJerry\nNina\nBill\nYukiWu\nSelina\nYukiYu\nTracy",
     '2026Kylin': "Leon\nCicily\nRegina\nTom\nSteven\nJason\nSelina\nCarol\nRaymond\nVicky\nBobby\nVictoria",
     '2026Rosefinch': "Eric\nJoe\nZao\nClaire\nAugust\nIsaiah\nMike\nKevin\nMeredith\nLauren\nWesley\nTina\nGeorge\nCamilia\nMichael\nJoyce\nAlice\nAndy\nMason",
