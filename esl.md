@@ -49,6 +49,58 @@ categories: media
 </p>
 
 ---
+## 雅思单科重考须知
+
+<details>
+  <summary><strong>雅思单科重考｜关键信息总览</strong></summary>
+  <div style="margin-top: 10px;">
+
+    <h3>什么是雅思单科重考？</h3>
+    <p>雅思单科重考允许考生在听、说、读、写四个科目中选择一个科目重考，无需四科全部重考，节省时间和费用。</p>
+    <p>仅适用于已参加一次全科雅思机考的考生，重考必须在原考试日期起60天内完成。</p>
+
+    <h3>适用考试类型</h3>
+    <ul>
+      <li>适用于雅思（IELTS）和IELTS for UKVI</li>
+      <li>包括学术类和培训类</li>
+      <li>仅限BC雅思机考考生</li>
+    </ul>
+
+    <h3>优势亮点</h3>
+    <ul>
+      <li><strong>聚焦单科，省时高效：</strong>只需重考未达标单科</li>
+      <li><strong>考试内容一致：</strong>题型、难度等与全科一致，无需额外准备</li>
+      <li><strong>成绩单灵活使用：</strong>可选择使用原始或更新后的成绩单</li>
+    </ul>
+
+    <h3>报名条件</h3>
+    <ul>
+      <li>在中国大陆参加过一次全科雅思机考并收到成绩单</li>
+      <li>自原成绩单上的考试日期起60天内可报名单科重考</li>
+      <li>须使用上次相同的身份证件报名</li>
+      <li>建议先确认成绩接收机构是否接受单科重考成绩</li>
+    </ul>
+
+    <h3>考试费用</h3>
+    <ul>
+      <li>报名费：1400元人民币</li>
+      <li>退考费：420元人民币</li>
+    </ul>
+
+    <h3>考点信息（中国大陆）</h3>
+    <ul>
+      <li><strong>北京：</strong>朝阳区东三环北路8号亮马河大厦办公楼1座3层</li>
+      <li><strong>上海：</strong>长宁区遵义路150号虹桥南丰城3期C1101</li>
+      <li><strong>广州：</strong>天河路208号粤海天河城大厦30层3007单元</li>
+      <li><strong>重庆：</strong>渝中区邹容路68号大都会东方广场商厦28楼05-07室</li>
+    </ul>
+
+    <p style="margin-top: 20px;"><a href="https://www.chinaielts.org/book-ielts/one-skill-retake" target="_blank">👉 查看官方原始信息</a></p>
+    
+  </div>
+</details>
+
+---
 
 ## 口语评分标准
 
