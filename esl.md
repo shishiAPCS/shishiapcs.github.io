@@ -49,8 +49,14 @@ categories: media
 </p>
 
 ---
-## 雅思单科重考须知
 
+## 托福 vs 雅思：全面对比指南
+<details>
+  <summary><strong>👉 下面这个链接点进去</strong></summary>
+  <p><a href="https://shishiapcs.github.io/ESL-toefl_vs_ielts/" target="_blank">https://shishiapcs.github.io/ESL-toefl_vs_ielts/</a></p>
+</details>
+
+## 雅思单科重考须知
 <details>
   <summary><strong>雅思单科重考｜关键信息总览</strong></summary>
   <div style="margin-top: 10px;">
