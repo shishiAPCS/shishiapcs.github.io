@@ -53,7 +53,7 @@ title: "AP CSA"
 </style>
 
 ---
-  - 考试时间：Wed, May 7, 2025
+  - 考试时间：Wed, May 7, 2026
   - [课堂规则](https://shishiapcs.github.io/CSA-Class-Rules/)
   - [课前需注册服务](https://shishiapcs.github.io/CSA-New-Semester/)
   - [主教材 runestone.academy](https://runestone.academy/)
