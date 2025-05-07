@@ -9,7 +9,7 @@ title: "AP CSA"
 <script>
   (function(){
     // Target date: set month/day/year/time
-    const targetDate = new Date("May 8, 2025 08:00:00").getTime();
+    const targetDate = new Date("May 8, 2026 08:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
