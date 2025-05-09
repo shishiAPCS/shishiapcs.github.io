@@ -133,7 +133,7 @@ categories: media
         </td>
         <td>
             Uses a full range of structures naturally and appropriately. Produces consistently accurate structures apart from ‘slips’ characteristic of native speaker speech.<br>
-            语法结构全面且恰当使用。除母语者偶有失误外，句子结构始终准确。
+            语法结构全面且恰当使用。除少数像母语者那样偶发的失误外，句子结构始终准确。
         </td>
         <td>
             Uses a full range of pronunciation features with precision and subtlety. Sustains flexible use of features throughout. Is effortless to understand.<br>
@@ -156,7 +156,7 @@ categories: media
         </td>
         <td>
             Uses a wide range of pronunciation features. Sustains flexible use of features, with only occasional lapses. Is easy to understand throughout; L1 accent has minimal effect on intelligibility.<br>
-            发音特征多样。灵活运用发音技巧，仅偶有疏漏。始终易于理解；母语口音几乎不影响可懂度。
+            发音特征多样。灵活运用发音技巧，仅偶有疏漏。始终易于理解；母语口音对理解几乎无影响。
         </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ categories: media
         </td>
         <td>
             Uses a range of complex structures with some flexibility. Frequently produces error‑free sentences, though some grammatical mistakes persist. Shows all the positive features of Band 6 and some, but not all, of the positive features of Band 8.<br>
-            较灵活地运用多种复杂句型。经常产生无误句子，但仍有少量语法错误。兼具6分的所有优势，并具备部分（但非全部）8分的积极特点。
+            较灵活地运用多种复杂句型。经常产生无误句子，但仍有少量语法错误。具备6分的所有积极特点，并兼有部分（但非全部）8分的特征。
         </td>
         <td>
             Uses a range of pronunciation features. Shows flexible use of features with occasional lapses. Is generally easy to understand; may require occasional listener effort.<br>
@@ -186,7 +186,7 @@ categories: media
         </td>
         <td>
             Has a wide enough vocabulary to discuss topics at length and make meaning clear in spite of inappropriacies. Generally paraphrases successfully.<br>
-            词汇量足以进行较长讨论并使意义清晰，尽管存在不当之处。通常能成功运用同义替换。
+            词汇量足以进行较长讨论并使意义清晰，尽管有些用词不当。通常能成功运用同义替换。
         </td>
         <td>
             Uses a mix of simple and complex structures, but with limited flexibility. May make frequent mistakes with complex structures, though these rarely cause comprehension problems.<br>
@@ -213,7 +213,7 @@ categories: media
         </td>
         <td>
             Shows all the positive features of Band 4 and some, but not all, of the positive features of Band 6.<br>
-            具备4分的所有积极特征，并兼具部分（但非全部）6分的优势。
+            具备4分的所有积极特征，并兼有部分（但非全部）6分的积极特点。
         </td>
     </tr>
     <tr>
