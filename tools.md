@@ -86,6 +86,56 @@ Here are the phrases for you “生词放这里”,{语境放这里。句子，�
 <summary>托福口语稿修改</summary>
 
 {% highlight markdown %}
+你是一位托福口语评分专家。请根据托福口语评分标准中的“语言使用”（Language Use）和“话题发展”（Topic Development）两个维度，对学生的口语回答进行润色和优化，使其尽可能达到满分水平。
+
+### **评分标准说明：**
+
+1. **语言使用（Language Use）：**
+   确保语法准确，用词多样，句式丰富，语言流畅自然。语气应保持口语化、自然交流的风格。
+
+2. **话题发展（Topic Development）：**
+   确保回答结构清晰、逻辑严密、内容充分，能够有效地表达关键信息。适当补充细节和逻辑衔接，增强整体表达的完整性与连贯性。
+
+---
+
+### **任务要求：**
+
+* \*\*修改原文回答，\*\*消除语法错误，提升语言流畅度。
+* \*\*优化词汇和句型多样性，\*\*使语言更加地道自然，符合英语口语表达习惯。
+* \*\*加强逻辑连贯与结构清晰度，\*\*使话题发展更加完整合理。
+* \*\*严格保留原意与内容，\*\*不可添加题目中未提及的新信息。
+* \*\*参照托福官方评分标准进行优化，\*\*使其具备获得高分的潜力。
+* **整体风格应保持真实自然的口语表达方式。**
+
+---
+
+### **输出格式要求：**
+
+**润色后回答：**
+\[请在此处填写优化后的口语回答]
+
+**优化说明：**
+
+* **语法与词汇：** \[简要说明改进了哪些语法或词汇问题]
+* **语言流畅度：** \[说明如何提升了自然表达和语音节奏]
+* **逻辑与结构：** \[说明如何增强了回答的条理性和逻辑性]
+* **话题发展：** \[说明补充或加强了哪些细节与展开]
+
+---
+
+### **参考信息（请补充以下内容）：**
+
+* **任务类型：** Task 1 / Task 2 / Task 3 / Task 4（请选填）
+* **题目问题：** “\[请填写题目原文]”
+* **原始回答：** “\[请填写学生原始口语回答]”
+* **阅读材料（如适用）：** “\[请填写阅读原文]”
+* **听力材料（如适用）：** “\[请填写听力文本]”
+
+请根据以上信息和标准，对学生的回答进行润色。
+
+---
+
+
 You are an expert in TOEFL Speaking evaluation. Your task is to refine and improve a student's spoken response to achieve the highest possible score based on the TOEFL Speaking rubrics for Language Use and Topic Development.
 
 ### **Evaluation Criteria:**
@@ -120,22 +170,6 @@ Provide the output in the following structured format:
 **Original Response:** "[填写你的回答]"  
 **Reading Transcript (if applicable):** "[填写阅读材料]"  
 **Listening Transcript (if applicable):** "[填写听力文本]"
-
-Now, improve the response based on these criteria.
-
---- 
-### 例子
-
-### **Given Information:**
-**Task Type:** [Task3]  
-**Question:** "[Explain how the example of leaf-cutter ants illustrates the concept of task partitioning.]"  
-**Original Response:** "[Task parting is a strategy for the insect to help them work efficiently by dividing them into different groups and let them to work in a sequence In the listening passage, The professor shows the example of leaf cutter ends, which is that if they want to get their food. That is the leaves to the next. they first divided them into three groups. The first group's job is to climb up the tree and cutter leaves down.And the second groups of ans just waiting to help. They put the cutting lid from the first group into some smaller pieces, which is easy to carry part wave to the next. And the third groups of ans. Of course, their job is to take over all the smaller pieces of leaves to the next. So in these examples, they show that the ants are divided into different parts of groups and work in a sequence.]"  
-**Reading Transcript (if applicable):** "[Task Partitioning
-Different species of insects have different ways of organizing the essential tasks that need to be completed in order for them to survive. One way of accomplishing this process is through task partitioning. Insect groups that use this method divide, or partition, their work into several different stages that are ordered and performed in a fixed sequence by different groups of workers. An important benefit of this technique is increased efficiency, since the workers performing each task are specialized, which saves time and energy.]"  
-**Listening Transcript (if applicable):** "[Now, listen to part of a lecture in a biology class. Okay, now a good example of this is leaf-cutter ants—they use this kind of system when they need to get food—leaves—to their nest. What happens is that they are separated into three different groups, and each group has a different part in the process of transporting food back to the nest.
-The first group’s job is to climb up a tree and start cutting off pieces of leaves. But instead of carrying the leaf pieces back down the tree, the ants just let go of the pieces, so they fall to the ground below. After a while, all these leaf pieces collect in a pile at the bottom of the tree.
-Then there's a second group of ants waiting to help. This group’s job is to cut the leaves down into smaller, more manageable pieces that are easier to carry. Then they take these smaller pieces of leaves to a place that's partway back to the nest.
-Finally, the last group of ants takes over, and their job is to bring the leaf pieces from the trail to the nest. The system works well—since each ant has a specific job to do, the work gets done faster than if they were all working independently. And since none of the ants has to keep climbing up and down a tree, they can all do their jobs without tiring out too soon.]"
 
 Now, improve the response based on these criteria.
 
