@@ -723,7 +723,6 @@ public class SortTest {
 <h2>End of semester project</h2>
 <details>
     <summary>点这里查看详情</summary>
-
 <h2 id="-post-ap-project-open-ended-creative-challenge-"><strong>Post-AP Project: Open-Ended Creative Challenge</strong></h2>
 <p>After the AP CSA exam, you have time to design your own final project. This is your chance to reflect on your CS journey, explore your interests, and create something meaningful, fun, or challenging.</p>
 <p>You will be graded on <strong>participation</strong>, <strong>weekly progress</strong>, and a <strong>final artifact</strong> of your choosing. This will culminate in a <strong>showcase presentation</strong> during the last week.</p>
@@ -743,7 +742,7 @@ public class SortTest {
 <td>Week 1</td>
 <td>May 12–16</td>
 <td><strong>Brainstorming &amp; Kickoff</strong></td>
-<td><strong>By Wednesday (May 14):</strong> Submit your project idea and goals via 交作业page</td>
+<td><strong>By Wednesday (May 14):</strong> Submit your project idea and goals via 交作业 page</td>
 </tr>
 <tr>
 <td></td>
@@ -784,59 +783,6 @@ public class SortTest {
 </ul>
 </li>
 </ul>
-<hr>
-<h3 id="-create-your-own-rubric-required-"><strong>Create Your Own Rubric (Required)</strong></h3>
-<p>You will design your own grading rubric to go along with your final project. This rubric should reflect what you think are the most important qualities of your work. You’ll submit this rubric with your final artifact, and it will help guide how your project is evaluated.</p>
-<h4 id="-how-to-build-your-rubric-"><strong>How to Build Your Rubric:</strong></h4>
-<ul>
-<li>Choose <strong>3–5 categories</strong> that are meaningful for your project.</li>
-<li>Use a consistent point scale (e.g., 1–5 or 1–10 for each category).</li>
-<li><strong>Customize the descriptions</strong> to match the nature of your project.</li>
-<li>You can <strong>use the example below</strong> as a guide, but feel free to add, remove, or rename categories.</li>
-</ul>
-<h4 id="-example-rubric-template-customize-this-"><strong>Example Rubric Template (Customize This!)</strong></h4>
-<table>
-<thead>
-<tr>
-<th><strong>Category</strong></th>
-<th><strong>Description (customize for your project!)</strong></th>
-<th><strong>Max Points</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Creativity &amp; Originality</td>
-<td>How unique or innovative is your idea or approach?</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Technical Execution</td>
-<td>Is your code or product functional, well-structured, and effective?</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Communication &amp; Clarity</td>
-<td>Is the project well-presented or explained clearly (code, slides, video)?</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Personal Challenge</td>
-<td>Did this push your comfort zone? Did you explore new concepts or tools?</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Completeness &amp; Effort</td>
-<td>Is the project thoughtfully developed and finished with care?</td>
-<td>10</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Total Points: /50</strong> (You can adjust this scale if your rubric uses different weights or categories)</p>
-<blockquote>
-<p><strong>Reminder:</strong> Your rubric should match your project. For example, if you&#39;re making a teaching video, “Clarity” might be more important than “Technical Execution.” If you&#39;re coding something complex, you might want to focus on design and logic quality.</p>
-</blockquote>
-<hr>
-<p>Got it! Here&#39;s the <strong>final, updated section</strong> with the added submission instructions. It now includes the <strong>reminder</strong>, and a clear, final point labeled <strong>How to Submit</strong>, specifying weekly check-ins and final artifact delivery:</p>
 <hr>
 <h3 id="-create-your-own-rubric-required-"><strong>Create Your Own Rubric (Required)</strong></h3>
 <p>You will design your own grading rubric to go along with your final project. This rubric should reflect what you think are the most important qualities of your work. You’ll submit this rubric with your final artifact, and it will help guide how your project is evaluated.</p>
