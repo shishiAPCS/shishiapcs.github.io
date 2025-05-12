@@ -720,6 +720,198 @@ public class SortTest {
     </ul>
 </details>
 
+<h2>End of semester project</h2>
+<details>
+    <summary>点这里查看详情</summary>
+
+<h2 id="-post-ap-project-open-ended-creative-challenge-"><strong>Post-AP Project: Open-Ended Creative Challenge</strong></h2>
+<p>After the AP CSA exam, you have time to design your own final project. This is your chance to reflect on your CS journey, explore your interests, and create something meaningful, fun, or challenging.</p>
+<p>You will be graded on <strong>participation</strong>, <strong>weekly progress</strong>, and a <strong>final artifact</strong> of your choosing. This will culminate in a <strong>showcase presentation</strong> during the last week.</p>
+<hr>
+<h3 id="-timeline-milestones-"><strong>Timeline &amp; Milestones</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Week</strong></th>
+<th><strong>Dates</strong></th>
+<th><strong>Focus</strong></th>
+<th><strong>Milestone / Deliverable</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Week 1</td>
+<td>May 12–16</td>
+<td><strong>Brainstorming &amp; Kickoff</strong></td>
+<td><strong>By Wednesday (May 14):</strong> Submit your project idea and goals via 交作业page</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>By Friday (May 16):</strong> Show initial setup or outline of your project (code, doc, sketch, etc.)</td>
+</tr>
+<tr>
+<td>Week 2</td>
+<td>May 19–23</td>
+<td><strong>Development &amp; Check-In</strong></td>
+<td><strong>By Friday (May 23):</strong> Submit progress checkpoint + 1-paragraph reflection</td>
+</tr>
+<tr>
+<td>Week 3</td>
+<td>May 26–30</td>
+<td><strong>Wrap-Up &amp; Showcase</strong></td>
+<td><strong>By Wednesday (May 28):</strong> Submit final artifact + self-created rubric + reflection</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Exhibition Days</strong></td>
+<td><strong>Thursday and Friday (May 29–30):</strong> Final showcase/presentation in class</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-project-guidelines-"><strong>Project Guidelines</strong></h3>
+<ul>
+<li><strong>Format:</strong> You choose (video, slide deck, program, blog, infographic, mini-game, tutorial, etc.)</li>
+<li><p><strong>Must include:</strong></p>
+<ul>
+<li>A <strong>final product</strong> or artifact</li>
+<li>A <strong>self-designed rubric</strong> (see below)</li>
+<li>A <strong>brief reflection</strong> (what you learned, enjoyed, or would do differently)</li>
+<li><strong>Weekly checkpoints</strong> showing steady progress</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="-create-your-own-rubric-required-"><strong>Create Your Own Rubric (Required)</strong></h3>
+<p>You will design your own grading rubric to go along with your final project. This rubric should reflect what you think are the most important qualities of your work. You’ll submit this rubric with your final artifact, and it will help guide how your project is evaluated.</p>
+<h4 id="-how-to-build-your-rubric-"><strong>How to Build Your Rubric:</strong></h4>
+<ul>
+<li>Choose <strong>3–5 categories</strong> that are meaningful for your project.</li>
+<li>Use a consistent point scale (e.g., 1–5 or 1–10 for each category).</li>
+<li><strong>Customize the descriptions</strong> to match the nature of your project.</li>
+<li>You can <strong>use the example below</strong> as a guide, but feel free to add, remove, or rename categories.</li>
+</ul>
+<h4 id="-example-rubric-template-customize-this-"><strong>Example Rubric Template (Customize This!)</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description (customize for your project!)</strong></th>
+<th><strong>Max Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creativity &amp; Originality</td>
+<td>How unique or innovative is your idea or approach?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Technical Execution</td>
+<td>Is your code or product functional, well-structured, and effective?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Communication &amp; Clarity</td>
+<td>Is the project well-presented or explained clearly (code, slides, video)?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Personal Challenge</td>
+<td>Did this push your comfort zone? Did you explore new concepts or tools?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Completeness &amp; Effort</td>
+<td>Is the project thoughtfully developed and finished with care?</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Points: /50</strong> (You can adjust this scale if your rubric uses different weights or categories)</p>
+<blockquote>
+<p><strong>Reminder:</strong> Your rubric should match your project. For example, if you&#39;re making a teaching video, “Clarity” might be more important than “Technical Execution.” If you&#39;re coding something complex, you might want to focus on design and logic quality.</p>
+</blockquote>
+<hr>
+<p>Got it! Here&#39;s the <strong>final, updated section</strong> with the added submission instructions. It now includes the <strong>reminder</strong>, and a clear, final point labeled <strong>How to Submit</strong>, specifying weekly check-ins and final artifact delivery:</p>
+<hr>
+<h3 id="-create-your-own-rubric-required-"><strong>Create Your Own Rubric (Required)</strong></h3>
+<p>You will design your own grading rubric to go along with your final project. This rubric should reflect what you think are the most important qualities of your work. You’ll submit this rubric with your final artifact, and it will help guide how your project is evaluated.</p>
+<h4 id="-how-to-build-your-rubric-"><strong>How to Build Your Rubric:</strong></h4>
+<ul>
+<li>Choose <strong>3–5 categories</strong> that are meaningful for your project.</li>
+<li>Use a consistent point scale (e.g., 1–5 or 1–10 for each category).</li>
+<li><strong>Customize the descriptions</strong> to match the nature of your project.</li>
+<li>You can <strong>use the example below</strong> as a guide, but feel free to add, remove, or rename categories.</li>
+</ul>
+<h4 id="-example-rubric-template-customize-this-"><strong>Example Rubric Template (Customize This!)</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Description (customize for your project!)</strong></th>
+<th><strong>Max Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creativity &amp; Originality</td>
+<td>How unique or innovative is your idea or approach?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Technical Execution</td>
+<td>Is your code or product functional, well-structured, and effective?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Communication &amp; Clarity</td>
+<td>Is the project well-presented or explained clearly (code, slides, video)?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Personal Challenge</td>
+<td>Did this push your comfort zone? Did you explore new concepts or tools?</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Completeness &amp; Effort</td>
+<td>Is the project thoughtfully developed and finished with care?</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Points: /50</strong> (You can adjust this scale if your rubric uses different weights or categories)</p>
+<blockquote>
+<p><strong>Reminder:</strong> Your rubric should match your project. For example, if you&#39;re making a teaching video, “Clarity” might be more important than “Technical Execution.” If you&#39;re coding something complex, you might want to focus on design and logic quality.</p>
+</blockquote>
+<hr>
+<h3 id="-how-to-submit-"><strong>How to Submit</strong></h3>
+<ul>
+<li><p><strong>Weekly Updates &amp; Milestones</strong>
+Submit your progress updates (written description, bullet points, or summary) on our homework collection site:
+<strong><a href="https://shishiapcs.github.io/CS-Homework-Collection/">https://shishiapcs.github.io/CS-Homework-Collection/</a></strong></p>
+</li>
+<li><p><strong>Final Artifact &amp; Rubric</strong>
+Submit your final project and scoring rubric <strong>by Wednesday (May 28)</strong> using one of the following methods:</p>
+<ul>
+<li><strong>Airdrop</strong> (if you use a Mac): Send directly to the teacher before class ends</li>
+<li><strong>Flash Drive</strong>: Bring your files and the teacher will copy them directly</li>
+</ul>
+</li>
+</ul>
+<p>Make sure your submission includes:</p>
+<ul>
+<li>The <strong>project artifact</strong> (file, folder, or link)</li>
+<li>Your <strong>custom rubric</strong></li>
+<li>Your <strong>reflection paragraph</strong></li>
+</ul>
+<hr>
+</details>
+
 ---
 ## Core Concepts:<br>核心知识点
 
