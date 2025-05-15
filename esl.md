@@ -394,45 +394,76 @@ categories: media
 ---
 ---
 
-## 托福口语所需要的能力
+## ESL口语所需要的能力
 
 <div class="markmap-container">
 <div class="markmap">
 <script type="text/template">
 
-# TOEFL Speaking Skills <br> 能力图
+# TOEFL & IELTS Speaking Skills <br> 托福与雅思口语能力图
 
-## All the tasks <br> 4道题都需要的能力
+## All tasks / General speaking ability <br> 所有题型/通用能力
 
-### Effective choice of vocabulary <br> 有效的词汇选择
+### Speak fluently and coherently <br> 流利且连贯表达  
+#### Avoid unnatural pauses, self-corrections, or repetition <br> 避免不自然的停顿、自我修正或重复  
+#### Use discourse markers effectively <br> 有效使用话语衔接词  
 
-### Effective use of sentences <br> 有效的句子使用
+### Use appropriate and precise vocabulary <br> 词汇运用恰当且精准  
+#### Use a wide range of vocabulary <br> 使用丰富词汇  
+#### Paraphrase naturally <br> 自然地同义替换表达  
+#### Use idiomatic expressions when appropriate <br> 适当使用地道表达  
 
-### Speak fluently <br> 流利表达
+### Use a range of grammar structures accurately <br> 使用多样语法结构且准确  
+#### Mix simple and complex sentence types <br> 混合使用简单与复杂句式  
+#### Reduce grammar errors that hinder meaning <br> 减少妨碍理解的语法错误  
 
-## TASK 1 <br> 第一题需要的能力
+### Use clear and natural pronunciation <br> 发音清晰自然  
+#### Control intonation, stress, and rhythm <br> 控制语调、重音与语速节奏  
+#### Be easily understood by listeners <br> 听者容易理解  
 
-### Provide reasons to support opinion <br> 提供理由支持观点
+---
 
-#### Learn the common reasons <br> 学习常见的理由
+## TOEFL Task 1 <br> 托福第1题（独立口语）
 
-### Develop reasons <br> 发展理由
+### Express and support opinions clearly <br> 清晰表达并支持观点  
+#### Provide reasons to support opinion <br> 提供理由支持观点  
+#### Learn common reasons and examples <br> 学习常见理由与例子  
 
-#### Learn how to develop the reasons <br> 学习如何发展理由
+### Develop and organize ideas <br> 展开并组织观点  
+#### Structure answers logically <br> 合理安排回答结构  
+#### Elaborate on ideas with details <br> 用细节展开观点  
 
-## TASK 2 3 4 <br> 2 3 4题需要的能力
+---
 
-### Understand the reading passage <br> 理解阅读材料
+## TOEFL Task 2/3/4 <br> 托福第2/3/4题（综合口语）
 
-#### Read for main ideas and important details efficiently <br> 高效地阅读主要观点和重要细节
+### Understand academic reading materials <br> 理解学术阅读材料  
+#### Read for main ideas and details <br> 提取主旨与重要细节  
 
-### Understand the listening materials <br> 理解听力材料
+### Understand academic listening materials <br> 理解学术听力内容  
+#### Identify speaker’s reasons, examples, or arguments <br> 理解说话者的理由、例子或论点  
 
-#### Understand the speaker's reasons/examples/lectures <br> 理解演讲者的理由/例子/讲座
+### Identify key points and relationships <br> 提取要点及其之间的关系  
 
-### Identify the key points <br> 识别关键点
+### Take useful notes <br> 做好有效笔记  
+#### Focus on capturing structure and key content <br> 抓住结构与核心信息  
 
-### Take good notes that aid your response <br> 做好有助于你回答的笔记
+### Summarize and synthesize information <br> 总结并整合信息  
+#### Combine reading and listening points effectively <br> 有效结合听力与阅读信息  
+
+---
+
+## IELTS-specific Focus Areas <br> 雅思特有能力
+
+### Maintain extended responses <br> 维持较长时间的表达  
+#### Speak at length with minimal hesitation <br> 几乎无停顿地持续表达  
+
+### Respond appropriately to unfamiliar topics <br> 恰当地回应陌生话题  
+#### Adapt vocabulary and structure to different contexts <br> 根据语境调整词汇和结构  
+
+### Show awareness of register and collocation <br> 注意语体风格与词语搭配  
+#### Use formal/informal language appropriately <br> 恰当使用正式或非正式表达  
+
 
 </script>
 </div>
