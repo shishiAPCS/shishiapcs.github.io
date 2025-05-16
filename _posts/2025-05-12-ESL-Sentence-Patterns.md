@@ -97,7 +97,7 @@ categories: media
 
 📘 **Example** (from an economics paper):
 
-> *What determines consumer behavior **is a complex set of psychological and economic factors**.*
+> *What determines consumer behavior is **a complex set of psychological and economic factors**.*
 
 🈶 中文翻译：
 
