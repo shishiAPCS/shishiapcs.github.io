@@ -760,13 +760,13 @@ public class SortTest {
 <td>Week 3</td>
 <td>May 26–30</td>
 <td><strong>Wrap-Up &amp; Showcase</strong></td>
-<td><strong>By Wednesday (May 28):</strong> Submit final artifact + self-created rubric + reflection</td>
+<td><strong>By Thursday (May 29):</strong> Submit final artifact + self-created rubric + reflection</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td><strong>Exhibition Days</strong></td>
-<td><strong>Thursday and Friday (May 29–30):</strong> Final showcase/presentation in class</td>
+<td><strong>Friday (May 30):</strong> Final showcase/presentation in the temple</td>
 </tr>
 </tbody>
 </table>
