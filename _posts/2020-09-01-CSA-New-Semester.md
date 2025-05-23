@@ -17,13 +17,13 @@ Last Name:  [填写你的中文姓]
 Email:      [邮箱无限制]
 Password:   [不要忘记]
 Confirm Password: 
-Course Name:       [CSA_2023_Fall]
+Course Name:       [填写shishi_fall_25]
 I Agree:            I have read and accepted your privacy policy, terms, and conditions. [勾选]
 Create Course:     Make course after registering (instructors only) [**不要**勾选这条]
 
 支持 Runestone Academy：[点 sorry, not Today]
 ```
-完成后，点击 `Textbooks` ➡️ `AP CSAwesome` 进入主教材。
+完成后，点击 `Textbooks` ➡️ `CSAwesome2` 进入主教材。
 
 ## 辅助教材1
 - [AP Computer Science A (Nitro) 2023](https://codehs.com/go/71DF7)
