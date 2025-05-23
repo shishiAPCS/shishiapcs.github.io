@@ -5,7 +5,7 @@ layout: post
 
 # 需要注册的网站：
 
-## 主教材 CSAwesome
+## 主教材 CSAwesome2
 访问 [runestone.academy](https://runestone.academy/)
 - 登录：点击 `log in`，输入账号和密码。
 - 注册：无账号时，点击左上角 `sign up` 进行注册。
