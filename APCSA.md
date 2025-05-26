@@ -867,83 +867,66 @@ Submit your final project and scoring rubric <strong>by Wednesday (May 28)</stro
 
 # AP Computer Science A
 
-## Unit 1 Primitive Types 2.5%-5% <br> 1. 原始类型 2.5%-5%
-### 1.1 Why Programming? Why Java?<br>为什么编程？为什么是Java？
-### 1.2 Variables and Data Types<br>变量和数据类型
-### 1.3 Expressions and Assignment Statements<br>表达式和赋值语句
-### 1.4 Compound Assignment Operators<br>复合赋值运算符
-### 1.5 Casting and Ranges of Variables<br>类型转换和变量范围
+## Unit 1 Using Objects and Methods 15%–25%<br>1. 使用对象与方法 15%–25%
+### 1.1 Introduction to Algorithms, Programming, and Compilers<br>算法、编程与编译器简介
+### 1.2 Variables and Data Types<br>变量与数据类型
+### 1.3 Expressions and Output<br>表达式与输出
+### 1.4 Assignment Statements and Input<br>赋值语句与输入
+### 1.5 Casting and Range of Variables<br>类型转换与变量范围
+### 1.6 Compound Assignment Operators<br>复合赋值运算符
+### 1.7 Application Program Interface (API) and Libraries<br>应用程序接口与库
+### 1.8 Documentation with Comments<br>用注释进行文档说明
+### 1.9 Method Signatures<br>方法签名
+### 1.10 Calling Class Methods<br>调用类方法
+### 1.11 Math Class<br>Math类
+### 1.12 Objects: Instances of Classes<br>对象：类的实例
+### 1.13 Object Creation and Storage (Instantiation)<br>对象的创建与存储（实例化）
+### 1.14 Calling Instance Methods<br>调用实例方法
+### 1.15 String Manipulation<br>字符串操作
 
-## Unit 2 Using Objects 5%-7.5% <br> 2. 使用对象 5%-7.5%
-### 2.1 Objects - Instances of Classes<br>对象 - 类的实例
-### 2.2 Creating and Storing Objects (Instantiation)<br>创建和存储对象（实例化）
-### 2.3 Calling a Void Method<br>调用无返回值的方法
-### 2.4 Calling a Void Method with Parameters<br>带参数调用无返回值的方法
-### 2.5 Calling a Non-void Method<br>调用有返回值的方法
-### 2.6 String Objects, Concatenation, Literals, and More<br>字符串对象，串联，字面量等
-### 2.7 String Methods<br>字符串方法
-### 2.8 Wrapper Classes - Integer and Double<br>包装类 - 整数和双精度浮点值
-### 2.9 Using the Math Class<br>使用Math类
+## Unit 2 Selection and Iteration 25%–35%<br>2. 选择与迭代 25%–35%
+### 2.1 Algorithms with Selection and Repetition<br>含选择与重复的算法
+### 2.2 Boolean Expressions<br>布尔表达式
+### 2.3 if Statements<br>if 语句
+### 2.4 Nested if Statements<br>嵌套 if 语句
+### 2.5 Compound Boolean Expressions<br>复合布尔表达式
+### 2.6 Comparing Boolean Expressions<br>布尔表达式的比较
+### 2.7 while Loops<br>while 循环
+### 2.8 for Loops<br>for 循环
+### 2.9 Implementing Selection and Iteration Algorithms<br>实现选择与迭代算法
+### 2.10 Implementing String Algorithms<br>实现字符串算法
+### 2.11 Nested Iteration<br>嵌套迭代
+### 2.12 Informal Run-Time Analysis<br>非正式运行时间分析
 
-## Unit 3 Boolean Expressions and if Statements 15%-17.5%<br>3. 布尔表达式和if语句 15%-17.5%
-### 3.1 Boolean Expressions<br>布尔表达式
-### 3.2 if Statements and Control Flow<br>if语句和控制流
-### 3.3 if-else Statements<br>if-else语句
-### 3.4 else if Statements<br>else if语句
-### 3.5 Compound Boolean Expressions<br>复合布尔表达式
-### 3.6 Equivalent Boolean Expressions<br>等价布尔表达式
-### 3.7 Comparing Objects<br>比较对象
+## Unit 3 Class Creation 10%–18%<br>3. 类的创建 10%–18%
+### 3.1 Abstraction and Program Design<br>抽象与程序设计
+### 3.2 Impact of Program Design<br>程序设计的影响
+### 3.3 Anatomy of a Class<br>类的结构
+### 3.4 Constructors<br>构造器
+### 3.5 Methods: How to Write Them<br>方法：如何编写
+### 3.6 Methods: Passing and Returning References of an Object<br>方法：传递与返回对象引用
+### 3.7 Class Variables and Methods<br>类变量与类方法
+### 3.8 Scope and Access<br>作用域与访问权限
+### 3.9 this Keyword<br>this 关键字
 
-## Unit 4 Iteration 17.5%-22.5%<br>4. 迭代 17.5%-22.5%
-### 4.1 while Loops<br>while循环
-### 4.2 for Loops<br>for循环
-### 4.3 Developing Algorithms Using Strings<br>使用字符串开发算法
-### 4.4 Nested Iteration<br>嵌套迭代
-### 4.5 Informal Code Analysis<br>非正式代码分析
-
-## Unit 5 Writing classes 5%-7.5%<br>5. 编写类 5%-7.5%
-### 5.1 Anatomy of a Class<br>类的构成
-### 5.2 Constructors<br>构造器
-### 5.3 Documentation with Comments<br>使用注释进行文档化
-### 5.4 Accessor Methods<br>访问器方法
-### 5.5 Mutator Methods<br>改变器方法
-### 5.6 Writing Methods<br>编写方法
-### 5.7 Static Variables and Methods<br>静态变量和方法
-### 5.8 Scope and Access<br>范围和访问
-### 5.9 this Keyword<br>this关键字
-### 5.10 Ethical and Social Implications of Computing Systems<br>计算系统的伦理和社会影响
-
-## Unit 6 Array 10%-15%<br>6. 数组 10%-15%
-### 6.1 Array Creation and Access<br>创建和访问数组
-### 6.2 Traversing Arrays<br>遍历数组
-### 6.3 Enhanced for Loop for Arrays<br>增强的数组for循环
-### 6.4 Developing Algorithms Using Arrays<br>使用数组开发算法
-
-## Unit 7 ArrayList 2.5%-7.5%<br>7. 数组列表 2.5%-7.5%
-### 7.1 Introduction to ArrayList<br>介绍ArrayList
-### 7.2 ArrayList Methods<br>ArrayList方法
-### 7.3 Traversing ArrayLists<br>遍历ArrayLists
-### 7.4 Developing Algorithms Using ArrayLists<br>使用ArrayLists开发算法
-### 7.5 Searching<br>搜索
-### 7.6 Sorting<br>排序
-### 7.7 Ethical Issues Around Data Collection<br>数据收集的伦理问题
-
-## Unit 8 2d Array 7.5%-10%<br>8. 二维数组 7.5%-10%
-### 8.1 2D Arrays<br>2D数组
-### 8.2 Traversing 2D Arrays<br>遍历2D数组
-
-## Unit 9 Inheritance 5%-10%<br>9. 继承 5%-10%
-### 9.1 Creating Superclasses and Subclasses<br>创建超类和子类
-### 9.2 Writing Constructors for Subclasses<br>为子类编写构造器
-### 9.3 Overriding Methods<br>覆盖方法
-### 9.4 super Keyword<br>super关键字
-### 9.5 Creating References Using Inheritance Hierarchies<br>使用继承层次创建引用
-### 9.6 Polymorphism<br>多态
-### 9.7 Object Superclass<br>对象超类
-
-## Unit 10 Recursion 5%-7.5%<br>10. 递归 5%-7.5%
-### 10.1 Recursion<br>递归
-### 10.2 Recursive Searching and Sorting<br>递归搜索和排序
+## Unit 4 Data Collections 30%–40%<br>4. 数据集合 30%–40%
+### 4.1 Ethical and Social Issues Around Data Collection<br>数据收集的伦理与社会问题
+### 4.2 Introduction to Using Data Sets<br>数据集使用简介
+### 4.3 Array Creation and Access<br>数组的创建与访问
+### 4.4 Array Traversals<br>数组遍历
+### 4.5 Implementing Array Algorithms<br>实现数组算法
+### 4.6 Using Text Files<br>使用文本文件
+### 4.7 Wrapper Classes<br>包装类
+### 4.8 ArrayList Methods<br>ArrayList 方法
+### 4.9 ArrayList Traversals<br>ArrayList 遍历
+### 4.10 Implementing ArrayList Algorithms<br>实现 ArrayList 算法
+### 4.11 2D Array Creation and Access<br>二维数组的创建与访问
+### 4.12 2D Array Traversals<br>二维数组遍历
+### 4.13 Implementing 2D Array Algorithms<br>实现二维数组算法
+### 4.14 Searching Algorithms<br>搜索算法
+### 4.15 Sorting Algorithms<br>排序算法
+### 4.16 Recursion<br>递归
+### 4.17 Recursive Searching and Sorting<br>递归搜索与排序
 
 </script>
 </div>
