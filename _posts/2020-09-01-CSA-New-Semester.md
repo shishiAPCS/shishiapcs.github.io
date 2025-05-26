@@ -25,6 +25,9 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 ```
 完成后，点击 `Textbooks` ➡️ `CSAwesome2` 进入主教材。
 
+## IDE 开发环境
+- [blueJ](https://www.bluej.org/)
+
 ## 辅助教材1
 - [AP Computer Science A (Nitro) 2023](https://codehs.com/go/71DF7)
 
@@ -33,5 +36,3 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 - 完成注册后加入讨论组：[https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes](https://hypothes.is/groups/E71bgaBL/csa-2023-fall-notes)
 
 
-## IDE
-- [blueJ](https://www.bluej.org/)
