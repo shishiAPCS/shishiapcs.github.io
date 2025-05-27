@@ -180,18 +180,33 @@ function extractRawScoresWithName() {
     const scores = [];
     for (let entry of scoreListRaw) {
         let parts;
-        if (entry.includes("\t")) {
-            parts = entry.split("\t");
+        // Remove leading/trailing whitespace from the entire entry first
+        const trimmedEntry = entry.trim(); 
+        if (!trimmedEntry) continue; // Skip empty or whitespace-only lines
+
+        if (trimmedEntry.includes("\t")) {
+            parts = trimmedEntry.split("\t");
         } else {
-            // Split at the last space
-            const lastSpaceIndex = entry.lastIndexOf(" ");
-            parts = [entry.substring(0, lastSpaceIndex), entry.substring(lastSpaceIndex + 1)];
+            const lastSpaceIndex = trimmedEntry.lastIndexOf(" ");
+            if (lastSpaceIndex === -1) { // No space found, might be only a name or only a score
+                // Decide how to handle this: skip, or try to process?
+                // For now, let's assume it needs both parts and skip if not found.
+                // This also handles cases where entry is just "  " and lastSpaceIndex becomes -1.
+                continue; 
+            }
+            parts = [trimmedEntry.substring(0, lastSpaceIndex), trimmedEntry.substring(lastSpaceIndex + 1)];
         }
 
         if (parts.length < 2) continue;
+        
         let [name, score] = parts;
 
-        score = getNumericValueOrOriginal(score);
+        // Trim whitespace from the individually extracted name and score
+        name = name.trim(); 
+        score = score.trim(); // <<< THIS IS THE KEY FIX FOR YOUR ISSUE
+
+        // Now, process the cleaned score
+        score = getNumericValueOrOriginal(score); 
         scores.push([name, score]);
     }
     return scores;
