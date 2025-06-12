@@ -5,6 +5,15 @@ layout: post
 categories: media
 ---
 
+<div class="padlet-slideshow-embed" style="position:relative;width:100%;padding-top:66.66%;margin-bottom:1em;">
+  <iframe src="https://padlet.com/embed/xt9r3kvgb529v795/slideshow?autoplay=0&loop=0&duration=auto"
+          frameborder="0"
+          allow="clipboard-write"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;">
+  </iframe>
+</div>
+
+
 # 📸 Step 1: How to Take a Screenshot  
 # 📸 第一步：如何截屏
 
@@ -84,9 +93,6 @@ Windows 提供了多种内建截图方式 —— 几乎所有学生的电脑都�
    点击 **发布**，或者直接点击空白区域，Padlet 会自动保存。
 
 ---
-
-
-<div class="padlet-slideshow-embed" style="width:1080px;height:720px;"><p style="padding:0;margin:0;width:100%;height:100%"><iframe src="https://padlet.com/embed/xt9r3kvgb529v795/slideshow?autoplay=0&loop=0&duration=auto" frameborder="0" allow="clipboard-write" style="width:100%;height:100%;display:block;padding:0;margin:0"></iframe></p></div>
 
 
 <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/xt9r3kvgb529v795" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
