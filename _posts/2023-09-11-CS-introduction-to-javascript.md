@@ -347,10 +347,40 @@ document.head.appendChild(css);
 
 ```javascript
 (() => {
-  /* ---------- clean-up if the script ran before ---------- */
+  /* --------- clean-up if re-injected --------- */
   document.getElementById('ttt-wrapper')?.remove();
 
-  /* ---------- markup ---------- */
+  /* --------- configurable size / win length --------- */
+  const SIZE       = 5;   // 5 × 5 grid
+  const WIN_LENGTH = 4;   // need 4 in a row to win
+  const HUMAN      = 'O';
+  const AI         = 'X';
+
+  /* --------- generate all win patterns of length 4 --------- */
+  const winPatterns = (() => {
+    const lines = [];
+    const idx = (r,c) => r * SIZE + c;
+
+    // horizontals & verticals
+    for (let r = 0; r < SIZE; r++)
+      for (let c = 0; c <= SIZE - WIN_LENGTH; c++)
+        lines.push([...Array(WIN_LENGTH)].map((_,i)=>idx(r,c+i)));          // hor
+    for (let c = 0; c < SIZE; c++)
+      for (let r = 0; r <= SIZE - WIN_LENGTH; r++)
+        lines.push([...Array(WIN_LENGTH)].map((_,i)=>idx(r+i,c)));          // vert
+
+    // main diagonals
+    for (let r = 0; r <= SIZE - WIN_LENGTH; r++)
+      for (let c = 0; c <= SIZE - WIN_LENGTH; c++)
+        lines.push([...Array(WIN_LENGTH)].map((_,i)=>idx(r+i,c+i)));        // ↘
+    for (let r = WIN_LENGTH - 1; r < SIZE; r++)
+      for (let c = 0; c <= SIZE - WIN_LENGTH; c++)
+        lines.push([...Array(WIN_LENGTH)].map((_,i)=>idx(r-i,c+i)));        // ↗
+
+    return lines;
+  })();
+
+  /* --------- create overlay markup --------- */
   const wrap = document.createElement('div');
   wrap.id = 'ttt-wrapper';
   wrap.innerHTML = `
@@ -359,119 +389,104 @@ document.head.appendChild(css);
   `;
   document.body.appendChild(wrap);
 
-  /* ---------- styles ---------- */
+  /* --------- styles --------- */
   const css = document.createElement('style');
   css.textContent = `
-    #ttt-wrapper{position:fixed;inset:0;z-index:99999;
-      display:flex;flex-direction:column;justify-content:center;align-items:center;
-      gap:20px;font-family:Arial,Helvetica,sans-serif;
-      background:rgba(195,207,226,.85);backdrop-filter:blur(4px);}
-    #ttt-board{display:grid;grid-template-columns:repeat(3,100px);
-      grid-template-rows:repeat(3,100px);gap:5px;}
-    .cell{width:100px;height:100px;display:flex;justify-content:center;align-items:center;
-      font-size:2em;background:#fff;border:2px solid #4A4A4A;border-radius:8px;cursor:pointer;
+    #ttt-wrapper{
+      position:fixed;inset:0;z-index:99999;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;
+      font-family:Arial,sans-serif;background:rgba(195,207,226,.85);backdrop-filter:blur(4px);}
+    #ttt-board{display:grid;grid-template-columns:repeat(${SIZE},80px);
+      grid-template-rows:repeat(${SIZE},80px);gap:4px;}
+    .cell{width:80px;height:80px;display:flex;justify-content:center;align-items:center;
+      font-size:1.8em;background:#fff;border:2px solid #4A4A4A;border-radius:6px;cursor:pointer;
       transition:transform .2s,background-color .2s;}
     .cell:hover{background:#dceefc;transform:scale(1.03);}
     .cell.disabled{pointer-events:none;opacity:.7;}
     .cell.X{color:#e74c3c;}  /* computer */
-    .cell.O{color:#3498db;}  /* you       */
-    #ttt-msg{font-size:1.5em;font-weight:bold;color:#333;text-align:center;}
+    .cell.O{color:#3498db;}  /* you      */
+    #ttt-msg{font-size:1.4em;font-weight:bold;color:#333;text-align:center;}
   `;
   document.head.appendChild(css);
 
-  /* ---------- state ---------- */
-  const board   = Array(9).fill(null);
-  const HUMAN   = 'O';
-  const AI      = 'X';
+  /* --------- state --------- */
+  const board   = Array(SIZE*SIZE).fill(null);
   const boardEl = document.getElementById('ttt-board');
   const msgEl   = document.getElementById('ttt-msg');
 
-  /* ---------- create cells ---------- */
+  /* --------- build cells --------- */
   board.forEach((_, i) => {
-    const cell = document.createElement('div');
-    cell.className = 'cell';
-    cell.addEventListener('click', () => humanMove(i));
-    boardEl.appendChild(cell);
+    const div = document.createElement('div');
+    div.className = 'cell';
+    div.addEventListener('click', () => humanMove(i));
+    boardEl.appendChild(div);
   });
 
-  /* ---------- core ---------- */
-  function humanMove(i){
-    if (board[i] || finished()) return;
-    board[i] = HUMAN;
-    render();
-    if (announce()) return;
-    aiMove();                      // computer responds
+  /* --------- helpers --------- */
+  const lineStatus = (pattern, pl) =>
+    pattern.map(i=>board[i]).filter(v=>v===pl).length;
+
+  const emptyInLine = pattern => pattern.find(i => !board[i]);
+
+  function winner() {
+    for (const line of winPatterns)
+      if (line.every(i => board[i] === HUMAN)) return HUMAN;
+      else if (line.every(i => board[i] === AI)) return AI;
+    return board.every(Boolean) ? 'tie' : null;
   }
 
-  function aiMove(){
-    const idx = bestMove(board);
-    board[idx] = AI;
-    render();
+  function finished() { return winner() !== null; }
+
+  function render() {
+    board.forEach((v,i) => {
+      const cell = boardEl.children[i];
+      cell.textContent = v||'';
+      cell.classList.toggle('disabled', !!v);
+      cell.classList.remove('X','O'); if (v) cell.classList.add(v);
+    });
+  }
+
+  /* --------- AI move (heuristic) --------- */
+  function aiMove() {
+    // 1. winning move?
+    for (const line of winPatterns)
+      if (lineStatus(line, AI) === WIN_LENGTH - 1 && emptyInLine(line) !== undefined)
+        return emptyInLine(line);
+
+    // 2. block human win?
+    for (const line of winPatterns)
+      if (lineStatus(line, HUMAN) === WIN_LENGTH - 1 && emptyInLine(line) !== undefined)
+        return emptyInLine(line);
+
+    // 3. centre?
+    const centre = Math.floor(board.length / 2);
+    if (!board[centre]) return centre;
+
+    // 4. random
+    const empties = board.map((v,i)=>v?null:i).filter(i=>i!==null);
+    return empties[Math.floor(Math.random()*empties.length)];
+  }
+
+  /* --------- flow --------- */
+  function humanMove(i){
+    if (board[i] || finished()) return;
+    board[i] = HUMAN; render();
+    if (announce()) return;
+
+    board[aiMove()] = AI; render();
     announce();
   }
 
   function announce(){
-    const res = winner(board);
+    const res = winner();
     if (!res) return false;
     msgEl.textContent =
-        res === 'tie' ? "It's a draw!"
-                      : (res === HUMAN ? 'You win!' : 'Computer wins!');
+      res === 'tie' ? "It's a draw!"
+                    : (res === HUMAN ? 'You win!' : 'Computer wins!');
     return true;
   }
-  const finished = () => winner(board) !== null;
 
-  function render(){
-    board.forEach((v,i) => {
-      const c = boardEl.children[i];
-      c.textContent = v || '';
-      c.classList.toggle('disabled', !!v);
-      c.classList.remove('X','O'); if (v) c.classList.add(v);
-    });
-  }
-
-  /* ---------- minimax ---------- */
-  function bestMove(b){
-    let best = -Infinity, move = null;
-    b.forEach((v,i)=>{
-      if(!v){
-        b[i] = AI;
-        const score = mini(b,0,false);
-        b[i] = null;
-        if(score > best){best=score;move=i;}
-      }
-    });
-    return move;
-  }
-
-  function mini(b, depth, max){
-    const r = winner(b);
-    if (r) return {X:1, O:-1, tie:0}[r];
-    if (max){
-      let best = -Infinity;
-      b.forEach((v,i)=>{
-        if(!v){ b[i]=AI; best=Math.max(best,mini(b,depth+1,false)); b[i]=null;}
-      });
-      return best;
-    }else{
-      let best =  Infinity;
-      b.forEach((v,i)=>{
-        if(!v){ b[i]=HUMAN; best=Math.min(best,mini(b,depth+1,true)); b[i]=null;}
-      });
-      return best;
-    }
-  }
-
-  /* ---------- winner / draw ---------- */
-  function winner(b){
-    const L = [[0,1,2],[3,4,5],[6,7,8],
-               [0,3,6],[1,4,7],[2,5,8],
-               [0,4,8],[2,4,6]];
-    for(const [a,c,d] of L)
-      if(b[a] && b[a]===b[c] && b[a]===b[d]) return b[a];
-    return b.every(Boolean) ? 'tie' : null;
-  }
-
-  /* ---------- (no AI opening move—player starts) ---------- */
+  /* player starts – no opening AI move */
 })();
 
 
