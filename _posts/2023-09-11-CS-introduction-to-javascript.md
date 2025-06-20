@@ -346,210 +346,172 @@ document.head.appendChild(css);
 ---
 
 ```javascript
-// Create and style the game board
-document.body.innerHTML = `
-    <div>
-        <div class="board" id="board"></div>
-        <div class="message" id="message"></div>
-    </div>
-`;
+(() => {
+  /* ---------- clean-up if already injected ---------- */
+  const old = document.getElementById('ttt-wrapper');
+  if (old) old.remove();
 
-const style = document.createElement('style');
-style.textContent = `
-    /* Body styling */
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  /* ---------- markup ---------- */
+  const wrapper = document.createElement('div');
+  wrapper.id = 'ttt-wrapper';
+  wrapper.innerHTML = `
+    <div class="board" id="ttt-board"></div>
+    <div class="message" id="ttt-message"></div>
+  `;
+  document.body.appendChild(wrapper);
+
+  /* ---------- styles ---------- */
+  const style = document.createElement('style');
+  style.textContent = `
+    #ttt-wrapper{
+      position:fixed;inset:0;z-index:99999;
+      display:flex;flex-direction:column;
+      justify-content:center;align-items:center;
+      gap:20px;
+      font-family:Arial,sans-serif;
+      background:rgba(195,207,226,.85);
+      backdrop-filter:blur(4px);
     }
-
-    /* Board container */
-    .board {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(3, 100px);
-        gap: 5px;
+    #ttt-board{
+      display:grid;
+      grid-template-columns:repeat(3,100px);
+      grid-template-rows:repeat(3,100px);
+      gap:5px;
     }
-
-    /* Individual cells */
-    .cell {
-        width: 100px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-        background-color: #fff;
-        border-radius: 8px;
-        border: 2px solid #4A4A4A;
-        cursor: pointer;
-        transition: transform 0.2s, background-color 0.2s;
+    #ttt-board .cell{
+      width:100px;height:100px;
+      display:flex;justify-content:center;align-items:center;
+      font-size:2em;
+      background:#fff;border:2px solid #4A4A4A;border-radius:8px;
+      cursor:pointer;
+      transition:transform .2s,background-color .2s;
     }
+    #ttt-board .cell:hover{background:#dceefc;transform:scale(1.03);}
+    #ttt-board .cell.disabled{pointer-events:none;opacity:.7;}
+    #ttt-board .cell.X{color:#e74c3c;}
+    #ttt-board .cell.O{color:#3498db;}
+    #ttt-message{font-size:1.5em;font-weight:bold;color:#333;text-align:center;}
+  `;
+  document.head.appendChild(style);
 
-    .cell:hover {
-        background-color: #dceefc;
-        transform: scale(1.03);
-    }
+  /* ---------- game state ---------- */
+  const board  = Array(9).fill(null);
+  const HUMAN  = 'O';
+  const AI     = 'X';
 
-    /* Disable pointer events when cell is used */
-    .cell.disabled {
-        pointer-events: none;
-        opacity: 0.7;
-    }
+  const boardEl = document.getElementById('ttt-board');
+  const msgEl   = document.getElementById('ttt-message');
 
-    /* Color coding for marks */
-    .cell.X {
-        color: #e74c3c; /* Red for X */
-    }
-    .cell.O {
-        color: #3498db; /* Blue for O */
-    }
-
-    /* Message styling */
-    .message {
-        margin-top: 20px;
-        font-size: 1.5em;
-        text-align: center;
-        font-weight: bold;
-        color: #333;
-    }
-`;
-document.head.appendChild(style);
-
-/* -- Game Logic -- */
-const board = Array(9).fill(null);
-const player = 'O';
-const computer = 'X';
-
-const boardElement = document.getElementById('board');
-const messageElement = document.getElementById('message');
-
-// Create cells
-board.forEach((_, index) => {
+  /* ---------- create cells ---------- */
+  board.forEach((_, i) => {
     const cell = document.createElement('div');
-    cell.classList.add('cell');
-    cell.addEventListener('click', () => handlePlayerMove(index));
-    boardElement.appendChild(cell);
-});
+    cell.className = 'cell';
+    cell.addEventListener('click', () => playerMove(i));
+    boardEl.appendChild(cell);
+  });
 
-// The computer goes first
-computerMove();
-
-function handlePlayerMove(index) {
-    if (board[index] || checkWinner(board)) return;
-    board[index] = player;
+  /* ---------- core functions ---------- */
+  function playerMove(i){
+    if(board[i] || isGameOver()) return;
+    board[i] = HUMAN;
     render();
-    if (checkWinner(board)) {
-        messageElement.textContent = 'You win!';
-        return;
-    }
-    if (board.every(cell => cell)) {
-        messageElement.textContent = 'It\'s a draw!';
-        return;
-    }
-    computerMove();
-}
+    if(handleOutcome()) return;
+    aiMove();
+  }
 
-function computerMove() {
-    const bestMove = findBestMove(board);
-    board[bestMove] = computer;
+  function aiMove(){
+    const move = findBestMove(board);
+    board[move] = AI;
     render();
-    if (checkWinner(board)) {
-        messageElement.textContent = 'Computer wins!';
-    }
-}
+    handleOutcome();
+  }
 
-function render() {
-    board.forEach((mark, index) => {
-        const cell = boardElement.children[index];
-        cell.textContent = mark ? mark : '';
-        // Disable cell if it has a mark
-        cell.classList.toggle('disabled', !!mark);
+  function handleOutcome(){
+    const res = checkWinner(board);
+    if(!res) return false;
+    msgEl.textContent =
+      res === 'tie' ? "It's a draw!"
+                    : (res === HUMAN ? 'You win!' : 'Computer wins!');
+    return true;
+  }
 
-        // Remove old mark classes, then add new if needed
-        cell.classList.remove('X', 'O');
-        if (mark) {
-            cell.classList.add(mark);
-        }
+  function isGameOver(){ return checkWinner(board) !== null; }
+
+  function render(){
+    board.forEach((mark,i)=>{
+      const cell = boardEl.children[i];
+      cell.textContent = mark || '';
+      cell.classList.toggle('disabled', !!mark);
+      cell.classList.remove('X','O');
+      if(mark) cell.classList.add(mark);
     });
-}
+  }
 
-/* Minimax AI */
-function findBestMove(board) {
-    let bestScore = -Infinity;
-    let move;
-    for (let i = 0; i < board.length; i++) {
-        if (!board[i]) {
-            board[i] = computer;
-            let score = minimax(board, 0, false);
-            board[i] = null;
-            if (score > bestScore) {
-                bestScore = score;
-                move = i;
-            }
-        }
+  /* ---------- minimax AI ---------- */
+  function findBestMove(b){
+    let best = -Infinity, move = null;
+    for(let i=0;i<9;i++){
+      if(!b[i]){
+        b[i] = AI;
+        const score = minimax(b, 0, false);
+        b[i] = null;
+        if(score > best){ best = score; move = i; }
+      }
     }
     return move;
-}
+  }
 
-function minimax(board, depth, isMaximizing) {
-    const scores = { 'X': 1, 'O': -1, 'tie': 0 };
-    const winner = checkWinner(board);
-    if (winner !== null) {
-        return scores[winner];
-    }
+  function minimax(b, depth, isMax){
+    const outcome = checkWinner(b);
+    if(outcome) return { X:1, O:-1, tie:0 }[outcome];
 
-    if (isMaximizing) {
-        let bestScore = -Infinity;
-        for (let i = 0; i < board.length; i++) {
-            if (!board[i]) {
-                board[i] = computer;
-                let score = minimax(board, depth + 1, false);
-                board[i] = null;
-                bestScore = Math.max(score, bestScore);
-            }
+    if(isMax){
+      let best = -Infinity;
+      for(let i=0;i<9;i++){
+        if(!b[i]){
+          b[i] = AI;
+          best = Math.max(best, minimax(b, depth+1, false));
+          b[i] = null;
         }
-        return bestScore;
-    } else {
-        let bestScore = Infinity;
-        for (let i = 0; i < board.length; i++) {
-            if (!board[i]) {
-                board[i] = player;
-                let score = minimax(board, depth + 1, true);
-                board[i] = null;
-                bestScore = Math.min(score, bestScore);
-            }
+      }
+      return best;
+    }else{
+      let best = Infinity;
+      for(let i=0;i<9;i++){
+        if(!b[i]){
+          b[i] = HUMAN;
+          best = Math.min(best, minimax(b, depth+1, true));
+          b[i] = null;
         }
-        return bestScore;
+      }
+      return best;
     }
-}
+  }
 
-/* Check winner */
-function checkWinner(board) {
-    const winPatterns = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],
-        [0, 4, 8], [2, 4, 6]
+  /* ---------- winner / draw check ---------- */
+  function checkWinner(b){
+    const lines = [
+      [0,1,2],[3,4,5],[6,7,8],
+      [0,3,6],[1,4,7],[2,5,8],
+      [0,4,8],[2,4,6]
     ];
+    for(const [a,c,d] of lines)
+      if(b[a] && b[a] === b[c] && b[a] === b[d]) return b[a];
+    return b.every(Boolean) ? 'tie' : null;
+  }
 
-    for (const pattern of winPatterns) {
-        const [a, b, c] = pattern;
-        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            return board[a];
-        }
-    }
+  /* ---------- start with AI move ---------- */
+  aiMove();
+})();
 
-    if (board.every(cell => cell)) {
-        return 'tie';
-    }
-
-    return null;
-}
 ```
+
+#### 关闭游戏 Close it by running:
+
+```javascript
+document.getElementById('ttt-wrapper')?.remove();
+```
+
 
 ---
 ### Big Bang Simulation Demo  大爆炸模拟演示 🌌
