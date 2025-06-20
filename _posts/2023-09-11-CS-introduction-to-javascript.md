@@ -347,162 +347,133 @@ document.head.appendChild(css);
 
 ```javascript
 (() => {
-  /* ---------- clean-up if already injected ---------- */
-  const old = document.getElementById('ttt-wrapper');
-  if (old) old.remove();
+  /* ---------- clean-up if the script ran before ---------- */
+  document.getElementById('ttt-wrapper')?.remove();
 
   /* ---------- markup ---------- */
-  const wrapper = document.createElement('div');
-  wrapper.id = 'ttt-wrapper';
-  wrapper.innerHTML = `
+  const wrap = document.createElement('div');
+  wrap.id = 'ttt-wrapper';
+  wrap.innerHTML = `
     <div class="board" id="ttt-board"></div>
-    <div class="message" id="ttt-message"></div>
+    <div class="message" id="ttt-msg"></div>
   `;
-  document.body.appendChild(wrapper);
+  document.body.appendChild(wrap);
 
   /* ---------- styles ---------- */
-  const style = document.createElement('style');
-  style.textContent = `
-    #ttt-wrapper{
-      position:fixed;inset:0;z-index:99999;
-      display:flex;flex-direction:column;
-      justify-content:center;align-items:center;
-      gap:20px;
-      font-family:Arial,sans-serif;
-      background:rgba(195,207,226,.85);
-      backdrop-filter:blur(4px);
-    }
-    #ttt-board{
-      display:grid;
-      grid-template-columns:repeat(3,100px);
-      grid-template-rows:repeat(3,100px);
-      gap:5px;
-    }
-    #ttt-board .cell{
-      width:100px;height:100px;
-      display:flex;justify-content:center;align-items:center;
-      font-size:2em;
-      background:#fff;border:2px solid #4A4A4A;border-radius:8px;
-      cursor:pointer;
-      transition:transform .2s,background-color .2s;
-    }
-    #ttt-board .cell:hover{background:#dceefc;transform:scale(1.03);}
-    #ttt-board .cell.disabled{pointer-events:none;opacity:.7;}
-    #ttt-board .cell.X{color:#e74c3c;}
-    #ttt-board .cell.O{color:#3498db;}
-    #ttt-message{font-size:1.5em;font-weight:bold;color:#333;text-align:center;}
+  const css = document.createElement('style');
+  css.textContent = `
+    #ttt-wrapper{position:fixed;inset:0;z-index:99999;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      gap:20px;font-family:Arial,Helvetica,sans-serif;
+      background:rgba(195,207,226,.85);backdrop-filter:blur(4px);}
+    #ttt-board{display:grid;grid-template-columns:repeat(3,100px);
+      grid-template-rows:repeat(3,100px);gap:5px;}
+    .cell{width:100px;height:100px;display:flex;justify-content:center;align-items:center;
+      font-size:2em;background:#fff;border:2px solid #4A4A4A;border-radius:8px;cursor:pointer;
+      transition:transform .2s,background-color .2s;}
+    .cell:hover{background:#dceefc;transform:scale(1.03);}
+    .cell.disabled{pointer-events:none;opacity:.7;}
+    .cell.X{color:#e74c3c;}  /* computer */
+    .cell.O{color:#3498db;}  /* you       */
+    #ttt-msg{font-size:1.5em;font-weight:bold;color:#333;text-align:center;}
   `;
-  document.head.appendChild(style);
+  document.head.appendChild(css);
 
-  /* ---------- game state ---------- */
-  const board  = Array(9).fill(null);
-  const HUMAN  = 'O';
-  const AI     = 'X';
-
+  /* ---------- state ---------- */
+  const board   = Array(9).fill(null);
+  const HUMAN   = 'O';
+  const AI      = 'X';
   const boardEl = document.getElementById('ttt-board');
-  const msgEl   = document.getElementById('ttt-message');
+  const msgEl   = document.getElementById('ttt-msg');
 
   /* ---------- create cells ---------- */
   board.forEach((_, i) => {
     const cell = document.createElement('div');
     cell.className = 'cell';
-    cell.addEventListener('click', () => playerMove(i));
+    cell.addEventListener('click', () => humanMove(i));
     boardEl.appendChild(cell);
   });
 
-  /* ---------- core functions ---------- */
-  function playerMove(i){
-    if(board[i] || isGameOver()) return;
+  /* ---------- core ---------- */
+  function humanMove(i){
+    if (board[i] || finished()) return;
     board[i] = HUMAN;
     render();
-    if(handleOutcome()) return;
-    aiMove();
+    if (announce()) return;
+    aiMove();                      // computer responds
   }
 
   function aiMove(){
-    const move = findBestMove(board);
-    board[move] = AI;
+    const idx = bestMove(board);
+    board[idx] = AI;
     render();
-    handleOutcome();
+    announce();
   }
 
-  function handleOutcome(){
-    const res = checkWinner(board);
-    if(!res) return false;
+  function announce(){
+    const res = winner(board);
+    if (!res) return false;
     msgEl.textContent =
-      res === 'tie' ? "It's a draw!"
-                    : (res === HUMAN ? 'You win!' : 'Computer wins!');
+        res === 'tie' ? "It's a draw!"
+                      : (res === HUMAN ? 'You win!' : 'Computer wins!');
     return true;
   }
-
-  function isGameOver(){ return checkWinner(board) !== null; }
+  const finished = () => winner(board) !== null;
 
   function render(){
-    board.forEach((mark,i)=>{
-      const cell = boardEl.children[i];
-      cell.textContent = mark || '';
-      cell.classList.toggle('disabled', !!mark);
-      cell.classList.remove('X','O');
-      if(mark) cell.classList.add(mark);
+    board.forEach((v,i) => {
+      const c = boardEl.children[i];
+      c.textContent = v || '';
+      c.classList.toggle('disabled', !!v);
+      c.classList.remove('X','O'); if (v) c.classList.add(v);
     });
   }
 
-  /* ---------- minimax AI ---------- */
-  function findBestMove(b){
+  /* ---------- minimax ---------- */
+  function bestMove(b){
     let best = -Infinity, move = null;
-    for(let i=0;i<9;i++){
-      if(!b[i]){
+    b.forEach((v,i)=>{
+      if(!v){
         b[i] = AI;
-        const score = minimax(b, 0, false);
+        const score = mini(b,0,false);
         b[i] = null;
-        if(score > best){ best = score; move = i; }
+        if(score > best){best=score;move=i;}
       }
-    }
+    });
     return move;
   }
 
-  function minimax(b, depth, isMax){
-    const outcome = checkWinner(b);
-    if(outcome) return { X:1, O:-1, tie:0 }[outcome];
-
-    if(isMax){
+  function mini(b, depth, max){
+    const r = winner(b);
+    if (r) return {X:1, O:-1, tie:0}[r];
+    if (max){
       let best = -Infinity;
-      for(let i=0;i<9;i++){
-        if(!b[i]){
-          b[i] = AI;
-          best = Math.max(best, minimax(b, depth+1, false));
-          b[i] = null;
-        }
-      }
+      b.forEach((v,i)=>{
+        if(!v){ b[i]=AI; best=Math.max(best,mini(b,depth+1,false)); b[i]=null;}
+      });
       return best;
     }else{
-      let best = Infinity;
-      for(let i=0;i<9;i++){
-        if(!b[i]){
-          b[i] = HUMAN;
-          best = Math.min(best, minimax(b, depth+1, true));
-          b[i] = null;
-        }
-      }
+      let best =  Infinity;
+      b.forEach((v,i)=>{
+        if(!v){ b[i]=HUMAN; best=Math.min(best,mini(b,depth+1,true)); b[i]=null;}
+      });
       return best;
     }
   }
 
-  /* ---------- winner / draw check ---------- */
-  function checkWinner(b){
-    const lines = [
-      [0,1,2],[3,4,5],[6,7,8],
-      [0,3,6],[1,4,7],[2,5,8],
-      [0,4,8],[2,4,6]
-    ];
-    for(const [a,c,d] of lines)
-      if(b[a] && b[a] === b[c] && b[a] === b[d]) return b[a];
+  /* ---------- winner / draw ---------- */
+  function winner(b){
+    const L = [[0,1,2],[3,4,5],[6,7,8],
+               [0,3,6],[1,4,7],[2,5,8],
+               [0,4,8],[2,4,6]];
+    for(const [a,c,d] of L)
+      if(b[a] && b[a]===b[c] && b[a]===b[d]) return b[a];
     return b.every(Boolean) ? 'tie' : null;
   }
 
-  /* ---------- start with AI move ---------- */
-  aiMove();
+  /* ---------- (no AI opening move—player starts) ---------- */
 })();
+
 
 ```
 
