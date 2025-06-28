@@ -746,3 +746,72 @@ document.getElementById('ttt-wrapper')?.remove();
 </html>
 ```
 
+---
+### DocShare PDF Download Script  DocShare PDF 下载脚本 📄
+---
+
+#### Instructions  使用说明  
+1. Open the DocShare document page in Chrome, Edge, or Firefox.  
+   在 Chrome、Edge 或 Firefox 浏览器中打开 DocShare 文档页面。  
+
+2. Open DevTools (right-click → Inspect, or press `F12`).  
+   打开开发者工具（右键点击页面 → 检查，或按下 `F12`）。  
+
+3. Go to the **Console** tab, paste the full code below, and press `Enter`.  
+   切换到 **Console（控制台）** 选项卡，粘贴下面的完整代码并按下 `Enter` 键。  
+
+4. The PDF file will download automatically with the correct name.  
+   PDF 文件将会自动下载，并使用正确的文件名保存。  
+
+---
+
+#### What this code does  代码作用说明  
+
+- Automatically extracts the document ID from the URL.  
+  自动从网址中提取文档的唯一 ID。  
+
+- Reconstructs the hidden `/pdf_url/<id>` link used by the DocShare viewer.  
+  重新构造 DocShare 阅读器内部使用的隐藏下载链接 `/pdf_url/<id>`。  
+
+- Sends a proper request with your browser’s session cookies and referer header.  
+  使用当前浏览器的 Cookie 和来源头部发送合法请求以获得文件权限。  
+
+- Downloads the PDF directly using JavaScript without needing to click anything.  
+  使用 JavaScript 直接下载 PDF 文件，无需点击或打开新标签页。  
+
+---
+
+#### Example Output Filename 示例输出文件名  
+`DocShare_5883ac07b6d87f1d9d8b4833.pdf`  
+
+---
+
+```javascript
+(async () => {
+  try {
+    const match = location.href.match(/([a-f0-9]{24})/);
+    if (!match) throw new Error("Document ID not found in URL");
+    const id = match[1];
+    const url = `/pdf_url/${id}`;
+    const res = await fetch(url, {
+      credentials: "include",
+      headers: { referer: location.href }
+    });
+    if (!res.ok) throw new Error(res.statusText);
+    const blob = await res.blob();
+    const a = Object.assign(document.createElement("a"), {
+      href: URL.createObjectURL(blob),
+      download: `DocShare_${id}.pdf`
+    });
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(a.href);
+    console.log("✅ PDF saved");
+  } catch (e) {
+    alert("❌ " + e.message);
+  }
+})();
+
+```
+
