@@ -456,10 +456,12 @@ categories: media
 
 #### Part 3: Advanced Discussion and Critical Thinking <br> Part 3：深入讨论与批判性思维能力  
 ##### Discuss abstract and complex topics with depth <br> 深入讨论抽象与复杂话题  
-##### Express nuanced opinions and justify viewpoints clearly <br> 清晰表达的多角度的观点，合理阐释理由  
+##### Express nuanced opinions and justify viewpoints clearly <br> 清晰表达的多角度的观点，合理阐释理由 
+###### “Nuanced opinions” mean viewpoints that consider multiple sides, details, or conditions. <br> “多角度的观点”指的是能考虑多个角度、细节或特定条件的观点。
+###### Non-nuanced opinion <br> 没有细节的、很片面的观点：<br> I think social media is bad because people waste time on it. <br> 我认为社交媒体不好，因为人们浪费时间。
+###### Nuanced opinion <br> 有细节、有层次的观点：<br> While social media can waste time, it also helps people connect with others and stay informed. The impact really depends on how individuals use it. <br>  虽然社交媒体确实会浪费时间，但它也能让人们保持联系、了解信息。关键在于个人的使用方式。
 ##### Use advanced grammar and varied sentence patterns flexibly <br> 灵活运用高阶语法与多样句型  
 ##### Handle hypothetical questions and challenging topics effectively <br> 灵活应对假设问题与高难度话题  
-
 
 </script>
 </div>
