@@ -400,69 +400,65 @@ categories: media
 <div class="markmap">
 <script type="text/template">
 
-# TOEFL & IELTS Speaking Skills <br> 托福与雅思口语能力图
-
-## All tasks / General speaking ability <br> 所有题型/通用能力
-
-### Speak fluently and coherently <br> 流利且连贯表达  
-#### Avoid unnatural pauses, self-corrections, or repetition <br> 避免不自然的停顿、自我修正或重复  
-#### Use discourse markers effectively <br> 有效使用话语衔接词  
-
-### Use appropriate and precise vocabulary <br> 词汇运用恰当且精准  
-#### Use a wide range of vocabulary <br> 使用丰富词汇  
-#### Paraphrase naturally <br> 自然地同义替换表达  
-#### Use idiomatic expressions when appropriate <br> 适当使用地道表达  
-
-### Use a range of grammar structures accurately <br> 使用多样语法结构且准确  
-#### Mix simple and complex sentence types <br> 混合使用简单与复杂句式  
-#### Reduce grammar errors that hinder meaning <br> 减少妨碍理解的语法错误  
-
-### Use clear and natural pronunciation <br> 发音清晰自然  
-#### Control intonation, stress, and rhythm <br> 控制语调、重音与语速节奏  
-#### Be easily understood by listeners <br> 听者容易理解  
+# English Speaking Competency Map <br> 英语口语能力成长图谱  
 
 ---
 
-## TOEFL Task 1 <br> 托福第1题（独立口语）
+## Core Speaking Competencies (For All Exams & Real-Life Use) <br> 核心通用口语能力（适用于所有考试及真实交流）  
 
-### Express and support opinions clearly <br> 清晰表达并支持观点  
-#### Provide reasons to support opinion <br> 提供理由支持观点  
-#### Learn common reasons and examples <br> 学习常见理由与例子  
+### Express ideas clearly and effectively <br> 清晰、有效地表达想法  
+#### Share opinions and support with reasons <br> 表达观点并用理由支撑  
+#### Describe details and tell personal stories <br> 描述细节，讲述个人经历  
+#### Analyze and discuss topics logically <br> 有逻辑地分析与讨论话题  
 
-### Develop and organize ideas <br> 展开并组织观点  
-#### Structure answers logically <br> 合理安排回答结构  
-#### Elaborate on ideas with details <br> 用细节展开观点  
+### Use appropriate language and structures <br> 使用恰当的语言与句型  
+#### Use a wide range of vocabulary accurately <br> 准确运用多样词汇  
+#### Paraphrase naturally to avoid repetition <br> 自然地换句表达，避免重复  
+#### Construct both simple and complex sentences smoothly <br> 灵活运用简单句与复杂句  
 
----
+### Speak with clear and natural pronunciation <br> 发音清晰自然，语音自然流畅  
+#### Use correct intonation, stress, and rhythm <br> 正确掌握语调、重音与语速节奏  
+#### Be easily understood by listeners <br> 让听者轻松理解，沟通顺畅  
 
-## TOEFL Task 2/3/4 <br> 托福第2/3/4题（综合口语）
-
-### Understand academic reading materials <br> 理解学术阅读材料  
-#### Read for main ideas and details <br> 提取主旨与重要细节  
-
-### Understand academic listening materials <br> 理解学术听力内容  
-#### Identify speaker’s reasons, examples, or arguments <br> 理解说话者的理由、例子或论点  
-
-### Identify key points and relationships <br> 提取要点及其之间的关系  
-
-### Take useful notes <br> 做好有效笔记  
-#### Focus on capturing structure and key content <br> 抓住结构与核心信息  
-
-### Summarize and synthesize information <br> 总结并整合信息  
-#### Combine reading and listening points effectively <br> 有效结合听力与阅读信息  
+### Maintain interactive communication <br> 维持良好互动交流  
+#### Ask and answer questions effectively <br> 有效提出与回答问题  
+#### Self-correct or rephrase when needed <br> 需要时能自我修正或重新表达  
+#### Keep conversations flowing smoothly <br> 保持对话自然流畅，积极交流  
 
 ---
 
-## IELTS-specific Focus Areas <br> 雅思特有能力
+## Exam-Specific Speaking Competencies <br> 考试专项口语能力  
 
-### Maintain extended responses <br> 维持较长时间的表达  
-#### Speak at length with minimal hesitation <br> 几乎无停顿地持续表达  
+### TOEFL-Specific Competencies <br> 托福专项口语能力  
 
-### Respond appropriately to unfamiliar topics <br> 恰当地回应陌生话题  
-#### Adapt vocabulary and structure to different contexts <br> 根据语境调整词汇和结构  
+#### Task 1: Express Personal Opinions Clearly <br> Task 1：清晰表达个人观点  
+##### Provide clear opinions with reasons and examples <br> 用清楚的理由与例子表达观点  
+##### Organize ideas logically and stay focused <br> 有逻辑地组织观点，保持重点清晰  
 
-### Show awareness of register and collocation <br> 注意语体风格与词语搭配  
-#### Use formal/informal language appropriately <br> 恰当使用正式或非正式表达  
+#### Task 2, 3, 4: Academic Integration Skills <br> Task 2, 3, 4：学术整合表达能力  
+##### Understand and summarize academic readings and lectures <br> 理解并总结学术阅读与讲座内容  
+##### Identify key points, reasons, and relationships <br> 提取关键信息、理由与关系  
+##### Take effective notes to capture main ideas <br> 做有效笔记，记录核心要点  
+##### Integrate reading and listening into coherent spoken responses <br> 整合听力与阅读内容，口头表达连贯  
+
+---
+
+### IELTS-Specific Competencies <br> 雅思专项口语能力  
+
+#### Part 1: Everyday Conversation Skills <br> Part 1：日常对话能力  
+##### Answer questions naturally and confidently on familiar topics <br> 在熟悉话题中自然、自信地作答  
+##### Use appropriate greetings, expressions, and small talk strategies <br> 使用恰当的问候语、表达和寒暄技巧  
+
+#### Part 2: Extended Speech and Storytelling <br> Part 2：长时间表达与讲述能力  
+##### Speak at length with minimal hesitation <br> 长时间连贯表达，几乎无停顿  
+##### Organize stories with clear structure and vivid details <br> 结构清晰，细节生动地讲述故事  
+##### Keep answers well-connected and logically ordered <br> 回答有条理，逻辑性强  
+
+#### Part 3: Advanced Discussion and Critical Thinking <br> Part 3：深入讨论与批判性思维能力  
+##### Discuss abstract and complex topics with depth <br> 深入讨论抽象与复杂话题  
+##### Express nuanced opinions and justify viewpoints clearly <br> 清晰表达的多角度的观点，合理阐释理由  
+##### Use advanced grammar and varied sentence patterns flexibly <br> 灵活运用高阶语法与多样句型  
+##### Handle hypothetical questions and challenging topics effectively <br> 灵活应对假设问题与高难度话题  
 
 
 </script>
