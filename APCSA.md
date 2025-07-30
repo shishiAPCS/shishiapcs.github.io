@@ -53,6 +53,89 @@ title: "AP CSA"
 </style>
 
 ---
+
+*A message for my AP Computer Science class*  
+*写给我的 AP 计算机科学班的一封信*
+
+I know some of you walk into this class wondering: *What is this class really about? Can I succeed? What happens if I mess up?*  
+我知道有些同学刚开始可能会想：*这门课到底学什么？我能不能学会？要是我搞砸了怎么办？*  
+So let me be upfront and tell you what you can expect from me — and from yourself — in this class.  
+所以我想一开始就告诉你：在这门课上，你可以对我、对自己有什么期待。  
+
+### 1. What is it like to learn in this class?  
+### 1. 在这门课上学习是种什么体验？
+
+Learning something new — especially computer science — isn’t supposed to be easy at first.  
+学习新东西，特别是计算机科学，一开始本来就不会轻松。  
+You might feel frustrated or confused. That’s normal.  
+你可能会感到挫败或困惑，这是正常的。  
+In this class, we don’t aim for instant 100s. We aim for *growth*.  
+在这门课上，我们不是追求立刻拿满分，而是追求*成长*。  
+If you put in the effort, things that once felt impossible will start to feel manageable.  
+只要你努力，原本觉得很难的事情会慢慢变得可以做到。  
+I’ve seen it happen over and over again.  
+我已经见过很多次学生从不会到会的过程。  
+
+### 2. What does it mean if I struggle?  
+### 2. 如果我学得很吃力，是不是就代表我不行？
+
+Struggle isn’t a failure. It’s a *signal* — it means you're trying something challenging and important.  
+“吃力”不代表失败，而是一种*信号*，说明你正在努力尝试有挑战性的东西。  
+Mistakes will happen, and we’ll treat those mistakes as learning tools, not as flaws.  
+犯错是常事，我们会把错误当作学习的工具，而不是缺点。  
+When you stumble, it helps me teach better — and it helps us all learn more together.  
+你在学习中跌倒，能帮我更好地指导，也让我们大家一起学得更深。
+
+### 3. Can I ask questions?  
+### 3. 我可以随时提问吗？
+
+Always. Your questions are welcome — even if they feel “basic.”  
+当然可以。你的问题总是被欢迎的——哪怕看起来很“基础”。  
+Asking is a sign of strength, not weakness.  
+提问是勇气的表现，不是软弱。  
+In fact, if you have a question, chances are that half the class is wondering the same thing.  
+其实你问的问题，往往也是班上一半同学的疑问。  
+I’ll always praise thoughtful questions because they make all of us better.  
+我会一直鼓励有思考的问题，因为它们能让我们大家都进步。  
+
+### 4. Why do we revise so much?  
+### 4. 为什么我们要经常修改自己的作业？
+
+You’ll often revisit past work — not as a punishment, but because revising is how real learning happens.  
+我们会多次回头看旧作业，不是惩罚，而是因为真正的学习就是在“修正”中发生的。  
+Debugging, fixing, and improving are part of the coding process and the thinking process.  
+调试、修改和改进是编程的自然过程，也是真正思考的一部分。  
+The goal isn’t just to “finish” something — it’s to *understand it deeply*.  
+我们的目标不是“做完”一件事，而是*真正理解*它。
+
+### 5. What does a score mean in this class?  
+### 5. 分数在这门课上代表什么？
+
+Scores are *snapshots*, not verdicts.  
+分数只是某一刻的“快照”，不是你的“判决”。  
+A number can’t capture your potential, your growth, or your future.  
+一个数字无法代表你的潜力、成长或未来。  
+My job isn’t to label you — it’s to help you become a confident, capable thinker.  
+我的责任不是给你贴标签，而是帮助你成为一个有信心、有能力的思考者。  
+You are more than a grade.  
+你远远不只是一个分数。
+
+---
+
+🧠 I’ll remind you of these principles throughout the year — especially during tough moments.  
+🧠 这一整年，我都会反复提醒你这些理念——特别是在你觉得困难的时候。  
+If you’re putting in the effort, I will *always* support you.  
+只要你在努力，我*永远*会支持你。  
+My job is to give you the tools, feedback, and belief you need to succeed.  
+我的任务是提供你成功所需要的工具、反馈和信心。  
+
+Let’s build something great together.  
+让我们一起创造一些了不起的东西吧。  
+— *Mr. Mou*  
+— *牟老师*  
+
+---
+
   - 考试时间：Wed, May 7, 2026
   - [课堂规则](https://shishiapcs.github.io/CSA-Class-Rules/)
   - [课前需注册服务](https://shishiapcs.github.io/CSA-New-Semester/)
