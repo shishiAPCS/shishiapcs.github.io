@@ -54,8 +54,8 @@ title: "AP CSA"
 
 ---
 
-*A message for my AP Computer Science class*  
-*写给我的 AP 计算机科学班的一封信*
+## *A message for my AP Computer Science class*  
+## *写给我的 AP 计算机科学班的一封信*
 
 I know some of you walk into this class wondering: *What is this class really about? Can I succeed? What happens if I mess up?*  
 我知道有些同学刚开始可能会想：*这门课到底学什么？我能不能学会？要是我搞砸了怎么办？*  
@@ -99,7 +99,7 @@ I’ll always praise thoughtful questions because they make all of us better.
 我会一直鼓励有思考的问题，因为它们能让我们大家都进步。  
 
 ### 4. Why do we revise so much?  
-### 4. 为什么我们要经常修改自己的作业？
+### 4. 为什么我们要经常复习？
 
 You’ll often revisit past work — not as a punishment, but because revising is how real learning happens.  
 我们会多次回头看旧作业，不是惩罚，而是因为真正的学习就是在“修正”中发生的。  
@@ -119,8 +119,6 @@ My job isn’t to label you — it’s to help you become a confident, capable t
 我的责任不是给你贴标签，而是帮助你成为一个有信心、有能力的思考者。  
 You are more than a grade.  
 你远远不只是一个分数。
-
----
 
 🧠 I’ll remind you of these principles throughout the year — especially during tough moments.  
 🧠 这一整年，我都会反复提醒你这些理念——特别是在你觉得困难的时候。  
