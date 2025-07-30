@@ -127,10 +127,8 @@ If you’re putting in the effort, I will *always* support you.
 My job is to give you the tools, feedback, and belief you need to succeed.  
 我的任务是提供你成功所需要的工具、反馈和信心。  
 
-Let’s build something great together.  
-让我们一起创造一些了不起的东西吧。  
+Let’s build something great together.    
 — *Mr. Mou*  
-— *牟老师*  
 
 ---
 
