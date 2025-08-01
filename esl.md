@@ -35,18 +35,18 @@ You’ll build sentences, express ideas, and learn to speak clearly and naturall
 ### 2. What if I struggle or feel shy?  
 ### 2. 万一我说不出来或者很害羞怎么办？
 
-Struggle is part of the process.  
-别担心，磕磕绊绊是正常的！
-Feeling stuck, forgetting words, or being unsure of your grammar doesn’t mean you’re failing — it means you’re *learning*.  
-卡壳、忘词、语法错了，这些都不是失败，而是“我正在进步”的信号。
-I was once in your shoes, and I know how it feels.  
-我以前也经历过你现在的感觉，我懂。
-Speaking English is a skill you *can* master.  
-讲英文是能练出来的技能，真的可以做到。
-You just need to talk more, try more, and practice — even if it means talking to yourself or to a wall!  
-你需要的就是多说、多试、多练——哪怕是对着空气自言自语也没关系！
-The more you speak, the stronger you get.  
-说得越多，你的“口语肌肉”就越结实！
+Struggle is part of the process.    
+别担心，磕磕绊绊是正常的！  
+Feeling stuck, forgetting words, or being unsure of your grammar doesn’t mean you’re failing — it means you’re *learning*.    
+卡壳、忘词、语法错了，这些都不是失败，而是“我正在进步”的信号。  
+I was once in your shoes, and I know how it feels.    
+我以前也经历过你现在的感觉，我懂。  
+Speaking English is a skill you *can* master.    
+讲英文是能练出来的技能，真的可以做到。  
+You just need to talk more, try more, and practice — even if it means talking to yourself or to a wall!    
+你需要的就是多说、多试、多练——哪怕是对着空气自言自语也没关系！  
+The more you speak, the stronger you get.    
+说得越多，你的“口语肌肉”就越结实！  
 
 ### 3. What will we actually do in class?  
 ### 3. 我们平常上课都在干嘛？
