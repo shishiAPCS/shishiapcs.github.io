@@ -94,7 +94,7 @@ I’m building this classroom to be a safe, supportive, and immersive English en
 我们的课堂就是一个安全、温暖、沉浸式的英语空间——在这里，犯错没关系，“多说”才是通往进步的路。
 
 Let’s keep practicing, growing, and having fun together.  
-一起练，一起长大，也一起享受说英语的快乐吧！  
+一起练，一起成长，也一起享受说英语的快乐吧！  
 — *Mr. Mou*  
 
 ---
