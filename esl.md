@@ -5,7 +5,98 @@ layout: post
 categories: media
 ---
 
----
+## *A message for my ESL Speaking class*  
+## *写给我的 ESL 口语班的一封信*
+
+Some of you may feel nervous when you think about speaking English.  
+有些同学一想到开口讲英文，心里可能就有点发慌。  
+You might wonder: *What if I say the wrong thing? What if people laugh? What if I forget my words?*  
+你可能会担心：*说错怎么办？别人会不会笑我？突然脑袋一片空白怎么办？*  
+I want you to know — you’re not alone.  
+这些感觉，真的不止你一个人有。  
+And more importantly: *You are capable of growing into a confident speaker.*  
+更重要的是：*你完全可以练成一个超有自信的英语表达者！*  
+
+Here are five things you can expect from me — and from yourself — in this class.  
+在这门课上，这五件事，是我希望你能对我、也对自己抱有的期待：
+
+### 1. What is this class really about?  
+### 1. 这门口语课到底在做什么？
+
+Speaking is a physical skill — just like lifting weights or playing an instrument.  
+说话是一项“动手动嘴”的技能，像健身、像练乐器一样。  
+You’re training the muscles in your face, your mouth, even your breath.  
+我们要练的，不只是脑子，还有脸、嘴巴、甚至是呼吸的节奏。  
+In this class, we practice speaking the way athletes train: through *repetition*, *intensity*, and *confidence-building*.  
+在这堂课上，我们像运动员一样训练口语：靠*重复*、*节奏*、*慢慢建立自信*。  
+You’ll build sentences, express ideas, and learn to speak clearly and naturally — even when you're nervous.  
+你会学着造句、表达想法，练到就算有点紧张，也能自然地说出来！
+
+### 2. What if I struggle or feel shy?  
+### 2. 万一我说不出来或者很害羞怎么办？
+
+Struggle is part of the process.  
+别担心，磕磕绊绊是正常的！
+Feeling stuck, forgetting words, or being unsure of your grammar doesn’t mean you’re failing — it means you’re *learning*.  
+卡壳、忘词、语法错了，这些都不是失败，而是“我正在进步”的信号。
+I was once in your shoes, and I know how it feels.  
+我以前也经历过你现在的感觉，我懂。
+Speaking English is a skill you *can* master.  
+讲英文是能练出来的技能，真的可以做到。
+You just need to talk more, try more, and practice — even if it means talking to yourself or to a wall!  
+你需要的就是多说、多试、多练——哪怕是对着空气自言自语也没关系！
+The more you speak, the stronger you get.  
+说得越多，你的“口语肌肉”就越结实！
+
+### 3. What will we actually do in class?  
+### 3. 我们平常上课都在干嘛？
+
+We’ll listen, copy, shadow, and *talk a lot*.  
+我们会上课听、模仿、跟读，还会疯狂开口练。  
+You’ll learn to understand what people say, remember it, and say it yourself.  
+你会学会听别人说什么、记下来，然后自己说一遍。  
+You’ll reflect on your recordings, revise your grammar, correct your sentences, and then try again.  
+你会听自己的录音、改语法、修句子、再来一遍。  
+This cycle — speak, revise, repeat — is how your fluency grows.  
+“说→改→再说”的循环，就是让你越来越流利的秘诀！  
+The goal is not perfection, but *progress*.  
+目标不是零错误，而是每天都有小进步！
+
+### 4. Why do we review and revise so much?  
+### 4. 为什么我们老是在复习和修改？
+
+Because repetition is the secret to fluency.  
+因为反复练习，才能让英语变成你的“本能反应”。  
+You’ll reuse sentence structures, grammar points, and vocabulary in new ways.  
+你会不断用新的方式说出学过的句型、语法和单词。  
+One simple sentence can grow into a story.  
+一句普通的话，也能讲出一段故事。  
+One reading can lead to a conversation.  
+一篇朗读练习，也能变成一场真实对话。  
+The more ways you use your English, the more automatic it becomes — and the more confident you’ll feel.  
+你用得越多，英语就越顺口，你的自信也会水涨船高！
+
+### 5. What does success look like in this class?  
+### 5. 什么才叫在口语课上“成功”？
+
+Success is not just about a test score — though I’ll help you prepare for exams like TOEFL or IELTS.  
+成功不只是考高分（虽然我也会帮你准备托福雅思）。  
+True success is when you can speak up, join a discussion, give a presentation, or simply *express yourself* without fear.  
+真正的成功，是你敢开口、敢讨论、敢展示，最重要的是——敢做自己，敢说自己想说的。  
+English isn’t a subject with an ending — it’s a lifelong journey.  
+英语不是“学完就完事”的科目，而是你一生可以用的工具。  
+I’ll be with you for these three years, and my goal is to help you become an independent learner who *keeps growing* long after this class ends.  
+未来三年我都会陪着你，帮你成为一个离开课堂后还能继续成长的自主学习者！
+
+💬 You’re always welcome to speak to me in English — during class, between classes, or anytime you want to practice.  
+💬 想练口语？随时来找我聊！上课时、下课后、走廊遇到我都行！  
+I’m building this classroom to be a safe, supportive, and immersive English environment — one where mistakes are normal and *talking is the path to learning*.  
+我们的课堂就是一个安全、温暖、沉浸式的英语空间——在这里，犯错没关系，“多说”才是通往进步的路。
+
+Let’s keep practicing, growing, and having fun together.  
+一起练，一起长大，也一起享受说英语的快乐吧！  
+— *Mr. Mou*  
+
 ---
 
 ## 托福雅思成绩换算
