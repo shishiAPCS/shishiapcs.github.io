@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mr.Mou · 浏览器端语音转写</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root { --pri:#2563eb; --priH:#1e50c5; }
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; padding: 16px; }
+      #main-container { max-width: 960px; margin: 0 auto; }
+      .topbar { display: flex; align-items: center; gap: 12px; }
+      .logo { width: 42px; height: 42px; object-fit: contain; }
+      h1 { font-size: 20px; margin: 0; }
+      .muted { color: #666; font-size: 14px; }
+      .card { border: 1px solid #eee; border-radius: 12px; padding: 14px 16px; margin-top: 16px; }
+      .btn { display: inline-block; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; cursor: pointer; margin-right: 8px; }
+      .btn:hover { background: #f0f0f0; }
+      .btn-primary { background: var(--pri); color: #fff; border-color: var(--pri); }
+      .btn-primary:hover { background: var(--priH); }
+      .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+      label { font-weight: 600; margin-right: 6px; }
+      hr { border: none; border-top: 1px solid #eee; margin: 20px 0; }
+      #output {
+        width: 100%; height: 100%;
+        margin-top: 10px; border: 1px solid #222; border-radius: 6px; padding: 8px;
+        display: block; background: #000; color: #fff;
+        font-size: 12px; font-family: 'Lucida Console', Monaco, monospace;
+        white-space: pre; overflow-wrap: normal; overflow-x: auto; outline: none;
+      }
+      .tip { background: #f8fafc; border: 1px dashed #e2e8f0; padding: 10px 12px; border-radius: 8px; font-size: 14px; }
+      .small { font-size: 12px; color: #666; }
+      .link { color: var(--pri); cursor: pointer; text-decoration: underline; }
+    </style>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <div id="main-container">
+      <div class="topbar">
+        <img class="logo" src="/assets/whisper-demo/mr-mou.png" alt="Mr.Mou" onerror="this.style.display='none'">
+        <h1>浏览器端语音转写文字</h1>
+      </div>
+      <div class="muted">音频在本地浏览器完成推理，不会上传服务器；转写速度取决于设备性能。</div>
+
+      <div class="card">
+        <strong>使用说明</strong>
+        <ol>
+          <li><b>加载模型（二选一）</b>：点击下方任一「在线获取」首次下载（浏览器缓存）；或点 Choose File「从本地选择模型」</code>。</li>
+          <li><b>选择输入</b>：上传音频文件，或使用麦克风录音（最长 2 分钟）。</li>
+          <li><b>开始转写</b>：直接点击「开始转写」。结果会显示在下方黑色文本框。</li>
+        </ol>
+        <div class="tip">
+          建议使用 Chrome/Edge（最新版，需支持 WASM SIMD）。文件输入默认上限 30 分钟，录音上限 2 分钟。
+        </div>
+      </div>
+
+      <!-- 模型区：tiny.en / base.en / small.en + 本地文件 + 备用直连 + 清缓存 -->
+      <div class="card" id="model">
+        <div class="row" style="margin-bottom:8px;">
+          <label>模型：</label>
+          <button class="btn" onclick="loadWhisper('tiny.en')">在线获取 tiny.en（≈75MB）</button>
+          <button class="btn" onclick="loadWhisper('base.en')">在线获取 base.en（≈142MB）</button>
+          <button class="btn" onclick="loadWhisper('small.en')">在线获取 small.en（≈466MB）</button>
+          <input type="file" id="whisper-file" accept=".bin" onchange="loadFile(event, 'whisper.bin')" />
+        </div>
+        <div class="small" id="model-whisper-status"></div>
+        <div class="small" id="fetch-whisper-progress" style="margin-top:6px;"></div>
+        <div class="small" style="margin-top:6px;">
+          下载异常？试试
+          <span class="link" onclick="directFetchCurrent()">备用直连下载（不缓存）</span>
+          或 <span class="link" onclick="clearWhisperIDB()">清理缓存</span> 后重试。
+        </div>
+      </div>
+
+      <!-- 输入源：文件 / 麦克风 -->
+      <div class="card">
+        <div class="row" id="input">
+          <label>输入来源：</label>
+          <input type="radio" id="radio-file" name="input" value="file" checked onchange="changeInput('file')" />
+          <label for="radio-file" style="font-weight:400;">文件</label>
+          <input type="radio" id="radio-mic" name="input" value="mic" onchange="changeInput('mic')" />
+          <label for="radio-mic" style="font-weight:400;">麦克风</label>
+        </div>
+
+        <div id="input_file" style="margin-top:8px;">
+          <label>音频文件：</label>
+          <input type="file" id="fileInput" accept="audio/*" onchange="loadAudio(event)" />
+        </div>
+
+        <div id="input_mic" style="display:none; margin-top:8px;">
+          <label>麦克风：</label>
+          <button class="btn" id="start" onclick="startRecording()">开始录音</button>
+          <button class="btn" id="stop" onclick="stopRecording()" disabled>停止</button>
+          <div id="progress" style="display:none; margin-top:8px;">
+            <div id="progress-bar" style="width:0%; height:10px; background:#4CAF50; border-radius:6px;"></div>
+            <div id="progress-text" class="small">0%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 操作区：仅保留“开始转写”（默认英文） -->
+      <div class="card">
+        <div class="row">
+          <button class="btn btn-primary" onclick="onProcess(false);">开始转写</button>
+        </div>
+        <div class="small">本页面固定识别英文（*.en 模型）。</div>
+      </div>
+
+      <div class="card">
+        <label>转写结果：</label>
+        <textarea id="output" rows="20" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:8px;">
+            <button class="btn" onclick="downloadTranscript()">下载转写结果（.txt）</button>
+        </div>
+      </div>
+
+      <!-- 隐藏的音频预览（保留，不影响 UI） -->
+      <audio controls id="audio" loop hidden>
+        您的浏览器不支持 &lt;audio&gt; 标签
+        <source id="source" src="" type="audio/wav" />
+      </audio>
+    </div>
+
+    <!-- 务必放在你自定义脚本前 -->
+    <script src="helpers.js"></script>
+
+    <script>
+      /* ======== helpers.js 依赖的三个全局量（必须存在）======== */
+      let dbVersion = 1;
+      let dbName    = 'whisper.ggerganov.com';
+      let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+      /* ======================= 可配置区域 ======================= */
+      // ① 模型源（按优先级从上到下）。需要国内镜像/自托管时直接改这里：
+      //    示例镜像（失效就换）：'https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/'
+      //    同源自托管：放 *.bin 到 /models/，把源改成 'models/'
+      const MODEL_SOURCES = [
+        'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/',
+        // 'https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/',
+        // 'models/'
+      ];
+
+      // ② 缓存戳（想强制刷新时改一下）
+      const CACHE_BUST = 'v=20250813';
+
+      // ③ 文件/录音时长上限（秒）
+      const kMaxAudio_s     = 30 * 60;   // 文件 30 分钟
+      const kMaxRecording_s = 2  * 60;   // 录音 2 分钟
+
+      // ④ 线程数（你编译的是单线程 WASM，也可保留 8 兼容 main.js 的签名）
+      var nthreads = 8;
+
+      /* ======================= 页面逻辑 ======================= */
+      function setAudio(_) {}
+
+      function changeInput(input) {
+        if (input === 'file') {
+          document.getElementById('input_file').style.display = 'block';
+          document.getElementById('input_mic').style.display  = 'none';
+          const p = document.getElementById('progress'); if (p) p.style.display = 'none';
+        } else {
+          document.getElementById('input_file').style.display = 'none';
+          document.getElementById('input_mic').style.display  = 'block';
+          const p = document.getElementById('progress'); if (p) p.style.display = 'block';
+        }
+      }
+
+      var Module = {
+        print: printTextarea,
+        printErr: printTextarea,
+        setStatus: (text) => printTextarea('js: ' + text),
+        monitorRunDependencies: function() {}
+      };
+
+      // 全局状态
+      var context  = null;   // WebAudio
+      var audio    = null;   // Float32Array（单声道）
+      var instance = null;   // whisper 实例
+      var model_whisper = '';          // 状态显示
+      var currentModelKey = 'tiny.en'; // 记录最近一次选择的模型键
+
+      // —— 把二进制写入 WASM FS
+      function storeFS(fname, buf) {
+        try { Module.FS_unlink(fname); } catch (_) {}
+        Module.FS_createDataFile("/", fname, buf, true, true);
+
+        document.getElementById('model-whisper-status').textContent = '模型已就绪：' + model_whisper;
+        printTextarea('storeFS: stored model: ' + fname + ' size: ' + buf.length);
+
+        const small = document.querySelector('#model .small');
+        if (small) small.textContent = '模型已就绪：' + model_whisper;
+      }
+
+      // —— 本地选择模型
+      function loadFile(event, fname) {
+        const file = event.target.files[0];
+        if (!file) return;
+        model_whisper   = file.name;
+        currentModelKey = 'local';
+
+        printTextarea('正在加载本地模型：' + file.name + '（' + file.size + ' 字节）');
+        printTextarea('请稍候 …');
+
+        const reader = new FileReader();
+        reader.onload = function() {
+          const buf = new Uint8Array(reader.result);
+          storeFS(fname, buf);
+        };
+        reader.readAsArrayBuffer(file);
+      }
+
+      // —— 模型映射与 URL 生成
+      const MODEL_FILES = {
+        'tiny.en':  'ggml-tiny.en.bin',
+        'base.en':  'ggml-base.en.bin',
+        'small.en': 'ggml-small.en.bin'
+      };
+      const MODEL_SIZES_MB = { 'tiny.en': 75, 'base.en': 142, 'small.en': 466 };
+
+      function makeUrl(modelKey) {
+        const file = MODEL_FILES[modelKey];
+        const base = MODEL_SOURCES[0].replace(/\/+$/, '/') ;
+        return base + file + (CACHE_BUST ? ('?' + CACHE_BUST) : '');
+      }
+
+      // —— 使用 helpers.js 的带缓存下载
+      function loadWhisper(modelKey) {
+        currentModelKey = modelKey;
+        model_whisper   = modelKey;
+
+        const url = makeUrl(modelKey);
+        const dst = 'whisper.bin';
+        const size_mb = MODEL_SIZES_MB[modelKey];
+
+        document.getElementById('model-whisper-status').textContent = '正在下载模型：' + modelKey + ' …';
+
+        const cbProgress = (p) => {
+          document.getElementById('fetch-whisper-progress').textContent = '下载进度：' + Math.round(100*p) + '%';
+        };
+        const cbCancel = () => {
+          document.getElementById('fetch-whisper-progress').textContent = '下载已取消';
+          document.getElementById('model-whisper-status').textContent   = '';
+        };
+
+        loadRemote(url, dst, size_mb, cbProgress, storeFS, cbCancel, printTextarea);
+      }
+
+      // —— 备用直连（不走 IndexedDB）
+      async function directFetch(url) {
+        printTextarea('直连下载：' + url);
+        document.getElementById('model-whisper-status').textContent = '正在直连下载模型 …';
+        try {
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+          const buf = new Uint8Array(await res.arrayBuffer());
+          storeFS('whisper.bin', buf);
+          document.getElementById('fetch-whisper-progress').textContent = '直连下载完成';
+        } catch (e) {
+          printTextarea('直连下载失败：' + e);
+          document.getElementById('model-whisper-status').textContent = '下载失败';
+        }
+      }
+      function directFetchCurrent() {
+        if (currentModelKey === 'local') {
+          printTextarea('当前为本地模型，无需直连下载。');
+          return;
+        }
+        directFetch(makeUrl(currentModelKey));
+      }
+
+      // —— 一键清理本域名的 whisper IndexedDB 缓存
+      function clearWhisperIDB() {
+        try {
+          indexedDB.deleteDatabase(dbName);
+          if ('caches' in window) caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+          document.getElementById('fetch-whisper-progress').textContent = '已请求清理缓存，刷新页面后生效';
+          printTextarea('已触发清理 IndexedDB 与 Cache Storage（若有）');
+        } catch (e) {
+          printTextarea('清理失败：' + e);
+        }
+      }
+
+      // ===== 音频：文件加载 =====
+      const kSampleRate = 16000;
+      window.AudioContext = window.AudioContext || window.webkitAudioContext;
+      window.OfflineAudioContext = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+
+      function ensureContext() {
+        if (!context) {
+          context = new AudioContext({
+            sampleRate: kSampleRate,
+            channelCount: 1,
+            echoCancellation: false,
+            autoGainControl:  true,
+            noiseSuppression: true
+          });
+        }
+      }
+
+      function loadAudio(event) {
+        ensureContext();
+        const file = event.target.files[0];
+        if (!file) return;
+
+        printTextarea('正在加载音频：' + file.name + '（' + file.size + ' 字节）');
+        printTextarea('请稍候 …');
+
+        const reader = new FileReader();
+        reader.onload = function() {
+          const buf = new Uint8Array(reader.result);
+
+          context.decodeAudioData(buf.buffer, function(audioBuffer) {
+            const offlineContext = new OfflineAudioContext(audioBuffer.numberOfChannels, audioBuffer.length, audioBuffer.sampleRate);
+            const source = offlineContext.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(offlineContext.destination);
+            source.start(0);
+
+            offlineContext.startRendering().then(function(renderedBuffer) {
+              audio = renderedBuffer.getChannelData(0);
+              printTextarea('音频已载入（采样点数：' + audio.length + '）');
+
+              if (audio.length > kMaxAudio_s * kSampleRate) {
+                audio = audio.slice(0, kMaxAudio_s * kSampleRate);
+                printTextarea('提示：已截断至前 ' + kMaxAudio_s + ' 秒');
+              }
+              setAudio(audio);
+            });
+          }, function(e) {
+            printTextarea('解码音频失败：' + e);
+            audio = null;
+            setAudio(audio);
+          });
+        };
+        reader.readAsArrayBuffer(file);
+      }
+
+      // ===== 麦克风录音 =====
+      var mediaRecorder = null;
+      var doRecording   = false;
+      var startTime     = 0;
+
+      function stopRecording() { doRecording = false; }
+
+      function startRecording() {
+        ensureContext();
+
+        document.getElementById('start').disabled = true;
+        document.getElementById('stop').disabled  = false;
+
+        const p = document.getElementById('progress');
+        if (p) p.style.display = 'block';
+        document.getElementById('progress-bar').style.width = '0%';
+        document.getElementById('progress-text').textContent = '0%';
+
+        doRecording = true;
+        startTime   = Date.now();
+
+        let chunks = [];
+        let stream = null;
+
+        navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+          .then(function(s) {
+            stream = s;
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
+            mediaRecorder.onstop = function() {
+              const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
+              chunks = [];
+
+              document.getElementById('start').disabled = false;
+              document.getElementById('stop').disabled  = true;
+
+              const reader = new FileReader();
+              reader.onload = function() {
+                const buf = new Uint8Array(reader.result);
+
+                context.decodeAudioData(buf.buffer, function(audioBuffer) {
+                  const offlineContext = new OfflineAudioContext(audioBuffer.numberOfChannels, audioBuffer.length, audioBuffer.sampleRate);
+                  const source = offlineContext.createBufferSource();
+                  source.buffer = audioBuffer;
+                  source.connect(offlineContext.destination);
+                  source.start(0);
+
+                  offlineContext.startRendering().then(function(renderedBuffer) {
+                    audio = renderedBuffer.getChannelData(0);
+                    printTextarea('录音完成（采样点数：' + audio.length + '）');
+
+                    if (audio.length > kMaxRecording_s * kSampleRate) {
+                      audio = audio.slice(0, kMaxRecording_s * kSampleRate);
+                      printTextarea('提示：已截断至前 ' + kMaxRecording_s + ' 秒');
+                    }
+                    setAudio(audio);
+                  });
+                }, function(e) {
+                  printTextarea('解码录音失败：' + e);
+                  audio = null;
+                  setAudio(audio);
+                });
+              };
+              reader.readAsArrayBuffer(blob);
+            };
+            mediaRecorder.start();
+          })
+          .catch(function(err) {
+            printTextarea('获取麦克风失败：' + err);
+          });
+
+        const interval = setInterval(function() {
+          if (!doRecording) {
+            clearInterval(interval);
+            if (mediaRecorder) mediaRecorder.stop();
+            if (stream) stream.getTracks().forEach(t => t.stop());
+          }
+          const pct = Math.min(100, (100 * (Date.now() - startTime) / 1000 / kMaxRecording_s));
+          document.getElementById('progress-bar').style.width = pct + '%';
+          document.getElementById('progress-text').textContent = pct.toFixed(0) + '%';
+        }, 1000);
+
+        printTextarea('开始录音 …');
+
+        setTimeout(function() {
+          if (doRecording) {
+            printTextarea('录音已自动停止（' + kMaxRecording_s + ' 秒上限）');
+            stopRecording();
+          }
+        }, kMaxRecording_s * 1000);
+      }
+
+      // ===== 推理（固定英文） =====
+      function onProcess(translate) {
+        if (!instance) {
+          instance = Module.init('whisper.bin');
+          if (instance) {
+            printTextarea('whisper 已初始化（实例 ID：' + instance + '）');
+            const small = document.querySelector('#model .small');
+            if (small) small.textContent = '模型已就绪：' + model_whisper;
+          }
+        }
+
+        if (!instance) { printTextarea('初始化失败：未获得 whisper 实例'); return; }
+        if (!audio)    { printTextarea('未检测到音频数据，请先选择文件或录音'); return; }
+
+        printTextarea('\n开始转写，可能需要一些时间，请耐心等待 …\n');
+
+        setTimeout(function() {
+          // 固定英文识别：'en'
+          const ret = Module.full_default(instance, audio, 'en', nthreads, translate);
+          if (ret) printTextarea('whisper 返回代码：' + ret);
+        }, 100);
+      }
+
+        // —— 从输出区提取“文稿纯文本”：去掉时间戳与日志行
+      function pickTranscriptText() {
+        const raw = document.getElementById('output').value || '';
+        const lines = raw.split(/\r?\n/);
+
+        // 1) 仅保留带时间戳的识别行（例如：[00:00:00.000 --> 00:00:08.640] text）
+        const tsRe = /^\[\d{2}:\d{2}:\d{2}\.\d{3} --> \d{2}:\d{2}:\d{2}\.\d{3}\]\s*/;
+        let textLines = lines
+        .filter(l => tsRe.test(l))
+        .map(l => l.replace(tsRe, '').trim())
+        .filter(Boolean);
+
+        // 2) 如果没检测到时间戳行（比如输出格式变了），退化为：去掉以 "js:" 开头的日志行
+        if (textLines.length === 0) {
+        textLines = lines
+            .filter(l => !/^js:\s*/i.test(l))
+            .map(l => l.trim())
+            .filter(Boolean);
+        }
+
+        return textLines.join('\n');
+      }
+
+    // —— 触发下载 .txt
+      function downloadTranscript() {
+        const text = pickTranscriptText().trim();
+        if (!text) {
+        alert('还没有可下载的内容：请先完成一次转写。');
+        return;
+        }
+        const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+        const url  = URL.createObjectURL(blob);
+
+        // 文件名：whisper_transcript_YYYYMMDD_HHMMSS.txt
+        const d = new Date();
+        const pad = n => String(n).padStart(2,'0');
+        const fname = `whisper_transcript_${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}.txt`;
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fname;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+
+    </script>
+
+    <!-- 你构建生成的主文件 -->
+    <script src="main.js"></script>
+  </body>
+</html>
