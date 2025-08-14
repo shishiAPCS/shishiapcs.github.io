@@ -5,7 +5,7 @@
     <title>Mr.Mou · 浏览器端语音转写</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- 让页面被 SW 接管以启用 COOP/COEP（多线程前置条件；单线程也建议启用以减少环境差异） -->
+    <!-- 重要：让页面被 SW 接管（COOP/COEP），减少本地/线上差异，后续可用多线程 -->
     <script src="coi-serviceworker.js?v=20250814"></script>
 
     <style>
@@ -21,6 +21,7 @@
       .btn:hover { background: #f0f0f0; }
       .btn-primary { background: var(--pri); color: #fff; border-color: var(--pri); }
       .btn-primary:hover { background: var(--priH); }
+      .btn[disabled] { opacity:.55; cursor:not-allowed; }
       .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
       label { font-weight: 600; margin-right: 6px; }
       hr { border: none; border-top: 1px solid #eee; margin: 20px 0; }
@@ -34,7 +35,6 @@
       .tip { background: #f8fafc; border: 1px dashed #e2e8f0; padding: 10px 12px; border-radius: 8px; font-size: 14px; }
       .small { font-size: 12px; color: #666; }
       .link { color: var(--pri); cursor: pointer; text-decoration: underline; }
-      .btn[disabled] { opacity: .55; cursor: not-allowed; }
     </style>
     <link rel="icon" href="data:,">
   </head>
@@ -125,7 +125,7 @@
       </audio>
     </div>
 
-    <!-- 先加载 helpers，后加载你自定义逻辑，再加载 main.js；都加版本戳避免旧缓存 -->
+    <!-- 先加载 helpers，避免缓存干扰加版本戳 -->
     <script src="helpers.js?v=20250814"></script>
 
     <script>
@@ -145,8 +145,10 @@
       const kMaxRecording_s = 2  * 60;   // 录音 2 分钟
 
       /* ===== 运行时与 FS 就绪门禁 ===== */
-      let FS_READY = false;
+      let FS_READY   = false;
+      let MODEL_READY= false;
       let PENDING_MODEL = null;
+
       function enableFsButtons() {
         document.querySelectorAll('[data-needs-fs]').forEach(b => b.disabled = false);
       }
@@ -193,6 +195,7 @@
       function tryStoreFS(fname, buf) {
         try { Module.FS_unlink(fname); } catch (_) {}
         Module.FS_createDataFile("/", fname, buf, true, true);
+        MODEL_READY = true;
         document.getElementById('model-whisper-status').textContent = '模型已就绪：' + (model_whisper || '');
         printTextarea('storeFS: stored model: ' + fname + ' size: ' + buf.length);
         const small = document.querySelector('#model .small');
@@ -443,11 +446,7 @@
 
       // ===== 推理（固定英文） =====
       function onProcess(translate) {
-        // 先确认模型真的在 FS
-        try {
-          const t = Module.FS_readFile('whisper.bin');
-          if (!t || !t.length) throw new Error('empty');
-        } catch (e) {
+        if (!MODEL_READY) {
           printTextarea('未检测到模型文件 whisper.bin，请先点击“在线获取”或“从本地选择模型”。');
           return;
         }
@@ -510,7 +509,7 @@
       }
     </script>
 
-    <!-- 你构建生成的主文件（Emscripten 输出） -->
+    <!-- Emscripten 主文件（加版本戳防缓存） -->
     <script src="main.js?v=20250814"></script>
   </body>
 </html>
