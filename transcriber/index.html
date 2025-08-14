@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <title>Mr.Mou · 浏览器端语音转写</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 让页面被 SW 接管以启用 COOP/COEP（多线程前置条件；单线程也建议启用以减少环境差异） -->
+    <script src="coi-serviceworker.js?v=20250814"></script>
+
     <style>
       :root { --pri:#2563eb; --priH:#1e50c5; }
       body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; padding: 16px; }
@@ -30,6 +34,7 @@
       .tip { background: #f8fafc; border: 1px dashed #e2e8f0; padding: 10px 12px; border-radius: 8px; font-size: 14px; }
       .small { font-size: 12px; color: #666; }
       .link { color: var(--pri); cursor: pointer; text-decoration: underline; }
+      .btn[disabled] { opacity: .55; cursor: not-allowed; }
     </style>
     <link rel="icon" href="data:,">
   </head>
@@ -44,7 +49,7 @@
       <div class="card">
         <strong>使用说明</strong>
         <ol>
-          <li><b>加载模型（二选一）</b>：点击下方任一「在线获取」首次下载（浏览器缓存）；或点 Choose File「从本地选择模型」</code>。</li>
+          <li><b>加载模型（二选一）</b>：点击下方任一「在线获取」首次下载（浏览器缓存）；或点 <code>Choose File</code> 从本地选择模型。</li>
           <li><b>选择输入</b>：上传音频文件，或使用麦克风录音（最长 2 分钟）。</li>
           <li><b>开始转写</b>：直接点击「开始转写」。结果会显示在下方黑色文本框。</li>
         </ol>
@@ -57,9 +62,9 @@
       <div class="card" id="model">
         <div class="row" style="margin-bottom:8px;">
           <label>模型：</label>
-          <button class="btn" onclick="loadWhisper('tiny.en')">在线获取 tiny.en（≈75MB）</button>
-          <button class="btn" onclick="loadWhisper('base.en')">在线获取 base.en（≈142MB）</button>
-          <button class="btn" onclick="loadWhisper('small.en')">在线获取 small.en（≈466MB）</button>
+          <button class="btn" data-needs-fs disabled onclick="loadWhisper('tiny.en')">在线获取 tiny.en（≈75MB）</button>
+          <button class="btn" data-needs-fs disabled onclick="loadWhisper('base.en')">在线获取 base.en（≈142MB）</button>
+          <button class="btn" data-needs-fs disabled onclick="loadWhisper('small.en')">在线获取 small.en（≈466MB）</button>
           <input type="file" id="whisper-file" accept=".bin" onchange="loadFile(event, 'whisper.bin')" />
         </div>
         <div class="small" id="model-whisper-status"></div>
@@ -100,7 +105,7 @@
       <!-- 操作区：仅保留“开始转写”（默认英文） -->
       <div class="card">
         <div class="row">
-          <button class="btn btn-primary" onclick="onProcess(false);">开始转写</button>
+          <button class="btn btn-primary" data-needs-fs disabled onclick="onProcess(false);">开始转写</button>
         </div>
         <div class="small">本页面固定识别英文（*.en 模型）。</div>
       </div>
@@ -109,7 +114,7 @@
         <label>转写结果：</label>
         <textarea id="output" rows="20" spellcheck="false"></textarea>
         <div class="row" style="margin-top:8px;">
-            <button class="btn" onclick="downloadTranscript()">下载转写结果（.txt）</button>
+          <button class="btn" onclick="downloadTranscript()">下载转写结果（.txt）</button>
         </div>
       </div>
 
@@ -120,8 +125,8 @@
       </audio>
     </div>
 
-    <!-- 务必放在你自定义脚本前 -->
-    <script src="helpers.js"></script>
+    <!-- 先加载 helpers，后加载你自定义逻辑，再加载 main.js；都加版本戳避免旧缓存 -->
+    <script src="helpers.js?v=20250814"></script>
 
     <script>
       /* ======== helpers.js 依赖的三个全局量（必须存在）======== */
@@ -130,28 +135,24 @@
       let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
       /* ======================= 可配置区域 ======================= */
-      // ① 模型源（按优先级从上到下）。需要国内镜像/自托管时直接改这里：
-      //    示例镜像（失效就换）：'https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/'
-      //    同源自托管：放 *.bin 到 /models/，把源改成 'models/'
       const MODEL_SOURCES = [
         'https://huggingface.co/ggerganov/whisper.cpp/resolve/main/',
         // 'https://hf-mirror.com/ggerganov/whisper.cpp/resolve/main/',
-        // 'models/'
+        // 'models/' // 自托管示例（将 *.bin 放在 /models/ 目录）
       ];
-
-      // ② 缓存戳（想强制刷新时改一下）
-      const CACHE_BUST = 'v=20250813';
-
-      // ③ 文件/录音时长上限（秒）
+      const CACHE_BUST = 'v=20250814';
       const kMaxAudio_s     = 30 * 60;   // 文件 30 分钟
       const kMaxRecording_s = 2  * 60;   // 录音 2 分钟
 
-      // ④ 线程数（你编译的是单线程 WASM，也可保留 8 兼容 main.js 的签名）
-      var nthreads = 8;
+      /* ===== 运行时与 FS 就绪门禁 ===== */
+      let FS_READY = false;
+      let PENDING_MODEL = null;
+      function enableFsButtons() {
+        document.querySelectorAll('[data-needs-fs]').forEach(b => b.disabled = false);
+      }
 
-      /* ======================= 页面逻辑 ======================= */
+      // 控制台输出函数在 helpers.js 里
       function setAudio(_) {}
-
       function changeInput(input) {
         if (input === 'file') {
           document.getElementById('input_file').style.display = 'block';
@@ -164,11 +165,18 @@
         }
       }
 
+      // Emscripten runtime 钩子（main.js 加载后会触发）
       var Module = {
         print: printTextarea,
         printErr: printTextarea,
         setStatus: (text) => printTextarea('js: ' + text),
-        monitorRunDependencies: function() {}
+        monitorRunDependencies: function() {},
+        onRuntimeInitialized() {
+          FS_READY = true;
+          enableFsButtons();
+          if (PENDING_MODEL) { tryStoreFS('whisper.bin', PENDING_MODEL); PENDING_MODEL = null; }
+        },
+        onAbort: (what) => { printTextarea('ABORT: ' + what); },
       };
 
       // 全局状态
@@ -178,16 +186,25 @@
       var model_whisper = '';          // 状态显示
       var currentModelKey = 'tiny.en'; // 记录最近一次选择的模型键
 
-      // —— 把二进制写入 WASM FS
-      function storeFS(fname, buf) {
+      // 你这版构建为单线程：先固定 1，避免线上 abort；将来换线程版再提升
+      var nthreads = 1;
+
+      // —— 把二进制写入 WASM FS（若 FS 未就绪先缓存）
+      function tryStoreFS(fname, buf) {
         try { Module.FS_unlink(fname); } catch (_) {}
         Module.FS_createDataFile("/", fname, buf, true, true);
-
-        document.getElementById('model-whisper-status').textContent = '模型已就绪：' + model_whisper;
+        document.getElementById('model-whisper-status').textContent = '模型已就绪：' + (model_whisper || '');
         printTextarea('storeFS: stored model: ' + fname + ' size: ' + buf.length);
-
         const small = document.querySelector('#model .small');
-        if (small) small.textContent = '模型已就绪：' + model_whisper;
+        if (small) small.textContent = '模型已就绪：' + (model_whisper || '');
+      }
+      function storeFS(fname, buf) {
+        if (!FS_READY || !Module.FS_createDataFile) {
+          PENDING_MODEL = buf;
+          printTextarea('FS 尚未就绪，已缓存模型数据，运行时就绪后会自动写入 …');
+          return;
+        }
+        tryStoreFS(fname, buf);
       }
 
       // —— 本地选择模型
@@ -215,10 +232,9 @@
         'small.en': 'ggml-small.en.bin'
       };
       const MODEL_SIZES_MB = { 'tiny.en': 75, 'base.en': 142, 'small.en': 466 };
-
       function makeUrl(modelKey) {
         const file = MODEL_FILES[modelKey];
-        const base = MODEL_SOURCES[0].replace(/\/+$/, '/') ;
+        const base = MODEL_SOURCES[0].replace(/\/+$/, '/');
         return base + file + (CACHE_BUST ? ('?' + CACHE_BUST) : '');
       }
 
@@ -240,7 +256,6 @@
           document.getElementById('fetch-whisper-progress').textContent = '下载已取消';
           document.getElementById('model-whisper-status').textContent   = '';
         };
-
         loadRemote(url, dst, size_mb, cbProgress, storeFS, cbCancel, printTextarea);
       }
 
@@ -267,7 +282,7 @@
         directFetch(makeUrl(currentModelKey));
       }
 
-      // —— 一键清理本域名的 whisper IndexedDB 缓存
+      // —— 清理本域名的 whisper IndexedDB 缓存
       function clearWhisperIDB() {
         try {
           indexedDB.deleteDatabase(dbName);
@@ -428,78 +443,74 @@
 
       // ===== 推理（固定英文） =====
       function onProcess(translate) {
+        // 先确认模型真的在 FS
+        try {
+          const t = Module.FS_readFile('whisper.bin');
+          if (!t || !t.length) throw new Error('empty');
+        } catch (e) {
+          printTextarea('未检测到模型文件 whisper.bin，请先点击“在线获取”或“从本地选择模型”。');
+          return;
+        }
+
         if (!instance) {
           instance = Module.init('whisper.bin');
           if (instance) {
             printTextarea('whisper 已初始化（实例 ID：' + instance + '）');
             const small = document.querySelector('#model .small');
-            if (small) small.textContent = '模型已就绪：' + model_whisper;
+            if (small) small.textContent = '模型已就绪：' + (model_whisper || '');
+          } else {
+            printTextarea('初始化失败：未获得 whisper 实例');
+            return;
           }
         }
 
-        if (!instance) { printTextarea('初始化失败：未获得 whisper 实例'); return; }
-        if (!audio)    { printTextarea('未检测到音频数据，请先选择文件或录音'); return; }
+        if (!audio) { printTextarea('未检测到音频数据，请先选择文件或录音'); return; }
 
         printTextarea('\n开始转写，可能需要一些时间，请耐心等待 …\n');
 
         setTimeout(function() {
-          // 固定英文识别：'en'
-          const ret = Module.full_default(instance, audio, 'en', nthreads, translate);
-          if (ret) printTextarea('whisper 返回代码：' + ret);
+          try {
+            const ret = Module.full_default(instance, audio, 'en', nthreads, translate);
+            if (ret) printTextarea('whisper 返回代码：' + ret);
+          } catch (err) {
+            printTextarea('转写过程中出现异常：' + (err && err.message || err));
+          }
         }, 100);
       }
 
-        // —— 从输出区提取“文稿纯文本”：去掉时间戳与日志行
+      // —— 从输出区提取“文稿纯文本”：去掉时间戳与日志行
       function pickTranscriptText() {
         const raw = document.getElementById('output').value || '';
         const lines = raw.split(/\r?\n/);
-
-        // 1) 仅保留带时间戳的识别行（例如：[00:00:00.000 --> 00:00:08.640] text）
         const tsRe = /^\[\d{2}:\d{2}:\d{2}\.\d{3} --> \d{2}:\d{2}:\d{2}\.\d{3}\]\s*/;
         let textLines = lines
-        .filter(l => tsRe.test(l))
-        .map(l => l.replace(tsRe, '').trim())
-        .filter(Boolean);
-
-        // 2) 如果没检测到时间戳行（比如输出格式变了），退化为：去掉以 "js:" 开头的日志行
+          .filter(l => tsRe.test(l))
+          .map(l => l.replace(tsRe, '').trim())
+          .filter(Boolean);
         if (textLines.length === 0) {
-        textLines = lines
+          textLines = lines
             .filter(l => !/^js:\s*/i.test(l))
             .map(l => l.trim())
             .filter(Boolean);
         }
-
         return textLines.join('\n');
       }
 
-    // —— 触发下载 .txt
+      // —— 触发下载 .txt
       function downloadTranscript() {
         const text = pickTranscriptText().trim();
-        if (!text) {
-        alert('还没有可下载的内容：请先完成一次转写。');
-        return;
-        }
+        if (!text) { alert('还没有可下载的内容：请先完成一次转写。'); return; }
         const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
         const url  = URL.createObjectURL(blob);
-
-        // 文件名：whisper_transcript_YYYYMMDD_HHMMSS.txt
-        const d = new Date();
-        const pad = n => String(n).padStart(2,'0');
+        const d = new Date(); const pad = n => String(n).padStart(2,'0');
         const fname = `whisper_transcript_${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}_${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}.txt`;
-
         const a = document.createElement('a');
-        a.href = url;
-        a.download = fname;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        a.href = url; a.download = fname; document.body.appendChild(a); a.click(); a.remove();
         URL.revokeObjectURL(url);
       }
-
-
     </script>
 
-    <!-- 你构建生成的主文件 -->
-    <script src="main.js"></script>
+    <!-- 你构建生成的主文件（Emscripten 输出） -->
+    <script src="main.js?v=20250814"></script>
   </body>
 </html>
