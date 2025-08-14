@@ -10,7 +10,7 @@ title: "Tools"
 ## Essentials 必备知识
 ---
 
-* ### [OpenAI Whisper 语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```本地转，速度取决于电脑性能```
+* ### [OpenAI Whisper 模型语音转文字](https://shishiapcs.github.io/cs-audio-to-text) ```本地转，速度取决于电脑性能```
 * ### [flixier](https://editor.flixier.com/tools/all-tools) ```在线转换，仍然免费，无需账号```
     - #### [教程](_posts/2023-03-20-free-online-transcribe.md)  
 * ### [在线录音机](https://vocalremover.org/zh/voice-recorder)
