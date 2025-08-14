@@ -5,7 +5,7 @@ layout: post
 categories: media
 ---
 
-### **1. **地址**： [点击打开工具](https://shishiapcs.github.io/transcriber/)
+### **1. 地址**： [点击打开工具](https://shishiapcs.github.io/transcriber/)
 
 ---
 
