@@ -591,8 +591,8 @@ Let’s keep practicing, growing, and having fun together.
 2. The two reasons/details of the proposal 
 3. The Speaker's opinion 
 4. The first reason from the speaker and its supporting information
-5. The second reason from the speaker and its suporting information
-6. Conslusion 
+5. The second reason from the speaker and its supporting information
+6. Conclusion 
 
 ## Task 3
 
