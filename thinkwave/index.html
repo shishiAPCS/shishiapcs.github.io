@@ -438,23 +438,111 @@
   };
 
   // AUTOFILL CODE for ThinkWave assignments/gradebook ////////////////////
+  // AUTOFILL CODE for ThinkWave assignments/gradebook ////////////////////
   const buildAutofillCode = (entries) => {
-    // Build a compact mapping: normalized name-keys -> score
-    const pairs = entries.map(e=>[kFromAnyName(e.name)[0]||letters(e.name), e.score]).filter(([k])=>k);
-    const obj = {}; for (const [k,v] of pairs){ obj[k]=String(v); }
+    // Build a richer mapping: all candidate keys → score
+    const letters = s => (s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
+    const keysFromAnyName = (raw) => {
+      const s = String(raw||'').replace(/[\u201C\u201D\u2018\u2019]/g,'"').trim();
+      const q = s.match(/"(.*?)"/);
+      const nick = q ? q[1].trim() : '';
+      const strip = s.replace(/".*?"/g,'').trim();
+      let fam='', giv='', eng='';
+      if (strip.includes(',')){
+        const parts = strip.split(',').map(p=>p.replace(/,+$/,'').trim()).filter(Boolean);
+        fam = parts[0]||''; giv = parts[1]||''; eng = parts[2]||'';
+      } else {
+        const parts = strip.split(/\s+/).filter(Boolean);
+        if (parts.length>=2){ giv = parts.slice(0,-1).join(' '); fam = parts.slice(-1)[0]; }
+        else { eng = strip; }
+      }
+      const set = new Set(), add=v=>{ if(v) set.add(letters(v)); };
+      add(eng||nick||strip);
+      add(`${eng} ${fam}`); add(`${giv} ${fam}`); add(`${fam} ${giv}`);
+      add(`${eng}${fam}`);  add(`${giv}${fam}`);
+      if (fam){ add(`${eng} ${fam[0]}`); add(`${giv} ${fam[0]}`); add(`${eng}${fam[0]}`); add(`${giv}${fam[0]}`); }
+      return Array.from(set);
+    };
+  
+    const obj = {};
+    for (const e of entries){
+      const ks = keysFromAnyName(e.name);
+      if (!ks.length) ks.push(letters(e.name));
+      for (const k of ks) obj[k] = String(e.score);
+    }
     const payload = JSON.stringify(obj);
-
-    return `(()=>{\n`+
-`const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');\n`+
-`const last=(s)=>{const m=String(s).match(/\"(.*?)\"/);return m?m[1]:''};\n`+
-`const keyFromDisp=(disp,eng)=>{disp=String(disp||'');eng=String(eng||'');const q=disp.match(/\"(.*?)\"/);const nick=q?q[1]:'';let fam='',giv='';const strip=disp.replace(/\".*?\"/g,'').trim();if(strip.includes(',')){const p=strip.split(',').map(x=>x.trim());fam=p[0]||'';giv=p[1]||'';}else{const p=strip.split(/\s+/);fam=p.pop()||'';giv=p.join(' ');}const c=new Set();const add=v=>{if(v)c.add(norm(v));};add(eng);add(nick);add(eng+' '+fam);add(eng+fam);add(giv+' '+fam);add(fam+' '+giv);add(giv+fam);if(fam) add(eng+' '+fam[0]);return c;};\n`+
-`const keyMap=${payload};\n`+
-`const rows=[...document.querySelectorAll('.table-panel table tbody tr, table tbody tr')];\n`+
-`let filled=0,matched=0,un=0;\n`+
-`for(const tr of rows){const a=tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]'); if(!a) {continue;} const disp=a.textContent.trim(); const eng=disp; const keys=keyFromDisp(disp,eng); let score=''; for(const k of keys){ if(keyMap[k]!=null){ score=keyMap[k]; break; } } const input=tr.querySelector('input[name$="-grade"], input[type="text"][pattern], input[type="text"]'); if(input && score!==''){ input.value=score; input.dispatchEvent(new Event('input',{bubbles:true})); matched++; filled++; } else { if(a) un++; } }\n`+
-`console.log('[ThinkWave Autofill] filled',filled,'matched',matched,'rows',rows.length,'unmatched',un);\n`+
-`})();`;
+  
+    return `
+  (() => {
+    const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
+    const keyMap = ${payload};
+  
+    // Parse roster cell text -> {fam,giv,eng}
+    function parseDisp(disp){
+      let d = String(disp||'').trim().replace(/\\s+/g,' ');
+      const q = d.match(/["“](.*?)["”]/);
+      let eng = q ? q[1].trim() : '';
+      const withoutQuotes = d.replace(/".*?"/g,'').replace(/\\s*,\\s*$/,'').trim(); // drop trailing comma
+      let fam='', giv='';
+      if (withoutQuotes.includes(',')){
+        const parts = withoutQuotes.split(',').map(s => s.replace(/,+$/,'').trim()).filter(Boolean);
+        fam = parts[0]||''; giv = parts[1]||'';
+        if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
+      } else {
+        const p = withoutQuotes.split(/\\s+/).filter(Boolean);
+        fam = p.pop()||''; giv = p.join(' ');
+      }
+      return {fam,giv,eng};
+    }
+  
+    // Build candidate keys for a roster row
+    function keysForDisp(disp){
+      const {fam,giv,eng} = parseDisp(disp);
+      const K = new Set(), add=v=>{ v=(v||'').trim(); if(v) K.add(norm(v)); };
+      add(eng); add(giv);
+      add(eng+' '+fam); add(eng+fam);
+      add(giv+' '+fam); add(giv+fam);
+      add(fam+' '+giv);
+      if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
+      add(disp); // harmless fallback
+      return K;
+    }
+  
+    const rows = Array.from(document.querySelectorAll('.table-panel .table tbody tr, .table tbody tr'))
+      .map(el => el.tagName==='TR' ? el : el.closest('tr'))
+      .filter(Boolean);
+  
+    let filled=0, matched=0, unmatched=0, seen=0;
+  
+    for (const tr of rows){
+      // skip non-student / quick-fill rows
+      if (tr.classList.contains('paddedquickfill') || tr.querySelector('#id_grade')) continue;
+  
+      const a = tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]');
+      if (!a) continue;
+      seen++;
+  
+      const disp = (a.textContent||'').trim();
+      const keys = keysForDisp(disp);
+  
+      let value='';
+      for (const k of keys){ if (Object.prototype.hasOwnProperty.call(keyMap,k)) { value = keyMap[k]; break; } }
+  
+      const input = tr.querySelector('input[name$="-grade"], input.input-small.form-control[type="text"], input[type="text"]');
+      if (input && value!==''){
+        input.value = value;
+        input.dispatchEvent(new Event('input',{bubbles:true}));
+        input.dispatchEvent(new Event('change',{bubbles:true}));
+        matched++; filled++;
+      } else {
+        unmatched++;
+      }
+    }
+  
+    console.log('[ThinkWave Autofill] rows:', seen, 'matched:', matched, 'filled:', filled, 'unmatched:', unmatched);
+  })();`.trim();
   };
+
 
   // CSV DOWNLOAD /////////////////////////////////////////////////////////
   const downloadCSV = () => {
