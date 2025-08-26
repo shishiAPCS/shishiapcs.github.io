@@ -6,17 +6,16 @@
 <title>RosterFlow — ThinkWave Organizer</title>
 <style>
   :root{
-    --bg:#0f1420; --panel:#171e2b; --soft:#1e2636; --text:#eaf0ff; --muted:#aab6d6; --chip:#202a3f; --accent:#5aa7ff; --ok:#3ccf8e; --warn:#f0a93b; --bad:#ff6b6b; --stroke:#23304a;
+    --bg: #0f1420; --panel:#171e2b; --soft:#1e2636; --text:#eaf0ff; --muted:#aab6d6; --chip:#202a3f; --accent:#5aa7ff; --ok:#3ccf8e; --warn:#f0a93b; --bad:#ff6b6b; --stroke:#23304a;
   }
   [data-theme="light"]{
     --bg:#f6f7fb; --panel:#ffffff; --soft:#f1f4fa; --text:#0b1322; --muted:#46546f; --chip:#e9eef7; --accent:#2a7fff; --ok:#0fa36b; --warn:#cb7a12; --bad:#d94242; --stroke:#dde3ef;
   }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
   .page{max-width:1160px;margin:28px auto;padding:0 16px}
   header{display:flex;align-items:center;gap:10px;margin-bottom:18px}
   .brand{display:flex;align-items:center;gap:12px}
-  .brand .logo{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(180deg,var(--accent),#6fe3ff)}
+  .brand .logo{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(180deg, var(--accent), #6fe3ff)}
   .brand h1{font-size:18px;margin:0}
   .subtitle{opacity:.6}
   .spacer{flex:1}
@@ -31,15 +30,9 @@
   .btn{background:var(--soft);border:1px solid var(--stroke);color:var(--text);border-radius:10px;padding:8px 10px;cursor:pointer}
   .btn:hover{filter:brightness(1.05)}
   .btn.tonal{background:var(--chip)}
-  .btn.toggle-on{outline:2px solid var(--accent)}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
   .chip{padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:var(--chip);cursor:pointer;opacity:.9}
   .chip.active{outline:2px solid var(--accent);opacity:1}
-
-  /* Tabs */
-  .tabs{display:flex;gap:8px;margin:0 0 10px 0}
-  .tab{background:var(--soft);border:1px solid var(--stroke);border-radius:10px;padding:6px 10px;cursor:pointer;opacity:.8}
-  .tab.active{opacity:1;background:var(--chip);outline:2px solid var(--accent)}
 
   .roster{display:flex;flex-direction:column;gap:8px;max-height:280px;overflow:auto;border:1px solid var(--stroke);border-radius:10px}
   .row{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:var(--soft);border-bottom:1px solid var(--stroke)}
@@ -66,27 +59,22 @@
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) scale(.98);background:var(--panel);color:var(--text);border:1px solid var(--stroke);padding:10px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;z-index:800}
   .toast.show{opacity:1;transform:translateX(-50%) scale(1)}
 
-  /* Paste-Order */
-  .orderbar{display:flex;align-items:center;gap:8px;margin:6px 0 10px}
-  .orderbadge{font-size:12px;padding:4px 8px;border-radius:999px;border:1px dashed var(--stroke);opacity:.8}
-  .orderbadge.custom{border-style:solid}
-  .orderarea{display:none;margin:8px 0}
-  .orderarea.active{display:block}
-  .switch{display:inline-flex;align-items:center;gap:6px}
-  .switch input{accent-color:var(--accent)}
+  /* Inline areas */
+  .orderarea,.adhocarea{display:none;margin:8px 0}
+  .orderarea.active,.adhocarea.active{display:block}
 
-  /* Ad-hoc area (left card) */
-  .adhoc{display:none}
-  .adhoc.active{display:block}
+  @media (max-width: 920px){
+    .grid{grid-template-columns:1fr}
+  }
 
-  @media (max-width:920px){ .grid{grid-template-columns:1fr} }
+  #btnPasteOrder, .orderbar, #orderArea { display:none !important; }
 </style>
 </head>
 <body>
 <div class="page">
   <header>
     <div class="brand">
-      <div class="logo">🔁</div>
+      <div class="logo">㊙️</div>
       <div>
         <h1 style="margin:0">RosterFlow</h1>
         <div class="subtitle">ThinkWave Organizer</div>
@@ -94,57 +82,41 @@
     </div>
     <div class="spacer"></div>
     <div class="theme" id="themeCtl" title="Theme">
-      <!-- Auto button removed by request -->
+      <button data-mode="auto" class="active" aria-pressed="true" title="Auto">⚙︎&nbsp;Auto</button>
       <button data-mode="light" title="Light">☀️&nbsp;Light</button>
-      <button data-mode="dark"  title="Dark">🌙&nbsp;Dark</button>
+      <button data-mode="dark" title="Dark">🌙&nbsp;Dark</button>
     </div>
   </header>
 
   <div class="grid">
-    <!-- Left: Roster / Ad-hoc -->
+    <!-- Left: Roster -->
     <section class="card" id="cardRoster">
       <h2>1) Roster</h2>
-
-      <!-- Tabs -->
-      <div class="tabs" id="modeTabs">
-        <button class="tab active" data-mode="subjects">Subjects</button>
-        <button class="tab" data-mode="adhoc">Ad-hoc list</button>
+      <div class="toolbar">
+        <label class="btn" for="fileJson">Import JSON</label>
+        <input type="file" id="fileJson" accept="application/json" hidden />
+        <button class="btn" id="btnClearCache">Clear Cache</button>
+        <button class="btn" id="btnPasteOrder">Paste Roster Order</button>
+        <button class="btn" id="btnAdhoc">Ad-hoc List</button>
       </div>
+      <div class="chips" id="subjectChips"></div>
 
-      <!-- Subjects mode -->
-      <div class="subjects">
-        <div class="toolbar">
-          <label class="btn" for="fileJson">Import JSON</label>
-          <input type="file" id="fileJson" accept="application/json" hidden />
-          <!-- Use Cached removed; Clear Cache remains -->
-          <button class="btn" id="btnClearCache">Clear Cache</button>
-          <button class="btn" id="btnPasteOrder">Paste Roster Order</button>
-        </div>
-        <div class="chips" id="subjectChips"></div>
-
-        <div class="orderbar">
-          <span id="orderStatus" class="orderbadge">Order: Default</span>
-          <div class="spacer"></div>
-          <label class="switch"><input type="checkbox" id="onlyThese"> Only these</label>
-          <button class="btn" id="btnClearOrder" title="Clear custom order">Clear order</button>
-        </div>
-
-        <div class="orderarea" id="orderArea">
-          <div class="hint">One student per line. Any of these are fine:
-            <code>Li, Xiaoduan "Minato"</code> · <code>Minato Li</code> · <code>Li Minato</code> · <code>Minato</code> · <code>Tom Z</code> · <code>TomZ</code></div>
-          <textarea class="smallbox" id="orderInput" placeholder="Minato&#10;Joe&#10;George&#10;..."></textarea>
-          <div class="rowctrls right">
-            <button class="btn" id="btnApplyOrder">Use this order</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ad-hoc mode -->
-      <div class="adhoc" id="adhocArea">
-        <div class="hint">Paste a standalone list (one per line). This becomes the entire roster &amp; order. Autofill is disabled in this mode.</div>
-        <textarea class="smallbox" id="adhocInput" placeholder="Alice&#10;Bob&#10;Charlie&#10;..."></textarea>
+      <!-- Paste Roster Order (subject-only helper) -->
+      <div class="orderarea" id="orderArea">
+        <div class="hint">Custom order for the selected subject — one student per line. Examples: <code>Li, Xiaoduan "Minato"</code> · <code>Minato Li</code> · <code>Tom Z</code> · <code>TomZ</code></div>
+        <textarea class="smallbox" id="orderInput" placeholder="Minato&#10;Joe&#10;George&#10;..."></textarea>
         <div class="rowctrls right">
-          <button class="btn" id="btnUseAdhoc">Use this list</button>
+          <button class="btn" id="btnApplyOrder">Use this order</button>
+        </div>
+      </div>
+
+      <!-- Ad-hoc roster (replaces subject roster while active) -->
+      <div class="adhocarea" id="adhocArea">
+        <div class="hint">Ad-hoc list: paste any names (one per line). This replaces the subject roster for this session.</div>
+        <textarea class="smallbox" id="adhocInput" placeholder="George&#10;Selina&#10;Joe"></textarea>
+        <div class="rowctrls right">
+          <button class="btn" id="btnUseAdhoc">Use ad-hoc roster</button>
+          <button class="btn" id="btnClearAdhoc">Clear</button>
         </div>
       </div>
 
@@ -155,15 +127,15 @@
     <section class="card" id="cardScores">
       <h2>2) Paste Scores</h2>
       <div class="hint">Accepts <b>Name,Score</b> · <b>Name Score</b> · <b>Name … Score</b>. The last number on each line is used.</div>
-      <textarea id="scoresInput" placeholder="Joe 99&#10;Selina 55&#10;George 77&#10;..."></textarea>
+      <textarea id="scoresInput" placeholder="Joe 99&#10;Selina 95&#10;George 97&#10;..."></textarea>
       <div class="rowctrls">
         <button class="btn" id="btnOrganize">Organize into Roster Order</button>
-        <button class="btn tonal" id="btnToefl" title="Non-destructive toggle">TOEFL → GPA (view)</button>
+        <button class="btn tonal" id="btnToefl">Convert TOEFL → GPA (0–30 → 55–100)</button>
       </div>
       <div class="kpis">
-        <div class="pill ok"   id="kMatch">✔ Matched 0 of 0 parsed</div>
+        <div class="pill ok" id="kMatch">✔ Matches 0/0</div>
         <div class="pill warn" id="kAmb">❓ Ambiguous 0</div>
-        <div class="pill bad"  id="kUnmatch">❗ Unmatched 0</div>
+        <div class="pill bad" id="kUnmatch">❗ Unmatched 0</div>
       </div>
       <details id="detailBox"><summary>See ambiguous/unmatched details</summary>
         <pre id="detailText"></pre>
@@ -202,9 +174,9 @@
     const b = e.target.closest('button'); if (!b) return;
     setTheme(b.dataset.mode);
   });
-  setTheme(localStorage.getItem(lsKeyTheme)||'auto'); // default to system (no button for auto)
+  setTheme(localStorage.getItem(lsKeyTheme)||'auto');
 
-  // GLOBAL STATE //////////////////////////////////////////////////////////
+  // DATA //////////////////////////////////////////////////////////////////
   const els = {
     chips: document.getElementById('subjectChips'),
     rosterList: document.getElementById('rosterList'),
@@ -215,34 +187,29 @@
     btnToefl: document.getElementById('btnToefl'),
     csvOut: document.getElementById('csvOut'),
     btnDownload: document.getElementById('btnDownload'),
-    detailBox: document.getElementById('detailBox'),
     detailText: document.getElementById('detailText'),
     kMatch: document.getElementById('kMatch'),
     kAmb: document.getElementById('kAmb'),
     kUn: document.getElementById('kUnmatch'),
-    // Subjects mode
     btnPasteOrder: document.getElementById('btnPasteOrder'),
     orderArea: document.getElementById('orderArea'),
     orderInput: document.getElementById('orderInput'),
-    orderStatus: document.getElementById('orderStatus'),
     btnApplyOrder: document.getElementById('btnApplyOrder'),
-    btnClearOrder: document.getElementById('btnClearOrder'),
-    onlyThese: document.getElementById('onlyThese'),
-    // Tabs + Ad-hoc
-    tabs: document.getElementById('modeTabs'),
+    // Ad-hoc
+    btnAdhoc: document.getElementById('btnAdhoc'),
     adhocArea: document.getElementById('adhocArea'),
     adhocInput: document.getElementById('adhocInput'),
     btnUseAdhoc: document.getElementById('btnUseAdhoc'),
+    btnClearAdhoc: document.getElementById('btnClearAdhoc'),
   };
 
   const cacheKey = 'tw_rosters_v1';
-  let data = null;            // loaded JSON
-  let mode = 'subjects';      // 'subjects' | 'adhoc'
-  let activeSubject = null;   // subject object
-  let roster = [];            // current roster (subject or ad-hoc)
-  let rosterKeys = [];        // Set<string>[] for matching
-  let orderOverride = null;   // {lines:string[], only:boolean, map:int[]}
-  let toeflOn = false;        // non-destructive toggle
+  let data = null;               // loaded JSON
+  let activeSubject = null;      // subject object
+  let roster = [];               // current roster array (subject or ad-hoc)
+  let rosterKeys = [];           // computed key per student
+  let orderOverride = null;      // {lines:string[], map:int[]}
+  const adhoc = { active:false, lines:[] };
 
   // UTIL /////////////////////////////////////////////////////////////////
   const toast = (msg) => { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1400); };
@@ -251,30 +218,45 @@
   const lastNumber = (line) => { const m = String(line).match(/(-?\d+(?:\.\d+)?)(?!.*\d)/); return m?m[1]:''; };
 
   const kFromStudent = (st) => {
+    // Build multiple candidate keys for robust matching
     const disp = tidy(st.display||'');
     const eng = tidy(st.english||'');
     const fam = tidy(st.family||'');
     const giv = tidy(st.given||'');
+
     const keys = new Set();
     if (st.key) keys.add(letters(st.key));
-    const q = disp.match(/"(.*?)"/); const nick = q ? tidy(q[1]) : '';
+
+    const q = disp.match(/"(.*?)"/); // nickname inside quotes
+    const nick = q ? tidy(q[1]) : '';
     const main = disp.replace(/".*?"/g,'').replace(/\s+,\s+/g,',').trim();
-    let fam2=fam, giv2=giv;
+    let fam2 = fam, giv2 = giv;
     if (!fam2 || !giv2){
-      if (main.includes(',')){ const parts = main.split(',').map(s=>s.trim()).filter(Boolean); fam2=fam2||parts[0]||''; giv2=giv2||parts[1]||''; }
-      else { const parts = main.split(/\s+/); fam2=fam2||(parts.pop()||''); giv2=giv2||parts.join(' '); }
+      if (main.includes(',')){
+        const parts = main.split(',').map(s=>s.trim()).filter(Boolean);
+        fam2 = fam2 || parts[0] || '';
+        giv2 = giv2 || parts[1] || '';
+      } else {
+        const parts = main.split(/\s+/); fam2 = fam2 || (parts.pop()||''); giv2 = giv2 || parts.join(' ');
+      }
     }
-    const add=v=>{ v=(v||'').trim(); if(v) keys.add(letters(v)); };
+
+    const add = v => { v=(v||'').trim(); if (v) keys.add(letters(v)); };
     add(eng); add(nick);
-    add(`${eng} ${fam2}`); add(`${eng}${fam2}`);
-    add(`${giv2} ${fam2}`); add(`${fam2} ${giv2}`); add(`${giv2}${fam2}`); add(`${fam2}${giv2}`);
+    add(`${eng} ${fam2}`);
+    add(`${eng}${fam2}`);
+    add(`${giv2} ${fam2}`);
+    add(`${fam2} ${giv2}`);
+    add(`${giv2}${fam2}`);
+    add(`${fam2}${giv2}`);
     if (fam2) add(`${eng} ${fam2[0]}`);
     return Array.from(keys);
   };
 
   const kFromAnyName = (raw) => {
     const s = tidy(raw);
-    const q = s.match(/"(.*?)"/); const nick = q ? q[1] : '';
+    const q = s.match(/"(.*?)"/);
+    const nick = q ? q[1] : '';
     const strip = s.replace(/".*?"/g,'').trim();
     let fam='', giv='', eng='';
     if (strip.includes(',')){
@@ -282,19 +264,24 @@
       fam = parts[0]||''; giv = parts[1]||''; eng = parts[2]||'';
     } else {
       const parts = strip.split(/\s+/).filter(Boolean);
-      if (parts.length>=2){ giv = parts.slice(0,-1).join(' '); fam = parts.slice(-1)[0]; }
-      else { eng = strip; }
+      if (parts.length>=2){
+        giv = parts.slice(0,-1).join(' ');
+        fam = parts.slice(-1)[0];
+      } else {
+        eng = strip;
+      }
     }
     const set = new Set();
-    const add=v=>{ v=(v||'').trim(); if(v) set.add(letters(v)); };
+    const add = v=>{ v=(v||'').trim(); if(v) set.add(letters(v)); };
     add(eng||nick||strip);
-    add(`${eng} ${fam}`); add(`${giv} ${fam}`); add(`${fam} ${giv}`);
-    add(`${eng}${fam}`);  add(`${giv}${fam}`);
+    add(`${eng} ${fam}`);
+    add(`${giv} ${fam}`);
+    add(`${fam} ${giv}`);
+    add(`${eng}${fam}`);
+    add(`${giv}${fam}`);
     if (fam) add(`${eng} ${fam[0]}`);
     return Array.from(set);
   };
-
-  const buildKeysForAdhocName = (name) => new Set(kFromAnyName(name));
 
   const pickBestMatch = (nameRaw, rosterKeysArr) => {
     const keys = kFromAnyName(nameRaw);
@@ -310,7 +297,7 @@
     els.rosterList.innerHTML = '';
     roster.forEach(st => {
       const row = document.createElement('div'); row.className='row';
-      const who = document.createElement('div'); who.textContent = st.display || `${st.family}, ${st.given}`;
+      const who = document.createElement('div'); who.textContent = st.display || `${st.family||''}${st.given?(', '+st.given):''}`.trim();
       const eng = document.createElement('div'); eng.textContent = tidy(st.english||''); eng.style.opacity='.6';
       row.append(who, eng); els.rosterList.append(row);
     });
@@ -323,7 +310,7 @@
   const loadSubjects = () => {
     els.chips.innerHTML = '';
     if (!data || !Array.isArray(data.subjects)) return;
-    (data.subjects||[]).forEach((s)=>{
+    data.subjects.forEach((s)=>{
       const b = document.createElement('div'); b.className='chip'; b.textContent = s.name; b.dataset.sid=s.id;
       b.addEventListener('click', ()=>selectSubject(s.id));
       els.chips.append(b);
@@ -335,79 +322,35 @@
   };
 
   const selectSubject = (sid) => {
-    mode = 'subjects';
-    toggleModeUI();
+    // Selecting a subject exits ad-hoc mode
+    adhoc.active = false;
+    adhoc.lines = [];
     activeSubject = (data.subjects||[]).find(s=>String(s.id)===String(sid));
     if (!activeSubject){ roster=[]; refreshRosterUI(); return; }
     roster = (activeSubject.roster||[]).filter(r=>r && (r.display||r.english||r.family));
     buildRosterKeys();
     markActiveChip(activeSubject.id);
     refreshRosterUI();
-    readOrderOverride();
-    updateOrderBadge();
+    // re-evaluate matches with any existing paste
     if (els.scoresInput.value.trim()) organize(false);
   };
 
-  const updateOrderBadge = () => {
-    if (mode==='adhoc'){
-      els.orderStatus.textContent = 'Roster: Ad-hoc';
-      els.orderStatus.classList.add('custom');
-      return;
-    }
-    const has = orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length>0;
-    els.orderStatus.textContent = has? 'Order: Custom' : 'Order: Default';
-    els.orderStatus.classList.toggle('custom', has);
-  };
-
-  // MODE TOGGLING /////////////////////////////////////////////////////////
-  function toggleModeUI(){
-    // tabs visual
-    [...els.tabs.querySelectorAll('.tab')].forEach(t=>t.classList.toggle('active', t.dataset.mode===mode));
-    // show/hide blocks
-    document.querySelector('.subjects').style.display = (mode==='subjects'?'block':'none');
-    els.adhocArea.classList.toggle('active', mode==='adhoc');
-    // reset badges
-    updateOrderBadge();
-  }
-
-  els.tabs.addEventListener('click', (e)=>{
-    const b = e.target.closest('.tab'); if(!b) return;
-    mode = b.dataset.mode;
-    toggleModeUI();
-    if (mode==='adhoc'){
-      activeSubject = null; // no subject context
-      // Ad-hoc roster stays whatever user last pasted; build keys if present
-      if (roster.length===0) { refreshRosterUI(); }
-      els.orderArea.classList.remove('active'); // hide paste-order if open
-    } else {
-      // back to subjects; if we have data already, keep chips & roster
-      if (data && !activeSubject && (data.subjects||[]).length){ markActiveChip(null); }
-    }
-    if (els.scoresInput.value.trim()) organize(false);
-  });
-
-  // ORDER OVERRIDE (subjects only) ////////////////////////////////////////
-  const orderKeyForSubject = () => `order_override_${activeSubject?.id||'none'}`;
-  const writeOrderOverride = () => { if (!activeSubject) return; localStorage.setItem(orderKeyForSubject(), JSON.stringify(orderOverride||{})); };
-  const readOrderOverride = () => { if (!activeSubject) return; try { orderOverride = JSON.parse(localStorage.getItem(orderKeyForSubject())||'{}'); } catch { orderOverride = {}; } if (!orderOverride) orderOverride={}; els.onlyThese.checked = !!orderOverride.only; recomputeOrderMap(); };
-  const clearOrderOverride = () => { orderOverride = null; if (activeSubject) localStorage.removeItem(orderKeyForSubject()); updateOrderBadge(); };
-
+  // ORDER OVERRIDE (session-only; no UI chrome) //////////////////////////
   const recomputeOrderMap = () => {
-    if (mode!=='subjects'){ updateOrderBadge(); return; }
-    if (!orderOverride || !Array.isArray(orderOverride.lines)) { orderOverride={}; updateOrderBadge(); return; }
+    if (!orderOverride || !Array.isArray(orderOverride.lines)) { orderOverride=null; return; }
     const used = new Set();
     const map = [];
     const unknown = [];
     let dup = [];
     orderOverride.lines.forEach(line=>{
-      const {index, ambiguous} = pickBestMatch(line, rosterKeys);
+      const {index} = pickBestMatch(line, rosterKeys);
       if (index===-1) { unknown.push(line); return; }
       if (used.has(index)) { dup.push(line); return; }
       used.add(index); map.push(index);
     });
-    if (!orderOverride.only){ for(let i=0;i<roster.length;i++){ if(!used.has(i)) map.push(i);} }
+    // Append remainder after listed names
+    for(let i=0;i<roster.length;i++){ if(!used.has(i)) map.push(i); }
     orderOverride.map = map; orderOverride.unknown = unknown; orderOverride.dup = dup;
-    writeOrderOverride(); updateOrderBadge();
   };
 
   // SCORE PARSE & ORGANIZE //////////////////////////////////////////////
@@ -416,7 +359,6 @@
     const entries = [];
     for (const line of lines){
       const score = lastNumber(line);
-      if (score==='') continue;
       const name = line.replace(new RegExp(score.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+"$"), '').trim().replace(/[ ,]+$/,'');
       if (!name) continue;
       entries.push({raw: line, name, score});
@@ -438,46 +380,33 @@
     return {keyMap, matches, amb, un};
   };
 
-  const toGpa = (x) => {
-    const n = Math.max(0, Math.min(30, Number(x)||0));
-    return Math.round(55 + (n/30)*(100-55));
-  };
+  const organize = (copyToClipboard=true, asToefl=false) => {
+    if (!activeSubject && !adhoc.active){ toast('Load a roster or use Ad-hoc List.'); return; }
 
-  const organize = (maybeCopy=true) => {
-    // choose roster source: subjects or ad-hoc
-    if (mode==='subjects' && !activeSubject){ toast('Load a roster first.'); return; }
-
-    const rawEntries = parseScores(els.scoresInput.value);
-    const entries = toeflOn ? rawEntries.map(e=>({ ...e, score:String(toGpa(e.score)) })) : rawEntries;
-
-    // Build keys (ad-hoc roster uses ad-hoc names)
-    if (mode==='adhoc'){
-      // roster already built from ad-hoc list; keys built alongside
-    }
+    // Parse scores once, optionally convert to GPA (non-destructive)
+    const entries = parseScores(els.scoresInput.value);
+    if (asToefl){ entries.forEach(e=>{ e.score = String(toGpa(e.score)); }); }
 
     const {keyMap, matches, amb, un} = buildNameToScoreMap(entries);
 
-    // Order:
+    // Build order: ad-hoc/subject default order, or custom map if provided
     let orderIdx = [...Array(roster.length).keys()];
-    if (mode==='subjects' && orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length) {
-      orderIdx = orderOverride.map.slice();
-    }
+    if (orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length) orderIdx = orderOverride.map.slice();
 
-    // CSV
+    // CSV output
     let csv = 'Name,Score\n';
     for (const i of orderIdx){
       const st = roster[i];
-      const nm = tidy(st.display||`${st.family}, ${st.given}`);
+      const nm = tidy(st.display||`${st.family||''}${st.given?(', '+st.given):''}`.trim());
       const val = keyMap.has(i) ? keyMap.get(i) : '';
       const nameCsv = '"'+nm.replace(/"/g,'""')+'"';
       csv += `${nameCsv},${val}\n`;
     }
     els.csvOut.value = csv;
 
-    // KPIs + details
+    // Details
     const det = [];
-    if (toeflOn) det.push('TRANSFORM — TOEFL → GPA (preview only, input unchanged)\n');
-    if (mode==='subjects' && orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
+    if (orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
       if (orderOverride.unknown?.length){ det.push('ORDER INPUT — Unknown (ignored):'); orderOverride.unknown.forEach(x=>det.push(`- ${x}`)); det.push(''); }
       if (orderOverride.dup?.length){ det.push('ORDER INPUT — Duplicates (last one kept):'); orderOverride.dup.forEach(x=>det.push(`- ${x}`)); det.push(''); }
     }
@@ -485,25 +414,23 @@
     if (un.length){ det.push('SCORES INPUT — Unmatched:'); un.forEach(x=>det.push(x)); }
     els.detailText.textContent = det.join('\n');
 
-    els.kMatch.textContent = `✔ Matched ${keyMap.size} of ${entries.length} parsed`;
+    els.kMatch.textContent = `✔ Matches ${matches}/${entries.length}`;
     els.kAmb.textContent   = `❓ Ambiguous ${amb.length}`;
     els.kUn.textContent    = `❗ Unmatched ${un.length}`;
 
-    // Autofill code only when a subject is selected (not in Ad-hoc)
-    if (maybeCopy && mode==='subjects' && activeSubject){
-      const code = buildAutofillCode(entries);
-      navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓'));
-    } else if (maybeCopy && mode==='adhoc') {
-      toast('CSV updated ✓'); // no autofill in Ad-hoc mode
-    }
+    // Autofill code (use the possibly-converted entries)
+    const code = buildAutofillCode(entries);
+    if (copyToClipboard){ navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓')); }
   };
 
-  // AUTOFILL CODE (payload guard against empty keys) //////////////////////
+  // AUTOFILL CODE for ThinkWave assignments/gradebook ////////////////////
   const buildAutofillCode = (entries) => {
-    const letters = s => (s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
+    // Build a richer mapping: all candidate keys → score (skip empty keys)
+    const lettersL = s => (s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
     const keysFromAnyName = (raw) => {
       const s = String(raw||'').replace(/[\u201C\u201D\u2018\u2019]/g,'"').trim();
-      const q = s.match(/"(.*?)"/); const nick = q ? q[1].trim() : '';
+      const q = s.match(/"(.*?)"/);
+      const nick = q ? q[1].trim() : '';
       const strip = s.replace(/".*?"/g,'').trim();
       let fam='', giv='', eng='';
       if (strip.includes(',')){
@@ -514,7 +441,7 @@
         if (parts.length>=2){ giv = parts.slice(0,-1).join(' '); fam = parts.slice(-1)[0]; }
         else { eng = strip; }
       }
-      const set = new Set(), add=v=>{ v=(v||'').trim(); if(v) set.add(letters(v)); };
+      const set = new Set(), add=v=>{ v=(v||'').trim(); if(v) set.add(lettersL(v)); };
       add(eng||nick||strip);
       add(`${eng} ${fam}`); add(`${giv} ${fam}`); add(`${fam} ${giv}`);
       add(`${eng}${fam}`);  add(`${giv}${fam}`);
@@ -525,8 +452,8 @@
     const obj = {};
     for (const e of entries){
       const ks = keysFromAnyName(e.name);
-      if (!ks.length){ const k = letters(e.name); if (k) ks.push(k); }
-      for (const k of ks){ if (k) obj[k] = String(e.score); } // empty-key guard
+      if (!ks.length) ks.push(lettersL(e.name));
+      for (const k of ks){ if(k) obj[k] = String(e.score); } // guard against ""
     }
     const payload = JSON.stringify(obj);
 
@@ -560,22 +487,27 @@
     add(giv+' '+fam); add(giv+fam);
     add(fam+' '+giv);
     if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
+    add(disp);
     return K;
   }
 
   const rows = Array.from(document.querySelectorAll('.table-panel .table tbody tr, .table tbody tr'))
-    .map(el => el.tagName==='TR' ? el : el.closest('tr')).filter(Boolean);
+    .map(el => el.tagName==='TR' ? el : el.closest('tr'))
+    .filter(Boolean);
 
   let filled=0, matched=0, unmatched=0, seen=0;
 
   for (const tr of rows){
     if (tr.classList.contains('paddedquickfill') || tr.querySelector('#id_grade')) continue;
-    const a = tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]'); if (!a) continue;
+    const a = tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]');
+    if (!a) continue;
     seen++;
     const disp = (a.textContent||'').trim();
     const keys = keysForDisp(disp);
+
     let value='';
     for (const k of keys){ if (Object.prototype.hasOwnProperty.call(keyMap,k)) { value = keyMap[k]; break; } }
+
     const input = tr.querySelector('input[name$="-grade"], input.input-small.form-control[type="text"], input[type="text"]');
     if (input && value!==''){
       input.value = value;
@@ -586,74 +518,86 @@
       unmatched++;
     }
   }
+
   console.log('[ThinkWave Autofill] rows:', seen, 'matched:', matched, 'filled:', filled, 'unmatched:', unmatched);
 })();`.trim();
   };
 
-  // DOWNLOAD /////////////////////////////////////////////////////////////
+  // CSV DOWNLOAD /////////////////////////////////////////////////////////
   const downloadCSV = () => {
     const now = new Date();
     const pad = n=>String(n).padStart(2,'0');
     const stamp = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}_${pad(now.getHours())}-${pad(now.getMinutes())}`;
-    const subj = tidy(activeSubject?.name || (mode==='adhoc' ? 'Adhoc' : 'Roster'));
+    const subj = adhoc.active ? 'Adhoc' : tidy(activeSubject?.name||'Roster');
     const name = `${subj.replace(/[^a-z0-9]+/gi,'_')}_${stamp}.csv`;
     const blob = new Blob([els.csvOut.value||''], {type:'text/csv;charset=utf-8;'});
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download=name; a.click(); URL.revokeObjectURL(a.href);
   };
 
+  // TOEFL → GPA (non-destructive) ////////////////////////////////////////
+  const toGpa = (x) => {
+    const n = Math.max(0, Math.min(30, Number(x)||0));
+    return Math.round(55 + (n/30)*(100-55));
+  };
+  const convertToefl = () => {
+    // Do NOT rewrite the textarea; just organize with conversion
+    organize(true, true);
+  };
+
   // EVENTS ///////////////////////////////////////////////////////////////
   document.getElementById('btnDownload').addEventListener('click', downloadCSV);
-  els.btnOrganize.addEventListener('click', ()=>organize(true));
+  els.btnOrganize.addEventListener('click', ()=>organize(true,false));
+  els.btnToefl.addEventListener('click', convertToefl);
 
-  // Non-destructive TOEFL toggle
-  els.btnToefl.addEventListener('click', ()=>{
-    toeflOn = !toeflOn;
-    els.btnToefl.classList.toggle('toggle-on', toeflOn);
-    organize(false);
+  // Paste Roster Order
+  els.btnPasteOrder.addEventListener('click', ()=>{
+    els.orderArea.classList.toggle('active');
   });
-
-  // Paste-order UI (subjects only)
-  document.getElementById('btnPasteOrder').addEventListener('click', ()=>{ if(mode==='subjects') els.orderArea.classList.toggle('active'); });
-  els.btnApplyOrder.addEventListener('click', ()=>{
-    if (mode!=='subjects') return;
-    const lines = els.orderInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
-    orderOverride = {lines, only: els.onlyThese.checked};
+  els.btnApplyOrder?.addEventListener('click', ()=>{
+    orderOverride = {lines: els.orderInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean)};
     recomputeOrderMap();
+    buildRosterKeys();
     if (els.scoresInput.value.trim()) organize(false);
   });
-  els.btnClearOrder.addEventListener('click', ()=>{ if(mode!=='subjects') return; clearOrderOverride(); organize(false); });
-  els.onlyThese.addEventListener('change', ()=>{ if(mode==='subjects' && orderOverride){ orderOverride.only = els.onlyThese.checked; recomputeOrderMap(); organize(false);} });
 
-  // Ad-hoc list handling
+  // Ad-hoc roster
+  els.btnAdhoc.addEventListener('click', ()=>{ els.adhocArea.classList.toggle('active'); });
   els.btnUseAdhoc.addEventListener('click', ()=>{
-    mode = 'adhoc';
-    toggleModeUI();
-    const names = els.adhocInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
-    roster = names.map(n=>({ display: n }));
-    rosterKeys = names.map(n => buildKeysForAdhocName(n));
+    const lines = els.adhocInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
+    if (!lines.length){ adhoc.active=false; toast('Ad-hoc list is empty'); return; }
+    adhoc.active = true; adhoc.lines = lines.slice();
+    activeSubject = null;
+    roster = lines.map(name => ({display:name}));
+    buildRosterKeys();
+    // Clear any previous custom order and recompute if needed
+    orderOverride = null;
+    refreshRosterUI();
+    if (els.scoresInput.value.trim()) organize(false);
+  });
+  els.btnClearAdhoc.addEventListener('click', ()=>{
+    adhoc.active = false; adhoc.lines = []; els.adhocInput.value = '';
+    // Keep current subject roster as-is; just refresh UI
     refreshRosterUI();
     if (els.scoresInput.value.trim()) organize(false);
   });
 
-  // File input (subjects)
+  // File input
   els.file.addEventListener('change', async (e)=>{
     const f = e.target.files?.[0]; if(!f) return;
-    try{
-      const txt = await f.text(); const json = JSON.parse(txt);
-      data = json; localStorage.setItem(cacheKey, JSON.stringify(json)); loadSubjects(); toast('JSON loaded ✓');
-    }catch{ alert('Invalid JSON.'); }
+    try{ const txt = await f.text(); const json = JSON.parse(txt); data = json; localStorage.setItem(cacheKey, JSON.stringify(json)); loadSubjects(); toast('JSON loaded ✓'); }
+    catch(err){ alert('Invalid JSON.'); }
   });
 
   // Clear cache
-  els.clearCache.addEventListener('click', ()=>{ localStorage.removeItem(cacheKey);
-    if (data?.subjects) data.subjects.forEach(s=> localStorage.removeItem(`order_override_${s.id}`));
-    data=null; activeSubject=null; roster=[]; rosterKeys=[]; els.chips.innerHTML=''; refreshRosterUI(); toast('Cache cleared');
+  els.clearCache.addEventListener('click', ()=>{
+    localStorage.removeItem(cacheKey);
+    toast('Cache cleared');
   });
 
-  // INIT — auto-hydrate cache if present
+  // If cache exists, hydrate
   (function init(){
-    try{ const j = JSON.parse(localStorage.getItem(cacheKey)||'null'); if(j){ data=j; loadSubjects(); } }catch{}
-    toggleModeUI();
+    try{ const j = JSON.parse(localStorage.getItem(cacheKey)||'null'); if(j){ data=j; loadSubjects(); }
+    }catch{}
   })();
 })();
 </script>
