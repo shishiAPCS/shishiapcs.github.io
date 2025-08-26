@@ -6,51 +6,61 @@
 <title>ThinkWave Organizer</title>
 <style>
 :root{
-  --bg:#0b0c10; --card:#13161a; --muted:#9aa4b2; --text:#e6edf3; --accent:#4ade80; --accent2:#60a5fa; --warn:#fbbf24; --bad:#f87171;
-  --br:16px;
+  --bg:#0b0c10; --card:#13161a; --muted:#9aa4b2; --text:#e6edf3;
+  --chip:#0f172a; --chipBorder:#3b4a63; --chipActive:#2563eb; --chipActiveGlow:rgba(37,99,235,.25);
+  --btn:#1f2937; --btnBorder:#2a3343; --accent:#22c55e; --accent2:#3b82f6;
+  --warn:#f59e0b; --bad:#ef4444; --good:#16a34a; --br:16px;
 }
 *{box-sizing:border-box}
 body{margin:0;padding:20px;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
 h1,h2,h3{margin:0 0 8px}
 small{color:var(--muted)}
-.container{max-width:1100px;margin:0 auto;display:grid;gap:16px}
-@media(min-width:900px){ .container{grid-template-columns: 1fr 1fr} }
-
+.container{max-width:1100px;margin:0 auto;display:grid;gap:16px;
+  grid-template-columns: 1fr; grid-template-areas:
+  "roster" "paste" "results";}
+@media(min-width:900px){
+  .container{grid-template-columns: 1fr 1fr; grid-template-areas:
+    "roster paste" "results results";}
+}
 .card{background:var(--card);border-radius:var(--br);padding:16px;border:1px solid #1d232f}
+#rosterCard{grid-area:roster}
+#pasteCard{grid-area:paste}
+#resultsCard{grid-area:results}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{background:#1f2937;color:#fff;border:1px solid #2a3343;padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .05s ease}
+.btn{background:var(--btn);color:#fff;border:1px solid var(--btnBorder);padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .05s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn.primary{background:linear-gradient(135deg,#10b981,#22c55e); border-color:#198754}
-.btn.blue{background:linear-gradient(135deg,#2563eb,#3b82f6); border-color:#3346a3}
-.btn.ghost{background:transparent;border:1px dashed #2a3343}
+.btn.primary{background:linear-gradient(135deg,#10b981,var(--accent)); border-color:#198754}
+.btn.blue{background:linear-gradient(135deg,#2563eb,var(--accent2)); border-color:#3346a3}
+.btn.ghost{background:transparent;border:1px dashed var(--btnBorder)}
 input[type="file"]{display:none}
-.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#0f172a;border:1px solid #24324a;color:#cbd5e1;font-size:13px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#0f172a;border:1px solid #24324a;color:#e5eefb;font-size:13px}
 .badge.good{border-color:#1f8f5a}
 .badge.warn{border-color:#8f7a1f}
 .badge.bad{border-color:#8f3b3b}
 .grid{display:grid;gap:12px}
-@media(min-width:900px){ .grid.cols-2{grid-template-columns:1fr 1fr} }
-textarea, .textarea{width:100%;min-height:200px;background:#0f1320;color:#e2e8f0;border:1px solid #2a3343;border-radius:12px;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas}
+textarea,.textarea{width:100%;min-height:200px;background:#0f1320;color:#e2e8f0;border:1px solid #2a3343;border-radius:12px;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas}
 .list{max-height:460px;overflow:auto;border:1px solid #2a3343;border-radius:12px;background:#0f1320;padding:8px}
 .list .item{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-bottom:1px solid #1c2434}
 .list .item:last-child{border-bottom:none}
 .kv{color:#9aa4b2;font-size:12px}
-.status{display:flex;gap:8px;flex-wrap:wrap}
 .toast{position:fixed;right:16px;bottom:16px;background:#0f172a;color:#e6edf3;border:1px solid #2a3343;padding:10px 12px;border-radius:12px;opacity:0;transform:translateY(8px);transition:all .2s}
 .toast.show{opacity:1;transform:translateY(0)}
-hr{border:0;border-top:1px solid #1d232f;margin:12px 0}
 .footer{color:#9aa4b2;font-size:12px;text-align:center;margin-top:10px}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{padding:8px 12px;border-radius:999px;background:#0f172a;border:1px solid #24324a;cursor:pointer}
-.chip.active{border-color:#60a5fa;box-shadow:0 0 0 2px rgba(96,165,250,.25) inset}
-.hidden{display:none}
+.chip{
+  background:var(--chip); color:#fff; /* high contrast */
+  border:1px solid var(--chipBorder); padding:8px 12px; border-radius:999px; cursor:pointer
+}
+.chip.active{border-color:var(--chipActive); box-shadow:0 0 0 2px var(--chipActiveGlow) inset}
+.copyFlag{font-size:12px;color:#9ae6b4;margin-left:8px;opacity:0;transition:.2s}
+.copyFlag.show{opacity:1}
 </style>
 </head>
 <body>
 <div class="container">
 
   <!-- Left: Roster & Subjects -->
-  <section class="card">
+  <section id="rosterCard" class="card">
     <h2>1) Roster</h2>
     <div class="row" style="margin:6px 0 12px">
       <label class="btn ghost">
@@ -67,26 +77,27 @@ hr{border:0;border-top:1px solid #1d232f;margin:12px 0}
   </section>
 
   <!-- Right: Paste Area -->
-  <section class="card">
+  <section id="pasteCard" class="card">
     <h2>2) Paste Scores</h2>
     <small>Accepts: <code>Name,Score</code> · <code>Name<TAB>Score</code> · <code>Name  Score</code>. The last number on each line is used.</small>
-    <textarea id="paste" placeholder='Example:
-Cao, Jiarui "Eric" 85
-Wu, Yucan "Yuna" 27
-...'></textarea>
+    <textarea id="paste" placeholder='Examples:
+Tomz 50
+Keven 44
+Karl 90
+Richard 100'></textarea>
 
     <div class="row" style="margin-top:10px">
-      <button id="organizeBtn" class="btn primary">Organize into Roster Order</button>
-      <button id="convertBtn" class="btn blue">Convert TOEFL → GPA (0–30 → 55–100)</button>
+      <button id="organizeBtn" class="btn primary">Organize into Roster Order</button><span id="copyFlagOrg" class="copyFlag">✓ Copied</span>
+      <button id="convertBtn" class="btn blue">Convert TOEFL → GPA (0–30 → 55–100)</button><span id="copyFlagConv" class="copyFlag">✓ Copied</span>
     </div>
 
-    <div id="status" class="status" style="margin-top:10px"></div>
+    <div id="status" class="row" style="margin-top:10px"></div>
   </section>
 
-  <!-- Results -->
-  <section class="card">
+  <!-- Bottom: Results (full width) -->
+  <section id="resultsCard" class="card">
     <h2>3) Results</h2>
-    <div class="grid cols-2">
+    <div class="grid">
       <div>
         <h3 style="margin:4px 0">CSV Preview</h3>
         <textarea id="csvOut" class="textarea" placeholder="Name,Score (CSV)" readonly></textarea>
@@ -94,355 +105,254 @@ Wu, Yucan "Yuna" 27
           <button id="downloadCsv" class="btn">Download CSV</button>
         </div>
       </div>
-      <div>
-        <h3 style="margin:4px 0">Clipboard</h3>
-        <div class="textarea" style="min-height:200px" id="copiedCode" aria-live="polite">Autofill code will be copied automatically after you click an action (Organize / Convert). Paste it in ThinkWave Console on the assignment page.</div>
-        <div class="row" style="margin-top:8px">
-          <button id="copyAgain" class="btn">Copy Again</button>
-          <label class="btn ghost"><input id="legacyMode" type="checkbox" /> Legacy index mode</label>
-        </div>
-      </div>
     </div>
     <hr />
     <small>Tip: Open ThinkWave assignment page → <kbd>Right-click</kbd> → Inspect → Console → <kbd>Cmd/Ctrl+V</kbd> → Enter.</small>
   </section>
 
-  <div class="footer">ThinkWave Organizer — local only (no uploads). Data are cached as <code>tw_rosters_v1</code>.</div>
+  <div class="footer">ThinkWave Organizer — local only (no uploads). Cached as <code>tw_rosters_v1</code>.</div>
 </div>
 
 <div id="toast" class="toast">Copied to clipboard</div>
 
 <script>
-// ====== STATE ======
-const KEY = 'tw_rosters_v1';
-let DATA = null;
-let SUBJECT = null;
-let LAST_AUTOFILL = '';
+/* ====== STATE ====== */
+const KEY='tw_rosters_v1';
+let DATA=null, SUBJECT=null, LAST_AUTOFILL='';
+const qs=s=>document.querySelector(s);
+const elSubjects=qs('#subjects'), elRoster=qs('#rosterBox'), elPaste=qs('#paste'), elCSV=qs('#csvOut'), elStatus=qs('#status');
+const elToast=qs('#toast'), flagOrg=qs('#copyFlagOrg'), flagConv=qs('#copyFlagConv');
 
-const qs = s => document.querySelector(s);
-const elSubjects = qs('#subjects');
-const elRoster = qs('#rosterBox');
-const elPaste  = qs('#paste');
-const elCSV    = qs('#csvOut');
-const elStatus = qs('#status');
-const elCopied = qs('#copiedCode');
-const elToast  = qs('#toast');
+/* ====== UTIL ====== */
+const pad=n=>String(n).padStart(2,'0');
+const nowStamp=()=>{const d=new Date();return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;};
+const copy=async text=>{try{await navigator.clipboard.writeText(text);toast('Copied to clipboard');}catch{}};
+function toast(msg){elToast.textContent=msg;elToast.classList.add('show');setTimeout(()=>elToast.classList.remove('show'),1200);}
+function titleCase(s){return s ? s.replace(/\S+/g,w=>w[0].toUpperCase()+w.slice(1).toLowerCase()):s;}
+function tidyDisplay(s){return (s||'').replace(/\s+/g,' ').replace(/\s*,\s*$/,'').trim();}
+function engNorm(s){return (s||'').toLowerCase().replace(/[^a-z]/g,'');} // english-only key
+function nameKey(f,g,e){return (''+(f||'')+(g||'')+(e||'')).toLowerCase().replace(/[^a-z0-9]/g,'');}
 
-// ====== UTIL ======
-const pad = n => String(n).padStart(2,'0');
-const nowStamp = () => {
-  const d = new Date();
-  return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
-};
-const copy = async (text) => {
-  try { await navigator.clipboard.writeText(text); toast('Copied to clipboard'); }
-  catch { /* ignore */ }
-};
-function toast(msg){ elToast.textContent = msg; elToast.classList.add('show'); setTimeout(()=>elToast.classList.remove('show'),1300); }
-
-function titleCase(s){ return s ? s.replace(/\S+/g, w => w[0].toUpperCase()+w.slice(1).toLowerCase()) : s; }
-function tidyDisplay(s){ return (s||'').replace(/\s+/g,' ').replace(/\s*,"\s*/g,'", ').replace(/\s*,\s*$/,'').trim(); }
-function nameKey(family, given, english){ return (''+(family||'')+(given||'')+(english||'')).toLowerCase().replace(/[^a-z0-9]/g,''); }
+/* Build a display-key (for lines like Last, Given "English") */
 function keyFromDisplay(displayRaw){
-  const display = tidyDisplay(displayRaw);
-  const q = display.match(/["“](.*?)["”]/);
-  let english = q ? titleCase(q[1].trim()) : null;
-  const main = display.replace(/["“].*$/, '').trim();
-  let family=null,given=null;
-  if (main.includes(',')) [family,given]=main.split(',',2).map(s=>s.trim());
-  else { const parts=main.split(/\s+/); family=parts.pop()||null; given=parts.join(' ')||null; }
-  // ESL "Last, first, English" without quotes
-  if (!english && (main.split(',').length===3)) {
-    const parts3 = main.split(',').map(s=>s.trim());
-    if (/^[A-Za-z][A-Za-z .'-]*$/.test(parts3[2])) english = titleCase(parts3[2]);
-  }
-  return nameKey(family, given, english);
+  const display=tidyDisplay(displayRaw);
+  const q=display.match(/["“](.*?)["”]/); let english=q?titleCase(q[1].trim()):null;
+  const main=display.replace(/["“].*$/,'').trim(); let family=null,given=null;
+  if(main.includes(',')) [family,given]=main.split(',',2).map(s=>s.trim());
+  else{const parts=main.split(/\s+/); family=parts.pop()||null; given=parts.join(' ')||null;}
+  if(!english && (main.split(',').length===3)){const p3=main.split(',').map(s=>s.trim()); if(/^[A-Za-z][A-Za-z .'-]*$/.test(p3[2])) english=titleCase(p3[2]);}
+  return nameKey(family,given,english);
+}
+
+/* When teachers paste just English names ("Tomz", "Keven"), normalize that */
+function engFromFreeText(raw){
+  // 1) If there are quotes, take quoted
+  const q=raw.match(/["“](.*?)["”]/); if(q) return engNorm(q[1]);
+  // 2) Otherwise, treat all letters as the english name ("Tom Z"→tomz, "Tomz"→tomz)
+  return engNorm(raw);
 }
 
 function parsePasted(text){
-  const lines = text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-  const out = [];
-  for (const line of lines){
-    // last number (int/float)
-    const m = line.match(/(-?\d+(?:\.\d+)?)(?!.*\d)/);
-    const score = m ? m[1] : '';
-    const name = m ? line.slice(0, m.index).trim().replace(/[,;]\s*$/,'') : line;
+  const lines=text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+  const out=[];
+  for(const line of lines){
+    const m=line.match(/(-?\d+(?:\.\d+)?)(?!.*\d)/);
+    const score=m?m[1]:'';
+    const name=m?line.slice(0,m.index).trim().replace(/[,;]\s*$/,''):line;
     out.push({raw:name, score});
   }
   return out;
 }
 
 function toeflToGPA(val){
-  const s = parseFloat(val);
-  if (isNaN(s) || s<0 || s>30) return ''; // leave blank on invalid range
-  if (s>=28) return 100;
-  if (s>=25) return 97;
-  if (s>=22) return 94;
-  if (s>=19) return 90;
-  if (s>=17) return 89;
-  if (s>=14) return 85;
-  if (s>=11) return 80;
-  if (s>=6)  return 75;
-  if (s>=3)  return 65;
-  if (s>=1)  return 60;
-  return 55;
+  const s=parseFloat(val); if(isNaN(s)||s<0||s>30) return '';
+  if(s>=28) return 100; if(s>=25) return 97; if(s>=22) return 94; if(s>=19) return 90;
+  if(s>=17) return 89; if(s>=14) return 85; if(s>=11) return 80; if(s>=6) return 75;
+  if(s>=3) return 65; if(s>=1) return 60; return 55;
 }
 
 function csvFromPairs(pairs){
-  const rows = [['Name','Score'], ...pairs];
-  return rows.map(r => r.map(x => (''+x).includes(',') ? `"${(''+x).replace(/"/g,'""')}"` : x).join(',')).join('\n');
+  const rows=[['Name','Score'],...pairs];
+  return rows.map(r=>r.map(x=>((''+x).includes(',')?'"'+(''+x).replace(/"/g,'""')+'"':x)).join(',')).join('\n');
+}
+function download(text,filename){
+  const blob=new Blob([text],{type:'text/csv;charset=utf-8;'}), url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
 
-function download(text, filename){
-  const blob = new Blob([text], {type:'text/csv;charset=utf-8;'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href = url; a.download = filename;
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(url), 2000);
-}
-
-// ====== RENDER ======
+/* ====== RENDER ====== */
 function renderSubjects(){
-  elSubjects.innerHTML = '';
-  if (!DATA || !DATA.subjects || !DATA.subjects.length) return;
-  DATA.subjects.forEach(subj => {
-    // ignore empty rosters and "Quick fill"
-    const roster = (subj.roster||[]).filter(r => !/^Quick fill:?$/i.test(r.display||''));
-    const chip = document.createElement('button');
-    chip.className = 'chip'; chip.textContent = subj.name;
-    chip.onclick = () => { SUBJECT = {...subj, roster}; [...elSubjects.children].forEach(c=>c.classList.remove('active')); chip.classList.add('active'); renderRoster(); resetStatus(); };
+  elSubjects.innerHTML=''; if(!DATA||!DATA.subjects||!DATA.subjects.length) return;
+  DATA.subjects.forEach(subj=>{
+    const roster=(subj.roster||[]).filter(r=>!/^Quick fill:?$/i.test(r.display||''));
+    const chip=document.createElement('button'); chip.className='chip'; chip.textContent=subj.name;
+    chip.onclick=()=>{SUBJECT={...subj, roster}; [...elSubjects.children].forEach(c=>c.classList.remove('active')); chip.classList.add('active'); renderRoster(); clearFlags(); resetStatus();};
     elSubjects.appendChild(chip);
   });
 }
-
 function renderRoster(){
-  if (!SUBJECT) { elRoster.innerHTML = '<div class="kv">Choose a subject.</div>'; return; }
-  elRoster.innerHTML = '';
-  SUBJECT.roster.forEach(st => {
-    const div = document.createElement('div'); div.className='item';
-    const left = document.createElement('div'); left.textContent = st.display || `${st.family}, ${st.given}`; 
-    const right = document.createElement('div'); right.className='kv';
-    right.textContent = st.english ? st.english : (st.studentId ? `#${st.studentId}` : '');
-    div.append(left, right); elRoster.appendChild(div);
+  if(!SUBJECT){elRoster.innerHTML='<div class="kv">Choose a subject.</div>'; return;}
+  elRoster.innerHTML='';
+  SUBJECT.roster.forEach(st=>{
+    const div=document.createElement('div'); div.className='item';
+    const left=document.createElement('div'); left.textContent=st.display || `${st.family}, ${st.given}`;
+    const right=document.createElement('div'); right.className='kv'; right.textContent=st.english?st.english:(st.studentId?`#${st.studentId}`:'');
+    div.append(left,right); elRoster.appendChild(div);
   });
 }
+function resetStatus(){elStatus.innerHTML='';}
+function clearFlags(){[flagOrg,flagConv].forEach(f=>{f&&f.classList.remove('show')});}
+function showFlag(el){el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),1200);}
 
-function statusBadge(kind, text, onClick){
-  const span = document.createElement('span');
-  span.className = 'badge ' + (kind==='good'?'good':kind==='warn'?'warn':kind==='bad'?'bad':'');
-  span.textContent = text;
-  if (onClick) span.style.cursor='pointer', span.onclick = onClick;
-  return span;
+function badge(kind,text,onClick){
+  const span=document.createElement('span'); span.className='badge '+(kind==='good'?'good':kind==='warn'?'warn':kind==='bad'?'bad':''); span.textContent=text;
+  if(onClick) span.style.cursor='pointer', span.onclick=onClick; return span;
 }
-function resetStatus(){ elStatus.innerHTML = ''; }
 
-// ====== MATCHING & ACTIONS ======
+/* ====== MATCHING ====== */
 function buildMaps(roster){
-  const byId = new Map(), byKey = new Map(), dupKeys = new Map();
-  roster.forEach((s,i) => {
-    if (s.studentId) byId.set(String(s.studentId), {...s, index:i});
-    const k = nameKey(s.family, s.given, s.english);
-    if (byKey.has(k)) dupKeys.set(k, true); else byKey.set(k, {...s, index:i});
+  const byKey=new Map(), dupKeys=new Map();
+  const byEng=new Map(), dupEng=new Map();
+
+  roster.forEach((s,i)=>{
+    const k=nameKey(s.family,s.given,s.english);
+    if(byKey.has(k)) dupKeys.set(k,true); else byKey.set(k,{...s,index:i});
+
+    const e=engNorm(s.english||'');
+    if(e){
+      if(byEng.has(e)){ dupEng.set(e,true); byEng.get(e).push(i); }
+      else byEng.set(e,[i]);
+    }
   });
-  return { byId, byKey, dupKeys };
+  return {byKey,dupKeys,byEng,dupEng};
 }
 
-function computeMatches(pasted, maps){
-  // We only have names in pasted lines; try nameKey match
-  const matches = new Map(); // index in roster -> score
-  const ambiguous = []; // {name, score, candidates:[...]}
-  const unmatched = []; // {name, score}
+function computeMatches(pasted,maps){
+  const matches=new Map(), ambiguous=[], unmatched=[];
+  pasted.forEach(item=>{
+    const k=keyFromDisplay(item.raw);
+    // 1) exact display-key (rare for English-only input, but keep it)
+    if(maps.byKey.has(k) && !maps.dupKeys.has(k)){ matches.set(maps.byKey.get(k).index,item.score); return; }
 
-  pasted.forEach(item => {
-    const k = keyFromDisplay(item.raw);
-    if (maps.dupKeys.has(k)) {
-      // ambiguous: more than one in roster share this key
-      const candidates = SUBJECT.roster
-        .map((s,i)=>({s,i,k:nameKey(s.family,s.given,s.english)}))
-        .filter(x=>x.k===k)
-        .map(x=>({index:x.i, display: SUBJECT.roster[x.i].display, studentId: SUBJECT.roster[x.i].studentId}));
-      ambiguous.push({name:item.raw, score:item.score, candidates});
-    } else {
-      const s = maps.byKey.get(k);
-      if (s) matches.set(s.index, item.score);
-      else unmatched.push({name:item.raw, score:item.score});
+    // 2) english-only matching
+    const e=engFromFreeText(item.raw);
+    if(e && maps.byEng.has(e)){
+      const idxs=maps.byEng.get(e);
+      if(idxs.length===1){ matches.set(idxs[0], item.score); return; }
+      // ambiguous (two+ students with same English name)
+      const candidates=idxs.map(i=>({index:i, display:SUBJECT.roster[i].display, studentId:SUBJECT.roster[i].studentId}));
+      ambiguous.push({name:item.raw, score:item.score, candidates}); return;
     }
+
+    // 3) unmatched
+    unmatched.push({name:item.raw, score:item.score});
   });
   return {matches, ambiguous, unmatched};
 }
 
-function buildOrderedPairs(matches){
-  // Produce roster-ordered pairs [Name, Score], leave blank if not present
-  const pairs = SUBJECT.roster.map(s => [s.display || `${s.family}, ${s.given}`, '']);
-  matches.forEach((score, idx) => { pairs[idx][1] = score; });
-  return pairs;
-}
-
+/* ====== AUTOFILL CODE ====== */
 function makeAutofillCode(matches){
-  // Prefer by studentId; fallback to nameKey
-  const idMap = {};
-  const keyMap = {};
-  SUBJECT.roster.forEach((s, idx) => {
-    const score = matches.get(idx) ?? '';
-    if (!score) return;
-    if (s.studentId) idMap[String(s.studentId)] = score;
-    else keyMap[nameKey(s.family, s.given, s.english)] = score;
+  const idMap={}, keyMap={};
+  SUBJECT.roster.forEach((s,idx)=>{
+    const score=matches.get(idx)??''; if(!score) return;
+    if(s.studentId) idMap[String(s.studentId)]=score; else keyMap[nameKey(s.family,s.given,s.english)]=score;
   });
 
-  const code = `(function(){
-  const idMap = ${JSON.stringify(idMap)};
-  const keyMap = ${JSON.stringify(keyMap)};
-  const rows = Array.from(document.querySelectorAll('td.gradebookstudentname, td.student-name')).map(td => td.closest('tr')).filter(Boolean);
-  let filled=0, seen=0, unmatched=0;
+  const code=`(function(){
+  const idMap=${JSON.stringify(idMap)};
+  const keyMap=${JSON.stringify(keyMap)};
+  const rows=Array.from(document.querySelectorAll('td.gradebookstudentname, td.student-name')).map(td=>td.closest('tr')).filter(Boolean);
+  let filled=0,seen=0,unmatched=0;
 
-  function tidyDisplay(s){ return (s||'').replace(/\\s+/g,' ').replace(/\\s*,\\s*$/,'').trim(); }
-  function titleCase(s){ return s ? s.replace(/\\S+/g, w => w[0].toUpperCase()+w.slice(1).toLowerCase()) : s; }
-  function nameKeyFromDisplay(displayRaw){
-    const display = tidyDisplay(displayRaw);
-    const q = display.match(/["“](.*?)["”]/);
-    let english = q ? titleCase(q[1].trim()) : null;
-    const main = display.replace(/["“].*$/, '').trim();
-    let family=null,given=null;
-    if (main.includes(',')) [family,given]=main.split(',',2).map(s=>s.trim());
-    else { const parts=main.split(/\\s+/); family=parts.pop()||null; given=parts.join(' ')||null; }
-    if (!english && (main.split(',').length===3)) {
-      const parts3 = main.split(',').map(s=>s.trim());
-      if (/^[A-Za-z][A-Za-z .'-]*$/.test(parts3[2])) english = titleCase(parts3[2]);
-    }
-    return (''+(family||'')+(given||'')+(english||'')).toLowerCase().replace(/[^a-z0-9]/g,'');
+  function tidy(s){return (s||'').replace(/\\s+/g,' ').replace(/\\s*,\\s*$/,'').trim();}
+  function tc(s){return s?s.replace(/\\S+/g,w=>w[0].toUpperCase()+w.slice(1).toLowerCase()):s;}
+  function kFromDisplay(dr){
+    const d=tidy(dr); const q=d.match(/["“](.*?)["”]/); let e=q?tc(q[1].trim()):null;
+    const m=d.replace(/["“].*$/,'').trim(); let f=null,g=null;
+    if(m.includes(',')){[f,g]=m.split(',',2).map(s=>s.trim());}else{const p=m.split(/\\s+/);f=p.pop()||null;g=p.join(' ')||null;}
+    if(!e && (m.split(',').length===3)){const p3=m.split(',').map(s=>s.trim()); if(/^[A-Za-z][A-Za-z .'-]*$/.test(p3[2])) e=tc(p3[2]);}
+    return (''+(f||'')+(g||'')+(e||'')).toLowerCase().replace(/[^a-z0-9]/g,'');
   }
 
-  for (const tr of rows){
-    // find anchor, id, and text
-    const a = tr.querySelector('a[href*="/st/"]');
-    const href = a && a.getAttribute('href') || '';
-    const idm = href.match(/\\/st\\/(\\d+)\\//);
-    const studentId = idm ? idm[1] : null;
-    const display = a ? a.textContent.trim() : (tr.querySelector('td')?.textContent.trim() || '');
-    // find input in the same row
-    let input = tr.querySelector('input[type="text"][name*="-grade"]') || tr.querySelector('input[type="text"]');
-
-    let val = '';
-    if (studentId && (studentId in idMap)) { val = idMap[studentId]; seen++; }
-    else {
-      const k = nameKeyFromDisplay(display);
-      if (k && (k in keyMap)) { val = keyMap[k]; seen++; }
-    }
-
-    if (input && val !== '') {
-      input.value = val;
-      input.dispatchEvent(new Event('input', {bubbles:true}));
-      filled++;
-    } else if (studentId || display) { unmatched++; }
+  for(const tr of rows){
+    const a=tr.querySelector('a[href*="/st/"]'); const href=a&&a.getAttribute('href')||''; const m=href.match(/\\/st\\/(\\d+)\\//); const sid=m?m[1]:null;
+    const disp=a?a.textContent.trim():(tr.querySelector('td')?.textContent.trim()||'');
+    let input=tr.querySelector('input[type="text"][name*="-grade"]')||tr.querySelector('input[type="text"]');
+    let val='';
+    if(sid && (sid in idMap)){ val=idMap[sid]; seen++; }
+    else{ const k=kFromDisplay(disp); if(k && (k in keyMap)){ val=keyMap[k]; seen++; } }
+    if(input && val!==''){ input.value=val; input.dispatchEvent(new Event('input',{bubbles:true})); filled++; }
+    else if(sid||disp){ unmatched++; }
   }
-
-  console.log('[ThinkWave Autofill] rows seen:', rows.length, 'matched:', seen, 'filled:', filled, 'unmatched:', unmatched);
-  if (seen/Math.max(rows.length,1) < 0.5) {
-    console.warn('⚠️ Low match ratio — is this the correct subject page? Aborting.');
-  }
+  console.log('[ThinkWave Autofill] rows:',rows.length,'matched:',seen,'filled:',filled,'unmatched:',unmatched);
+  if(seen/Math.max(rows.length,1)<0.5){ console.warn('⚠️ Low match ratio — is this the correct subject page? Aborting.'); }
 })();`;
 
-  LAST_AUTOFILL = code;
-  copy(code);
-  elCopied.textContent = code;
+  LAST_AUTOFILL=code; copy(code);
   return code;
 }
 
-// ====== MAIN ACTIONS ======
-function runAction({convert=false} = {}){
-  if (!SUBJECT){ alert('Choose a subject first.'); return; }
-  const roster = SUBJECT.roster || [];
-  const { byId, byKey, dupKeys } = buildMaps(roster);
+/* ====== ACTIONS ====== */
+function buildOrderedPairs(matches){
+  const pairs=SUBJECT.roster.map(s=>[s.display||`${s.family}, ${s.given}`,'']); // blanks for missing
+  matches.forEach((score,idx)=>{pairs[idx][1]=score;});
+  return pairs;
+}
+function runAction({convert=false, flagEl}={}){
+  if(!SUBJECT){alert('Choose a subject first.');return;}
+  const roster=SUBJECT.roster||[];
+  const maps=buildMaps(roster);
+  const pasted=parsePasted(elPaste.value);
+  if(convert){ pasted.forEach(p=>{ if(p.score!=='') p.score=toeflToGPA(p.score)||''; }); }
 
-  const pasted = parsePasted(elPaste.value);
-  // Convert first if needed
-  if (convert){
-    pasted.forEach(p => { if (p.score!=='') p.score = toeflToGPA(p.score) || ''; });
-  }
+  const {matches,ambiguous,unmatched}=computeMatches(pasted,maps);
+  const pairs=buildOrderedPairs(matches);
+  elCSV.value=csvFromPairs(pairs);
 
-  const {matches, ambiguous, unmatched} = computeMatches(pasted, {byId,byKey,dupKeys});
-  const pairs = buildOrderedPairs(matches);
-  elCSV.value = csvFromPairs(pairs);
-
-  // Status strip
-  elStatus.innerHTML = '';
-  const total = pasted.length;
-  const good = matches.size;
-  const amb  = ambiguous.length;
-  const bad  = unmatched.length;
-
-  elStatus.appendChild(statusBadge('good', `✅ Matches ${good}/${total}`));
-  elStatus.appendChild(statusBadge(amb? 'warn':'', `⚠️ Ambiguous ${amb}`, () => {
-    const list = ambiguous.map(a => `• ${a.name}  →  ${a.candidates.map(c=>c.display).join(' / ')}`).join('\n');
-    alert(list || 'None');
+  // status chips
+  elStatus.innerHTML='';
+  elStatus.appendChild(badge('good',`✅ Matches ${matches.size}/${pasted.length}`));
+  elStatus.appendChild(badge(ambiguous.length?'warn':'',`⚠️ Ambiguous ${ambiguous.length}`,()=>{
+    const list=ambiguous.map(a=>`• ${a.name} → ${a.candidates.map(c=>c.display).join(' / ')}`).join('\n'); alert(list||'None');
   }));
-  elStatus.appendChild(statusBadge(bad? 'bad':'', `❓ Unmatched ${bad}`, () => {
-    const list = unmatched.map(u => `• ${u.name}`).join('\n');
-    alert(list || 'None');
+  elStatus.appendChild(badge(unmatched.length?'bad':'',`❓ Unmatched ${unmatched.length}`,()=>{
+    const list=unmatched.map(u=>`• ${u.name}`).join('\n'); alert(list||'None');
   }));
 
-  // Build and auto-copy autofill
-  makeAutofillCode(matches);
+  makeAutofillCode(matches); // auto-copy
+  if(flagEl){flagEl.classList.add('show'); setTimeout(()=>flagEl.classList.remove('show'),1200);}
 }
 
-// ====== HOOKS ======
-qs('#file').addEventListener('change', async (e) => {
-  const f = e.target.files[0]; if (!f) return;
-  try {
-    const text = await f.text();
-    const obj = JSON.parse(text);
-    // Clean subjects: filter Quick fill & tidy names
-    obj.subjects = (obj.subjects||[]).map(s => {
-      s.roster = (s.roster||[])
-        .filter(r => !/^Quick fill:?$/i.test(r.display||''))
-        .map(r => {
-          const display = tidyDisplay(r.display||'');
-          const k = nameKey(r.family, r.given, r.english);
-          return {
-            display,
-            english: r.english ? titleCase(r.english) : r.english,
-            family: r.family || null,
-            given: r.given || null,
-            key: r.key || k,
-            studentId: r.studentId || null
-          };
+/* ====== HOOKS ====== */
+qs('#file').addEventListener('change', async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  try{
+    const obj=JSON.parse(await f.text());
+    // clean
+    obj.subjects=(obj.subjects||[]).map(s=>{
+      s.roster=(s.roster||[])
+        .filter(r=>!/^Quick fill:?$/i.test(r.display||''))
+        .map(r=>{
+          const display=tidyDisplay(r.display||'');
+          const k=r.key || nameKey(r.family,r.given,r.english);
+          return {display, english:r.english?titleCase(r.english):r.english, family:r.family||null, given:r.given||null, key:k, studentId:r.studentId||null};
         });
       return s;
     });
-    DATA = obj;
-    localStorage.setItem(KEY, JSON.stringify(obj));
-    renderSubjects();
-    renderRoster();
-    toast('Imported roster JSON');
-  } catch (err) {
-    alert('Import error: ' + err.message);
-  }
+    DATA=obj; localStorage.setItem(KEY,JSON.stringify(obj)); renderSubjects(); renderRoster(); toast('Imported roster JSON');
+  }catch(err){ alert('Import error: '+err.message); }
 });
+qs('#useLocal').addEventListener('click', ()=>{
+  try{ const obj=JSON.parse(localStorage.getItem(KEY)||'null'); if(!obj) return alert('No cached data.'); DATA=obj; renderSubjects(); renderRoster(); toast('Loaded cached data'); }
+  catch{ alert('Cache read error'); }
+});
+qs('#clearLocal').addEventListener('click', ()=>{ localStorage.removeItem(KEY); DATA=null; SUBJECT=null; elSubjects.innerHTML=''; renderRoster(); toast('Cache cleared'); });
 
-qs('#useLocal').addEventListener('click', () => {
-  try {
-    const obj = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (!obj) return alert('No cached data found.');
-    DATA = obj; renderSubjects(); renderRoster(); toast('Loaded cached data');
-  } catch (e) { alert('Cache read error'); }
-});
-qs('#clearLocal').addEventListener('click', () => {
-  localStorage.removeItem(KEY); DATA=null; SUBJECT=null;
-  elSubjects.innerHTML=''; renderRoster(); toast('Cache cleared');
-});
+qs('#organizeBtn').addEventListener('click', ()=>runAction({convert:false, flagEl:flagOrg}));
+qs('#convertBtn').addEventListener('click', ()=>runAction({convert:true, flagEl:flagConv}));
 
-qs('#organizeBtn').addEventListener('click', () => runAction({convert:false}));
-qs('#convertBtn').addEventListener('click', () => runAction({convert:true}));
-
-qs('#downloadCsv').addEventListener('click', () => {
-  const ts = nowStamp();
-  download(elCSV.value || 'Name,Score\n', `thinkwave_scores_${ts}.csv`);
-});
-
-qs('#copyAgain').addEventListener('click', () => {
-  if (!LAST_AUTOFILL) return alert('Generate code first (Organize / Convert)');
-  copy(LAST_AUTOFILL);
-});
+qs('#downloadCsv').addEventListener('click', ()=>download(elCSV.value||'Name,Score\n', `thinkwave_scores_${nowStamp()}.csv`));
 </script>
 </body>
 </html>
