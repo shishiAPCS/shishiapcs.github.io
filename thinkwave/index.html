@@ -6,24 +6,22 @@
 <title>RosterFlow — ThinkWave Organizer</title>
 <style>
   :root{
-    --bg:#0f1420; --panel:#171e2b; --soft:#1e2636; --text:#eaf0ff; --muted:#aab6d6; --chip:#202a3f; --accent:#5aa7ff; --ok:#18c68a; --warn:#f0a93b; --bad:#ff6b6b; --stroke:#23304a;
+    --bg: #0f1420; --panel:#171e2b; --soft:#1e2636; --text:#eaf0ff; --muted:#aab6d6; --chip:#202a3f; --accent:#5aa7ff; --ok:#3ccf8e; --warn:#f0a93b; --bad:#ff6b6b; --stroke:#23304a;
   }
   [data-theme="light"]{
     --bg:#f6f7fb; --panel:#ffffff; --soft:#f1f4fa; --text:#0b1322; --muted:#46546f; --chip:#e9eef7; --accent:#2a7fff; --ok:#0fa36b; --warn:#cb7a12; --bad:#d94242; --stroke:#dde3ef;
   }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
   .page{max-width:1160px;margin:28px auto;padding:0 16px}
-  header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  header{display:flex;align-items:center;gap:10px;margin-bottom:18px}
   .brand{display:flex;align-items:center;gap:12px}
-  .logo{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(180deg,var(--accent),#6fe3ff)}
-  h1{font-size:18px;margin:0}
+  .brand .logo{width:24px;height:24px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(180deg, var(--accent), #6fe3ff)}
+  .brand h1{font-size:18px;margin:0}
   .subtitle{opacity:.6}
   .spacer{flex:1}
-
-  .theme, .seg{display:inline-flex;gap:6px;background:var(--soft);border:1px solid var(--stroke);border-radius:999px;padding:6px}
-  .theme button, .seg button{background:none;border:0;color:var(--text);opacity:.75;padding:4px 10px;border-radius:999px;cursor:pointer}
-  .theme button.active, .seg button.active{opacity:1;background:var(--chip)}
+  .theme{display:inline-flex;align-items:center;gap:8px;background:var(--soft);border:1px solid var(--stroke);border-radius:999px;padding:6px 10px}
+  .theme button{background:none;border:0;color:var(--text);opacity:.7;padding:4px 8px;border-radius:8px;cursor:pointer}
+  .theme button.active{opacity:1;background:var(--chip)}
 
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .card{background:var(--panel);border:1px solid var(--stroke);border-radius:14px;padding:16px}
@@ -36,18 +34,19 @@
   .chip{padding:6px 10px;border-radius:999px;border:1px solid var(--stroke);background:var(--chip);cursor:pointer;opacity:.9}
   .chip.active{outline:2px solid var(--accent);opacity:1}
 
-  .row{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:var(--soft);border:1px solid var(--stroke);border-radius:10px}
-  .roster{display:flex;flex-direction:column;gap:8px;max-height:280px;overflow:auto}
+  .roster{display:flex;flex-direction:column;gap:8px;max-height:280px;overflow:auto;border:1px solid var(--stroke);border-radius:10px}
+  .row{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:var(--soft);border-bottom:1px solid var(--stroke)}
+  .row:last-child{border-bottom:0}
   .hint{font-size:12px;color:var(--muted);margin:10px 0}
-  textarea{width:100%;min-height:160px;resize:vertical;border-radius:10px;background:var(--soft);border:1px solid var(--stroke);color:var(--text);padding:10px;font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,Menlo,monospace}
+  textarea{width:100%;min-height:160px;resize:vertical;border-radius:10px;background:var(--soft);border:1px solid var(--stroke);color:var(--text);padding:10px;font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,Monaco,Menlo,monospace}
   .smallbox{min-height:110px}
   .rowctrls{display:flex;gap:8px;margin-top:8px}
 
   .kpis{display:flex;gap:10px;margin-top:8px;align-items:center;flex-wrap:wrap}
   .pill{font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid var(--stroke);background:var(--soft);display:inline-flex;gap:6px;align-items:center}
-  .ok{background:rgba(24,198,138,.14);border-color:rgba(24,198,138,.45)}
-  .bad{background:rgba(255,107,107,.14);border-color:rgba(255,107,107,.45)}
-  .warn{background:rgba(240,169,59,.14);border-color:rgba(240,169,59,.45)}
+  .ok{background:rgba(60,207,142,.12);border-color:rgba(60,207,142,.4)}
+  .bad{background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.4)}
+  .warn{background:rgba(240,169,59,.12);border-color:rgba(240,169,59,.4)}
 
   details{margin-top:6px}
   details pre{background:var(--soft);border:1px solid var(--stroke);border-radius:10px;padding:10px;white-space:pre-wrap;word-break:break-word}
@@ -55,10 +54,12 @@
   .full{grid-column:1/-1}
   .preview{min-height:140px}
   .footer{opacity:.6;font-size:12px;margin-top:10px}
+  .right{display:flex;justify-content:flex-end}
 
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) scale(.98);background:var(--panel);color:var(--text);border:1px solid var(--stroke);padding:10px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s, transform .2s;z-index:800}
   .toast.show{opacity:1;transform:translateX(-50%) scale(1)}
 
+  /* Inline Paste-Order pop */
   .orderbar{display:flex;align-items:center;gap:8px;margin:6px 0 10px}
   .orderbadge{font-size:12px;padding:4px 8px;border-radius:999px;border:1px dashed var(--stroke);opacity:.8}
   .orderbadge.custom{border-style:solid}
@@ -67,9 +68,9 @@
   .switch{display:inline-flex;align-items:center;gap:6px}
   .switch input{accent-color:var(--accent)}
 
-  .hide{display:none !important}
-
-  @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
+  @media (max-width: 920px){
+    .grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -78,62 +79,41 @@
     <div class="brand">
       <div class="logo">🔁</div>
       <div>
-        <h1>RosterFlow</h1>
+        <h1 style="margin:0">RosterFlow</h1>
         <div class="subtitle">ThinkWave Organizer</div>
       </div>
     </div>
     <div class="spacer"></div>
     <div class="theme" id="themeCtl" title="Theme">
-      <button data-mode="auto" class="active" title="Auto">⚙︎ Auto</button>
-      <button data-mode="light" title="Light">☀️ Light</button>
-      <button data-mode="dark"  title="Dark">🌙 Dark</button>
+      <button data-mode="light" title="Light">☀️&nbsp;Light</button>
+      <button data-mode="dark"  title="Dark">🌙&nbsp;Dark</button>
     </div>
   </header>
 
   <div class="grid">
     <!-- Left: Roster -->
     <section class="card" id="cardRoster">
-      <div class="row" style="justify-content:flex-start;gap:10px;background:transparent;border:none;padding:0;margin-bottom:10px">
-        <div class="seg" id="sourceCtl" title="Roster source">
-          <button data-src="subjects" class="active">Subjects</button>
-          <button data-src="adhoc">Ad-hoc</button>
-        </div>
-      </div>
       <h2>1) Roster</h2>
+      <div class="toolbar">
+        <label class="btn" for="fileJson">Import JSON</label>
+        <input type="file" id="fileJson" accept="application/json" hidden />
+        <button class="btn" id="btnClearCache">Clear Cache</button>
+        <button class="btn" id="btnPasteOrder">Paste Roster Order</button>
+      </div>
+      <div class="chips" id="subjectChips"></div>
 
-      <!-- SUBJECTS MODE -->
-      <div id="subjectsArea">
-        <div class="toolbar">
-          <label class="btn" for="fileJson">Import JSON</label>
-          <input type="file" id="fileJson" accept="application/json" hidden />
-          <button class="btn" id="btnClearCache">Clear Cache</button>
-          <button class="btn" id="btnPasteOrder">Paste Roster Order</button>
-        </div>
-
-        <div class="chips" id="subjectChips"></div>
-
-        <div class="orderbar">
-          <span id="orderStatus" class="orderbadge">Order: Default</span>
-          <div class="spacer"></div>
-          <label class="switch"><input type="checkbox" id="onlyThese"> Only these</label>
-          <button class="btn" id="btnClearOrder" title="Clear custom order">Clear order</button>
-        </div>
-
-        <div class="orderarea" id="orderArea">
-          <div class="hint">One student per line. Any of these are fine: <code>Li, Xiaoduan "Minato"</code> · <code>Minato Li</code> · <code>Li Minato</code> · <code>Minato</code> · <code>Tom Z</code> · <code>TomZ</code></div>
-          <textarea class="smallbox" id="orderInput" placeholder="Minato\nJoe\nGeorge\n..."></textarea>
-          <div class="rowctrls" style="justify-content:flex-end">
-            <button class="btn" id="btnApplyOrder">Use this order</button>
-          </div>
-        </div>
+      <div class="orderbar">
+        <span id="orderStatus" class="orderbadge">Order: Default</span>
+        <div class="spacer"></div>
+        <label class="switch"><input type="checkbox" id="onlyThese"> Only these</label>
+        <button class="btn" id="btnClearOrder" title="Clear custom order">Clear order</button>
       </div>
 
-      <!-- AD-HOC MODE -->
-      <div id="adhocArea" class="hide">
-        <div class="hint">Paste a custom list of names (one per line). This list becomes the roster and order. It does <b>not</b> use Subjects.</div>
-        <textarea class="smallbox" id="adhocInput" placeholder="George\nSelina\nJoe\n..."></textarea>
-        <div class="rowctrls" style="justify-content:flex-end">
-          <button class="btn" id="btnUseAdhoc">Use list as roster</button>
+      <div class="orderarea" id="orderArea">
+        <div class="hint">One student per line. Any of these are fine: <code>Li, Xiaoduan "Minato"</code> · <code>Minato Li</code> · <code>Li Minato</code> · <code>Minato</code> · <code>Tom Z</code> · <code>TomZ</code></div>
+        <textarea class="smallbox" id="orderInput" placeholder="Minato\nJoe\nGeorge\n..."></textarea>
+        <div class="rowctrls right">
+          <button class="btn" id="btnApplyOrder">Use this order</button>
         </div>
       </div>
 
@@ -145,16 +125,14 @@
       <h2>2) Paste Scores</h2>
       <div class="hint">Accepts <b>Name,Score</b> · <b>Name Score</b> · <b>Name … Score</b>. The last number on each line is used.</div>
       <textarea id="scoresInput" placeholder="Joe 99\nSelina 55\nGeorge 77\n..."></textarea>
-      <div class="rowctrls" style="align-items:center;flex-wrap:wrap">
+      <div class="rowctrls">
         <button class="btn" id="btnOrganize">Organize into Roster Order</button>
-        <label class="switch" title="Apply conversion in CSV output only (non-destructive)">
-          <input type="checkbox" id="toeflToggle"> Apply TOEFL → GPA (0–30 → 55–100) in output
-        </label>
+        <button class="btn tonal" id="btnToefl">Convert TOEFL → GPA (0–30 → 55–100)</button>
       </div>
       <div class="kpis">
-        <div class="pill ok"   id="kMatch">✔ Matches 0/0</div>
+        <div class="pill ok" id="kMatch">✔ Matches 0/0</div>
         <div class="pill warn" id="kAmb">❓ Ambiguous 0</div>
-        <div class="pill bad"  id="kUnmatch">❗ Unmatched 0</div>
+        <div class="pill bad" id="kUnmatch">❗ Unmatched 0</div>
       </div>
       <details id="detailBox"><summary>See ambiguous/unmatched details</summary>
         <pre id="detailText"></pre>
@@ -169,16 +147,16 @@
       <div class="rowctrls">
         <button class="btn" id="btnDownload">Download CSV</button>
       </div>
-      <div class="footer">Tip: On ThinkWave assignment page → Right-click → Inspect → Console → paste the Autofill snippet → Enter.</div>
+      <div class="footer">Tip: Open ThinkWave assignment page → Right-click → Inspect → Console → Cmd/Ctrl+V → Enter.</div>
     </section>
   </div>
 </div>
 
-<div class="toast" id="toast">Done</div>
+<div class="toast" id="toast">Copied to clipboard</div>
 
 <script>
 (() => {
-  // =============== THEME ==================
+  // THEME /////////////////////////////////////////////////////////////////
   const themeCtl = document.getElementById('themeCtl');
   const themeBtns = [...themeCtl.querySelectorAll('button')];
   const lsKeyTheme = 'rf_theme_pref';
@@ -189,13 +167,16 @@
     localStorage.setItem(lsKeyTheme, mode);
     themeBtns.forEach(b=>b.classList.toggle('active', b.dataset.mode===mode));
   };
-  themeCtl.addEventListener('click', e=>{
+  themeCtl.addEventListener('click', (e)=> {
     const b = e.target.closest('button'); if (!b) return;
     setTheme(b.dataset.mode);
   });
-  setTheme(localStorage.getItem(lsKeyTheme)||'auto');
+  // default to system preference on first load; then persist user choice
+  const savedTheme = localStorage.getItem(lsKeyTheme);
+  const sysLight  = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  setTheme(savedTheme || (sysLight ? 'light' : 'dark'));
 
-  // =============== ELEMENTS & STATE =======
+  // DATA //////////////////////////////////////////////////////////////////
   const els = {
     chips: document.getElementById('subjectChips'),
     rosterList: document.getElementById('rosterList'),
@@ -203,49 +184,36 @@
     clearCache: document.getElementById('btnClearCache'),
     scoresInput: document.getElementById('scoresInput'),
     btnOrganize: document.getElementById('btnOrganize'),
+    btnToefl: document.getElementById('btnToefl'),
     csvOut: document.getElementById('csvOut'),
     btnDownload: document.getElementById('btnDownload'),
+    detailBox: document.getElementById('detailBox'),
     detailText: document.getElementById('detailText'),
     kMatch: document.getElementById('kMatch'),
     kAmb: document.getElementById('kAmb'),
     kUn: document.getElementById('kUnmatch'),
-    toeflToggle: document.getElementById('toeflToggle'),
-
-    // subjects
-    sourceCtl: document.getElementById('sourceCtl'),
-    subjectsArea: document.getElementById('subjectsArea'),
+    btnPasteOrder: document.getElementById('btnPasteOrder'),
     orderArea: document.getElementById('orderArea'),
     orderInput: document.getElementById('orderInput'),
     orderStatus: document.getElementById('orderStatus'),
     btnApplyOrder: document.getElementById('btnApplyOrder'),
     btnClearOrder: document.getElementById('btnClearOrder'),
-    btnPasteOrder: document.getElementById('btnPasteOrder'),
     onlyThese: document.getElementById('onlyThese'),
-
-    // ad-hoc
-    adhocArea: document.getElementById('adhocArea'),
-    adhocInput: document.getElementById('adhocInput'),
-    btnUseAdhoc: document.getElementById('btnUseAdhoc'),
   };
 
   const cacheKey = 'tw_rosters_v1';
-  const lsMode  = 'rf_mode';
-  let mode = localStorage.getItem(lsMode) || 'subjects';
+  let data = null;           // loaded JSON
+  let activeSubject = null;  // subject object
+  let roster = [];           // current subject roster array
+  let rosterKeys = [];       // computed key per student
+  let orderOverride = null;  // {lines:string[], only:boolean, map:int[]}
 
-  let data = null;            // JSON bundle
-  let activeSubject = null;   // selected subject
-  let roster = [];            // current roster (depends on mode)
-  let rosterKeys = [];        // Array<Set<string>>
-  let orderOverride = null;   // {lines:string[], only:boolean, map:int[]}
-
-  // =============== UTILS ==================
+  // UTIL /////////////////////////////////////////////////////////////////
   const toast = (msg) => { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1400); };
   const tidy = (s) => (s||'').toString().replace(/[\u201C\u201D\u2018\u2019]/g,'"').replace(/[\t\r]/g,' ').replace(/\s+/g,' ').trim();
   const letters = (s) => (s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
-  const lastNumber = (line) => { const m = String(line).match(/(-?\\d+(?:\\.\\d+)?)(?!.*\\d)/); return m?m[1]:''; };
-  const isNonEmpty = v => typeof v === 'string' && v.trim() !== '';
+  const lastNumber = (line) => { const m = String(line).match(/(-?\d+(?:\.\d+)?)(?!.*\d)/); return m?m[1]:''; };
 
-  // Key builder from roster student (subjects)
   const kFromStudent = (st) => {
     const disp = tidy(st.display||'');
     const eng  = tidy(st.english||'');
@@ -253,50 +221,60 @@
     const giv  = tidy(st.given||'');
 
     const keys = new Set();
-    if (isNonEmpty(st.key)) keys.add(letters(st.key));
+    const add = (v) => { const n = letters(v); if (n) keys.add(n); };
+
+    if (st.key) add(st.key);
 
     const q = disp.match(/"(.*?)"/);
     const nick = q ? tidy(q[1]) : '';
-    const main = disp.replace(/".*?"/g,'').replace(/\\s+,\\s+/g,',').trim();
-    let fam2=fam, giv2=giv;
+    const main = disp.replace(/".*?"/g,'').replace(/\s+,\s+/g,',').trim();
+    let fam2 = fam, giv2 = giv;
     if (!fam2 || !giv2){
       if (main.includes(',')){
-        const parts = main.split(',').map(x=>x.trim()).filter(Boolean);
+        const parts = main.split(',').map(s=>s.trim()).filter(Boolean);
         fam2 = fam2 || parts[0] || '';
         giv2 = giv2 || parts[1] || '';
       } else {
-        const p = main.split(/\\s+/).filter(Boolean); fam2 = fam2 || (p.pop()||''); giv2 = giv2 || p.join(' ');
+        const parts = main.split(/\s+/); fam2 = fam2 || (parts.pop()||''); giv2 = giv2 || parts.join(' ');
       }
     }
-    const add = v=>{ v=String(v||'').trim(); if (v) keys.add(letters(v)); };
-    add(eng); add(nick);
-    add(eng+' '+fam2); add(eng+fam2);
-    add(giv2+' '+fam2); add(fam2+' '+giv2); add(giv2+fam2); add(fam2+giv2);
-    if (fam2) add(eng+' '+fam2[0]);
+
+    add(eng);
+    add(nick);
+    add(`${eng} ${fam2}`);
+    add(`${eng}${fam2}`);
+    add(`${giv2} ${fam2}`);
+    add(`${fam2} ${giv2}`);
+    add(`${giv2}${fam2}`);
+    add(`${fam2}${giv2}`);
+    if (fam2) add(`${eng} ${fam2[0]}`);
+
     return Array.from(keys);
   };
 
-  // Key builder from any raw name (scores / ad-hoc)
   const kFromAnyName = (raw) => {
     const s = tidy(raw);
-    if (!s) return [];
     const q = s.match(/"(.*?)"/);
-    const nick = q ? q[1].trim() : '';
+    const nick = q ? q[1] : '';
     const strip = s.replace(/".*?"/g,'').trim();
     let fam='', giv='', eng='';
     if (strip.includes(',')){
-      const parts = strip.split(',').map(p=>p.replace(/,+$/,'').trim()).filter(Boolean);
+      const parts = strip.split(',').map(p=>p.trim());
       fam = parts[0]||''; giv = parts[1]||''; eng = parts[2]||'';
     } else {
-      const parts = strip.split(/\\s+/).filter(Boolean);
+      const parts = strip.split(/\s+/).filter(Boolean);
       if (parts.length>=2){ giv = parts.slice(0,-1).join(' '); fam = parts.slice(-1)[0]; }
       else { eng = strip; }
     }
-    const set = new Set(), add=v=>{ v=String(v||'').trim(); if(v) set.add(letters(v)); };
+    const set = new Set();
+    const add = (v)=>{ const n = letters(v); if(n) set.add(n); };
     add(eng||nick||strip);
-    add(eng+' '+fam); add(giv+' '+fam); add(fam+' '+giv);
-    add(eng+fam); add(giv+fam);
-    if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
+    add(`${eng} ${fam}`);
+    add(`${giv} ${fam}`);
+    add(`${fam} ${giv}`);
+    add(`${eng}${fam}`);
+    add(`${giv}${fam}`);
+    if (fam) add(`${eng} ${fam[0]}`);
     return Array.from(set);
   };
 
@@ -310,41 +288,36 @@
     return {index: hit, ambiguous: multi};
   };
 
-  const buildRosterKeys = () => {
-    rosterKeys = roster.map(st => {
-      if (mode==='subjects') return new Set(kFromStudent(st));
-      // ad-hoc
-      return new Set(kFromAnyName(st.display||''));
-    });
-  };
-
   const refreshRosterUI = () => {
     els.rosterList.innerHTML = '';
-    roster.forEach(st=>{
-      const r = document.createElement('div'); r.className='row';
-      const who = document.createElement('div'); who.textContent = st.display || \`\${st.family}, \${st.given}\`;
+    roster.forEach(st => {
+      const row = document.createElement('div'); row.className='row';
+      const who = document.createElement('div'); who.textContent = st.display || `${st.family}, ${st.given}`;
       const eng = document.createElement('div'); eng.textContent = tidy(st.english||''); eng.style.opacity='.6';
-      r.append(who, eng); els.rosterList.append(r);
+      row.append(who, eng); els.rosterList.append(row);
     });
   };
 
-  // =============== SUBJECTS ============
+  const buildRosterKeys = () => {
+    rosterKeys = roster.map(st=> new Set(kFromStudent(st)) );
+  };
+
   const loadSubjects = () => {
-    els.chips.innerHTML='';
+    els.chips.innerHTML = '';
     if (!data || !Array.isArray(data.subjects)) return;
-    data.subjects.forEach(s=>{
-      const b=document.createElement('div'); b.className='chip'; b.textContent=s.name; b.dataset.sid=s.id;
+    data.subjects.forEach((s)=>{
+      const b = document.createElement('div'); b.className='chip'; b.textContent = s.name; b.dataset.sid=s.id;
       b.addEventListener('click', ()=>selectSubject(s.id));
       els.chips.append(b);
     });
   };
 
   const markActiveChip = (sid) => {
-    [...els.chips.children].forEach(c=>c.classList.toggle('active', c.dataset.sid===String(sid)));
+    [...els.chips.children].forEach(c=>c.classList.toggle('active', c.dataset.sid===sid));
   };
 
   const selectSubject = (sid) => {
-    activeSubject = (data?.subjects||[]).find(s=>String(s.id)===String(sid)) || null;
+    activeSubject = (data.subjects||[]).find(s=>String(s.id)===String(sid));
     if (!activeSubject){ roster=[]; refreshRosterUI(); return; }
     roster = (activeSubject.roster||[]).filter(r=>r && (r.display||r.english||r.family));
     buildRosterKeys();
@@ -352,292 +325,259 @@
     refreshRosterUI();
     readOrderOverride();
     updateOrderBadge();
-    if (els.scoresInput.value.trim()) organize(false);
+    if (els.scoresInput.value.trim()) organize(false); // no copy
   };
-
-  // order override (subjects only)
-  const orderKeyForSubject = () => \`order_override_\${activeSubject?.id||'none'}\`;
-  const writeOrderOverride = () => { if (!activeSubject) return; localStorage.setItem(orderKeyForSubject(), JSON.stringify(orderOverride||{})); };
-  const readOrderOverride = () => {
-    if (!activeSubject) return;
-    try{ orderOverride = JSON.parse(localStorage.getItem(orderKeyForSubject())||'{}'); }
-    catch{ orderOverride = {}; }
-    if (!orderOverride) orderOverride={};
-    els.onlyThese.checked = !!orderOverride.only;
-    recomputeOrderMap();
-  };
-  const clearOrderOverride = () => { orderOverride=null; if (activeSubject) localStorage.removeItem(orderKeyForSubject()); updateOrderBadge(); };
 
   const updateOrderBadge = () => {
     const has = orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length>0;
-    els.orderStatus.textContent = has ? 'Order: Custom' : 'Order: Default';
+    els.orderStatus.textContent = has? 'Order: Custom' : 'Order: Default';
     els.orderStatus.classList.toggle('custom', has);
   };
 
+  // ORDER OVERRIDE ///////////////////////////////////////////////////////
+  const orderKeyForSubject = () => `order_override_${activeSubject?.id||'none'}`;
+  const writeOrderOverride = () => { if (!activeSubject) return; localStorage.setItem(orderKeyForSubject(), JSON.stringify(orderOverride||{})); };
+  const readOrderOverride = () => { if (!activeSubject) return; try { orderOverride = JSON.parse(localStorage.getItem(orderKeyForSubject())||'{}'); } catch { orderOverride = {}; } if (!orderOverride) orderOverride={}; els.onlyThese.checked = !!orderOverride.only; recomputeOrderMap(); };
+  const clearOrderOverride = () => { orderOverride = null; if (activeSubject) localStorage.removeItem(orderKeyForSubject()); updateOrderBadge(); };
+
   const recomputeOrderMap = () => {
     if (!orderOverride || !Array.isArray(orderOverride.lines)) { orderOverride={}; updateOrderBadge(); return; }
-    const used = new Set(), map=[], unknown=[], dup=[];
+    const used = new Set();
+    const map = [];
+    const unknown = [];
+    let dup = [];
     orderOverride.lines.forEach(line=>{
-      const {index, ambiguous} = pickBestMatch(line, rosterKeys);
-      if (index===-1){ unknown.push(line); return; }
-      if (used.has(index)){ dup.push(line); return; }
+      const {index} = pickBestMatch(line, rosterKeys);
+      if (index===-1) { unknown.push(line); return; }
+      if (used.has(index)) { dup.push(line); return; }
       used.add(index); map.push(index);
     });
-    if (!orderOverride.only){ for(let i=0;i<roster.length;i++){ if(!used.has(i)) map.push(i); } }
-    orderOverride.map=map; orderOverride.unknown=unknown; orderOverride.dup=dup;
+    if (!orderOverride.only){ for(let i=0;i<roster.length;i++){ if(!used.has(i)) map.push(i);} }
+    orderOverride.map = map; orderOverride.unknown = unknown; orderOverride.dup = dup;
     writeOrderOverride(); updateOrderBadge();
   };
 
-  // =============== SCORES / ORGANIZE ===
+  // SCORE PARSE & ORGANIZE //////////////////////////////////////////////
   const parseScores = (text) => {
-    const lines = String(text||'').split(/\\n+/).map(l=>l.trim()).filter(Boolean);
-    const entries=[];
+    const lines = text.split(/\n+/).map(l=>l.trim()).filter(Boolean);
+    const entries = [];
     for (const line of lines){
       const score = lastNumber(line);
-      const name = score ? line.replace(new RegExp(score.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&')+'$'),'').trim().replace(/[ ,]+$/,'') : line.trim();
+      const name = line.replace(new RegExp(score.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+"$"), '').trim().replace(/[ ,]+$/,'');
       if (!name) continue;
-      entries.push({raw:line, name, score});
+      entries.push({raw: line, name, score});
     }
     return entries;
   };
 
-  const toGpa = (x) => { const n = Math.max(0, Math.min(30, Number(x)||0)); return Math.round(55 + (n/30)*(100-55)); };
-
   const buildNameToScoreMap = (entries) => {
     const keyMap = new Map();
-    const amb=[], un=[];
-    let matches=0;
+    const amb = [];
+    const un = [];
+    let matches = 0;
     for (const e of entries){
       const {index, ambiguous} = pickBestMatch(e.name, rosterKeys);
-      if (index===-1){ un.push(\`- \${e.name} (\${e.score})\`); continue; }
-      if (ambiguous) amb.push(\`- \${e.name} (\${e.score}) → multiple matches\`);
+      if (index===-1){ un.push(`- ${e.name} (${e.score})`); continue; }
+      if (ambiguous) amb.push(`- ${e.name} (${e.score}) → multiple matches`);
       keyMap.set(index, e.score); matches++;
     }
     return {keyMap, matches, amb, un};
   };
 
-  const organize = (copyAutofill=true) => {
-    if (!roster.length){ toast('Add a roster first.'); return; }
-
+  const organize = (copyToClipboard=true, asToefl=false) => {
+    if (!activeSubject){ toast('Load a roster first.'); return; }
     const entries = parseScores(els.scoresInput.value);
+    if (asToefl){ entries.forEach(e=>{ e.score = String(toGpa(e.score)); }); } // non-destructive conversion
+
     const {keyMap, matches, amb, un} = buildNameToScoreMap(entries);
 
-    // Order to output
     let orderIdx = [...Array(roster.length).keys()];
-    if (mode==='subjects' && orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length){
-      orderIdx = orderOverride.map.slice();
-    }
+    if (orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length) orderIdx = orderOverride.map.slice();
 
-    // CSV
-    let csv = 'Name,Score\\n';
+    let csv = 'Name,Score\n';
     for (const i of orderIdx){
       const st = roster[i];
-      const nm = tidy(st.display||\`\${st.family}, \${st.given}\`);
-      let val = keyMap.has(i) ? String(keyMap.get(i)||'') : '';
-      if (els.toeflToggle.checked && val!==''){ val = String(toGpa(val)); }
+      const nm = tidy(st.display||`${st.family}, ${st.given}`);
+      const val = keyMap.has(i) ? keyMap.get(i) : '';
       const nameCsv = '"'+nm.replace(/"/g,'""')+'"';
-      csv += \`\${nameCsv},\${val}\\n\`;
+      csv += `${nameCsv},${val}\n`;
     }
     els.csvOut.value = csv;
 
-    // Details & KPIs
-    const lines=[];
-    if (mode==='subjects' && orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
-      if (orderOverride.unknown?.length){ lines.push('ORDER INPUT — Unknown (ignored):'); orderOverride.unknown.forEach(x=>lines.push(\`- \${x}\`)); lines.push(''); }
-      if (orderOverride.dup?.length){ lines.push('ORDER INPUT — Duplicates (last one kept):'); orderOverride.dup.forEach(x=>lines.push(\`- \${x}\`)); lines.push(''); }
+    const det = [];
+    if (orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
+      if (orderOverride.unknown?.length){ det.push('ORDER INPUT — Unknown (ignored):'); orderOverride.unknown.forEach(x=>det.push(`- ${x}`)); det.push(''); }
+      if (orderOverride.dup?.length){ det.push('ORDER INPUT — Duplicates (last one kept):'); orderOverride.dup.forEach(x=>det.push(`- ${x}`)); det.push(''); }
     }
-    if (amb.length){ lines.push('SCORES INPUT — Ambiguous:'); amb.forEach(x=>lines.push(x)); lines.push(''); }
-    if (un.length){ lines.push('SCORES INPUT — Unmatched:'); un.forEach(x=>lines.push(x)); }
-    els.detailText.textContent = lines.join('\\n');
+    if (amb.length){ det.push('SCORES INPUT — Ambiguous:'); amb.forEach(x=>det.push(x)); det.push(''); }
+    if (un.length){ det.push('SCORES INPUT — Unmatched:'); un.forEach(x=>det.push(x)); }
+    els.detailText.textContent = det.join('\n');
 
-    els.kMatch.textContent = \`✔ Matches \${matches}/\${entries.length}\`;
-    els.kAmb.textContent   = \`❓ Ambiguous \${amb.length}\`;
-    els.kUn.textContent    = \`❗ Unmatched \${un.length}\`;
+    els.kMatch.textContent = `✔ Matches ${matches}/${entries.length}`;
+    els.kAmb.textContent   = `❓ Ambiguous ${amb.length}`;
+    els.kUn.textContent    = `❗ Unmatched ${un.length}`;
 
-    // Subjects mode: build & auto-copy ThinkWave Autofill snippet
-    if (mode==='subjects' && copyAutofill && entries.length){
-      const code = buildAutofillCode(entries);
-      navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓'));
-    }
+    const code = buildAutofillCode(entries); // entries may be converted
+    if (copyToClipboard){ navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓')); }
   };
 
-  // ======= AUTOFILL SNIPPET (subjects) =======
+  // AUTOFILL CODE for ThinkWave assignments/gradebook ////////////////////
   const buildAutofillCode = (entries) => {
-    // Build many keys for each score name; skip empties
+    // Build a richer mapping: all candidate keys → score (skip empty normalized keys)
     const letters = s => (s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
     const keysFromAnyName = (raw) => {
       const s = String(raw||'').replace(/[\u201C\u201D\u2018\u2019]/g,'"').trim();
-      if (!s) return [];
-      const q = s.match(/"(.*?)"/); const nick = q ? q[1].trim() : '';
+      const q = s.match(/"(.*?)"/);
+      const nick = q ? q[1].trim() : '';
       const strip = s.replace(/".*?"/g,'').trim();
       let fam='', giv='', eng='';
       if (strip.includes(',')){
         const parts = strip.split(',').map(p=>p.replace(/,+$/,'').trim()).filter(Boolean);
         fam = parts[0]||''; giv = parts[1]||''; eng = parts[2]||'';
       } else {
-        const p = strip.split(/\\s+/).filter(Boolean);
-        if (p.length>=2){ giv=p.slice(0,-1).join(' '); fam=p.slice(-1)[0]; } else { eng=strip; }
+        const parts = strip.split(/\s+/).filter(Boolean);
+        if (parts.length>=2){ giv = parts.slice(0,-1).join(' '); fam = parts.slice(-1)[0]; }
+        else { eng = strip; }
       }
-      const set = new Set(), add=v=>{ v=String(v||'').trim(); if(v) set.add(letters(v)); };
+      const set = new Set(), add=v=>{ const n=letters(v); if(n) set.add(n); };
       add(eng||nick||strip);
-      add(eng+' '+fam); add(giv+' '+fam); add(fam+' '+giv);
-      add(eng+fam); add(giv+fam);
-      if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
+      add(`${eng} ${fam}`); add(`${giv} ${fam}`); add(`${fam} ${giv}`);
+      add(`${eng}${fam}`);  add(`${giv}${fam}`);
+      if (fam){ add(`${eng} ${fam[0]}`); add(`${giv} ${fam[0]}`); add(`${eng}${fam[0]}`); add(`${giv}${fam[0]}`); }
       return Array.from(set);
     };
 
     const obj = {};
     for (const e of entries){
       const ks = keysFromAnyName(e.name);
-      if (!ks.length){ const k = letters(e.name); if (k) ks.push(k); }
-      for (const k of ks){ if (k) obj[k] = String(e.score); } // guard empty keys
+      if (!ks.length){ const n = letters(e.name); if(n) ks.push(n); }
+      for (const k of ks) obj[k] = String(e.score);
     }
     const payload = JSON.stringify(obj);
 
-    // The snippet tolerates both old and new ThinkWave DOMs
     return `
-(()=> {
-  const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
-  const keyMap = ${payload};
+  (() => {
+    const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
+    const keyMap = ${payload};
 
-  function parseDisp(disp){
-    let d = String(disp||'').trim().replace(/\\s+/g,' ');
-    const q = d.match(/["“](.*?)["”]/);
-    let eng = q ? q[1].trim() : '';
-    const without = d.replace(/".*?"/g,'').replace(/\\s*,\\s*$/,'').trim();
-    let fam='', giv='';
-    if (without.includes(',')){
-      const parts = without.split(',').map(s=>s.replace(/,+$/,'').trim()).filter(Boolean);
-      fam = parts[0]||''; giv = parts[1]||'';
-      if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
-    } else {
-      const p = without.split(/\\s+/).filter(Boolean);
-      fam = p.pop()||''; giv = p.join(' ');
+    function parseDisp(disp){
+      let d = String(disp||'').trim().replace(/\\s+/g,' ');
+      const q = d.match(/["“](.*?)["”]/);
+      let eng = q ? q[1].trim() : '';
+      const withoutQuotes = d.replace(/".*?"/g,'').replace(/\\s*,\\s*$/,'').trim();
+      let fam='', giv='';
+      if (withoutQuotes.includes(',')){
+        const parts = withoutQuotes.split(',').map(s => s.replace(/,+$/,'').trim()).filter(Boolean);
+        fam = parts[0]||''; giv = parts[1]||'';
+        if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
+      } else {
+        const p = withoutQuotes.split(/\\s+/).filter(Boolean);
+        fam = p.pop()||''; giv = p.join(' ');
+      }
+      return {fam,giv,eng};
     }
-    return {fam,giv,eng};
-  }
 
-  function keysForDisp(disp){
-    const {fam,giv,eng} = parseDisp(disp);
-    const K = new Set(), add=v=>{ v=(v||'').trim(); if(v) K.add(norm(v)); };
-    add(eng); add(giv);
-    add(eng+' '+fam); add(eng+fam);
-    add(giv+' '+fam); add(giv+fam);
-    add(fam+' '+giv);
-    if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
-    return K;
-  }
-
-  const rows = Array.from(document.querySelectorAll('.table-panel .table tbody tr, .table tbody tr'))
-    .map(el => el.tagName==='TR' ? el : el.closest('tr'))
-    .filter(Boolean);
-
-  let filled=0, matched=0, unmatched=0, seen=0;
-
-  for (const tr of rows){
-    if (tr.classList.contains('paddedquickfill') || tr.querySelector('#id_grade')) continue;
-    const a = tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]');
-    if (!a) continue;
-    seen++;
-
-    const disp = (a.textContent||'').trim();
-    const keys = keysForDisp(disp);
-
-    let value='';
-    for (const k of keys){ if (Object.prototype.hasOwnProperty.call(keyMap,k)) { value = keyMap[k]; break; } }
-
-    const input = tr.querySelector('input[name$="-grade"], input.input-small.form-control[type="text"], input[type="text"]');
-    if (input && value!==''){
-      input.value = value;
-      input.dispatchEvent(new Event('input',{bubbles:true}));
-      input.dispatchEvent(new Event('change',{bubbles:true}));
-      matched++; filled++;
-    } else {
-      unmatched++;
+    function keysForDisp(disp){
+      const {fam,giv,eng} = parseDisp(disp);
+      const K = new Set(), add=v=>{ v=(v||'').trim(); const n = norm(v); if(n) K.add(n); };
+      add(eng); add(giv);
+      add(eng+' '+fam); add(eng+fam);
+      add(giv+' '+fam); add(giv+fam);
+      add(fam+' '+giv);
+      if (fam){ add(eng+' '+fam[0]); add(giv+' '+fam[0]); add(eng+fam[0]); add(giv+fam[0]); }
+      add(disp);
+      return K;
     }
-  }
 
-  console.log('[ThinkWave Autofill] rows:', seen, 'matched:', matched, 'filled:', filled, 'unmatched:', unmatched);
-})();`.trim();
+    const rows = Array.from(document.querySelectorAll('.table-panel .table tbody tr, .table tbody tr'))
+      .map(el => el.tagName==='TR' ? el : el.closest('tr'))
+      .filter(Boolean);
+
+    let filled=0, matched=0, unmatched=0, seen=0;
+
+    for (const tr of rows){
+      if (tr.classList.contains('paddedquickfill') || tr.querySelector('#id_grade')) continue;
+
+      const a = tr.querySelector('a[href*="/gp/st/"], a[href*="/st/"]');
+      if (!a) continue;
+      seen++;
+
+      const disp = (a.textContent||'').trim();
+      const keys = keysForDisp(disp);
+
+      let value='';
+      for (const k of keys){ if (Object.prototype.hasOwnProperty.call(keyMap,k)) { value = keyMap[k]; break; } }
+
+      const input = tr.querySelector('input[name$="-grade"], input.input-small.form-control[type="text"], input[type="text"]');
+      if (input && value!==''){
+        input.value = value;
+        input.dispatchEvent(new Event('input',{bubbles:true}));
+        input.dispatchEvent(new Event('change',{bubbles:true}));
+        matched++; filled++;
+      } else {
+        unmatched++;
+      }
+    }
+
+    console.log('[ThinkWave Autofill] rows:', seen, 'matched:', matched, 'filled:', filled, 'unmatched:', unmatched);
+  })();`.trim();
   };
 
-  // =============== DOWNLOAD ============
+  // CSV DOWNLOAD /////////////////////////////////////////////////////////
   const downloadCSV = () => {
-    const now = new Date(); const pad = n=>String(n).padStart(2,'0');
-    const stamp = \`\${now.getFullYear()}-\${pad(now.getMonth()+1)}-\${pad(now.getDate())}_\${pad(now.getHours())}-\${pad(now.getMinutes())}\`;
-    const label = mode==='subjects' ? tidy(activeSubject?.name||'Roster') : 'Adhoc_Roster';
-    const name = \`\${label.replace(/[^a-z0-9]+/gi,'_')}_\${stamp}.csv\`;
+    const now = new Date();
+    const pad = n=>String(n).padStart(2,'0');
+    const stamp = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}_${pad(now.getHours())}-${pad(now.getMinutes())}`;
+    const subj = tidy(activeSubject?.name||'Roster');
+    const name = `${subj.replace(/[^a-z0-9]+/gi,'_')}_${stamp}.csv`;
     const blob = new Blob([els.csvOut.value||''], {type:'text/csv;charset=utf-8;'});
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download=name; a.click(); URL.revokeObjectURL(a.href);
   };
 
-  // =============== EVENTS / WIRES ======
-  els.btnDownload.addEventListener('click', downloadCSV);
-  els.btnOrganize.addEventListener('click', ()=>organize(true));
+  // TOEFL → GPA (output-only) ////////////////////////////////////////////
+  const toGpa = (x) => {
+    const n = Math.max(0, Math.min(30, Number(x)||0));
+    return Math.round(55 + (n/30)*(100-55));
+  };
+  const convertToefl = () => {
+    // No mutation of scoresInput — apply conversion to output/autofill only
+    organize(true, true);
+  };
 
-  // subjects ui
-  document.getElementById('btnPasteOrder').addEventListener('click', ()=>els.orderArea.classList.toggle('active'));
+  // EVENTS ///////////////////////////////////////////////////////////////
+  document.getElementById('btnDownload').addEventListener('click', downloadCSV);
+  els.btnOrganize.addEventListener('click', ()=>organize(true,false));
+  els.btnToefl.addEventListener('click', convertToefl);
+
+  document.getElementById('btnPasteOrder').addEventListener('click', ()=>{
+    els.orderArea.classList.toggle('active');
+  });
   els.btnApplyOrder.addEventListener('click', ()=>{
-    if (mode!=='subjects') return;
-    const lines = els.orderInput.value.split(/\\n+/).map(s=>s.trim()).filter(Boolean);
+    const lines = els.orderInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
     orderOverride = {lines, only: els.onlyThese.checked};
     recomputeOrderMap();
     if (els.scoresInput.value.trim()) organize(false);
   });
-  els.btnClearOrder.addEventListener('click', ()=>{ if (mode!=='subjects') return; clearOrderOverride(); organize(false); });
-  els.onlyThese.addEventListener('change', ()=>{ if(mode==='subjects' && orderOverride){ orderOverride.only = els.onlyThese.checked; recomputeOrderMap(); organize(false);} });
+  els.btnClearOrder.addEventListener('click', ()=>{ clearOrderOverride(); organize(false); });
+  els.onlyThese.addEventListener('change', ()=>{ if(orderOverride){ orderOverride.only = els.onlyThese.checked; recomputeOrderMap(); organize(false);} });
 
-  // file input
+  // File input
   els.file.addEventListener('change', async (e)=>{
     const f = e.target.files?.[0]; if(!f) return;
-    try{
-      const txt = await f.text(); const json = JSON.parse(txt);
-      data = json; localStorage.setItem(cacheKey, JSON.stringify(json));
-      loadSubjects(); toast('JSON loaded ✓');
-    }catch{ alert('Invalid JSON.'); }
+    try{ const txt = await f.text(); const json = JSON.parse(txt); data = json; localStorage.setItem(cacheKey, JSON.stringify(json)); loadSubjects(); toast('JSON loaded ✓'); }
+    catch(err){ alert('Invalid JSON.'); }
   });
-  els.clearCache.addEventListener('click', ()=>{
+
+  els.clearCache.addEventListener('click', ()=>{ 
     localStorage.removeItem(cacheKey);
-    if (data?.subjects) data.subjects.forEach(s=> localStorage.removeItem(\`order_override_\${s.id}\`));
-    data=null; activeSubject=null; roster=[]; rosterKeys=[]; refreshRosterUI(); els.chips.innerHTML=''; updateOrderBadge();
-    toast('Cache cleared');
+    if (data?.subjects) data.subjects.forEach(s=> localStorage.removeItem(`order_override_${s.id}`));
+    toast('Cache cleared'); 
   });
 
-  // source toggle
-  els.sourceCtl.addEventListener('click', e=>{
-    const b = e.target.closest('button'); if (!b) return;
-    mode = b.dataset.src; localStorage.setItem(lsMode, mode);
-    [...els.sourceCtl.querySelectorAll('button')].forEach(x=>x.classList.toggle('active', x===b));
-    if (mode==='subjects'){
-      els.subjectsArea.classList.remove('hide');
-      els.adhocArea.classList.add('hide');
-      // keep previous selection if any; else load first subject if available
-      if (!activeSubject && data?.subjects?.length){ selectSubject(data.subjects[0].id); }
-      buildRosterKeys(); refreshRosterUI(); updateOrderBadge();
-    } else {
-      els.subjectsArea.classList.add('hide');
-      els.adhocArea.classList.remove('hide');
-      // ad-hoc uses the textarea content when "Use list" is clicked
-      // but keep any roster already in memory
-      buildRosterKeys(); refreshRosterUI();
-    }
-  });
-
-  // ad-hoc
-  els.btnUseAdhoc.addEventListener('click', ()=>{
-    const lines = els.adhocInput.value.split(/\\n+/).map(s=>s.trim()).filter(Boolean);
-    roster = lines.map(x=>({display:x}));
-    buildRosterKeys(); refreshRosterUI();
-    toast('Ad-hoc roster set ✓');
-    if (els.scoresInput.value.trim()) organize(false);
-  });
-
-  // init: load cached JSON & last mode
+  // If cache exists, hydrate
   (function init(){
-    try{ const j = JSON.parse(localStorage.getItem(cacheKey)||'null'); if (j){ data=j; loadSubjects(); } }catch{}
-    // restore mode UI
-    const b = els.sourceCtl.querySelector(\`button[data-src="\${mode}"]\`) || els.sourceCtl.querySelector('button[data-src="subjects"]');
-    b?.click(); // triggers mode setup
+    try{ const j = JSON.parse(localStorage.getItem(cacheKey)||'null'); if(j){ data=j; loadSubjects(); }
+    }catch{}
   })();
 })();
 </script>
