@@ -1,8 +1,12 @@
-// == ThinkWave Roster Scraper v1.0 ==
-// One click on a ThinkWave gradebook page → fetch all subjects → parse each page → download one JSON (and copy to clipboard).
+// == ThinkWave Roster Scraper v1.1 ==
+// - Scrapes ALL subjects from the sidebar (same-origin).
+// - For each subject, fetches the page (fallback to hidden iframe if needed).
+// - Extracts roster: display, english (title-cased), family, given, key, studentId
+// - Filters "Quick fill:" and tidies stray commas/spaces.
+// - Downloads ONE JSON + copies to clipboard + caches to localStorage.
 
 (async () => {
-  // ---------- small UI ----------
+  // ---------- tiny overlay UI ----------
   const ui = (() => {
     const el = document.createElement('div');
     el.style.cssText = 'position:fixed;right:12px;bottom:12px;z-index:2147483647;background:#111;color:#fff;padding:12px 14px;border-radius:10px;font:12px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial;box-shadow:0 6px 18px rgba(0,0,0,.3);max-width:360px;';
@@ -22,6 +26,45 @@
 
   const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
+  // ---------- helpers ----------
+  const titleCase = s => s ? s.replace(/\S+/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase()) : s;
+  const tidyDisplay = s => (s || '')
+      .replace(/\s+/g, ' ')       // collapse spaces
+      .replace(/\s*,"\s*/g, '", ')// fix quote+comma spacing
+      .replace(/\s*,\s*$/,'')     // trim trailing comma
+      .trim();
+
+  function parseName(displayRaw) {
+    const display = tidyDisplay(displayRaw);
+    // English in quotes (straight or smart)
+    const q = display.match(/["“](.*?)["”]/);
+    let english = q ? titleCase(q[1].trim()) : null;
+
+    // Core (before quotes)
+    const main = display.replace(/["“].*$/, '').trim();
+
+    // Some ESL lists look like: Last, first, English (no quotes)
+    if (!english && (main.split(',').length === 3)) {
+      const parts3 = main.split(',').map(s => s.trim());
+      if (parts3[2] && /^[A-Za-z][A-Za-z\s.'-]*$/.test(parts3[2])) {
+        english = titleCase(parts3[2]);
+      }
+    }
+
+    let family = null, given = null;
+    if (main.includes(',')) {
+      [family, given] = main.split(',', 2).map(s => s.trim());
+    } else {
+      const parts = main.split(/\s+/);
+      family = parts.pop() || null; given = parts.join(' ') || null;
+    }
+
+    const keyBase = (family || '') + (given || '') + (english || '');
+    const key = keyBase.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    return { display, english, family, given, key };
+  }
+
   // ---------- subject discovery ----------
   function collectSubjects(root = document) {
     const sel = '#newList a.list-group-item, .list-group a.list-group-item, nav .list-group-item';
@@ -32,7 +75,6 @@
       const idm = (a.getAttribute('href') || '').match(/sec\d+/);
       return { id: idm ? idm[0] : name.toLowerCase().replace(/[^a-z0-9]+/g, '_'), name, url: href };
     });
-    // de-dupe by id/url
     const seen = new Set();
     return subs.filter(s => { const k = s.id || s.url; if (seen.has(k)) return false; seen.add(k); return true; });
   }
@@ -44,76 +86,62 @@
     return new DOMParser().parseFromString(text, 'text/html');
   }
 
-  // ---------- name parsing ----------
-  function normalizeStudent(display) {
-    const englishMatch = display.match(/["“](.*?)["”]/);
-    const english = englishMatch ? englishMatch[1].trim() : null;
-    const main = display.replace(/["“].*$/, '').trim();
-
-    let family = null, given = null;
-    if (main.includes(',')) {
-      [family, given] = main.split(',', 2).map(s => s.trim());
-    } else {
-      const parts = main.split(/\s+/); family = parts.pop() || null; given = parts.join(' ') || null;
-    }
-
-    const keyBase = (family || '') + (given || '') + (english || '');
-    const key = keyBase.toLowerCase().replace(/[^a-z0-9]/g, '');
-    return { display, english, family, given, key };
-  }
-
   function extractRosterFromDoc(doc) {
-    // Try several robust selectors
-    let nodes = Array.from(doc.querySelectorAll(
-      'td.gradebookstudentname a span, td.gradebookstudentname a, td.gradebookstudentname, td.student-name a, td.student-name, .gradebookstudentname a span'
+    const anchors = Array.from(doc.querySelectorAll(
+      'td.gradebookstudentname a, td.student-name a, a[href*="/st/"]'
     ));
-    let names = nodes.map(n => (n.textContent || '').trim()).filter(Boolean);
+    const rows = anchors.map(a => {
+      const disp = a.textContent ? a.textContent.trim() : '';
+      const href = a.getAttribute('href') || '';
+      const idm = href.match(/\/st\/(\d+)\//);
+      const studentId = idm ? idm[1] : null;
+      return { disp, href, studentId };
+    }).filter(r => r.disp && !/^Quick fill:?$/i.test(r.disp));
 
-    // Fallback: anchors to student pages
-    if (names.length === 0) {
-      const anchors = Array.from(doc.querySelectorAll('a[href*="/students/"], a[href*="/student/"]'));
-      names = anchors.map(a => a.textContent.trim()).filter(Boolean);
-    }
+    // Map to normalized objects
+    const roster = rows.map(r => {
+      const p = parseName(r.disp);
+      return { display: p.display, english: p.english, family: p.family, given: p.given, key: p.key, studentId: r.studentId };
+    });
 
-    // De-dupe & clean obvious non-names
-    names = names.filter((t, i) =>
-      names.indexOf(t) === i && !/^(Overall|Quick fill|Add Assignment)$/i.test(t)
-    );
+    // De-dupe within subject (prefer entries with studentId)
+    const byId = new Map(), byKey = new Map();
+    roster.forEach(st => {
+      if (st.studentId) byId.set(st.studentId, st);
+    });
+    roster.forEach(st => {
+      if (!st.studentId) {
+        if (!byKey.has(st.key)) byKey.set(st.key, st);
+      }
+    });
 
-    return names.map(normalizeStudent);
+    const combined = [...byId.values(), ...byKey.values()];
+    return combined;
   }
 
-  // ---------- iframe fallback (if fetch HTML doesn’t contain rendered roster) ----------
-  function extractViaIframe(url, uiLabel) {
+  // ---------- iframe fallback ----------
+  function extractViaIframe(url) {
     return new Promise((resolve, reject) => {
       const ifr = document.createElement('iframe');
-      ifr.style.display = 'none';
-      ifr.src = url;
-      document.body.appendChild(ifr);
-
-      const kill = (e) => { try { document.body.removeChild(ifr); } catch {} e ? reject(e) : resolve([]); };
-      const timeout = setTimeout(() => kill(new Error('iframe timeout')), 30000);
-
+      ifr.style.display = 'none'; ifr.src = url; document.body.appendChild(ifr);
+      const clean = (e) => { try { document.body.removeChild(ifr); } catch {} e ? reject(e) : resolve([]); };
+      const timeout = setTimeout(() => clean(new Error('iframe timeout')), 30000);
       ifr.onload = () => {
         setTimeout(() => {
           try {
             const idoc = ifr.contentDocument;
-            // auto-scroll to load virtualized rows (if any)
             const scrollEl = idoc.scrollingElement || idoc.body;
             let prevH = 0, still = 0;
-
             const tick = () => {
               const h = scrollEl.scrollHeight;
-              if (h > prevH) { prevH = h; scrollEl.scrollTop = h; still = 0; }
-              else still++;
-
+              if (h > prevH) { prevH = h; scrollEl.scrollTop = h; still = 0; } else still++;
               const names = extractRosterFromDoc(idoc);
-              if (names.length > 0 && still > 3) { clearTimeout(timeout); kill(); resolve(names); }
-              else if (still > 8) { clearTimeout(timeout); kill(); resolve(names); }
+              if (names.length > 0 && still > 3) { clearTimeout(timeout); clean(); resolve(names); }
+              else if (still > 8) { clearTimeout(timeout); clean(); resolve(names); }
               else setTimeout(tick, 350);
             };
             tick();
-          } catch (e) { clearTimeout(timeout); kill(e); }
+          } catch (e) { clearTimeout(timeout); clean(e); }
         }, 600);
       };
     });
@@ -128,20 +156,18 @@
         ui.warn(`No names in fetched HTML for "${subj.name}". Trying iframe…`);
         roster = await extractViaIframe(subj.url);
       }
-      // ensure unique keys per subject
-      const seen = new Map();
+      // unique keys per subject (suffix duplicates)
+      const seen = new Set();
       roster.forEach(st => {
-        let k = st.key || 'student';
-        if (seen.has(k)) { const n = seen.get(k) + 1; st.key = `${k}-${n}`; seen.set(k, n); }
-        else seen.set(k, 1);
+        let k = st.studentId || st.key || 'student';
+        while (seen.has(k)) k = k + '-2';
+        seen.add(k);
       });
       return { ...subj, sourceUrl: new URL(subj.url, location.href).pathname, roster };
     } catch (e) {
       ui.warn(`Failed: ${subj.name} — ${e.message}`);
       return { ...subj, sourceUrl: subj.url, roster: [], error: e.message };
-    } finally {
-      await delay(500);
-    }
+    } finally { await delay(400); }
   }
 
   function downloadJSON(obj, filename) {
@@ -154,13 +180,7 @@
 
   async function copyToClipboard(obj) {
     const data = JSON.stringify(obj, null, 2);
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(data);
-    } else {
-      const ta = document.createElement('textarea');
-      ta.value = data; document.body.appendChild(ta); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-    }
+    if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(data);
   }
 
   // ---------- run ----------
@@ -170,16 +190,16 @@
   ui.log(`Found ${subjects.length} subjects.`);
 
   const out = { generatedAt: new Date().toISOString(), host: location.host, url: location.href, subjects: [] };
-  for (let i = 0; i < subjects.length; i++) {
-    const entry = await scrapeSubject(subjects[i], i + 1, subjects.length);
-    out.subjects.push({
-      id: entry.id, name: entry.name, sourceUrl: entry.sourceUrl, roster: entry.roster, error: entry.error
-    });
-  }
+  for (let i = 0; i < subjects.length; i++) out.subjects.push(await scrapeSubject(subjects[i], i + 1, subjects.length));
+
+  const fnameTS = (() => {
+    const d = new Date();
+    const pad = n => String(n).padStart(2,'0');
+    return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}_${pad(d.getHours())}-${pad(d.getMinutes())}-${pad(d.getSeconds())}`;
+  })();
 
   ui.log('Preparing JSON (download + clipboard)…');
-  const fname = 'thinkwave_rosters_' + new Date().toISOString().slice(0, 10) + '.json';
-  downloadJSON(out, fname);
+  downloadJSON(out, `thinkwave_rosters_${fnameTS}.json`);
   try { await copyToClipboard(out); ui.success('Copied JSON to clipboard.'); } catch { ui.warn('Clipboard copy failed — download is saved.'); }
   localStorage.setItem('tw_rosters_v1', JSON.stringify(out));
   ui.finish('All subjects processed.');
