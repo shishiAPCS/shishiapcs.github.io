@@ -1,358 +1,712 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ThinkWave Organizer</title>
-<style>
-:root{
-  --bg:#0b0c10; --card:#13161a; --muted:#9aa4b2; --text:#e6edf3;
-  --chip:#0f172a; --chipBorder:#3b4a63; --chipActive:#2563eb; --chipActiveGlow:rgba(37,99,235,.25);
-  --btn:#1f2937; --btnBorder:#2a3343; --accent:#22c55e; --accent2:#3b82f6;
-  --warn:#f59e0b; --bad:#ef4444; --good:#16a34a; --br:16px;
-}
-*{box-sizing:border-box}
-body{margin:0;padding:20px;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
-h1,h2,h3{margin:0 0 8px}
-small{color:var(--muted)}
-.container{max-width:1100px;margin:0 auto;display:grid;gap:16px;
-  grid-template-columns: 1fr; grid-template-areas:
-  "roster" "paste" "results";}
-@media(min-width:900px){
-  .container{grid-template-columns: 1fr 1fr; grid-template-areas:
-    "roster paste" "results results";}
-}
-.card{background:var(--card);border-radius:var(--br);padding:16px;border:1px solid #1d232f}
-#rosterCard{grid-area:roster}
-#pasteCard{grid-area:paste}
-#resultsCard{grid-area:results}
-.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{background:var(--btn);color:#fff;border:1px solid var(--btnBorder);padding:10px 14px;border-radius:12px;cursor:pointer;transition:transform .05s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{background:linear-gradient(135deg,#10b981,var(--accent)); border-color:#198754}
-.btn.blue{background:linear-gradient(135deg,#2563eb,var(--accent2)); border-color:#3346a3}
-.btn.ghost{background:transparent;border:1px dashed var(--btnBorder)}
-input[type="file"]{display:none}
-.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#0f172a;border:1px solid #24324a;color:#e5eefb;font-size:13px}
-.badge.good{border-color:#1f8f5a}
-.badge.warn{border-color:#8f7a1f}
-.badge.bad{border-color:#8f3b3b}
-.grid{display:grid;gap:12px}
-textarea,.textarea{width:100%;min-height:200px;background:#0f1320;color:#e2e8f0;border:1px solid #2a3343;border-radius:12px;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas}
-.list{max-height:460px;overflow:auto;border:1px solid #2a3343;border-radius:12px;background:#0f1320;padding:8px}
-.list .item{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-bottom:1px solid #1c2434}
-.list .item:last-child{border-bottom:none}
-.kv{color:#9aa4b2;font-size:12px}
-.toast{position:fixed;right:16px;bottom:16px;background:#0f172a;color:#e6edf3;border:1px solid #2a3343;padding:10px 12px;border-radius:12px;opacity:0;transform:translateY(8px);transition:all .2s}
-.toast.show{opacity:1;transform:translateY(0)}
-.footer{color:#9aa4b2;font-size:12px;text-align:center;margin-top:10px}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{
-  background:var(--chip); color:#fff; /* high contrast */
-  border:1px solid var(--chipBorder); padding:8px 12px; border-radius:999px; cursor:pointer
-}
-.chip.active{border-color:var(--chipActive); box-shadow:0 0 0 2px var(--chipActiveGlow) inset}
-.copyFlag{font-size:12px;color:#9ae6b4;margin-left:8px;opacity:0;transition:.2s}
-.copyFlag.show{opacity:1}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>RosterFlow — ThinkWave Organizer</title>
+  <style>
+    /* ===== Color system (auto + manual) ===== */
+    :root{
+      --bg: #ffffff;
+      --panel: #f6f7fb;
+      --text: #0b1320;
+      --muted: #636d83;
+      --chip-bg: #eef1f5;
+      --chip-text: #0b1320;
+      --border: #e5e7ef;
+      --accent: #2563eb;
+      --accent-weak: #e8efff;
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --code-bg: #0f172a0d;
+      --btn: #111827;
+      --btn-text: #ffffff;
+      --btn-ghost: transparent;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1220;
+        --panel: #0f172a;
+        --text: #e5e7eb;
+        --muted: #9aa7bf;
+        --chip-bg: #1a2338;
+        --chip-text: #e5e7eb;
+        --border: #1f2937;
+        --accent: #60a5fa;
+        --accent-weak: #1a2a43;
+        --ok: #34d399;
+        --warn: #fbbf24;
+        --bad: #f87171;
+        --code-bg: #0b1220;
+        --btn: #e5e7eb;
+        --btn-text: #0b1220;
+        --btn-ghost: transparent;
+      }
+    }
+    /* Manual overrides via data-theme */
+    html[data-theme="light"] :root{ color-scheme: light; }
+    html[data-theme="dark"]  :root{ color-scheme: dark; }
+    html[data-theme="light"]{
+      --bg:#ffffff; --panel:#f6f7fb; --text:#0b1320; --muted:#636d83; --chip-bg:#eef1f5; --chip-text:#0b1320;
+      --border:#e5e7ef; --accent:#2563eb; --accent-weak:#e8efff; --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+      --code-bg:#0f172a0d; --btn:#111827; --btn-text:#ffffff; --btn-ghost:transparent;
+    }
+    html[data-theme="dark"]{
+      --bg:#0b1220; --panel:#0f172a; --text:#e5e7eb; --muted:#9aa7bf; --chip-bg:#1a2338; --chip-text:#e5e7eb;
+      --border:#1f2937; --accent:#60a5fa; --accent-weak:#1a2a43; --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
+      --code-bg:#0b1220; --btn:#e5e7eb; --btn-text:#0b1220; --btn-ghost:transparent;
+    }
+
+    /* ===== Base ===== */
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0; font: 15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg); color:var(--text);
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    .wrap{ max-width:1200px; margin:24px auto; padding:0 16px; }
+
+    /* ===== Header ===== */
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    }
+    .brand .logo{
+      display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background:var(--accent-weak);
+    }
+    .brand .title{ font-size:18px; }
+    .brand .subtitle{ color:var(--muted); font-weight:600; margin-left:6px; font-size:12px; }
+
+    .toolbar{ display:flex; align-items:center; gap:8px; }
+    .theme-btn{
+      display:flex; align-items:center; gap:6px; border:1px solid var(--border);
+      padding:6px 10px; background:var(--btn-ghost); color:var(--text); border-radius:10px; cursor:pointer;
+    }
+    .theme-btn svg{ width:16px; height:16px; }
+    .theme-badge{ margin-left:6px; font-size:12px; color:var(--muted); }
+
+    /* ===== Layout ===== */
+    .grid{
+      display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+    }
+    .panel{
+      background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px;
+    }
+    .panel h3{ margin:0 0 10px 0; font-size:16px; }
+    .hint{ color:var(--muted); font-size:12px; }
+
+    /* Roster left list */
+    .chipbar{ display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 10px 0; }
+    .chip{
+      background:var(--chip-bg); color:var(--chip-text); border:1px solid var(--border);
+      padding:6px 10px; border-radius:999px; font-size:12px; cursor:pointer;
+    }
+    .chip.active{ outline:2px solid var(--accent); }
+    .chip[disabled]{ opacity:.55; cursor:not-allowed; }
+
+    .btnrow{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+    .btn{
+      background:var(--btn); color:var(--btn-text); border:none; border-radius:10px; padding:8px 12px; cursor:pointer;
+    }
+    .btn.secondary{ background:var(--chip-bg); color:var(--text); border:1px solid var(--border); }
+    .btn.warn{ background:var(--warn); color:#111; }
+    .btn.small{ padding:6px 10px; font-size:12px; border-radius:8px; }
+    .copied{ margin-left:8px; background:var(--ok); color:#0b1220; border-radius:8px; padding:2px 8px; font-size:12px; }
+
+    .roster{
+      display:flex; flex-direction:column; gap:6px; max-height:260px; overflow:auto; border-top:1px dashed var(--border); padding-top:8px;
+    }
+    .row{
+      display:flex; align-items:center; justify-content:space-between; gap:8px;
+      background:rgba(0,0,0,0.03); padding:8px 10px; border-radius:10px;
+    }
+    .row .nm{ font-weight:600; }
+    .row .en{ color:var(--muted); font-size:12px; }
+
+    /* Manual editor in left panel */
+    .manual{ display:flex; flex-direction:column; gap:8px; }
+    textarea, pre{
+      width:100%; min-height:160px; border-radius:10px; border:1px solid var(--border); padding:10px;
+      background:var(--bg); color:var(--text); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Right panel */
+    .counts{ display:flex; gap:8px; margin-top:10px; }
+    .badge{
+      display:inline-flex; align-items:center; gap:6px; padding:6px 8px; border-radius:999px; font-size:12px; background:var(--chip-bg); border:1px solid var(--border);
+    }
+    .badge.ok{ border-color:transparent; background:rgba(16,185,129,.15); }
+    .badge.amb{ background:rgba(245,158,11,.15); }
+    .badge.bad{ background:rgba(239,68,68,.15); }
+
+    /* Bottom results (full width) */
+    .full{ grid-column:1/-1; }
+    .csvwrap{ display:grid; gap:8px; }
+    .csvwrap pre{ min-height:140px; background:var(--code-bg); }
+
+    .footer{ color:var(--muted); font-size:12px; text-align:center; margin-top:10px; }
+
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- minimalist glyph -->
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"><path d="M5 18V6l7-3 7 3v12l-7 3-7-3Z" stroke-width="1.5"/><path d="M8 9h8M8 12h8M8 15h5" stroke-width="1.5"/></svg>
+        </div>
+        <div class="title">RosterFlow</div>
+        <div class="subtitle">ThinkWave Organizer</div>
+      </div>
+      <div class="toolbar">
+        <button id="themeToggle" class="theme-btn" title="Theme">
+          <span id="themeIcon" aria-hidden="true">
+            <!-- starts as auto (sun/moon) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke-width="1.5"/></svg>
+          </span>
+          <span id="themeLabel" class="theme-badge">Auto</span>
+        </button>
+      </div>
+    </header>
 
-  <!-- Left: Roster & Subjects -->
-  <section id="rosterCard" class="card">
-    <h2>1) Roster</h2>
-    <div class="row" style="margin:6px 0 12px">
-      <label class="btn ghost">
-        <input id="file" type="file" accept="application/json" />
-        Import JSON
-      </label>
-      <button id="useLocal" class="btn">Use Cached</button>
-      <button id="clearLocal" class="btn">Clear Cache</button>
-    </div>
-    <div id="subjects" class="chips"></div>
-    <div id="rosterBox" class="list" style="margin-top:10px;min-height:120px">
-      <div class="kv">Import a JSON and choose a subject to see roster here.</div>
-    </div>
-  </section>
+    <div class="grid">
+      <!-- Left: Roster -->
+      <section class="panel">
+        <h3>1) Roster</h3>
+        <div class="btnrow">
+          <label class="btn small secondary" for="jsonFile">Import JSON</label>
+          <input id="jsonFile" type="file" accept="application/json" hidden>
+          <button id="useCache" class="btn small secondary">Use Cached</button>
+          <button id="clearCache" class="btn small secondary">Clear Cache</button>
+          <button id="manualBtn" class="btn small">Manual Input</button>
+        </div>
 
-  <!-- Right: Paste Area -->
-  <section id="pasteCard" class="card">
-    <h2>2) Paste Scores</h2>
-    <small>Accepts: <code>Name,Score</code> · <code>Name<TAB>Score</code> · <code>Name  Score</code>. The last number on each line is used.</small>
-    <textarea id="paste" placeholder='Examples:
-Tomz 50
+        <div id="subjectChips" class="chipbar" aria-label="Subjects"></div>
+
+        <div id="rosterPane">
+          <div id="rosterList" class="roster" aria-live="polite"></div>
+        </div>
+
+        <div id="manualPane" class="manual" hidden>
+          <p class="hint">One student per line. Any of these are fine:
+            <code>Li, Xiaoduan "Minato"</code> • <code>Minato Li</code> • <code>Minato</code></p>
+          <textarea id="manualText" spellcheck="false" placeholder="Minato
+Joe
+George
+Michael
+Selina"></textarea>
+          <div class="btnrow">
+            <button id="manualCancel" class="btn secondary">Cancel</button>
+            <button id="manualSave" class="btn">Save roster</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Pasted scores -->
+      <section class="panel">
+        <h3>2) Paste Scores</h3>
+        <p class="hint">Accepts <b>Name,Score</b> · <b>Name Score</b> · <b>Name ... Score</b>. The last number on each line is used.</p>
+        <textarea id="pasteBox" rows="12" spellcheck="false" placeholder='Tomz 50
 Keven 44
 Karl 90
 Richard 100'></textarea>
 
-    <div class="row" style="margin-top:10px">
-      <button id="organizeBtn" class="btn primary">Organize into Roster Order</button><span id="copyFlagOrg" class="copyFlag">✓ Copied</span>
-      <button id="convertBtn" class="btn blue">Convert TOEFL → GPA (0–30 → 55–100)</button><span id="copyFlagConv" class="copyFlag">✓ Copied</span>
-    </div>
-
-    <div id="status" class="row" style="margin-top:10px"></div>
-  </section>
-
-  <!-- Bottom: Results (full width) -->
-  <section id="resultsCard" class="card">
-    <h2>3) Results</h2>
-    <div class="grid">
-      <div>
-        <h3 style="margin:4px 0">CSV Preview</h3>
-        <textarea id="csvOut" class="textarea" placeholder="Name,Score (CSV)" readonly></textarea>
-        <div class="row" style="margin-top:8px">
-          <button id="downloadCsv" class="btn">Download CSV</button>
+        <div class="btnrow">
+          <button id="btnOrganize" class="btn">Organize into Roster Order</button>
+          <button id="btnToefl" class="btn secondary">Convert TOEFL → GPA (0–30 → 55–100)</button>
         </div>
-      </div>
+
+        <div class="counts">
+          <span class="badge ok" id="countMatch">✔ Matches 0/0</span>
+          <span class="badge amb" id="countAmb">❓ Ambiguous 0</span>
+          <span class="badge bad" id="countUnk">⛔ Unmatched 0</span>
+        </div>
+
+        <details id="issues" style="margin-top:8px;">
+          <summary class="hint">See ambiguous/unmatched details</summary>
+          <div id="issueBody" class="hint" style="margin-top:6px; white-space:pre-wrap;"></div>
+        </details>
+      </section>
+
+      <!-- Bottom: Results full width -->
+      <section class="panel full">
+        <h3>3) Results</h3>
+        <div class="csvwrap">
+          <label class="hint">CSV Preview</label>
+          <pre id="csvOut"></pre>
+          <div class="btnrow">
+            <button id="btnCsv" class="btn secondary">Download CSV</button>
+          </div>
+        </div>
+        <p class="footer">Tip: Open ThinkWave assignment page → Right-click → Inspect → Console → Cmd/Ctrl+V → Enter.</p>
+      </section>
     </div>
-    <hr />
-    <small>Tip: Open ThinkWave assignment page → <kbd>Right-click</kbd> → Inspect → Console → <kbd>Cmd/Ctrl+V</kbd> → Enter.</small>
-  </section>
 
-  <div class="footer">ThinkWave Organizer — local only (no uploads). Cached as <code>tw_rosters_v1</code>.</div>
-</div>
+    <p class="footer">ThinkWave Organizer — local only (no uploads). Cached as <code>tw_rosters_v1</code>.</p>
+  </div>
 
-<div id="toast" class="toast">Copied to clipboard</div>
+  <script>
+    /* ===================== State & Cache ===================== */
+    const LS_KEY = 'tw_rosters_v1';
+    const THEME_KEY = 'tw_theme_v1'; // 'auto' | 'dark' | 'light'
+    const MANUAL_TEXT_KEY = 'tw_manual_text_v1';
 
-<script>
-/* ====== STATE ====== */
-const KEY='tw_rosters_v1';
-let DATA=null, SUBJECT=null, LAST_AUTOFILL='';
-const qs=s=>document.querySelector(s);
-const elSubjects=qs('#subjects'), elRoster=qs('#rosterBox'), elPaste=qs('#paste'), elCSV=qs('#csvOut'), elStatus=qs('#status');
-const elToast=qs('#toast'), flagOrg=qs('#copyFlagOrg'), flagConv=qs('#copyFlagConv');
+    const state = {
+      subjects: [],
+      subjectId: null,
+      roster: [], // normalized roster entries for UI
+      scoreMap: {}, // parsed from paste
+      csv: '',
+      lastBuildWasToefl: false,
+    };
 
-/* ====== UTIL ====== */
-const pad=n=>String(n).padStart(2,'0');
-const nowStamp=()=>{const d=new Date();return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;};
-const copy=async text=>{try{await navigator.clipboard.writeText(text);toast('Copied to clipboard');}catch{}};
-function toast(msg){elToast.textContent=msg;elToast.classList.add('show');setTimeout(()=>elToast.classList.remove('show'),1200);}
-function titleCase(s){return s ? s.replace(/\S+/g,w=>w[0].toUpperCase()+w.slice(1).toLowerCase()):s;}
-function tidyDisplay(s){return (s||'').replace(/\s+/g,' ').replace(/\s*,\s*$/,'').trim();}
-function engNorm(s){return (s||'').toLowerCase().replace(/[^a-z]/g,'');} // english-only key
-function nameKey(f,g,e){return (''+(f||'')+(g||'')+(e||'')).toLowerCase().replace(/[^a-z0-9]/g,'');}
-
-/* Build a display-key (for lines like Last, Given "English") */
-function keyFromDisplay(displayRaw){
-  const display=tidyDisplay(displayRaw);
-  const q=display.match(/["“](.*?)["”]/); let english=q?titleCase(q[1].trim()):null;
-  const main=display.replace(/["“].*$/,'').trim(); let family=null,given=null;
-  if(main.includes(',')) [family,given]=main.split(',',2).map(s=>s.trim());
-  else{const parts=main.split(/\s+/); family=parts.pop()||null; given=parts.join(' ')||null;}
-  if(!english && (main.split(',').length===3)){const p3=main.split(',').map(s=>s.trim()); if(/^[A-Za-z][A-Za-z .'-]*$/.test(p3[2])) english=titleCase(p3[2]);}
-  return nameKey(family,given,english);
-}
-
-/* When teachers paste just English names ("Tomz", "Keven"), normalize that */
-function engFromFreeText(raw){
-  // 1) If there are quotes, take quoted
-  const q=raw.match(/["“](.*?)["”]/); if(q) return engNorm(q[1]);
-  // 2) Otherwise, treat all letters as the english name ("Tom Z"→tomz, "Tomz"→tomz)
-  return engNorm(raw);
-}
-
-function parsePasted(text){
-  const lines=text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-  const out=[];
-  for(const line of lines){
-    const m=line.match(/(-?\d+(?:\.\d+)?)(?!.*\d)/);
-    const score=m?m[1]:'';
-    const name=m?line.slice(0,m.index).trim().replace(/[,;]\s*$/,''):line;
-    out.push({raw:name, score});
-  }
-  return out;
-}
-
-function toeflToGPA(val){
-  const s=parseFloat(val); if(isNaN(s)||s<0||s>30) return '';
-  if(s>=28) return 100; if(s>=25) return 97; if(s>=22) return 94; if(s>=19) return 90;
-  if(s>=17) return 89; if(s>=14) return 85; if(s>=11) return 80; if(s>=6) return 75;
-  if(s>=3) return 65; if(s>=1) return 60; return 55;
-}
-
-function csvFromPairs(pairs){
-  const rows=[['Name','Score'],...pairs];
-  return rows.map(r=>r.map(x=>((''+x).includes(',')?'"'+(''+x).replace(/"/g,'""')+'"':x)).join(',')).join('\n');
-}
-function download(text,filename){
-  const blob=new Blob([text],{type:'text/csv;charset=utf-8;'}), url=URL.createObjectURL(blob);
-  const a=document.createElement('a'); a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),1500);
-}
-
-/* ====== RENDER ====== */
-function renderSubjects(){
-  elSubjects.innerHTML=''; if(!DATA||!DATA.subjects||!DATA.subjects.length) return;
-  DATA.subjects.forEach(subj=>{
-    const roster=(subj.roster||[]).filter(r=>!/^Quick fill:?$/i.test(r.display||''));
-    const chip=document.createElement('button'); chip.className='chip'; chip.textContent=subj.name;
-    chip.onclick=()=>{SUBJECT={...subj, roster}; [...elSubjects.children].forEach(c=>c.classList.remove('active')); chip.classList.add('active'); renderRoster(); clearFlags(); resetStatus();};
-    elSubjects.appendChild(chip);
-  });
-}
-function renderRoster(){
-  if(!SUBJECT){elRoster.innerHTML='<div class="kv">Choose a subject.</div>'; return;}
-  elRoster.innerHTML='';
-  SUBJECT.roster.forEach(st=>{
-    const div=document.createElement('div'); div.className='item';
-    const left=document.createElement('div'); left.textContent=st.display || `${st.family}, ${st.given}`;
-    const right=document.createElement('div'); right.className='kv'; right.textContent=st.english?st.english:(st.studentId?`#${st.studentId}`:'');
-    div.append(left,right); elRoster.appendChild(div);
-  });
-}
-function resetStatus(){elStatus.innerHTML='';}
-function clearFlags(){[flagOrg,flagConv].forEach(f=>{f&&f.classList.remove('show')});}
-function showFlag(el){el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),1200);}
-
-function badge(kind,text,onClick){
-  const span=document.createElement('span'); span.className='badge '+(kind==='good'?'good':kind==='warn'?'warn':kind==='bad'?'bad':''); span.textContent=text;
-  if(onClick) span.style.cursor='pointer', span.onclick=onClick; return span;
-}
-
-/* ====== MATCHING ====== */
-function buildMaps(roster){
-  const byKey=new Map(), dupKeys=new Map();
-  const byEng=new Map(), dupEng=new Map();
-
-  roster.forEach((s,i)=>{
-    const k=nameKey(s.family,s.given,s.english);
-    if(byKey.has(k)) dupKeys.set(k,true); else byKey.set(k,{...s,index:i});
-
-    const e=engNorm(s.english||'');
-    if(e){
-      if(byEng.has(e)){ dupEng.set(e,true); byEng.get(e).push(i); }
-      else byEng.set(e,[i]);
+    function loadCache(){
+      try{ return JSON.parse(localStorage.getItem(LS_KEY) || 'null'); }
+      catch(e){ return null; }
     }
-  });
-  return {byKey,dupKeys,byEng,dupEng};
-}
+    function saveCache(obj){
+      try{ localStorage.setItem(LS_KEY, JSON.stringify(obj)); }catch(e){}
+    }
+    function setTheme(mode){ // 'auto' | 'dark' | 'light'
+      document.documentElement.setAttribute('data-theme', mode);
+      localStorage.setItem(THEME_KEY, mode);
+      const label = document.getElementById('themeLabel');
+      const icon = document.getElementById('themeIcon');
+      label.textContent = mode[0].toUpperCase()+mode.slice(1);
+      icon.innerHTML =
+        mode === 'dark'
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-width="1.5"/></svg>'
+          : mode === 'light'
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4" stroke-width="1.5"/><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="1.5"/></svg>'
+          : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M3 12h2M19 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke-width="1.5"/></svg>';
+    }
+    // init theme
+    setTheme(localStorage.getItem(THEME_KEY) || 'auto');
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const cur = localStorage.getItem(THEME_KEY) || 'auto';
+      setTheme(cur === 'auto' ? 'dark' : cur === 'dark' ? 'light' : 'auto');
+    });
 
-function computeMatches(pasted,maps){
-  const matches=new Map(), ambiguous=[], unmatched=[];
-  pasted.forEach(item=>{
-    const k=keyFromDisplay(item.raw);
-    // 1) exact display-key (rare for English-only input, but keep it)
-    if(maps.byKey.has(k) && !maps.dupKeys.has(k)){ matches.set(maps.byKey.get(k).index,item.score); return; }
+    /* ===================== Normalization helpers ===================== */
+    function tidy(s){ return (s||'').replace(/\s+/g,' ').replace(/\s*,\s*$/,'').trim(); }
+    function tc(s){ return s ? s.replace(/\S+/g, w=>w[0].toUpperCase()+w.slice(1).toLowerCase()) : s; }
+    function slug(s){ return (s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
 
-    // 2) english-only matching
-    const e=engFromFreeText(item.raw);
-    if(e && maps.byEng.has(e)){
-      const idxs=maps.byEng.get(e);
-      if(idxs.length===1){ matches.set(idxs[0], item.score); return; }
-      // ambiguous (two+ students with same English name)
-      const candidates=idxs.map(i=>({index:i, display:SUBJECT.roster[i].display, studentId:SUBJECT.roster[i].studentId}));
-      ambiguous.push({name:item.raw, score:item.score, candidates}); return;
+    // Parse "Li, Xiaoduan "Minato"", or "Minato Li", or "Minato"
+    function normalizeStudent(display){
+      const d = tidy(display);
+      // Pull quoted English name if present
+      const q = d.match(/["“](.*?)["”]/);
+      const english = q ? tc(q[1].trim()) : null;
+
+      // Strip the quoted part for family/given extraction
+      const m = d.replace(/["“].*$/,'').trim();
+
+      let family=null, given=null;
+      if(m.includes(',')){
+        const parts = m.split(',').map(s=>s.trim()).filter(Boolean);
+        family = parts[0] || null;
+        given  = parts[1] || null;
+        if(!english && parts.length>=3 && /^[A-Za-z][A-Za-z .'-]*$/.test(parts[2])) {
+          // Sometimes English name appears as third comma part
+          // ex: Li, Xiaoduan, Minato
+          english = tc(parts[2]);
+        }
+      }else if(/\s/.test(m)){
+        const p = m.split(/\s+/);
+        family = p.pop() || null;
+        given  = p.join(' ') || null;
+      }else{
+        // single token; treat as English nickname if no better info
+        family = null; given = null;
+      }
+
+      // Keys (multiple for robustness)
+      const keys = new Set();
+      const kEnglish = slug(english);
+      const kFamilyGiven = slug((family||'')+(given||''));
+      const kFull = slug((family||'')+(given||'')+(english||''));
+      if(kEnglish) keys.add(kEnglish);
+      if(kFamilyGiven) keys.add(kFamilyGiven);
+      if(kFull) keys.add(kFull);
+
+      // Also add fallback: just slug of everything stripped
+      keys.add(slug(d));
+
+      return {
+        display: d,
+        english,
+        family,
+        given,
+        key: kFull || kEnglish || kFamilyGiven || slug(d),
+        keys: Array.from(keys)
+      };
     }
 
-    // 3) unmatched
-    unmatched.push({name:item.raw, score:item.score});
-  });
-  return {matches, ambiguous, unmatched};
-}
+    /* ===================== Subjects & roster ===================== */
+    function renderSubjectChips(list){
+      const bar = document.getElementById('subjectChips');
+      bar.innerHTML = '';
+      list.forEach(s => {
+        const b = document.createElement('button');
+        b.className = 'chip';
+        b.textContent = s.name;
+        b.dataset.sid = s.id;
+        if(s.id === state.subjectId) b.classList.add('active');
+        b.onclick = () => selectSubject(s.id);
+        bar.appendChild(b);
+      });
+    }
+    function selectSubject(id){
+      state.subjectId = id;
+      const subj = state.subjects.find(s=>s.id===id);
+      if(!subj) return;
 
-/* ====== AUTOFILL CODE ====== */
-function makeAutofillCode(matches){
-  const idMap={}, keyMap={};
-  SUBJECT.roster.forEach((s,idx)=>{
-    const score=matches.get(idx)??''; if(!score) return;
-    if(s.studentId) idMap[String(s.studentId)]=score; else keyMap[nameKey(s.family,s.given,s.english)]=score;
-  });
+      // Normalize roster; filter Quick fill artifacts
+      const roster = (subj.roster||[])
+        .filter(r => !/quick\s*fill/i.test(r.display||r.given||''))
+        .map(r => normalizeStudent(r.display || `${r.given||''} ${r.family||''} ${r.english?('"'+r.english+'"'):''}`.trim()));
 
-  const code=`(function(){
-  const idMap=${JSON.stringify(idMap)};
-  const keyMap=${JSON.stringify(keyMap)};
-  const rows=Array.from(document.querySelectorAll('td.gradebookstudentname, td.student-name')).map(td=>td.closest('tr')).filter(Boolean);
-  let filled=0,seen=0,unmatched=0;
+      state.roster = roster;
+      renderSubjectChips(state.subjects);
+      renderRosterList();
+      compute();
+    }
+    function renderRosterList(){
+      const list = document.getElementById('rosterList');
+      list.innerHTML = '';
+      state.roster.forEach((r, idx) => {
+        const li = document.createElement('div');
+        li.className = 'row';
+        li.innerHTML = `<div class="nm">${r.display}</div>
+                        <div class="en">${r.english ? r.english : '&nbsp;'}</div>`;
+        list.appendChild(li);
+      });
+    }
 
-  function tidy(s){return (s||'').replace(/\\s+/g,' ').replace(/\\s*,\\s*$/,'').trim();}
-  function tc(s){return s?s.replace(/\\S+/g,w=>w[0].toUpperCase()+w.slice(1).toLowerCase()):s;}
+    /* ===================== Import / cache / manual ===================== */
+    document.getElementById('jsonFile').addEventListener('change', async (e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      const txt = await file.text();
+      let data = null;
+      try{ data = JSON.parse(txt); }catch(e){ alert('Invalid JSON'); return; }
+      if(!data || !Array.isArray(data.subjects)){ alert('JSON missing .subjects'); return; }
+      state.subjects = data.subjects.map(s=>({
+        id: s.id, name: s.name, sourceUrl: s.sourceUrl, roster: s.roster
+      }));
+      saveCache({ generatedAt: new Date().toISOString(), host: data.host||location.host, url: data.url||'', subjects: state.subjects });
+      renderSubjectChips(state.subjects);
+      if(state.subjects[0]) selectSubject(state.subjects[0].id);
+    });
+
+    document.getElementById('useCache').addEventListener('click', ()=>{
+      const c = loadCache();
+      if(!c){ alert('No cache found'); return; }
+      state.subjects = c.subjects || [];
+      renderSubjectChips(state.subjects);
+      const first = state.subjects[0];
+      if(first) selectSubject(first.id);
+      const mt = localStorage.getItem(MANUAL_TEXT_KEY);
+      if(mt) document.getElementById('manualText').value = mt;
+    });
+
+    document.getElementById('clearCache').addEventListener('click', ()=>{
+      localStorage.removeItem(LS_KEY);
+      // keep manual text unless you want to wipe it too — you asked to keep cache, so we keep it
+      state.subjects = []; state.subjectId = null; state.roster = [];
+      renderSubjectChips([]); document.getElementById('rosterList').innerHTML = '';
+      alert('Cache cleared (manual text preserved).');
+    });
+
+    // Manual input UI
+    const manualBtn = document.getElementById('manualBtn');
+    const manualPane = document.getElementById('manualPane');
+    const rosterPane = document.getElementById('rosterPane');
+    manualBtn.addEventListener('click', ()=>{
+      rosterPane.hidden = true; manualPane.hidden = false;
+      const last = localStorage.getItem(MANUAL_TEXT_KEY);
+      if(last) document.getElementById('manualText').value = last;
+      else document.getElementById('manualText').focus();
+    });
+    document.getElementById('manualCancel').addEventListener('click', ()=>{
+      manualPane.hidden = true; rosterPane.hidden = false;
+    });
+    document.getElementById('manualSave').addEventListener('click', ()=>{
+      const raw = document.getElementById('manualText').value.trim();
+      if(!raw){ manualPane.hidden=true; rosterPane.hidden=false; return; }
+      localStorage.setItem(MANUAL_TEXT_KEY, raw); // persists for next time
+      const lines = raw.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+      const roster = lines.map(display => ({ display }));
+
+      const now = new Date();
+      const id = 'manual_' + now.toISOString().replace(/[^0-9]/g,'').slice(0,14);
+      const subj = { id, name: 'Manual roster ('+now.toLocaleString()+')', sourceUrl:'#manual', roster };
+
+      // attach + cache with other subjects
+      state.subjects = (state.subjects||[]);
+      state.subjects.unshift(subj);
+      const cached = loadCache();
+      if(cached){
+        cached.subjects = state.subjects;
+        cached.generatedAt = cached.generatedAt || now.toISOString();
+        saveCache(cached);
+      }else{
+        saveCache({ generatedAt: now.toISOString(), host:'manual', url:'#', subjects: state.subjects });
+      }
+
+      manualPane.hidden = true; rosterPane.hidden = false;
+      renderSubjectChips(state.subjects);
+      selectSubject(id);
+    });
+
+    /* ===================== Paste parsing & matching ===================== */
+    document.getElementById('pasteBox').addEventListener('input', debounce(()=> compute(), 100));
+
+    // Accept "Name,Score" or "Name ... 88" (last number wins)
+    function parsePaste(text){
+      const lines = text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+      const out = [];
+      for(const line of lines){
+        const nums = line.match(/(-?\d+(?:\.\d+)?)(?!.*-?\d)/); // last number
+        if(!nums){ out.push({ raw: line, score: '', key: slug(line) }); continue; }
+        const score = nums[1];
+        const name = tidy(line.slice(0, nums.index).replace(/[,;\t]+$/,''));
+        const norm = normalizeStudent(name);
+        // prefer english-only key but keep full key as fallback
+        const key = norm.key;
+        out.push({ raw: name, score: score, key, keys: norm.keys });
+      }
+      return out;
+    }
+
+    function buildK2RosterIndex(roster){
+      const map = new Map(); // key -> array of indices
+      roster.forEach((r, idx)=>{
+        r.keys.forEach(k=>{
+          if(!k) return;
+          if(!map.has(k)) map.set(k, []);
+          map.get(k).push(idx);
+        });
+      });
+      return map;
+    }
+
+    function compute(){
+      const pasted = parsePaste(document.getElementById('pasteBox').value);
+      const k2idx = buildK2RosterIndex(state.roster);
+
+      // Resolve matches
+      const assigned = new Array(state.roster.length).fill('');
+      const ambiguous = [];
+      const unmatched = [];
+
+      for(const p of pasted){
+        // try each candidate key in order
+        let foundIdx = null;
+        for(const k of (p.keys || [p.key])){
+          const hits = k2idx.get(k);
+          if(hits && hits.length === 1){ foundIdx = hits[0]; break; }
+          if(hits && hits.length > 1){
+            ambiguous.push({ name: p.raw, score: p.score, candidates: hits.map(i=>state.roster[i].display) });
+            foundIdx = null; break;
+          }
+        }
+        if(foundIdx===null){
+          // no single match — mark unmatched
+          if(!(p.keys || [p.key]).some(k=>k2idx.has(k))) unmatched.push({ name:p.raw, score:p.score });
+        }else{
+          assigned[foundIdx] = String(p.score);
+        }
+      }
+
+      state.scoreMap = {}; // reset map by normalized key for generator
+      state.roster.forEach((r, i)=>{ state.scoreMap[r.key] = assigned[i]; });
+
+      // CSV (two columns; blank when no score)
+      const rows = state.roster.map((r,i)=> `"${r.display.replace(/"/g,'""')}",${assigned[i]}`);
+      state.csv = ['Name,Score', ...rows].join('\n');
+      document.getElementById('csvOut').textContent = state.csv;
+
+      // Chips & detail
+      const matches = assigned.filter(v=>v!=='').length;
+      document.getElementById('countMatch').textContent = `✔ Matches ${matches}/${state.roster.length}`;
+      document.getElementById('countAmb').textContent = `❓ Ambiguous ${ambiguous.length}`;
+      document.getElementById('countUnk').textContent = `⛔ Unmatched ${unmatched.length}`;
+
+      const lines = [];
+      if(ambiguous.length){
+        lines.push('Ambiguous:');
+        ambiguous.forEach(a=> lines.push(`- ${a.name} → ${a.candidates.join(' | ')}`));
+      }
+      if(unmatched.length){
+        lines.push((ambiguous.length?'':'') + (ambiguous.length?'\n':'') + 'Unmatched:');
+        unmatched.forEach(u=> lines.push(`- ${u.name} (${u.score})`));
+      }
+      document.getElementById('issueBody').textContent = lines.join('\n');
+    }
+
+    /* ===================== Buttons: organize, TOEFL, CSV ===================== */
+    document.getElementById('btnOrganize').addEventListener('click', async (e)=>{
+      state.lastBuildWasToefl = false;
+      const code = buildAutofillScript(state.scoreMap, /*includeIds*/ false);
+      await copyToClipboard(code);
+      showCopied(e.target);
+    });
+
+    document.getElementById('btnToefl').addEventListener('click', async (e)=>{
+      state.lastBuildWasToefl = true;
+      // Convert current assigned scores if they look like TOEFL sub-scores (0–30)
+      const conv = {};
+      for(const r of state.roster){
+        const v = state.scoreMap[r.key];
+        if(v === '' || isNaN(+v)) { conv[r.key] = ''; continue; }
+        const n = Math.max(0, Math.min(30, +v));
+        const gpa = Math.round(55 + (n/30)*45); // linear 0–30 → 55–100
+        conv[r.key] = String(gpa);
+      }
+      const code = buildAutofillScript(conv, /*includeIds*/ false);
+      await copyToClipboard(code);
+      showCopied(e.target);
+      // update CSV preview to reflect converted values (optional but helpful)
+      const rows = state.roster.map(r => `"${r.display.replace(/"/g,'""')}",${conv[r.key]||''}`);
+      state.csv = ['Name,Score', ...rows].join('\n');
+      document.getElementById('csvOut').textContent = state.csv;
+    });
+
+    document.getElementById('btnCsv').addEventListener('click', ()=>{
+      const subj = state.subjects.find(s => s.id===state.subjectId);
+      const name = subj ? subj.name : 'roster';
+      const stamp = dtStamp();
+      const fname = `${slug(name)||'roster'}_${stamp}.csv`;
+      downloadFile(fname, state.csv);
+    });
+
+    /* ===================== Autofill generator (Assignments page) ===================== */
+    // Generates a paste-into-console script that works on /assignments/ page
+    function buildAutofillScript(keyMap, includeIds){
+      // idMap is optional (we don't have STU ids in JSON; leaving empty is fine)
+      const idMap = {};
+      const js = `(function(){
+  const keyMap = ${JSON.stringify(keyMap)};
+  const idMap  = ${JSON.stringify(includeIds? idMap : {})};
+
+  function tidy(s){ return (s||'').replace(/\\s+/g,' ').replace(/\\s*,\\s*$/,'').trim(); }
+  function tc(s){ return s?s.replace(/\\S+/g, w=>w[0].toUpperCase()+w.slice(1).toLowerCase()):s; }
+  function slug(s){ return (s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+
   function kFromDisplay(dr){
-    const d=tidy(dr); const q=d.match(/["“](.*?)["”]/); let e=q?tc(q[1].trim()):null;
-    const m=d.replace(/["“].*$/,'').trim(); let f=null,g=null;
-    if(m.includes(',')){[f,g]=m.split(',',2).map(s=>s.trim());}else{const p=m.split(/\\s+/);f=p.pop()||null;g=p.join(' ')||null;}
-    if(!e && (m.split(',').length===3)){const p3=m.split(',').map(s=>s.trim()); if(/^[A-Za-z][A-Za-z .'-]*$/.test(p3[2])) e=tc(p3[2]);}
-    return (''+(f||'')+(g||'')+(e||'')).toLowerCase().replace(/[^a-z0-9]/g,'');
+    const d = tidy(dr);
+    const q = d.match(/[\"“](.*?)[\"”]/);
+    let english = q ? tc(q[1].trim()) : null;
+    const m = d.replace(/[\"“].*$/,'').trim();
+    let family=null, given=null;
+    if(m.includes(',')){
+      const parts = m.split(',').map(s=>s.trim()).filter(Boolean);
+      family = parts[0]||null; given = parts[1]||null;
+      if(!english && parts.length>=3 && /^[A-Za-z][A-Za-z .'-]*$/.test(parts[2])) english = tc(parts[2]);
+    }else if(/\\s/.test(m)){
+      const p = m.split(/\\s+/); family = p.pop()||null; given = p.join(' ')||null;
+    }
+    const keys = new Set();
+    const kEnglish = slug(english);
+    const kFamilyGiven = slug((family||'')+(given||''));
+    const kFull = slug((family||'')+(given||'')+(english||''));
+    if(kEnglish) keys.add(kEnglish);
+    if(kFamilyGiven) keys.add(kFamilyGiven);
+    if(kFull) keys.add(kFull);
+    keys.add(slug(d));
+    return Array.from(keys);
   }
+
+  const allRows = Array.from(document.querySelectorAll('table.table tbody tr'));
+  const rows = allRows.filter(tr => tr.querySelector('input[name$="-grade"]'));
+  let filled=0, matched=0, unmatched=0;
 
   for(const tr of rows){
-    const a=tr.querySelector('a[href*="/st/"]'); const href=a&&a.getAttribute('href')||''; const m=href.match(/\\/st\\/(\\d+)\\//); const sid=m?m[1]:null;
-    const disp=a?a.textContent.trim():(tr.querySelector('td')?.textContent.trim()||'');
-    let input=tr.querySelector('input[type="text"][name*="-grade"]')||tr.querySelector('input[type="text"]');
-    let val='';
-    if(sid && (sid in idMap)){ val=idMap[sid]; seen++; }
-    else{ const k=kFromDisplay(disp); if(k && (k in keyMap)){ val=keyMap[k]; seen++; } }
-    if(input && val!==''){ input.value=val; input.dispatchEvent(new Event('input',{bubbles:true})); filled++; }
-    else if(sid||disp){ unmatched++; }
+    const a = tr.querySelector('td a[href*="/gp/st/"]');
+    const href = a?.getAttribute('href') || '';
+    const sidMatch = href.match(/\\/STU(\\d+)\\//i);
+    const sid = sidMatch ? sidMatch[1] : null;
+    const disp = tidy(a?.querySelector('b')?.textContent || a?.textContent || '');
+
+    const input = tr.querySelector('input[name$="-grade"]') || tr.querySelector('input[type="text"]');
+    if(!input) continue;
+
+    let val = '';
+    if(sid && (sid in idMap)){ val = String(idMap[sid]); }
+    else{
+      const keys = kFromDisplay(disp);
+      for(const k of keys){ if(k in keyMap){ val = String(keyMap[k]); break; } }
+    }
+
+    if(val !== ''){
+      input.value = val;
+      input.dispatchEvent(new Event('input',{bubbles:true}));
+      input.dispatchEvent(new Event('change',{bubbles:true}));
+      matched++; filled++;
+    }else{
+      unmatched++;
+    }
   }
-  console.log('[ThinkWave Autofill] rows:',rows.length,'matched:',seen,'filled:',filled,'unmatched:',unmatched);
-  if(seen/Math.max(rows.length,1)<0.5){ console.warn('⚠️ Low match ratio — is this the correct subject page? Aborting.'); }
+  console.log('[ThinkWave Autofill] Rows:', rows.length, 'matched:', matched, 'filled:', filled, 'unmatched:', unmatched);
+  if(matched===0){ console.warn('No matches — check names or page.'); }
 })();`;
+      return js;
+    }
 
-  LAST_AUTOFILL=code; copy(code);
-  return code;
-}
+    /* ===================== Utils ===================== */
+    async function copyToClipboard(text){
+      try{
+        await navigator.clipboard.writeText(text);
+      }catch(e){
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      }
+    }
+    function showCopied(el){
+      const n = document.createElement('span');
+      n.className = 'copied'; n.textContent = 'Copied';
+      el.after(n);
+      setTimeout(()=> n.remove(), 1400);
+    }
+    function dtStamp(){
+      const d = new Date();
+      const pad = n => String(n).padStart(2,'0');
+      return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}_${pad(d.getHours())}-${pad(d.getMinutes())}`;
+    }
+    function downloadFile(name, text){
+      const blob = new Blob([text], {type:'text/csv;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = name; a.click();
+      setTimeout(()=> URL.revokeObjectURL(url), 500);
+    }
+    function debounce(fn, ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn.apply(null,a), ms); }; }
 
-/* ====== ACTIONS ====== */
-function buildOrderedPairs(matches){
-  const pairs=SUBJECT.roster.map(s=>[s.display||`${s.family}, ${s.given}`,'']); // blanks for missing
-  matches.forEach((score,idx)=>{pairs[idx][1]=score;});
-  return pairs;
-}
-function runAction({convert=false, flagEl}={}){
-  if(!SUBJECT){alert('Choose a subject first.');return;}
-  const roster=SUBJECT.roster||[];
-  const maps=buildMaps(roster);
-  const pasted=parsePasted(elPaste.value);
-  if(convert){ pasted.forEach(p=>{ if(p.score!=='') p.score=toeflToGPA(p.score)||''; }); }
-
-  const {matches,ambiguous,unmatched}=computeMatches(pasted,maps);
-  const pairs=buildOrderedPairs(matches);
-  elCSV.value=csvFromPairs(pairs);
-
-  // status chips
-  elStatus.innerHTML='';
-  elStatus.appendChild(badge('good',`✅ Matches ${matches.size}/${pasted.length}`));
-  elStatus.appendChild(badge(ambiguous.length?'warn':'',`⚠️ Ambiguous ${ambiguous.length}`,()=>{
-    const list=ambiguous.map(a=>`• ${a.name} → ${a.candidates.map(c=>c.display).join(' / ')}`).join('\n'); alert(list||'None');
-  }));
-  elStatus.appendChild(badge(unmatched.length?'bad':'',`❓ Unmatched ${unmatched.length}`,()=>{
-    const list=unmatched.map(u=>`• ${u.name}`).join('\n'); alert(list||'None');
-  }));
-
-  makeAutofillCode(matches); // auto-copy
-  if(flagEl){flagEl.classList.add('show'); setTimeout(()=>flagEl.classList.remove('show'),1200);}
-}
-
-/* ====== HOOKS ====== */
-qs('#file').addEventListener('change', async e=>{
-  const f=e.target.files[0]; if(!f) return;
-  try{
-    const obj=JSON.parse(await f.text());
-    // clean
-    obj.subjects=(obj.subjects||[]).map(s=>{
-      s.roster=(s.roster||[])
-        .filter(r=>!/^Quick fill:?$/i.test(r.display||''))
-        .map(r=>{
-          const display=tidyDisplay(r.display||'');
-          const k=r.key || nameKey(r.family,r.given,r.english);
-          return {display, english:r.english?titleCase(r.english):r.english, family:r.family||null, given:r.given||null, key:k, studentId:r.studentId||null};
-        });
-      return s;
-    });
-    DATA=obj; localStorage.setItem(KEY,JSON.stringify(obj)); renderSubjects(); renderRoster(); toast('Imported roster JSON');
-  }catch(err){ alert('Import error: '+err.message); }
-});
-qs('#useLocal').addEventListener('click', ()=>{
-  try{ const obj=JSON.parse(localStorage.getItem(KEY)||'null'); if(!obj) return alert('No cached data.'); DATA=obj; renderSubjects(); renderRoster(); toast('Loaded cached data'); }
-  catch{ alert('Cache read error'); }
-});
-qs('#clearLocal').addEventListener('click', ()=>{ localStorage.removeItem(KEY); DATA=null; SUBJECT=null; elSubjects.innerHTML=''; renderRoster(); toast('Cache cleared'); });
-
-qs('#organizeBtn').addEventListener('click', ()=>runAction({convert:false, flagEl:flagOrg}));
-qs('#convertBtn').addEventListener('click', ()=>runAction({convert:true, flagEl:flagConv}));
-
-qs('#downloadCsv').addEventListener('click', ()=>download(elCSV.value||'Name,Score\n', `thinkwave_scores_${nowStamp()}.csv`));
-</script>
+    /* ===================== Boot ===================== */
+    // If there’s cached subjects, load them automatically for convenience
+    (function boot(){
+      const c = loadCache();
+      if(c && Array.isArray(c.subjects) && c.subjects.length){
+        state.subjects = c.subjects;
+        renderSubjectChips(state.subjects);
+        selectSubject(state.subjects[0].id);
+      }
+      const mt = localStorage.getItem(MANUAL_TEXT_KEY);
+      if(mt) document.getElementById('manualText').value = mt;
+    })();
+  </script>
 </body>
 </html>
