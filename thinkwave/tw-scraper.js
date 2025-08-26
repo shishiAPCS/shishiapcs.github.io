@@ -1,4 +1,3 @@
-<script>
 // == ThinkWave Roster Scraper v1.0 ==
 // One click on a ThinkWave gradebook page → fetch all subjects → parse each page → download one JSON (and copy to clipboard).
 
@@ -185,4 +184,3 @@
   localStorage.setItem('tw_rosters_v1', JSON.stringify(out));
   ui.finish('All subjects processed.');
 })();
-</script>
