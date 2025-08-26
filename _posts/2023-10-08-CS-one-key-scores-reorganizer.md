@@ -5,6 +5,34 @@ layout: post
 categories: media
 ---
 
+**Update (2025-08-26)** — What’s new compared with v1 · **[Open the new tool (RosterFlow — ThinkWave Organizer)](https://shishiapcs.github.io/thinkwave)**
+2025-08-26 更新 — · **[点击打开新工具（RosterFlow — ThinkWave Organizer）](https://shishiapcs.github.io/thinkwave)**
+
+* **Bookmarklet export of ThinkWave data.** Use a browser bookmarklet to download **all classes and student lists** from ThinkWave into one JSON file.
+  **书签一键导出 ThinkWave 数据。** 通过浏览器书签把 **所有班级与学生名单** 一次性导出为 JSON 文件。
+
+* **One-click import & “once per semester” workflow.** Import that JSON into the site with one click; the data is kept locally and reused all term. Only re-import if names/order actually change.
+  **一键导入所有班级与学生数据。** 把 JSON 一键导入网站，数据会保存在本地；只有当姓名或顺序改变时才需要重新导入。
+
+* **Stable autofill matching by name/ID (not by row index).** Scores now match to students using **names or student IDs**, so autofill remains correct even if page order changes or some rows are hidden.
+  **用姓名/学号稳定匹配（不再依赖行序号）。** 现在通过 **姓名或学号** 来匹配成绩，页面顺序变动或有行隐藏时，自动填分依然准确。
+
+* **More robust name recognition.** Matching is **case-insensitive**, ignores extra spaces/punctuation, **removes accents/diacritics**, and understands common formats:
+  – `Last, First`, `First Last`
+  – quoted nicknames like `Li, Xiaoduan "Joe"`
+  – initials and compact forms like `Tom Z` / `TomZ`
+  **更强的姓名识别。** 匹配 **不区分大小写**、忽略多余空格与标点、**去除重音/变音符号**，并支持常见写法：
+  – `姓, 名`、`名 姓`
+  – 带引号昵称如 `Li, Xiaoduan "Joe"`
+  – 首字母与紧凑写法如 `Tom Z` / `TomZ`
+
+* **CSV preview & download.** After organizing/matching, the tool shows a clean **CSV preview** and lets you **download** it directly.
+  **CSV 预览与下载。** 组织/匹配后可直接查看 **CSV 预览** 并 **下载** 文件。
+
+* **Simpler copy-paste autofill.** The tool generates a single snippet for Chrome Console that fills ThinkWave using the name/ID matching above.
+  **更简洁的复制粘贴自动填分，如果代码复制成功，底部有提示弹窗。**
+
+
 <div id="wrapper">
     <!-- Collapsible Tutorial Section -->
         <div id="tutorial-section">
