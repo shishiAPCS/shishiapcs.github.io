@@ -5,32 +5,84 @@ layout: post
 categories: media
 ---
 
-**Update (2025-08-26)** — What’s new compared with v1 · **[Open the new tool (RosterFlow — ThinkWave Organizer)](https://shishiapcs.github.io/thinkwave)**
-2025-08-26 更新 — · **[点击打开新工具（RosterFlow — ThinkWave Organizer）](https://shishiapcs.github.io/thinkwave)**
+**更新说明（2025-08-27）** — 工具地址：**[shishiapcs.github.io/thinkwave](https://shishiapcs.github.io/thinkwave/)**
 
-* **Bookmarklet export of ThinkWave data.** Use a browser bookmarklet to download **all classes and student lists** from ThinkWave into one JSON file.
-  **书签一键导出 ThinkWave 数据。** 通过浏览器书签把 **所有班级与学生名单** 一次性导出为 JSON 文件。
+0. **自动明暗主题**：新增自动适配浅/深色主题，并提供手动切换，整体界面更干净易读。
+1. **抓取脚本托管到 GitHub**：把用于获取 ThinkWave 数据的 JS 抓取脚本（bookmarklet 书签脚本）放到 GitHub，便于长期维护与更新。
+2. **一键获取全校班级与学生**：用书签脚本在 ThinkWave 页面一键抓取所有班级与学生名单，形成标准 JSON 数据。
+3. **一键导入到工具**：抓取到的 JSON 可一次性导入到网站；只要学期内学生名单和顺序不变，通常整个学期只需导入一次。
+4. **更稳的自动填写逻辑**：不再靠“序号/行号”去对齐，而是根据**姓名关键字集合**匹配（对大小写、空格、标点、变音符不敏感），示例：
 
-* **One-click import & “once per semester” workflow.** Import that JSON into the site with one click; the data is kept locally and reused all term. Only re-import if names/order actually change.
-  **一键导入所有班级与学生数据。** 把 JSON 一键导入网站，数据会保存在本地；只有当姓名或顺序改变时才需要重新导入。
+   * `Tom Z` 能匹配：`Tom Z`、`TomZ`、`Tom Zhang` 等。
+     这样即使页面排序变化或夹杂其他行，仍能稳定找到对应学生并填入分数。
+5. **更宽松的姓名匹配**：
 
-* **Stable autofill matching by name/ID (not by row index).** Scores now match to students using **names or student IDs**, so autofill remains correct even if page order changes or some rows are hidden.
-  **用姓名/学号稳定匹配（不再依赖行序号）。** 现在通过 **姓名或学号** 来匹配成绩，页面顺序变动或有行隐藏时，自动填分依然准确。
+   * **大小写不敏感**（`joe` = `JOE`）；
+   * **去除空格/标点/引号**（支持 `“昵称”`、逗号分隔的“姓, 名”格式）；
+   * **支持缩写/首字母**（如 `Tom Z`、`TomZ`）；
+   * **支持多种组合**（英文名、昵称、名+姓、姓+名、名+姓首字母等多种键）。
+6. **导出 CSV**：组织好的“姓名,分数”可以直接预览与**下载 CSV**，便于归档或导入到其他系统。
 
-* **More robust name recognition.** Matching is **case-insensitive**, ignores extra spaces/punctuation, **removes accents/diacritics**, and understands common formats:
-  – `Last, First`, `First Last`
-  – quoted nicknames like `Li, Xiaoduan "Joe"`
-  – initials and compact forms like `Tom Z` / `TomZ`
-  **更强的姓名识别。** 匹配 **不区分大小写**、忽略多余空格与标点、**去除重音/变音符号**，并支持常见写法：
-  – `姓, 名`、`名 姓`
-  – 带引号昵称如 `Li, Xiaoduan "Joe"`
-  – 首字母与紧凑写法如 `Tom Z` / `TomZ`
+---
 
-* **CSV preview & download.** After organizing/matching, the tool shows a clean **CSV preview** and lets you **download** it directly.
-  **CSV 预览与下载。** 组织/匹配后可直接查看 **CSV 预览** 并 **下载** 文件。
+**Update Notes (2025-08-27)** — Tool: **[RosterFlow — ThinkWave Organizer](https://shishiapcs.github.io/thinkwave/)**
 
-* **Simpler copy-paste autofill.** The tool generates a single snippet for Chrome Console that fills ThinkWave using the name/ID matching above.
-  **更简洁的复制粘贴自动填分，如果代码复制成功，底部有提示弹窗。**
+0. **Auto light/dark theme**: The UI now adapts to your system theme with a manual toggle for a cleaner, more readable layout.
+1. **Script on GitHub**: The ThinkWave scraping JS (bookmarklet) is hosted on GitHub for easy access and maintenance.
+2. **One-click data grab**: Use the bookmarklet on ThinkWave to download **all classes and students** into a standard JSON file.
+3. **One-click import**: Import that JSON into the tool once; unless the roster order changes, you typically only need to import **once per semester**.
+4. **More robust autofill**: Instead of relying on row positions, the tool matches by a **set of name keys** (case/space/punctuation/diacritics insensitive). Examples:
+
+   * `Tom Z` matches `Tom Z`, `TomZ`, `Tom Zhang`, etc.
+     This stays reliable even if the page order changes or extra rows appear.
+5. **Flexible name matching**:
+
+   * **Case-insensitive** (`joe` = `JOE`),
+   * **Ignores spaces/punctuation/quotes** (supports nicknames in quotes and “Last, First” formats),
+   * **Initials and concatenations** (`Tom Z`, `TomZ`),
+   * **Multiple combinations** (English name, nickname, given+family, family+given, given+family-initial, etc.).
+6. **CSV export**: Preview and **download CSV** (“Name,Score”) for records or downstream tools.
+
+
+**书签脚本（Bookmarklet）简明使用说明**
+
+1. 复制下面整段代码：
+
+```javascript
+javascript:(function(){var s=document.createElement('script');s.src='https://shishiapcs.github.io/thinkwave/tw-scraper.js?ts='+Date.now();document.body.appendChild(s);})();
+```
+
+2. 在浏览器里新建书签：
+
+* Chrome/Edge：在书签栏空白处点右键 → **添加页面**（或“添加到书签”）。
+* 名称随意（如：**TW抓取**），把上面的代码粘贴到 **URL/网址** 输入框 → **保存**。
+
+3. 打开 **ThinkWave** 的班级/成绩页面。
+4. 点击刚才的书签 **TW抓取** → 按提示保存生成的 **JSON** 文件。
+5. 打开工具网站 **[https://shishiapcs.github.io/thinkwave/](https://shishiapcs.github.io/thinkwave/)** → 点击 **Import JSON** 导入即可。
+
+小提示：若浏览器拦截下载/弹窗，请允许本页面的下载或弹窗。
+
+---
+
+**Bookmarklet — Super Short How-To**
+
+1. Copy the code below:
+
+```javascript
+javascript:(function(){var s=document.createElement('script');s.src='https://shishiapcs.github.io/thinkwave/tw-scraper.js?ts='+Date.now();document.body.appendChild(s);})();
+```
+
+2. Create a new bookmark:
+
+* Chrome/Edge: right-click the bookmarks bar → **Add page**.
+* Name it (e.g., **TW Scraper**), paste the code into the **URL** field → **Save**.
+
+3. Go to your **ThinkWave** class/gradebook page.
+4. Click the **TW Scraper** bookmark → save the generated **JSON** file.
+5. Open **[https://shishiapcs.github.io/thinkwave/](https://shishiapcs.github.io/thinkwave/)** → click **Import JSON** to load it.
+
+Tip: If the browser blocks downloads/pop-ups, allow them for this page.
 
 
 <div id="wrapper">
