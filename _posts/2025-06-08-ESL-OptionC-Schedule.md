@@ -32,6 +32,9 @@ categories: media
 * 周四：写作练习
   *Thursday: Writing Practice*
 
+* 周五：复习
+  *Friday: Review*
+
 ✅ 所有任务将于每周一前发布，无需老师重复提醒。
 ✅ *All tasks will be released before Monday. No extra reminders will be given.*
 
@@ -89,8 +92,8 @@ categories: media
 * 下课前最后3分钟，将记录纸交给当堂老师
   *Submit your A4 note sheet to the teacher in the last 3 minutes of class*
 
-* 所有笔记将由白老师集中检查，并于下周前反馈
-  *All notes will be reviewed by Teacher Bai and returned with feedback before next week*
+* 所有笔记将由白老师集中收集，计入成绩
+
 
 ---
 
@@ -104,27 +107,8 @@ categories: media
 * 使用 AI 工具进行语法纠错与语言优化
   *Use an AI tool to check grammar and improve language quality*
 
-* 整理内容后，用一页A4纸手写一份修改稿交给牟老师/冯老师，修改稿中需要写出自己的修改思路/识别常见语法错误/替换的词汇短语。
-  *Write out your revised version by hand and give it to Mr.Mou or Ms.Feng.*
-
-
-### 📘 补充任务：
-
-📘 *Additional Task:*
-
-* 完成后，请在课堂剩余时间练习：
-  *After submission, use the remaining class time to complete:*
-
-* 《English Grammar in Use》语法书中一页内容
-  *One page from the *English Grammar in Use* grammar book*
-
-* 在练习页面右上角写上练习日期和时间
-  *Write the date and time of your practice at the top right corner of the page*
-
-* 下课前最后10分钟，老师会展示答案，同学们需要用红笔核对答案，离开教室前展示给当堂老师
-  *In the last 10 minutes of class, the teacher will display the answers. Use a red pen to check your work and show it to the teacher before leaving.*
-
----
+* 整理内容后，用一页A4纸手写一份修改稿交给白老师，修改稿中需要写出自己的修改思路/识别常见语法错误/替换的词汇短语。
+  *Write out your revised version by hand and give it to Ms.Bai.*
 
 
 ## 🚫 课堂纪律要求
@@ -143,8 +127,8 @@ categories: media
   * 将立即通报主课老师
     *It will be immediately reported to the main subject teacher*
 
-  * 扣除一次参与分
-    *One participation point will be deducted*
+  * 根据情节扣除参与分
+    *Participation point will be deducted*
 
 * 对于敷衍完成任务、无笔记或格式不规范的情况：
   *If your notes are incomplete, missing, or poorly formatted:*
@@ -161,26 +145,20 @@ categories: media
 |------------|-----------------------------------------|-------------------------------------|
 | **参与分**  | 按时进入任务、认真参与、无违规行为                   | 玩游戏 / 分心 / 无记录 → 扣除一次参与分      |
 | **作业分**  | 精练完成、记录完整规范、格式清晰                    | 生词缺失 / 导图缺失 / 无标题 / 格式混乱 → 扣分 |
-| **语法练习** | 完成一页 English Grammar in Use，并写好时间标记 | 未完成或未写时间 → 扣除部分作业分            |
 
 | *Item*            | *Full Score Criteria*                                                  | *Deduction Details*                                                 |
 |-------------------|------------------------------------------------------------------------|----------------------------------------------------------------------|
 | **Participation** | On-time, focused, no violations                                        | Games / distractions / no notes → one participation point deducted  |
 | **Homework**      | Fully completed, well-organized notes                                  | Missing vocabulary / mind map / title / messy format → point deduction |
-| **Grammar**       | One full page of *English Grammar in Use*, with time marked            | Incomplete or missing date/time → partial deduction of task score   |
-
 
 ## ✅ 温馨提醒
 
 ✅ *Reminders*
 
-* 老师将在每周检查记录，并提供反馈
-  *Teachers will check all records weekly and provide feedback*
+* 老师将在每周检查记录，并在thinkwave计入成绩
+  *Teachers will check all records weekly*
 
-* 所有任务完成后会作为期末参与度与作业成绩的重要依据
-  *All completed tasks will count toward your final participation and homework grades*
-
-* 学习材料统一由老师安排，请妥善保管纸质笔记，不得丢失
-  *All learning materials are assigned by teachers—please keep your handwritten notes safe and organized*
+* 所有任务完成后会作为参与度与作业成绩的重要依据
+  *All completed tasks will count toward your participation and homework grades*
 
 
