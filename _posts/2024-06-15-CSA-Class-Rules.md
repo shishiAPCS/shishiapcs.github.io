@@ -1,17 +1,13 @@
 ---
-title: "APCSA 课堂规则"
+title: "APCS 课堂规则"
 mathjax: true
 layout: post
 categories: media
 ---
 
 
-# Class Rules for APCSA  
-# APCSA 课堂规则  
-
-<details>  
-<summary>点击查看课堂规则</summary>  
-<div markdown="1">  
+# Class Rules for APCS  
+# APCS 课堂规则  
 
 ## 1. Be Prepared  
 ## 一、课前准备  
@@ -62,7 +58,7 @@ categories: media
 ## 五、网络连接  
 
 - **Check Your Connection:** Always ensure you are connected to room 419's network.  
-  **连接网络：** 请确保连接到 419 教室的网络。<br>  
+  **连接网络：** 请确保连接到教室的网络。<br>  
 
 - **Turn Off VPN:** turn off any personal VPN.  
   **关闭 VPN：** 请关闭任何个人 VPN。<br>  
@@ -88,5 +84,3 @@ categories: media
 - **Monthly Refresh:** The board is refreshed monthly. If you have fewer than three signatures by the end of the month, you will not receive detention.  
   **每月更新：** 反思板每月清零，若当月签名次数少于三次，将不予惩戒。<br>  
 
-</div>  
-</details>  
