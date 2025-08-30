@@ -558,6 +558,11 @@ Let’s keep practicing, growing, and having fun together.
 </div>
 </div>
 
+---
+---
+
+# 托福口语
+
 ## Task 1
 
 ### 观点表达万能理由框架：
@@ -616,6 +621,102 @@ that can explain the definition)
 5. The example (specific information that can explain the topic
 & aspect)
 6. Conclusion
+
+---
+---
+
+# 雅思口语
+
+## Task 1 — Part 1（日常问答）
+
+**目标时长：** 15–30 秒（约 2–4 句）
+
+### 通用结构
+
+**直接回答 → 给出1个简短理由 → 补1个微型例子/细节**  
+（7分以上必须：：加入1个精确搭配或形容词，让表达更自然。）
+
+### 模板句
+
+**Yes/No/It depends.** I usually **\[do X\]** because **\[brief reason\]**. For example, **\[tiny example\]**.
+
+### 真实作答
+
+**Q:** *Do you prefer to study alone or with others?*  
+**A:** *I prefer studying alone. I can control the pace and take short breaks when I need them. For example, I usually review difficult chapters by myself before joining a group discussion.*
+
+### 语法与技能要点
+
+* **时态控制：** 一般现在时；必要时一般过去时引出过往习惯（*used to*）。
+* **衔接词：** *because, so, for example.*
+* **高频搭配（任选其一）：** *tight schedule, mental energy, short break, group discussion.*
+* **发音与语音：** 句重音落在关键信息词上（如 *prefer, alone, pace*）。
+
+---
+
+## Task 2 — Part 2（长时独白）
+
+**目标时长：** 90–120 秒（考官到时会打断）
+
+### 通用结构
+
+**1 句引入 → 2–3 个具体要点（人/时/地/事/如何）→ 感受或影响 → 1 句收束**  
+建议用轻量提示语：*firstly / then / after that / finally*  
+（7分以上必须：加入**对比/困难点**，自然拉长并展现复杂度。）
+
+### 模板句
+
+**Intro:** I’m going to talk about **\[topic\]**.  
+**Point A:** **\[who/when/where]** — **\[key detail\]**.  
+**Point B:** **\[what happened/how]** — **\[one example]**.  
+**Reaction:** It mattered to me because **\[feeling/lesson/impact]**.  
+**Wrap:** Overall, it was **\[short evaluative phrase]**.
+
+### 真实作答
+
+**Q:** *Describe a place where you like to relax.*  
+**A:** *I’m going to talk about a small riverside park near my apartment. I usually go there on Sunday mornings when the walking paths are almost empty. Firstly, there’s a quiet bench under a maple tree where I can read for half an hour. Then I take a slow walk along the water and listen to the birds; one morning I even saw a kingfisher. It matters to me because the place helps me reset after a busy week and think more clearly about upcoming tasks. In short, it’s a simple spot, but it gives me calm and focus.*
+
+### 语法与技能要点
+
+* **时态/体：** 一般过去时叙事；**过去进行时**营造场景；**现在完成时**表达持续影响（*has helped*）。
+* **复杂句：** 定语从句/让步从句（*which/although/even when*），因果（*so/therefore*）。
+* **描写词汇：** *riverside park, empty paths, slow walk, reset, calm, focus, kingfisher.*
+* **篇章与指代：** 用指代词保持连贯（*this place, that moment, it*）；适度使用顺序词。
+* **语音：** chunking，每句话自然停顿。
+
+---
+
+## Task 3 — Part 3（抽象讨论）
+
+**目标时长：** 30–60 秒（约 3–6 句；多问的复合题适当延长）
+
+### 通用结构
+
+**立场（直接回答）→ 理由1 → 理由2（可选）→ 例证/假设 → 小结**  
+（7分以上必须：加入**对比**或**条件句**，展示推理与假设能力。）
+
+### 模板句
+
+**Claim:** *Yes/No/I partly agree because…*  
+**Reason 1:** *One reason is…*  
+**Reason 2 (optional):** *Another reason is…*  
+**Example:** *For example / Take … for instance…*  
+**Wrap:** *So overall, …*
+
+### 真实作答
+
+**Q:** *Is it better for companies to allow employees to work from home?*  
+**A:** *I partly agree. One reason is flexibility—people can design a schedule that matches their energy peaks. Another reason is productivity for focused tasks, like coding or writing. For example, several teams in my city reported higher output after introducing hybrid days. However, if collaboration suffers or new hires lack mentoring, performance may drop. So overall, remote work is beneficial when companies set clear goals and keep regular in-person check-ins.*
+
+### 语法与技能要点
+
+* **论证语言：** 情态与弱化表达 *might, could, tend to, it’s likely that*；对比 *however, whereas*.
+* **复杂结构：** 条件句（*if collaboration suffers…*）、名词化（*productivity, collaboration, mentoring*）。
+* **抽象词汇：** *flexibility, energy peaks, focused tasks, hybrid days, output, check-ins.*
+* **连贯组织：** **Claim → Reasons → Example → Wrap**；连接词适量，避免过度堆砌。
+* **语音语调：** 对比处重读（*I **partly** agree… **However**…*），结尾下行收束。
+
 
 ---
 ---
