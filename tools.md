@@ -342,6 +342,7 @@ Format your response like this:
 
 ### 图片工具
 
+* [ASCII Art](https://folge.me/tools/image-to-ascii)
 * [在线图片编辑](https://www.befunky.com/create/photo-editor/)```免费，不用注册```
 * [360°全景图浏览器](https://renderstuff.com/tools/360-panorama-web-viewer/)
 * [EXIF 信息查看](https://www.pic2map.com/)
