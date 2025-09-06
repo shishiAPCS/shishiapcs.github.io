@@ -131,6 +131,8 @@
       <div class="rowctrls">
         <button class="btn" id="btnOrganize">Organize into Roster Order</button>
         <button class="btn tonal" id="btnToefl">Convert TOEFL → GPA (0–30 → 55–100)</button>
+        <button class="btn tonal" id="btnIelts">Convert IELTS → GPA (1–9 → 55–100)</button>
+
       </div>
       <div class="kpis">
         <div class="pill ok" id="kMatch">✔ Matches 0/0</div>
@@ -185,6 +187,7 @@
     scoresInput: document.getElementById('scoresInput'),
     btnOrganize: document.getElementById('btnOrganize'),
     btnToefl: document.getElementById('btnToefl'),
+    btnIelts: document.getElementById('btnIelts'),
     csvOut: document.getElementById('csvOut'),
     btnDownload: document.getElementById('btnDownload'),
     detailText: document.getElementById('detailText'),
@@ -210,6 +213,9 @@
   let rosterKeys = [];           // computed key per student
   let orderOverride = null;      // {lines:string[], map:int[]}
   const adhoc = { active:false, lines:[] };
+
+  let lastSubjectId = null; // remember the most recent subject so we can restore it after Ad-hoc
+
 
   // UTIL /////////////////////////////////////////////////////////////////
   const toast = (msg) => { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 1400); };
@@ -322,6 +328,7 @@
   };
 
   const selectSubject = (sid) => {
+    lastSubjectId = sid;                 // <— remember last subject
     // Selecting a subject exits ad-hoc mode
     adhoc.active = false;
     adhoc.lines = [];
@@ -380,48 +387,70 @@
     return {keyMap, matches, amb, un};
   };
 
-  const organize = (copyToClipboard=true, asToefl=false) => {
-    if (!activeSubject && !adhoc.active){ toast('Load a roster or use Ad-hoc List.'); return; }
+// NOTE: second arg is now an optional converter function (e.g., toGpa or ieltsToGpa)
+const organize = (copyToClipboard = true, scoreConverter = null) => {
+  if (!activeSubject && !adhoc.active){ toast('Load a roster or use Ad-hoc List.'); return; }
 
-    // Parse scores once, optionally convert to GPA (non-destructive)
-    const entries = parseScores(els.scoresInput.value);
-    if (asToefl){ entries.forEach(e=>{ e.score = String(toGpa(e.score)); }); }
+  // Parse scores once, optionally convert to GPA (non-destructive)
+  const entries = parseScores(els.scoresInput.value);
+  if (typeof scoreConverter === 'function') {
+    entries.forEach(e => { e.score = String(scoreConverter(e.score)); });
+  }
 
-    const {keyMap, matches, amb, un} = buildNameToScoreMap(entries);
+  const {keyMap, matches, amb, un} = buildNameToScoreMap(entries);
 
-    // Build order: ad-hoc/subject default order, or custom map if provided
-    let orderIdx = [...Array(roster.length).keys()];
-    if (orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length) orderIdx = orderOverride.map.slice();
+  // Build order: ad-hoc/subject default order, or custom map if provided
+  let orderIdx = [...Array(roster.length).keys()];
+  if (orderOverride && Array.isArray(orderOverride.map) && orderOverride.map.length) orderIdx = orderOverride.map.slice();
 
-    // CSV output
-    let csv = 'Name,Score\n';
-    for (const i of orderIdx){
-      const st = roster[i];
-      const nm = tidy(st.display||`${st.family||''}${st.given?(', '+st.given):''}`.trim());
-      const val = keyMap.has(i) ? keyMap.get(i) : '';
-      const nameCsv = '"'+nm.replace(/"/g,'""')+'"';
-      csv += `${nameCsv},${val}\n`;
-    }
-    els.csvOut.value = csv;
+  // CSV output
+  let csv = 'Name,Score\n';
+  for (const i of orderIdx){
+    const st = roster[i];
+    const nm = tidy(st.display||`${st.family||''}${st.given?(', '+st.given):''}`.trim());
+    const val = keyMap.has(i) ? keyMap.get(i) : '';
+    const nameCsv = '"'+nm.replace(/"/g,'""')+'"';
+    csv += `${nameCsv},${val}\n`;
+  }
+  els.csvOut.value = csv;
 
-    // Details
-    const det = [];
-    if (orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
-      if (orderOverride.unknown?.length){ det.push('ORDER INPUT — Unknown (ignored):'); orderOverride.unknown.forEach(x=>det.push(`- ${x}`)); det.push(''); }
-      if (orderOverride.dup?.length){ det.push('ORDER INPUT — Duplicates (last one kept):'); orderOverride.dup.forEach(x=>det.push(`- ${x}`)); det.push(''); }
-    }
-    if (amb.length){ det.push('SCORES INPUT — Ambiguous:'); amb.forEach(x=>det.push(x)); det.push(''); }
-    if (un.length){ det.push('SCORES INPUT — Unmatched:'); un.forEach(x=>det.push(x)); }
-    els.detailText.textContent = det.join('\n');
+  // Details
+  const det = [];
+  if (orderOverride && (orderOverride.unknown?.length || orderOverride.dup?.length)){
+    if (orderOverride.unknown?.length){ det.push('ORDER INPUT — Unknown (ignored):'); orderOverride.unknown.forEach(x=>det.push(`- ${x}`)); det.push(''); }
+    if (orderOverride.dup?.length){ det.push('ORDER INPUT — Duplicates (last one kept):'); orderOverride.dup.forEach(x=>det.push(`- ${x}`)); det.push(''); }
+  }
+  if (amb.length){ det.push('SCORES INPUT — Ambiguous:'); amb.forEach(x=>det.push(x)); det.push(''); }
+  if (un.length){ det.push('SCORES INPUT — Unmatched:'); un.forEach(x=>det.push(x)); }
+  els.detailText.textContent = det.join('\n');
 
-    els.kMatch.textContent = `✔ Matches ${matches}/${entries.length}`;
-    els.kAmb.textContent   = `❓ Ambiguous ${amb.length}`;
-    els.kUn.textContent    = `❗ Unmatched ${un.length}`;
+  els.kMatch.textContent = `✔ Matches ${matches}/${entries.length}`;
+  els.kAmb.textContent   = `❓ Ambiguous ${amb.length}`;
+  els.kUn.textContent    = `❗ Unmatched ${un.length}`;
 
-    // Autofill code (use the possibly-converted entries)
-    const code = buildAutofillCode(entries);
-    if (copyToClipboard){ navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓')); }
-  };
+  // Autofill code version 1.0
+//   const code = buildAutofillCode(entries);
+//   if (copyToClipboard){ navigator.clipboard.writeText(code).then(()=>toast('Autofill code copied ✓')); }
+// };
+
+
+  // Autofill code 2.0 (use the possibly-converted entries)
+  const code = buildAutofillCode(entries);
+  if (copyToClipboard){
+    (navigator.clipboard && navigator.clipboard.writeText
+      ? navigator.clipboard.writeText(code)
+      : Promise.reject(new Error('Clipboard API unavailable')))
+    .then(() => toast('Autofill code copied ✓'))
+    .catch((err) => {
+      console.warn('Clipboard copy failed:', err);
+      toast('Couldn’t copy — open Console to copy the code.');
+      console.log(code); // fallback: log the code so you can copy from DevTools
+    });
+  }
+};
+
+
+
 
   // AUTOFILL CODE for ThinkWave assignments/gradebook ////////////////////
   const buildAutofillCode = (entries) => {
@@ -534,20 +563,90 @@
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download=name; a.click(); URL.revokeObjectURL(a.href);
   };
 
-  // TOEFL → GPA (non-destructive) ////////////////////////////////////////
+  // TOEFL → GPA (Speaking 0–30 → 55–100)
+  // Anchors: ≤7→55, 16→80, 21→90, 25→95, ≥29→100
   const toGpa = (x) => {
     const n = Math.max(0, Math.min(30, Number(x)||0));
-    return Math.round(55 + (n/30)*(100-55));
+    if (n <= 7) return 55;                                           // flat floor
+    if (n < 16) return Math.round(55 + (n-7)   * (80-55) / (16-7));  // 7..16 → 55..80
+    if (n < 21) return Math.round(80 + (n-16)  * (90-80) / (21-16)); // 16..21 → 80..90
+    if (n < 25) return Math.round(90 + (n-21)  * (95-90) / (25-21)); // 21..25 → 90..95
+    if (n < 29) return Math.round(95 + (n-25)  * (100-95)/(29-25));  // 25..29 → 95..100
+    return 100;                                                      // 29..30 → 100
   };
+
+  /*
+  Exact conversion table (integer TOEFL → GPA):
+  0–7: 55
+  8: 58
+  9: 61
+  10: 63
+  11: 66
+  12: 69
+  13: 72
+  14: 74
+  15: 77
+  16: 80
+  17: 82
+  18: 84
+  19: 86
+  20: 88
+  21: 90
+  22: 91
+  23: 92
+  24: 94
+  25: 95
+  26: 96
+  27: 98
+  28: 99
+  29: 100
+  30: 100
+  */
+
+  
   const convertToefl = () => {
     // Do NOT rewrite the textarea; just organize with conversion
-    organize(true, true);
+    organize(true, toGpa); // <— pass the converter function
   };
+
+  // IELTS (band 1..9 incl. halves) → GPA 55..100 with calibrated anchors.
+  // Revised anchors to satisfy: 6.5→90, 8.0→97, 8.5→99, 9.0→100
+  const ieltsToGpa = (x) => {
+    const b = Math.max(1, Math.min(9, Number(x)||0));
+    const anchors = [
+      [1.0, 55],
+      [4.0, 70],
+      [5.0, 78],
+      [6.0, 88],
+      [6.5, 90],  // NEW anchor
+      [7.0, 92],
+      [7.5, 95],
+      [8.0, 97],
+      [8.5, 99],
+      [9.0, 100]
+    ];
+    // find surrounding segment and interpolate
+    let lo = anchors[0], hi = anchors[anchors.length-1];
+    for (let i = 0; i < anchors.length; i++) {
+      if (b <= anchors[i][0]) { hi = anchors[i]; lo = anchors[i-1] || anchors[i]; break; }
+    }
+    if (lo[0] === hi[0]) return Math.round(lo[1]);
+    const t = (b - lo[0]) / (hi[0] - lo[0]);
+    return Math.round(lo[1] + t * (hi[1] - lo[1]));
+  };
+
+
+  const convertIelts = () => {
+    organize(true, ieltsToGpa); // non-destructive; uses converted values for CSV + autofill
+  };
+
 
   // EVENTS ///////////////////////////////////////////////////////////////
   document.getElementById('btnDownload').addEventListener('click', downloadCSV);
   els.btnOrganize.addEventListener('click', ()=>organize(true,false));
   els.btnToefl.addEventListener('click', convertToefl);
+  els.btnIelts.addEventListener('click', convertIelts);
+
 
   // Paste Roster Order
   els.btnPasteOrder.addEventListener('click', ()=>{
@@ -565,6 +664,9 @@
   els.btnUseAdhoc.addEventListener('click', ()=>{
     const lines = els.adhocInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
     if (!lines.length){ adhoc.active=false; toast('Ad-hoc list is empty'); return; }
+
+    lastSubjectId = activeSubject?.id ?? lastSubjectId; // remember the previous subject (if any)
+
     adhoc.active = true; adhoc.lines = lines.slice();
     activeSubject = null;
     roster = lines.map(name => ({display:name}));
@@ -574,12 +676,35 @@
     refreshRosterUI();
     if (els.scoresInput.value.trim()) organize(false);
   });
-  els.btnClearAdhoc.addEventListener('click', ()=>{
-    adhoc.active = false; adhoc.lines = []; els.adhocInput.value = '';
-    // Keep current subject roster as-is; just refresh UI
-    refreshRosterUI();
+
+  // 1.0
+  // els.btnClearAdhoc.addEventListener('click', ()=>{
+  //   adhoc.active = false; adhoc.lines = []; els.adhocInput.value = '';
+  //   // Keep current subject roster as-is; just refresh UI
+  //   refreshRosterUI();
+  //   if (els.scoresInput.value.trim()) organize(false);
+  // });
+    // 2.0
+    els.btnClearAdhoc.addEventListener('click', ()=>{
+    adhoc.active = false; 
+    adhoc.lines = []; 
+    els.adhocInput.value = '';
+
+    // If we have a remembered subject that still exists in the loaded JSON, restore it.
+    if (lastSubjectId && (data?.subjects || []).some(s => String(s.id) === String(lastSubjectId))) {
+      selectSubject(lastSubjectId);
+    } else {
+      // Otherwise, truly clear to avoid the “names shown but organize() blocked” limbo.
+      activeSubject = null;
+      roster = [];
+      rosterKeys = [];
+      orderOverride = null;
+      refreshRosterUI();
+    }
+
     if (els.scoresInput.value.trim()) organize(false);
   });
+
 
   // File input
   els.file.addEventListener('change', async (e)=>{
