@@ -276,6 +276,7 @@ Format your response like this:
  
 ### 打字练习
 
+* [双拼](https://api.ihint.me/shuang/)
 * [shishi.edclub.com](https://shishi.edclub.com)
 * [10fastfingers](https://10fastfingers.com/typing-test/english)
 * [monkeytype](https://monkeytype.com/)
