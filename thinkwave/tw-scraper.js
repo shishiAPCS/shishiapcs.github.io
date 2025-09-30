@@ -28,42 +28,67 @@
 
   // ---------- helpers ----------
   const titleCase = s => s ? s.replace(/\S+/g, w => w[0].toUpperCase() + w.slice(1).toLowerCase()) : s;
+
   const tidyDisplay = s => (s || '')
-      .replace(/\s+/g, ' ')       // collapse spaces
-      .replace(/\s*,"\s*/g, '", ')// fix quote+comma spacing
-      .replace(/\s*,\s*$/,'')     // trim trailing comma
+      .replace(/[“”]/g, '"')       // smart double → straight
+      .replace(/[‘’]/g, "'")       // smart single → straight
+      .replace(/\s+/g, ' ')        // collapse spaces
+      .replace(/\s*,"\s*/g, '", ') // fix quote+comma spacing (e.g., …",Name)
+      .replace(/\s*,\s*$/,'')      // trim trailing comma
       .trim();
 
   function parseName(displayRaw) {
     const display = tidyDisplay(displayRaw);
-    // English in quotes (straight or smart)
-    const q = display.match(/["“](.*?)["”]/);
-    let english = q ? titleCase(q[1].trim()) : null;
-
-    // Core (before quotes)
-    const main = display.replace(/["“].*$/, '').trim();
-
-    // Some ESL lists look like: Last, first, English (no quotes)
+  
+    // 1) Try to extract English/nickname in quotes (double first, then single)
+    //    We allow any content inside, but only treat as nickname when there is a closing quote.
+    let english = null;
+  
+    // Double quotes: "…"
+    let m = display.match(/"([^"]*?)"\s*$/);
+    if (m) english = m[1].trim();
+  
+    // Single quotes: '…'  (avoid matching apostrophes inside words by anchoring to end)
+    if (!english) {
+      m = display.match(/'([^']*?)'\s*$/);
+      if (m) english = m[1].trim();
+    }
+  
+    // 2) Remove any trailing quoted nickname (double or single), anchored to the end
+    //    This won't affect O'Connor because there's no closing quote at the end.
+    let main = display
+      .replace(/"[^"]*"\s*$/, '')  // strip trailing "…"
+      .replace(/'[^']*'\s*$/, '')  // strip trailing '…'
+      .trim();
+  
+    // 3) Some ESL lists look like: Last, first, English (no quotes)
     if (!english && (main.split(',').length === 3)) {
       const parts3 = main.split(',').map(s => s.trim());
       if (parts3[2] && /^[A-Za-z][A-Za-z\s.'-]*$/.test(parts3[2])) {
         english = titleCase(parts3[2]);
       }
     }
-
+  
+    // 4) Split family/given from the remaining "main"
     let family = null, given = null;
     if (main.includes(',')) {
       [family, given] = main.split(',', 2).map(s => s.trim());
     } else {
       const parts = main.split(/\s+/);
-      family = parts.pop() || null; given = parts.join(' ') || null;
+      family = parts.pop() || null;
+      given  = parts.join(' ') || null;
     }
-
-    const keyBase = (family || '') + (given || '') + (english || '');
+  
+    // 5) Title-case english (if found)
+    const englishTC = english ? titleCase(english) : null;
+  
+    // 6) Build key (letters+digits only)
+    const keyBase = (family || '') + (given || '') + (englishTC || '');
     const key = keyBase.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-    return { display, english, family, given, key };
+  
+    return { display, english: englishTC, family, given, key };
   }
+
 
   // ---------- subject discovery ----------
   function collectSubjects(root = document) {
