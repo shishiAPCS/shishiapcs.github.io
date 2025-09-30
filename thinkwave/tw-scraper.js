@@ -7,6 +7,7 @@
 
 (async () => {
   // ---------- tiny overlay UI ----------
+  const VERSION = 'tw-scraper v1.2';
   const ui = (() => {
     const el = document.createElement('div');
     el.style.cssText = 'position:fixed;right:12px;bottom:12px;z-index:2147483647;background:#111;color:#fff;padding:12px 14px;border-radius:10px;font:12px/1.4 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial;box-shadow:0 6px 18px rgba(0,0,0,.3);max-width:360px;';
@@ -23,6 +24,8 @@
       finish: (m) => { line('✔ ' + m); setTimeout(() => el.remove(), 10000); }
     };
   })();
+
+  ui.log('Loaded ' + VERSION);
 
   const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
@@ -86,7 +89,15 @@
     const keyBase = (family || '') + (given || '') + (englishTC || '');
     const key = keyBase.toLowerCase().replace(/[^a-z0-9]/g, '');
   
-    return { display, english: englishTC, family, given, key };
+    return {
+      displayRaw: display,      // original, untouched (keep for audit/debug)
+      display: main,            // core without trailing "…" or '…'
+      english: englishTC,
+      family,
+      given,
+      key
+    };
+
   }
 
 
@@ -129,19 +140,40 @@
       return { display: p.display, english: p.english, family: p.family, given: p.given, key: p.key, studentId: r.studentId };
     });
 
-    // De-dupe within subject (prefer entries with studentId)
-    const byId = new Map(), byKey = new Map();
-    roster.forEach(st => {
-      if (st.studentId) byId.set(st.studentId, st);
-    });
-    roster.forEach(st => {
-      if (!st.studentId) {
-        if (!byKey.has(st.key)) byKey.set(st.key, st);
+    // Stable de-dupe: keep DOM order; upgrade existing item if a later one has studentId
+    const out = [];
+    const posById  = new Map(); // studentId -> index in out
+    const posByKey = new Map(); // key       -> index in out
+    
+    for (const st of roster) {
+      if (st.studentId) {
+        if (posById.has(st.studentId)) {
+          // same studentId seen already — replace/merge (should be rare)
+          const idx = posById.get(st.studentId);
+          out[idx] = { ...out[idx], ...st, studentId: st.studentId };
+          continue;
+        }
+        if (posByKey.has(st.key)) {
+          // we saw the same logical person earlier without an id — upgrade in place
+          const idx = posByKey.get(st.key);
+          out[idx] = { ...out[idx], ...st, studentId: st.studentId };
+          posById.set(st.studentId, idx);
+          continue;
+        }
+        // first time we see this person, with id
+        const idx = out.push(st) - 1;
+        posById.set(st.studentId, idx);
+        posByKey.set(st.key, idx);
+      } else {
+        // no studentId
+        if (posByKey.has(st.key)) continue; // already have them
+        const idx = out.push(st) - 1;
+        posByKey.set(st.key, idx);
       }
-    });
-
-    const combined = [...byId.values(), ...byKey.values()];
-    return combined;
+    }
+    
+    return out;
+    
   }
 
   // ---------- iframe fallback ----------
