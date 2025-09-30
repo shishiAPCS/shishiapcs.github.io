@@ -233,9 +233,16 @@
     const keys = new Set();
     if (st.key) keys.add(letters(st.key));
 
-    const q = disp.match(/"(.*?)"/); // nickname inside quotes
+    // const q = disp.match(/"(.*?)"/); // nickname inside quotes
+    // const nick = q ? tidy(q[1]) : '';
+    // const main = disp.replace(/".*?"/g,'').replace(/\s+,\s+/g,',').trim();
+    //2.0
+    const q = disp.match(/["']([^"']+)["']/); // nickname in "..." or '...'
     const nick = q ? tidy(q[1]) : '';
-    const main = disp.replace(/".*?"/g,'').replace(/\s+,\s+/g,',').trim();
+    const main = disp.replace(/["'][^"']+["']/g,'').replace(/\s+,\s+/g,',').trim();
+
+
+    
     let fam2 = fam, giv2 = giv;
     if (!fam2 || !giv2){
       if (main.includes(',')){
@@ -261,9 +268,15 @@
 
   const kFromAnyName = (raw) => {
     const s = tidy(raw);
-    const q = s.match(/"(.*?)"/);
+    
+    // const q = s.match(/"(.*?)"/);
+    // const nick = q ? q[1] : '';
+    // const strip = s.replace(/".*?"/g,'').trim();
+    //2.0
+    const q = s.match(/["']([^"']+)["']/);
     const nick = q ? q[1] : '';
-    const strip = s.replace(/".*?"/g,'').trim();
+    const strip = s.replace(/["'][^"']+["']/g,'').trim();
+
     let fam='', giv='', eng='';
     if (strip.includes(',')){
       const parts = strip.split(',').map(p=>p.trim());
@@ -491,22 +504,53 @@ const organize = (copyToClipboard = true, scoreConverter = null) => {
   const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[^a-z0-9]/g,'');
   const keyMap = ${payload};
 
+  // function parseDisp(disp){
+  //   let d = String(disp||'').trim().replace(/\\s+/g,' ');
+  //   const q = d.match(/["“](.*?)["”]/);
+  //   let eng = q ? q[1].trim() : '';
+  //   const withoutQuotes = d.replace(/".*?"/g,'').replace(/\\s*,\\s*$/,'').trim();
+  //   let fam='', giv='';
+  //   if (withoutQuotes.includes(',')){
+  //     const parts = withoutQuotes.split(',').map(s => s.replace(/,+$/,'').trim()).filter(Boolean);
+  //     fam = parts[0]||''; giv = parts[1]||'';
+  //     if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
+  //   } else {
+  //     const p = withoutQuotes.split(/\\s+/).filter(Boolean);
+  //     fam = p.pop()||''; giv = p.join(' ');
+  //   }
+  //   return {fam,giv,eng};
+  // }
+  
+//2.0
   function parseDisp(disp){
-    let d = String(disp||'').trim().replace(/\\s+/g,' ');
-    const q = d.match(/["“](.*?)["”]/);
-    let eng = q ? q[1].trim() : '';
-    const withoutQuotes = d.replace(/".*?"/g,'').replace(/\\s*,\\s*$/,'').trim();
-    let fam='', giv='';
-    if (withoutQuotes.includes(',')){
-      const parts = withoutQuotes.split(',').map(s => s.replace(/,+$/,'').trim()).filter(Boolean);
-      fam = parts[0]||''; giv = parts[1]||'';
-      if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
-    } else {
-      const p = withoutQuotes.split(/\\s+/).filter(Boolean);
-      fam = p.pop()||''; giv = p.join(' ');
-    }
-    return {fam,giv,eng};
-  }
+      // normalize smart quotes first
+      let d = String(disp||'').trim()
+        .replace(/[“”]/g, '"')
+        .replace(/[‘’]/g, "'")
+        .replace(/\s+/g, ' ');
+    
+      // capture nickname in either "..." or '...'
+      const q = d.match(/["']([^"']+)["']/);
+      let eng = q ? q[1].trim() : '';
+    
+      // remove quoted segments (both "..." and '...') before splitting
+      const withoutQuotes = d
+        .replace(/["'][^"']+["']/g, '')
+        .replace(/\s*,\s*$/, '')
+        .trim();
+    
+      let fam='', giv='';
+      if (withoutQuotes.includes(',')){
+        const parts = withoutQuotes.split(',').map(s => s.replace(/,+$/,'').trim()).filter(Boolean);
+        fam = parts[0]||''; giv = parts[1]||'';
+        if (!eng && parts.length>=3 && /^[A-Za-z .'-]+$/.test(parts[2])) eng = parts[2].trim();
+      } else {
+        const p = withoutQuotes.split(/\s+/).filter(Boolean);
+        fam = p.pop()||''; giv = p.join(' ');
+      }
+      return {fam,giv,eng};
+}
+
 
   function keysForDisp(disp){
     const {fam,giv,eng} = parseDisp(disp);
