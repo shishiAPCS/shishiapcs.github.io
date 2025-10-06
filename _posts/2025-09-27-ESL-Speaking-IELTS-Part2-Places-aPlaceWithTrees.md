@@ -1,5 +1,5 @@
 ---
-title:  "雅思口语范文"
+title:  "雅思口语Part2范文 有很多树的地方"
 mathjax: true
 layout: post
 categories: media
@@ -8,12 +8,12 @@ categories: media
 # Part 2
 
 ## 有很多树的地方
-Describe a place with a lot of trees that you would like to visit(e.g.a forest,oasis)
-You should say:
-Where it is
-How you knew this place
-What it is like
-And explain why you would like to visit it
+Describe a place with a lot of trees that you would like to visit(e.g.a forest,oasis)    
+You should say:    
+Where it is    
+How you knew this place    
+What it is like    
+And explain why you would like to visit it    
 
 ## 范文
 The place I’d like to visit is a **botanic garden** / on the **northern edge of Chengdu**, // about **ten kilometers** from where I live. / I first **heard about it** through a **WeChat post**, / and then I **fell down a rabbit hole** of short videos on the platform. // What instantly caught my attention was its **collection of multi-grafted fruit trees**—single trees that **bear two varieties** of **stone fruit**, / such as **peaches and plums** on **one trunk**. //
