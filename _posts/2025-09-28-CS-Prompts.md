@@ -103,7 +103,7 @@ End with a **quality bar**:
 **CN:** *好提示 = 明确角色 + 明确任务 + 明确格式 + 合理约束 + 受众意识 + 可见的思路过程。*
 
 ## Mr.Mou 常用提示语：
-### 更新中……
+### 雅思口语模考：
 ```markdown
 # IELTS Speaking Exam Simulation
 
