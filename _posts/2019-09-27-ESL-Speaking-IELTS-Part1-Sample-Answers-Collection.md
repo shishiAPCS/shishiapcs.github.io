@@ -1,11 +1,11 @@
 ---
-title:  "IELTS Speaking Part 1 – Sample Answers Collection"
+title:  "雅思 IELTS Speaking Part 1 – Sample Answers Collection"
 mathjax: true
 layout: post
 categories: media
 ---
 
-## Work or studies
+## Work or study
 
 Each ≈ 25 seconds.
 
