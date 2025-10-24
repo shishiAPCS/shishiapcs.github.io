@@ -5,6 +5,21 @@ layout: post
 categories: media
 ---
 
+🕓 **Timing & Delivery Coaching (Part 1 Focus)**
+------------------------------------------------
+
+| Tip | Purpose |
+| --- | --- |
+| 🎯 Keep answers around **22–28 seconds** | Avoid underdeveloped ideas or overlong answers |
+| 💡 Use natural openers | _“Actually,” “To be honest,” “For sure,” “I’d say…”_ |
+| 🔗 Use spontaneous linkers | _“That’s why,” “Which means,” “So basically,” “At the same time”_ |
+| 🧩 Vary rhythm | Mix short sentences with one longer one for flow |
+| 🎤 Finish strong | End with a clear tone, e.g., _“—and that’s why I love it.”_ |
+
+**5 Universal Linkers:**
+
+> _That said, On top of that, In everyday terms, What’s more, To be honest…_
+
 ## Work or study
 
 Each ≈ 25 seconds.
@@ -185,17 +200,3 @@ No, not really. I’ve grown comfortable in my role, and it gives me a healthy b
 
 * * *
 
-🕓 **Timing & Delivery Coaching (Part 1 Focus)**
-------------------------------------------------
-
-| Tip | Purpose |
-| --- | --- |
-| 🎯 Keep answers around **22–28 seconds** | Avoid underdeveloped ideas or overlong answers |
-| 💡 Use natural openers | _“Actually,” “To be honest,” “For sure,” “I’d say…”_ |
-| 🔗 Use spontaneous linkers | _“That’s why,” “Which means,” “So basically,” “At the same time”_ |
-| 🧩 Vary rhythm | Mix short sentences with one longer one for flow |
-| 🎤 Finish strong | End with a clear tone, e.g., _“—and that’s why I love it.”_ |
-
-**5 Universal Linkers:**
-
-> _That said, On top of that, In everyday terms, What’s more, To be honest…_
