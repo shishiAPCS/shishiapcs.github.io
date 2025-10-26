@@ -200,3 +200,111 @@ No, not really. I’ve grown comfortable in my role, and it gives me a healthy b
 
 * * *
 
+---
+
+## Hometown
+
+### 1\. Where is your hometown?
+
+It’s in the **southwest of China—Sichuan**—famous as the **home of the giant panda**. The city sits in a **mountain basin**, which made it hard to reach in the past and kept it relatively safe from invasions. That geography still shapes our **mild climate** and laid-back rhythm.
+
+**Key Vocabulary:** home of the giant panda • mountain basin • hard to reach • safe from invasions • mild climate • laid-back rhythm
+
+* * *
+
+### 2\. How long have you been living there?
+
+**All my life.** I grew up in a **mountain village** and moved to the **provincial capital** after high school. Most of my adult milestones—university, first job, starting a family—have happened here, so I’m pretty rooted.
+
+**Key Vocabulary:** mountain village • provincial capital • adult milestones • starting a family • rooted here
+
+* * *
+
+### 3\. Do you think you will continue living there for a long time?
+
+Yes, **for the foreseeable future**. We’ve **bought an apartment**, my two kids **go to school** nearby, and our support network is close. Realistically, I see us staying **another ten years**.
+
+**Key Vocabulary:** for the foreseeable future • bought an apartment • go to school • support network • another ten years
+
+* * *
+
+### 4\. Please describe your hometown a little.
+
+It’s a **mountainous city** with a **pleasant climate**—rarely **freezing** in winter and not **scorching** in summer. On clear days you can even **see snow-capped peaks** from the center.
+
+**Key Vocabulary:** mountainous city • pleasant climate • freezing/scorching • snow-capped peaks • city center
+
+* * *
+
+### 5\. Is that a big city or a small place?
+
+It’s a **large provincial capital**—**well over five million** residents—with **state-of-the-art metro lines**, **ring roads**, and reliable **public transport**. Getting around is straightforward.
+
+**Key Vocabulary:** provincial capital • well over five million • state-of-the-art metro • ring roads • public transport
+
+* * *
+
+### 6\. What’s your hometown famous for?
+
+**Pandas**, first of all. We have one of the **largest breeding and research centers**, so visitors can **see them up close**. People also come for the **scenery** and **food culture**.
+
+**Key Vocabulary:** breeding and research center • see them up close • scenery • food culture • hotpot
+
+* * *
+
+### 7\. Did you learn about its history at school?
+
+Not much. Textbooks focused on **national history**, so I picked up local stories from **library books** and **museum visits**. The **basin geography** really shaped trade and culture.
+
+**Key Vocabulary:** national history • local stories • library books • museum visits • basin geography
+
+* * *
+
+### 8\. Do you like your hometown?
+
+Absolutely. The **food scene** is addictive—from **hotpot** to street snacks—and people are **warm and helpful**. There are plenty of **green spaces**, so it’s easy to unwind.
+
+**Key Vocabulary:** food scene • hotpot • warm and helpful • green spaces • unwind
+
+* * *
+
+### 9\. Do you like living there?
+
+Mostly yes. It’s **green, livable**, and family-friendly. My only regret is that it’s **landlocked**—I love the ocean, so a quick **beach day** isn’t realistic.
+
+**Key Vocabulary:** green and livable • family-friendly • landlocked • beach day • not realistic
+
+* * *
+
+### 10\. What do you like most about it?
+
+The **easy pace**. You’ll see neighbors **chatting over mahjong** in the parks, and that **community feel** has survived the city’s growth. It keeps life balanced.
+
+**Key Vocabulary:** easy pace • chatting over mahjong • community feel • city’s growth • balanced life
+
+* * *
+
+### 11\. Is there anything you dislike about it?
+
+**Humid, overcast winters.** Sunshine can be rare, so when it appears, people **pull out stools** and **sun themselves** all afternoon. It’s a local habit.
+
+**Key Vocabulary:** humid and overcast • sunshine is rare • pull out stools • sun themselves • local habit
+
+* * *
+
+### 12\. Are there many young people in your hometown?
+
+Yes. The city attracts **students and young professionals** with strong **universities**, a growing **tech scene**, and relatively **affordable living**.
+
+**Key Vocabulary:** young professionals • universities • tech scene • affordable living • attracts
+
+* * *
+
+### 13\. Is it a good place for young people to pursue their careers?
+
+Definitely. There are **growth industries** and **start-ups hiring**, so you can **build a career**, **save a deposit**, and **set down roots** without moving away.
+
+**Key Vocabulary:** growth industries • start-ups hiring • build a career • save a deposit • set down roots
+
+* * *
+---
