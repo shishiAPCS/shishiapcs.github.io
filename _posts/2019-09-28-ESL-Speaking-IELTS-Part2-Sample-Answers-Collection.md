@@ -5,6 +5,62 @@ layout: post
 categories: media
 ---
 
+
+## 钦佩的运动员
+
+## 🥇 Part 2 — Describe a successful sportsperson you admire (≈ 285 words)
+
+The sportsperson I’d like to talk about is a swimmer who broke several world records, though I have to admit I don’t actually remember his name. I first learned about him back in high school, when our Chinese teacher used his story in writing class to show what real perseverance looks like.
+
+According to what we read, he wasn’t born a champion. Early in his career he lost many races and almost gave up, but he kept training every single morning before sunrise, even in freezing weather. I remember our teacher showing us a short documentary of him swimming in an outdoor pool covered with mist—it really stuck with me. Over the years, that dedication paid off, and he eventually set new world records and became a national hero.
+
+Another thing that fascinated me was how his body shape gave him a slight advantage—he had a longer torso and shorter legs, which made him more streamlined in the water. But even with that, success didn’t come easily. What truly made the difference was his mindset—his patience, focus, and refusal to give up when progress felt slow.
+
+I admire him because his story changed how I think about learning. Whenever I struggle with English or feel tired of working toward a goal, I picture him swimming lap after lap, never stopping. It reminds me that consistency beats talent in the long run, and that steady effort—no matter how small—can lead to something remarkable.
+
+**Key Vocabulary & Collocations:** broke world records • born a champion • every single morning • stuck with me • paid off • streamlined in the water • refusal to give up • consistency beats talent • steady effort • something remarkable
+
+---
+
+## 💬 Part 3 — Discussion
+
+### 1️⃣ Should students have physical education at school? (≈ 120 words)
+
+Absolutely. Physical education isn’t just about playing games—it builds healthy habits, discipline, and teamwork. When students exercise regularly, their concentration in class improves and they release stress more easily. Moreover, PE teaches students how to face challenges and accept both winning and losing, which mirrors real life. From a schoolwide perspective, sports also create community spirit; school competitions and team practices help students bond across grades. Without PE, children might spend too much time glued to screens and lose that balance between body and mind. In short, physical education strengthens not only muscles but also character, which is equally valuable for lifelong learning.
+
+---
+
+### 2️⃣ What qualities should an athlete have? (≈ 115 words)
+
+I believe the most important quality is resilience—the ability to bounce back after failure. Athletes face constant pressure, injuries, and competition, so a strong mindset is essential. Beyond that, self-discipline matters a lot because talent alone fades without structure. They also need patience, since real progress often takes years of repetitive training. For example, Olympic champions usually practice the same move thousands of times before perfecting it. On top of that, humility is key; once an athlete becomes successful, staying grounded helps them focus on long-term goals instead of fame. Altogether, these traits—resilience, discipline, patience, and humility—are what separate great athletes from ordinary ones.
+
+---
+
+### 3️⃣ Is talent or hard work more important in sports? (≈ 125 words)
+
+Both play a role, but in my opinion, hard work carries more weight. Talent gives someone a head start, yet without persistence it quickly fades. Hard work builds habits, endurance, and confidence through repetition. Think about athletes like Michael Phelps—his physical advantages mattered, but what truly set him apart was his relentless training schedule. Moreover, hard work levels the playing field; even someone with average talent can outperform a naturally gifted rival if they train consistently. In the long run, effort compounds like interest—the more you invest, the greater the return. So while talent might open the door, it’s dedication and practice that keep it open.
+
+---
+
+### 4️⃣ Is it easy to identify children’s talents in sports? (≈ 115 words)
+
+Not really—it usually takes time and exposure to different activities. Some kids show obvious talent early on, like natural balance or fast reflexes, but others develop later once they find something they truly enjoy. From a parent’s perspective, it’s more about observation and patience than quick judgment. Schools can also help by providing a variety of sports so children can experiment. Nowadays, technology such as motion-tracking or fitness testing can offer clues, but numbers don’t tell the full story. Motivation and interest matter just as much. So identifying a child’s talent isn’t a one-time test—it’s a gradual process of watching how they respond to challenges and improvement.
+
+---
+
+### 5️⃣ What’s the most popular sport in your country? (≈ 110 words)
+
+Without question, table tennis is the most popular sport in China. Nearly every school has tables, and kids start playing at a very young age. It’s affordable, doesn’t need a large space, and suits the average body type of many Chinese people, which makes it accessible to almost everyone. On top of that, China has produced many world champions, so there’s a strong sense of national pride attached to it. We often see televised tournaments where families watch together, cheering for their favorite players. It’s more than just a pastime—it’s a cultural symbol that represents discipline, precision, and the collective spirit of teamwork.
+
+---
+
+### 6️⃣ Why are there so few top athletes in the world? (≈ 125 words)
+
+Because reaching the top requires a rare combination of factors—talent, opportunity, resources, and an extraordinary work ethic. There are only a few spots for world-class athletes, and competition is fierce. Many people have potential but can’t access professional coaching or financial support. Others simply don’t have the mental toughness to endure the long, repetitive training and the pressure of performance. Moreover, success in sports often depends on timing—being in the right environment at the right moment. For example, some athletes peak too early or get injured before major events. So it’s not that others aren’t capable; it’s just that the stars have to align for someone to truly reach the world stage.
+
+---
+
+
 ## 祖辈的工作
 
 **Describe one of your grandparent’s jobs.** You should say:
