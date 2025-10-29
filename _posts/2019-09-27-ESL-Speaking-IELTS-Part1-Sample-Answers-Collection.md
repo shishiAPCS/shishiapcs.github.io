@@ -308,3 +308,45 @@ Definitely. There are **growth industries** and **start-ups hiring**, so you can
 
 * * *
 ---
+
+## Home & Accommodation
+
+### 13\. What do you usually do in your flat?
+
+I do different things in different rooms. In the living room, I usually work at my desk with two monitors. It’s kind of my **home office**, but at the same time, it’s also a **family area** where I chat with my kids or play **puzzles and board games** together after work.
+
+**Key Vocabulary:** multifunctional space • home office • at the same time • board games • after work • flat layout • family area
+
+---
+
+### 14\. Do you think it’s important to live in a comfortable environment?
+
+Absolutely. When I’m **physically comfortable**, I can focus much better on work or reading. The **right temperature**, **enough light**, and a **quiet space** really **boost my efficiency**. That’s why I believe **investing in comfort**, like having air conditioning, actually **pays off in productivity**.
+
+**Key Vocabulary:** physically comfortable • boost my efficiency • quiet space • pays off • productivity • invest in comfort
+
+---
+
+### 15\. What’s the difference between where you live now and where you lived before?
+
+Now I live in my **own apartment**, which I bought about seven years ago. Before that, I rented a **small studio** where I had to **share facilities** like the kitchen and microwave with **other tenants**. It was quite **inconvenient** back then, so having my own space now feels like a **huge upgrade**.
+
+**Key Vocabulary:** my own apartment • small studio • share facilities • other tenants • inconvenient • a huge upgrade
+
+---
+
+### 16\. What kind of home would you like to live in in the future?
+
+I’d love to move into a **larger flat** with three bedrooms. Right now, my son and daughter **share a room**, but they’re starting to **need privacy**. A **bigger home** would give each child their **own space** and make **daily life more comfortable** for the whole family.
+
+**Key Vocabulary:** larger flat • share a room • need privacy • own space • daily life • more comfortable
+
+---
+
+### 17\. Do you prefer living in a house or a flat?
+
+At first, a **house sounds amazing**—having a garden, a garage, maybe even a pool. But when I think about **maintenance costs** and time, a **flat is much more practical**. You don’t need to **mow the lawn** or **clean a pool**, so it **saves both money and effort**.
+
+**Key Vocabulary:** maintenance costs • practical choice • mow the lawn • clean a pool • saves effort • sounds amazing
+
+---
