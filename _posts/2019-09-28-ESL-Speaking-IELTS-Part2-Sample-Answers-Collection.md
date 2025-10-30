@@ -6,6 +6,130 @@ categories: media
 ---
 
 
+
+## 受欢迎的人
+
+The person I’d like to talk about is one of my students named Mason. He’s a high-school student who’s quite popular among both classmates and teachers because of his talent and friendly personality.
+
+I see him almost every day since his classroom is next to my office, although I only teach him twice a week. What makes him stand out is his passion for music. He plays guitar, sings really well, and even manages his own channel on WeChat, where he posts cover songs and short vlogs. His videos usually get hundreds of likes and positive comments, which shows how much people enjoy his content.
+
+One thing I admire is how he handles criticism. I once noticed a few negative comments under his post, but instead of arguing, he replied politely and even thanked people for their feedback. That level of maturity impressed me a lot. It taught me that being popular isn’t only about talent but also about attitude—how you treat others with respect and positivity.
+
+Even though I’m his teacher, I feel I’ve learned something from him: to stay kind and confident no matter what others say. Mason’s popularity comes naturally from his authenticity, not from trying to please everyone. That’s why I think he truly deserves the attention he gets.
+
+**Key Vocabulary:** stand out • cover songs • handle criticism • positive attitude • maturity • authenticity • deserve the attention
+
+---
+
+## 🗣 Part 3 — Popularity & Teaching (≈ 110–130 words each, MAP structure)
+
+---
+
+### 1️⃣ Why are some students popular at school? (MAP)
+
+**Main:**
+Students become popular mostly because of personality and talent.
+
+**Analysis:**
+Those who are friendly, humorous, or easy to talk to attract others naturally. When they add a visible skill—such as singing, playing sports, or leading a project—they stand out even more. Popularity, though, can’t be forced; people sense when someone tries too hard to impress, and it often backfires. True popularity grows from authenticity and kindness rather than show-off behavior.
+
+**Proof:**
+For example, the classmate everyone greets first is usually the one who remembers birthdays or helps others revise for exams, not necessarily the loudest person in the room.
+
+**Key Vocabulary & Collocations:** friendly vibe • stand out • show-off behavior • backfire • authenticity • naturally attract • class reputation
+
+---
+
+### 2️⃣ Is it important for a teacher to be popular? (MAP)
+
+**Main:**
+Popularity is pleasant but not essential for teachers.
+
+**Analysis:**
+A teacher’s real duty is to educate and guide. If they chase approval, they may lower expectations or avoid strict grading just to stay “liked.” That can harm students in the long run. Still, being approachable and fair builds respect and trust, which indirectly make a teacher well-liked without sacrificing authority.
+
+**Proof:**
+For instance, my favorite teachers were not the funniest but the ones who explained clearly, gave feedback honestly, and treated everyone equally. Their credibility made them naturally respected, which matters more than short-term popularity.
+
+**Key Vocabulary & Collocations:** chase approval • approachable demeanor • long run impact • earn respect • build trust • maintain authority • credible teacher
+
+---
+
+### 3️⃣ Are good teachers always popular? (MAP)
+
+**Main:**
+Not necessarily—being good and being popular don’t always overlap.
+
+**Analysis:**
+Excellent teachers often push students beyond comfort zones, enforce deadlines, or correct mistakes publicly. Those actions can feel harsh to teenagers, even though they promote growth. Meanwhile, lenient teachers may seem “nice” but contribute less to progress. Popularity is emotional; quality is measurable.
+
+**Proof:**
+Many adults later admit that their strict math or English teacher—whom they once feared—taught them the most valuable habits of discipline and accuracy. Respect sometimes arrives years later, after results speak for themselves.
+
+**Key Vocabulary & Collocations:** comfort zone • enforce deadlines • lenient teacher • emotional appeal • measurable results • earn respect later • discipline and accuracy
+
+---
+
+### 4️⃣ What qualities make a good teacher? (MAP)
+
+**Main:**
+A good teacher combines fairness, empathy, and consistency.
+
+**Analysis:**
+Rules keep the classroom safe, but empathy keeps it human. Great teachers set boundaries yet listen to students’ concerns. They explain why rules exist instead of just quoting them, which builds mutual respect. They also adapt methods to different learners while staying firm on standards.
+
+**Proof:**
+For example, when a student breaks a rule, a fair teacher might assign detention but still check if the behavior stems from stress or misunderstanding. That balance between discipline and compassion earns lasting trust.
+
+**Key Vocabulary & Collocations:** set boundaries • mutual respect • adapt methods • firm on standards • discipline and compassion • lasting trust
+
+---
+
+### 5️⃣ Is it easier to become popular nowadays? (MAP)
+
+**Main:**
+Getting attention is easier now, but keeping popularity is harder.
+
+**Analysis:**
+Social media gives everyone a platform, so visibility costs nothing. However, because millions post daily, standing out demands creativity and authenticity. Online fame can also vanish overnight—followers scroll away the moment something new appears. Sustainable popularity requires consistent quality and genuine connection.
+
+**Proof:**
+Many short-video creators go viral once but fade within weeks, while steady educators or entertainers build loyal audiences over years. So exposure is cheap; influence is earned.
+
+**Key Vocabulary & Collocations:** go viral • stand out in a crowded space • authentic content • consistent quality • genuine connection • earned influence
+
+---
+
+### 6️⃣ Why do people want to be popular? (MAP)
+
+**Main:**
+People seek popularity because it signals acceptance and belonging.
+
+**Analysis:**
+Humans are social animals; throughout history, being part of a group increased safety and survival. Today, that instinct translates into the desire for recognition and approval. Popularity boosts self-esteem and creates a sense of importance. However, the pursuit can become unhealthy when people measure self-worth only by external validation.
+
+**Proof:**
+For example, some teenagers check “likes” every few minutes and feel anxious when numbers drop, showing how deeply approval ties to identity. Healthy confidence should come from achievement, not just applause.
+
+**Key Vocabulary & Collocations:** social instinct • seek recognition • external validation • self-esteem boost • measure self-worth • crave approval
+
+---
+
+### 7️⃣ Is popularity always a good thing? (MAP)
+
+**Main:**
+Popularity has benefits but also hidden costs.
+
+**Analysis:**
+Being well-known brings influence and opportunity, yet it reduces privacy and amplifies criticism. Celebrities often live under constant scrutiny, and public figures must maintain spotless reputations. Fame magnifies both praise and mistakes. At extremes, it can threaten safety or mental health.
+
+**Proof:**
+For instance, stars disguise themselves in public to avoid crowds, and history remembers leaders like JFK whose visibility made them targets. So while recognition feels rewarding, it carries pressure that few people can handle gracefully.
+
+**Key Vocabulary & Collocations:** constant scrutiny • loss of privacy • magnify mistakes • handle pressure • public figure • hidden cost of fame • gracefully manage attention
+
+---
+
 ## 钦佩的运动员
 
 ## 🥇 Part 2 — Describe a successful sportsperson you admire (≈ 285 words)
@@ -22,44 +146,99 @@ I admire him because his story changed how I think about learning. Whenever I st
 
 ---
 
-## 💬 Part 3 — Discussion
-
-### 1️⃣ Should students have physical education at school? (≈ 120 words)
-
-Absolutely. Physical education isn’t just about playing games—it builds healthy habits, discipline, and teamwork. When students exercise regularly, their concentration in class improves and they release stress more easily. Moreover, PE teaches students how to face challenges and accept both winning and losing, which mirrors real life. From a schoolwide perspective, sports also create community spirit; school competitions and team practices help students bond across grades. Without PE, children might spend too much time glued to screens and lose that balance between body and mind. In short, physical education strengthens not only muscles but also character, which is equally valuable for lifelong learning.
+## 🏅 Part 3 — Sports Discussion (≈ 110–130 words each, MAP structure)
 
 ---
 
-### 2️⃣ What qualities should an athlete have? (≈ 115 words)
+### 1️⃣ Should students have physical education at school? (MAP)
 
-I believe the most important quality is resilience—the ability to bounce back after failure. Athletes face constant pressure, injuries, and competition, so a strong mindset is essential. Beyond that, self-discipline matters a lot because talent alone fades without structure. They also need patience, since real progress often takes years of repetitive training. For example, Olympic champions usually practice the same move thousands of times before perfecting it. On top of that, humility is key; once an athlete becomes successful, staying grounded helps them focus on long-term goals instead of fame. Altogether, these traits—resilience, discipline, patience, and humility—are what separate great athletes from ordinary ones.
+**Main:**
+Yes, PE is essential because it shapes both physical and mental health.
 
----
+**Analysis:**
+Regular exercise builds habits of discipline, teamwork, and time management. It also releases stress and helps students concentrate better in academic subjects. Beyond fitness, sports teach life lessons—handling defeat, cooperating with others, and respecting rules—all of which prepare young people for real-world challenges.
 
-### 3️⃣ Is talent or hard work more important in sports? (≈ 125 words)
+**Proof:**
+For example, team competitions help shy students develop confidence, while daily warm-ups keep energy levels steady through long school days. Without PE, children may drift toward screen time and lose balance between body and mind.
 
-Both play a role, but in my opinion, hard work carries more weight. Talent gives someone a head start, yet without persistence it quickly fades. Hard work builds habits, endurance, and confidence through repetition. Think about athletes like Michael Phelps—his physical advantages mattered, but what truly set him apart was his relentless training schedule. Moreover, hard work levels the playing field; even someone with average talent can outperform a naturally gifted rival if they train consistently. In the long run, effort compounds like interest—the more you invest, the greater the return. So while talent might open the door, it’s dedication and practice that keep it open.
-
----
-
-### 4️⃣ Is it easy to identify children’s talents in sports? (≈ 115 words)
-
-Not really—it usually takes time and exposure to different activities. Some kids show obvious talent early on, like natural balance or fast reflexes, but others develop later once they find something they truly enjoy. From a parent’s perspective, it’s more about observation and patience than quick judgment. Schools can also help by providing a variety of sports so children can experiment. Nowadays, technology such as motion-tracking or fitness testing can offer clues, but numbers don’t tell the full story. Motivation and interest matter just as much. So identifying a child’s talent isn’t a one-time test—it’s a gradual process of watching how they respond to challenges and improvement.
+**Key Vocabulary & Collocations:** build healthy habits • release stress • handle defeat • real-world challenges • team spirit • screen time • balance between body and mind
 
 ---
 
-### 5️⃣ What’s the most popular sport in your country? (≈ 110 words)
+### 2️⃣ What qualities should an athlete have? (MAP)
 
-Without question, table tennis is the most popular sport in China. Nearly every school has tables, and kids start playing at a very young age. It’s affordable, doesn’t need a large space, and suits the average body type of many Chinese people, which makes it accessible to almost everyone. On top of that, China has produced many world champions, so there’s a strong sense of national pride attached to it. We often see televised tournaments where families watch together, cheering for their favorite players. It’s more than just a pastime—it’s a cultural symbol that represents discipline, precision, and the collective spirit of teamwork.
+**Main:**
+Resilience is the cornerstone quality every athlete needs.
+
+**Analysis:**
+Sport is full of ups and downs—injuries, losses, and public pressure—so mental toughness matters as much as physical skill. Discipline keeps athletes training even when motivation dips, while patience allows long-term progress. Finally, humility prevents success from turning into arrogance and keeps focus on growth rather than fame.
+
+**Proof:**
+Take Olympic athletes: they repeat the same motion thousands of times before perfecting it, yet still thank their coaches after winning. That mix of grit, routine, and modesty separates champions from ordinary players.
+
+**Key Vocabulary & Collocations:** mental toughness • bounce back • stay disciplined • long-term progress • grit and routine • keep a humble mindset • separate champions from ordinary players
 
 ---
 
-### 6️⃣ Why are there so few top athletes in the world? (≈ 125 words)
+### 3️⃣ Is talent or hard work more important in sports? (MAP)
 
-Because reaching the top requires a rare combination of factors—talent, opportunity, resources, and an extraordinary work ethic. There are only a few spots for world-class athletes, and competition is fierce. Many people have potential but can’t access professional coaching or financial support. Others simply don’t have the mental toughness to endure the long, repetitive training and the pressure of performance. Moreover, success in sports often depends on timing—being in the right environment at the right moment. For example, some athletes peak too early or get injured before major events. So it’s not that others aren’t capable; it’s just that the stars have to align for someone to truly reach the world stage.
+**Main:**
+Hard work outweighs talent over time.
+
+**Analysis:**
+Natural ability gives a head start, but only consistent effort transforms potential into performance. Hard work builds endurance, strategy, and resilience—the invisible factors that win championships. Talent sets the ceiling; effort decides how close you get to it.
+
+**Proof:**
+Take Michael Phelps: his physique helped, but his relentless training—six hours a day, six days a week—made him legendary. Countless gifted athletes faded because they lacked that persistence. So while talent opens doors, discipline keeps them open.
+
+**Key Vocabulary & Collocations:** head start • transform potential into performance • consistent effort • relentless training • stay disciplined • open doors vs. keep them open • outwork talent
 
 ---
 
+### 4️⃣ Is it easy to identify children’s talents in sports? (MAP)
+
+**Main:**
+Not really—real talent takes time to surface.
+
+**Analysis:**
+Early ability can be misleading; coordination and motivation develop at different ages. Parents and coaches should observe patterns of enthusiasm, persistence, and adaptability rather than rely on quick tests. Technology like motion-tracking offers clues, but raw data can’t measure passion.
+
+**Proof:**
+A child who practices badminton daily out of sheer enjoyment may surpass a “naturally gifted” peer who trains half-heartedly. Talent, in the end, is curiosity that survives repetition.
+
+**Key Vocabulary & Collocations:** surface over time • observe patterns • natural coordination • raw data vs. passion • half-hearted training • curiosity that survives repetition • early ability can mislead
+
+---
+
+### 5️⃣ What’s the most popular sport in your country? (MAP)
+
+**Main:**
+Table tennis clearly tops the list in China.
+
+**Analysis:**
+It’s inexpensive, space-saving, and suits the average body build of many players, which makes it widely accessible. National success also fuels enthusiasm—each gold medal reinforces collective pride and inspires the next generation. Moreover, the sport values precision and focus, qualities admired in Chinese culture.
+
+**Proof:**
+Most schools have tables, and families often play together after dinner while televised matches draw nationwide audiences. So table tennis isn’t just recreation—it’s part of national identity.
+
+**Key Vocabulary & Collocations:** national pride • accessible sport • precision and focus • collective spirit • next generation • part of national identity • space-saving game
+
+---
+
+### 6️⃣ Why are there so few top athletes in the world? (MAP)
+
+**Main:**
+Because excellence demands a rare mix of talent, opportunity, and endurance.
+
+**Analysis:**
+Only a handful of people possess the physical gifts, financial support, and psychological stamina needed for world-class performance. Training at that level means sacrificing comfort, social life, and even long-term health. Timing also matters—injury or one missed season can end a career.
+
+**Proof:**
+Many athletes with Olympic potential never reach finals because they lack access to elite coaching or must quit for financial reasons. At the top, the margin between first and fifth is milliseconds—proof of how narrow the path truly is.
+
+**Key Vocabulary & Collocations:** world-class performance • psychological stamina • sacrifice comfort • elite coaching • margin of seconds • narrow path to excellence • rare combination of factors
+
+---
 
 ## 祖辈的工作
 
