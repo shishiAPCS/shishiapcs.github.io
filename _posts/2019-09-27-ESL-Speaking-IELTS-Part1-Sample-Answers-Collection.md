@@ -350,3 +350,36 @@ At first, a **house sounds amazing**—having a garden, a garage, maybe even a p
 **Key Vocabulary:** maintenance costs • practical choice • mow the lawn • clean a pool • saves effort • sounds amazing
 
 ---
+
+
+### 1\. Do you like buying shoes?
+
+Not really. I only buy shoes **once or twice a year**, usually when they’re **on sale**. I’m not someone who **shops for fun**—I **care more about comfort and practicality** than fashion.
+
+**Key Vocabulary:** on sale • shop for fun • care more about • comfort and practicality
+
+---
+
+### 2\. Have you ever bought shoes online?
+
+Yes, quite often. I usually shop on **JD**, one of the biggest **e-commerce platforms** in China. The best thing is the **seven-day free-return policy**—it makes shopping **stress-free**, since I can just **send the shoes back** if the size doesn’t fit.
+
+**Key Vocabulary:** e-commerce platform • free-return policy • stress-free shopping • send back
+
+---
+
+### 3\. Are there rules for students at your school?
+
+Of course. There are plenty, and most are **quite reasonable**. For example, if a student **breaks a rule**, they get **lunchtime detention**. It might sound strict, but it helps stop students from **making the same mistake again**.
+
+**Key Vocabulary:** lunchtime detention • break a rule • repeat the same mistake
+
+---
+
+### 4\. Do you prefer more or fewer rules at school?
+
+I’d say **fewer but clearer rules**. **Simplicity works best**—like how **Steve Jobs** designed the first iPhone: **simple but powerful**. Too many regulations can make students **feel controlled** instead of guided, and that’s not a **healthy learning environment**.
+
+**Key Vocabulary:** fewer but clearer rules • simplicity works best • feel controlled • healthy learning environment
+
+---
