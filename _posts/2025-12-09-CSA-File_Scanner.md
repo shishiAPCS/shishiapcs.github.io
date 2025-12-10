@@ -6,9 +6,6 @@ categories: media
 ---
 
 
-
-{% include codeHeader.html %}
-
 ## File & Scanner 复习表
 
 > 说明：
