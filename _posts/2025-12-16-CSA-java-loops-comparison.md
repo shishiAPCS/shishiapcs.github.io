@@ -6,12 +6,13 @@ categories: media
 ---
 
 <style>
-.post-title {
-  color: #f1f5f9 !important;
-  opacity: 1 !important;
-  font-weight: 700;
-}
+  table thead th{
+    background:#111827 !important;
+    color:#f1f5f9 !important;
+    border-color:#444 !important;
+  }
 </style>
+
 
 
 <table style="border-collapse:collapse; width:100%; font-family:system-ui,-apple-system,'Segoe UI','Noto Sans SC','Microsoft YaHei',Arial,sans-serif; font-size:16px;">
