@@ -216,7 +216,7 @@ public class ArrayAverage {
         }
         System.out.println("Sum (for loop): " + sum);
 
-        // Compute average
+        // Compute average - Note the double cast for precision
         double average = (double) sum / numbers.length;
         System.out.println("Average: " + average);
     }
@@ -233,21 +233,19 @@ public class ArraySearch {
         int target = 7;
         boolean found = false;
 
-        // Using for loop
+        // Using for loop (without break)
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == target) {
                 found = true;
-                break;
             }
         }
         System.out.println("Found (for loop): " + found);
 
-        // Using enhanced for loop
+        // Using enhanced for loop (without break)
         found = false;
         for (int num : numbers) {
             if (num == target) {
                 found = true;
-                break;
             }
         }
         System.out.println("Found (enhanced for loop): " + found);
@@ -264,11 +262,10 @@ public class ArrayProperty {
         int[] numbers = {3, 5, 1, 7, 9};
         boolean hasEven = false;
 
-        // Using for loop
-        for (int i = 0; i < numbers.length; i++) {
+        // Using for loop (terminates early by checking hasEven condition)
+        for (int i = 0; i < numbers.length && !hasEven; i++) {
             if (numbers[i] % 2 == 0) {
                 hasEven = true;
-                break;
             }
         }
         System.out.println("Has even (for loop): " + hasEven);
@@ -278,7 +275,6 @@ public class ArrayProperty {
         for (int num : numbers) {
             if (num % 2 == 0) {
                 hasEven = true;
-                break;
             }
         }
         System.out.println("Has even (enhanced for loop): " + hasEven);
@@ -295,21 +291,21 @@ public class ArrayAllPositive {
         int[] numbers = {3, 5, 1, 7, 9};
         boolean allPositive = true;
 
-        // Using for loop
-        for (int i = 0; i < numbers.length; i++) {
+        // Using for loop (stops checking if a non-positive is found)
+        int i = 0;
+        while (i < numbers.length && allPositive) {
             if (numbers[i] <= 0) {
                 allPositive = false;
-                break;
             }
+            i++;
         }
-        System.out.println("All positive (for loop): " + allPositive);
+        System.out.println("All positive (while/for loop): " + allPositive);
 
         // Using enhanced for loop
         allPositive = true;
         for (int num : numbers) {
             if (num <= 0) {
                 allPositive = false;
-                break;
             }
         }
         System.out.println("All positive (enhanced for loop): " + allPositive);
@@ -323,12 +319,12 @@ public class ConsecutivePairs {
     public static void main(String[] args) {
         int[] numbers = {3, 5, 1, 7, 9};
 
-        // Using for loop
+        // Note: loop runs to length - 1 to avoid ArrayIndexOutOfBoundsException
         for (int i = 0; i < numbers.length - 1; i++) {
             System.out.println("Pair: " + numbers[i] + ", " + numbers[i + 1]);
         }
 
-        // Enhanced for loop is not ideal for this task because it does not provide access to indices.
+        // Enhanced for loop is not used here because we need index access for pairs.
     }
 }
   {% endhighlight %}
@@ -340,19 +336,15 @@ public class DuplicateCheck {
         int[] numbers = {3, 5, 1, 7, 9};
         boolean hasDuplicate = false;
 
-        // Using for loop
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = i + 1; j < numbers.length; j++) {
+        // Nested loops to compare each element with those following it
+        for (int i = 0; i < numbers.length && !hasDuplicate; i++) {
+            for (int j = i + 1; j < numbers.length && !hasDuplicate; j++) {
                 if (numbers[i] == numbers[j]) {
                     hasDuplicate = true;
-                    break;
                 }
             }
-            if (hasDuplicate) break;
         }
-        System.out.println("Has duplicate (for loop): " + hasDuplicate);
-
-        // Enhanced for loop is not ideal for this task due to the need for two indices.
+        System.out.println("Has duplicate: " + hasDuplicate);
     }
 }
   {% endhighlight %}
@@ -396,14 +388,14 @@ public class ShiftLeft {
     public static void main(String[] args) {
         int[] numbers = {3, 5, 1, 7, 9};
 
-        // Using for loop
+        // Save first element, shift others left, put first at end
         int first = numbers[0];
         for (int i = 0; i < numbers.length - 1; i++) {
             numbers[i] = numbers[i + 1];
         }
         numbers[numbers.length - 1] = first;
 
-        System.out.println("Shifted left (for loop): " + Arrays.toString(numbers));
+        System.out.println("Shifted left: " + Arrays.toString(numbers));
     }
 }
   {% endhighlight %}
@@ -416,25 +408,23 @@ public class ShiftRight {
     public static void main(String[] args) {
         int[] numbers = {3, 5, 1, 7, 9};
 
-        // Save the last element since it will wrap around to the front
+        // Save last element, shift others right, put last at front
         int last = numbers[numbers.length - 1];
 
-        // Shift each element to the right by 1 position
+        // Shift starting from the back to avoid overwriting data
         for (int i = numbers.length - 1; i > 0; i--) {
             numbers[i] = numbers[i - 1];
         }
 
-        // Place the last element in the first position
         numbers[0] = last;
-
-        System.out.println("Shifted right by 1: " + Arrays.toString(numbers));
+        System.out.println("Shifted right: " + Arrays.toString(numbers));
     }
 }
   {% endhighlight %}
   
   <h3>10. Reverse the Order of the Elements</h3>
 
-   <h4>1. Using a Two-Pointer Technique </h4>
+   <h4>1. In-Place Swap (Two-Pointer Technique)</h4>
   {% highlight java %}
 import java.util.Arrays;
 
@@ -442,12 +432,14 @@ public class ReverseArray {
     public static void main(String[] args) {
         int[] numbers = {3, 5, 1, 7, 9};
 
+        // Loop only halfway through the array
         for (int i = 0; i < numbers.length / 2; i++) {
             int temp = numbers[i];
-            numbers[i] = numbers[numbers.length - 1 - i];
-            numbers[numbers.length - 1 - i] = temp;
+            int otherIndex = numbers.length - 1 - i;
+            numbers[i] = numbers[otherIndex];
+            numbers[otherIndex] = temp;
         }
-        System.out.println("Reversed (for loop): " + Arrays.toString(numbers));
+        System.out.println("Reversed in-place: " + Arrays.toString(numbers));
     }
 }
   {% endhighlight %}
@@ -456,23 +448,261 @@ public class ReverseArray {
   {% highlight java %}
 import java.util.Arrays;
 
-public class ReverseArray {
+public class ReverseArrayAux {
     public static void main(String[] args) {
-    
-        int[] numbers2 = {3, 5, 1, 7};
-        // Create a new array
-        int[] reversed = new int[numbers2.length];
+        int[] numbers = {3, 5, 1, 7};
+        int[] reversed = new int[numbers.length];
 
-        for (int i = 0; i < numbers2.length; i++) {
-            reversed[i] = numbers2[numbers2.length - 1 - i];
+        for (int i = 0; i < numbers.length; i++) {
+            reversed[i] = numbers[numbers.length - 1 - i];
         }
 
-        System.out.println("Reversed array: " + Arrays.toString(reversed));
+        System.out.println("Reversed into new array: " + Arrays.toString(reversed));
     }
 }
   {% endhighlight %}
-  
 </details>
+
+
+
+<details>
+  <summary>2D Array Algorithms with Different Loop Versions</summary>
+
+  <h3>Setup: A Sample 2D Array</h3>
+  {% highlight java %}
+public class TwoDArrayAlgorithms {
+    public static void main(String[] args) {
+        int[][] grid = {
+            {3,  5,  1,  7},
+            {9,  2,  6,  4},
+            {8, 10, 12, 11}
+        };
+
+        // Standard way to print a 2D array in AP CSA
+        for (int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[r].length; c++) {
+                System.out.print(grid[r][c] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+  {% endhighlight %}
+
+  <h3>1. Determine the Minimum or Maximum Value</h3>
+
+  <h4>Find Maximum Value in the Entire 2D Array</h4>
+  {% highlight java %}
+public class MaxIn2D {
+    public static void main(String[] args) {
+        int[][] grid = {{3, 5, 1}, {9, 2, 6}, {8, 10, 12}};
+
+        int max = grid[0][0];
+        // Nested for loops
+        for (int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[r].length; c++) {
+                if (grid[r][c] > max) {
+                    max = grid[r][c];
+                }
+            }
+        }
+        System.out.println("Max: " + max);
+
+        // Nested enhanced for loops
+        max = grid[0][0];
+        for (int[] row : grid) {
+            for (int val : row) {
+                if (val > max) {
+                    max = val;
+                }
+            }
+        }
+    }
+}
+  {% endhighlight %}
+
+  <h4>Find Maximum Value in a Designated Column</h4>
+  {% highlight java %}
+public class MaxInColumn {
+    public static void main(String[] args) {
+        int[][] grid = {{3, 5, 1}, {9, 2, 6}, {8, 10, 12}};
+        int targetCol = 1; 
+
+        // Columns require standard for loops to traverse rows at a fixed C
+        int max = grid[0][targetCol];
+        for (int r = 1; r < grid.length; r++) {
+            if (grid[r][targetCol] > max) {
+                max = grid[r][targetCol];
+            }
+        }
+        System.out.println("Max in col " + targetCol + ": " + max);
+    }
+}
+  {% endhighlight %}
+
+  <h3>2. Compute a Sum or Average</h3>
+
+  <h4>Compute Average of a Subsection (Rectangle)</h4>
+  {% highlight java %}
+public class AverageSubsection {
+    public static void main(String[] args) {
+        int[][] grid = {{3, 5, 1, 7}, {9, 2, 6, 4}, {8, 10, 12, 11}};
+
+        int r0 = 0, r1 = 1; // row bounds
+        int c0 = 1, c1 = 3; // col bounds
+        int sum = 0;
+        int count = 0;
+
+        for (int r = r0; r <= r1; r++) {
+            for (int c = c0; c <= c1; c++) {
+                sum += grid[r][c];
+                count++;
+            }
+        }
+
+        double avg = (double) sum / count;
+        System.out.println("Average of subsection: " + avg);
+    }
+}
+  {% endhighlight %}
+
+  <h3>3. Determine if At Least One Element Has a Property</h3>
+
+  <h4>Check if Any Element is Even (Entire 2D Array)</h4>
+  {% highlight java %}
+public class AnyEven2D {
+    public static void main(String[] args) {
+        int[][] grid = {{3, 5, 1}, {9, 2, 6}};
+        boolean found = false;
+
+        // Controlled by 'found' flag instead of break
+        for (int r = 0; r < grid.length && !found; r++) {
+            for (int c = 0; c < grid[r].length && !found; c++) {
+                if (grid[r][c] % 2 == 0) {
+                    found = true;
+                }
+            }
+        }
+        System.out.println("Has even: " + found);
+    }
+}
+  {% endhighlight %}
+
+  <h3>4. Determine the Number of Elements Meeting Criteria</h3>
+
+  <h4>Count Even Numbers in a Column</h4>
+  {% highlight java %}
+public class CountEvenCol {
+    public static void main(String[] args) {
+        int[][] grid = {{2, 5}, {4, 2}, {7, 10}};
+        int targetCol = 0;
+        int count = 0;
+
+        for (int r = 0; r < grid.length; r++) {
+            if (grid[r][targetCol] % 2 == 0) {
+                count++;
+            }
+        }
+        System.out.println("Evens in column: " + count);
+    }
+}
+  {% endhighlight %}
+
+  <h3>5. Access All Consecutive Pairs</h3>
+
+  <h4>Vertical Neighbors (Same Column, Consecutive Rows)</h4>
+  {% highlight java %}
+public class ConsecutiveVertical {
+    public static void main(String[] args) {
+        int[][] grid = {{3, 5}, {9, 2}, {8, 10}};
+
+        int cols = grid[0].length;
+        for (int c = 0; c < cols; c++) {
+            // Note: r < grid.length - 1 to avoid bounds error
+            for (int r = 0; r < grid.length - 1; r++) {
+                System.out.println("Vertical pair: " + grid[r][c] + " and " + grid[r + 1][c]);
+            }
+        }
+    }
+}
+  {% endhighlight %}
+
+  <h3>6. Determine Presence of Duplicates</h3>
+
+  <h4>Check for Duplicate Value in Entire 2D Array</h4>
+  {% highlight java %}
+public class DuplicateCheck2D {
+    public static void main(String[] args) {
+        int[][] grid = {{1, 2}, {3, 1}};
+        boolean hasDup = false;
+
+        // Compare every element (r1, c1) to every other element (r2, c2)
+        for (int r1 = 0; r1 < grid.length && !hasDup; r1++) {
+            for (int c1 = 0; c1 < grid[r1].length && !hasDup; c1++) {
+                
+                // Second nested pair to search the rest of the array
+                for (int r2 = 0; r2 < grid.length && !hasDup; r2++) {
+                    for (int c2 = 0; c2 < grid[r2].length && !hasDup; c2++) {
+                        // Ensure we aren't comparing an element to itself
+                        if (r1 != r2 || c1 != c2) {
+                            if (grid[r1][c1] == grid[r2][c2]) {
+                                hasDup = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("Has duplicate: " + hasDup);
+    }
+}
+  {% endhighlight %}
+
+  <h3>7. Shift or Rotate Elements</h3>
+
+  <h4>Shift a Column Down (Wrap-Around)</h4>
+  {% highlight java %}
+public class ShiftColumnDown {
+    public static void main(String[] args) {
+        int[][] grid = {{1, 2}, {3, 4}, {5, 6}};
+        int col = 0;
+
+        // Store the bottom element
+        int temp = grid[grid.length - 1][col];
+
+        // Shift elements down starting from the bottom
+        for (int r = grid.length - 1; r > 0; r--) {
+            grid[r][col] = grid[r - 1][col];
+        }
+
+        // Move stored element to top
+        grid[0][col] = temp;
+    }
+}
+  {% endhighlight %}
+
+  <h3>8. Reverse Elements</h3>
+
+  <h4>Reverse a Column In-Place</h4>
+  {% highlight java %}
+public class ReverseColumn {
+    public static void main(String[] args) {
+        int[][] grid = {{1, 0}, {2, 0}, {3, 0}, {4, 0}};
+        int col = 0;
+
+        for (int r = 0; r < grid.length / 2; r++) {
+            int temp = grid[r][col];
+            int oppositeRow = grid.length - 1 - r;
+            grid[r][col] = grid[oppositeRow][col];
+            grid[oppositeRow][col] = temp;
+        }
+    }
+}
+  {% endhighlight %}
+</details>
+
+
+
 
 <details>
   <summary>AP CSA Sorting Algorithms (AP CSA 排序算法)</summary>
