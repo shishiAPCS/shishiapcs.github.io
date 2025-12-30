@@ -38,7 +38,11 @@ public class TwoDArrayAlgorithms {
 {% highlight java %}
 public class MaxIn2D {
     public static void main(String[] args) {
-        int[][] grid = {{3, 5, 1}, {9, 2, 6}, {8, 10, 12}};
+        int[][] grid = {
+        {3, 5, 1}, 
+        {9, 2, 6}, 
+        {8, 10, 12}
+        };
 
         int max = grid[0][0]; // 初始化最大值为第一个元素
         
@@ -69,7 +73,11 @@ public class MaxIn2D {
 {% highlight java %}
 public class MaxInColumn {
     public static void main(String[] args) {
-        int[][] grid = {{3, 5, 1}, {9, 2, 6}, {8, 10, 12}};
+        int[][] grid = {
+        {3, 5, 1}, 
+        {9, 2, 6}, 
+        {8, 10, 12}
+        };
         int targetCol = 1; // 目标列索引
 
         // 查找某一列时，列索引固定，行索引变化
@@ -90,7 +98,11 @@ public class MaxInColumn {
 {% highlight java %}
 public class AverageSubsection {
     public static void main(String[] args) {
-        int[][] grid = {{3, 5, 1, 7}, {9, 2, 6, 4}, {8, 10, 12, 11}};
+        int[][] grid = {
+        {3, 5, 1, 7}, 
+        {9, 2, 6, 4}, 
+        {8, 10, 12, 11}
+        };
 
         int r0 = 0, r1 = 1; // 行范围 [0, 1]
         int c0 = 1, c1 = 3; // 列范围 [1, 3]
@@ -117,7 +129,10 @@ public class AverageSubsection {
 {% highlight java %}
 public class AnyEven2D {
     public static void main(String[] args) {
-        int[][] grid = {{3, 5, 1}, {9, 2, 6}};
+        int[][] grid = {
+        {3, 5, 1}, 
+        {9, 2, 6}
+        };
         boolean found = false;
 
         // 使用 !found 标志位控制循环，避免使用 break
@@ -139,7 +154,11 @@ public class AnyEven2D {
 {% highlight java %}
 public class CountEvenCol {
     public static void main(String[] args) {
-        int[][] grid = {{2, 5}, {4, 2}, {7, 10}};
+        int[][] grid = {
+        {2, 5}, 
+        {4, 2}, 
+        {7, 10}
+        };
         int targetCol = 0;
         int count = 0;
 
@@ -159,7 +178,11 @@ public class CountEvenCol {
 {% highlight java %}
 public class ConsecutiveVertical {
     public static void main(String[] args) {
-        int[][] grid = {{3, 5}, {9, 2}, {8, 10}};
+        int[][] grid = {
+        {3, 5}, 
+        {9, 2}, 
+        {8, 10}
+        };
 
         int cols = grid[0].length;
         for (int c = 0; c < cols; c++) {
@@ -178,7 +201,10 @@ public class ConsecutiveVertical {
 {% highlight java %}
 public class DuplicateCheck2D {
     public static void main(String[] args) {
-        int[][] grid = {{1, 2}, {3, 1}};
+        int[][] grid = {
+        {1, 2}, 
+        {3, 1}
+        };
         boolean hasDup = false;
 
         // 将每个位置 (r1, c1) 与其他所有位置 (r2, c2) 进行比较
@@ -208,7 +234,11 @@ public class DuplicateCheck2D {
 {% highlight java %}
 public class ShiftColumnDown {
     public static void main(String[] args) {
-        int[][] grid = {{1, 2}, {3, 4}, {5, 6}};
+        int[][] grid = {
+        {1, 2}, 
+        {3, 4}, 
+        {5, 6}
+        };
         int col = 0;
 
         // 1. 暂存最底部的元素
@@ -231,7 +261,12 @@ public class ShiftColumnDown {
 {% highlight java %}
 public class ReverseColumn {
     public static void main(String[] args) {
-        int[][] grid = {{1, 0}, {2, 0}, {3, 0}, {4, 0}};
+        int[][] grid = {
+        {1, 0}, 
+        {2, 0}, 
+        {3, 0}, 
+        {4, 0}
+        };
         int col = 0;
 
         // 交换该列的上半部分和下半部分
