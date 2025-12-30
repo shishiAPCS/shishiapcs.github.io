@@ -36,7 +36,7 @@ public class ArrayAlgorithms {
 }
   {% endhighlight %}
   
-  <h3>2. 计算总和与平均数 (Sum/Average)</h3>
+<h3>2. 计算总和与平均数 (Sum/Average)</h3>
   
   <h4>计算平均数 (需注意精度转换)</h4>
   {% highlight java %}
