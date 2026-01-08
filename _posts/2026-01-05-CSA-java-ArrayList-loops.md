@@ -1,7 +1,9 @@
+---
 title: "AP CSA ArrayList 必考算法"
 mathjax: true
 layout: post
 categories: media
+render_with_liquid: false
 ---
 
 <p>这篇是 <strong>AP CSA ArrayList</strong> 最常考的“算法模板”合集。每一题基本都能套其中一种（或两种组合）。</p>
@@ -9,15 +11,17 @@ categories: media
 
 <h3>0. 基础提醒：ArrayList 常用 API（考试必背）</h3>
 <ul>
-  <li><code>list.size()</code>：元素个数</li>
-  <li><code>list.get(i)</code>：读取第 i 个元素</li>
-  <li><code>list.set(i, value)</code>：修改第 i 个元素</li>
-  <li><code>list.add(value)</code>：末尾添加</li>
-  <li><code>list.add(i, value)</code>：在 i 位置插入（原 i 及后面整体右移）</li>
-  <li><code>list.remove(i)</code>：删除 i 位置元素（后面整体左移）</li>
+  <li><code>list.size()</code>：元素个数（返回值：<code>int</code>）</li>
+  <li><code>list.get(i)</code>：读取第 i 个元素（返回值：<code>E</code>，也就是列表里存的元素类型，比如 <code>Integer</code>/<code>String</code>）</li>
+  <li><code>list.set(i, value)</code>：修改第 i 个元素（返回值：<code>E</code>，返回“被替换掉的旧元素”）</li>
+  <li><code>list.add(value)</code>：末尾添加（返回值：<code>boolean</code>，通常是 <code>true</code>）</li>
+  <li><code>list.add(i, value)</code>：在 i 位置插入（原 i 及后面整体右移）（返回值：<code>void</code>）</li>
+  <li><code>list.remove(i)</code>：删除 i 位置元素（后面整体左移）（返回值：<code>E</code>，返回“被删除的元素”）</li>
 </ul>
 
+
 <hr>
+
 
 <h3>1. 插入元素 (Insert Elements)</h3>
 <p>常见场景：按位置插入、按规则插入到有序列表。</p>
