@@ -119,7 +119,11 @@ public class RemoveFirstMatch {
 
         boolean removed = false;
         for (int i = 0; i < list.size() && !removed; i++) {
-            if (list.get(i).startsWith("do")) {
+            String s = list.get(i);
+
+            // AP CSA 范围内替代 startsWith("do")
+            // 条件：字符串长度至少为 2，且前两个字符等于 "do"
+            if (s.length() >= 2 && s.substring(0, 2).equals("do")) {
                 list.remove(i);
                 removed = true;
             }
