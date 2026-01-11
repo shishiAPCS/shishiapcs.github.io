@@ -383,3 +383,69 @@ I’d say **fewer but clearer rules**. **Simplicity works best**—like how **St
 **Key Vocabulary:** fewer but clearer rules • simplicity works best • feel controlled • healthy learning environment
 
 ---
+
+Got it 👍 I’ll **revise your answers into natural, IELTS-style American English**, clean up the structure, and **match the exact format** you showed (headings, questions, polished answers, and key vocabulary).
+I’ll focus on **Part 1 – The Area You Live In**.
+
+---
+
+## Home & Accommodation / The Area You Live In
+
+### 1. Do you like the area you live in?
+
+I wouldn’t say I *love* it, but it’s **pretty decent overall**. The biggest advantage is that it’s very **convenient**—it’s close to the **Second Ring Road**, so transportation is easy. The downside is that it’s **quite noisy** because my apartment is near a **major road**, so traffic can be loud, especially during rush hour.
+
+**Key Vocabulary:** pretty decent • convenient location • major road • downside • traffic noise • rush hour
+
+---
+
+### 2. Where do you like to go in that area?
+
+My favorite place nearby is a **park close to my apartment**. It’s less than a **10-minute walk**, which makes it really convenient. The park is **quiet and peaceful**, with lots of **greenery**, so it’s a great place for me to **relax and clear my mind**.
+
+**Key Vocabulary:** within walking distance • peaceful • greenery • clear my mind • nearby park
+
+---
+
+### 3. Do you know any famous people in your area?
+
+I don’t know anyone personally, but I do know that **a lot of online influencers live nearby**. There’s actually a whole building where people are **live streaming every day**, and I often see them **recording videos** when I pass by.
+
+**Key Vocabulary:** influencers • live streaming • content creation • in person • record videos
+
+---
+
+### 4. What changes have there been in your area recently?
+
+Recently, the **entire building went through exterior renovations**. The outer walls were redone, and now the building looks **brand new**. That’s definitely the **most noticeable change** in the area.
+
+**Key Vocabulary:** renovation • exterior wall • brand new • noticeable change • recently
+
+---
+
+### 5. Do you know any of your neighbors?
+
+Unfortunately, I don’t really know my neighbors very well. Most of the people living near me are **renting**, so **residents change quite often**. Because of that, I don’t really get the chance to know them before they move out.
+
+**Key Vocabulary:** renters • residents • move out • change frequently • get to know
+
+---
+
+### 6. Are the people in your neighborhood friendly?
+
+I’d say people here are **generally polite but distant**. We usually **smile or nod** at each other in the elevator, but we don’t really have conversations. I guess that’s one of the **downsides of city living**—people tend to feel more **isolated**.
+
+**Key Vocabulary:** generally polite • distant • small gestures • downside of city living • isolated
+
+---
+
+### 7. Do you live in a noisy or quiet place?
+
+It’s kind of a **mix of both**. My apartment has four rooms—two of them face the **main road**, so they’re quite noisy, while the other two face the **opposite side** and are much quieter. Overall, it’s **manageable**.
+
+**Key Vocabulary:** mix of both • face the road • noisy vs. quiet • manageable • apartment layout
+
+---
+
+
+
