@@ -206,7 +206,7 @@ No, not really. I’ve grown comfortable in my role, and it gives me a healthy b
 
 ### 1\. Where is your hometown?
 
-It’s in the **southwest of China—Sichuan**—famous as the **home of the giant panda**. The city sits in a **mountain basin**, which made it hard to reach in the past and kept it relatively safe from invasions. That geography still shapes our **mild climate** and laid-back rhythm.
+I’m from Chengdu. It’s well known for pandas and a super laid-back vibe. Since it’s in a basin, the city was more protected in the past, and that also influenced the climate and the slow, relaxed way people live.
 
 **Key Vocabulary:** home of the giant panda • mountain basin • hard to reach • safe from invasions • mild climate • laid-back rhythm
 
@@ -214,9 +214,9 @@ It’s in the **southwest of China—Sichuan**—famous as the **home of the gia
 
 ### 2\. How long have you been living there?
 
-**All my life.** I grew up in a **mountain village** and moved to the **provincial capital** after high school. Most of my adult milestones—university, first job, starting a family—have happened here, so I’m pretty rooted.
+I’ve been living here for over ten years. I moved here after graduating from college, settled down, bought an apartment, got married, and now I have two kids.
 
-**Key Vocabulary:** mountain village • provincial capital • adult milestones • starting a family • rooted here
+**Key Vocabulary:** provincial capital • adult milestones • starting a family • rooted here
 
 * * *
 
