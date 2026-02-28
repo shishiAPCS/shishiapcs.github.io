@@ -485,74 +485,131 @@ Let’s keep practicing, growing, and having fun together.
 ---
 ---
 
-## ESL口语所需要的能力
+## ESL雅思口语所需要的能力
 
 <div class="markmap-container">
 <div class="markmap">
 <script type="text/template">
 
-# English Speaking Competency Map <br> 英语口语能力成长图谱  
+# IELTS Speaking Competency Framework Mind Map <br> 雅思口语能力思维导图
 
 ---
 
-## Core Speaking Competencies (For All Exams & Real-Life Use) <br> 核心通用口语能力（适用于所有考试及真实交流）  
+## Fluency & Coherence <br> 流利度与连贯性
 
-### Express ideas clearly and effectively <br> 清晰、有效地表达想法  
-#### Share opinions and support with reasons <br> 表达观点并用理由支撑  
-#### Describe details and tell personal stories <br> 描述细节，讲述个人经历  
-#### Analyze and discuss topics logically <br> 有逻辑地分析与讨论话题  
+### Response Structure (Answer Logic) <br> 回答结构（逻辑骨架）
 
-### Use appropriate language and structures <br> 使用恰当的语言与句型  
-#### Use a wide range of vocabulary accurately <br> 准确运用多样词汇  
-#### Paraphrase naturally to avoid repetition <br> 自然地换句表达，避免重复  
-#### Construct both simple and complex sentences smoothly <br> 灵活运用简单句与复杂句  
+#### Direct answer first <br> 第一 句话 先直接回答
 
-### Speak with clear and natural pronunciation <br> 发音清晰自然，语音自然流畅  
-#### Use correct intonation, stress, and rhythm <br> 正确掌握语调、重音与语速节奏  
-#### Be easily understood by listeners <br> 让听者轻松理解，沟通顺畅  
+#### Support with concrete detail <br> 用具体细节支撑（例子/情境）
 
-### Maintain interactive communication <br> 维持良好互动交流  
-#### Ask and answer questions effectively <br> 有效提出与回答问题  
-#### Self-correct or rephrase when needed <br> 需要时能自我修正或重新表达  
-#### Keep conversations flowing smoothly <br> 保持对话自然流畅，积极交流  
+#### Develop ideas in two layers <br> 二层展开（不止停在例子层）
 
----
+##### Example → meaning/impact/result <br> 例子 → 意义/影响/结果
 
-## Exam-Specific Speaking Competencies <br> 考试专项口语能力  
+### Cohesive Flow (Connection) <br> 连贯衔接（让信息“顺”起来）
 
-### TOEFL-Specific Competencies <br> 托福专项口语能力  
+#### Use natural linking (not forced) <br> 自然连接（不生硬）
 
-#### Task 1: Express Personal Opinions Clearly <br> Task 1：清晰表达个人观点  
-##### Provide clear opinions with reasons and examples <br> 用清楚的理由与例子表达观点  
-##### Organize ideas logically and stay focused <br> 有逻辑地组织观点，保持重点清晰  
+##### sequencing / cause-effect / contrast / concession <br> 顺序 / 因果 / 对比 / 让步
 
-#### Task 2, 3, 4: Academic Integration Skills <br> Task 2, 3, 4：学术整合表达能力  
-##### Understand and summarize academic readings and lectures <br> 理解并总结学术阅读与讲座内容  
-##### Identify key points, reasons, and relationships <br> 提取关键信息、理由与关系  
-##### Take effective notes to capture main ideas <br> 做有效笔记，记录核心要点  
-##### Integrate reading and listening into coherent spoken responses <br> 整合听力与阅读内容，口头表达连贯  
+#### Keep ideas logically ordered <br> 信息排列有条理（先后清晰、层级清楚）
+
+### Delivery Control (Smoothness) <br> 表达控制（流畅度）
+
+#### Speak at length with minimal hesitation <br> 持续输出、卡顿少（Part 2尤其关键）
+
+#### Chunk sentences naturally <br> 自然分组表达句子（提升流畅与听感）
 
 ---
 
-### IELTS-Specific Competencies <br> 雅思专项口语能力  
+## Lexical Resource <br> 词汇能力
 
-#### Part 1: Everyday Conversation Skills <br> Part 1：日常对话能力  
-##### Answer questions naturally and confidently on familiar topics <br> 在熟悉话题中自然、自信地作答  
-##### Use appropriate greetings, expressions, and small talk strategies <br> 使用恰当的问候语、表达和寒暄技巧  
+### Flexibility (Say it another way) <br> 表达灵活性（会“换说法”）
 
-#### Part 2: Extended Speech and Storytelling <br> Part 2：长时间表达与讲述能力  
-##### Speak at length with minimal hesitation <br> 长时间连贯表达，几乎无停顿  
-##### Organize stories with clear structure and vivid details <br> 结构清晰，细节生动地讲述故事  
-##### Keep answers well-connected and logically ordered <br> 回答有条理，逻辑性强  
+#### Paraphrase the question naturally <br> 自然改写问题表达
 
-#### Part 3: Advanced Discussion and Critical Thinking <br> Part 3：深入讨论与批判性思维能力  
-##### Discuss abstract and complex topics with depth <br> 深入讨论抽象与复杂话题  
-##### Express nuanced opinions and justify viewpoints clearly <br> 清晰表达的多角度的观点，合理阐释理由 
-###### “Nuanced opinions” mean viewpoints that consider multiple sides, details, or conditions. <br> “多角度的观点”指的是能考虑多个角度、细节或特定条件的观点。
-###### Non-nuanced opinion <br> 没有细节的、很片面的观点：<br> I think social media is bad because people waste time on it. <br> 我认为社交媒体不好，因为人们浪费时间。
-###### Nuanced opinion <br> 有细节、有层次的观点：<br> While social media can waste time, it also helps people connect with others and stay informed. The impact really depends on how individuals use it. <br>  虽然社交媒体确实会浪费时间，但它也能让人们保持联系、了解信息。关键在于个人的使用方式。
-##### Use advanced grammar and varied sentence patterns flexibly <br> 灵活运用高阶语法与多样句型  
-##### Handle hypothetical questions and challenging topics effectively <br> 灵活应对假设问题与高难度话题  
+#### Avoid unnecessary repetition <br> 避免不必要的重复（词汇/句式/观点）
+
+### Precision & Nuance (Meaning Control) <br> 精准与细腻（表达“分寸”）
+
+#### Use qualification language (avoid absolutes) <br> 使用限定性表达（避免绝对化）
+
+##### to some extent / it depends / in most cases / generally speaking <br> 在某种程度上 / 视情况而定 / 大多数情况下 / 总体来说
+
+### Appropriacy (Fit the situation) <br> 得体性（符合语境与语气）
+
+#### Use natural, conversation-appropriate wording <br> 更口语、更自然（Part 1尤其关键）
+
+---
+
+## Grammatical Range & Accuracy <br> 语法范围与准确性
+
+### Accuracy Foundation (Stability) <br> 基础稳定（不乱）
+
+#### Control basic tense consistency <br> 控制基本时态一致性
+
+#### Produce 2–3 “error-free anchor sentences” <br> 每个回答稳定输出2–3句“零错误锚定句”
+
+### Range & Compression (Say more with structure) <br> 句型范围与信息压缩（更高级、更紧凑）
+
+#### Use relative clauses naturally <br> 自然使用定语从句（信息更紧凑、更清楚）
+
+#### Use varied sentence patterns when needed <br> 需要时能切换多样句型（Part 3更常用）
+
+### Pressure Handling (Maintain grammar under difficulty) <br> 难题抗压（越难越稳）
+
+#### Keep grammar stable in abstract / hypothetical discussion <br> 抽象/假设讨论也不乱
+
+##### Maintain tense + keep sentences controlled <br> 时态稳定 + 句子可控
+
+---
+
+## Pronunciation <br> 发音能力
+
+### Intelligibility (Be easy to understand) <br> 清晰可懂（核心目标）
+
+#### Use correct word stress <br> 掌握正确单词重音（更容易听懂）
+
+#### Chunking for clarity <br> 用分组表达提升清晰度（语义块）
+
+### Rhythm & Naturalness (Sound natural) <br> 节奏与自然度（更像“说话”）
+
+#### Natural sentence stress + pausing <br> 句子重音与停顿更自然（不一口气、不乱停）
+
+### Clarity under pressure <br> 高压清晰度（Part 3/难题）
+
+#### Keep stress + chunking even when topics are hard <br> 越难越要靠“重音 + 分组”保清楚
+
+---
+
+## Part-Specific Focus Layer <br> 分题型聚焦层
+
+### Part 1: Everyday Conversation <br> Part 1：日常对话
+
+#### Fast structure: direct answer → 1 support detail <br> 快速结构：直接回答 → 一个支撑细节
+
+#### Natural paraphrase + light linking <br> 自然改写 + 轻连接（别堆连接词）
+
+#### Appropriacy + confidence <br> 得体自然 + 有自信的口语表达
+
+### Part 2: Extended Speech / Storytelling <br> Part 2：长答与讲述
+
+#### Speak at length smoothly (hesitation control) <br> 持续输出、少停顿
+
+#### Clear organization (timeline / scene / idea flow) <br> 结构清晰（时间线/场景线/观点线）
+
+#### Detail + second-layer development <br> 细节支撑 + 二层展开（避免流水账）
+
+### Part 3: Advanced Discussion <br> Part 3：深入讨论
+
+#### Second-layer development + logical linking <br> 二层展开 + 逻辑连接（因果/对比/让步）
+
+#### Nuance via qualification language <br> 用限定表达形成“多角度/有条件”的观点
+
+#### Grammar stability under abstraction / hypotheticals <br> 抽象与假设中保持语法稳定
+
+#### Pronunciation clarity under pressure <br> 难题下仍清晰（重音+分组不崩）
 
 </script>
 </div>
