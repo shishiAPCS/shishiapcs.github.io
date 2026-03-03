@@ -9,7 +9,7 @@ title: "AP CSA"
 <script>
   (function(){
     // Target date: set month/day/year/time
-    const targetDate = new Date("May 8, 2026 08:00:00").getTime();
+    const targetDate = new Date("May 15, 2026 08:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -132,13 +132,16 @@ Let’s build something great together.
 
 ---
 
-  - 考试时间：Wed, May 7, 2026
+  - 考试时间：Wed, May 15, 2026
   - [课堂规则](https://shishiapcs.github.io/CSA-Class-Rules/)
   - [课前需注册服务](https://shishiapcs.github.io/CSA-New-Semester/)
   - [主教材 runestone.academy](https://runestone.academy/)
   - [AP 分数计算器](https://examstrategist.com/ap-computer-science-a-score-calculator/)
   - [CSA 考试详情页](https://apstudents.collegeboard.org/courses/ap-computer-science-a)
-  - [CodingBat](https://codingbat.com/java) 
+  - [CodingBat](https://codingbat.com/java)
+  - [Binary-Search-Visualizer](https://shishiapcs.github.io/csa/binary-search-visualizer.html)
+  - [Selection-Sort-visualizer](https://shishiapcs.github.io/csa/selection-sort-visualizer.html)
+  - [Insertion-Sort-Visualizer](https://shishiapcs.github.io/csa/insertion-sort-visualizer.html)
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
