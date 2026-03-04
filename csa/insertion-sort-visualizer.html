@@ -167,7 +167,7 @@
         /* Logic Coloring */
         .box.sorted { background: var(--sorted-bg); border-color: var(--sorted-border); }
         .box.sorted::after { content: '✓'; position: absolute; top: 2px; right: 2px; font-size: 0.6rem; color: var(--sorted-border); }
-        
+
         .box.j-ptr { border-color: var(--primary); border-width: 3px; }
         .box.p-ptr { border-color: var(--secondary); border-width: 3px; }
         .box.shifting { background: var(--accent); color: white; transform: translateX(35px); border-color: #b45309; z-index: 10; }
@@ -244,12 +244,140 @@
         @media (max-width: 768px) {
             .status-panel { grid-template-columns: 1fr; }
         }
+
+        /* =========================================================
+           LIVE WORKING CODE PANEL (Added) — does NOT alter your UI
+           ========================================================= */
+
+        .livecode-legend {
+            font-size: 0.75rem;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            margin: 8px 0 10px;
+            flex-wrap: wrap;
+        }
+        .livecode-legend .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .livecode-legend .bar {
+            width: 14px;
+            height: 10px;
+            border-left: 3px solid transparent;
+            border-radius: 2px;
+            background: rgba(255,255,255,0.04);
+        }
+        .livecode-legend .bar.current {
+            border-left-color: var(--accent);
+            background: rgba(245,158,11,0.25);
+        }
+        .livecode-legend .bar.prev {
+            border-left-color: #64748b;
+            background: rgba(255,255,255,0.06);
+        }
+        .livecode-legend label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            user-select: none;
+        }
+        .livecode-legend input[type="checkbox"]{
+            transform: translateY(1px);
+        }
+
+        .livecode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #334155;
+            padding: 8px 12px;
+            border-radius: 8px 8px 0 0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            border-bottom: none;
+            margin-top: 8px;
+        }
+        .livecode-header .vars {
+            display: flex;
+            gap: 14px;
+            color: #60a5fa;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .livecode-container {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            max-height: 260px;
+            overflow-y: auto;
+            border: 1px solid #334155;
+            margin-bottom: 18px;
+        }
+        .livecode-line {
+            display: block;
+            white-space: pre;
+            padding: 0 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+        }
+        .livecode-line.active {
+            background: rgba(245, 158, 11, 0.28);
+            border-left-color: var(--accent);
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .livecode-line.previous {
+            background: rgba(255, 255, 255, 0.06);
+            border-left-color: #64748b;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Insertion Sort Visualizer</h1>
+
+    <!-- LIVE WORKING CODE PANEL (Inserted directly below title) -->
+    <div class="livecode-legend">
+        <span class="chip"><span class="bar current"></span> Current line</span>
+        <span class="chip"><span class="bar prev"></span> Previous line</span>
+        <label><input type="checkbox" id="followLiveCode" checked> Follow code</label>
+        <label><input type="checkbox" id="showPrevLine" checked> Show previous</label>
+    </div>
+
+    <div class="livecode-header">
+        <span>pseudocode.java</span>
+        <div class="vars">
+            <span>j: <span id="lc-j">-</span></span>
+            <span>p: <span id="lc-p">-</span></span>
+            <span>temp: <span id="lc-temp">-</span></span>
+        </div>
+    </div>
+    <div class="livecode-container" id="liveCodePanel" aria-label="Live code panel">
+        <span class="livecode-line" data-lc="for-start">for (int j = 1; j < n; j++) {</span>
+        <span class="livecode-line" data-lc="set-temp">    int temp = elements[j];</span>
+        <span class="livecode-line" data-lc="set-p">    int p = j;</span>
+        <span class="livecode-line" data-lc="while-check">    while (p &gt; 0 &amp;&amp; temp &lt; elements[p-1]) {</span>
+        <span class="livecode-line" data-lc="shift">        elements[p] = elements[p-1];</span>
+        <span class="livecode-line" data-lc="dec-p">        p--;</span>
+        <span class="livecode-line" data-lc="end-while">    }</span>
+        <span class="livecode-line" data-lc="insert">    elements[p] = temp;</span>
+        <span class="livecode-line" data-lc="end-for">}</span>
+        <span class="livecode-line" data-lc="done">// done ✅</span>
+    </div>
+    <!-- END LIVE WORKING CODE PANEL -->
 
     <div class="controls-grid">
         <div class="input-group">
@@ -349,6 +477,74 @@
 
     window.onload = loadDefault;
 
+    /* ---------------------------
+       LIVE CODE PANEL (Added)
+       --------------------------- */
+
+    function setLiveVars() {
+        // Keep this panel independent from your existing stats panel.
+        document.getElementById('lc-j').innerText = (state.phase === 'FINISHED') ? 'done' : state.j;
+        document.getElementById('lc-p').innerText = (state.temp === null) ? '-' : state.p;
+        document.getElementById('lc-temp').innerText = (state.temp === null) ? '-' : state.temp;
+    }
+
+    function setLiveHighlight(activeId, previousId = null) {
+        const showPrev = document.getElementById('showPrevLine')?.checked ?? true;
+        const follow = document.getElementById('followLiveCode')?.checked ?? true;
+
+        const lines = document.querySelectorAll('.livecode-line');
+        lines.forEach(line => {
+            line.classList.remove('active', 'previous');
+        });
+
+        // Apply previous (optional)
+        if (previousId && showPrev) {
+            const prev = document.querySelector(`.livecode-line[data-lc="${previousId}"]`);
+            if (prev) prev.classList.add('previous');
+        }
+
+        // Apply active
+        const active = document.querySelector(`.livecode-line[data-lc="${activeId}"]`);
+        if (active) {
+            active.classList.add('active');
+            if (follow) {
+                active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    }
+
+    function syncLiveCodeToPhase() {
+        // Map YOUR phases to code lines.
+        // Note: Some of your steps do multiple operations in one phase.
+        // We highlight the "last executed" as active and "earlier" as previous.
+        switch (state.phase) {
+            case 'START_PASS':
+                // In your code you do: temp = elements[j]; p = j; then phase -> EVAL_WHILE
+                setLiveHighlight('set-p', 'set-temp');
+                break;
+            case 'EVAL_WHILE':
+                setLiveHighlight('while-check');
+                break;
+            case 'SHIFT':
+                // In your code you do: elements[p] = elements[p-1]; p--;
+                setLiveHighlight('dec-p', 'shift');
+                break;
+            case 'INSERT':
+                setLiveHighlight('insert');
+                break;
+            case 'NEXT_J':
+                // Not a separate line in the Java pseudocode above; use end-for as a "pass boundary".
+                setLiveHighlight('end-for');
+                break;
+            case 'FINISHED':
+                setLiveHighlight('done', 'end-for');
+                break;
+            default:
+                setLiveHighlight('for-start');
+        }
+        setLiveVars();
+    }
+
     function generateNew() {
         const size = parseInt(document.getElementById('arrSize').value) || 10;
         const min = parseInt(document.getElementById('minVal').value) || -20;
@@ -389,6 +585,10 @@
         };
         updateStatus("Array reset. Ready to start outer loop at index 1.");
         render();
+        // Live code panel sync (Added)
+        setLiveHighlight('for-start');
+        setLiveVars();
+        syncLiveCodeToPhase();
     }
 
     function render() {
@@ -408,7 +608,7 @@
         currentArray.forEach((val, idx) => {
             const wrapper = document.createElement('div');
             wrapper.className = 'element-wrapper';
-            
+
             const box = document.createElement('div');
             box.className = 'box';
             box.innerText = val;
@@ -444,11 +644,6 @@
                 box.classList.add('hole');
             }
 
-            // The element being evaluated for shift (the one left of p)
-            if (state.phase === 'SHIFT' && idx === state.p) {
-               // Visual shift is handled by CSS class 'shifting' on the source index
-            }
-
             // Pointer Labels (Bottom)
             let labels = [];
             if (state.phase !== 'FINISHED') {
@@ -470,11 +665,6 @@
             wrapper.appendChild(box);
             wrapper.appendChild(iDiv);
             container.appendChild(wrapper);
-
-            // Special handling for the shifting animation
-            // In 'SHIFT' phase, we just "did" the shift, but we want to show
-            // the element at index p-1 visually moving into index p.
-            // For simplicity in this vanilla implementation, we'll highlight the source.
         });
 
         // Update Stats UI
@@ -485,8 +675,11 @@
         document.getElementById('statShifts').innerText = state.shifts;
         document.getElementById('statInserts').innerText = state.inserts;
         document.getElementById('statPass').innerText = state.passes;
-        
+
         document.getElementById('btnStep').disabled = (state.phase === 'FINISHED');
+
+        // Live code panel vars stay synced even during render-only updates
+        setLiveVars();
     }
 
     function updateStatus(msg) {
@@ -503,6 +696,8 @@
                     updateStatus("<strong>Finished!</strong> The array is fully sorted.");
                     render();
                     stopPlay();
+                    // Live code sync (Added)
+                    syncLiveCodeToPhase();
                     return;
                 }
                 state.temp = currentArray[state.j];
@@ -511,19 +706,26 @@
                 updateStatus(`<strong>Outer Loop (j=${state.j}):</strong> Pick up <code>${state.temp}</code> into <b>temp</b>. Set <b>possibleIndex (p)</b> to ${state.j}.`);
                 document.getElementById('codeDisplay').innerHTML = `temp = elements[${state.j}]; // ${state.temp}<br>p = ${state.j};`;
                 state.phase = 'EVAL_WHILE';
+
+                // Live code sync (Added)
+                // This step executes set-temp and set-p; highlight last one as "current".
+                setLiveHighlight('set-p', 'set-temp');
                 break;
 
             case 'EVAL_WHILE':
                 const canCompare = state.p > 0;
                 let conditionMet = false;
-                
+
+                // Live code sync (Added)
+                setLiveHighlight('while-check');
+
                 if (canCompare) {
                     state.comparisons++;
                     const leftVal = currentArray[state.p - 1];
                     conditionMet = state.temp < leftVal;
-                    
+
                     document.getElementById('codeDisplay').innerHTML = `while (p > 0 && temp < elements[p-1])<br>while (${state.p} > 0 && ${state.temp} < ${leftVal}) // ${conditionMet ? 'TRUE' : 'FALSE'}`;
-                    
+
                     if (conditionMet) {
                         updateStatus(`Condition <b>TRUE</b>: <code>temp (${state.temp})</code> is less than <code>${leftVal}</code>. Prepare to shift.`);
                         state.phase = 'SHIFT';
@@ -546,6 +748,10 @@
                 state.shifts++;
                 document.getElementById('codeDisplay').innerHTML = `elements[p] = elements[p-1];<br>p--; // p is now ${state.p}`;
                 state.phase = 'EVAL_WHILE';
+
+                // Live code sync (Added)
+                // This step executes shift + dec-p; highlight last as current.
+                setLiveHighlight('dec-p', 'shift');
                 break;
 
             case 'INSERT':
@@ -554,6 +760,9 @@
                 state.inserts++;
                 document.getElementById('codeDisplay').innerHTML = `elements[p] = temp; // elements[${state.p}] = ${state.temp}`;
                 state.phase = 'NEXT_J';
+
+                // Live code sync (Added)
+                setLiveHighlight('insert', 'end-while');
                 break;
 
             case 'NEXT_J':
@@ -561,9 +770,18 @@
                 state.temp = null;
                 updateStatus(`End of pass. Increment <b>j</b> to ${state.j}.`);
                 state.phase = 'START_PASS';
+
+                // Live code sync (Added)
+                // There isn't a separate "j++" line in the displayed Java pseudocode,
+                // so we use end-for as the pass boundary marker.
+                setLiveHighlight('end-for');
                 break;
         }
         render();
+
+        // Ensure live vars reflect post-step state
+        setLiveVars();
+        if (state.phase === 'FINISHED') syncLiveCodeToPhase();
     }
 
     function togglePlay() {
@@ -575,7 +793,7 @@
         isPlaying = true;
         document.getElementById('btnPlay').innerText = "Pause";
         document.getElementById('btnPlay').classList.replace('btn-primary', 'btn-reset');
-        
+
         const run = () => {
             if (state.phase === 'FINISHED') {
                 stopPlay();
