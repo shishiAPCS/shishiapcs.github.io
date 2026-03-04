@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -184,12 +183,143 @@
         @media (max-width: 600px) {
             .status-panel { grid-template-columns: 1fr; }
         }
+
+        /* =========================================================
+           LIVE WORKING CODE PANEL (Added) — does NOT alter your UI
+           ========================================================= */
+
+        .livecode-legend {
+            font-size: 0.75rem;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            margin: 8px 0 10px;
+            flex-wrap: wrap;
+        }
+        .livecode-legend .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .livecode-legend .bar {
+            width: 14px;
+            height: 10px;
+            border-left: 3px solid transparent;
+            border-radius: 2px;
+            background: rgba(255,255,255,0.04);
+        }
+        .livecode-legend .bar.current {
+            border-left-color: #f59e0b;
+            background: rgba(245,158,11,0.25);
+        }
+        .livecode-legend .bar.prev {
+            border-left-color: #64748b;
+            background: rgba(255,255,255,0.06);
+        }
+        .livecode-legend label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            user-select: none;
+        }
+        .livecode-legend input[type="checkbox"]{
+            transform: translateY(1px);
+        }
+
+        .livecode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #334155;
+            padding: 8px 12px;
+            border-radius: 8px 8px 0 0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            border-bottom: none;
+            margin-top: 8px;
+        }
+        .livecode-header .vars {
+            display: flex;
+            gap: 14px;
+            color: #60a5fa;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .livecode-container {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            max-height: 260px;
+            overflow-y: auto;
+            border: 1px solid #334155;
+            margin-bottom: 18px;
+        }
+        .livecode-line {
+            display: block;
+            white-space: pre;
+            padding: 0 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+        }
+        .livecode-line.active {
+            background: rgba(245, 158, 11, 0.28);
+            border-left-color: #f59e0b;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .livecode-line.previous {
+            background: rgba(255, 255, 255, 0.06);
+            border-left-color: #64748b;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Selection Sort Visualizer</h1>
+
+    <!-- LIVE WORKING CODE PANEL (Inserted directly below title) -->
+    <div class="livecode-legend">
+        <span class="chip"><span class="bar current"></span> Current line</span>
+        <span class="chip"><span class="bar prev"></span> Previous line</span>
+        <label><input type="checkbox" id="followLiveCode" checked> Follow code</label>
+        <label><input type="checkbox" id="showPrevLine" checked> Show previous</label>
+    </div>
+
+    <div class="livecode-header">
+        <span>selectionSort.java</span>
+        <div class="vars">
+            <span>j: <span id="lc-j">-</span></span>
+            <span>k: <span id="lc-k">-</span></span>
+            <span>min: <span id="lc-min">-</span></span>
+        </div>
+    </div>
+    <div class="livecode-container" id="liveCodePanel" aria-label="Live code panel">
+        <span class="livecode-line" data-lc="outer-for">for (int j = 0; j &lt; n - 1; j++) {</span>
+        <span class="livecode-line" data-lc="init-min">    int minIndex = j;</span>
+        <span class="livecode-line" data-lc="init-k">    int k = j + 1;</span>
+        <span class="livecode-line" data-lc="compare">    // scan the rest of the array</span>
+        <span class="livecode-line" data-lc="if-check">    if (elements[k] &lt; elements[minIndex]) {</span>
+        <span class="livecode-line" data-lc="update-min">        minIndex = k;</span>
+        <span class="livecode-line" data-lc="end-if">    }</span>
+        <span class="livecode-line" data-lc="end-scan">    // repeat compare/update until k reaches end</span>
+        <span class="livecode-line" data-lc="swap-temp">    int temp = elements[j];</span>
+        <span class="livecode-line" data-lc="swap-j">    elements[j] = elements[minIndex];</span>
+        <span class="livecode-line" data-lc="swap-min">    elements[minIndex] = temp;</span>
+        <span class="livecode-line" data-lc="end-outer">}</span>
+        <span class="livecode-line" data-lc="done">// done ✅</span>
+    </div>
+    <!-- END LIVE WORKING CODE PANEL -->
 
     <div class="controls-grid">
         <div class="input-group">
@@ -279,6 +409,62 @@
     // Initial Load
     window.onload = loadDefault;
 
+    /* ---------------------------
+       LIVE CODE PANEL (Added)
+       --------------------------- */
+
+    function setLiveVars() {
+        document.getElementById('lc-j').innerText = (state.phase === 'FINISHED') ? 'done' : state.j;
+        document.getElementById('lc-k').innerText = (state.phase === 'COMPARE' || state.phase === 'UPDATE_MIN') ? state.k : '-';
+        document.getElementById('lc-min').innerText = (state.phase === 'FINISHED') ? '-' : state.minIndex;
+    }
+
+    function setLiveHighlight(activeId, previousId = null) {
+        const showPrev = document.getElementById('showPrevLine')?.checked ?? true;
+        const follow = document.getElementById('followLiveCode')?.checked ?? true;
+
+        const lines = document.querySelectorAll('.livecode-line');
+        lines.forEach(line => line.classList.remove('active', 'previous'));
+
+        if (previousId && showPrev) {
+            const prev = document.querySelector(`.livecode-line[data-lc="${previousId}"]`);
+            if (prev) prev.classList.add('previous');
+        }
+
+        const active = document.querySelector(`.livecode-line[data-lc="${activeId}"]`);
+        if (active) {
+            active.classList.add('active');
+            if (follow) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+
+    function syncLiveCodeToPhase() {
+        // Map YOUR phases to code lines (without changing your phases).
+        switch (state.phase) {
+            case 'START_PASS':
+                // this phase does: minIndex=j; k=j+1;
+                setLiveHighlight('init-k', 'init-min');
+                break;
+            case 'COMPARE':
+                setLiveHighlight('if-check', 'compare');
+                break;
+            case 'UPDATE_MIN':
+                // even when min doesn't change, this phase is your "decision/update" step
+                setLiveHighlight('update-min', 'if-check');
+                break;
+            case 'PRE_SWAP':
+                // your PRE_SWAP does the swap and increments j; highlight swap lines
+                setLiveHighlight('swap-min', 'swap-j');
+                break;
+            case 'FINISHED':
+                setLiveHighlight('done', 'end-outer');
+                break;
+            default:
+                setLiveHighlight('outer-for');
+        }
+        setLiveVars();
+    }
+
     function generateNew() {
         const size = parseInt(document.getElementById('arrSize').value) || 10;
         const min = parseInt(document.getElementById('minVal').value) || 0;
@@ -319,6 +505,11 @@
         };
         updateStatus("Array initialized. Press Step to begin.");
         render();
+
+        // Live code sync (Added)
+        setLiveHighlight('outer-for');
+        setLiveVars();
+        syncLiveCodeToPhase();
     }
 
     function render() {
@@ -335,14 +526,14 @@
 
             const wrapper = document.createElement('div');
             wrapper.className = 'element-wrapper';
-            
+
             const box = document.createElement('div');
             box.className = 'box';
             box.innerText = val;
 
             // Apply classes based on state
             if (idx < state.j) box.classList.add('sorted');
-            
+
             let labels = [];
             if (state.phase !== 'FINISHED') {
                 if (idx === state.j) {
@@ -382,8 +573,11 @@
         document.getElementById('statComp').innerText = state.comparisons;
         document.getElementById('statSwaps').innerText = state.swaps;
         document.getElementById('statPass').innerText = state.passes;
-        
+
         document.getElementById('btnStep').disabled = (state.phase === 'FINISHED');
+
+        // Live code vars stay synced even during render-only updates
+        setLiveVars();
     }
 
     function updateStatus(msg) {
@@ -400,6 +594,8 @@
                     updateStatus("<strong>Sorting Complete!</strong> The entire array is now sorted.");
                     render();
                     stopPlay();
+                    // Live code sync (Added)
+                    syncLiveCodeToPhase();
                     return;
                 }
                 state.minIndex = state.j;
@@ -407,6 +603,9 @@
                 state.passes++;
                 updateStatus(`<strong>Pass ${state.passes}:</strong> Starting with index j=${state.j}. Assume min is current value (${currentArray[state.j]}).`);
                 state.phase = 'COMPARE';
+
+                // Live code sync (Added)
+                setLiveHighlight('init-k', 'init-min');
                 break;
 
             case 'COMPARE':
@@ -415,19 +614,27 @@
                 updateStatus(`Comparing <code>arr[k]=${currentArray[state.k]}</code> with <code>arr[min]=${currentArray[state.minIndex]}</code>.
                              ${isSmaller ? "It is smaller!" : "It is not smaller."}`);
                 state.phase = 'UPDATE_MIN';
+
+                // Live code sync (Added)
+                setLiveHighlight('if-check', 'compare');
                 break;
 
             case 'UPDATE_MIN':
                 if (currentArray[state.k] < currentArray[state.minIndex]) {
                     state.minIndex = state.k;
                     updateStatus(`Updating <strong>minIndex</strong> to ${state.k}.`);
+                    // Live code: update-min is meaningful only when it actually updates
+                    setLiveHighlight('update-min', 'if-check');
                 } else {
                     updateStatus(`minIndex remains ${state.minIndex}.`);
+                    // Live code: stay on if-check decision when no update
+                    setLiveHighlight('end-if', 'if-check');
                 }
-                
+
                 if (state.k < n - 1) {
                     state.k++;
                     state.phase = 'COMPARE';
+                    // We’ll keep the highlight on “compare / if-check” next step
                 } else {
                     state.phase = 'PRE_SWAP';
                 }
@@ -441,8 +648,14 @@
                     currentArray[state.j] = currentArray[state.minIndex];
                     currentArray[state.minIndex] = temp;
                     state.swaps++;
+
+                    // Live code sync (Added)
+                    // Your swap is a single step; highlight the final swap line as current.
+                    setLiveHighlight('swap-min', 'swap-j');
                 } else {
                     updateStatus(`Inner loop finished. Smallest value is already at index <strong>j=${state.j}</strong>. Swap skipped.`);
+                    // Live code: show that swap section is conceptually next, but nothing changes
+                    setLiveHighlight('swap-j', 'swap-temp');
                 }
                 state.j++;
                 state.phase = 'START_PASS';
@@ -463,7 +676,7 @@
         isPlaying = true;
         document.getElementById('btnPlay').innerText = "Pause";
         document.getElementById('btnPlay').classList.replace('btn-primary', 'btn-reset');
-        
+
         const run = () => {
             if (state.phase === 'FINISHED') {
                 stopPlay();
@@ -486,4 +699,3 @@
 
 </body>
 </html>
-
