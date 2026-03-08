@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Interactive Lab</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            /* AP CSA Standard Pointer Colors */
+            --ptr-from: #2563eb;    /* Blue */
+            --ptr-to: #dc2626;      /* Red */
+            --ptr-mid: #f59e0b;     /* Gold */
+            --ptr-i: #9333ea;       /* Purple */
+            --ptr-j: #16a34a;       /* Green */
+            --ptr-k: #ea580c;       /* Orange */
+
+            --sorted-bg: #f0fdf4;
+            --sorted-border: #16a34a;
+            --text-main: #1e293b;
+            --border: #cbd5e1;
+            
+            /* Tree Specifics */
+            --tree-node-bg: #ffffff;
+            --tree-line: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { margin-top: 0; text-align: center; color: #0f172a; }
+
+        /* --- Controls Section --- */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .input-group { display: flex; flex-direction: column; gap: 5px; }
+        label { font-size: 0.85rem; font-weight: 600; color: #64748b; }
+        input { padding: 8px; border: 1px solid var(--border); border-radius: 4px; }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary { background: var(--ptr-from); color: white; }
+        .btn-primary:hover { background: #1d4ed8; }
+        .btn-step { background: #0ea5e9; color: white; }
+        .btn-reset { background: #64748b; color: white; }
+        .btn-outline { background: white; border: 2px solid var(--border); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* --- Visualization Area --- */
+        .viz-outer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .array-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 10px;
+            min-height: 80px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .array-label {
+            position: absolute;
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #64748b;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            text-align: right;
+            width: 70px;
+        }
+
+        .element-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 50px;
+        }
+
+        .box {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #94a3b8;
+            border-radius: 6px;
+            background: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            position: relative;
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+            z-index: 2;
+        }
+
+        .index-label { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; }
+
+        /* Pointer Labels */
+        .pointer-container {
+            position: absolute;
+            top: -45px; /* Above box */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            width: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .ptr-badge {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Colors for specific pointers */
+        .ptr-from { background-color: var(--ptr-from); }
+        .ptr-to { background-color: var(--ptr-to); }
+        .ptr-mid { background-color: var(--ptr-mid); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        .ptr-i { background-color: var(--ptr-i); }
+        .ptr-j { background-color: var(--ptr-j); }
+        .ptr-k { background-color: var(--ptr-k); }
+
+        /* Active highlight styling */
+        .box.active-compare {
+            border-color: var(--ptr-mid);
+            background-color: #fffbeb;
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        
+        .box.merging-left { border-color: var(--ptr-i); background-color: #faf5ff; }
+        .box.merging-right { border-color: var(--ptr-j); background-color: #f0fdf4; }
+
+        /* --- RECURSION TREE VISUALIZATION --- */
+        #recursion-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            padding: 10px;
+            border-top: 1px dashed var(--border);
+            padding-top: 25px;
+        }
+        
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Gap between sibling nodes */
+            width: 100%;
+        }
+
+        .tree-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+            padding: 6px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            opacity: 0.3; /* Hidden/Inactive by default */
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tree-node-range {
+            font-family: monospace;
+            font-weight: 600;
+            margin-bottom: 2px;
+            font-size: 0.7rem;
+        }
+
+        .tree-node-content {
+            font-weight: bold;
+            font-size: 0.85rem;
+            height: 18px; /* Fixed height to prevent jump */
+        }
+
+        /* Tree Node States */
+        .tree-node.active {
+            opacity: 1;
+            border-color: var(--ptr-from);
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            color: var(--text-main);
+        }
+
+        .tree-node.merging {
+            border-color: var(--ptr-k);
+            background: #fff7ed;
+            color: var(--text-main);
+            opacity: 1;
+        }
+
+        .tree-node.sorted {
+            border-color: var(--sorted-border);
+            background: var(--sorted-bg);
+            opacity: 1;
+            color: var(--text-main);
+        }
+        
+        .recursion-label {
+            width: 100%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* --- Status Panel --- */
+        .status-panel {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 20px;
+            border-top: 2px solid #f1f5f9;
+            padding-top: 20px;
+        }
+
+        .explanation {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            min-height: 80px;
+            line-height: 1.5;
+        }
+
+        .stats {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .stats div { font-size: 0.9rem; }
+        .stats hr { grid-column: span 2; width: 100%; border-top: 1px solid #e2e8f0; }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            margin: 15px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .legend-item { display: flex; align-items: center; gap: 5px; }
+        .dot { width: 12px; height: 12px; border-radius: 2px; }
+
+        /* =========================================================
+           LIVE WORKING CODE PANEL
+           ========================================================= */
+
+        .livecode-legend {
+            font-size: 0.75rem;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            margin: 8px 0 10px;
+            flex-wrap: wrap;
+        }
+        .livecode-legend .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .livecode-legend .bar {
+            width: 14px;
+            height: 10px;
+            border-left: 3px solid transparent;
+            border-radius: 2px;
+            background: rgba(255,255,255,0.04);
+        }
+        .livecode-legend .bar.current {
+            border-left-color: #f59e0b;
+            background: rgba(245,158,11,0.25);
+        }
+        .livecode-legend .bar.prev {
+            border-left-color: #64748b;
+            background: rgba(255,255,255,0.06);
+        }
+        .livecode-legend label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            user-select: none;
+        }
+        .livecode-legend input[type="checkbox"]{
+            transform: translateY(1px);
+        }
+
+        .livecode-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #334155;
+            padding: 8px 12px;
+            border-radius: 8px 8px 0 0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            border-bottom: none;
+            margin-top: 8px;
+        }
+        .livecode-header .vars {
+            display: flex;
+            gap: 14px;
+            color: #60a5fa;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .livecode-container {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            max-height: 320px;
+            overflow-y: auto;
+            border: 1px solid #334155;
+            margin-bottom: 18px;
+        }
+        .livecode-line {
+            display: block;
+            white-space: pre;
+            padding: 0 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.15s ease;
+        }
+        .livecode-line.active {
+            background: rgba(245, 158, 11, 0.28);
+            border-left-color: #f59e0b;
+            color: #ffffff;
+            font-weight: 800;
+        }
+        .livecode-line.previous {
+            background: rgba(255, 255, 255, 0.06);
+            border-left-color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Merge Sort Visualizer</h1>
+
+    <div class="livecode-legend">
+        <span class="chip"><span class="bar current"></span> Current line</span>
+        <span class="chip"><span class="bar prev"></span> Previous line</span>
+        <label><input type="checkbox" id="followLiveCode" checked> Follow code</label>
+        <label><input type="checkbox" id="showPrevLine" checked> Show previous</label>
+    </div>
+
+    <div class="livecode-header">
+        <span>MergeSort.java (AP CSA)</span>
+        <div class="vars">
+            <span>from: <span id="lc-from">-</span></span>
+            <span>to: <span id="lc-to">-</span></span>
+            <span>mid: <span id="lc-mid">-</span></span>
+        </div>
+    </div>
+    <div class="livecode-container" id="liveCodePanel" aria-label="Live code panel">
+        <span class="livecode-line" data-lc="pub-start">public static void mergeSort(int[] elements) {</span>
+        <span class="livecode-line" data-lc="pub-n">    int n = elements.length;</span>
+        <span class="livecode-line" data-lc="pub-temp">    int[] temp = new int[n];</span>
+        <span class="livecode-line" data-lc="pub-call">    mergeSortHelper(elements, 0, n - 1, temp);</span>
+        <span class="livecode-line" data-lc="pub-end">}</span>
+        <span class="livecode-line" data-lc="helper-sig">private static void mergeSortHelper(int[] elements, int from, int to, int[] temp) {</span>
+        <span class="livecode-line" data-lc="helper-check">    if (from &lt; to) {</span>
+        <span class="livecode-line" data-lc="helper-mid">        int middle = (from + to) / 2;</span>
+        <span class="livecode-line" data-lc="helper-left">        mergeSortHelper(elements, from, middle, temp);</span>
+        <span class="livecode-line" data-lc="helper-right">        mergeSortHelper(elements, middle + 1, to, temp);</span>
+        <span class="livecode-line" data-lc="helper-merge">        merge(elements, from, middle, to, temp);</span>
+        <span class="livecode-line" data-lc="helper-brace">    }</span>
+        <span class="livecode-line" data-lc="helper-end">}</span>
+        <span class="livecode-line" data-lc="merge-sig">private static void merge(int[] elements, int from, int mid, int to, int[] temp) {</span>
+        <span class="livecode-line" data-lc="merge-init">    int i = from; int j = mid + 1; int k = from;</span>
+        <span class="livecode-line" data-lc="merge-while">    while (i &lt;= mid &amp;&amp; j &lt;= to) {</span>
+        <span class="livecode-line" data-lc="merge-if">        if (elements[i] &lt; elements[j]) {</span>
+        <span class="livecode-line" data-lc="merge-copy-i">            temp[k] = elements[i]; i++;</span>
+        <span class="livecode-line" data-lc="merge-else">        } else {</span>
+        <span class="livecode-line" data-lc="merge-copy-j">            temp[k] = elements[j]; j++;</span>
+        <span class="livecode-line" data-lc="merge-close-else">        }</span>
+        <span class="livecode-line" data-lc="merge-inc-k">        k++;</span>
+        <span class="livecode-line" data-lc="merge-while-end">    }</span>
+        <span class="livecode-line" data-lc="rem-i-while">    while (i &lt;= mid) {</span>
+        <span class="livecode-line" data-lc="rem-i-copy">        temp[k] = elements[i]; i++; k++;</span>
+        <span class="livecode-line" data-lc="rem-i-end">    }</span>
+        <span class="livecode-line" data-lc="rem-j-while">    while (j &lt;= to) {</span>
+        <span class="livecode-line" data-lc="rem-j-copy">        temp[k] = elements[j]; j++; k++;</span>
+        <span class="livecode-line" data-lc="rem-j-end">    }</span>
+        <span class="livecode-line" data-lc="copy-for">    for (k = from; k &lt;= to; k++) {</span>
+        <span class="livecode-line" data-lc="copy-back">        elements[k] = temp[k];</span>
+        <span class="livecode-line" data-lc="copy-end">    }</span>
+        <span class="livecode-line" data-lc="merge-end">}</span>
+        <span class="livecode-line" data-lc="done">// Done ✅</span>
+    </div>
+
+    <div class="controls-grid">
+        <div class="input-group">
+            <label>Array Size</label>
+            <input type="number" id="arrSize" value="8" min="2" max="16">
+        </div>
+        <div class="input-group">
+            <label>Range (Min, Max)</label>
+            <div style="display:flex; gap:5px">
+                <input type="number" id="minVal" value="0" style="width:50%">
+                <input type="number" id="maxVal" value="99" style="width:50%">
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Custom Array</label>
+            <input type="text" id="customArr" placeholder="e.g. 10, 5, 2">
+        </div>
+        <div class="input-group">
+            <label>Speed (ms)</label>
+            <input type="range" id="speed" min="200" max="1500" value="600">
+        </div>
+    </div>
+
+    <div class="button-row">
+        <button class="btn-primary" onclick="generateNew()">Generate New Array</button>
+        <button class="btn-outline" onclick="loadDefault()">Default Example</button>
+        <button class="btn-outline" onclick="loadNearlySorted()">Nearly Sorted</button>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-from)"></div> from</div>
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-to)"></div> to</div>
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-mid)"></div> mid</div>
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-i)"></div> i (Left)</div>
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-j)"></div> j (Right)</div>
+        <div class="legend-item"><div class="dot" style="background: var(--ptr-k)"></div> k (Place)</div>
+    </div>
+
+    <div class="viz-outer">
+        <div class="array-row" id="elements-container">
+            <div class="array-label">Elements</div>
+            </div>
+
+        <div class="recursion-label">Recursion Tree & Execution Order</div>
+        <div id="recursion-container">
+            </div>
+    </div>
+
+    <div class="button-row">
+        <button id="btnStep" class="btn-step" onclick="handleStep()">Step</button>
+        <button id="btnPlay" class="btn-primary" onclick="togglePlay()">Play</button>
+        <button class="btn-reset" onclick="resetSort()">Reset</button>
+    </div>
+
+    <div class="status-panel">
+        <div class="explanation">
+            <div id="statusText">Press Step or Play to begin Merge Sort.</div>
+        </div>
+        <div class="stats">
+            <div>from: <span id="valFrom">-</span></div>
+            <div>to: <span id="valTo">-</span></div>
+            <div>mid: <span id="valMid">-</span></div>
+            <div>i: <span id="valI">-</span></div>
+            <div>j: <span id="valJ">-</span></div>
+            <div>k: <span id="valK">-</span></div>
+            <hr>
+            <div>Comparisons: <span id="statComp">0</span></div>
+            <div>Merge Calls: <span id="statMerge">0</span></div>
+            <div>Steps: <span id="statSteps">0</span></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /**
+     * MERGE SORT VISUALIZER LOGIC
+     * * Features:
+     * 1. Trace-based execution (pre-calculated steps).
+     * 2. Synchronized "Recursion Tree" visualization.
+     * 3. Standard Merge Sort logic (AP CSA style).
+     */
+
+    let originalArray = [];
+    let trace = []; 
+    let currentStepIndex = -1;
+    let isPlaying = false;
+    let timer = null;
+    let treeSkeleton = []; // Holds the static structure of the tree for rendering
+
+    // Initial Load
+    window.onload = loadDefault;
+
+    /* --- Trace Generation Logic --- */
+
+    function generateTrace(arr) {
+        const steps = [];
+        const n = arr.length;
+        
+        // Deep copy needed for simulation
+        const elements = [...arr];
+        const temp = new Array(n).fill(null);
+        
+        // Tree State Tracking: Map key "from-to" -> { state, displayValues }
+        let treeStatus = {}; 
+
+        // Initialize tree status with all nodes HIDDEN
+        treeSkeleton.forEach(node => {
+            treeStatus[node.id] = { state: 'HIDDEN', values: [] };
+        });
+        
+        let comparisons = 0;
+        let mergeCalls = 0;
+
+        // Helper to push a snapshot
+        function record(lineId, msg, pointers = {}) {
+            // pointers: { from, to, mid, i, j, k }
+            steps.push({
+                lineId: lineId,
+                message: msg,
+                elements: [...elements],
+                pointers: { ...pointers },
+                stats: { comparisons, mergeCalls },
+                treeStatus: JSON.parse(JSON.stringify(treeStatus)) // Deep copy current tree state
+            });
+        }
+
+        // Update helper for tree state
+        function updateTreeState(from, to, newState, values = null) {
+            const id = `${from}-${to}`;
+            if (!treeStatus[id]) treeStatus[id] = { state: 'HIDDEN', values: [] };
+            
+            if (newState) treeStatus[id].state = newState;
+            if (values) treeStatus[id].values = values;
+        }
+
+        function mergeSort(elements) {
+            record('pub-start', 'Starting Merge Sort.', {});
+            record('pub-n', `n = ${elements.length}`, {});
+            record('pub-temp', 'Creating temp array.', {});
+            record('pub-call', 'Calling helper for full range.', { from: 0, to: n-1 });
+            
+            mergeSortHelper(elements, 0, n - 1, temp);
+            
+            record('pub-end', 'Sort complete.', {});
+            record('done', 'Finished!', {});
+        }
+
+        function mergeSortHelper(elements, from, to, temp) {
+            const id = `${from}-${to}`;
+            
+            // Mark Node as ACTIVE (Processing)
+            updateTreeState(from, to, 'ACTIVE');
+            record('helper-sig', `Entering helper for range [${from}, ${to}].`, { from, to });
+            record('helper-check', `Checking base case: ${from} < ${to} is ${from < to}.`, { from, to });
+
+            if (from < to) {
+                const mid = Math.floor((from + to) / 2);
+                record('helper-mid', `Calculated mid index: ${mid}.`, { from, to, mid });
+                
+                record('helper-left', `Recursively sorting LEFT half [${from}, ${mid}].`, { from, to, mid });
+                mergeSortHelper(elements, from, mid, temp);
+                
+                record('helper-right', `Recursively sorting RIGHT half [${mid+1}, ${to}].`, { from, to, mid });
+                mergeSortHelper(elements, mid + 1, to, temp);
+                
+                record('helper-merge', `Merging halves: [${from}..${mid}] and [${mid+1}..${to}].`, { from, to, mid });
+                merge(elements, from, mid, to, temp);
+            } else {
+                // Base case: Leaf node is implicitly sorted
+                updateTreeState(from, to, 'SORTED', [elements[from]]);
+                record('helper-brace', `Base case reached [${from}]. Returning.`, { from, to });
+            }
+            record('helper-end', `Exiting helper for range [${from}, ${to}].`, { from, to });
+        }
+
+        function merge(elements, from, mid, to, temp) {
+            mergeCalls++;
+            updateTreeState(from, to, 'MERGING', []); // Start merging visual
+            record('merge-sig', `Starting merge process for [${from}, ${to}].`, { from, to, mid });
+            
+            let i = from;
+            let j = mid + 1;
+            let k = from;
+            
+            // To visualize the "Merge" building up in the tree node
+            let mergedSoFar = [];
+
+            record('merge-init', `Initialize pointers: i=${i}, j=${j}, k=${k}.`, { from, to, mid, i, j, k });
+
+            while (true) {
+                record('merge-while', `Checking: i(${i}) <= mid(${mid}) && j(${j}) <= to(${to}).`, { from, to, mid, i, j, k });
+                if (!(i <= mid && j <= to)) break;
+
+                comparisons++;
+                record('merge-if', `Comparing elements[i] (${elements[i]}) < elements[j] (${elements[j]}).`, { from, to, mid, i, j, k });
+                
+                if (elements[i] < elements[j]) {
+                    temp[k] = elements[i];
+                    mergedSoFar.push(elements[i]);
+                    updateTreeState(from, to, null, [...mergedSoFar]); // Update values in tree
+                    record('merge-copy-i', `${elements[i]} is smaller. Copy to temp.`, { from, to, mid, i, j, k });
+                    i++;
+                } else {
+                    temp[k] = elements[j];
+                    mergedSoFar.push(elements[j]);
+                    updateTreeState(from, to, null, [...mergedSoFar]); // Update values in tree
+                    record('merge-else', `${elements[j]} is smaller (or equal).`, { from, to, mid, i, j, k });
+                    record('merge-copy-j', `Copy ${elements[j]} to temp.`, { from, to, mid, i, j, k });
+                    j++;
+                }
+                k++;
+                record('merge-inc-k', `Increment k to ${k}.`, { from, to, mid, i, j, k });
+            }
+            record('merge-while-end', 'Main merge loop finished.', { from, to, mid, i, j, k });
+
+            // Leftovers i
+            while (true) {
+                record('rem-i-while', `Checking leftover left: i(${i}) <= mid(${mid}).`, { from, to, mid, i, j, k });
+                if (!(i <= mid)) break;
+                
+                temp[k] = elements[i];
+                mergedSoFar.push(elements[i]);
+                updateTreeState(from, to, null, [...mergedSoFar]); 
+                record('rem-i-copy', `Copying remaining ${elements[i]} to temp.`, { from, to, mid, i, j, k });
+                i++;
+                k++;
+            }
+
+            // Leftovers j
+            while (true) {
+                record('rem-j-while', `Checking leftover right: j(${j}) <= to(${to}).`, { from, to, mid, i, j, k });
+                if (!(j <= to)) break;
+                
+                temp[k] = elements[j];
+                mergedSoFar.push(elements[j]);
+                updateTreeState(from, to, null, [...mergedSoFar]); 
+                record('rem-j-copy', `Copying remaining ${elements[j]} to temp.`, { from, to, mid, i, j, k });
+                j++;
+                k++;
+            }
+
+            // Copy back
+            record('copy-for', 'Copying merged values back to main array.', { from, to, mid });
+            for (k = from; k <= to; k++) {
+                elements[k] = temp[k];
+                record('copy-back', `elements[${k}] = ${temp[k]}`, { from, to, mid, k });
+            }
+
+            // Mark this node as fully SORTED now
+            updateTreeState(from, to, 'SORTED', [...mergedSoFar]);
+            record('merge-end', `Merge complete for [${from}, ${to}].`, { from, to, mid });
+        }
+
+        // Run simulation
+        mergeSort(elements);
+        return steps;
+    }
+
+    /* --- Recursion Tree Structure Calculation --- */
+    
+    // Calculates the static layout (rows and nodes) based on array size
+    function buildTreeSkeleton(n) {
+        let nodes = [];
+        let maxDepth = 0;
+
+        function traverse(from, to, depth) {
+            maxDepth = Math.max(maxDepth, depth);
+            nodes.push({ id: `${from}-${to}`, from, to, depth });
+            
+            if (from < to) {
+                let mid = Math.floor((from + to) / 2);
+                traverse(from, mid, depth + 1);
+                traverse(mid + 1, to, depth + 1);
+            }
+        }
+        traverse(0, n - 1, 0);
+
+        // Group by depth for rendering rows
+        let rows = [];
+        for (let d = 0; d <= maxDepth; d++) {
+            rows[d] = nodes.filter(node => node.depth === d);
+        }
+        
+        // Return flat list for state tracking and rows for DOM construction
+        return { nodes, rows };
+    }
+
+    function renderTreeSkeleton(rows) {
+        const container = document.getElementById('recursion-container');
+        container.innerHTML = '';
+
+        rows.forEach(rowNodes => {
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'tree-level';
+            
+            rowNodes.forEach(node => {
+                const nodeDiv = document.createElement('div');
+                nodeDiv.className = 'tree-node';
+                nodeDiv.id = `node-${node.from}-${node.to}`;
+                nodeDiv.innerHTML = `
+                    <div class="tree-node-range">[${node.from}..${node.to}]</div>
+                    <div class="tree-node-content"></div>
+                `;
+                rowDiv.appendChild(nodeDiv);
+            });
+            container.appendChild(rowDiv);
+        });
+    }
+
+    /* --- Live Code UI Helpers --- */
+
+    function setLiveHighlight(activeId, previousId) {
+        const showPrev = document.getElementById('showPrevLine')?.checked ?? true;
+        const follow = document.getElementById('followLiveCode')?.checked ?? true;
+
+        const lines = document.querySelectorAll('.livecode-line');
+        lines.forEach(line => line.classList.remove('active', 'previous'));
+
+        if (previousId && showPrev) {
+            const prev = document.querySelector(`.livecode-line[data-lc="${previousId}"]`);
+            if (prev) prev.classList.add('previous');
+        }
+
+        const active = document.querySelector(`.livecode-line[data-lc="${activeId}"]`);
+        if (active) {
+            active.classList.add('active');
+            if (follow) active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }
+
+    /* --- Core Visualizer Functions --- */
+
+    function generateNew() {
+        const size = parseInt(document.getElementById('arrSize').value) || 8;
+        const min = parseInt(document.getElementById('minVal').value) || 0;
+        const max = parseInt(document.getElementById('maxVal').value) || 99;
+        const custom = document.getElementById('customArr').value;
+
+        let arr = [];
+        if (custom.trim() !== "") {
+            arr = custom.split(',').map(n => parseInt(n.trim())).filter(n => !isNaN(n));
+        } else {
+            arr = Array.from({ length: size }, () => Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        originalArray = arr;
+        resetSort();
+    }
+
+    function loadDefault() {
+        document.getElementById('customArr').value = "";
+        originalArray = [86, 3, 43, 5];
+        resetSort();
+    }
+
+    function loadNearlySorted() {
+        document.getElementById('customArr').value = "";
+        originalArray = [1, 3, 2, 5, 4, 7, 6, 8];
+        resetSort();
+    }
+
+    function resetSort() {
+        stopPlay();
+        
+        // Build the physical DOM for the recursion tree (static structure)
+        const skeletonData = buildTreeSkeleton(originalArray.length);
+        treeSkeleton = skeletonData.nodes;
+        renderTreeSkeleton(skeletonData.rows);
+
+        trace = generateTrace(originalArray);
+        currentStepIndex = -1;
+        updateStatus("Ready to start Merge Sort.");
+        renderStep(-1);
+    }
+
+    function renderStep(index) {
+        const container = document.getElementById('elements-container');
+        
+        // Remove existing boxes (keep labels)
+        const existingBoxes = container.querySelectorAll('.element-wrapper');
+        existingBoxes.forEach(e => e.remove());
+
+        // Determine State Data
+        let currentElements, pointers, lineId, prevLineId, msg, stats, currentTreeStatus;
+        
+        if (index < 0) {
+            // Initial State
+            currentElements = [...originalArray];
+            pointers = {};
+            lineId = null;
+            prevLineId = null;
+            msg = "Press Step or Play to begin.";
+            stats = { comparisons: 0, mergeCalls: 0 };
+            currentTreeStatus = {}; // All hidden
+        } else {
+            const step = trace[index];
+            currentElements = step.elements;
+            pointers = step.pointers;
+            lineId = step.lineId;
+            prevLineId = (index > 0) ? trace[index-1].lineId : null;
+            msg = step.message;
+            stats = step.stats;
+            currentTreeStatus = step.treeStatus;
+        }
+
+        // --- Render Main Array ---
+        currentElements.forEach((val, idx) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'element-wrapper';
+
+            // Pointers
+            const ptrDiv = document.createElement('div');
+            ptrDiv.className = 'pointer-container';
+            
+            if (pointers.from === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-from">from</span>`;
+            if (pointers.to === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-to">to</span>`;
+            if (pointers.mid === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-mid">mid</span>`;
+            if (pointers.i === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-i">i</span>`;
+            if (pointers.j === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-j">j</span>`;
+            if (pointers.k === idx) ptrDiv.innerHTML += `<span class="ptr-badge ptr-k">k</span>`;
+
+            // Box
+            const box = document.createElement('div');
+            box.className = 'box';
+            box.innerText = val;
+            
+            // Visual Styles for Active Comparison
+            if (lineId === 'merge-if') {
+                if (pointers.i === idx || pointers.j === idx) {
+                    box.classList.add('active-compare');
+                }
+            }
+            // Highlight Subarrays during merge
+            if (pointers.from !== undefined && pointers.to !== undefined) {
+                if (idx >= pointers.from && idx <= pointers.to) {
+                   if (pointers.mid !== undefined) {
+                       if (idx <= pointers.mid) box.classList.add('merging-left');
+                       else box.classList.add('merging-right');
+                   }
+                }
+            }
+
+            const idxDiv = document.createElement('div');
+            idxDiv.className = 'index-label';
+            idxDiv.innerText = idx;
+
+            wrapper.appendChild(ptrDiv);
+            wrapper.appendChild(box);
+            wrapper.appendChild(idxDiv);
+            container.appendChild(wrapper);
+        });
+
+        // --- Render Tree Status ---
+        // Iterate through all skeleton nodes and update their CSS/Content based on currentTreeStatus
+        treeSkeleton.forEach(node => {
+            const domNode = document.getElementById(`node-${node.from}-${node.to}`);
+            const statusObj = currentTreeStatus[`${node.from}-${node.to}`];
+            
+            // Reset classes
+            domNode.className = 'tree-node';
+            const contentDiv = domNode.querySelector('.tree-node-content');
+            contentDiv.innerText = '';
+
+            if (statusObj && statusObj.state !== 'HIDDEN') {
+                if (statusObj.state === 'ACTIVE') domNode.classList.add('active');
+                if (statusObj.state === 'MERGING') domNode.classList.add('merging');
+                if (statusObj.state === 'SORTED') domNode.classList.add('sorted');
+                
+                // Show values if we have them (during merge or sorted)
+                if (statusObj.values && statusObj.values.length > 0) {
+                    contentDiv.innerText = `[${statusObj.values.join(',')}]`;
+                } else if (statusObj.state === 'ACTIVE') {
+                    // Just show brackets to indicate it's being worked on but not merged yet
+                    contentDiv.innerText = '[ ? ]';
+                }
+            }
+        });
+
+        // --- Update UI Panels ---
+        updateStatus(msg);
+        document.getElementById('statComp').innerText = stats.comparisons;
+        document.getElementById('statMerge').innerText = stats.mergeCalls;
+        document.getElementById('statSteps').innerText = (index + 1);
+
+        // Var panel
+        document.getElementById('valFrom').innerText = pointers.from ?? '-';
+        document.getElementById('valTo').innerText = pointers.to ?? '-';
+        document.getElementById('valMid').innerText = pointers.mid ?? '-';
+        document.getElementById('valI').innerText = pointers.i ?? '-';
+        document.getElementById('valJ').innerText = pointers.j ?? '-';
+        document.getElementById('valK').innerText = pointers.k ?? '-';
+
+        // Live Code Header Vars
+        document.getElementById('lc-from').innerText = pointers.from ?? '-';
+        document.getElementById('lc-to').innerText = pointers.to ?? '-';
+        document.getElementById('lc-mid').innerText = pointers.mid ?? '-';
+
+        // Code Highlighting
+        if (lineId) setLiveHighlight(lineId, prevLineId);
+    }
+
+    function updateStatus(msg) {
+        document.getElementById('statusText').innerHTML = msg;
+    }
+
+    function handleStep() {
+        if (currentStepIndex >= trace.length - 1) {
+            updateStatus("<strong>Finished!</strong> The array is sorted.");
+            stopPlay();
+            return;
+        }
+        currentStepIndex++;
+        renderStep(currentStepIndex);
+    }
+
+    function togglePlay() {
+        if (isPlaying) stopPlay();
+        else startPlay();
+    }
+
+    function startPlay() {
+        isPlaying = true;
+        document.getElementById('btnPlay').innerText = "Pause";
+        document.getElementById('btnPlay').classList.replace('btn-primary', 'btn-reset');
+
+        const run = () => {
+            if (currentStepIndex >= trace.length - 1) {
+                stopPlay();
+                return;
+            }
+            handleStep();
+            const speed = parseInt(document.getElementById('speed').value);
+            timer = setTimeout(run, speed);
+        };
+        run();
+    }
+
+    function stopPlay() {
+        isPlaying = false;
+        clearTimeout(timer);
+        document.getElementById('btnPlay').innerText = "Play";
+        document.getElementById('btnPlay').classList.replace('btn-reset', 'btn-primary');
+    }
+
+</script>
+
+</body>
+</html>
