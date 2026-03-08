@@ -142,6 +142,7 @@ Let’s build something great together.
   - [Binary-Search-Visualizer](https://shishiapcs.github.io/csa/binary-search-visualizer.html)
   - [Selection-Sort-visualizer](https://shishiapcs.github.io/csa/selection-sort-visualizer.html)
   - [Insertion-Sort-Visualizer](https://shishiapcs.github.io/csa/insertion-sort-visualizer.html)
+  - [Merge-Sort-Visualizer](https://shishiapcs.github.io/csa/merge-sort-visualizer.html)
 
 ---
   - [Java Style Guidelines](https://langintro.com/comsc075/java_style_guide.html)
