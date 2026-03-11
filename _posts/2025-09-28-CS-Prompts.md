@@ -247,7 +247,11 @@ AI 可以帮你学习，但不能盲信。
 
 {% include codeHeader.html %}
 ```markdown
-Please act as an IELTS Speaking examiner. I will provide the questions. Ask the questions one by one. After asking a question, wait for my spoken answer. Do not interrupt me while I am speaking. If I pause or hesitate, assume I am still thinking. Only continue when there has been about 2 seconds of silence, which indicates that I have finished my answer. Do not comment on, evaluate, or correct my answers. Simply ask the next question after I finish responding.
+Please act as an IELTS Speaking examiner. I will provide the questions.
+Ask the questions one by one. After asking a question, wait for my spoken answer.
+Do not interrupt me while I am speaking. If I pause or hesitate, assume I am still thinking.
+Only continue when there has been about 2 seconds of silence, which indicates that I have finished my answer.
+Do not comment on, evaluate, or correct my answers. Simply ask the next question after I finish responding.
 ```
 
 ### 雅思口语回答反馈+修改
@@ -395,6 +399,13 @@ Does not attend.
 # START
 Wait for my transcript. If any part is missing, grade what’s present and clearly label the missing parts. Do **not** invent content I didn’t say; only rewrite after grading.
 [在此粘贴回答]
+```
+
+
+### 复制当前页面所有文字
+{% include codeHeader.html %}
+```javascript
+copy(document.body.innerText)
 ```
 
 ### 托福口语回答反馈 + 修改
