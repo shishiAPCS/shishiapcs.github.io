@@ -106,6 +106,7 @@ Let’s explore, debug, and create together.
 
 ## 可能用到的教材与服务
 
+- [Life in weeks](https://shishiapcs.github.io/tools/life-in-weeks.html)
 - [GitHub](https://github.com/) ```代码托管平台```
 - [runestone.academy](https://runestone.academy/user/login?_next=/) ```教材```
 - [hypothes](https://hypothes.is/signup) ```在线笔记```
