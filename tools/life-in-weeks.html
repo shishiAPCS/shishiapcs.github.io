@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Weeks</title>
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --bg-color: #fcfcfc;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --border-color: #e2e8f0;
+            --circle-empty: #edf2f7;
+            --circle-empty-border: #cbd5e0;
+            --user-color: #4299e1; /* Default blue, will be overridden by JS */
+            --error-color: #e53e3e;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Typography */
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Control Panel */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        input[type="number"], input[type="color"] {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input[type="number"] {
+            width: 80px;
+        }
+
+        input[type="color"] {
+            width: 60px;
+            height: 40px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            margin-top: 24px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background-color: var(--user-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: var(--text-main);
+        }
+
+        .btn-print {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* Validation Error */
+        .error-message {
+            background-color: #fed7d7;
+            color: var(--error-color);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        /* Summary Section */
+        .summary {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .summary p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+        }
+
+        .reflective-quote {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 15px !important;
+            font-size: 1.05rem;
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-filled {
+            background-color: var(--user-color);
+        }
+
+        .legend-empty {
+            background-color: var(--circle-empty);
+            border: 1px solid var(--circle-empty-border);
+        }
+
+        /* Visualization Grid */
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
+            margin-bottom: 40px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .grid-row {
+            display: flex;
+            gap: 4px;
+        }
+
+        .circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--circle-empty);
+            border: 1px solid var(--circle-empty-border);
+            box-sizing: border-box;
+            transition: transform 0.2s;
+        }
+
+        .circle:hover {
+            transform: scale(1.5);
+        }
+
+        .circle.lived {
+            background-color: var(--user-color);
+            border-color: var(--user-color);
+        }
+
+        /* Educational Section */
+        .edu-section {
+            background: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--user-color);
+            margin-top: 40px;
+        }
+
+        .edu-section h3 {
+            margin-top: 0;
+            color: var(--text-main);
+        }
+
+        .edu-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .code-concept {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .challenge-box {
+            background: #fffbe6;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px dashed #d4b106;
+            margin-top: 10px;
+        }
+
+        .challenge-box h4 {
+            margin: 0 0 10px 0;
+            color: #8c7303;
+        }
+
+        .challenge-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 650px) {
+            .circle {
+                width: 5px;
+                height: 5px;
+            }
+            .grid-row {
+                gap: 2px;
+            }
+            .grid-container {
+                gap: 2px;
+            }
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .button-group {
+                justify-content: stretch;
+            }
+            .button-group button {
+                flex: 1;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; }
+            .no-print { display: none !important; }
+            .circle { border-width: 0.5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Life in Weeks</h1>
+            <p class="subtitle">A visual reflection on time</p>
+        </header>
+
+        <div class="controls no-print">
+            <div class="input-group">
+                <label for="age">Current Age</label>
+                <input type="number" id="age" value="16" min="0" step="0.5">
+            </div>
+            
+            <div class="input-group">
+                <label for="expectancy">Life Expectancy</label>
+                <input type="number" id="expectancy" value="80" min="1" max="120" step="1">
+            </div>
+
+            <div class="input-group">
+                <label for="color">Favorite Color</label>
+                <input type="color" id="color" value="#4299e1">
+            </div>
+
+            <div class="button-group">
+                <button class="btn-primary" onclick="generateVisualization()">Visualize My Life</button>
+                <button class="btn-secondary" onclick="resetDefaults()">Reset</button>
+                <button class="btn-print" onclick="window.print()">Print</button>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div class="summary" id="summary-section">
+            <p>You have lived about <strong id="out-lived">0</strong> weeks.</p>
+            <p>You may have about <strong id="out-remaining">0</strong> weeks remaining.</p>
+            <p>You have completed about <strong id="out-percent">0</strong>% of this life timeline.</p>
+            <p class="reflective-quote">"莫等闲，白了少年头，空悲切。"</p>
+        </div>
+
+        <div class="legend" id="legend-section">
+            <div class="legend-item">
+                <div class="legend-circle legend-filled"></div>
+                <span>Weeks Lived</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle legend-empty"></div>
+                <span>Weeks Remaining</span>
+            </div>
+        </div>
+
+        <div id="grid-container" class="grid-container">
+            </div>
+
+            
+            <div class="edu-section no-print">
+        <h3>受 1.4 User Input启发想到做这个小工具</h3>
+
+        <p>
+        很多人第一次看到这张「人生周数图」的时候，
+        都会突然意识到：时间其实过得比我们想象的要快。
+        这个「Life in Weeks」其实并不是什么神秘的软件，
+        它背后的逻辑和你们刚刚在课上学到的编程思想是一样的。
+        很多程序看起来很复杂，但本质上都可以拆成三个简单的步骤：
+        </p>
+
+        <div class="edu-content">
+            <div class="code-concept">
+                <strong>1. 输入（Input）</strong><br>
+                程序先向你要一些信息，比如你的年龄、你希望活到多少岁、
+                以及你喜欢的颜色。这一步就和我们在课上学的
+                <code>readLine()</code>、<code>readInt()</code> 是一样的，
+                让用户把数据输入进来。
+            </div>
+
+            <div class="code-concept">
+                <strong>2. 处理（Process）</strong><br>
+                接下来计算机会在后台做一些简单的计算。
+                比如：一年大约有 52 周，
+                所以程序会用 <em>年龄 × 52</em> 来算出你已经度过了多少周，
+                再根据你的预期寿命算出还有多少周。
+                这些其实就是我们在编程里最常见的：变量 + 数学运算。
+            </div>
+
+            <div class="code-concept">
+                <strong>3. 输出（Output）</strong><br>
+                最后，程序把结果展示出来。
+                它根据计算的结果，把已经度过的那些周用你喜欢的颜色标出来，
+                剩下的周则保持空白，于是就形成了你现在看到的这张
+                「人生时间地图」。
+            </div>
+        </div>
+
+        <p>
+        所以你会发现，一个看起来很有意思的小工具，
+        背后其实就是我们刚刚学到的几个基础概念：
+        <strong>输入 → 计算 → 输出</strong>。
+        </p>
+
+        <p>
+        接下来你们的挑战就是：尝试用你们现在学到的基础 JavaScript，
+        写一个属于自己的小程序。它不需要这么复杂，
+        甚至只用文字输出也可以，但核心思想是一样的。
+        </p>
+    </div>
+
+
+
+            <div class="challenge-box">
+                <h4>💻 Coding Challenge for You</h4>
+
+                <p>
+                Now it's your turn to build a small program. You don't need to create a visual page like this one.
+                Instead, use the basic JavaScript skills you just learned to make a simple program that runs in
+                the console and prints text results.
+                </p>
+
+                <p><strong>Your program should include three steps:</strong></p>
+                <ul>
+                    <li><strong>Input:</strong> Ask the user for some information using <code>readLine()</code>, <code>readInt()</code>, or <code>readFloat()</code>.</li>
+                    <li><strong>Process:</strong> Do a small calculation using the numbers the user entered.</li>
+                    <li><strong>Output:</strong> Print the result clearly using <code>console.log()</code>.</li>
+                </ul>
+
+                <p><strong>You can choose one of these ideas to implement:</strong></p>
+
+                <ul>
+                    <li>
+                    <strong>1️⃣ Weeks of Life Calculator</strong><br>
+                    Ask the user for their age.  
+                    Calculate how many weeks they have lived so far using: <br>
+                    <em>weeks = age × 52</em><br>
+                    Then print a message such as:<br>
+                    <code>You have lived about ___ weeks.</code>
+                    </li>
+
+                    <li>
+                    <strong>2️⃣ Weeks Until a Milestone</strong><br>
+                    Ask the user for their current age and a target age (for example 18, graduation, or another goal).  
+                    Calculate how many weeks remain until that milestone and print the result.
+                    </li>
+
+                    <li>
+                    <strong>3️⃣ Simple Weekly Habit Tracker</strong><br>
+                    Ask the user how many days this week they completed a goal (for example studying, reading, or exercising).  
+                    Then print a row of symbols showing the week, like this:<br>
+                    <code>[x] [x] [x] [ ] [ ] [ ] [ ]</code><br>
+                    Each box represents one day. Use <code>[x]</code> for completed days.
+                    </li>
+                </ul>
+
+                <p>
+                Your program does not need to be complicated. As long as it follows the idea of
+                <strong>Input → Calculation → Output</strong>, you have successfully built your own small program.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const ageInput = document.getElementById('age');
+        const expectancyInput = document.getElementById('expectancy');
+        const colorInput = document.getElementById('color');
+        const gridContainer = document.getElementById('grid-container');
+        const errorDiv = document.getElementById('error-message');
+        
+        // Output Elements
+        const outLived = document.getElementById('out-lived');
+        const outRemaining = document.getElementById('out-remaining');
+        const outPercent = document.getElementById('out-percent');
+
+        // Main function to calculate and draw the grid
+        function generateVisualization() {
+            // 1. Get and parse inputs
+            const age = parseFloat(ageInput.value);
+            const expectancy = parseInt(expectancyInput.value);
+            const userColor = colorInput.value;
+
+            // 2. Validate inputs
+            if (isNaN(age) || age < 0) {
+                showError("Please enter a valid age (0 or higher).");
+                return;
+            }
+            if (isNaN(expectancy) || expectancy < 1 || expectancy > 120) {
+                showError("Please enter a realistic life expectancy (between 1 and 120).");
+                return;
+            }
+            if (age > expectancy) {
+                showError("Life expectancy should be greater than your current age.");
+                return;
+            }
+
+            // Hide error if validation passes
+            errorDiv.style.display = 'none';
+
+            // Update CSS variable for the theme color
+            document.documentElement.style.setProperty('--user-color', userColor);
+
+            // 3. Process/Calculate
+            const WEEKS_IN_YEAR = 52;
+            const totalWeeks = expectancy * WEEKS_IN_YEAR;
+            const livedWeeks = Math.floor(age * WEEKS_IN_YEAR);
+            const remainingWeeks = totalWeeks - livedWeeks;
+            const percentCompleted = ((livedWeeks / totalWeeks) * 100).toFixed(1);
+
+            // 4. Update Summary Text
+            outLived.innerText = livedWeeks.toLocaleString();
+            outRemaining.innerText = remainingWeeks.toLocaleString();
+            outPercent.innerText = percentCompleted;
+
+            // 5. Output/Render the Grid
+            // Clear previous grid
+            gridContainer.innerHTML = '';
+
+            // Using DocumentFragment for better rendering performance
+            const fragment = document.createDocumentFragment();
+
+            let currentWeekCount = 0;
+
+            // Create rows (years)
+            for (let year = 0; year < expectancy; year++) {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'grid-row';
+
+                // Create circles (weeks)
+                for (let week = 0; week < WEEKS_IN_YEAR; week++) {
+                    const circleDiv = document.createElement('div');
+                    
+                    if (currentWeekCount < livedWeeks) {
+                        circleDiv.className = 'circle lived';
+                    } else {
+                        circleDiv.className = 'circle';
+                    }
+
+                    rowDiv.appendChild(circleDiv);
+                    currentWeekCount++;
+                }
+
+                fragment.appendChild(rowDiv);
+            }
+
+            gridContainer.appendChild(fragment);
+
+            // Re-trigger animation by removing and adding the container
+            gridContainer.style.animation = 'none';
+            gridContainer.offsetHeight; /* trigger reflow */
+            gridContainer.style.animation = null; 
+        }
+
+        // Helper function to show errors
+        function showError(message) {
+            errorDiv.innerText = message;
+            errorDiv.style.display = 'block';
+        }
+
+        // Function to reset back to default states
+        function resetDefaults() {
+            ageInput.value = "16";
+            expectancyInput.value = "80";
+            colorInput.value = "#4299e1"; // default blue
+            errorDiv.style.display = 'none';
+            generateVisualization();
+        }
+
+        // Auto-render the visualization when the page first loads
+        window.onload = () => {
+            generateVisualization();
+        };
+    </script>
+</body>
+</html>
