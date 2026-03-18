@@ -439,10 +439,10 @@ Always **evaluate first, then rewrite**.
 ```
 
 
-### 复制当前页面所有文字
+### 高亮所有重点短语和连接词
 {% include codeHeader.html %}
-```javascript
-copy(document.body.innerText)
+```markdown
+Highlight idiomatic expressions, phrasal verbs, and discourse markers in my responses. Output only the revised responses with these elements clearly highlighted. Do not include any explanations or comments.
 ```
 
 ### 托福口语回答反馈 + 修改
