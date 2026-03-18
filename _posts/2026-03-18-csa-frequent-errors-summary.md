@@ -6,10 +6,36 @@ categories: media
 render_with_liquid: false
 ---
 
-# AP CSA FRQ 常见错误汇总
+# 考前总提醒
 
-这份整理只保留**最常见、最容易丢分、最值得考前反复看**的错误。  
-目标不是把所有细节都背下来，而是帮助你在考场上快速想到**更稳、更容易得分**的写法。
+## 看到 FRQ 时，先问自己这题属于哪一类
+
+* **字符串判断题** → 优先想 `indexOf` / `substring`
+* **列表删除题** → 优先想逆序遍历
+* **连续长度题** → 优先想 `current` + `max`
+* **遍历比较题** → 先想清楚循环从哪开始、检查到哪结束
+
+---
+
+## 比“高级写法”更重要的，是“稳”
+
+考试里最容易得分的写法通常不是最花哨的写法，而是：
+
+* 调用对象写对
+* 循环边界写对
+* 判断方向写对
+* `return` 放对位置
+* 用题目最直接的思路完成任务
+
+---
+
+## 每次交卷前，必须检查：
+
+* **我有没有把 `ArrayList` 和数组写混？**
+* **我有没有把 `size()` 和 `length()` 写混？**
+* **我有没有过早 `return`？**
+* **我有没有漏掉最后的 `return`？**
+* **我这题是不是其实有更简单、更稳的模板？**
 
 ---
 
@@ -43,60 +69,6 @@ render_with_liquid: false
 
 ---
 
-## 这题的标准反应
-
-### Part (a)
-看到题目里类似：
-
-> “每个字符串都要包含前一个字符串”
-
-优先反应成：
-
-```java
-for (int i = 1; i < wordList.size(); i++) {
-    String current = wordList.get(i);
-    String previous = wordList.get(i - 1);
-
-    if (current.indexOf(previous) == -1) {
-        return false;
-    }
-}
-return true;
-````
-
----
-
-### Part (b)
-
-看到题目里类似：
-
-> “找出以 `target` 开头的字符串，并去掉这个开头后加入结果列表”
-
-优先反应成：
-
-```java
-ArrayList<String> result = new ArrayList<String>();
-
-for (int i = 0; i < wordList.size(); i++) {
-    String current = wordList.get(i);
-
-    if (current.indexOf(target) == 0) {
-        result.add(current.substring(target.length()));
-    }
-}
-return result;
-```
-
----
-
-## 这题最值得记住的 5 条
-
-1. **`indexOf(...) == -1` 表示没找到**
-2. **不要把判断方向写反**
-3. **不要在循环里过早 `return true`**
-4. **Part (b) 记住三步：识别开头 → 去掉前缀 → 加入列表**
-5. **分清 `ArrayList`、`String`、元素对象各自的方法**
-
 ---
 
 # `WeatherData`
@@ -127,99 +99,4 @@ return result;
 | 只写了变量初始化，主体没写完      | 只有 `int current = 0; int max = 0;`    | 初始化只是开始，核心的遍历、判断、更新、返回都没写  | 至少把 `for`、`if`、`else`、`return` 写完整           | **骨架不完整，分数拿不全**                 |
 
 ---
-
-## 这题的标准反应
-
-### Part (a) `cleanData`
-
-看到这题，先反应成：
-
-> **删除 `ArrayList` 中不在范围内的元素**
-
-稳妥写法之一：
-
-```java
-for (int i = temperatures.size() - 1; i >= 0; i--) {
-    double temp = temperatures.get(i);
-
-    if (temp < lower || temp > upper) {
-        temperatures.remove(i);
-    }
-}
-```
-
----
-
-### Part (b) `longestHeatWave`
-
-看到这题，先反应成：
-
-> **求最长连续大于 `threshold` 的长度**
-
-优先模板：
-
-```java
-int current = 0;
-int max = 0;
-
-for (int i = 0; i < temperatures.size(); i++) {
-    double temp = temperatures.get(i);
-
-    if (temp > threshold) {
-        current++;
-        if (current > max) {
-            max = current;
-        }
-    } else {
-        current = 0;
-    }
-}
-
-return max;
-```
-
----
-
-## 这题最值得记住的 5 条
-
-1. **删 `ArrayList` 元素时，优先逆序删除**
-2. **`longestHeatWave` 是“最长连续段”题**
-3. **连续段题优先模板：`current` + `max`**
-4. **`ArrayList` 用 `.get(i)` / `.size()`，不是数组写法**
-5. **最后一定检查 `return`**
-
----
-
-# 考前总提醒
-
-## 看到 FRQ 时，先问自己这题属于哪一类
-
-* **字符串判断题** → 优先想 `indexOf` / `substring`
-* **列表删除题** → 优先想逆序遍历
-* **连续长度题** → 优先想 `current` + `max`
-* **遍历比较题** → 先想清楚循环从哪开始、检查到哪结束
-
----
-
-## 比“高级写法”更重要的，是“稳”
-
-考试里最容易得分的写法通常不是最花哨的写法，而是：
-
-* 调用对象写对
-* 循环边界写对
-* 判断方向写对
-* `return` 放对位置
-* 用题目最直接的思路完成任务
-
----
-
-## 最后检查清单
-
-交卷前，至少快速看一遍：
-
-* **我有没有把 `ArrayList` 和数组写混？**
-* **我有没有把 `size()` 和 `length()` 写混？**
-* **我有没有过早 `return`？**
-* **我有没有漏掉最后的 `return`？**
-* **我这题是不是其实有更简单、更稳的模板？**
 
