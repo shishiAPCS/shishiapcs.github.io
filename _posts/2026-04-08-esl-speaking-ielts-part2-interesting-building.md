@@ -33,28 +33,7 @@ neutral → curious → surprised → impressed → reflective
 
 ---
 
-## B. Master Version
-
-## 精讲范文
-
-One interesting building I can think of is a temple on my daughter’s school campus. It’s not a tourist attraction, so you can’t just walk in freely unless you’re a student, a teacher, or a parent with permission. I first visited it a while ago when I went to a parents’ meeting.
-我能想到的一个很有意思的建筑，是我女儿学校里的一个“寺庙”。它不是景点，所以你不能随便进去，除非你是学生、老师，或者有许可的家长。我是之前去开家长会的时候第一次进去的。
-
-From the outside, it looks like a typical traditional Chinese temple. The roof is bright yellow, with curled-up edges, and the red pillars are **thick and imposing**. Honestly, if you just pass by, you probably wouldn’t **pay much attention to it**, because it **blends into the surroundings** and doesn’t look unusual at all.
-从外面看，它就是一个很典型的中式传统寺庙。屋顶是亮黄色的，边角是那种向上翘的设计，红色的柱子也很粗，看起来挺有气势。说实话，如果你只是路过，大概率不会特别注意它，因为它和周围环境融在一起，看起来并没有什么特别的地方。
-
-But what surprised me is what’s inside. My daughter told me afterwards that the “temple” is actually a **giant classroom**. It’s **big enough to hold over a hundred people**, and at the front there’s a **massive screen** made up of dozens of smaller panels—basically a **wall-sized display**. It also has **modern facilities** like air conditioning and microphones, so it works perfectly for **teaching and presentations**.
-但真正让我惊讶的是它的内部。后来我女儿告诉我，这个“寺庙”其实是一个超大的教室，可以容纳一百多人。前面有一个由很多小屏拼起来的超大屏幕，基本就是一整面墙那么大。里面还有空调、麦克风这些现代化设备，所以特别适合用来上课或者做展示。
-
-Functionally, it’s a **multi-purpose venue**. They sometimes hold **demonstration lessons** there, and it’s also a **go-to place** for school gatherings or events, especially when they need a space that feels formal.
-从功能上来说，它是一个多用途的场地。有时候会在那里上示范课，也经常用来举办学校活动或者集会，特别是那种需要比较正式氛围的场合。
-
-What makes it interesting to me is the **contrast**. It was originally built as a **memorial hall** for the school’s founders, but now it has been **repurposed** into a modern learning space. To me, it **bridges tradition and modern education in a really clever way**, and it adds **real practical value**. I would never have imagined a building that looks like a temple could be used as a **high-tech classroom**.
-我觉得它最有意思的地方就在于这种反差。它最初其实是为了纪念学校创始人建的一个纪念馆，但现在被改造成了一个现代化的学习空间。在我看来，它用一种很巧妙的方式把传统和现代教育结合在一起，而且也真的很实用。我以前完全想不到，一个看起来像寺庙的建筑，居然可以变成一个高科技教室。
-
----
-
-## C. Story Skeleton
+## B. Story Skeleton
 
 ## 故事骨架
 
@@ -78,7 +57,7 @@ What makes it interesting to me is the **contrast**. It was originally built as 
 
 ---
 
-## D. Must-know chunks
+## C. Must-know chunks
 
 ## 必备表达
 
@@ -135,7 +114,7 @@ What makes it interesting to me is the **contrast**. It was originally built as 
 
 ---
 
-## E. Angle Shift Table
+## D. Angle Shift Table
 
 ## 话题切换表
 
@@ -147,5 +126,26 @@ What makes it interesting to me is the **contrast**. It was originally built as 
 | a place with special meaning      | history + purpose              | 历史 + 意义   |
 | a public place you like           | usefulness + atmosphere        | 实用性 + 氛围  |
 | a place that combines old and new | tradition vs modern technology | 传统 vs 现代  |
+
+---
+
+## E. Reference Version
+
+## 精讲参考范文
+
+One interesting building I can think of is a temple on my daughter’s school campus. It’s not a tourist attraction, so you can’t just walk in freely unless you’re a student, a teacher, or a parent with permission. I first visited it a while ago when I went to a parents’ meeting.
+我能想到的一个很有意思的建筑，是我女儿学校里的一个“寺庙”。它不是景点，所以你不能随便进去，除非你是学生、老师，或者有许可的家长。我是之前去开家长会的时候第一次进去的。
+
+From the outside, it looks like a typical traditional Chinese temple. The roof is bright yellow, with **curled-up edges**, and the red pillars are **thick and imposing**. Honestly, if you just pass by, you probably wouldn’t **pay much attention to it**, because it **blends into the surroundings** and doesn’t look unusual at all.
+从外面看，它就是一个很典型的中式传统寺庙。屋顶是亮黄色的，边角是那种向上翘的设计，红色的柱子也很粗，看起来挺有气势。说实话，如果你只是路过，大概率不会特别注意它，因为它和周围环境融在一起，看起来并没有什么特别的地方。
+
+But what surprised me is what’s inside. My daughter told me afterwards that the “temple” is actually a **giant classroom**. It’s **big enough to hold over a hundred people**, and at the front there’s a **massive screen** made up of dozens of smaller panels—basically a **wall-sized display**. It also has **modern facilities** like air conditioning and microphones, so it works perfectly for **teaching and presentations**.
+但真正让我惊讶的是它的内部。后来我女儿告诉我，这个“寺庙”其实是一个超大的教室，可以容纳一百多人。前面有一个由很多小屏拼起来的超大屏幕，基本就是一整面墙那么大。里面还有空调、麦克风这些现代化设备，所以特别适合用来上课或者做展示。
+
+Functionally, it’s a **multi-purpose venue**. They sometimes hold **demonstration lessons** there, and it’s also a **go-to place** for school gatherings or events, especially when they need a space that feels formal.
+从功能上来说，它是一个多用途的场地。有时候会在那里上示范课，也经常用来举办学校活动或者集会，特别是那种需要比较正式氛围的场合。
+
+What makes it interesting to me is the **contrast**. It was originally built as a **memorial hall** for the school’s founders, but now it has been **repurposed** into a modern learning space. To me, it **bridges tradition and modern education in a really clever way**, and it adds **real practical value**. I would never have imagined a building that looks like a temple could be used as a **high-tech classroom**.
+我觉得它最有意思的地方就在于这种反差。它最初其实是为了纪念学校创始人建的一个纪念馆，但现在被改造成了一个现代化的学习空间。在我看来，它用一种很巧妙的方式把传统和现代教育结合在一起，而且也真的很实用。我以前完全想不到，一个看起来像寺庙的建筑，居然可以变成一个高科技教室。
 
 ---
