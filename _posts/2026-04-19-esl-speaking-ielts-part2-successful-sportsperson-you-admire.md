@@ -13,7 +13,7 @@ categories: media
 
 ## A. Story Snapshot
 
-## 故事概览
+## 故事概览-
 
 **One-line summary:**
 Tony Hawk is a legendary skateboarder whose long career and business vision make him truly admirable.
