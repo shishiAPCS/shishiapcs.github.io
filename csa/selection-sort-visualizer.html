@@ -307,12 +307,11 @@
     <div class="livecode-container" id="liveCodePanel" aria-label="Live code panel">
         <span class="livecode-line" data-lc="outer-for">for (int j = 0; j &lt; n - 1; j++) {</span>
         <span class="livecode-line" data-lc="init-min">    int minIndex = j;</span>
-        <span class="livecode-line" data-lc="init-k">    int k = j + 1;</span>
-        <span class="livecode-line" data-lc="compare">    // scan the rest of the array</span>
-        <span class="livecode-line" data-lc="if-check">    if (elements[k] &lt; elements[minIndex]) {</span>
-        <span class="livecode-line" data-lc="update-min">        minIndex = k;</span>
-        <span class="livecode-line" data-lc="end-if">    }</span>
-        <span class="livecode-line" data-lc="end-scan">    // repeat compare/update until k reaches end</span>
+        <span class="livecode-line" data-lc="inner-for">    for (int k = j + 1; k &lt; n; k++) {</span>
+        <span class="livecode-line" data-lc="if-check">        if (elements[k] &lt; elements[minIndex]) {</span>
+        <span class="livecode-line" data-lc="update-min">            minIndex = k;</span>
+        <span class="livecode-line" data-lc="end-if">        }</span>
+        <span class="livecode-line" data-lc="end-inner">    }</span>
         <span class="livecode-line" data-lc="swap-temp">    int temp = elements[j];</span>
         <span class="livecode-line" data-lc="swap-j">    elements[j] = elements[minIndex];</span>
         <span class="livecode-line" data-lc="swap-min">    elements[minIndex] = temp;</span>
@@ -443,7 +442,7 @@
         switch (state.phase) {
             case 'START_PASS':
                 // this phase does: minIndex=j; k=j+1;
-                setLiveHighlight('init-k', 'init-min');
+                setLiveHighlight('inner-for', 'init-min');
                 break;
             case 'COMPARE':
                 setLiveHighlight('if-check', 'compare');
