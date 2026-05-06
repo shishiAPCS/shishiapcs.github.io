@@ -165,7 +165,7 @@ public static int reverse(int num)
 }
 ```
 
-Which of the following best identifies the error?
+Which line contains the error?
 
 ---
 
@@ -827,7 +827,7 @@ b1 && b3
 (D)
 
 ```java
-!b2 && b3
+b2 && b3
 ```
 
 (E)
@@ -1162,6 +1162,42 @@ public int noDiagSum(int[][] mat)
 ```
 
 Which missing code correctly computes the sum of all values **not on the main diagonal**?
+
+(B) 
+
+```java
+for (int j = 0; j < len; j++)
+{
+    for (int k = 0; k < len; k++)
+    {
+        sum += mat[j][k];
+    }
+}
+
+for (int d = 0; d < len; d++)
+{
+    sum -= mat[d][d];
+}
+```
+
+(C) 
+
+```java
+for (int j = 0; j < len; j++)
+{
+    for (int k = 0; k < len; k++)
+    {
+        if (j != k)
+        {
+            sum += mat[j][k];
+        }
+        else
+        {
+            sum -= mat[j][k];
+        }
+    }
+}
+```
 
 ---
 
@@ -2958,7 +2994,7 @@ b1 && b3
 true && true → true
 ```
 
-D 如果 OCR 是：
+D 如果是：
 
 ```java
 !b2 && b3
@@ -2983,10 +3019,6 @@ E:
 = true && false
 = false
 ```
-
-### 易错点
-
-这一题最大问题不是逻辑本身，而是 OCR。AP 选择题不可能有两个正确选项，所以如果 D 真的是 `!b2 && b3`，那题目选项一定有 OCR 错误。你之前也标注过 D 可能模糊，这里建议回到原截图确认 D 的完整内容。
 
 ---
 
