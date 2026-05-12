@@ -7,19 +7,19 @@ categories: media
 
 
 <style>
-* {
+.ielts-page-shell,
+.ielts-page-shell * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  color: #18212f;
-  background: #f7f8fb;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+.ielts-page-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   line-height: 1.55;
 }
 
-a {
+.ielts-page-shell a {
   color: #2251a4;
 }
 
@@ -149,12 +149,9 @@ a {
   }
 }
 </style>
-</head>
-<body>
+
+
 <div class="ielts-page-shell">
-<header class="ielts-page-header">
-<h1>雅思口语2026年口语题库 滚动更新</h1>
-</header>
 <div class="ielts-layout">
 <aside class="ielts-sidebar">
 <details class="nav-group" open>
@@ -1970,5 +1967,3 @@ a {
 </main>
 </div>
 </div>
-</body>
-</html>
