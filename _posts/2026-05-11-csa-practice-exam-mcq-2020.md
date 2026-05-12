@@ -379,7 +379,10 @@ Which of the following can replace `/* missing loop header */` so the method `co
 Consider the following code segment.
 
 ```java
-int[][] values = {{1, 2, 3}, {4, 5, 6}};
+int[][] values = {
+    {1, 2, 3}, 
+    {4, 5, 6}
+    };
 int x = 0;
 
 for (int j = 0; j < values.length; j++)
@@ -569,7 +572,12 @@ public static void rowMajor(int[][] arr)
 As an example, consider the following code segment.
 
 ```java
-int[][] theArray = {{1, 2}, {3, 4}, {5, 6}, {7, 8}};
+int[][] theArray = {
+    {1, 2}, 
+    {3, 4}, 
+    {5, 6}, 
+    {7, 8}
+    };
 rowMajor(theArray);
 ```
 
@@ -904,9 +912,11 @@ for (int i : nums)
 Consider the following code segment.
 
 ```java
-String[][] letters = {{"A", "B", "C", "D"},
-                      {"E", "F", "G", "H"},
-                      {"I", "J", "K", "L"}};
+String[][] letters = {
+    {"A", "B", "C", "D"},
+    {"E", "F", "G", "H"},
+    {"I", "J", "K", "L"}
+                      };
 
 for (int col = 1; col < letters[0].length; col++)
 {
@@ -2358,7 +2368,10 @@ data.length - 1 = 7
 原数组：
 
 ```java
-int[][] values = {{1, 2, 3}, {4, 5, 6}};
+int[][] values = {
+    {1, 2, 3}, 
+    {4, 5, 6}
+    };
 ```
 
 可以画成：
@@ -2913,7 +2926,12 @@ System.out.print(k + " ");
 数组：
 
 ```java
-{{1, 2}, {3, 4}, {5, 6}, {7, 8}}
+{
+    {1, 2}, 
+    {3, 4}, 
+    {5, 6}, 
+    {7, 8}
+    }
 ```
 
 外层每次拿到一行：
