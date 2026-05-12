@@ -1,11 +1,9 @@
-
 ---
 title:  "CSA 2020年CB模拟题 MCQ 解析"
 mathjax: true
 layout: post
 categories: media
 ---
-
 
 # MCQ 原题
 
