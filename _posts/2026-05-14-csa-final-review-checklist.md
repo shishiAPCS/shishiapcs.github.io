@@ -152,6 +152,114 @@ categories: media
 
 # 第一部分：最高频核心知识点
 
+## 0. 数据结构能存什么类型
+
+**重要性：最高**
+**对应考试：Array / 2D Array / ArrayList 的基础理解，所有相关 MCQ 和 FRQ 都会用到**
+
+---
+
+## 0.1 核心结论
+
+### 必会内容
+
+在 AP CSA 中，常见的数据集合有三类：
+
+| 数据结构        | 能否存 primitive type | 能否存 reference type |
+| ----------- | ------------------ | ------------------ |
+| `array`     | 可以                 | 可以                 |
+| `2D array`  | 可以                 | 可以                 |
+| `ArrayList` | 不可以直接存             | 可以                 |
+
+---
+
+## 0.2 Array 可以存 primitive type 和 reference type
+
+### primitive type 数组
+
+```java
+int[] nums = new int[10];
+double[] scores = new double[5];
+boolean[] answers = new boolean[4];
+```
+
+### reference type 数组
+
+```java
+String[] names = new String[10];
+Student[] students = new Student[5];
+```
+
+---
+
+## 0.3 2D Array 也可以存 primitive type 和 reference type
+
+### primitive type 2D array
+
+```java
+int[][] grid = new int[3][4];
+double[][] scores = new double[2][5];
+```
+
+### reference type 2D array
+
+```java
+String[][] seats = new String[5][6];
+Student[][] classroom = new Student[4][8];
+```
+
+---
+
+## 0.4 ArrayList 只能存 reference type
+
+### 正确写法
+
+```java
+ArrayList<String> names = new ArrayList<String>();
+ArrayList<Student> students = new ArrayList<Student>();
+```
+
+`ArrayList` 不能直接存 primitive type。
+
+### 错误写法
+
+```java
+ArrayList<int> nums = new ArrayList<int>();      // 错
+ArrayList<double> scores = new ArrayList<double>();  // 错
+```
+
+---
+
+## 0.5 primitive type 要用 wrapper class
+
+如果想在 `ArrayList` 中存数字或布尔值，要使用 wrapper class。
+
+| primitive type | wrapper class |
+| -------------- | ------------- |
+| `int`          | `Integer`     |
+| `double`       | `Double`      |
+| `boolean`      | `Boolean`     |
+
+### 正确写法
+
+```java
+ArrayList<Integer> nums = new ArrayList<Integer>();
+ArrayList<Double> scores = new ArrayList<Double>();
+ArrayList<Boolean> results = new ArrayList<Boolean>();
+```
+
+---
+
+### 常见考法
+
+* 判断哪种声明是合法的
+* 判断 `ArrayList<int>` 为什么错误
+* 区分 `int[]` 和 `ArrayList<Integer>`
+* 区分 array 可以存 primitive type，但 `ArrayList` 不能直接存 primitive type
+* 在代码追踪中理解 `Integer`、`Double`、`Boolean` 是对象类型
+
+---
+
 ## 1. Array / ArrayList / 2D Array 数据集合
 
 **重要性：极高**  
