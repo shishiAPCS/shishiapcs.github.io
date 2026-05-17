@@ -5,7 +5,6 @@ layout: post
 categories: media
 ---
 
-
 <style>
 .ielts-page-shell,
 .ielts-page-shell * {
@@ -23,30 +22,14 @@ categories: media
   color: #2251a4;
 }
 
-.ielts-page-shell {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.ielts-page-header {
-  margin-bottom: 1.5rem;
-}
-
-.ielts-page-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
-.ielts-layout {
+.ielts-page-shell .ielts-layout {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
 }
 
-.ielts-sidebar {
+.ielts-page-shell .ielts-sidebar {
   position: sticky;
   top: 1rem;
   max-height: calc(100vh - 2rem);
@@ -55,91 +38,91 @@ categories: media
   border-right: 1px solid rgba(128, 128, 128, 0.2);
 }
 
-.ielts-sidebar summary {
+.ielts-page-shell .ielts-sidebar summary {
   cursor: pointer;
   font-weight: 700;
 }
 
-.ielts-sidebar .nav-group {
+.ielts-page-shell .ielts-sidebar .nav-group {
   margin-bottom: 1rem;
 }
 
-.ielts-sidebar .nav-group > summary {
+.ielts-page-shell .ielts-sidebar .nav-group > summary {
   margin-bottom: 0.5rem;
 }
 
-.ielts-sidebar .nav-inner {
+.ielts-page-shell .ielts-sidebar .nav-inner {
   padding-left: 0.35rem;
 }
 
-.ielts-sidebar .nav-subgroup {
+.ielts-page-shell .ielts-sidebar .nav-subgroup {
   margin: 0.35rem 0;
 }
 
-.ielts-sidebar ul {
+.ielts-page-shell .ielts-sidebar ul {
   margin: 0.35rem 0 0.75rem 1rem;
   padding: 0;
 }
 
-.ielts-sidebar li {
+.ielts-page-shell .ielts-sidebar li {
   margin: 0.25rem 0;
 }
 
-.ielts-sidebar a {
+.ielts-page-shell .ielts-sidebar a {
   text-decoration: none;
 }
 
-.ielts-content {
+.ielts-page-shell .ielts-content {
   min-width: 0;
 }
 
-.ielts-major-section {
+.ielts-page-shell .ielts-major-section {
   margin-bottom: 2.5rem;
   scroll-margin-top: 1rem;
 }
 
-.ielts-major-section h2 {
+.ielts-page-shell .ielts-major-section h2 {
   margin-top: 0;
 }
 
-.topic-card {
+.ielts-page-shell .topic-card {
   margin: 0.75rem 0 1rem;
   padding: 0.85rem 1rem;
   border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: 12px;
 }
 
-.topic-card > summary {
+.ielts-page-shell .topic-card > summary {
   cursor: pointer;
   font-weight: 700;
 }
 
-.topic-meta {
+.ielts-page-shell .topic-meta {
   opacity: 0.75;
   font-weight: 500;
 }
 
-.topic-block {
+.ielts-page-shell .topic-block {
   margin-top: 1rem;
 }
 
-.topic-subheading {
+.ielts-page-shell .topic-subheading {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.topic-note {
+.ielts-page-shell .topic-note {
   margin-top: 0.85rem;
   opacity: 0.8;
   font-style: italic;
 }
 
 @media (max-width: 900px) {
-  .ielts-layout {
+  .ielts-page-shell .ielts-layout {
     grid-template-columns: 1fr;
   }
 
-  .ielts-sidebar {
+  .ielts-page-shell .ielts-sidebar {
     position: static;
     max-height: none;
     border-right: 0;
@@ -150,7 +133,6 @@ categories: media
 }
 </style>
 
-
 <div class="ielts-page-shell">
 <div class="ielts-layout">
 <aside class="ielts-sidebar">
@@ -158,26 +140,30 @@ categories: media
 <summary>一、新题 [🔥 更新中...]</summary>
 <div class="nav-inner">
 <details class="nav-subgroup" open><summary>Part 1</summary><ul>
-<li><a href="#sec-1-p1-1">History</a></li>
-<li><a href="#sec-1-p1-2">Films/Cinemas</a></li>
-<li><a href="#sec-1-p1-3">Old buildings</a></li>
-<li><a href="#sec-1-p1-4">Clothing</a></li>
-<li><a href="#sec-1-p1-5">Jokes and comedies</a></li>
-<li><a href="#sec-1-p1-6">Headphones</a></li>
-<li><a href="#sec-1-p1-7">Outer space and stars</a></li>
-<li><a href="#sec-1-p1-8">Singing</a></li>
-<li><a href="#sec-1-p1-9">Science</a></li>
-<li><a href="#sec-1-p1-10">Cars</a></li>
-<li><a href="#sec-1-p1-11">Parks</a></li>
-<li><a href="#sec-1-p1-12">Shopping</a></li>
-<li><a href="#sec-1-p1-13">Watches</a></li>
-<li><a href="#sec-1-p1-14">Website</a></li>
-<li><a href="#sec-1-p1-15">Tidiness</a></li>
-<li><a href="#sec-1-p1-16">Mirror</a></li>
-<li><a href="#sec-1-p1-17">Teachers</a></li>
-<li><a href="#sec-1-p1-18">Social media</a></li>
-<li><a href="#sec-1-p1-19">Dream and ambition</a></li>
-<li><a href="#sec-1-p1-20">Music</a></li>
+<li><a href="#sec-1-p1-1">Morning routines</a></li>
+<li><a href="#sec-1-p1-2">Sports programs</a></li>
+<li><a href="#sec-1-p1-3">Evening time</a></li>
+<li><a href="#sec-1-p1-4">Public gardens and parks</a></li>
+<li><a href="#sec-1-p1-5">History</a></li>
+<li><a href="#sec-1-p1-6">Films/Cinemas</a></li>
+<li><a href="#sec-1-p1-7">Old buildings</a></li>
+<li><a href="#sec-1-p1-8">Clothing</a></li>
+<li><a href="#sec-1-p1-9">Jokes and comedies</a></li>
+<li><a href="#sec-1-p1-10">Headphones</a></li>
+<li><a href="#sec-1-p1-11">Outer space and stars</a></li>
+<li><a href="#sec-1-p1-12">Singing</a></li>
+<li><a href="#sec-1-p1-13">Science</a></li>
+<li><a href="#sec-1-p1-14">Cars</a></li>
+<li><a href="#sec-1-p1-15">Parks</a></li>
+<li><a href="#sec-1-p1-16">Shopping</a></li>
+<li><a href="#sec-1-p1-17">Watches</a></li>
+<li><a href="#sec-1-p1-18">Website</a></li>
+<li><a href="#sec-1-p1-19">Tidiness</a></li>
+<li><a href="#sec-1-p1-20">Mirror</a></li>
+<li><a href="#sec-1-p1-21">Teachers</a></li>
+<li><a href="#sec-1-p1-22">Social media</a></li>
+<li><a href="#sec-1-p1-23">Dream and ambition</a></li>
+<li><a href="#sec-1-p1-24">Music</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>人物类</summary><ul>
 <li><a href="#sec-1-c-1-t-1">擅长学习和说语言的人</a></li>
@@ -188,23 +174,31 @@ categories: media
 <li><a href="#sec-1-c-1-t-6">喜欢在家/花园种菜的人</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事物类</summary><ul>
-<li><a href="#sec-1-c-2-t-1">包含动物的故事或书</a></li>
-<li><a href="#sec-1-c-2-t-2">遇到的科技问题</a></li>
-<li><a href="#sec-1-c-2-t-3">名人出演的广告</a></li>
-<li><a href="#sec-1-c-2-t-4">最近看过的电视/网络节目</a></li>
-<li><a href="#sec-1-c-2-t-5">特别场合的食物</a></li>
-<li><a href="#sec-1-c-2-t-6">喜欢的现场体育赛事</a></li>
-<li><a href="#sec-1-c-2-t-7">想颁布的新法律</a></li>
-<li><a href="#sec-1-c-2-t-8">有趣视频</a></li>
-<li><a href="#sec-1-c-2-t-9">收到特殊蛋糕</a></li>
+<li><a href="#sec-1-c-2-t-1">长久目标</a></li>
+<li><a href="#sec-1-c-2-t-2">长远志向</a></li>
+<li><a href="#sec-1-c-2-t-3">保护环境的法律</a></li>
+<li><a href="#sec-1-c-2-t-4">包含动物的故事或书</a></li>
+<li><a href="#sec-1-c-2-t-5">遇到的科技问题</a></li>
+<li><a href="#sec-1-c-2-t-6">名人出演的广告</a></li>
+<li><a href="#sec-1-c-2-t-7">最近看过的电视/网络节目</a></li>
+<li><a href="#sec-1-c-2-t-8">特别场合的食物</a></li>
+<li><a href="#sec-1-c-2-t-9">喜欢的现场体育赛事</a></li>
+<li><a href="#sec-1-c-2-t-10">想颁布的新法律</a></li>
+<li><a href="#sec-1-c-2-t-11">有趣视频</a></li>
+<li><a href="#sec-1-c-2-t-12">收到特殊蛋糕</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事件类</summary><ul>
-<li><a href="#sec-1-c-3-t-1">语言学习</a></li>
-<li><a href="#sec-1-c-3-t-2">坏掉的电子设备</a></li>
-<li><a href="#sec-1-c-3-t-3">重要决定</a></li>
-<li><a href="#sec-1-c-3-t-4">在团队中工作</a></li>
-<li><a href="#sec-1-c-3-t-5">近期改变的计划</a></li>
-<li><a href="#sec-1-c-3-t-6">早起经历</a></li>
+<li><a href="#sec-1-c-3-t-1">交通拥堵</a></li>
+<li><a href="#sec-1-c-3-t-2">快乐活动</a></li>
+<li><a href="#sec-1-c-3-t-3">很久没收到回复的信息</a></li>
+<li><a href="#sec-1-c-3-t-4">花费甚少的外出日</a></li>
+<li><a href="#sec-1-c-3-t-5">别人帮助解决问题</a></li>
+<li><a href="#sec-1-c-3-t-6">语言学习</a></li>
+<li><a href="#sec-1-c-3-t-7">使用电子设备碰到的问题</a></li>
+<li><a href="#sec-1-c-3-t-8">重要决定</a></li>
+<li><a href="#sec-1-c-3-t-9">在团队中工作</a></li>
+<li><a href="#sec-1-c-3-t-10">近期改变的计划</a></li>
+<li><a href="#sec-1-c-3-t-11">早起经历</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>地点类</summary><ul>
 <li><a href="#sec-1-c-4-t-1">重要的河流/湖泊</a></li>
@@ -285,8 +279,11 @@ categories: media
 <details class="nav-subgroup" open><summary>Topics</summary><ul>
 <li><a href="#sec-3-d-1">Work or studies</a></li>
 <li><a href="#sec-3-d-2">Hometown</a></li>
-<li><a href="#sec-3-d-3">Home &amp; Accommodation</a></li>
-<li><a href="#sec-3-d-4">The area you live in</a></li>
+<li><a href="#sec-3-d-3">Please describe your hometown a little.</a></li>
+<li><a href="#sec-3-d-4">Home &amp; Accommodation</a></li>
+<li><a href="#sec-3-d-5">Please describe the room you live in.</a></li>
+<li><a href="#sec-3-d-6">What&#x27;s the difference between where you are living now and where you have lived in the past？</a></li>
+<li><a href="#sec-3-d-7">The area you live in</a></li>
 </ul></details>
 </div></details>
 </aside>
@@ -295,170 +292,331 @@ categories: media
 <section class="ielts-major-section" id="sec-1">
 <h2>一、新题 [🔥 更新中...]</h2>
 <h3>Part 1</h3>
-<details class="topic-card" id="sec-1-p1-1"><summary>1. History <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-1"><summary>1. Morning routines <span class="topic-meta">(5.14)</span></summary>
+<p class="topic-note">1.  What do you do right after getting up in the morning?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Is breakfast important?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What is your morning routine?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you like to get up early in the morning?</p>
 <ul>
-<li>Have you ever been to historical museums?</li>
-<li>Do you like history?</li>
-<li>When was the last time you read about history?</li>
-<li>Did you like history when you were young?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-2"><summary>2. Films/Cinemas <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-2"><summary>2. Sports programs <span class="topic-meta">(5.14)</span></summary>
+<p class="topic-note">1.  Do you like watching sports programs on TV?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you like to watch live sports games?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Who do you like to watch sports games with?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What kinds of games do you expect to watch in the future?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you prefer to watch sports games alone or with a group of friends?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Have you ever watched a sports game in a stadium?</p>
 <ul>
-<li>What films do you like?</li>
-<li>Did you often watch films when you were a child?</li>
-<li>Did you ever go to the cinema alone as a child?</li>
-<li>Do you often go to the cinema with your friends?</li>
-<li>Do you think going to the cinema is a good way to spend time with friends?</li>
-<li>How often do you watch films?</li>
-<li>Do you prefer to watch films at home or in thecinema?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-3"><summary>3. Old buildings <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-3"><summary>3. Evening time <span class="topic-meta">(5.13)</span></summary>
+<p class="topic-note">1.  Do you like the morning or evening?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What do you usually do in the evening?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What did you do in the evening when you were little? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are there any differences between what you do inthe evening now and what you did in the past?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you spend your evenings doing the same things on both weekends and weekdays? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  What do you hate doing in the evening?</p>
 <ul>
-<li>Have you ever seen old buildings in the city?</li>
-<li>Do you think we should preserve old buildings in cities?</li>
-<li>Do you prefer living in an old building or a modern house?</li>
-<li>Are there any old buildings you want to see in the future? Why?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-4"><summary>4. Clothing <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-4"><summary>4. Public gardens and parks <span class="topic-meta">(5.13)</span></summary>
+<p class="topic-note">1.  Would you prefer to play in a personal garden or public garden?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  How are the parks today different from those you visited as a kid?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What do you like to do when visiting a park?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Would you like to play in a public garden or park?</p>
 <ul>
-<li>What kind of clothes do you like to wear?</li>
-<li>Do you prefer to wear comfortable and casual clothes or smart clothes?</li>
-<li>Do you like wearing T-shirts?</li>
-<li>Do you spend a lot of time choosing clothes?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-5"><summary>5. Jokes and comedies <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-5"><summary>5. History <span class="topic-meta">(5.11)</span></summary>
+<p class="topic-note">1.  Have you ever been to historical museums?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you like history?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  When was the last time you read about history?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Did you like history when you were young?</p>
 <ul>
-<li>Are you good at telling jokes?</li>
-<li>Do your friends like to tell jokes?</li>
-<li>Do you like to watch comedies?</li>
-<li>Have you ever watched a live show?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-6"><summary>6. Headphones <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-6"><summary>6. Films/Cinemas <span class="topic-meta">(5.11)</span></summary>
+<p class="topic-note">1.  What films do you like?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Did you often watch films when you were a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Did you ever go to the cinema alone as a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you often go to the cinema with your friends?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you think going to the cinema is a good way to spend time with friends?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  How often do you watch films?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">7.  Do you prefer to watch films at home or in thecinema?</p>
 <ul>
-<li>Do you use headphones?</li>
-<li>What type of headphones do you use?</li>
-<li>When would you use headphones?</li>
-<li>In what conditions would you not use headphones?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-7"><summary>7. Outer space and stars <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-7"><summary>7. Old buildings <span class="topic-meta">(5.11)</span></summary>
+<p class="topic-note">1.  Have you ever seen old buildings in the city?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you think we should preserve old buildings in cities?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you prefer living in an old building or a modern house?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are there any old buildings you want to see in the future? Why?</p>
 <ul>
-<li>Have you ever learnt about outer space and stars?</li>
-<li>Do you like science fiction movies? Why?</li>
-<li>Do you want to know more about outer space?</li>
-<li>Do you want to go into outer space in the future?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-8"><summary>8. Singing <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-8"><summary>8. Clothing <span class="topic-meta">(5.8)</span></summary>
+<p class="topic-note">1.  What kind of clothes do you like to wear?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you prefer to wear comfortable and casual clothes or smart clothes?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you like wearing T-shirts?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you spend a lot of time choosing clothes?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you wear clothes of different styles on weekdays and weekends?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  What colour clothes do you like?</p>
 <ul>
-<li>Do you like singing? Why?</li>
-<li>Have you ever learnt how to sing?</li>
-<li>Who do you want to sing for?</li>
-<li>Do you think singing can bring happiness to people?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-9"><summary>9. Science <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-9"><summary>9. Jokes and comedies <span class="topic-meta">(5.8)</span></summary>
+<p class="topic-note">1.  Are you good at telling jokes?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do your friends like to tell jokes?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you like to watch comedies?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Have you ever watched a live show?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Are comedy shows popular in your country?</p>
 <ul>
-<li>Do you like science?</li>
-<li>When did you start to learn about science?</li>
-<li>Which science subject is interesting to you?</li>
-<li>What kinds of interesting things have you done with science?</li>
-<li>Do you like watching science TV programs?</li>
-<li>Do Chinese people often visit science museums?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-10"><summary>10. Cars <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-10"><summary>10. Headphones <span class="topic-meta">(5.8)</span></summary>
+<p class="topic-note">1.  Do you use headphones?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What type of headphones do you use?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  When would you use headphones?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  In what conditions would you not use headphones?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Is wearing headphones comfortable?</p>
 <ul>
-<li>Did you enjoy travelling by car when you were a kid?</li>
-<li>What types of cars do you like?</li>
-<li>Do you prefer to be a driver or a passenger?</li>
-<li>What do you usually do when there is a traffic jam?</li>
-<li>Do you think car colours are important?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-11"><summary>11. Parks <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-11"><summary>11. Outer space and stars <span class="topic-meta">(5.8)</span></summary>
+<p class="topic-note">1.  Have you ever learnt about outer space and stars?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you like science fiction movies? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you want to know more about outer space?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you want to go into outer space in the future?</p>
 <ul>
-<li>Did you like going to parks as a child?</li>
-<li>Do you still like going to parks now?</li>
-<li>Would you like to see more parks in your country?</li>
-<li>Are there any parks you want to go to in the future?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-12"><summary>12. Shopping <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-12"><summary>12. Singing <span class="topic-meta">(5.8)</span></summary>
+<p class="topic-note">1.  Do you like singing? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever learnt how to sing?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Who do you want to sing for?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think singing can bring happiness to people?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you like listening to others singing?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Have you ever taken a singing class?</p>
 <ul>
-<li>Do you like shopping?</li>
-<li>How often do you go shopping?</li>
-<li>Do you prefer online shopping or in-store shopping?</li>
-<li>Have you ever returned anything you bought online?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-13"><summary>13. Watches <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-13"><summary>13. Science <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Do you like science?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  When did you start to learn about science?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Which science subject is interesting to you?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What kinds of interesting things have you done with science?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you like watching science TV programs?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Do Chinese people often visit science museums?</p>
 <ul>
-<li>Do you wear a watch?</li>
-<li>Have you ever got a watch as a gift?</li>
-<li>Why do some people wear expensive watches?</li>
-<li>Do you think it is important to wear a watch? Why?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-14"><summary>14. Website <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-14"><summary>14. Cars <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Did you enjoy travelling by car when you were a kid?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What types of cars do you like?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you prefer to be a driver or a passenger?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What do you usually do when there is a traffic jam?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you think car colours are important?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Will you buy an expensive car in the future?</p>
 <ul>
-<li>What kinds of websites do you often visit?</li>
-<li>What is your favourite website?</li>
-<li>Are there any changes to the websites you often visit?</li>
-<li>What kinds of websites are popular in your country?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-15"><summary>15. Tidiness <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-15"><summary>15. Parks <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Did you like going to parks as a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you still like going to parks now?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Would you like to see more parks in your country?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are there any parks you want to go to in the future?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-16"><summary>16. Shopping <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Do you like shopping?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  How often do you go shopping?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you prefer online shopping or in-store shopping?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Have you ever returned anything you bought online?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-17"><summary>17. Watches <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Do you wear a watch?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever got a watch as a gift?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Why do some people wear expensive watches?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think it is important to wear a watch? Why?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-18"><summary>18. Website <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  What kinds of websites do you often visit?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What is your favourite website?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Are there any changes to the websites you often visit?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What kinds of websites are popular in your country?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you prefer getting information from websites or books?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Would you like to have your own website?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-19"><summary>19. Tidiness <span class="topic-meta">(5.6)</span></summary>
+<p class="topic-note">1.  Do you like to keep things tidy?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you use to keep your room tidy as a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  How do you keep your work or study place tidy?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think that it is necessary to be tidy?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-20"><summary>20. Mirror <span class="topic-meta">(5.3)</span></summary>
+<p class="topic-note">1.  Do you like looking at yourself in the mirror? How often?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever bought mirrors?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you usually take a mirror with you?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Would you use mirrors to decorate your room?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-21"><summary>21. Teachers <span class="topic-meta">(4.30)</span></summary>
+<p class="topic-note">1.  Do you have a favorite teacher?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you want to be a teacher in the future?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you have a teacher from your past that you still remember?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are you still in touch with your primary school teachers?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  In what ways has your favorite teacher helped you?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-22"><summary>22. Social media <span class="topic-meta">(4.30)</span></summary>
+<p class="topic-note">1.  Have you ever posted anything on social media?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  When did you start using social media?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you think you spend too much time on social media?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do your friends use social media?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  What do people often do on social media?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-23"><summary>23. Dream and ambition <span class="topic-meta">(4.30)</span></summary>
+<p class="topic-note">1.  What was your childhood dream?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Are you the kind of person who sticks to dreams?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What is your dream job?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think you are an ambitious person?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-24"><summary>24. Music <span class="topic-meta">(4.30)</span></summary>
+<p class="topic-note">1.  Do you prefer sad or happy music?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Does happy music make you feel more excited?</p>
 <p class="topic-note">[小问待补充]</p>
 <ul>
-<li>Do you like to keep things tidy?</li>
-<li>Do you use to keep your room tidy as a child?</li>
-</ul>
-</details>
-<details class="topic-card" id="sec-1-p1-16"><summary>16. Mirror <span class="topic-meta">(5.3)</span></summary>
-<ul>
-<li>Do you like looking at yourself in the mirror? How often?</li>
-<li>Have you ever bought mirrors?</li>
-<li>Do you usually take a mirror with you?</li>
-<li>Would you use mirrors to decorate your room?</li>
-</ul>
-</details>
-<details class="topic-card" id="sec-1-p1-17"><summary>17. Teachers <span class="topic-meta">(4.30)</span></summary>
-<ul>
-<li>Do you have a favorite teacher?</li>
-<li>Do you want to be a teacher in the future?</li>
-<li>Do you have a teacher from your past that you still remember?</li>
-<li>Are you still in touch with your primary school teachers?</li>
-<li>In what ways has your favorite teacher helped you?</li>
-</ul>
-</details>
-<details class="topic-card" id="sec-1-p1-18"><summary>18. Social media <span class="topic-meta">(4.30)</span></summary>
-<ul>
-<li>Have you ever posted anything on social media?</li>
-<li>When did you start using social media?</li>
-<li>Do you think you spend too much time on social media?</li>
-<li>Do your friends use social media?</li>
-<li>What do people often do on social media?</li>
-</ul>
-</details>
-<details class="topic-card" id="sec-1-p1-19"><summary>19. Dream and ambition <span class="topic-meta">(4.30)</span></summary>
-<ul>
-<li>What was your childhood dream?</li>
-<li>Are you the kind of person who sticks to dreams?</li>
-<li>What is your dream job?</li>
-<li>Do you think you are an ambitious person?</li>
-</ul>
-</details>
-<details class="topic-card" id="sec-1-p1-20"><summary>20. Music <span class="topic-meta">(4.30)</span></summary>
-<p class="topic-note">[小问待补充]</p>
-<ul>
-<li>Do you prefer sad or happy music?</li>
-<li>Does happy music make you feel more excited?</li>
+
 </ul>
 </details>
 <h3>Part 2 &amp; Part 3</h3>
@@ -481,7 +639,7 @@ categories: media
 <li>Do people learn any languages other than English?</li>
 <li>Why is it easier for children to learn new things than for adults?</li>
 <li>How do people learn new things?</li>
-<li>[小问待补充]</li>
+<li>What is the most important thing for learning a language well?</li>
 </ul>
 </div>
 </details>
@@ -504,7 +662,7 @@ categories: media
 <li>Do most people prefer shopping at big stores or small stores?</li>
 <li>What makes a business successful?</li>
 <li>What makes a business fail?</li>
-<li>[小问待补充]</li>
+<li>Is it easy to set up a new business in your country?</li>
 </ul>
 </div>
 </details>
@@ -587,12 +745,71 @@ categories: media
 <li>Is it easy to grow plants at home?</li>
 <li>Why do some people like to grow plants?</li>
 <li>Why do some people prefer to grow their own fruits and vegetables instead of buying them from the market?</li>
-<li>[小问待补充]</li>
+<li>Do you think students should learn to grow plant?</li>
 </ul>
 </div>
 </details>
 <h4>事物类</h4>
-<details class="topic-card" id="sec-1-c-2-t-1"><summary>1. 包含动物的故事或书 <span class="topic-meta">(5.12)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-1"><summary>1. 长久目标 <span class="topic-meta">(5.15)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a long-term goal you would like to achieve</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>How long you have had this goal</li>
+<li>What the goal is</li>
+<li>How you will achieve it</li>
+<li>And explain why you set this goal</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>What goals should a society have?</li>
+<li>Do people need to have goals?</li>
+<li>What goals do people at your age have?</li>
+<li>Is it necessary to give advice to children?</li>
+<li>What goals do young people usually have?</li>
+<li>What should people do to achieve their goals?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-2-t-2"><summary>2. 长远志向 <span class="topic-meta">(5.13)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe an ambition that you have had for a long time</p>
+<p>You should say</p>
+<p>What it is</p>
+<p>What you did for it</p>
+<p>When you can achieve it</p>
+<p>And explain why you have this ambition</p>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>[小问待补充]</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-2-t-3"><summary>3. 保护环境的法律 <span class="topic-meta">(5.13)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a law on environmental protection</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>What it is</li>
+<li>How you first learned about it</li>
+<li>Who benefits from it</li>
+<li>And explain how you feel about this law</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>What kinds of rules do schools in China have?</li>
+<li>Do you think school rules are important?</li>
+<li>Are children unhappy with the school rules?</li>
+<li>What are the rules people should obey at work?</li>
+<li>What is the purpose of punishment?</li>
+<li>[小问待补充]</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-2-t-4"><summary>4. 包含动物的故事或书 <span class="topic-meta">(5.12)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a story/book with animals in it</p>
 <p><strong>You should say:</strong></p>
@@ -614,7 +831,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-2"><summary>2. 遇到的科技问题 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-5"><summary>5. 遇到的科技问题 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a challenging technological problem you faced</p>
 <p><strong>You should say:</strong></p>
@@ -627,16 +844,16 @@ categories: media
 </div>
 <div class="topic-block"><div class="topic-subheading">Part 3</div>
 <ul>
-<li>What are the advantages and disadvantages of Al?</li>
-<li>Do you think people today should learn about Al technology?</li>
-<li>Should children learn to use Al?</li>
-<li>How can Al help in our lives?</li>
-<li>Do you think students are overly reliant on Al?</li>
-<li>What can teachers do to stop students relying too much on Al?</li>
+<li>What are the advantages and disadvantages of AI?</li>
+<li>Do you think people today should learn about AI technology?</li>
+<li>Should children learn to use AI?</li>
+<li>How can AI help in our lives?</li>
+<li>Do you think students are overly reliant on AI?</li>
+<li>What can teachers do to stop students relying too much on AI?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-3"><summary>3. 名人出演的广告 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-6"><summary>6. 名人出演的广告 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an advertisement with a famous person in it</p>
 <p><strong>You should say:</strong></p>
@@ -658,7 +875,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-4"><summary>4. 最近看过的电视/网络节目 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-7"><summary>7. 最近看过的电视/网络节目 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a TV show/online program you have watched recently</p>
 <p><strong>You should say:</strong></p>
@@ -678,7 +895,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-5"><summary>5. 特别场合的食物 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-8"><summary>8. 特别场合的食物 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a food that people eat on special occasions/events</p>
 <p><strong>You should say:</strong></p>
@@ -694,11 +911,12 @@ categories: media
 <li>Why are there special foods on special occasions or events?</li>
 <li>What are the differences between everyday food and festival food?</li>
 <li>Are there any differences between the food people eat today and the food people ate in the past?</li>
+<li>Do people today prefer eating at home or in a restaurant?</li>
 <li>[小问待补充]</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-6"><summary>6. 喜欢的现场体育赛事 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-9"><summary>9. 喜欢的现场体育赛事 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a live sports event you watched and liked</p>
 <p><strong>You should say:</strong></p>
@@ -715,11 +933,12 @@ categories: media
 <li>Where do people normally watch sports events?</li>
 <li>What are the advantages of watching sports events online?</li>
 <li>What sports matches are suitable for children to attend?</li>
-<li>[小问待补充]</li>
+<li>Why do some people spend a lot going to other countries to watch sports events?</li>
+<li>What sports games are popular in your country?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-7"><summary>7. 想颁布的新法律 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-10"><summary>10. 想颁布的新法律 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a new law you would like to introduce in your country</p>
 <p><strong>You should say:</strong></p>
@@ -742,7 +961,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-8"><summary>8. 有趣视频 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-11"><summary>11. 有趣视频 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an interesting video</p>
 <p><strong>You should say:</strong></p>
@@ -763,7 +982,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-9"><summary>9. 收到特殊蛋糕 <span class="topic-meta">(5.3)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-12"><summary>12. 收到特殊蛋糕 <span class="topic-meta">(5.3)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a special cake you received from others</p>
 <p><strong>You should say:</strong></p>
@@ -786,7 +1005,113 @@ categories: media
 </div>
 </details>
 <h4>事件类</h4>
-<details class="topic-card" id="sec-1-c-3-t-1"><summary>1. 语言学习 <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-1"><summary>1. 交通拥堵 <span class="topic-meta">(5.15)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when you were stuck in a traffic jam for a very long time</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>When it happened</li>
+<li>Where you were stuck</li>
+<li>What you did while waiting</li>
+<li>And explain how you felt in the traffic jam</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>How can we solve the traffic jam problem?</li>
+<li>Do you think developing public transport can solve traffic jam problems?</li>
+<li>Do you think highways will help reduce traffic jams?</li>
+<li>What are good ways to manage traffic?</li>
+<li>Do you like to use public transport?</li>
+<li>Would you rather be in a car or a bus in a traffic jam?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-2"><summary>2. 快乐活动 <span class="topic-meta">(5.14)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when you organized a happy event successfully</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>What the event was</li>
+<li>How you prepared for it</li>
+<li>Who helped you to organize it</li>
+<li>And explain why you think it was a successful event</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>How can parents help children to be organized?</li>
+<li>On what occasions do people need to be organized?</li>
+<li>Does everything need to be well prepared?</li>
+<li>Do people need others&#x27; help when organizing things?</li>
+<li>How would you feel when you were not well prepared for something?</li>
+<li>Do you prefer to prepare and organize an activity or just take part in an activity?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-3"><summary>3. 很久没收到回复的信息 <span class="topic-meta">(5.14)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when you received a message or email and it took you a long time to reply</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>Who this person was</li>
+<li>What the message/email was about</li>
+<li>Why you spent a lot of time replying</li>
+<li>And explain how you felt about the experience</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>When do people spend a long time responding to others&#x27; messages?</li>
+<li>In what situations do people not respond to messages right away?</li>
+<li>What would you do if you haven&#x27;t received a reply after sending out a message?</li>
+<li>Why do some people prefer sending a message instead of making a call?</li>
+<li>How do you show your respect in your message?</li>
+<li>Why do some people feel angry when others don&#x27;t reply to their message?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-4"><summary>4. 花费甚少的外出日 <span class="topic-meta">(5.13)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a special day out that costs you little money/didn&#x27;t cost you much</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>When the day was</li>
+<li>Where you went</li>
+<li>How much you spent</li>
+<li>And explain how you feel about the day</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>Do people like to spend their leisure time out in your country?</li>
+<li>How do people spend their leisure time in your country?</li>
+<li>How does technology affect the way people spend their leisure time?</li>
+<li>Do you think only old people have time for leisure?</li>
+<li>Why do people like to have days off?</li>
+<li>Going out to have holidays is tiring. Why do people still want to do it?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-5"><summary>5. 别人帮助解决问题 <span class="topic-meta">(5.13)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when a person did something to help you solve a problem</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>Who the person is</li>
+<li>What the problem was</li>
+<li>How he/she helped you</li>
+<li>And explain how you felt about the experience</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>How important is it for schools to help children become smarter?</li>
+<li>[小问待补充]</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-6"><summary>6. 语言学习 <span class="topic-meta">(5.11)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a thing you did to learn another language</p>
 <p><strong>You should say:</strong></p>
@@ -808,7 +1133,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-2"><summary>2. 坏掉的电子设备 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-7"><summary>7. 使用电子设备碰到的问题 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you had a problem with using an electronic device</p>
 <p><strong>You should say:</strong></p>
@@ -827,7 +1152,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-3"><summary>3. 重要决定 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-8"><summary>8. 重要决定 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an important decision that you made</p>
 <p><strong>You should say:</strong></p>
@@ -849,7 +1174,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-4"><summary>4. 在团队中工作 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-9"><summary>9. 在团队中工作 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you worked in a group</p>
 <p><strong>You should say:</strong></p>
@@ -866,11 +1191,12 @@ categories: media
 <li>What should a leader do to make team members want to follow him or her?</li>
 <li>Should students learn to do group work?</li>
 <li>What group tasks are there in schools?</li>
-<li>[小问待补充]</li>
+<li>What advantages are there for students experiencing teamwork at school?</li>
+<li>How can you tell if a person is a good leader?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-5"><summary>5. 近期改变的计划 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-10"><summary>10. 近期改变的计划 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a plan that you had to change recently</p>
 <p><strong>You should say:</strong></p>
@@ -891,7 +1217,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-6"><summary>6. 早起经历 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-11"><summary>11. 早起经历 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you got up early</p>
 <p><strong>You should say:</strong></p>
@@ -909,7 +1235,7 @@ categories: media
 <li>What kinds of occasions do people need to arrive early?</li>
 <li>Why do some people like to stay up late?</li>
 <li>Is it good to arrive early in any situation?</li>
-<li>[小问待补充]</li>
+<li>What kind of people like getting up early?</li>
 </ul>
 </div>
 </details>
@@ -996,7 +1322,8 @@ categories: media
 <li>Why aren&#x27;t young people willing to listen to the experiences of older people?</li>
 <li>What can people do when they feel bored?</li>
 <li>Why are some teachers&#x27; class boring? Are there any solutions?</li>
-<li>[小问待补充]</li>
+<li>Why do some young people feel bored when talking with old people?</li>
+<li>Do most people think news about celebrities is boring?</li>
 </ul>
 </div>
 </details>
@@ -1037,7 +1364,9 @@ categories: media
 <li>Are there many tall buildings in your country?</li>
 <li>What are the differences between those tall buildings in your country?</li>
 <li>Why are different places laid out and designed differently?</li>
-<li>[小问待补充]</li>
+<li>What are the advantages of living in tall buildings?</li>
+<li>Why do some people like to remodel and decorate their homes themselves?</li>
+<li>What kind of interior design style do most people like?</li>
 </ul>
 </div>
 </details>
@@ -1065,159 +1394,238 @@ categories: media
 <h2>二、保留题</h2>
 <h3>Part 1</h3>
 <details class="topic-card" id="sec-2-p1-1"><summary>1. Life stages <span class="topic-meta">（1.19）</span></summary>
+<p class="topic-note">1.  What did you often do with your friends in your childhood?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What do you think is the most important at the moment?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you have any plans for the next five years?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  How do people remember each stage of their lives?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you enjoy being the age you are now?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  At what age do you think people are the happiest?</p>
 <ul>
-<li>What did you often do with your friends in your childhood?</li>
-<li>What do you think is the most important at the moment?</li>
-<li>Do you have any plans for the next five years?</li>
-<li>How do people remember each stage of their lives?</li>
-<li>Do you enjoy being the age you are now?</li>
-<li>At what age do you think people are the happiest?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-2"><summary>2. Views <span class="topic-meta">（1.13）</span></summary>
+<p class="topic-note">1.  Do you like taking pictures of different views?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you prefer views in urban areas or rural areas?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you prefer views in your own country or in other countries?</p>
 <ul>
-<li>Do you like taking pictures of different views?</li>
-<li>Do you prefer views in urban areas or rural areas?</li>
-<li>Do you prefer views in your own country or in other countries?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-3"><summary>3. Building <span class="topic-meta">（1.8）</span></summary>
+<p class="topic-note">1.  Do you take photos of buildings?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Is there a building that you would like to visit?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Are there tall buildings near your home?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you want to live in a tall building?</p>
 <ul>
-<li>Do you take photos of buildings?</li>
-<li>Is there a building that you would like to visit?</li>
-<li>Are there tall buildings near your home?</li>
-<li>Do you want to live in a tall building?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-4"><summary>4. Childhood activities <span class="topic-meta">（1.8）</span></summary>
+<p class="topic-note">1.  What were your favourite activities when you were a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Did you prefer to do activities alone or with a group of people when you were a child?</p>
 <p class="topic-note">更新中</p>
 <ul>
-<li>What were your favourite activities when you were a child?</li>
-<li>Did you prefer to do activities alone or with a group of people when you were a child?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-5"><summary>5. Travelling <span class="topic-meta">（1.7）</span></summary>
+<p class="topic-note">1.  Do you look out the window at the scenery when travelling by bus or car?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you take photos of the scenery outside the car window?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you prefer the mountains or the sea?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What are the most beautiful sights you have seen while travelling?</p>
 <ul>
-<li>Do you look out the window at the scenery when travelling by bus or car?</li>
-<li>Do you take photos of the scenery outside the car window?</li>
-<li>Do you prefer the mountains or the sea?</li>
-<li>What are the most beautiful sights you have seen while travelling?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-6"><summary>6. Typing <span class="topic-meta">（1.6）</span></summary>
+<p class="topic-note">1.  Do you type on a desktop or laptop keyboard every day?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  When did you learn how to type on a keyboard?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  How do you improve your typing?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you prefer typing or handwriting?</p>
 <ul>
-<li>Do you type on a desktop or laptop keyboard every day?</li>
-<li>When did you learn how to type on a keyboard?</li>
-<li>How do you improve your typing?</li>
-<li>Do you prefer typing or handwriting?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-7"><summary>7. Hobby <span class="topic-meta">（1.6）</span></summary>
+<p class="topic-note">1.  Do you have any hobbies?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Did you have any hobbies when you were a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you have a hobby that you&#x27;ve had since childhood?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you have the same hobbies as your family members?</p>
 <ul>
-<li>Do you have any hobbies?</li>
-<li>Did you have any hobbies when you were a child?</li>
-<li>Do you have a hobby that you&#x27;ve had since childhood?</li>
-<li>Do you have the same hobbies as your family members?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-8"><summary>8. Walking <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Do you walk a lot?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Did you often go outside to have a walk when you were a child?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Why do people like to walk in parks?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Where would you like to take a long walk if you had the chance?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Where did you go for a walk lately?</p>
 <ul>
-<li>Do you walk a lot?</li>
-<li>Did you often go outside to have a walk when you were a child?</li>
-<li>Why do people like to walk in parks?</li>
-<li>Where would you like to take a long walk if you had the chance?</li>
-<li>Where did you go for a walk lately?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-9"><summary>9. Books and reading habits <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Do you like reading?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you prefer to read on paper or on a screen?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  When do you need to read carefully, and when not?</p>
 <ul>
-<li>Do you like reading?</li>
-<li>Do you prefer to read on paper or on a screen?</li>
-<li>When do you need to read carefully, and when not?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-10"><summary>10. Gifts <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Have you ever sent handmade gifts to others?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever received a great gift?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What do you consider when choosing a gift?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think you are good at choosing gifts?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  What gift have you received recently?</p>
 <ul>
-<li>Have you ever sent handmade gifts to others?</li>
-<li>Have you ever received a great gift?</li>
-<li>What do you consider when choosing a gift?</li>
-<li>Do you think you are good at choosing gifts?</li>
-<li>What gift have you received recently?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-11"><summary>11. Morning routine <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Do you like to get up early in the morning?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What is your morning routine?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What did you do in the morning when you were little? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are there any differences between what you do in the morning now and what you did in the past?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you spend your mornings doing the same things on both weekends and weekdays? Why?</p>
 <ul>
-<li>Do you like to get up early in the morning?</li>
-<li>What is your morning routine?</li>
-<li>What did you do in the morning when you were little? Why?</li>
-<li>Are there any differences between what you do in the morning now and what you did in the past?</li>
-<li>Do you spend your mornings doing the same things on both weekends and weekdays? Why?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-12"><summary>12. Sports team <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Have you ever been part of a sports team?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Are team sports popular in your culture?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you like watching team games? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What are the differences between team sports and individual sports?</p>
 <ul>
-<li>Have you ever been part of a sports team?</li>
-<li>Are team sports popular in your culture?</li>
-<li>Do you like watching team games? Why?</li>
-<li>What are the differences between team sports and individual sports?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-13"><summary>13. Keys <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Do you always bring a lot of keys with you?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever lost your keys?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you often forget the keys and lock yourself out?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you think it&#x27;s a good idea to leave your keys with a neighbour?</p>
 <ul>
-<li>Do you always bring a lot of keys with you?</li>
-<li>Have you ever lost your keys?</li>
-<li>Do you often forget the keys and lock yourself out?</li>
-<li>Do you think it&#x27;s a good idea to leave your keys with a neighbour?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-14"><summary>14. Dreams <span class="topic-meta">（1.5）</span></summary>
+<p class="topic-note">1.  Can you remember the dreams you had?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you share your dreams with others?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you think dreams have special meanings?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you want to make your dreams come true?</p>
 <ul>
-<li>Can you remember the dreams you had?</li>
-<li>Do you share your dreams with others?</li>
-<li>Do you think dreams have special meanings?</li>
-<li>Do you want to make your dreams come true?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-15"><summary>15. Pets and Animals <span class="topic-meta">（1.4）</span></summary>
+<p class="topic-note">1.  What&#x27;s your favourite animal? Why?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Where do you prefer to keep your pet, indoors or outdoors?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Have you ever had a pet before?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What is the most popular animal in China?</p>
 <ul>
-<li>What&#x27;s your favourite animal? Why?</li>
-<li>Where do you prefer to keep your pet, indoors or outdoors?</li>
-<li>Have you ever had a pet before?</li>
-<li>What is the most popular animal in China?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-16"><summary>16. Food <span class="topic-meta">（1.3）</span></summary>
+<p class="topic-note">1.  What is your favourite food?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Is there any food you dislike?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What kind of food did you like when you were young?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you eat different foods at different times of the year?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Has your favourite food changed since you were a child?</p>
 <ul>
-<li>What is your favourite food?</li>
-<li>Is there any food you dislike?</li>
-<li>What kind of food did you like when you were young?</li>
-<li>Do you eat different foods at different times of the year?</li>
-<li>Has your favourite food changed since you were a child?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-17"><summary>17. Day off <span class="topic-meta">（1.3）</span></summary>
+<p class="topic-note">1.  When was the last time you had a few days off?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What do you usually do when you have days off?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you usually spend your days off with your parents or with your friends?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What would you like to do if you had a day off tomorrow?</p>
 <ul>
-<li>When was the last time you had a few days off?</li>
-<li>What do you usually do when you have days off?</li>
-<li>Do you usually spend your days off with your parents or with your friends?</li>
-<li>What would you like to do if you had a day off tomorrow?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-18"><summary>18. Memory</summary>
+<p class="topic-note">1.  Are you good at memorising things?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Have you ever forgotten something important?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  How do you remember important things?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What do you need to remember in your daily life?</p>
 <ul>
-<li>Are you good at memorising things?</li>
-<li>Have you ever forgotten something important?</li>
-<li>How do you remember important things?</li>
-<li>What do you need to remember in your daily life?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-2-p1-19"><summary>19. Name</summary>
+<p class="topic-note">1.  Are there any differences between how Chinese name their children now and in the past?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Are there any names that are more popular than others in China?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Does anyone in your family have the same name as you?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Does your name have any special meaning?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  How would you choose names for your next generation?</p>
 <ul>
-<li>Are there any differences between how Chinese name their children now and in the past?</li>
-<li>Are there any names that are more popular than others in China?</li>
-<li>Does anyone in your family have the same name as you?</li>
-<li>Does your name have any special meaning?</li>
-<li>How would you choose names for your next generation?</li>
+
 </ul>
 </details>
 <h3>Part 2 &amp; Part 3</h3>
@@ -1372,7 +1780,7 @@ categories: media
 <li>What can children do with their fame?</li>
 <li>Do people become famous because of their talent?</li>
 <li>Why are some people more interested in the private lives of celebrities?</li>
-<li>Do you think the definition of &quot;fame&quot; has changed in the age of social media? How?</li>
+<li>Do you think the definition of “fame” has changed in the age of social media? How?</li>
 </ul>
 </div>
 </details>
@@ -1461,7 +1869,7 @@ categories: media
 <li>What kinds of jobs need imagination?</li>
 <li>What subjects are helpful for children&#x27;s imagination?</li>
 <li>Why do you think some children seem to have more imagination than others?</li>
-<li>Do you think modern technology (like TV and smartphones) helps or hurts people&#x27;s imagination?</li>
+<li>Do you think modern technology (like TV and smartphones) helps or hurts people‘s imagination?</li>
 </ul>
 </div>
 </details>
@@ -1704,7 +2112,7 @@ categories: media
 <li>What do you think young people spend most of their money on?</li>
 <li>Do you think it is important to save money? Why?</li>
 <li>Do people buy things they don&#x27;t need?</li>
-<li>How do advertisements influence people&#x27;s spending habits?</li>
+<li>How do advertisements influence people’s spending habits?</li>
 <li>What can people do to avoid overspending?</li>
 </ul>
 </div>
@@ -1793,7 +2201,7 @@ categories: media
 <li>Do you think films with many celebrities are more likely to be popular?</li>
 <li>What films are popular in China right now?</li>
 <li>Do you think traditional stories (like fairy tales) are still relevant for children today?</li>
-<li>How can stories influence a person&#x27;s character or values?</li>
+<li>How can stories influence a person‘s character or values?</li>
 </ul>
 </div>
 </details>
@@ -1857,8 +2265,8 @@ categories: media
 <li>What jobs do children want to do when they grow up?</li>
 <li>What should people consider when choosing jobs?</li>
 <li>Is salary the main reason people choose a certain job?</li>
-<li>How have people&#x27;s opinions about the &quot;perfect job&quot; changed compared to the past?</li>
-<li>Do you think it&#x27;s easy for people to find their ideal job? Why or why not?</li>
+<li>How have people’s opinions about the “perfect job” changed compared to the past?</li>
+<li>Do you think it’s easy for people to find their ideal job? Why or why not?</li>
 <li>What is more important for job satisfaction: a high salary or good relationships with colleagues?</li>
 </ul>
 </div>
@@ -1889,78 +2297,149 @@ categories: media
 <section class="ielts-major-section" id="sec-3">
 <h2>三、必考题</h2>
 <details class="topic-card" id="sec-3-d-1"><summary>1. Work or studies</summary>
+<p class="topic-note">1.  What technology do you use at work?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  What technology do you use when you study?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  What subjects are you studying?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Why did you choose to study that subject?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you like your subject? Is it very interesting?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Are you looking forward to working?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">7.  Do you prefer to study in the mornings or in the afternoons?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">8.  What work do you do?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">9.  Why did you choose to do that type of work (or that job)?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">10. Do you like your job? Is it very interesting?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">11. Do you miss being a student?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">12. Who helps you the most? And how?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">13. Do you think that you subject is popular in your country?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">14. Do you have any plans for your studies in the next five years?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">15. What are the benefits of being your age?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">16. Do you want to change your major?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">17. How much time do you spend on your studies each week?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">18. What changes would you like to see in your school?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">19. What requirements did you need to meet to get your current job?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">20. Do you have any plans for your work in the next five years?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">21. What do you think is most important at the moment?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">22. Do you want to change to another job?</p>
 <ul>
-<li>What technology do you use at work?</li>
-<li>What technology do you use when you study?</li>
-<li>What subjects are you studying?</li>
-<li>Why did you choose to study that subject?</li>
-<li>Do you like your subject? Is it very interesting?</li>
-<li>Are you looking forward to working?</li>
-<li>Do you prefer to study in the mornings or in the afternoons?</li>
-<li>What work do you do?</li>
-<li>Why did you choose to do that type of work (or that job)?</li>
-<li>Do you like your job? Is it very interesting?</li>
-<li>Do you miss being a student?</li>
-<li>Who helps you the most? And how?</li>
-<li>Do you think that you subject is popular in your country?</li>
-<li>Do you have any plans for your studies in the next five years?</li>
-<li>What are the benefits of being your age?</li>
-<li>Do you want to change your major?</li>
-<li>How much time do you spend on your studies each week?</li>
-<li>What changes would you like to see in your school?</li>
-<li>What requirements did you need to meet to get your current job?</li>
-<li>Do you have any plans for your work in the next five years?</li>
-<li>What do you think is most important at the moment?</li>
-<li>Do you want to change to another job?</li>
+
 </ul>
 </details>
 <details class="topic-card" id="sec-3-d-2"><summary>2. Hometown</summary>
+<p class="topic-note">1.  Where is your hometown?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  How long have you been living there?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you think you will continue living there for a long time?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
 <ul>
-<li>Where is your hometown?</li>
-<li>How long have you been living there?</li>
-<li>Do you think you will continue living there for a long time?</li>
-<li>Please describe your hometown a little.</li>
-<li>Is that a big city or a small place?</li>
-<li>What&#x27;s your hometown famous for?</li>
-<li>Did you learn about the history of your hometown at school?</li>
-<li>Do you like your hometown?</li>
-<li>Do you like living there?</li>
-<li>What do you like (most) about your hometown?</li>
-<li>Is there anything you dislike about it?</li>
-<li>Are there many young people in your hometown?</li>
-<li>Is your hometown a good places for young people to pursue their careers?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-3-d-3"><summary>3. Home &amp; Accommodation</summary>
+<details class="topic-card" id="sec-3-d-3"><summary>4. Please describe your hometown a little.</summary>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Is that a big city or a small place?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  What&#x27;s your hometown famous for?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">7.  Did you learn about the history of your hometown at school?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">8.  Do you like your hometown?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">9.  Do you like living there?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">10. What do you like (most) about your hometown?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">11. Is there anything you dislike about it?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">12. Are there many young people in your hometown?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">13. Is your hometown a good places for young people to pursue their careers?</p>
 <ul>
-<li>What kinds of accommodation do you live in?</li>
-<li>Do you live in a house or a flat?</li>
-<li>Who do you live with?</li>
-<li>Are the transport facilities to your home very good?</li>
-<li>How long have you lived there?</li>
-<li>Do you plan to live there for a long time?</li>
-<li>Please describe the room you live in.</li>
-<li>What part of your home do you like the most?</li>
-<li>Can you describe the place where you live?</li>
-<li>What room does your family spend most of the time in?</li>
-<li>What&#x27;s your favorite room in your apartment/house?</li>
-<li>What makes you feel pleasant in your home?</li>
-<li>What do you usually do in your flat?</li>
-<li>Do you think it is important to live in a comfortable environment?</li>
-<li>What&#x27;s the difference between where you are living now and where you have lived in the past？</li>
-<li>What kind of house or flat do you want to live in in the future?</li>
-<li>Do you prefer living in a house or a flat?</li>
+
 </ul>
 </details>
-<details class="topic-card" id="sec-3-d-4"><summary>4. The area you live in</summary>
+<details class="topic-card" id="sec-3-d-4"><summary>3. Home &amp; Accommodation</summary>
+<p class="topic-note">1.  What kinds of accommodation do you live in?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you live in a house or a flat?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Who do you live with?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Are the transport facilities to your home very good?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  How long have you lived there?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Do you plan to live there for a long time?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
 <ul>
-<li>Do you like the area that you live in?</li>
-<li>Where do you like to go in that area?</li>
-<li>Do you know any famous people in your area?</li>
-<li>What are some changes in the area recently?</li>
-<li>Do you know any of your neighbors?</li>
-<li>Are the people in your neighborhood nice and friendly?</li>
-<li>Do you live in a noisy or a quiet places?</li>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-3-d-5"><summary>7. Please describe the room you live in.</summary>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">8.  What part of your home do you like the most?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">9.  Can you describe the place where you live?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">10. What room does your family spend most of the time in?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">11. What&#x27;s your favorite room in your apartment/house?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">12. What makes you feel pleasant in your home?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">13. What do you usually do in your flat?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">14. Do you think it is important to live in a comfortable environment?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-3-d-6"><summary>15. What&#x27;s the difference between where you are living now and where you have lived in the past？</summary>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">16. What kind of house or flat do you want to live in in the future?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">17. Do you prefer living in a house or a flat?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-3-d-7"><summary>4. The area you live in</summary>
+<p class="topic-note">1.  Do you like the area that you live in?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Where do you like to go in that area?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you know any famous people in your area?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  What are some changes in the area recently?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">5.  Do you know any of your neighbors?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Are the people in your neighborhood nice and friendly?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">7.  Do you live in a noisy or a quiet places?</p>
+<ul>
+
 </ul>
 </details>
 </section>
