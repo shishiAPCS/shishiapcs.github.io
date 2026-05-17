@@ -5,8 +5,6 @@ layout: post
 categories: CS
 ---
 
-# GitHub 到底是什么？
-
 > 原作者：X / Twitter [@ando_w](https://x.com/ando_w/status/2053484739643015385?s=46)  
 > 结尾附非技术人员在 GitHub 上“找神仙软件”和“挖宝”的实用搜索指令。  
 > ——致所有非技术背景的赛博原住民。
