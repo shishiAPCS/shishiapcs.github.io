@@ -317,6 +317,10 @@ Format your response like this:
 
 * #### [Github pages 教程](https://www.youtube.com/watch?v=o5g-lUuFgpg)
     - ##### [Zao](https://zao6666.github.io/middle-english-translator-web/)
+    - ##### [Harry](https://harry-778-gjx.github.io/Study_Helper/)
+    - ##### [Sky](https://sky-147.github.io/CSA/)
+    - ##### [Jarvis](https://bronya2000.github.io/TerminalSong/index.html)
+    - ##### [Nina](https://nina888-dudu.github.io/SSBC-Hub2/)
     - ##### [RaymondYu](https://podevei.github.io/Podevus/)
     - ##### [Andy](https://andy330523.github.io/stars/index.html)
     - ##### [TomLiu](https://tomliu-qianyuan.github.io/)
