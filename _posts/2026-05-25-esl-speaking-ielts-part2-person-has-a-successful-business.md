@@ -141,6 +141,41 @@ curious → interested → impressed → admiring → inspired
 
 ---
 
+## C2. Pronunciation Focus
+
+## 发音重点词
+
+Click a word to hear its pronunciation. Practice these words before reading the full answer.
+
+<div class="pronunciation-controls">
+  <button type="button" class="accent-button active" data-accent="us">American English</button>
+  <button type="button" class="accent-button" data-accent="uk">British English</button>
+</div>
+
+<div class="pronunciation-box">
+  <button type="button" class="speak-word" data-word="business">business 🔊</button>
+  <button type="button" class="speak-word" data-word="admire">admire 🔊</button>
+  <button type="button" class="speak-word" data-word="discovered">discovered 🔊</button>
+  <button type="button" class="speak-word" data-word="skateboarding">skateboarding 🔊</button>
+  <button type="button" class="speak-word" data-word="hooked">hooked 🔊</button>
+  <button type="button" class="speak-word" data-word="ventures">ventures 🔊</button>
+  <button type="button" class="speak-word" data-word="reputation">reputation 🔊</button>
+  <button type="button" class="speak-word" data-word="partnered">partnered 🔊</button>
+  <button type="button" class="speak-word" data-word="gear">gear 🔊</button>
+  <button type="button" class="speak-word" data-word="licensed">licensed 🔊</button>
+  <button type="button" class="speak-word" data-word="collaborated">collaborated 🔊</button>
+  <button type="button" class="speak-word" data-word="limited edition">limited-edition 🔊</button>
+  <button type="button" class="speak-word" data-word="asset">asset 🔊</button>
+  <button type="button" class="speak-word" data-word="empire">empire 🔊</button>
+  <button type="button" class="speak-word" data-word="inspiring">inspiring 🔊</button>
+</div>
+
+<div class="pronunciation-note">
+  Tip: Listen once, repeat once, then use the word in one sentence.
+</div>
+
+---
+
 ## D. Angle Shift Table
 
 ## 话题切换表
@@ -174,3 +209,120 @@ What I admire most is that he combined talent, passion, and **smart business dec
 
 I find that really inspiring because it shows how passion can **grow into something much bigger**.
 我觉得这一点非常有启发性，因为它说明，热爱真的可以慢慢发展成一件更大的事业。
+
+---
+
+<style>
+.pronunciation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.accent-button,
+.speak-word {
+  border: 1px solid #d6d6d6;
+  background: #f8f8f8;
+  color: #222;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.accent-button {
+  padding: 5px 12px;
+  font-size: 0.9rem;
+}
+
+.accent-button.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.pronunciation-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 10px;
+}
+
+.speak-word {
+  padding: 6px 11px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.speak-word:hover,
+.speak-word:focus {
+  background: #fff3c4;
+  border-color: #d7a900;
+  outline: none;
+}
+
+.pronunciation-note {
+  margin: 8px 0 24px;
+  color: #555;
+  font-size: 0.95rem;
+}
+</style>
+
+<script>
+(function () {
+  let accent = "us";
+  let currentAudio = null;
+
+  function getYoudaoUrl(text) {
+    const type = accent === "uk" ? "1" : "0";
+    return "https://dict.youdao.com/dictvoice?type=" + type + "&audio=" + encodeURIComponent(text);
+  }
+
+  function fallbackSpeak(text) {
+    if (!("speechSynthesis" in window)) return;
+
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = accent === "uk" ? "en-GB" : "en-US";
+    utterance.rate = 0.85;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function speak(text) {
+    if (!text) return;
+
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    currentAudio = new Audio(getYoudaoUrl(text));
+    currentAudio.addEventListener("error", function () {
+      fallbackSpeak(text);
+    });
+
+    currentAudio.play().catch(function () {
+      fallbackSpeak(text);
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    const accentButton = event.target.closest(".accent-button");
+    if (accentButton) {
+      accent = accentButton.dataset.accent === "uk" ? "uk" : "us";
+      document.querySelectorAll(".accent-button").forEach(function (button) {
+        button.classList.remove("active");
+      });
+      accentButton.classList.add("active");
+      return;
+    }
+
+    const wordButton = event.target.closest(".speak-word");
+    if (wordButton) {
+      speak(wordButton.dataset.word || wordButton.textContent.trim());
+    }
+  });
+})();
+</script>
+
