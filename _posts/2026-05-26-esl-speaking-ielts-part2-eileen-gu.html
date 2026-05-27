@@ -1,0 +1,976 @@
+---
+title:  "一个谷爱凌到底能答多少个雅思题"
+mathjax: true
+layout: post
+categories: media
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eileen Gu: IELTS Speaking Part 2 Ingredient Sheet</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 40px; /* Prevents text from sticking too close to the top edge when clicking links */
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0 0 0 280px; /* Offset for the 280px sidebar */
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* --- SIDEBAR CSS --- */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background-color: #1E293B; /* Dark slate color */
+            color: #F8FAFC;
+            overflow-y: auto;
+            box-sizing: border-box;
+            padding: 30px 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 500;
+        }
+        .sidebar h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+        .sidebar a {
+            color: #CBD5E1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: background-color 0.2s, color 0.2s;
+            line-height: 1.4;
+        }
+        .sidebar a:hover {
+            background-color: #334155;
+            color: #fff;
+        }
+        .sidebar .sub-menu {
+            padding-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .sidebar .sub-menu a {
+            font-size: 0.85rem;
+            color: #94A3B8;
+        }
+        .sidebar .sub-menu a:hover {
+            color: #E2E8F0;
+        }
+
+        /* --- MAIN CONTENT CSS --- */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto 40px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Moved Translation Button to Top Right */
+        .translate-btn {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background-color: #2563EB;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .translate-btn:hover {
+            background-color: #1D4ED8;
+        }
+
+        h1, h2, h3 { color: #1E293B; }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .container h2 {
+            margin-top: 40px;
+            color: #2563EB;
+            border-bottom: 2px solid #2563EB;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .container h3 {
+            margin-top: 30px;
+            background: #E0E7FF;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #E2E8F0;
+            padding: 15px;
+            text-align: left;
+            line-height: 1.6;
+        }
+        th {
+            background-color: #F8FAFC;
+            color: #475569;
+            font-weight: bold;
+        }
+        tr:nth-child(even) { background-color: #F8FAFC; }
+
+        /* --- LANGUAGE TOGGLE LOGIC --- */
+        .text-cn { display: none; }
+        body.show-cn .text-cn { display: inline; }
+        body.show-cn .text-en { display: none; }
+        .phrase {
+            font-weight: bold;
+            color: #047857;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 900px) {
+            body { margin-left: 0; }
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                box-shadow: none;
+            }
+            .sidebar h2 { border-bottom: none; font-size: 1.2rem; margin-bottom: 10px; }
+            .container { margin: 20px; padding: 20px; }
+            .translate-btn {
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LEFT SIDEBAR TOC -->
+    <div class="sidebar">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>
+                <a href="#section-1"><strong>Section 1: Basic Introduction</strong></a>
+                <ul class="sub-menu">
+                    <li><a href="#intro-1">1. Basic Introduction</a></li>
+                    <li><a href="#intro-2">2. Sports Success</a></li>
+                    <li><a href="#intro-3">3. Business Success</a></li>
+                    <li><a href="#intro-4">4. Brand Power</a></li>
+                    <li><a href="#intro-5">5. Commercial Impact</a></li>
+                    <li><a href="#intro-6">6. Fashion & Modeling</a></li>
+                    <li><a href="#intro-7">7. Cross-Cultural Appeal</a></li>
+                    <li><a href="#intro-8">8. Education & Image</a></li>
+                    <li><a href="#intro-9">9. Personality & Public Image</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#section-2"><strong>Section 2: IELTS Part 2 Topics</strong></a>
+                <ul class="sub-menu">
+                    <li><a href="#topics-a">A. Strong Fit Topics</a></li>
+                    <li><a href="#topics-b">B. Usable Bridge Topics</a></li>
+                    <li><a href="#topics-c">C. Emergency / Forced Angles</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- TRANSLATE BUTTON -->
+    <button id="langBtn" class="translate-btn" onclick="toggleLanguage()">文 ⇄ A (Translate to Chinese)</button>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <h1>Eileen Gu: IELTS Speaking Part 2 Ingredient Sheet</h1>
+
+        <!-- SECTION 1: BASIC INTRODUCTION -->
+        <h2 id="section-1">Section 1: Basic Introduction</h2>
+
+        <h3 id="intro-1">1. Basic Introduction</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Eileen Gu, also known as Gu Ailing, is a freestyle skier and model.</span>
+                    <span class="text-cn">谷爱凌，也叫 Eileen Gu / Gu Ailing，是一名自由式滑雪运动员，同时也活跃在模特和时尚领域。</span>
+                </td>
+                <td><span class="phrase">a world-class freestyle skier</span></td>
+                <td>世界级自由式滑雪运动员</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She was born in San Francisco and represents China in international competitions.</span>
+                    <span class="text-cn">她出生在美国旧金山，但在国际比赛中代表中国参赛，因此她身上有很强的中美双文化背景。</span>
+                </td>
+                <td><span class="phrase">a Chinese-American athlete</span></td>
+                <td>一位中美背景的运动员</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is known for skiing, fashion, modeling, education, and brand partnerships.</span>
+                    <span class="text-cn">她不只是靠滑雪出名，还和时尚、模特、教育背景、品牌合作等多个领域联系在一起。</span>
+                </td>
+                <td><span class="phrase">more than just an athlete</span></td>
+                <td>不只是运动员</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She became globally famous after the Beijing 2022 Winter Olympics.</span>
+                    <span class="text-cn">2022 年北京冬奥会之后，她在全球范围内迅速走红，成为非常受关注的年轻运动员。</span>
+                </td>
+                <td><span class="phrase">shot to fame after the Olympics</span></td>
+                <td>奥运会后迅速成名</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is represented by IMG Models and has worked in both sports and fashion.</span>
+                    <span class="text-cn">她签约了 IMG Models，并且成功从竞技体育走向时尚和商业领域。</span>
+                </td>
+                <td><span class="phrase">crossed over from sports into fashion</span></td>
+                <td>从体育领域跨界进入时尚领域</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-2">2. Sports Success: The Foundation of Her Brand</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">At Beijing 2022, she won two gold medals and one silver medal.</span>
+                    <span class="text-cn">在 2022 年北京冬奥会上，谷爱凌获得了两枚金牌和一枚银牌，这是她成名的重要转折点。</span>
+                </td>
+                <td><span class="phrase">an Olympic champion</span></td>
+                <td>奥运冠军</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She won gold in big air and halfpipe, and silver in slopestyle.</span>
+                    <span class="text-cn">她在大跳台和 U 型场地技巧项目中获得金牌，在坡面障碍技巧项目中获得银牌。</span>
+                </td>
+                <td><span class="phrase">a multi-medal winner</span></td>
+                <td>多枚奖牌获得者</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She became the first freestyle skier to win three medals at one Winter Olympics.</span>
+                    <span class="text-cn">她成为首位在一届冬奥会上拿到三枚奖牌的自由式滑雪运动员，这让她的成绩更有历史意义。</span>
+                </td>
+                <td><span class="phrase">made history</span></td>
+                <td>创造历史</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She was also the youngest Olympic champion in freestyle skiing.</span>
+                    <span class="text-cn">她还以很年轻的年龄成为自由式滑雪奥运冠军，这让她的故事更有传奇色彩。</span>
+                </td>
+                <td><span class="phrase">broke records at a young age</span></td>
+                <td>年纪轻轻就打破纪录</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her Olympic success gave her huge public attention.</span>
+                    <span class="text-cn">冬奥会的成功让她获得了巨大的关注度，也为后来的商业代言和个人品牌打下基础。</span>
+                </td>
+                <td><span class="phrase">put her in the spotlight</span></td>
+                <td>让她成为焦点人物</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-3">3. Business Success: Her Personal Brand</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Forbes Australia listed her 2024 earnings at $22.1 million.</span>
+                    <span class="text-cn">根据 Forbes Australia 的统计，谷爱凌 2024 年的收入约为 2210 万美元，是收入最高的女性运动员之一。</span>
+                </td>
+                <td><span class="phrase">a highly paid athlete</span></td>
+                <td>高收入运动员</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">About $22 million of that came from off-field income, not prize money.</span>
+                    <span class="text-cn">她的大部分收入并不是来自比赛奖金，而是来自场外收入，比如代言、赞助和品牌合作。</span>
+                </td>
+                <td><span class="phrase">make most of her money from endorsements</span></td>
+                <td>大部分收入来自代言</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her competition income was only around $0.1 million in that Forbes 2024 list.</span>
+                    <span class="text-cn">从收入结构来看，她真正的商业价值并不在赛场奖金，而在她的公众形象和品牌影响力。</span>
+                </td>
+                <td><span class="phrase">her real business is outside the competition venue</span></td>
+                <td>她真正的商业价值在赛场之外</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">People reported her annual earnings at about $23 million, mainly from endorsements, around 2025.</span>
+                    <span class="text-cn">有报道显示，她的年收入约为 2300 万美元左右，主要来自各种商业合作。</span>
+                </td>
+                <td><span class="phrase">turn fame into commercial value</span></td>
+                <td>把名气转化为商业价值</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her income shows that her brand is more valuable than prize money alone.</span>
+                    <span class="text-cn">她的案例说明，现代运动员不仅可以靠比赛成功，也可以把个人形象经营成一个有价值的品牌。</span>
+                </td>
+                <td><span class="phrase">a textbook example of personal branding</span></td>
+                <td>个人品牌打造的典型案例</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-4">4. Brand Power: Companies Want to Work with Her</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has worked with luxury brands such as Louis Vuitton and Tiffany & Co.</span>
+                    <span class="text-cn">谷爱凌曾与 Louis Vuitton、Tiffany & Co. 等奢侈品牌合作，说明她的形象非常适合高端市场。</span>
+                </td>
+                <td><span class="phrase">high-end luxury brands</span></td>
+                <td>高端奢侈品牌</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has also been connected with IWC, Porsche, Victoria’s Secret, Anta, Bosideng, and Mengniu Dairy.</span>
+                    <span class="text-cn">她还和 IWC、Porsche、Victoria’s Secret、Anta、Bosideng、Mengniu Dairy 等品牌产生过合作或关联。</span>
+                </td>
+                <td><span class="phrase">a wide range of brand partnerships</span></td>
+                <td>广泛的品牌合作</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">IMG Models describes her as an athlete, fashion icon, and multifaceted talent.</span>
+                    <span class="text-cn">IMG Models 将她描述为运动员、时尚人物和多面发展的公众人物。</span>
+                </td>
+                <td><span class="phrase">a multi-talented public figure</span></td>
+                <td>多才多艺的公众人物</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her image works for sportswear, luxury fashion, watches, cars, cosmetics, and lifestyle brands.</span>
+                    <span class="text-cn">她的形象可以适用于运动服饰、奢侈品、手表、汽车、美妆和生活方式品牌，因此商业空间很广。</span>
+                </td>
+                <td><span class="phrase">broad commercial appeal</span></td>
+                <td>广泛的商业吸引力</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is not limited to one market or one industry.</span>
+                    <span class="text-cn">她并不局限于单一市场或单一行业，而是能吸引不同年龄、不同文化和不同消费群体。</span>
+                </td>
+                <td><span class="phrase">appeal to different audiences</span></td>
+                <td>吸引不同受众</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-5">5. Commercial Impact: She Can Actually Help Sell Products</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">After her Olympic gold, sales of her red Anta ski suit reportedly surged 20-fold on JD.com.</span>
+                    <span class="text-cn">据报道，她在冬奥夺金后，同款红色 Anta 滑雪服在京东上的销量曾大幅上升。</span>
+                </td>
+                <td><span class="phrase">boost product sales</span></td>
+                <td>提升产品销量</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Luckin Coffee reportedly sold out Gu-endorsed drinks after her Olympic success.</span>
+                    <span class="text-cn">她代言或相关的 Luckin Coffee 饮品也曾出现售罄情况，说明她能直接影响消费者选择。</span>
+                </td>
+                <td><span class="phrase">drive consumer demand</span></td>
+                <td>带动消费者需求</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her image helped brands get attention very quickly.</span>
+                    <span class="text-cn">她的出现能让品牌在短时间内获得大量关注，制造话题和讨论。</span>
+                </td>
+                <td><span class="phrase">create a marketing buzz</span></td>
+                <td>制造营销热度</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">This shows that she is not only famous; she can influence buying behavior.</span>
+                    <span class="text-cn">这说明她不仅仅是一个受欢迎的名人，还能把公众注意力转化为实际销量。</span>
+                </td>
+                <td><span class="phrase">turn attention into sales</span></td>
+                <td>把关注度转化为销量</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her name can add value to a product.</span>
+                    <span class="text-cn">对品牌来说，谷爱凌这个名字本身就能增加产品的吸引力和附加价值。</span>
+                </td>
+                <td><span class="phrase">commercial influence</span></td>
+                <td>商业影响力</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-6">6. Fashion and Modeling: More Than a Sports Career</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">IMG Models represents her.</span>
+                    <span class="text-cn">谷爱凌签约了 IMG Models，这让她可以更专业地进入时尚和模特行业。</span>
+                </td>
+                <td><span class="phrase">signed with a major modeling agency</span></td>
+                <td>签约大型模特经纪公司</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has appeared in fashion campaigns and magazine covers.</span>
+                    <span class="text-cn">她曾出现在时尚广告、杂志封面和品牌活动中，因此逐渐成为体育圈之外的时尚人物。</span>
+                </td>
+                <td><span class="phrase">a fashion icon</span></td>
+                <td>时尚代表人物</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has worked with luxury fashion brands.</span>
+                    <span class="text-cn">她与多个奢侈时尚品牌合作，说明她的形象不仅适合运动，也适合高级时尚。</span>
+                </td>
+                <td><span class="phrase">a strong fashion presence</span></td>
+                <td>在时尚领域有很强存在感</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has attended major fashion events.</span>
+                    <span class="text-cn">她可以自然地在滑雪赛场和时尚活动之间转换，这让她的个人品牌更加立体。</span>
+                </td>
+                <td><span class="phrase">move comfortably between sports and fashion</span></td>
+                <td>能在体育和时尚之间自如切换</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her fashion career makes her brand more diverse.</span>
+                    <span class="text-cn">她没有把自己的发展只押在竞技体育上，而是拓展了模特、广告、时尚等多个方向。</span>
+                </td>
+                <td><span class="phrase">not put all her eggs in one basket</span></td>
+                <td>不把所有鸡蛋放在一个篮子里；不只依赖一个方向</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-7">7. Cross-Cultural Appeal: Why Her Brand Is So Valuable</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She speaks English and Mandarin.</span>
+                    <span class="text-cn">谷爱凌会说英语和中文，这让她能够面对不同语言环境中的观众和媒体。</span>
+                </td>
+                <td><span class="phrase">bilingual and bicultural</span></td>
+                <td>双语且具有双文化背景</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She has strong connections with both China and the United States.</span>
+                    <span class="text-cn">她和中国、美国都有很深的联系，因此她的形象天然具有国际化特点。</span>
+                </td>
+                <td><span class="phrase">cross-cultural appeal</span></td>
+                <td>跨文化吸引力</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She can communicate with different audiences.</span>
+                    <span class="text-cn">她可以和不同文化背景的人交流，这对全球品牌来说非常有价值。</span>
+                </td>
+                <td><span class="phrase">connect with people from different backgrounds</span></td>
+                <td>与不同背景的人建立连接</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She represents youth, confidence, education, and international identity.</span>
+                    <span class="text-cn">她代表着年轻、自信、教育背景和国际视野，符合很多品牌想传递的现代形象。</span>
+                </td>
+                <td><span class="phrase">a modern global image</span></td>
+                <td>现代化、国际化的形象</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her identity also brings controversy, but controversy can increase attention.</span>
+                    <span class="text-cn">她的身份有时也会带来争议，但争议本身也会让她持续处在公众视野中。</span>
+                </td>
+                <td><span class="phrase">stay in the public eye</span></td>
+                <td>持续受到公众关注</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-8">8. Education and Image: The “Perfect Package”</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is associated with Stanford University.</span>
+                    <span class="text-cn">谷爱凌和 Stanford University 这样的名校联系在一起，这让她的形象不只是运动强，也显得学业优秀。</span>
+                </td>
+                <td><span class="phrase">strong academic background</span></td>
+                <td>很强的学术背景</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is often presented as smart, disciplined, and ambitious.</span>
+                    <span class="text-cn">她经常被塑造成聪明、自律、有目标感的年轻人。</span>
+                </td>
+                <td><span class="phrase">a well-rounded person</span></td>
+                <td>全面发展的人</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">Her image combines beauty, intelligence, athletic ability, and confidence.</span>
+                    <span class="text-cn">她的形象结合了运动能力、外貌气质、学习能力、自信和表达能力，因此很容易被包装成榜样人物。</span>
+                </td>
+                <td><span class="phrase">the whole package</span></td>
+                <td>综合条件非常好的人；“全能型选手”</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">This makes her attractive to brands that want a positive role model.</span>
+                    <span class="text-cn">对品牌来说，她的公众形象相对积极、健康、励志，因此适合做代言人。</span>
+                </td>
+                <td><span class="phrase">a clean and inspiring public image</span></td>
+                <td>干净、积极、有激励性的公众形象</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She is especially appealing to young people and parents.</span>
+                    <span class="text-cn">她尤其容易吸引年轻人和家长，因为她看起来既优秀又有目标感。</span>
+                </td>
+                <td><span class="phrase">a role model for the younger generation</span></td>
+                <td>年轻一代的榜样</td>
+            </tr>
+        </table>
+
+        <h3 id="intro-9">9. Personality and Public Image</h3>
+        <table>
+            <tr>
+                <th>Useful facts / 基本信息</th>
+                <th>IELTS-friendly phrases / 可借用英文表达</th>
+                <th>Chinese Meaning / 中文意思</th>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She appears confident in interviews.</span>
+                    <span class="text-cn">在采访中，谷爱凌通常给人自信、自然、表达清楚的印象。</span>
+                </td>
+                <td><span class="phrase">come across as confident</span></td>
+                <td>给人自信的印象</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She often talks about inspiring young people.</span>
+                    <span class="text-cn">她经常谈到希望鼓励年轻人，尤其是鼓励女孩勇敢尝试运动和追求目标。</span>
+                </td>
+                <td><span class="phrase">inspire the younger generation</span></td>
+                <td>激励年轻一代</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She takes risks in competition.</span>
+                    <span class="text-cn">在比赛中，她敢于挑战高难度动作，说明她有冒险精神，也有强大的心理素质。</span>
+                </td>
+                <td><span class="phrase">have the courage to take risks</span></td>
+                <td>有勇气承担风险</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She handles pressure from sports, media, and public opinion.</span>
+                    <span class="text-cn">她需要面对比赛压力、媒体关注和公众评价，因此抗压能力也是她形象的一部分。</span>
+                </td>
+                <td><span class="phrase">perform under pressure</span></td>
+                <td>在压力下表现出色</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="text-en">She presents herself as ambitious and independent.</span>
+                    <span class="text-cn">她给人的感觉是目标清楚、独立、有野心，知道自己想要什么。</span>
+                </td>
+                <td><span class="phrase">know what she wants</span></td>
+                <td>清楚自己想要什么</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- SECTION 2: IELTS PART 2 TOPICS -->
+        <h2 id="section-2">Section 2: IELTS Part 2 Topics</h2>
+
+        <h3 id="topics-a">A. Strong Fit Topics</h3>
+        <table>
+            <tr>
+                <th>Chinese Topic Name</th>
+                <th>English Topic Name</th>
+                <th>How to Use / 如何使用</th>
+            </tr>
+            <tr>
+                <td>擅长学习和说语言的人</td>
+                <td>Describe a person who is good at learning and speaking new languages</td>
+                <td>
+                    <span class="text-en">Talk about Eileen Gu as a bilingual, cross-cultural athlete who speaks English and Mandarin and can communicate with global audiences.</span>
+                    <span class="text-cn">可以把谷爱凌作为一个“双语、跨文化”的例子来讲。重点说她会说英语和中文，能够在中西方文化之间自由切换，也能面对不同国家的媒体和观众表达自己。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>成功的生意人</td>
+                <td>Describe a person you know who has a successful business</td>
+                <td>
+                    <span class="text-en">Say her “business” is her personal brand, built through skiing, endorsements, fashion, and international fame.</span>
+                    <span class="text-cn">不要说她开了一家公司，而是说她把自己的运动成绩、公众形象、时尚资源和国际影响力变成了一个成功的“个人品牌”。她的商业成功主要来自代言、赞助和品牌合作。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>名人出演的广告</td>
+                <td>Describe an advertisement with a famous person in it</td>
+                <td>
+                    <span class="text-en">Describe an ad featuring Eileen Gu for a sports, fashion, luxury, or lifestyle brand.</span>
+                    <span class="text-cn">可以讲一个有谷爱凌出演的广告，比如运动品牌、奢侈品牌、服装、手表或饮品广告。重点放在：她的形象健康、自信、有国际感，所以广告很有说服力。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的现场体育赛事</td>
+                <td>Describe a live sports event you watched and liked</td>
+                <td>
+                    <span class="text-en">Talk about watching one of her Olympic ski events, especially a gold-medal performance, and how exciting it was.</span>
+                    <span class="text-cn">可以讲看她在冬奥会上的滑雪比赛，尤其是夺金的项目。重点描述比赛过程很刺激，她完成高难度动作时让人紧张又兴奋。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>有趣视频</td>
+                <td>Describe an interesting video</td>
+                <td>
+                    <span class="text-en">Describe a video of her Olympic performance, interview, training, or advertisement.</span>
+                    <span class="text-cn">可以讲一个关于谷爱凌的视频，比如冬奥高光片段、训练视频、采访、纪录片片段或广告短片。重点说这个视频让你看到她不只是运动员，也很有个性和商业影响力。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>想见的名人</td>
+                <td>Describe a famous person you would like to meet</td>
+                <td>
+                    <span class="text-en">Use Eileen Gu directly as the famous person you admire and want to meet.</span>
+                    <span class="text-cn">可以直接把谷爱凌作为你想见的名人。重点说你想问她如何平衡训练、学习、商业活动和公众压力，也想了解她成功背后的自律和规划。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>机智解决问题的人</td>
+                <td>Describe a person who solved a problem in a smart way</td>
+                <td>
+                    <span class="text-en">Talk about how she makes quick decisions under pressure in skiing, especially when choosing risky tricks in competition.</span>
+                    <span class="text-cn">可以讲她在比赛中需要快速判断、临场调整，尤其是在高压环境下选择高难度动作。重点突出她不只是勇敢，而是能冷静分析风险，做出聪明决定。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>常做计划的人</td>
+                <td>Describe a person who makes plans a lot</td>
+                <td>
+                    <span class="text-en">Describe her as someone who balances training, competitions, education, modeling, and brand work through careful planning.</span>
+                    <span class="text-cn">可以讲她需要同时安排训练、比赛、学习、模特工作、广告拍摄和品牌合作，所以一定是一个非常会规划时间和目标的人。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>长久目标</td>
+                <td>Describe a long-term goal you would like to achieve</td>
+                <td>
+                    <span class="text-en">Say your goal is to become a well-rounded person like Eileen Gu: skilled, confident, bilingual, and internationally minded.</span>
+                    <span class="text-cn">可以说你的长期目标是成为像谷爱凌一样全面发展的人：有专业能力，有语言能力，有自信，也能把自己的兴趣发展成未来的机会。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>长远志向</td>
+                <td>Describe an ambition that you have had for a long time</td>
+                <td>
+                    <span class="text-en">Use her as inspiration for your ambition to build a meaningful career, not just get good grades.</span>
+                    <span class="text-cn">可以用谷爱凌作为灵感，讲你的志向不是只拿高分或找一份普通工作，而是希望长期建立自己的能力、影响力和个人品牌。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>完美工作</td>
+                <td>Describe your perfect job</td>
+                <td>
+                    <span class="text-en">Say your perfect job would be in sports marketing, branding, fashion, or international communication, inspired by Eileen Gu’s career.</span>
+                    <span class="text-cn">可以说受谷爱凌启发，你理想中的工作可能和体育营销、品牌管理、国际传播、时尚行业或运动员经纪有关，因为这些工作能结合兴趣、语言和商业能力。</span>
+                </td>
+            </tr>
+        </table>
+
+        <h3 id="topics-b">B. Usable Bridge Topics</h3>
+        <table>
+            <tr>
+                <th>Chinese Topic Name</th>
+                <th>English Topic Name</th>
+                <th>How to Use / 如何使用</th>
+            </tr>
+            <tr>
+                <td>在成功公司工作的人</td>
+                <td>Describe a person who works in a successful company</td>
+                <td>
+                    <span class="text-en">This is a bit tricky because she is not a normal employee. You can say she works with successful companies as a brand ambassador/model, but be careful with wording.</span>
+                    <span class="text-cn">这个题不能直接说她是某公司的普通员工。更安全的说法是：她和很多成功公司合作，比如作为品牌大使、代言人或模特。重点是她如何帮助这些公司提升品牌形象和市场关注度。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>最近看过的电视/网络节目</td>
+                <td>Describe a TV show/online program you have watched recently</td>
+                <td>
+                    <span class="text-en">Describe a documentary, interview, Olympic highlight video, or online program about Eileen Gu.</span>
+                    <span class="text-cn">可以讲一个关于谷爱凌的采访、纪录片、比赛回放或网络节目。重点说这个节目让你更了解她的训练、成长经历、商业价值和公众形象。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>语言学习</td>
+                <td>Describe a thing you did to learn another language</td>
+                <td>
+                    <span class="text-en">Say you watched Eileen Gu’s bilingual interviews and used them to learn natural spoken English or Mandarin-English expression.</span>
+                    <span class="text-cn">可以说你通过看谷爱凌的英文/双语采访来学习语言。她的表达自然、自信，而且内容和体育、成长、目标有关，所以比普通教材更有吸引力。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>重要决定</td>
+                <td>Describe an important decision that you made</td>
+                <td>
+                    <span class="text-en">Say you decided to take language learning, sports, or personal branding more seriously after learning about her story.</span>
+                    <span class="text-cn">可以讲你了解谷爱凌之后，决定更认真地学习英语、培养一个长期爱好，或者开始思考如何建立自己的优势。重点是她的故事影响了你的选择。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>早起经历</td>
+                <td>Describe a time when you got up early</td>
+                <td>
+                    <span class="text-en">Say you got up early to watch her Olympic event, training video, or a live competition.</span>
+                    <span class="text-cn">可以说你为了看谷爱凌的冬奥比赛、直播、采访或比赛回放而早起。重点描述你虽然很困，但因为很期待她的表现，所以觉得很值得。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>乐于助人的人</td>
+                <td>Describe a person who often helps others</td>
+                <td>
+                    <span class="text-en">Use her as someone who inspires young people, especially girls, to try sports and become more confident.</span>
+                    <span class="text-cn">这个题需要稍微转一下。可以说她通过自己的影响力鼓励年轻人，尤其是女孩，勇敢尝试运动、建立自信、追求更大的目标。这里的“帮助”不是具体帮某个人，而是精神上的鼓励。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>给别人建议</td>
+                <td>Describe a time when you gave advice to others</td>
+                <td>
+                    <span class="text-en">Say you advised a friend using Eileen Gu’s example: build skills, stay disciplined, and use opportunities wisely.</span>
+                    <span class="text-cn">可以讲你用谷爱凌的例子去鼓励朋友：不要只关注眼前成绩，也要长期培养能力、自律和兴趣，因为这些东西未来可能变成真正的优势。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>收到特殊蛋糕</td>
+                <td>Describe a special cake you received from others</td>
+                <td>
+                    <span class="text-en">Possible if the cake was for a Winter Olympics viewing party or had a skiing/Eileen Gu theme. This needs a personal invented scene.</span>
+                    <span class="text-cn">可以设计成一个和冬奥会或滑雪主题有关的蛋糕，比如朋友知道你喜欢谷爱凌，所以送了一个滑雪主题蛋糕。这个角度需要编得自然一点，否则会显得硬套。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>花费超过预期的物品</td>
+                <td>Describe an item on which you spent more than expected</td>
+                <td>
+                    <span class="text-en">Talk about ski gear, a sports jacket, or branded clothing you bought after being influenced by Eileen Gu.</span>
+                    <span class="text-cn">可以讲你因为受到谷爱凌影响，买了一件滑雪服、运动外套、护目镜或品牌服装，结果比预期贵。重点可以放在“名人影响消费决定”。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>最近读过的故事</td>
+                <td>Describe a story you have read recently</td>
+                <td>
+                    <span class="text-en">Describe an article, biography-style story, or profile about Eileen Gu’s journey.</span>
+                    <span class="text-cn">可以讲你最近读到一篇关于谷爱凌成长经历、冬奥表现或商业成功的文章。重点说这不是虚构故事，而是一个真实人物的励志故事。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>想从事的短期海外工作</td>
+                <td>Describe a short-term job you want to have in a foreign country</td>
+                <td>
+                    <span class="text-en">Say you would like to work temporarily for an international sports event, fashion brand, or sports marketing company because of her career.</span>
+                    <span class="text-cn">可以说你想在国外短期参与国际体育赛事、滑雪比赛、品牌活动或体育营销项目，因为谷爱凌的经历让你看到体育和国际传播可以结合起来。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>外国的短期停留</td>
+                <td>Describe a foreign country you would like to stay and work for a short period of time</td>
+                <td>
+                    <span class="text-en">Connect it to working or studying in the U.S., Switzerland, or another place related to skiing, sports marketing, or international education.</span>
+                    <span class="text-cn">可以把这个题和滑雪、国际教育或体育品牌联系起来，比如想去美国、瑞士或其他滑雪/体育产业发达的地方短期学习或工作。谷爱凌可以作为引出这个想法的原因。</span>
+                </td>
+            </tr>
+        </table>
+
+        <h3 id="topics-c">C. Emergency / Slightly Forced Angles</h3>
+        <table>
+            <tr>
+                <th>Chinese Topic Name</th>
+                <th>English Topic Name</th>
+                <th>How to Use / 如何使用</th>
+            </tr>
+            <tr>
+                <td>快乐活动</td>
+                <td>Describe a time when you organized a happy event successfully</td>
+                <td>
+                    <span class="text-en">Say you organized a small Olympic viewing party or class sharing session about Eileen Gu.</span>
+                    <span class="text-cn">可以讲你组织了一次小型冬奥观赛活动，大家一起看谷爱凌比赛或分享她的故事。重点放在活动很有气氛，大家都很投入。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>在团队中工作</td>
+                <td>Describe a time when you worked in a group</td>
+                <td>
+                    <span class="text-en">Talk about doing a school presentation or project about Eileen Gu with classmates.</span>
+                    <span class="text-cn">可以讲你和同学一起做一个关于谷爱凌的课堂展示、小组报告或海报项目。重点不是谷爱凌本人，而是你们如何分工合作完成这个项目。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>发挥想象力</td>
+                <td>Describe a time you needed to use your imagination</td>
+                <td>
+                    <span class="text-en">Say you designed a poster, video, or speech about Eileen Gu and had to imagine how to present her story creatively.</span>
+                    <span class="text-cn">可以讲你为谷爱凌设计海报、演讲、短视频或课堂展示时，需要思考怎样把她的运动、时尚和商业故事用有创意的方式呈现出来。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>微笑的场合</td>
+                <td>Describe an occasion when many people were smiling</td>
+                <td>
+                    <span class="text-en">Describe people smiling and cheering when Eileen Gu won an Olympic medal.</span>
+                    <span class="text-cn">可以讲大家一起看谷爱凌夺冠时，现场或屏幕前的人都很激动、很开心。重点描述大家欢呼、鼓掌、露出笑容的场面。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>推荐旅行过的地方</td>
+                <td>Describe a place you have travelled to that you would like to recommend to others</td>
+                <td>
+                    <span class="text-en">Recommend Beijing or an Olympic venue connected with her Winter Olympics performance.</span>
+                    <span class="text-cn">可以推荐北京或和冬奥有关的场馆/区域，并提到谷爱凌的冬奥表现让这个地方更有意义。不过这个题最好还是以地点本身为主，不要过度讲人物。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>去过的喜欢的城市</td>
+                <td>Describe your favorite city that you have visited</td>
+                <td>
+                    <span class="text-en">Use Beijing as the Olympic city where Eileen Gu became famous.</span>
+                    <span class="text-cn">可以讲北京，因为它既有历史文化，也举办过冬奥会，谷爱凌在那里成名的故事让这座城市多了一层现代体育记忆。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>有趣的城市</td>
+                <td>Describe a city that you think is very interesting</td>
+                <td>
+                    <span class="text-en">Talk about Beijing as a city that combines history, modern life, and the Winter Olympics.</span>
+                    <span class="text-cn">可以讲北京的多面性：古老与现代并存，同时又因为冬奥会和谷爱凌这样的运动员而具有国际体育色彩。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>想有空时去旅游的地方</td>
+                <td>Describe a place you would like to visit in your free time</td>
+                <td>
+                    <span class="text-en">Say you want to visit a ski resort or Olympic skiing venue because Eileen Gu made skiing look exciting.</span>
+                    <span class="text-cn">可以说你想去滑雪场或冬奥场馆，因为看了谷爱凌的比赛后，你对滑雪产生了兴趣，想亲自体验一下。</span>
+                </td>
+            </tr>
+            <tr>
+                <td>自行车/摩托车/汽车旅行</td>
+                <td>Describe a bicycle/motorcycle/car trip you would like to go on</td>
+                <td>
+                    <span class="text-en">Use a trip to a ski resort inspired by Eileen Gu. This is usable but not very direct.</span>
+                    <span class="text-cn">可以设计成一次开车去滑雪场的旅行，原因是谷爱凌让你对滑雪产生兴趣。这个角度可以用，但和人物关联比较远，只适合备用。</span>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- JavaScript to Handle the English/Chinese Toggle -->
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.getElementById('langBtn');
+            
+            if (body.classList.contains('show-cn')) {
+                body.classList.remove('show-cn');
+                btn.innerText = '文 ⇄ A (Translate to Chinese)';
+            } else {
+                body.classList.add('show-cn');
+                btn.innerText = 'A ⇄ 文 (Translate to English)';
+            }
+        }
+    </script>
+</body>
+</html>
