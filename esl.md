@@ -141,6 +141,8 @@ Let’s keep practicing, growing, and having fun together.
 
 ---
 
+## [新托福口语评分标准](https://www.pt.ets.org/content/dam/ets-org/pt_pt/pdfs/toefl/speaking-rubrics.pdf)
+
 ## 托福 vs 雅思：全面对比指南
 <details>
   <summary><strong>👉 下面这个链接点进去</strong></summary>
