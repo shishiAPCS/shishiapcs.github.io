@@ -18,7 +18,7 @@ title: "Tools"
 * ### [在线录音机](https://vocalremover.org/zh/voice-recorder)
 * ### [背单词](https://superct.streamlit.app/) ```By Tom class 2026 ```
 * ### [GPA查询网址](https://www.thinkwave.com)
-* ### [新通托福在线练习](https://smarter.igo1996.com/tf-part-index)
+* ### [托福在线练习](https://studycd.testbay.cn/)
 * ### [谷歌浏览器下载](https://www.google.cn/chrome/) ```苹果电脑```
 * ### [谷歌浏览器下载](https://static.shinyway.com/base/common/software/202307261754352696.exe) ```Windows电脑```
 * ### [谷歌账号注册](https://shishiapcs.github.io/CS-google-account/)
