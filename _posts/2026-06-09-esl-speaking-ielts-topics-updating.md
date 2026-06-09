@@ -140,65 +140,71 @@ categories: media
 <summary>一、新题 [🔥 更新中...]</summary>
 <div class="nav-inner">
 <details class="nav-subgroup" open><summary>Part 1</summary><ul>
-<li><a href="#sec-1-p1-1">Morning routines</a></li>
-<li><a href="#sec-1-p1-2">Sports programs</a></li>
-<li><a href="#sec-1-p1-3">Evening time</a></li>
-<li><a href="#sec-1-p1-4">Public gardens and parks</a></li>
-<li><a href="#sec-1-p1-5">History</a></li>
-<li><a href="#sec-1-p1-6">Films/Cinemas</a></li>
-<li><a href="#sec-1-p1-7">Old buildings</a></li>
-<li><a href="#sec-1-p1-8">Clothing</a></li>
-<li><a href="#sec-1-p1-9">Jokes and comedies</a></li>
-<li><a href="#sec-1-p1-10">Headphones</a></li>
-<li><a href="#sec-1-p1-11">Outer space and stars</a></li>
-<li><a href="#sec-1-p1-12">Singing</a></li>
-<li><a href="#sec-1-p1-13">Science</a></li>
-<li><a href="#sec-1-p1-14">Cars</a></li>
-<li><a href="#sec-1-p1-15">Parks</a></li>
-<li><a href="#sec-1-p1-16">Shopping</a></li>
-<li><a href="#sec-1-p1-17">Watches</a></li>
-<li><a href="#sec-1-p1-18">Website</a></li>
-<li><a href="#sec-1-p1-19">Tidiness</a></li>
-<li><a href="#sec-1-p1-20">Mirror</a></li>
-<li><a href="#sec-1-p1-21">Teachers</a></li>
-<li><a href="#sec-1-p1-22">Social media</a></li>
-<li><a href="#sec-1-p1-23">Dream and ambition</a></li>
-<li><a href="#sec-1-p1-24">Music</a></li>
+<li><a href="#sec-1-p1-1">Art</a></li>
+<li><a href="#sec-1-p1-2">Morning routines</a></li>
+<li><a href="#sec-1-p1-3">Sports programs</a></li>
+<li><a href="#sec-1-p1-4">Evening time</a></li>
+<li><a href="#sec-1-p1-5">Public gardens and parks</a></li>
+<li><a href="#sec-1-p1-6">History</a></li>
+<li><a href="#sec-1-p1-7">Films/Cinemas</a></li>
+<li><a href="#sec-1-p1-8">Old buildings</a></li>
+<li><a href="#sec-1-p1-9">Clothing</a></li>
+<li><a href="#sec-1-p1-10">Jokes and comedies</a></li>
+<li><a href="#sec-1-p1-11">Headphones</a></li>
+<li><a href="#sec-1-p1-12">Outer space and stars</a></li>
+<li><a href="#sec-1-p1-13">Singing</a></li>
+<li><a href="#sec-1-p1-14">Science</a></li>
+<li><a href="#sec-1-p1-15">Cars</a></li>
+<li><a href="#sec-1-p1-16">Parks</a></li>
+<li><a href="#sec-1-p1-17">Shopping</a></li>
+<li><a href="#sec-1-p1-18">Watches</a></li>
+<li><a href="#sec-1-p1-19">Websites</a></li>
+<li><a href="#sec-1-p1-20">Tidiness</a></li>
+<li><a href="#sec-1-p1-21">Mirror</a></li>
+<li><a href="#sec-1-p1-22">Teachers</a></li>
+<li><a href="#sec-1-p1-23">Social media</a></li>
+<li><a href="#sec-1-p1-24">Dream and ambition</a></li>
+<li><a href="#sec-1-p1-25">Music</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>人物类</summary><ul>
-<li><a href="#sec-1-c-1-t-1">擅长学习和说语言的人</a></li>
-<li><a href="#sec-1-c-1-t-2">成功的生意人</a></li>
-<li><a href="#sec-1-c-1-t-3">在成功公司工作的人</a></li>
-<li><a href="#sec-1-c-1-t-4">想从事医疗行业的人</a></li>
-<li><a href="#sec-1-c-1-t-5">发小</a></li>
-<li><a href="#sec-1-c-1-t-6">喜欢在家/花园种菜的人</a></li>
+<li><a href="#sec-1-c-1-t-1">遇到困难终成功的人</a></li>
+<li><a href="#sec-1-c-1-t-2">擅长学习和说语言的人</a></li>
+<li><a href="#sec-1-c-1-t-3">成功的生意人</a></li>
+<li><a href="#sec-1-c-1-t-4">在成功公司工作的人</a></li>
+<li><a href="#sec-1-c-1-t-5">想从事医疗行业的人</a></li>
+<li><a href="#sec-1-c-1-t-6">发小</a></li>
+<li><a href="#sec-1-c-1-t-7">喜欢在家/花园种菜的人</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事物类</summary><ul>
-<li><a href="#sec-1-c-2-t-1">长久目标</a></li>
-<li><a href="#sec-1-c-2-t-2">长远志向</a></li>
-<li><a href="#sec-1-c-2-t-3">保护环境的法律</a></li>
-<li><a href="#sec-1-c-2-t-4">包含动物的故事或书</a></li>
-<li><a href="#sec-1-c-2-t-5">遇到的科技问题</a></li>
-<li><a href="#sec-1-c-2-t-6">名人出演的广告</a></li>
-<li><a href="#sec-1-c-2-t-7">最近看过的电视/网络节目</a></li>
-<li><a href="#sec-1-c-2-t-8">特别场合的食物</a></li>
-<li><a href="#sec-1-c-2-t-9">喜欢的现场体育赛事</a></li>
-<li><a href="#sec-1-c-2-t-10">想颁布的新法律</a></li>
-<li><a href="#sec-1-c-2-t-11">有趣视频</a></li>
-<li><a href="#sec-1-c-2-t-12">收到特殊蛋糕</a></li>
+<li><a href="#sec-1-c-2-t-1">当地新闻</a></li>
+<li><a href="#sec-1-c-2-t-2">想要颁布的环保法律</a></li>
+<li><a href="#sec-1-c-2-t-3">长久目标</a></li>
+<li><a href="#sec-1-c-2-t-4">长远志向</a></li>
+<li><a href="#sec-1-c-2-t-5">保护环境的法律</a></li>
+<li><a href="#sec-1-c-2-t-6">包含动物的故事或书</a></li>
+<li><a href="#sec-1-c-2-t-7">遇到的科技问题</a></li>
+<li><a href="#sec-1-c-2-t-8">名人出演的广告</a></li>
+<li><a href="#sec-1-c-2-t-9">最近看过的电视/网络节目</a></li>
+<li><a href="#sec-1-c-2-t-10">特别场合的食物</a></li>
+<li><a href="#sec-1-c-2-t-11">喜欢的现场体育赛事</a></li>
+<li><a href="#sec-1-c-2-t-12">想颁布的新法律</a></li>
+<li><a href="#sec-1-c-2-t-13">有趣视频</a></li>
+<li><a href="#sec-1-c-2-t-14">收到特殊蛋糕</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事件类</summary><ul>
-<li><a href="#sec-1-c-3-t-1">交通拥堵</a></li>
-<li><a href="#sec-1-c-3-t-2">快乐活动</a></li>
-<li><a href="#sec-1-c-3-t-3">很久没收到回复的信息</a></li>
-<li><a href="#sec-1-c-3-t-4">花费甚少的外出日</a></li>
-<li><a href="#sec-1-c-3-t-5">别人帮助解决问题</a></li>
-<li><a href="#sec-1-c-3-t-6">语言学习</a></li>
-<li><a href="#sec-1-c-3-t-7">使用电子设备碰到的问题</a></li>
-<li><a href="#sec-1-c-3-t-8">重要决定</a></li>
-<li><a href="#sec-1-c-3-t-9">在团队中工作</a></li>
-<li><a href="#sec-1-c-3-t-10">近期改变的计划</a></li>
-<li><a href="#sec-1-c-3-t-11">早起经历</a></li>
+<li><a href="#sec-1-c-3-t-1">近期改变</a></li>
+<li><a href="#sec-1-c-3-t-2">改变重要想法</a></li>
+<li><a href="#sec-1-c-3-t-3">交通拥堵</a></li>
+<li><a href="#sec-1-c-3-t-4">快乐活动</a></li>
+<li><a href="#sec-1-c-3-t-5">很久没收到回复的信息</a></li>
+<li><a href="#sec-1-c-3-t-6">花费甚少的外出日</a></li>
+<li><a href="#sec-1-c-3-t-7">别人帮助解决问题</a></li>
+<li><a href="#sec-1-c-3-t-8">语言学习</a></li>
+<li><a href="#sec-1-c-3-t-9">使用电子设备碰到的问题</a></li>
+<li><a href="#sec-1-c-3-t-10">重要决定</a></li>
+<li><a href="#sec-1-c-3-t-11">在团队中工作</a></li>
+<li><a href="#sec-1-c-3-t-12">近期改变的计划</a></li>
+<li><a href="#sec-1-c-3-t-13">早起经历</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>地点类</summary><ul>
 <li><a href="#sec-1-c-4-t-1">重要的河流/湖泊</a></li>
@@ -292,7 +298,19 @@ categories: media
 <section class="ielts-major-section" id="sec-1">
 <h2>一、新题 [🔥 更新中...]</h2>
 <h3>Part 1</h3>
-<details class="topic-card" id="sec-1-p1-1"><summary>1. Morning routines <span class="topic-meta">(5.14)</span></summary>
+<details class="topic-card" id="sec-1-p1-1"><summary>1. Art <span class="topic-meta">(5.22)</span></summary>
+<p class="topic-note">1.  Do you like art?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">2.  Do you like visiting art galleries?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Do you want to be an artist?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you like modern art or traditional art?</p>
+<ul>
+
+</ul>
+</details>
+<details class="topic-card" id="sec-1-p1-2"><summary>2. Morning routines <span class="topic-meta">(5.14)</span></summary>
 <p class="topic-note">1.  What do you do right after getting up in the morning?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Is breakfast important?</p>
@@ -304,7 +322,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-2"><summary>2. Sports programs <span class="topic-meta">(5.14)</span></summary>
+<details class="topic-card" id="sec-1-p1-3"><summary>3. Sports programs <span class="topic-meta">(5.14)</span></summary>
 <p class="topic-note">1.  Do you like watching sports programs on TV?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you like to watch live sports games?</p>
@@ -320,7 +338,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-3"><summary>3. Evening time <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-p1-4"><summary>4. Evening time <span class="topic-meta">(5.13)</span></summary>
 <p class="topic-note">1.  Do you like the morning or evening?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  What do you usually do in the evening?</p>
@@ -336,7 +354,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-4"><summary>4. Public gardens and parks <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-p1-5"><summary>5. Public gardens and parks <span class="topic-meta">(5.13)</span></summary>
 <p class="topic-note">1.  Would you prefer to play in a personal garden or public garden?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  How are the parks today different from those you visited as a kid?</p>
@@ -348,7 +366,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-5"><summary>5. History <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-6"><summary>6. History <span class="topic-meta">(5.11)</span></summary>
 <p class="topic-note">1.  Have you ever been to historical museums?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you like history?</p>
@@ -360,7 +378,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-6"><summary>6. Films/Cinemas <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-7"><summary>7. Films/Cinemas <span class="topic-meta">(5.11)</span></summary>
 <p class="topic-note">1.  What films do you like?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Did you often watch films when you were a child?</p>
@@ -378,7 +396,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-7"><summary>7. Old buildings <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-p1-8"><summary>8. Old buildings <span class="topic-meta">(5.11)</span></summary>
 <p class="topic-note">1.  Have you ever seen old buildings in the city?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you think we should preserve old buildings in cities?</p>
@@ -390,7 +408,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-8"><summary>8. Clothing <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-9"><summary>9. Clothing <span class="topic-meta">(5.8)</span></summary>
 <p class="topic-note">1.  What kind of clothes do you like to wear?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you prefer to wear comfortable and casual clothes or smart clothes?</p>
@@ -406,7 +424,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-9"><summary>9. Jokes and comedies <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-10"><summary>10. Jokes and comedies <span class="topic-meta">(5.8)</span></summary>
 <p class="topic-note">1.  Are you good at telling jokes?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do your friends like to tell jokes?</p>
@@ -420,7 +438,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-10"><summary>10. Headphones <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-11"><summary>11. Headphones <span class="topic-meta">(5.8)</span></summary>
 <p class="topic-note">1.  Do you use headphones?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  What type of headphones do you use?</p>
@@ -434,7 +452,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-11"><summary>11. Outer space and stars <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-12"><summary>12. Outer space and stars <span class="topic-meta">(5.8)</span></summary>
 <p class="topic-note">1.  Have you ever learnt about outer space and stars?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you like science fiction movies? Why?</p>
@@ -446,7 +464,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-12"><summary>12. Singing <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-p1-13"><summary>13. Singing <span class="topic-meta">(5.8)</span></summary>
 <p class="topic-note">1.  Do you like singing? Why?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Have you ever learnt how to sing?</p>
@@ -462,7 +480,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-13"><summary>13. Science <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-14"><summary>14. Science <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Do you like science?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  When did you start to learn about science?</p>
@@ -478,7 +496,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-14"><summary>14. Cars <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-15"><summary>15. Cars <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Did you enjoy travelling by car when you were a kid?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  What types of cars do you like?</p>
@@ -494,7 +512,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-15"><summary>15. Parks <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-16"><summary>16. Parks <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Did you like going to parks as a child?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you still like going to parks now?</p>
@@ -506,7 +524,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-16"><summary>16. Shopping <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-17"><summary>17. Shopping <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Do you like shopping?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  How often do you go shopping?</p>
@@ -518,7 +536,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-17"><summary>17. Watches <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-18"><summary>18. Watches <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Do you wear a watch?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Have you ever got a watch as a gift?</p>
@@ -530,7 +548,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-18"><summary>18. Website <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-19"><summary>19. Websites <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  What kinds of websites do you often visit?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  What is your favourite website?</p>
@@ -542,11 +560,13 @@ categories: media
 <p class="topic-note">5.  Do you prefer getting information from websites or books?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">6.  Would you like to have your own website?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">7.  What have you learned from websites that help with your life or studies?</p>
 <ul>
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-19"><summary>19. Tidiness <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-p1-20"><summary>20. Tidiness <span class="topic-meta">(5.6)</span></summary>
 <p class="topic-note">1.  Do you like to keep things tidy?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you use to keep your room tidy as a child?</p>
@@ -558,7 +578,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-20"><summary>20. Mirror <span class="topic-meta">(5.3)</span></summary>
+<details class="topic-card" id="sec-1-p1-21"><summary>21. Mirror <span class="topic-meta">(5.3)</span></summary>
 <p class="topic-note">1.  Do you like looking at yourself in the mirror? How often?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Have you ever bought mirrors?</p>
@@ -570,7 +590,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-21"><summary>21. Teachers <span class="topic-meta">(4.30)</span></summary>
+<details class="topic-card" id="sec-1-p1-22"><summary>22. Teachers <span class="topic-meta">(4.30)</span></summary>
 <p class="topic-note">1.  Do you have a favorite teacher?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Do you want to be a teacher in the future?</p>
@@ -580,11 +600,13 @@ categories: media
 <p class="topic-note">4.  Are you still in touch with your primary school teachers?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">5.  In what ways has your favorite teacher helped you?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">6.  Do you like your primary school teachers more than your high school teachers?</p>
 <ul>
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-22"><summary>22. Social media <span class="topic-meta">(4.30)</span></summary>
+<details class="topic-card" id="sec-1-p1-23"><summary>23. Social media <span class="topic-meta">(4.30)</span></summary>
 <p class="topic-note">1.  Have you ever posted anything on social media?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  When did you start using social media?</p>
@@ -598,7 +620,7 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-23"><summary>23. Dream and ambition <span class="topic-meta">(4.30)</span></summary>
+<details class="topic-card" id="sec-1-p1-24"><summary>24. Dream and ambition <span class="topic-meta">(4.30)</span></summary>
 <p class="topic-note">1.  What was your childhood dream?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Are you the kind of person who sticks to dreams?</p>
@@ -610,18 +632,41 @@ categories: media
 
 </ul>
 </details>
-<details class="topic-card" id="sec-1-p1-24"><summary>24. Music <span class="topic-meta">(4.30)</span></summary>
+<details class="topic-card" id="sec-1-p1-25"><summary>25. Music <span class="topic-meta">(4.30)</span></summary>
 <p class="topic-note">1.  Do you prefer sad or happy music?</p>
 <p class="topic-note">&lt;!-- --&gt;</p>
 <p class="topic-note">2.  Does happy music make you feel more excited?</p>
-<p class="topic-note">[小问待补充]</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">3.  Have you taken any music classes?</p>
+<p class="topic-note">&lt;!-- --&gt;</p>
+<p class="topic-note">4.  Do you listen to music while doing other things?</p>
 <ul>
 
 </ul>
 </details>
 <h3>Part 2 &amp; Part 3</h3>
 <h4>人物类</h4>
-<details class="topic-card" id="sec-1-c-1-t-1"><summary>1. 擅长学习和说语言的人 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-1"><summary>1. 遇到困难终成功的人 <span class="topic-meta">(5.17)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a person who met difficulties but succeeded</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>Who this person is</li>
+<li>What difficulties he met</li>
+<li>How he overcame the difficulties</li>
+<li>And explain how you feel about him</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>In your country, what industry is it easier to be successful in?</li>
+<li>What&#x27;s the difference between ordinary people and successful people?</li>
+<li>What are the factors leading to people&#x27;s success?</li>
+<li>[小问待补充]</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-1-t-2"><summary>2. 擅长学习和说语言的人 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a person who is good at learning and speaking new languages</p>
 <p><strong>You should say:</strong></p>
@@ -643,7 +688,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-1-t-2"><summary>2. 成功的生意人 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-3"><summary>3. 成功的生意人 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a person you know who has a successful business</p>
 <p><strong>You should say:</strong></p>
@@ -666,7 +711,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-1-t-3"><summary>3. 在成功公司工作的人 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-4"><summary>4. 在成功公司工作的人 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a person who works in a successful company</p>
 <p><strong>You should say:</strong></p>
@@ -686,7 +731,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-1-t-4"><summary>4. 想从事医疗行业的人 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-5"><summary>5. 想从事医疗行业的人 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a person you know who would like to choose a career in the medical field (e.g. a doctor, a nurse)</p>
 <p><strong>You should say:</strong></p>
@@ -701,11 +746,13 @@ categories: media
 <ul>
 <li>Do you think being a doctor is easy or difficult?</li>
 <li>Do you think learning biology is interesting for children?</li>
+<li>Why do you some children want to become doctors?</li>
+<li>Do you think governments should put a large amount of money into medical research?</li>
 <li>[小问待补充]</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-1-t-5"><summary>5. 发小 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-6"><summary>6. 发小 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a friend from your childhood</p>
 <p><strong>You should say:</strong></p>
@@ -727,7 +774,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-1-t-6"><summary>6. 喜欢在家/花园种菜的人 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-1-t-7"><summary>7. 喜欢在家/花园种菜的人 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a person who loves to grow vegetables at home or in the garden</p>
 <p><strong>You should say:</strong></p>
@@ -750,7 +797,39 @@ categories: media
 </div>
 </details>
 <h4>事物类</h4>
-<details class="topic-card" id="sec-1-c-2-t-1"><summary>1. 长久目标 <span class="topic-meta">(5.15)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-1"><summary>1. 当地新闻 <span class="topic-meta">(6.8)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a piece of local news that people are interested in</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>What it was about</li>
+<li>Where you saw/heard it</li>
+<li>Who was involved</li>
+<li>And explain why people were interested in it</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>Do people read the newspaper where you live?</li>
+<li>Do people prefer local or international news?</li>
+<li>Do you think it&#x27;s important to have a national identity?</li>
+<li>How can people develop their national identity?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-2-t-2"><summary>2. 想要颁布的环保法律 <span class="topic-meta">(5.22)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe an environmental law you would like your country to introduce</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>What law should it be</li>
+<li>Why should people follow the law</li>
+<li>Whether the law will be popular</li>
+<li>And explain how you feel about this law</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-2-t-3"><summary>3. 长久目标 <span class="topic-meta">(5.15)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a long-term goal you would like to achieve</p>
 <p><strong>You should say:</strong></p>
@@ -772,7 +851,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-2"><summary>2. 长远志向 <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-4"><summary>4. 长远志向 <span class="topic-meta">(5.13)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an ambition that you have had for a long time</p>
 <p>You should say</p>
@@ -783,11 +862,16 @@ categories: media
 </div>
 <div class="topic-block"><div class="topic-subheading">Part 3</div>
 <ul>
-<li>[小问待补充]</li>
+<li>What kinds of ambitions do people have?</li>
+<li>What&#x27;s the importance of having ambition?</li>
+<li>What are the advantages of feeling ambitious towards your work?</li>
+<li>Do you think children should have ambitions?</li>
+<li>Why should parents encourage children to have ambitions?</li>
+<li>Do you think parents should stop children from thinking too big?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-3"><summary>3. 保护环境的法律 <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-5"><summary>5. 保护环境的法律 <span class="topic-meta">(5.13)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a law on environmental protection</p>
 <p><strong>You should say:</strong></p>
@@ -805,11 +889,11 @@ categories: media
 <li>Are children unhappy with the school rules?</li>
 <li>What are the rules people should obey at work?</li>
 <li>What is the purpose of punishment?</li>
-<li>[小问待补充]</li>
+<li>How can parents and teachers help children understand and follow rules?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-4"><summary>4. 包含动物的故事或书 <span class="topic-meta">(5.12)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-6"><summary>6. 包含动物的故事或书 <span class="topic-meta">(5.12)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a story/book with animals in it</p>
 <p><strong>You should say:</strong></p>
@@ -831,7 +915,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-5"><summary>5. 遇到的科技问题 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-7"><summary>7. 遇到的科技问题 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a challenging technological problem you faced</p>
 <p><strong>You should say:</strong></p>
@@ -853,7 +937,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-6"><summary>6. 名人出演的广告 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-8"><summary>8. 名人出演的广告 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an advertisement with a famous person in it</p>
 <p><strong>You should say:</strong></p>
@@ -875,7 +959,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-7"><summary>7. 最近看过的电视/网络节目 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-9"><summary>9. 最近看过的电视/网络节目 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a TV show/online program you have watched recently</p>
 <p><strong>You should say:</strong></p>
@@ -895,7 +979,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-8"><summary>8. 特别场合的食物 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-10"><summary>10. 特别场合的食物 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a food that people eat on special occasions/events</p>
 <p><strong>You should say:</strong></p>
@@ -912,11 +996,10 @@ categories: media
 <li>What are the differences between everyday food and festival food?</li>
 <li>Are there any differences between the food people eat today and the food people ate in the past?</li>
 <li>Do people today prefer eating at home or in a restaurant?</li>
-<li>[小问待补充]</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-9"><summary>9. 喜欢的现场体育赛事 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-11"><summary>11. 喜欢的现场体育赛事 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a live sports event you watched and liked</p>
 <p><strong>You should say:</strong></p>
@@ -938,7 +1021,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-10"><summary>10. 想颁布的新法律 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-12"><summary>12. 想颁布的新法律 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a new law you would like to introduce in your country</p>
 <p><strong>You should say:</strong></p>
@@ -961,7 +1044,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-11"><summary>11. 有趣视频 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-13"><summary>13. 有趣视频 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an interesting video</p>
 <p><strong>You should say:</strong></p>
@@ -978,11 +1061,12 @@ categories: media
 <li>Which is more helpful, watching videos or reading books?</li>
 <li>What skills can people learn from watching videos?</li>
 <li>Are there any differences between the videos that young people and old people like to watch?</li>
-<li>[小问待补充]</li>
+<li>Are there any differences between the videos that young men and young women like to watch?</li>
+<li>What makes a video go viral online?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-2-t-12"><summary>12. 收到特殊蛋糕 <span class="topic-meta">(5.3)</span></summary>
+<details class="topic-card" id="sec-1-c-2-t-14"><summary>14. 收到特殊蛋糕 <span class="topic-meta">(5.3)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a special cake you received from others</p>
 <p><strong>You should say:</strong></p>
@@ -1005,7 +1089,49 @@ categories: media
 </div>
 </details>
 <h4>事件类</h4>
-<details class="topic-card" id="sec-1-c-3-t-1"><summary>1. 交通拥堵 <span class="topic-meta">(5.15)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-1"><summary>1. 近期改变 <span class="topic-meta">(6.8)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a change that you made recently</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>What the change was</li>
+<li>What caused the change</li>
+<li>What you did for the change</li>
+<li>And explain how you feel about the change</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>Do you think it is good to change one&#x27;s daily routine?</li>
+<li>Do you think it is good to change jobs?</li>
+<li>Is it good for people to get a job promotion?</li>
+<li>Do people often make plans around their regular routines?</li>
+<li>Who tend to change their daily routine more, young people or old people?</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-2"><summary>2. 改变重要想法 <span class="topic-meta">(5.19)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when you changed an important opinion of yours</p>
+<p><strong>You should say:</strong></p>
+<ul>
+<li>When you changed your opinion</li>
+<li>What the original opinion was</li>
+<li>Why you changed it</li>
+<li>And explain how you felt about the experience</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div>
+<ul>
+<li>When do most children begin to have their own opinions?</li>
+<li>Do children communicate more with teachers or with parents?</li>
+<li>Whose opinions are more important to children, their parents&#x27; or teachers&#x27;?</li>
+<li>Who do most young people like to share opinions with?</li>
+<li>[小问待补充]</li>
+</ul>
+</div>
+</details>
+<details class="topic-card" id="sec-1-c-3-t-3"><summary>3. 交通拥堵 <span class="topic-meta">(5.15)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you were stuck in a traffic jam for a very long time</p>
 <p><strong>You should say:</strong></p>
@@ -1027,7 +1153,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-2"><summary>2. 快乐活动 <span class="topic-meta">(5.14)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-4"><summary>4. 快乐活动 <span class="topic-meta">(5.14)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you organized a happy event successfully</p>
 <p><strong>You should say:</strong></p>
@@ -1049,7 +1175,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-3"><summary>3. 很久没收到回复的信息 <span class="topic-meta">(5.14)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-5"><summary>5. 很久没收到回复的信息 <span class="topic-meta">(5.14)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you received a message or email and it took you a long time to reply</p>
 <p><strong>You should say:</strong></p>
@@ -1071,7 +1197,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-4"><summary>4. 花费甚少的外出日 <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-6"><summary>6. 花费甚少的外出日 <span class="topic-meta">(5.13)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a special day out that costs you little money/didn&#x27;t cost you much</p>
 <p><strong>You should say:</strong></p>
@@ -1093,7 +1219,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-5"><summary>5. 别人帮助解决问题 <span class="topic-meta">(5.13)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-7"><summary>7. 别人帮助解决问题 <span class="topic-meta">(5.13)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when a person did something to help you solve a problem</p>
 <p><strong>You should say:</strong></p>
@@ -1111,7 +1237,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-6"><summary>6. 语言学习 <span class="topic-meta">(5.11)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-8"><summary>8. 语言学习 <span class="topic-meta">(5.11)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a thing you did to learn another language</p>
 <p><strong>You should say:</strong></p>
@@ -1133,7 +1259,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-7"><summary>7. 使用电子设备碰到的问题 <span class="topic-meta">(5.10)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-9"><summary>9. 使用电子设备碰到的问题 <span class="topic-meta">(5.10)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you had a problem with using an electronic device</p>
 <p><strong>You should say:</strong></p>
@@ -1152,7 +1278,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-8"><summary>8. 重要决定 <span class="topic-meta">(5.8)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-10"><summary>10. 重要决定 <span class="topic-meta">(5.8)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe an important decision that you made</p>
 <p><strong>You should say:</strong></p>
@@ -1174,7 +1300,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-9"><summary>9. 在团队中工作 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-11"><summary>11. 在团队中工作 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you worked in a group</p>
 <p><strong>You should say:</strong></p>
@@ -1196,7 +1322,7 @@ categories: media
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-10"><summary>10. 近期改变的计划 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-12"><summary>12. 近期改变的计划 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a plan that you had to change recently</p>
 <p><strong>You should say:</strong></p>
@@ -1213,11 +1339,12 @@ categories: media
 <li>Would you tell others if you change your plan?</li>
 <li>Why do you think parents still make plans for their children nowadays?</li>
 <li>How does technology help people make plans?</li>
-<li>[小问待补充]</li>
+<li>What kind of plans do people often make?</li>
+<li>Do you think people like the process of making plans more, or the moment of carrying them out?</li>
 </ul>
 </div>
 </details>
-<details class="topic-card" id="sec-1-c-3-t-11"><summary>11. 早起经历 <span class="topic-meta">(5.6)</span></summary>
+<details class="topic-card" id="sec-1-c-3-t-13"><summary>13. 早起经历 <span class="topic-meta">(5.6)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
 <p>Describe a time when you got up early</p>
 <p><strong>You should say:</strong></p>
@@ -1280,7 +1407,7 @@ categories: media
 <li>What is the ideal length for a holiday?</li>
 <li>How do people usually plan holidays?</li>
 <li>Is it important to plan a holiday ahead?</li>
-<li>[小问待补充]</li>
+<li>How do people decide when to travel?</li>
 </ul>
 </div>
 </details>
@@ -1301,7 +1428,8 @@ categories: media
 <li>What do Chinese people do when they visit others?</li>
 <li>What kind of place do people in your country like to live in?</li>
 <li>What&#x27;s the difference between homes in cities and those in the countryside?</li>
-<li>[小问待补充]</li>
+<li>What kind of gifts do people bring when they visit others?</li>
+<li>How often do you visit your relatives of friends?</li>
 </ul>
 </div>
 </details>
@@ -2201,7 +2329,7 @@ categories: media
 <li>Do you think films with many celebrities are more likely to be popular?</li>
 <li>What films are popular in China right now?</li>
 <li>Do you think traditional stories (like fairy tales) are still relevant for children today?</li>
-<li>How can stories influence a person‘s character or values?</li>
+<li>How can stories influence a person&#x27;s character or values?</li>
 </ul>
 </div>
 </details>
