@@ -13,7 +13,7 @@ categories: media
 ## 一、课前准备  
 
 - **Come Prepared:** Always come prepared for the class with all necessary materials.  
-  **按时准备：** 上课前请带好所有学习用品，做好充分准备。<br>  
+  **按时准备：** 上课前请带好所有学习用品（电脑、笔、教材、练习册），做好充分准备。<br>  
 
 - **Stay in Class:** You cannot leave to fetch forgotten items like pens or papers during class time.  
   **不离开教室：** 上课期间不得因忘带笔或纸等物品而离开教室。<br>  
@@ -64,6 +64,4 @@ categories: media
   **电源自备：** 如需插线板，请自行携带。<br>
   
 
-- **Monthly Refresh:** The board is refreshed monthly. If you have fewer than three signatures by the end of the month, you will not receive detention.  
-  **每月更新：** 反思板每月清零，若当月签名次数少于三次，将不予惩戒。<br>  
 
