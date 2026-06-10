@@ -45,14 +45,8 @@ categories: media
 - **Focus on Class:** Only activities related to the class are allowed.  
   **专注学习：** 仅可进行与课程相关的活动。<br>  
 
-- **Enforcement:** If you are found engaging in unrelated activities like gaming or using WeChat more than three times in one class:  
-  **违规处理：** 若在一节课中三次以上从事与课堂无关的行为（如打游戏、用微信）：<br>  
-
-  - **Warnings:** The first two occurrences will result in verbal warnings.  
-    **前两次：** 将给予口头警告。<br>  
-
-  - **Reflective Board:** On the third occurrence, you must write your name on the reflective board.  
-    **第三次：** 需在反思板上签名。<br>  
+- **Enforcement:** If you are found engaging in unrelated activities like gaming or using WeChat more than three times in one class 
+  **违规处理：** 若在一节课中多次从事与课堂无关的行为（如打游戏、用微信、看视频），视为主动放弃课堂参与与课堂练习分。<br>  
 
 ## 5. Internet Connectivity  
 ## 五、网络连接  
@@ -60,26 +54,15 @@ categories: media
 - **Check Your Connection:** Always ensure you are connected to room 419's network.  
   **连接网络：** 请确保连接到教室的网络。<br>  
 
-- **Turn Off VPN:** turn off any personal VPN.  
-  **关闭 VPN：** 请关闭任何个人 VPN。<br>  
-
 ## 6. Classroom Maintenance  
 ## 六、教室卫生  
 
 - **Keep It Clean:** Keep the classroom clean and do not leave trash in the drawer.  
-  **保持整洁：** 请保持教室清洁，不要将垃圾留在抽屉中。<br>  
+  **保持整洁：** 请保持教室清洁，不要将垃圾留下。<br>  
 
 - **Power Needs:** If you require a power strip, please bring your own.  
-  **电源自备：** 如需插线板，请自行携带。<br>  
-
-## 7. Accountability  
-## 七、责任制度  
-
-- **Reflective Board:** Breaking a class rule requires you to sign your name on the reflective board.  
-  **签名记录：** 违反课堂规则需在反思板上签名。<br>  
-
-- **Detention:** Accumulating three signatures within a month results in detention.  
-  **午间留堂惩戒：** 每月累计三次签名将被午间留堂惩戒。<br>  
+  **电源自备：** 如需插线板，请自行携带。<br>
+  
 
 - **Monthly Refresh:** The board is refreshed monthly. If you have fewer than three signatures by the end of the month, you will not receive detention.  
   **每月更新：** 反思板每月清零，若当月签名次数少于三次，将不予惩戒。<br>  
