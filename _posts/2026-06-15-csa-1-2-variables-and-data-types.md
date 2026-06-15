@@ -32,124 +32,76 @@ For example, a game needs to remember your score. The score may start at `0`, th
 
 ## 1. Variable Basics<br>变量基础
 
-### A variable is a memory location<br>变量是一个内存位置
-#### Stores one value<br>存储一个值
-#### Value can change while the program runs<br>程序运行时值可以改变
-#### Example: game score starts at `0`, then increases<br>例子：游戏分数从 `0` 开始，之后增加
+### A memory location<br>内存位置
 
-### Every variable has two key parts<br>每个变量有两个关键部分
-#### Name: what we call it<br>变量名：我们如何称呼它
-#### Type: what kind of value it stores<br>数据类型：它能存哪种值
+### Stores a value<br>存储一个值
 
----
+### Value can change<br>值可以改变
+
+### Example: game score<br>例子：游戏分数
 
 ## 2. Data Types<br>数据类型
 
-### A data type tells Java<br>数据类型告诉 Java
-#### What values are allowed<br>哪些值可以存
-#### What operations are allowed<br>哪些操作可以做
-#### How much memory may be needed<br>可能需要多少内存
+### Type decides what values can be stored<br>类型决定能存什么值
 
 ### Primitive types<br>基本数据类型
-#### Store simple values directly<br>直接存储简单值
-#### `int`: integers, no decimal part, 32 bits<br>`int`：整数，没有小数部分，32 位
-#### `double`: decimal numbers, 64 bits<br>`double`：小数，64 位
-#### `boolean`: only `true` or `false`<br>`boolean`：只能是 `true` 或 `false`
 
-### Reference type: `String`<br>引用类型：`String`
-#### Stores text as a sequence of characters<br>存储一串字符
-#### Text must use double quotes<br>文本必须放在双引号里
-#### Example: `String name = "Jose";`<br>例子：`String name = "Jose";`
+#### `int`: integers<br>`int`：整数
 
----
+#### `double`: decimals<br>`double`：小数
 
-## 3. Declare, Initialize, Assign<br>声明、初始化、赋值
+#### `boolean`: true / false<br>`boolean`：真 / 假
 
-### Declaration creates a variable<br>声明会创建变量
-#### Format: `type name;`<br>格式：`类型 变量名;`
-#### Example: `int score;`<br>例子：`int score;`
+### Reference type<br>引用类型
 
-### Initialization gives the first value<br>初始化是第一次赋值
-#### Format: `type name = value;`<br>格式：`类型 变量名 = 值;`
-#### Example: `int score = 4;`<br>例子：`int score = 4;`
+#### `String`: sequence of characters<br>`String`：一串字符
 
-### Assignment changes the value<br>赋值会改变变量的值
-#### Format: `variable = value;`<br>格式：`变量 = 值;`
-#### Variable on the left, value on the right<br>变量在左边，值在右边
-#### `=` means assignment, not math equality<br>`=` 表示赋值，不是数学中的相等
+## 3. Declaring and Initializing<br>声明与初始化
 
----
+### Declaration: `int score;`<br>声明：`int score;`
+
+### Initialization: `int score = 4;`<br>初始化：`int score = 4;`
+
+### Assignment: `score = 4;`<br>赋值：`score = 4;`
+
+### Variable on left, value on right<br>变量在左边，值在右边
 
 ## 4. Printing Variables<br>输出变量
 
-### Print the value<br>输出变量的值
-#### Correct: `System.out.println(score);`<br>正确：`System.out.println(score);`
-#### Wrong: `System.out.println("score");`<br>错误：`System.out.println("score");`
+### `System.out.println(score);`<br>输出变量值
 
-### Literal text vs variable value<br>字面文本与变量值
-#### `"score"` prints the word score<br>`"score"` 输出 score 这个单词
-#### `score` prints the stored value<br>`score` 输出变量里存的值
+### Do not put variables inside quotes<br>变量不要放进引号
 
-### String concatenation<br>字符串拼接
-#### Use `+` to combine text and values<br>用 `+` 连接文本和值
-#### Spaces must be inside quotes<br>空格必须写在引号里面
-#### `"Hi " + name` → `Hi Jose`<br>`"Hi " + name` → `Hi Jose`
-#### `"Hi" + name` → `HiJose`<br>`"Hi" + name` → `HiJose`
+### Use `+` for string concatenation<br>用 `+` 拼接字符串
 
----
+### Spaces must be inside quotes<br>空格要写在引号里面
 
-## 5. Variable Naming<br>变量命名
+## 5. Naming Rules<br>命名规则
 
-### Legal names<br>合法变量名
-#### Start with a letter<br>以字母开头
-#### Can include letters, numbers, underscores<br>可以包含字母、数字、下划线
-#### No spaces<br>不能有空格
-#### Cannot be a Java keyword<br>不能是 Java 关键字
+### Start with a letter<br>以字母开头
 
-### Good style<br>好的风格
-#### Meaningful names: `score`, `numStudents`<br>有意义的名字：`score`、`numStudents`
-#### Use camelCase: `gameScore`, `firstName`<br>使用驼峰命名：`gameScore`、`firstName`
-#### Java is case-sensitive<br>Java 区分大小写
-#### `gameScore` and `gamescore` are different<br>`gameScore` 和 `gamescore` 不一样
+### No spaces<br>不能有空格
 
----
+### No Java keywords<br>不能用 Java 关键字
 
-## 6. Common Beginner Mistakes<br>初学者常见错误
+### Use meaningful names<br>使用有意义的名字
 
-### Wrong type<br>类型错误
-#### `int temperature = 70.5;` is wrong<br>`int temperature = 70.5;` 错，`int` 不能存小数
-#### Use `double temperature = 70.5;`<br>应使用 `double temperature = 70.5;`
+### Use camelCase<br>使用驼峰命名法
 
-### Wrong boolean value<br>布尔值错误
-#### `boolean sunny = 1;` is wrong<br>`boolean sunny = 1;` 错
-#### Use `true` or `false`<br>应使用 `true` 或 `false`
+### Case-sensitive<br>区分大小写
 
-### Wrong capitalization<br>大小写错误
-#### Primitive types are lowercase: `int`, `double`, `boolean`<br>基本类型要小写：`int`、`double`、`boolean`
+## 6. Common Mistakes<br>常见错误
 
-### Printing the name, not the value<br>输出了名字，而不是值
-#### Wrong: `System.out.println("name");`<br>错误：`System.out.println("name");`
-#### Correct: `System.out.println(name);`<br>正确：`System.out.println(name);`
+### Wrong type: `int temperature = 70.5;`<br>类型错误：`int temperature = 70.5;`
+
+### Wrong boolean: `boolean sunny = 1;`<br>布尔值错误：`boolean sunny = 1;`
+
+### Variable inside quotes: `"score"`<br>把变量放进引号：`"score"`
 
 ### Misspelled variable name<br>变量名拼写错误
-#### Declared: `temperature`<br>声明的是：`temperature`
-#### Used: `tempurature`<br>使用时写成：`tempurature`
 
----
+### Missing semicolon<br>漏写分号
 
-## 7. Debugging Checklist<br>调试检查清单
-
-### Check the type<br>检查类型
-#### Whole number → `int`<br>整数 → `int`
-#### Decimal → `double`<br>小数 → `double`
-#### True/false → `boolean`<br>真假 → `boolean`
-#### Text → `String`<br>文本 → `String`
-
-### Check the statement<br>检查语句
-#### Variable on the left of `=`<br>变量在 `=` 左边
-#### End with semicolon<br>以分号结尾
-#### Same spelling and capitalization every time<br>每次拼写和大小写都一致
-#### Variables are not inside quotes when printing values<br>输出变量值时，不要把变量放进引号
 
 </script>
 </div>
