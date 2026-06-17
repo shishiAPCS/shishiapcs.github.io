@@ -102,7 +102,7 @@ Java 常用两个输出方法：
 
 Example:
 
-```java id="eac6pf"
+```java 
 System.out.print("Hi ");
 System.out.println("there");
 System.out.print("!");
@@ -110,7 +110,7 @@ System.out.print("!");
 
 Output:
 
-```text id="x7sfl0"
+```text
 Hi there
 !
 ```
@@ -127,7 +127,7 @@ A **string literal** is fixed text inside double quotes.
 
 **字符串字面量 String Literal** 是双引号里的固定文本。
 
-```java id="txqaek"
+```java 
 System.out.println("Hello");
 ```
 
@@ -141,7 +141,7 @@ Useful escape sequences:
 
 Example:
 
-```java id="u6awpz"
+```java 
 System.out.println("She said, \"Hi!\"");
 System.out.println("C:\\Users\\Student");
 System.out.println("Line 1\nLine 2");
@@ -149,7 +149,7 @@ System.out.println("Line 1\nLine 2");
 
 Output:
 
-```text id="ul3b25"
+```text
 She said, "Hi!"
 C:\Users\Student
 Line 1
@@ -180,14 +180,14 @@ This is the most important trap in this lesson.
 
 这是本节课最重要的易错点。
 
-```java id="9en91f"
+```java
 System.out.println(2 / 3);
 System.out.println(2.0 / 3);
 ```
 
 Output:
 
-```text id="zurwey"
+```text
 0
 0.6666666666666666
 ```
@@ -203,7 +203,7 @@ Important:
 
 整数除法是**截断 truncation**，不是四舍五入。
 
-```java id="coqp90"
+```java
 System.out.println(7 / 2);    // 3
 System.out.println(7.0 / 2);  // 3.5
 ```
@@ -214,7 +214,7 @@ The `%` operator gives the remainder after division.
 
 `%` 是**余数运算符 Remainder Operator**，表示除法后的余数。
 
-```java id="et7698"
+```java 
 System.out.println(5 % 2);  // 1
 System.out.println(8 % 2);  // 0
 System.out.println(9 % 2);  // 1
@@ -248,7 +248,7 @@ Java 遵守常见数学运算优先级。
 
 Example:
 
-```java id="ban8jq"
+```java 
 System.out.println(2 + 3 * 2);
 System.out.println((2 + 3) * 2);
 System.out.println(2 + (3 * 2));
@@ -256,7 +256,7 @@ System.out.println(2 + (3 * 2));
 
 Output:
 
-```text id="iin3co"
+```text 
 8
 10
 8
@@ -280,7 +280,7 @@ When the expression is hard to read, use parentheses.
 
 Buggy code:
 
-```java id="iq56a7"
+```java
 public class CmToInches
 {
     public static void main(String[] args)
@@ -297,7 +297,7 @@ The code can run, but the formula is wrong.
 
 Since:
 
-```text id="qbipyw"
+```text
 1 inch = 2.54 centimeters
 ```
 
@@ -307,7 +307,7 @@ To convert centimeters to inches, divide by `2.54`.
 
 Fixed code:
 
-```java id="23xw59"
+```java 
 public class CmToInches
 {
     public static void main(String[] args)
@@ -329,7 +329,7 @@ public class CmToInches
 
 What is printed?
 
-```java id="i1nxe7"
+```java 
 System.out.print("Java is ");
 System.out.println("fun ");
 System.out.print("and cool!");
@@ -337,20 +337,20 @@ System.out.print("and cool!");
 
 A.
 
-```text id="76ne4x"
+```text 
 Java is fun and cool!
 ```
 
 B.
 
-```text id="txmi4r"
+```text 
 Java isfun
 and cool!
 ```
 
 C.
 
-```text id="nw2kfe"
+```text 
 Java is
 fun
 and cool!
@@ -358,7 +358,7 @@ and cool!
 
 D.
 
-```text id="61u3lg"
+```text 
 Java is fun
 and cool!
 ```
@@ -374,13 +374,13 @@ Answer: **D**
 
 What is printed?
 
-```java id="nf7p2k"
+```java 
 System.out.println(5 + 5 / 2 * 3 - 1);
 ```
 
 Answer: **10**
 
-```text id="9eh029"
+```text 
 5 + 5 / 2 * 3 - 1
 5 + 2 * 3 - 1
 5 + 6 - 1
@@ -395,14 +395,14 @@ Answer: **10**
 
 Buggy code:
 
-```java id="pe7iid"
+```java 
 System.out.println("Pay for 12 hours at 7.50 dollars per hour:");
 System.out.println(12 7.50);
 ```
 
 Fixed code:
 
-```java id="j4icxi"
+```java 
 System.out.println("Pay for 12 hours at 7.50 dollars per hour:");
 System.out.println(12 * 7.50);
 ```
