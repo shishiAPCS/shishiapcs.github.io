@@ -69,6 +69,8 @@ In the previous lesson, we worked with arithmetic expressions. In this lesson, w
 </div>
 </div>
 
+
+
 # 1. Main Idea<br>核心理解
 
 Type casting means converting a value from one type to another.
@@ -306,6 +308,62 @@ Output:
 This result is not mathematically correct. It happens because the value went beyond what an `int` can store.
 
 这个结果在数学上不正确。它出现的原因是数值超过了 `int` 能存储的范围。
+
+
+# 8. Precision and Round-off Error<br>精度与舍入误差
+
+A `double` can store decimal values, but it cannot store every decimal value exactly.
+
+`double` 可以存储小数，但它不能精确存储所有小数。
+
+This happens because computers use a limited amount of memory. Some decimal values, especially repeating decimals or values like `0.1`, cannot be represented exactly as a `double`.
+
+这是因为电脑给每种数据类型分配的内存是有限的。有些小数，尤其是循环小数，或者像 `0.1` 这样的数，不能被 `double` 完全精确地表示。
+
+Example:
+
+```java
+System.out.println(10.0 / 3);
+System.out.println(0.1 + 0.2);
+System.out.println((0.1 + 0.2) == 0.3);
+````
+
+Output:
+
+```text
+3.3333333333333335
+0.30000000000000004
+false
+```
+
+This is called a **round-off error**. It does not mean Java gives a random result. If you run the same expression again, you should get the same approximate result.
+
+这叫 **round-off error（舍入误差 / 浮点精度误差）**。它不是说 Java 每次运行都会随机出不同结果。同一个表达式再次运行，通常还是会得到同样的近似值。
+
+The problem is that the stored `double` value is only an approximation of the mathematical value.
+
+问题在于：`double` 存储的是数学真实值的一个近似值。
+
+| Expression           | Mathematical Idea        | Java Result           |
+| -------------------- | ------------------------ | --------------------- |
+| `10.0 / 3`           | `3.333333...` forever    | `3.3333333333333335`  |
+| `0.1 + 0.2`          | `0.3`                    | `0.30000000000000004` |
+| `(0.1 + 0.2) == 0.3` | should feel true in math | `false` in Java       |
+
+For AP CSA, remember this distinction:
+
+AP CSA 中要区分这几件事：
+
+| Concept            | Meaning                                 | Example                                 |
+| ------------------ | --------------------------------------- | --------------------------------------- |
+| Integer truncation | `int / int` drops the decimal part      | `5 / 2` gives `2`                       |
+| Casting to `int`   | decimal part is cut off                 | `(int) 3.9` gives `3`                   |
+| Round-off error    | `double` may store an approximate value | `0.1 + 0.2` gives `0.30000000000000004` |
+
+Round-off error is about the limits of `double` precision. It is different from integer truncation.
+
+`round-off error` 讲的是 `double` 精度有限的问题。它和整数除法的截断不是一回事。
+
 
 # 8. Common Beginner Mistakes<br>常见初学者错误
 
