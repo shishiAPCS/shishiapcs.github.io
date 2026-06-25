@@ -7,7 +7,10 @@ categories: media
 
 ### 当前版本：[点击打开 SpeakDeck](https://shishiapcs.github.io/speakdeck/)
 
-### 旧版保留：[V2](https://shishiapcs.github.io/whisper-transcriber/) [V1](https://shishiapcs.github.io/transcriber/)
+### 旧版：
+
+* [V2](https://shishiapcs.github.io/whisper-transcriber/) 
+* [V1](https://shishiapcs.github.io/transcriber/)
 
 ---
 
