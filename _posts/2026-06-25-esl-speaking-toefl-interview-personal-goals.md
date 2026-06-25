@@ -5,73 +5,37 @@ categories: media
 render_with_liquid: false
 ---
 
-## Question 1
+## **Q1. Think of a time, recent or not, when you had something you wanted to achieve. What was it?**
 
-### Think of a time, recent or not, when you had something you wanted to achieve. What was it?
+### **答题思路**
 
-这个问题问的是一个具体经历。
-
-第一步不要讲大道理，比如：
-
-> I wanted to improve myself.
-
-这种回答太空。
-
-更好的做法是：
-
-> **Choose one concrete goal and name it clearly.**
-
-也就是先说清楚：
-你想完成的具体目标是什么？
+这道题问的是一个具体经历，可以按照 **“目标 → 原因 → 过程 → 结果”** 来回答。
+不要一开始说太空的话，比如 **I wanted to improve myself.**
+更好的做法是先选一个具体目标，比如完成一个项目、学会一个技能、准备一次考试。
+然后简单说明为什么想做这件事，自己做了什么，最后有没有完成。
 
 ---
 
-## 答题结构：Goal → Reason → Process → Result
+### **Revised Version (Natural & Smooth)**
 
-### Structure
+“One goal I had recently was to build a small app that could transcribe my students’ English recordings. I wanted to make it because I teach speaking, and I thought it would help students review their answers more clearly.
 
-1. **Goal**
+I spent a lot of time thinking about the layout and then built it step by step. By the end of last week, I had the first working version. It was not perfect yet, but it could already do the basic job, so I felt quite proud of it.”
 
-   > One goal I had recently was to...
+#### **核心词汇**
 
-2. **Reason**
+* **one goal I had recently** — 我最近的一个目标
+* **build a small app** — 做一个小应用
+* **transcribe recordings** — 转写录音
+* **review their answers** — 回顾自己的回答
+* **think about the layout** — 思考界面布局
+* **step by step** — 一步一步地
+* **the first working version** — 第一个能运行的版本
+* **not perfect yet** — 还不完美
+* **do the basic job** — 完成基本功能
+* **feel proud of it** — 为此感到自豪
 
-   > I wanted to do this because...
-
-3. **Process**
-
-   > I spent time... / I built it step by step...
-
-4. **Result**
-
-   > By the end, I had...
-
----
-
-## Possible answer angles
-
-| Type of goal  | Examples                                                                |
-| ------------- | ----------------------------------------------------------------------- |
-| Study goal    | preparing for a test, improving vocabulary, finishing a reading project |
-| Skill goal    | learning coding, improving pronunciation, practicing basketball         |
-| Creative goal | making a video, designing a poster, building a website                  |
-| Habit goal    | waking up earlier, reading every day, exercising                        |
-| Project goal  | finishing a presentation, building an app, organizing an event          |
-
-学生最好选择 **small but real** 的目标。
-小而真实的目标，往往比大而空的目标更容易说清楚。
-
----
-
-## Sample Answer
-
-One goal I had recently was to build a small app that could transcribe my students’ English recordings. I wanted to make it because I teach speaking, and I thought it would help students review their answers more clearly.
-
-I spent a lot of time thinking about the layout and then built it step by step. By the end of last week, I had the first working version. It was not perfect yet, but it could already do the basic job, so I felt quite proud of it.
-
----
-
-## Student Skeleton
+#### **Student Skeleton**
 
 One goal I had recently was to ____________________.
 
@@ -83,80 +47,37 @@ By the end, ____________________. It was not perfect, but ____________________, 
 
 ---
 
-## Teaching Note
+## **Q2. In general, how do you handle difficulties or obstacles that come up while working toward what you want to achieve?**
 
-这个问题可以教学生使用这个公式：
+### **答题思路**
 
-> **I wanted to + goal, because + reason. Then I + process. In the end + result.**
-
-重点不是目标有多大，而是能不能说得具体。
-
----
-
-# Question 2
-
-### In general, how do you handle difficulties or obstacles that come up while working toward what you want to achieve?
-
-这个问题问的是处理困难的方法。
-
-第一步是：
-
-> **Name your method clearly.**
-
-也就是说，先直接说你通常怎么做。
-
-比如：
-
-> I usually break the problem into smaller steps.
-
-这个方法很适合学生，因为它简单、实用，而且能套用到学习、项目、运动、生活习惯等很多话题。
+这道题问的是遇到困难时的处理方法，可以按照 **“方法 → 原因 → 例子 → 结果”** 来回答。
+第一步要先明确说出自己的方法，比如 **break the problem into smaller steps**。
+然后解释为什么这个方法有用：大问题会让人有压力，但拆成小步骤之后就更容易处理。
+最后用一个简单例子说明自己怎么一步一步解决问题。
 
 ---
 
-## 答题结构：Method → Why → Example → Result
+### **Revised Version (Natural & Smooth)**
 
-### Structure
+“In general, when I face a difficulty, I try to break it down into smaller steps. If I look at the whole problem at once, it can feel overwhelming, but if I divide it into smaller parts, it becomes easier to handle.
 
-1. **Method**
+For example, when I’m working on a project, I don’t try to fix everything at the same time. I first find out what the main problem is, then I solve one part, test it, and move on to the next part.”
 
-   > I usually break the problem into smaller steps.
+#### **核心词汇**
 
-2. **Why**
+* **face a difficulty** — 面对困难
+* **break it down** — 把它拆解
+* **smaller steps** — 更小的步骤
+* **look at the whole problem** — 看整个问题
+* **overwhelming** — 让人压力很大的
+* **divide it into smaller parts** — 把它分成更小的部分
+* **easier to handle** — 更容易处理
+* **fix everything at the same time** — 同时解决所有问题
+* **find out the main problem** — 找出主要问题
+* **move on to the next part** — 继续处理下一部分
 
-   > A big problem feels less stressful when I divide it into smaller parts.
-
-3. **Example**
-
-   > When I work on a project, I don’t try to fix everything at once.
-
-4. **Result**
-
-   > I solve one part, test it, and move on.
-
----
-
-## Possible answer angles
-
-| Strategy           | How to explain it                                           |
-| ------------------ | ----------------------------------------------------------- |
-| Break it down      | Divide the big problem into smaller steps.                  |
-| Ask for help       | Talk to a teacher, friend, or someone with more experience. |
-| Stay calm first    | Don’t panic; understand what the real problem is.           |
-| Make a plan        | Write down what needs to be done first, second, and third.  |
-| Try and adjust     | Test one solution, see if it works, then change it.         |
-| Take a short break | Step away for a moment and come back with a clearer mind.   |
-
----
-
-## Sample Answer
-
-In general, when I face a difficulty, I try to break it down into smaller steps. If I look at the whole problem at once, it can feel overwhelming, but if I divide it into smaller parts, it becomes easier to handle.
-
-For example, when I’m working on a project, I don’t try to fix everything at the same time. I first find out what the main problem is, then I solve one part, test it, and move on to the next part.
-
----
-
-## Student Skeleton
+#### **Student Skeleton**
 
 In general, when I face a difficulty, I usually ____________________.
 
@@ -166,79 +87,38 @@ For example, when I ____________________, I don’t ____________________. I firs
 
 ---
 
-## Teaching Note
+## **Q3. In your opinion, how important is goal setting for personal growth?**
 
-这个问题可以记住一句话：
+### **答题思路**
 
-> **When I face a problem, I don’t try to solve everything at once. I break it down and handle it step by step.**
-
-这个结构很适合 45 秒口语回答。
-它听起来成熟，但不会像作文。
-
----
-
-# Question 3
-
-### In your opinion, how important is goal setting for personal growth?
-
-这个问题是观点题。
-
-第一步可以直接给观点：
-
-> **I think goal setting is very important because it gives people direction.**
-
-不一定需要先缩小范围。
-这个问题的核心是解释 goal setting 的作用。
+这道题是观点题，可以按照 **“观点 → 作用 → 例子 → 结果”** 来回答。
+先直接表达观点：goal setting 很重要。
+然后解释它的作用：它能给人方向，让人知道该从哪里开始。
+接着用学习一门课程作为例子，说明目标可以帮助我们决定学什么、花多少时间、怎么行动。
+最后说明：目标能把模糊的愿望变成具体的行动。
 
 ---
 
-## 答题结构：Opinion → Function → Example → Result
+### **Revised Version (Natural & Smooth)**
 
-### Structure
+“Personally, I think goal setting is very important for personal growth, because it gives people a clear direction. Without a goal, we may want to improve, but we don’t really know where to start.
 
-1. **Opinion**
+For example, if I want to learn a new course, I need to know which parts to focus on and how much time I can spend on it. Once I have a clear plan, it becomes much easier to take action.”
 
-   > I think goal setting is very important.
+#### **核心词汇**
 
-2. **Function**
+* **personally** — 就我个人而言
+* **goal setting** — 目标设定
+* **personal growth** — 个人成长
+* **a clear direction** — 清晰的方向
+* **want to improve** — 想要提升
+* **know where to start** — 知道从哪里开始
+* **learn a new course** — 学习一门新课程
+* **focus on** — 专注于
+* **a clear plan** — 清晰的计划
+* **take action** — 采取行动
 
-   > It gives people direction and focus.
-
-3. **Example**
-
-   > If someone wants to learn a course, they need to know what to study.
-
-4. **Result**
-
-   > A vague wish becomes a clear plan.
-
----
-
-## Possible answer angles
-
-| Angle      | How to explain it                            |
-| ---------- | -------------------------------------------- |
-| Direction  | Goals tell people where they are going.      |
-| Focus      | Goals help people avoid wasting time.        |
-| Motivation | Goals give people a reason to keep going.    |
-| Progress   | Goals make improvement easier to track.      |
-| Action     | Goals turn vague wishes into concrete steps. |
-
-最强的表达是：
-
-> **Goal setting turns “I want to improve” into “I know what to do next.”**
-
----
-
-## Sample Answer
-
-Personally, I think goal setting is very important for personal growth, because it gives people a clear direction. Without a goal, we may want to improve, but we don’t really know where to start.
-
-For example, if I want to learn a new course, I need to know which parts to focus on and how much time I can spend on it. Once I have a clear plan, it becomes much easier to take action.
-
----
-
-## Student Skeleton
+#### **Student Skeleton**
 
 Personally, I think goal setting is ____________________ for personal growth, because it ____________________.
 
@@ -250,83 +130,38 @@ Once they have a clear goal, it becomes easier to ____________________.
 
 ---
 
-## Teaching Note
+## **Q4. Do you think children should be taught to set goals at an early age?**
 
-这类观点题不需要太复杂。
-学生可以用这个思路：
+### **答题思路**
 
-> **Goal setting gives direction, creates focus, and leads to action.**
-
-只要有一个具体例子，答案就会更清楚。
-
----
-
-# Question 4
-
-### Do you think children should be taught to set goals at an early age?
-
-这个问题和 children 有关。
-
-遇到 children 类问题，学生最好不要回答得太绝对。
-第一步可以是：
-
-> **Agree, but limit the type of goals.**
-
-也就是说：
-
-> Yes, but the goals should be simple and age-appropriate.
-
-这样答案会更成熟，也不会显得给孩子太大压力。
+这道题和 children 有关，回答时不要太绝对。
+可以按照 **“同意 → 限定 → 原因 → 例子 → 好处”** 来回答。
+第一步可以说：是的，但目标要简单，而且要适合孩子的年龄。
+然后解释原因：习惯不是一天养成的，目标设定也是一种长期习惯。
+最后举一些小目标，比如每天阅读十分钟、按时完成作业、慢慢学习一个新技能。
 
 ---
 
-## 答题结构：Agree → Limit → Reason → Example → Benefit
+### **Revised Version (Natural & Smooth)**
 
-### Structure
+“Yes, I think it’s a good idea to teach children to set goals at an early age, as long as the goals are simple and suitable for their age. They don’t need big life goals, but they can start with small things, like reading for ten minutes every day, finishing homework on time, or learning a new skill little by little.
 
-1. **Agree**
+Habits take time to build. If children get used to setting small goals, they may become more organized and independent later in life.”
 
-   > I think it’s a good idea.
+#### **核心词汇**
 
-2. **Limit**
+* **set goals** — 设定目标
+* **at an early age** — 在很小的时候
+* **as long as** — 只要
+* **suitable for their age** — 适合他们的年龄
+* **big life goals** — 很大的人生目标
+* **start with small things** — 从小事开始
+* **finish homework on time** — 按时完成作业
+* **little by little** — 一点一点地
+* **habits take time to build** — 习惯需要时间养成
+* **organized and independent** — 有条理且独立
 
-   > But the goals should be simple and suitable for their age.
-
-3. **Reason**
-
-   > Habits take time to build.
-
-4. **Example**
-
-   > reading every day, finishing homework, learning a small skill
-
-5. **Benefit**
-
-   > Children become more organized and independent.
-
----
-
-## Possible answer angles
-
-| Angle                 | Examples                                                       |
-| --------------------- | -------------------------------------------------------------- |
-| Age-appropriate goals | small, simple, not stressful                                   |
-| Study habits          | finishing homework, reviewing words, reading daily             |
-| Life habits           | sleeping earlier, cleaning their desk, packing their schoolbag |
-| Skill learning        | practicing piano, sports, drawing, coding                      |
-| Long-term benefit     | independence, responsibility, self-discipline                  |
-
----
-
-## Sample Answer
-
-Yes, I think it’s a good idea to teach children to set goals at an early age, as long as the goals are simple and suitable for their age. They don’t need big life goals, but they can start with small things, like reading for ten minutes every day, finishing homework on time, or learning a new skill little by little.
-
-Habits take time to build. If children get used to setting small goals, they may become more organized and independent later in life.
-
----
-
-## Student Skeleton
+#### **Student Skeleton**
 
 Yes, I think it’s a good idea to teach children to ____________________, as long as ____________________.
 
@@ -334,52 +169,4 @@ They don’t need ____________________, but they can start with small things, li
 
 The reason is that ____________________. If children get used to ____________________, they may become ____________________ and ____________________ later in life.
 
----
-
-## Teaching Note
-
-遇到 children 话题，可以教学生加一句平衡：
-
-> **It is good, but it should be age-appropriate.**
-
-这个思路可以用于很多问题：
-
-* children learning technology
-* children doing homework
-* children joining competitions
-* children setting goals
-* children learning responsibility
-
-这样答案会更自然，也更有分寸。
-
----
-
-# Final Review: Four Questions and First Moves
-
-| Question                                           | First Move                          | Best Structure                             |
-| -------------------------------------------------- | ----------------------------------- | ------------------------------------------ |
-| What was something you wanted to achieve?          | Choose one concrete goal.           | Goal → Reason → Process → Result           |
-| How do you handle difficulties?                    | Name your method clearly.           | Method → Why → Example → Result            |
-| How important is goal setting for personal growth? | Give a clear opinion.               | Opinion → Function → Example → Result      |
-| Should children learn to set goals early?          | Agree, but limit the type of goals. | Agree → Limit → Reason → Example → Benefit |
-
----
-
-# A Useful Rule for TOEFL Speaking Part 2
-
-For interview-style speaking questions, students should not try to sound too formal.
-
-A good answer should be:
-
-* specific
-* natural
-* organized
-* not too long
-* easy to finish in about 45 seconds
-
-Students can remember this:
-
-> **Start with a clear idea, give one simple reason, and use one concrete example.**
-
-That is usually enough for a strong 45-second response.
 
