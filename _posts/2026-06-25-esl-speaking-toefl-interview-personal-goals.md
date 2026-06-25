@@ -16,13 +16,13 @@ render_with_liquid: false
 
 ---
 
-### **Revised Version (Natural & Smooth)**
+### **Version 1 (Natural & Smooth)**
 
 “One goal I had recently was to build a small app that could transcribe my students’ English recordings. I wanted to make it because I teach speaking, and I thought it would help students review their answers more clearly.
 
 I spent a lot of time thinking about the layout and then built it step by step. By the end of last week, I had the first working version. It was not perfect yet, but it could already do the basic job, so I felt quite proud of it.”
 
-#### **核心词汇**
+#### **Version 1 核心词汇**
 
 * **one goal I had recently** — 我最近的一个目标
 * **build a small app** — 做一个小应用
@@ -35,15 +35,26 @@ I spent a lot of time thinking about the layout and then built it step by step. 
 * **do the basic job** — 完成基本功能
 * **feel proud of it** — 为此感到自豪
 
-#### **Student Skeleton**
+---
 
-One goal I had recently was to ____________________.
+### **Version 2 (More Natural & Spoken)**
 
-I wanted to do this because ____________________.
+“Recently, I wanted to build a small app for my speaking class. The app could turn students’ English recordings into text, so they could listen back and check their answers more easily.
 
-To achieve it, I ____________________ and ____________________.
+I didn’t finish everything at once. I first thought about the layout, then built and tested the app little by little. By the end of the week, I had a working version. It still needed improvement, but at least the basic function worked.”
 
-By the end, ____________________. It was not perfect, but ____________________, so I felt ____________________.
+#### **Version 2 核心词汇**
+
+* **speaking class** — 口语课
+* **turn recordings into text** — 把录音转成文字
+* **listen back** — 回听
+* **check their answers** — 检查自己的回答
+* **finish everything at once** — 一次性完成所有事情
+* **built and tested** — 搭建并测试
+* **little by little** — 一点一点地
+* **a working version** — 一个能运行的版本
+* **needed improvement** — 还需要改进
+* **the basic function worked** — 基本功能能用了
 
 ---
 
@@ -58,13 +69,13 @@ By the end, ____________________. It was not perfect, but ____________________, 
 
 ---
 
-### **Revised Version (Natural & Smooth)**
+### **Version 1 (Natural & Smooth)**
 
 “In general, when I face a difficulty, I try to break it down into smaller steps. If I look at the whole problem at once, it can feel overwhelming, but if I divide it into smaller parts, it becomes easier to handle.
 
 For example, when I’m working on a project, I don’t try to fix everything at the same time. I first find out what the main problem is, then I solve one part, test it, and move on to the next part.”
 
-#### **核心词汇**
+#### **Version 1 核心词汇**
 
 * **face a difficulty** — 面对困难
 * **break it down** — 把它拆解
@@ -77,13 +88,26 @@ For example, when I’m working on a project, I don’t try to fix everything at
 * **find out the main problem** — 找出主要问题
 * **move on to the next part** — 继续处理下一部分
 
-#### **Student Skeleton**
+---
 
-In general, when I face a difficulty, I usually ____________________.
+### **Version 2 (More Natural & Spoken)**
 
-If I ____________________, it can feel ____________________, but if I ____________________, it becomes ____________________.
+“When I run into a problem, I usually don’t try to solve everything at once. I try to slow down and break the problem into smaller parts.
 
-For example, when I ____________________, I don’t ____________________. I first ____________________, then ____________________, and finally ____________________.
+For example, if I’m working on a project and something goes wrong, I first ask myself what the real problem is. Then I fix one small part, test it, and see if it works. This makes the whole thing feel less stressful and more manageable.”
+
+#### **Version 2 核心词汇**
+
+* **run into a problem** — 遇到问题
+* **solve everything at once** — 一次性解决所有问题
+* **slow down** — 慢下来 / 冷静下来
+* **break the problem into smaller parts** — 把问题拆成更小的部分
+* **something goes wrong** — 出了问题
+* **ask myself** — 问问自己
+* **the real problem** — 真正的问题
+* **fix one small part** — 先修好一个小部分
+* **less stressful** — 没那么有压力
+* **more manageable** — 更容易处理
 
 ---
 
@@ -99,13 +123,13 @@ For example, when I ____________________, I don’t ____________________. I firs
 
 ---
 
-### **Revised Version (Natural & Smooth)**
+### **Version 1 (Natural & Smooth)**
 
 “Personally, I think goal setting is very important for personal growth, because it gives people a clear direction. Without a goal, we may want to improve, but we don’t really know where to start.
 
 For example, if I want to learn a new course, I need to know which parts to focus on and how much time I can spend on it. Once I have a clear plan, it becomes much easier to take action.”
 
-#### **核心词汇**
+#### **Version 1 核心词汇**
 
 * **personally** — 就我个人而言
 * **goal setting** — 目标设定
@@ -118,15 +142,26 @@ For example, if I want to learn a new course, I need to know which parts to focu
 * **a clear plan** — 清晰的计划
 * **take action** — 采取行动
 
-#### **Student Skeleton**
+---
 
-Personally, I think goal setting is ____________________ for personal growth, because it ____________________.
+### **Version 2 (More Natural & Spoken)**
 
-Without a goal, people may ____________________, but they don’t really ____________________.
+“I think goal setting matters a lot because it gives people something clear to work toward. Without a goal, we may say we want to get better, but that idea is still too vague.
 
-For example, if someone wants to ____________________, they need to know ____________________ and ____________________.
+For example, if I want to study a new subject, I need to know what to learn first and how much time to spend on it. A clear goal makes it easier to start and keep going.”
 
-Once they have a clear goal, it becomes easier to ____________________.
+#### **Version 2 核心词汇**
+
+* **matter a lot** — 非常重要
+* **something clear to work toward** — 一个明确努力的方向
+* **get better** — 变得更好 / 提升自己
+* **too vague** — 太模糊
+* **study a new subject** — 学习一个新科目
+* **what to learn first** — 先学什么
+* **how much time to spend on it** — 花多少时间在上面
+* **make it easier to start** — 让开始变得更容易
+* **keep going** — 坚持下去
+* **a clear goal** — 一个清晰的目标
 
 ---
 
@@ -142,13 +177,13 @@ Once they have a clear goal, it becomes easier to ____________________.
 
 ---
 
-### **Revised Version (Natural & Smooth)**
+### **Version 1 (Natural & Smooth)**
 
 “Yes, I think it’s a good idea to teach children to set goals at an early age, as long as the goals are simple and suitable for their age. They don’t need big life goals, but they can start with small things, like reading for ten minutes every day, finishing homework on time, or learning a new skill little by little.
 
 Habits take time to build. If children get used to setting small goals, they may become more organized and independent later in life.”
 
-#### **核心词汇**
+#### **Version 1 核心词汇**
 
 * **set goals** — 设定目标
 * **at an early age** — 在很小的时候
@@ -161,12 +196,25 @@ Habits take time to build. If children get used to setting small goals, they may
 * **habits take time to build** — 习惯需要时间养成
 * **organized and independent** — 有条理且独立
 
-#### **Student Skeleton**
+---
 
-Yes, I think it’s a good idea to teach children to ____________________, as long as ____________________.
+### **Version 2 (More Natural & Spoken)**
 
-They don’t need ____________________, but they can start with small things, like ____________________, ____________________, or ____________________.
+“Yes, I think children should learn to set goals, but the goals should be small and realistic. Young children don’t need to think about big life plans. They can start with simple goals, like reading every day, finishing their homework, or practicing a skill.
 
-The reason is that ____________________. If children get used to ____________________, they may become ____________________ and ____________________ later in life.
+I think this is useful because goal setting is also a habit. If children learn it early, they may become more responsible and better at managing themselves as they grow older.”
+
+#### **Version 2 核心词汇**
+
+* **learn to set goals** — 学会设定目标
+* **small and realistic** — 小而现实的
+* **big life plans** — 很大的人生规划
+* **simple goals** — 简单的目标
+* **practice a skill** — 练习一项技能
+* **goal setting is also a habit** — 设定目标也是一种习惯
+* **learn it early** — 早点学会它
+* **become more responsible** — 变得更有责任感
+* **manage themselves** — 管理自己
+* **as they grow older** — 随着他们长大
 
 
