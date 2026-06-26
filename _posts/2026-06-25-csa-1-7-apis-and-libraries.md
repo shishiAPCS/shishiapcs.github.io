@@ -5,12 +5,12 @@ categories: media
 render_with_liquid: false
 ---
 
-In earlier lessons, we used code like `System.out.println()` without knowing exactly how it works inside. In this lesson, we learn why that is normal: programmers often use libraries and APIs written by other people.
+In earlier lessons, we used code like `System.out.println()` without knowing exactly how it works inside. In this lesson, we learn how programmers use code written by others through libraries and APIs.
 
-前几课我们已经用过 `System.out.println()`，但并没有研究它内部到底怎么实现。这一课我们要理解：程序员经常使用别人已经写好的库和 API，这很正常，也很重要。
+前几课我们已经用过 `System.out.println()`，但并没有研究它内部到底怎么实现。这一课我们要理解：程序员经常通过库和 API 使用别人已经写好的代码。
 
-> **A library gives us reusable code; an API tells us how to use it.**
-> **库提供可复用的代码；API 告诉我们怎样使用这些代码。**
+> **A library gives us reusable code; an API is the public interface that tells us how to use it.**
+> **库提供可复用代码；API 是告诉我们如何使用这些代码的公开接口。**
 
 # Core Concepts:<br>核心知识点
 
@@ -23,13 +23,13 @@ In earlier lessons, we used code like `System.out.println()` without knowing exa
 ## 核心定义<br>Core Definitions
 
 * 库：别人写好的类的集合<br>Library: collection of classes written by others
-* API：说明如何使用库<br>API: specification for how to use a library
+* API：库或类对外提供的使用接口<br>API: public interface for using code
+* API 文档：解释如何使用 API<br>API documentation: written explanation of the API
 * 包：相关类的分组<br>Package: group of related classes
-* `java.lang`：Java 默认可用的基础包<br>Fundamental package available automatically
 
 ## 类与对象<br>Classes and Objects
 
-* 类：对象的蓝图，也是一种引用类型<br>Class: blueprint and reference type
+* 类：对象的蓝图，也是一种类型<br>Class: blueprint and type
 * 对象：类的具体实例<br>Object: instance of a class
 * `Turtle yertle = new Turtle(habitat);`<br>Create a Turtle object
 
@@ -43,29 +43,29 @@ In earlier lessons, we used code like `System.out.println()` without knowing exa
 ## 点运算符<br>Dot Operator
 
 * `objectName.methodName()`：调用对象的方法<br>Call a method on an object
-* `yertle.forward();`：让海龟前进<br>Ask yertle to move forward
-* 方法名后面要有括号<br>Methods need parentheses
+* `yertle.forward();`：让对象执行动作<br>Ask the object to perform an action
+* 方法名后面通常有括号<br>Method names usually have parentheses
 
-## Javadocs 文档<br>Javadocs Documentation
+## 读 API 描述<br>Reading API Descriptions
 
-* 查看类有哪些属性和方法<br>Shows fields and methods
-* 字段 / 属性通常没有括号<br>Fields usually have no parentheses
-* 方法通常有括号<br>Methods usually have parentheses
-* `println()` 是方法<br>`println()` is a method
+* 变量 / 字段通常是属性<br>Variables / fields are usually attributes
+* 方法通常是行为<br>Methods are usually behaviors
+* 有 `()` 的名字通常是方法<br>Names with `()` are usually methods
+* 根据描述判断“数据”还是“动作”<br>Decide whether it is data or an action
 
 ## AP 考点<br>AP Exam Focus
 
 * 区分类、对象、属性、方法<br>Distinguish class, object, attribute, method
 * 根据 API 描述判断属性和行为<br>Read API descriptions
-* 正确使用点运算符<br>Use the dot operator
 * 理解库和 API 的作用<br>Understand why libraries and APIs matter
+* 正确识别方法调用<br>Recognize method calls
 
 ## 常见错误<br>Common Mistakes
 
 * 把类名当成对象名使用<br>Using class name as object name
 * 调用方法时忘记 `()`<br>Forgetting parentheses
-* 把属性误认为方法<br>Confusing fields and methods
-* 不查 API 就乱猜方法名<br>Guessing method names without API
+* 把属性误认为方法<br>Confusing attributes and methods
+* 乱猜 API 中没有的方法名<br>Guessing method names not listed in the API
 
 </script>
 </div>
@@ -73,13 +73,17 @@ In earlier lessons, we used code like `System.out.println()` without knowing exa
 
 # 1. Main Idea<br>核心理解
 
-A **library** is code written by other programmers that we can use.
+A **library** is a collection of classes written by other programmers that we can use.
 
-**库（library）** 是别人已经写好的、我们可以直接使用的代码。
+**库（library）** 是别人已经写好的类的集合，我们可以直接使用。
 
-An **API** tells us how to use that code: what classes exist, what methods are available, what data they need, and what they do.
+An **API** is the public interface of a library or class. It tells programmers what classes, methods, fields, and parameters are available.
 
-**API** 告诉我们怎样使用这些代码：有哪些类、有哪些方法、方法需要什么数据、会做什么事情。
+**API** 是库或类对外提供的公开接口。它告诉程序员可以使用哪些类、方法、字段和参数。
+
+**API documentation** is the written explanation of that API.
+
+**API 文档** 是对这个 API 的文字说明。
 
 For example:
 
@@ -87,33 +91,36 @@ For example:
 System.out.println("Hello");
 ```
 
-You do not need to know how `println()` works internally. You only need to know how to call it and what it does.
+You do not need to know how `println()` works internally. You need to know how to call it and what it does.
 
-你不需要知道 `println()` 内部是怎样实现的。你只需要知道怎样调用它，以及它会做什么。
+你不需要知道 `println()` 内部是怎样实现的。你需要知道怎样调用它，以及它会做什么。
 
-# 2. Library, API, Package, Class, Method<br>库、API、包、类、方法
+# 2. Terms You Must Know<br>必须分清的概念
 
-These terms are easy to mix up, so keep them separate.
+These terms are easy to mix up. For AP CSA 1.7, focus on the simple exam-level meanings.
 
-这些概念很容易混在一起，要分清楚。
+这些概念很容易混在一起。对于 AP CSA 1.7，先掌握考试需要的核心意思。
 
-| Term    | Meaning                                         | 中文理解         |
-| ------- | ----------------------------------------------- | ------------ |
-| Library | A collection of reusable classes                | 可复用代码的集合     |
-| API     | Documentation/specification for using a library | 使用库的说明书      |
-| Package | A group of related classes                      | 相关类的分组       |
-| Class   | A blueprint / reference type                    | 对象的蓝图 / 引用类型 |
-| Method  | A block of code that performs a task            | 执行某个动作的代码块   |
+| Term              | AP CSA Meaning                                    | 中文理解       |
+| ----------------- | ------------------------------------------------- | ---------- |
+| Library           | A collection of classes written by others         | 别人写好的类的集合  |
+| API               | The public interface for using a library or class | 使用库或类的公开接口 |
+| API documentation | The written guide that explains the API           | API 的说明文档  |
+| Package           | A group of related classes                        | 相关类的分组     |
+| Class             | A blueprint / type used to create objects         | 对象的蓝图 / 类型 |
+| Object            | An instance of a class                            | 类创建出来的具体实例 |
+| Method            | A behavior or action an object can perform        | 对象能执行的动作   |
+| Attribute         | Data stored about an object                       | 对象保存的数据    |
 
 A simple way to remember:
 
-简单理解：
-
 ```text
-library = code we can use
-API = instructions for using the code
-package = organized group of related classes
+library = reusable code
+API = public interface for using the code
+API documentation = explanation of the interface
 class = blueprint
+object = actual thing created from the blueprint
+attribute = data
 method = action
 ```
 
@@ -121,7 +128,7 @@ method = action
 
 A **class** defines a kind of object.
 
-**类（class）** 定义一种对象的类型。
+**类（class）** 定义一种对象。
 
 An **object** is a specific instance created from a class.
 
@@ -136,28 +143,28 @@ Turtle yertle = new Turtle(habitat);
 
 Here:
 
-| Code                  | Role                        |
-| --------------------- | --------------------------- |
-| `World`               | class                       |
-| `habitat`             | object variable             |
-| `Turtle`              | class                       |
-| `yertle`              | object variable             |
-| `new Turtle(habitat)` | creates a new Turtle object |
+| Code                  | Role                                      |
+| --------------------- | ----------------------------------------- |
+| `World`               | class                                     |
+| `habitat`             | variable that refers to a `World` object  |
+| `Turtle`              | class                                     |
+| `yertle`              | variable that refers to a `Turtle` object |
+| `new Turtle(habitat)` | creates a new Turtle object               |
 
-`Turtle` is the class. `yertle` is the variable that refers to a specific Turtle object.
+`Turtle` is the class. `yertle` is the variable that refers to one specific Turtle object.
 
 `Turtle` 是类；`yertle` 是变量，指向一个具体的 Turtle 对象。
 
 # 4. Attributes and Behaviors<br>属性与行为
 
-Classes define what objects **have** and what objects **can do**.
+Classes describe what objects **have** and what objects **can do**.
 
-类会定义对象“有什么”和“能做什么”。
+类会描述对象“有什么”和“能做什么”。
 
-| Concept   | Meaning                    | Turtle Example                           |
-| --------- | -------------------------- | ---------------------------------------- |
-| Attribute | Data stored in an object   | `xPos`, `yPos`, `heading`, `color`       |
-| Behavior  | Action defined by a method | `forward()`, `turnLeft()`, `turnRight()` |
+| Concept   | Meaning                     | Turtle Example                           |
+| --------- | --------------------------- | ---------------------------------------- |
+| Attribute | Data stored about an object | `xPos`, `yPos`, `heading`, `color`       |
+| Behavior  | Action defined by a method  | `forward()`, `turnLeft()`, `turnRight()` |
 
 A Turtle object has attributes such as position and direction.
 
@@ -167,11 +174,30 @@ A Turtle object also has behaviors, such as moving forward or turning.
 
 Turtle 对象也有行为，比如前进和转弯。
 
+For AP-style questions, use this test:
+
+AP 题里可以这样判断：
+
+```text
+Is it data?  → attribute
+Is it an action? → method / behavior
+```
+
 # 5. The Dot Operator<br>点运算符
 
-The dot operator `.` lets us access an object’s attributes or call its methods.
+The dot operator `.` is used to access something that belongs to an object or class.
 
-点运算符 `.` 可以让我们访问对象的属性，或者调用对象的方法。
+点运算符 `.` 用来访问属于某个对象或类的内容。
+
+In this lesson, the most important pattern is method calls on objects:
+
+本课最重要的是对象调用方法：
+
+```java
+objectName.methodName();
+```
+
+Example:
 
 ```java
 yertle.forward();
@@ -192,13 +218,7 @@ Ask yertle to turn right.
 让 yertle 向右转。
 ```
 
-The general pattern is:
-
-```java
-objectName.methodName();
-```
-
-If a method needs extra information, the information goes inside the parentheses.
+If a method needs extra information, put that information inside the parentheses.
 
 如果方法需要额外信息，就把信息放进括号里。
 
@@ -206,7 +226,7 @@ If a method needs extra information, the information goes inside the parentheses
 yertle.forward(50);
 ```
 
-This means: call `forward` on `yertle`, and move forward `50` pixels.
+This means: call `forward` on `yertle`, using `50` as the number of pixels.
 
 意思是：调用 `yertle` 的 `forward` 方法，前进 `50` 像素。
 
@@ -232,76 +252,63 @@ Even if there is nothing inside the parentheses, the `()` still matters.
 
 即使括号里没有参数，`()` 也必须写。
 
-A useful clue when reading APIs:
+When reading API descriptions, this clue is useful:
 
-读 API 时可以用这个线索：
+读 API 描述时，这个线索很有用：
 
-| Form                  | Usually Means     |
-| --------------------- | ----------------- |
-| `forward()`           | method            |
-| `xPos`                | attribute / field |
-| `println()`           | method            |
-| `out` in `System.out` | field             |
+| Form          | Usually Means     |
+| ------------- | ----------------- |
+| `forward()`   | method            |
+| `turnRight()` | method            |
+| `println()`   | method            |
+| `xPos`        | attribute / field |
+| `heading`     | attribute / field |
 
-Methods usually have parentheses. Fields or attributes usually do not.
+Methods usually have parentheses. Attributes or fields usually do not.
 
-方法通常有括号；字段或属性通常没有括号。
+方法通常有括号；属性或字段通常没有括号。
 
-# 7. Reading API Documentation<br>阅读 API 文档
+# 7. Reading API Descriptions<br>阅读 API 描述
 
-API documentation tells you what a class provides.
+AP CSA questions may give you a short API description and ask you to identify attributes and behaviors.
 
-API 文档会告诉你一个类提供了什么功能。
+AP CSA 题目可能会给你一段简短的 API 描述，让你判断哪些是属性，哪些是行为。
 
-For a class, documentation usually lists:
-
-一个类的文档通常会列出：
-
-* fields / attributes: data connected to the object
-
-* methods: actions the object can perform
-
-* parameters: information a method needs
-
-* return values: information a method gives back
-
-* 字段 / 属性：对象相关的数据
-
-* 方法：对象能执行的动作
-
-* 参数：方法需要的信息
-
-* 返回值：方法返回的信息
-
-For example, if an API says:
+Example API description:
 
 ```text
-forward()
-Moves the turtle forward by 100 pixels.
+A Turtle class has:
+
+- an int variable called xPos to represent the x-coordinate
+- an int variable called yPos to represent the y-coordinate
+- a method called forward() that moves the turtle forward
+- a method called turnRight() that turns the turtle right
 ```
 
-Then you can call:
+How to read it:
 
-```java
-yertle.forward();
-```
+| API Description             | AP CSA Meaning    |
+| --------------------------- | ----------------- |
+| `int variable called xPos`  | attribute         |
+| `int variable called yPos`  | attribute         |
+| `method called forward()`   | behavior / method |
+| `method called turnRight()` | behavior / method |
 
-If an API says:
+So a correct statement would be:
 
 ```text
-forward(int pixels)
-Moves the turtle forward by the given number of pixels.
+xPos and yPos are attributes of Turtle objects.
 ```
 
-Then you can call:
+Another correct statement would be:
 
-```java
-yertle.forward(50);
+```text
+turnRight() is a behavior of Turtle objects.
 ```
 
-The API is not extra decoration. It is the instruction manual.
+Do not overthink this. For this lesson, AP mainly wants you to separate **data** from **actions**.
 
-API 不是“装饰性说明”，而是使用说明书。
+不要想复杂。本课 AP 主要考你能不能区分“数据”和“动作”。
 
 # 8. Turtle Example<br>Turtle 示例
 
@@ -333,39 +340,43 @@ What happens?
 
 发生了什么？
 
-1. A `World` object is created.
+* A `World` object is created.
 
-2. A `Turtle` object named `yertle` is created inside that world.
+* A `Turtle` object named `yertle` is created inside that world.
 
-3. `yertle` moves forward.
+* `yertle` moves forward.
 
-4. `yertle` turns right.
+* `yertle` turns right.
 
-5. `yertle` moves forward again.
+* `yertle` moves forward again.
 
-6. The world is shown.
+* The world is shown.
 
-7. 创建一个 `World` 对象。
+* 创建一个 `World` 对象。
 
-8. 在这个世界里创建一个叫 `yertle` 的 `Turtle` 对象。
+* 在这个世界里创建一个叫 `yertle` 的 `Turtle` 对象。
 
-9. `yertle` 前进。
+* `yertle` 前进。
 
-10. `yertle` 右转。
+* `yertle` 右转。
 
-11. `yertle` 再次前进。
+* `yertle` 再次前进。
 
-12. 显示这个世界。
+* 显示这个世界。
+
+For AP CSA 1.7, the key is not drawing the shape perfectly. The key is understanding which parts are classes, objects, and method calls.
+
+对于 AP CSA 1.7，重点不是画图画得多漂亮。重点是看懂哪些是类、对象和方法调用。
 
 # 9. Common Beginner Mistakes<br>常见初学者错误
 
-| Mistake                        | Wrong Code                      | Why Wrong                              | Correct Code                           | 中文解释          |
-| ------------------------------ | ------------------------------- | -------------------------------------- | -------------------------------------- | ------------- |
-| Forgetting parentheses         | `yertle.forward;`               | Method calls need `()`                 | `yertle.forward();`                    | 调用方法必须写括号     |
-| Guessing method name           | `yertle.right();`               | The API uses `turnRight()`             | `yertle.turnRight();`                  | 方法名必须和 API 一致 |
-| Using class name as object     | `Turtle.forward();`             | `forward()` belongs to a Turtle object | `yertle.forward();`                    | 要让具体对象执行动作    |
-| Confusing attribute and method | `yertle.xPos();`                | `xPos` is data, not a method           | `yertle.xPos`                          | 属性通常没有括号      |
-| Forgetting setup               | `Turtle yertle = new Turtle();` | This Turtle library needs a world      | `Turtle yertle = new Turtle(habitat);` | 创建对象要符合构造方法要求 |
+| Mistake                        | Wrong Code                 | Why Wrong                              | Correct Code                | 中文解释          |
+| ------------------------------ | -------------------------- | -------------------------------------- | --------------------------- | ------------- |
+| Forgetting parentheses         | `yertle.forward;`          | Method calls need `()`                 | `yertle.forward();`         | 调用方法必须写括号     |
+| Guessing method name           | `yertle.right();`          | The API uses `turnRight()`             | `yertle.turnRight();`       | 方法名必须和 API 一致 |
+| Using class name as object     | `Turtle.forward();`        | `forward()` belongs to a Turtle object | `yertle.forward();`         | 要让具体对象执行动作    |
+| Confusing attribute and method | `xPos()`                   | `xPos` is data, not an action          | identify it as an attribute | 属性是数据，不是动作    |
+| Confusing object and class     | saying `yertle` is a class | `yertle` refers to an object           | `Turtle` is the class       | 类和对象要分清       |
 
 # 10. Debugging Example<br>调试例子
 
@@ -383,18 +394,14 @@ habitat.show(true);
 
 Problems:
 
-问题：
-
 * `yertle.forward;` is missing parentheses.
-
 * `right()` is not the method name provided by the Turtle API.
-
 * The correct method is `turnRight()`.
 
+问题：
+
 * `yertle.forward;` 少了括号。
-
 * `right()` 不是 Turtle API 提供的方法名。
-
 * 正确方法名是 `turnRight()`。
 
 Fixed code:
@@ -409,15 +416,15 @@ yertle.turnRight();
 habitat.show(true);
 ```
 
-| Bug                                      | Type                        | Fix                         |
-| ---------------------------------------- | --------------------------- | --------------------------- |
-| Missing `()` after `forward`             | Syntax / compile-time error | Use `forward()`             |
-| Using `right()` instead of `turnRight()` | Compile-time error          | Check the API method name   |
-| Calling method on wrong object           | Compile-time or logic error | Use the correct object name |
+| Bug                                      | Type                        | Fix                             |
+| ---------------------------------------- | --------------------------- | ------------------------------- |
+| Missing `()` after `forward`             | Syntax / compile-time error | Use `forward()`                 |
+| Using `right()` instead of `turnRight()` | Compile-time error          | Check the API method name       |
+| Calling a method on the wrong name       | Compile-time or logic error | Use the correct object variable |
 
-Most API mistakes are not about hard math. They are about using the correct name, object, and parentheses.
+Most API mistakes are not about hard math. They are about using the correct object name, method name, and parentheses.
 
-大多数 API 错误不是数学难，而是方法名、对象名、括号写错。
+大多数 API 错误不是数学难，而是对象名、方法名、括号写错。
 
 # 11. Mini Practice<br>小练习
 
@@ -436,11 +443,11 @@ Answer:
 B. To use code written by others
 ```
 
-Explanation: libraries provide reusable code, and APIs explain how to use it.
+Explanation: libraries provide reusable code, and APIs provide the public interface for using that code.
 
-解释：库提供可复用代码，API 说明如何使用这些代码。
+解释：库提供可复用代码，API 提供使用这些代码的公开接口。
 
-## Practice 2: Predict the Meaning<br>练习 2：判断含义
+## Practice 2: Identify the Role<br>练习 2：判断角色
 
 In the code below, what does `Turtle` refer to?
 
@@ -458,7 +465,29 @@ Explanation: `Turtle` defines the type. `yertle` is the variable that refers to 
 
 解释：`Turtle` 定义类型；`yertle` 是指向 Turtle 对象的变量。
 
-## Practice 3: Fix the Code<br>练习 3：修复代码
+## Practice 3: Attribute or Method?<br>练习 3：属性还是方法？
+
+Given this API description:
+
+```text
+xPos: an int variable for the turtle's x-coordinate
+forward(): moves the turtle forward
+turnRight(): turns the turtle right
+```
+
+Which items are methods?
+
+Answer:
+
+```text
+forward() and turnRight()
+```
+
+Explanation: they describe actions and have parentheses.
+
+解释：它们描述动作，而且有括号。
+
+## Practice 4: Fix the Code<br>练习 4：修复代码
 
 Fix the method calls.
 
@@ -485,12 +514,12 @@ Before answering an API / library question, check:
 做 API / 库相关题目前，检查：
 
 * Is this asking about a library, API, package, class, object, attribute, or method?
-* Is the class the blueprint or the actual object?
+* Is the item a piece of data or an action?
+* If it is data, is it probably an attribute / field?
+* If it is an action, is it probably a method?
+* Does the method name have parentheses?
+* Does the method name exactly match the API?
 * Which variable refers to the object?
 * Is the dot operator used with the correct object?
-* Does the method name exactly match the API?
-* Did you include parentheses for a method call?
-* Are there parameters inside the parentheses if the method needs them?
-* Is the item an attribute / field or a method?
-* Does the API describe data stored in an object or an action the object can do?
-* Are you using the library to avoid rewriting code from scratch?
+* Is the class the blueprint, or is it the actual object?
+* Are you using the API description instead of guessing?
