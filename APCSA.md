@@ -54,8 +54,13 @@ title: "AP CSA"
 
 ---
 
-## *A message for my AP Computer Science class*  
-## *写给我的 AP 计算机科学班的一封信*
+<details markdown="1">
+<summary>
+<strong><em>A message for my AP Computer Science class</em></strong><br>
+<strong><em>写给我的 AP 计算机科学班的一封信</em></strong>
+</summary>
+
+<br>
 
 I know some of you walk into this class wondering: *What is this class really about? Can I succeed? What happens if I mess up?*  
 我知道有些同学刚开始可能会想：*这门课到底学什么？我能不能学会？要是我搞砸了怎么办？*  
@@ -129,6 +134,8 @@ My job is to give you the tools, feedback, and belief you need to succeed.
 
 Let’s build something great together.    
 — *Mr. Mou*  
+
+</details>
 
 ---
 
