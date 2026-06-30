@@ -1,0 +1,998 @@
+---
+title:  "一个比尔·盖茨到底能答多少个雅思题"
+mathjax: true
+layout: null
+categories: media
+---
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Gates: IELTS Speaking Part 2 Ingredient Sheet</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 40px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0 0 0 280px;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+    
+    /* --- SIDEBAR CSS --- */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background-color: #1E293B;
+        color: #F8FAFC;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding: 30px 20px;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        z-index: 500;
+    }
+    .sidebar h2 {
+        color: #fff;
+        font-size: 1.4rem;
+        border-bottom: 2px solid #334155;
+        padding-bottom: 15px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .sidebar li {
+        margin-bottom: 8px;
+    }
+    .sidebar a {
+        color: #CBD5E1;
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: block;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: background-color 0.2s, color 0.2s;
+        line-height: 1.4;
+    }
+    .sidebar a:hover {
+        background-color: #334155;
+        color: #fff;
+    }
+    .sidebar .sub-menu {
+        padding-left: 15px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .sidebar .sub-menu a {
+        font-size: 0.85rem;
+        color: #94A3B8;
+    }
+    .sidebar .sub-menu a:hover {
+        color: #E2E8F0;
+    }
+
+    /* --- MAIN CONTENT CSS --- */
+    .container {
+        max-width: 1000px;
+        margin: 60px auto 40px;
+        padding: 40px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .translate-btn {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        background-color: #2563EB;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        z-index: 1000;
+        transition: background-color 0.3s;
+    }
+    .translate-btn:hover {
+        background-color: #1D4ED8;
+    }
+    h1, h2, h3 { color: #1E293B; }
+    h1 {
+        text-align: center;
+        border-bottom: 2px solid #E2E8F0;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .container h2 {
+        margin-top: 40px;
+        color: #2563EB;
+        border-bottom: 2px solid #2563EB;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    .container h3 {
+        margin-top: 30px;
+        background: #E0E7FF;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 1.1rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+        background: #fff;
+    }
+    th, td {
+        border: 1px solid #E2E8F0;
+        padding: 15px;
+        text-align: left;
+        line-height: 1.6;
+        vertical-align: top;
+    }
+    th {
+        background-color: #F8FAFC;
+        color: #475569;
+        font-weight: bold;
+    }
+    tr:nth-child(even) { background-color: #F8FAFC; }
+
+    /* --- LANGUAGE TOGGLE LOGIC --- */
+    .text-cn { display: none; }
+    body.show-cn .text-cn { display: inline; }
+    body.show-cn .text-en { display: none; }
+    .phrase {
+        font-weight: bold;
+        color: #047857;
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
+    @media (max-width: 900px) {
+        body { margin-left: 0; }
+        .sidebar {
+            position: static;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-shadow: none;
+        }
+        .sidebar h2 { border-bottom: none; font-size: 1.2rem; margin-bottom: 10px; }
+        .container { margin: 20px; padding: 20px; }
+        .translate-btn {
+            top: auto;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            padding: 10px 16px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- LEFT SIDEBAR TOC -->
+<div class="sidebar">
+    <h2>Table of Contents</h2>
+    <ul>
+        <li>
+            <a href="#section-1"><strong>Section 1: Basic Introduction</strong></a>
+            <ul class="sub-menu">
+                <li><a href="#intro-1">1. Basic Introduction</a></li>
+                <li><a href="#intro-2">2. Early Interest in Computers</a></li>
+                <li><a href="#intro-3">3. Microsoft and Career Breakthrough</a></li>
+                <li><a href="#intro-4">4. Main Achievements</a></li>
+                <li><a href="#intro-5">5. Philanthropy and Global Health</a></li>
+                <li><a href="#intro-6">6. Climate and Clean Energy Work</a></li>
+                <li><a href="#intro-7">7. Media Presence and Creative Work</a></li>
+                <li><a href="#intro-8">8. Values, Work Style, and Public Image</a></li>
+                <li><a href="#intro-9">9. Challenges, Criticism, and Legacy</a></li>
+                <li><a href="#intro-10">10. Sports, Hobbies, and Relaxation</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#section-2"><strong>Section 2: IELTS Part 2 Topics</strong></a>
+            <ul class="sub-menu">
+                <li><a href="#topics-a">A. Strong Fit Topics</a></li>
+                <li><a href="#topics-b">B. Usable Bridge Topics</a></li>
+                <li><a href="#topics-c">C. Emergency / Slightly Forced Angles</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- TRANSLATE BUTTON -->
+<button id="langBtn" class="translate-btn" onclick="toggleLanguage()">文 ⇄ A (Translate to Chinese)</button>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <h1>Bill Gates: IELTS Speaking Part 2 Ingredient Sheet</h1>
+
+    <!-- SECTION 1: BASIC INTRODUCTION -->
+    <h2 id="section-1">Section 1: Basic Introduction</h2>
+
+    <h3 id="intro-1">1. Basic Introduction</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Bill Gates is widely known as the co-founder of Microsoft.</span>
+                <span class="text-cn">比尔·盖茨最广为人知的身份是 Microsoft 的联合创始人。</span>
+            </td>
+            <td><span class="phrase">the co-founder of Microsoft</span></td>
+            <td>Microsoft 的联合创始人</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He started Microsoft with Paul Allen in 1975.</span>
+                <span class="text-cn">1975 年，他和 Paul Allen 一起创办了 Microsoft。</span>
+            </td>
+            <td><span class="phrase">start a company from scratch</span></td>
+            <td>从零开始创办一家公司</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He grew up in Seattle and became interested in computers at a young age.</span>
+                <span class="text-cn">他在西雅图长大，很早就对电脑和编程产生了兴趣。</span>
+            </td>
+            <td><span class="phrase">develop an interest at a young age</span></td>
+            <td>很小的时候就产生兴趣</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He studied at Harvard but left before graduating to focus on Microsoft.</span>
+                <span class="text-cn">他曾在 Harvard 学习，但后来离开学校，把重心放在 Microsoft 上。</span>
+            </td>
+            <td><span class="phrase">make a bold life decision</span></td>
+            <td>做出大胆的人生决定</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Today, he is associated with technology, business, philanthropy, global health, and climate work.</span>
+                <span class="text-cn">今天，人们提到他时，通常会想到科技、商业、慈善、全球健康和气候议题。</span>
+            </td>
+            <td><span class="phrase">more than just a businessman</span></td>
+            <td>不只是一个商人</td>
+        </tr>
+    </table>
+
+    <h3 id="intro-2">2. Early Interest in Computers</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">As a teenager, Gates spent a lot of time learning about computers and coding.</span>
+                <span class="text-cn">十几岁时，盖茨花了大量时间学习电脑和编程。</span>
+            </td>
+            <td><span class="phrase">be passionate about technology</span></td>
+            <td>对科技充满热情</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His early computer experience helped him see the potential of personal computing.</span>
+                <span class="text-cn">早期接触电脑的经历让他看到了个人电脑的巨大潜力。</span>
+            </td>
+            <td><span class="phrase">see the potential of something</span></td>
+            <td>看到某事物的潜力</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He was not just using computers; he was trying to understand how they worked.</span>
+                <span class="text-cn">他不只是使用电脑，而是努力理解电脑背后的运行逻辑。</span>
+            </td>
+            <td><span class="phrase">go beyond the surface</span></td>
+            <td>不只停留在表面</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His story shows how an early interest can grow into a lifelong career.</span>
+                <span class="text-cn">他的故事说明，一个早期兴趣可以慢慢发展成一生的事业。</span>
+            </td>
+            <td><span class="phrase">turn an interest into a career</span></td>
+            <td>把兴趣变成事业</td>
+        </tr>
+        
+    </table>
+
+    <h3 id="intro-3">3. Microsoft and Career Breakthrough</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Microsoft became one of the most important software companies in the world.</span>
+                <span class="text-cn">Microsoft 后来成为世界上最重要的软件公司之一。</span>
+            </td>
+            <td><span class="phrase">become an industry leader</span></td>
+            <td>成为行业领导者</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Gates helped popularize software for personal computers.</span>
+                <span class="text-cn">盖茨帮助推动了个人电脑软件的普及。</span>
+            </td>
+            <td><span class="phrase">change the way people use technology</span></td>
+            <td>改变人们使用科技的方式</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Windows and Microsoft Office became part of everyday work and study for many people.</span>
+                <span class="text-cn">Windows 和 Microsoft Office 后来成为很多人工作和学习中的日常工具。</span>
+            </td>
+            <td><span class="phrase">become part of everyday life</span></td>
+            <td>成为日常生活的一部分</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His success came from timing, technical skill, business sense, and hard work.</span>
+                <span class="text-cn">他的成功来自时代机会、技术能力、商业判断和长期努力。</span>
+            </td>
+            <td><span class="phrase">a combination of talent and timing</span></td>
+            <td>天赋和时机的结合</td>
+        </tr>
+
+    </table>
+
+    <h3 id="intro-4">4. Main Achievements</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He led Microsoft as it grew from a small start-up into a global technology company.</span>
+                <span class="text-cn">他带领 Microsoft 从一个小型创业公司成长为全球科技公司。</span>
+            </td>
+            <td><span class="phrase">grow from a small start-up into a global company</span></td>
+            <td>从小创业公司成长为全球公司</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He became one of the best-known entrepreneurs of the personal computer era.</span>
+                <span class="text-cn">他成为个人电脑时代最知名的企业家之一。</span>
+            </td>
+            <td><span class="phrase">a well-known entrepreneur</span></td>
+            <td>知名企业家</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He helped make computer software more common in homes, schools, and offices.</span>
+                <span class="text-cn">他帮助电脑软件进入家庭、学校和办公室，变得更加普及。</span>
+            </td>
+            <td><span class="phrase">bring technology into everyday life</span></td>
+            <td>把科技带入普通人的生活</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">After stepping back from daily work at Microsoft, he shifted more attention to global problems.</span>
+                <span class="text-cn">离开 Microsoft 的日常管理后，他把更多精力转向全球性问题。</span>
+            </td>
+            <td><span class="phrase">shift his focus to bigger social issues</span></td>
+            <td>把重心转向更大的社会议题</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His career is often used as an example of long-term influence rather than short-term fame.</span>
+                <span class="text-cn">他的职业生涯常被看作长期影响力的例子，而不只是短期走红。</span>
+            </td>
+            <td><span class="phrase">make a lasting impact</span></td>
+            <td>产生持久影响</td>
+        </tr>
+    </table>
+
+    <h3 id="intro-5">5. Philanthropy and Global Health</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Gates is the chair of the Gates Foundation.</span>
+                <span class="text-cn">盖茨目前是 Gates Foundation 的主席。</span>
+            </td>
+            <td><span class="phrase">lead a major charitable foundation</span></td>
+            <td>领导大型慈善基金会</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">The foundation works on issues such as global health, education, poverty, and development.</span>
+                <span class="text-cn">该基金会关注全球健康、教育、贫困和发展等问题。</span>
+            </td>
+            <td><span class="phrase">work on global challenges</span></td>
+            <td>处理全球性挑战</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">The foundation has supported work related to vaccines, infectious diseases, and public health.</span>
+                <span class="text-cn">基金会长期支持疫苗、传染病和公共卫生相关项目。</span>
+            </td>
+            <td><span class="phrase">improve public health</span></td>
+            <td>改善公共健康</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">In 2010, Gates, Melinda French Gates, and Warren Buffett launched the Giving Pledge.</span>
+                <span class="text-cn">2010 年，盖茨、Melinda French Gates 和 Warren Buffett 发起了 Giving Pledge。</span>
+            </td>
+            <td><span class="phrase">encourage wealthy people to give back</span></td>
+            <td>鼓励富人回馈社会</td>
+        </tr>
+
+    </table>
+
+    <h3 id="intro-6">6. Climate and Clean Energy Work</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Gates founded Breakthrough Energy to support clean energy innovation.</span>
+                <span class="text-cn">盖茨创立了 Breakthrough Energy，支持清洁能源创新。</span>
+            </td>
+            <td><span class="phrase">support clean energy innovation</span></td>
+            <td>支持清洁能源创新</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He often talks about climate change as both a technical and social problem.</span>
+                <span class="text-cn">他经常把气候变化看作一个既有技术层面、也有社会层面的问题。</span>
+            </td>
+            <td><span class="phrase">a technical and social challenge</span></td>
+            <td>技术和社会层面的挑战</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He has written and spoken about reducing emissions while helping poorer communities develop.</span>
+                <span class="text-cn">他曾写作和演讲，讨论如何在减少排放的同时帮助贫困地区发展。</span>
+            </td>
+            <td><span class="phrase">balance development and environmental protection</span></td>
+            <td>平衡发展和环保</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="text-en">His climate work is not about simple slogans; it focuses on practical innovation.</span>
+                <span class="text-cn">他的气候工作不只是喊口号，而是强调可落地的技术创新。</span>
+            </td>
+            <td><span class="phrase">focus on practical solutions</span></td>
+            <td>关注实际解决方案</td>
+        </tr>
+    </table>
+
+    <h3 id="intro-7">7. Media Presence and Creative Work</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">
+                    Gates writes on his personal website,
+                    <a href="https://www.gatesnotes.com/" target="_blank" rel="noopener noreferrer">Gates Notes</a>,
+                    about books, technology, health, and climate.
+                </span>
+                <span class="text-cn">
+                    盖茨会在个人网站
+                    <a href="https://www.gatesnotes.com/" target="_blank" rel="noopener noreferrer">Gates Notes</a>
+                    上写关于书籍、科技、健康和气候的内容。
+                </span>
+            </td>
+            <td><span class="phrase">share ideas with the public</span></td>
+            <td>向公众分享想法</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He has appeared in many interviews, speeches, documentaries, and online videos.</span>
+                <span class="text-cn">他出现在很多采访、演讲、纪录片和网络视频中。</span>
+            </td>
+            <td><span class="phrase">stay in the public eye</span></td>
+            <td>持续处在公众视野中</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">The Netflix documentary Inside Bill&#x27;s Brain introduced his thinking style to a wider audience.</span>
+                <span class="text-cn">Netflix 纪录片《Inside Bill&#x27;s Brain》让更多观众了解他的思考方式。</span>
+            </td>
+            <td><span class="phrase">show how someone thinks</span></td>
+            <td>展示一个人的思考方式</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His memoir Source Code: My Beginnings tells the story of his early life and the beginning of Microsoft.</span>
+                <span class="text-cn">他的回忆录《Source Code: My Beginnings》讲述了他的早年经历和 Microsoft 的起步。</span>
+            </td>
+            <td><span class="phrase">tell the story of his beginnings</span></td>
+            <td>讲述自己的起点</td>
+        </tr>
+
+    </table>
+
+    <h3 id="intro-8">8. Values, Work Style, and Public Image</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Gates is often described as analytical, competitive, and extremely focused.</span>
+                <span class="text-cn">盖茨常被描述为善于分析、有竞争意识、并且非常专注的人。</span>
+            </td>
+            <td><span class="phrase">come across as highly focused</span></td>
+            <td>给人非常专注的印象</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He is also widely known as a serious reader.</span>
+                <span class="text-cn">他也因为热爱阅读而广为人知。</span>
+            </td>
+            <td><span class="phrase">a serious lifelong learner</span></td>
+            <td>认真、持续学习的人</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His public image combines business success with problem-solving and philanthropy.</span>
+                <span class="text-cn">他的公众形象结合了商业成功、解决问题的能力和慈善事业。</span>
+            </td>
+            <td><span class="phrase">combine success with responsibility</span></td>
+            <td>把成功和责任结合起来</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He often presents problems through data, charts, and clear explanations.</span>
+                <span class="text-cn">他常常用数据、图表和清楚的解释来表达问题。</span>
+            </td>
+            <td><span class="phrase">explain complicated ideas clearly</span></td>
+            <td>把复杂想法讲清楚</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">For students, he is a good example of planning, discipline, and long-term thinking.</span>
+                <span class="text-cn">对学生来说，他是计划、自律和长期思维的好例子。</span>
+            </td>
+            <td><span class="phrase">think in the long term</span></td>
+            <td>从长期角度思考</td>
+        </tr>
+    </table>
+
+    <h3 id="intro-9">9. Challenges, Criticism, and Legacy</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">His Microsoft years were also connected with strong competition and antitrust criticism.</span>
+                <span class="text-cn">他的 Microsoft 时期也伴随着激烈竞争和反垄断方面的批评。</span>
+            </td>
+            <td><span class="phrase">face public criticism</span></td>
+            <td>面对公众批评</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Some people admire his philanthropy, while others question the power of very wealthy donors.</span>
+                <span class="text-cn">有些人欣赏他的慈善事业，也有人质疑超级富豪在公共议题中的影响力。</span>
+            </td>
+            <td><span class="phrase">a complicated public image</span></td>
+            <td>复杂的公众形象</td>
+        </tr>
+       
+    </table>
+    
+    <h3 id="intro-10">10. Sports, Hobbies, and Relaxation</h3>
+    <table>
+        <tr>
+            <th>Useful facts / 基本信息</th>
+            <th>IELTS-friendly phrases / 可借用英文表达</th>
+            <th>Chinese Meaning / 中文意思</th>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">Bill Gates is not a professional athlete, but he has played sports as a hobby for many years.</span>
+                <span class="text-cn">比尔·盖茨不是职业运动员，但他多年来一直把运动作为一种个人爱好。</span>
+            </td>
+            <td><span class="phrase">play sports as a hobby</span></td>
+            <td>把运动作为爱好</td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="text-en">
+                    He is especially known for playing
+                    <a href="https://www.gatesnotes.com/meet_bill/Meet-bill-home-topic/reader/pickleball" target="_blank" rel="noopener noreferrer">pickleball</a>,
+                    a racquet sport that mixes elements of tennis, badminton, and ping-pong.
+                </span>
+                <span class="text-cn">
+                    他尤其喜欢打
+                    <a href="https://www.gatesnotes.com/meet_bill/Meet-bill-home-topic/reader/pickleball" target="_blank" rel="noopener noreferrer">pickleball（匹克球）</a>，
+                    这是一种结合了网球、羽毛球和乒乓球特点的球拍类运动。
+                </span>
+            </td>
+            <td><span class="phrase">a mix of tennis, badminton, and ping-pong</span></td>
+            <td>网球、羽毛球和乒乓球的结合</td>
+        </tr>
+        
+        <tr>
+            <td>
+                <span class="text-en">On Gates Notes, he wrote that he had been a “Pickler” for more than 50 years.</span>
+                <span class="text-cn">他曾在 Gates Notes 上写到，自己已经打 pickleball 五十多年了。</span>
+            </td>
+            <td><span class="phrase">stick with a hobby for decades</span></td>
+            <td>坚持一个爱好几十年</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">He is also a lifelong tennis player and has played charity tennis matches with Roger Federer.</span>
+                <span class="text-cn">他也是一名长期打网球的人，并曾和 Roger Federer 一起参加慈善网球比赛。</span>
+            </td>
+            <td><span class="phrase">take part in a charity match</span></td>
+            <td>参加慈善比赛</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-en">This sports angle shows a more human side of him: he is not only a serious businessman, but also someone who relaxes through games and sports.</span>
+                <span class="text-cn">这个运动角度能展示他更生活化的一面：他不只是严肃的商人，也会通过游戏和运动来放松。</span>
+            </td>
+            <td><span class="phrase">show a more human side of someone</span></td>
+            <td>展现某人更生活化、更真实的一面</td>
+        </tr>
+    </table>
+
+    <!-- SECTION 2: IELTS TOPICS -->
+    <h2 id="section-2">Section 2: IELTS Part 2 Topics</h2>
+
+    <h3 id="topics-a">A. Strong Fit Topics</h3>
+    <table>
+        <tr>
+            <th>Chinese Topic Name</th>
+            <th>English Topic Name</th>
+            <th>How to Use / 如何使用</th>
+        </tr>
+        <tr>
+            <td>遇到困难终成功的人</td>
+            <td>Describe a person who met difficulties but succeeded</td>
+            <td>
+                <span class="text-en">Use Bill Gates as a person who took a huge risk by leaving Harvard and building Microsoft in a young, uncertain software industry. Focus on risk, pressure, early challenges, and long-term success.</span>
+                <span class="text-cn">可以讲比尔·盖茨离开 Harvard，在软件行业还不成熟的时候创办 Microsoft。重点讲风险、压力、早期困难，以及他最后如何把公司做大。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>成功的生意人</td>
+            <td>Describe a person you know who has a successful business</td>
+            <td>
+                <span class="text-en">This is one of the easiest topics. Explain who he is, how Microsoft started, what the company does, and why its software became so successful worldwide.</span>
+                <span class="text-cn">这是最容易套用的话题之一。讲他是谁、Microsoft 如何起步、公司做什么，以及为什么它的软件能在全球取得成功。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>在成功公司工作的人</td>
+            <td>Describe a person who works in a successful company</td>
+            <td>
+                <span class="text-en">Talk about Gates as someone who worked at Microsoft and helped lead it. The key is not just his title, but how his decisions shaped a successful company.</span>
+                <span class="text-cn">可以把他作为曾在 Microsoft 工作并领导公司发展的人来讲。重点不是职位本身，而是他的决策如何影响了一家成功公司。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>长久目标</td>
+            <td>Describe a long-term goal you would like to achieve</td>
+            <td>
+                <span class="text-en">Use him as inspiration. Say your long-term goal is to build something useful, learn technology deeply, or use your future success to help others, just as Gates did in business and philanthropy.</span>
+                <span class="text-cn">可以把他作为灵感来源。你的长期目标可以是做出有用的东西、深入学习科技，或将来像盖茨一样把成功用于帮助他人。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>长远志向</td>
+            <td>Describe an ambition that you have had for a long time</td>
+            <td>
+                <span class="text-en">Connect the topic to Gates' ambition to make software useful for ordinary people. Then shift to your own ambition: coding, education, business, or solving a social problem.</span>
+                <span class="text-cn">可以先讲盖茨当年希望让软件服务普通人的志向，再转到你自己的志向，比如编程、教育、创业或解决社会问题。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>遇到的科技问题</td>
+            <td>Describe a challenging technological problem you faced</td>
+            <td>
+                <span class="text-en">Use Gates as the background example: early Microsoft had to solve difficult programming and software problems. Then describe your own smaller version, such as fixing a computer, coding bug, or software issue.</span>
+                <span class="text-cn">用盖茨作为背景例子：早期 Microsoft 需要解决复杂的编程和软件问题。然后讲你自己的小版本，比如修电脑、解决代码 bug 或软件问题。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>重要决定</td>
+            <td>Describe an important decision that you made</td>
+            <td>
+                <span class="text-en">Describe Gates' decision to leave Harvard and start Microsoft as a model, then talk about a decision you made after learning from him, such as choosing CS, learning coding, or joining a competition.</span>
+                <span class="text-cn">可以把盖茨离开 Harvard 创办 Microsoft 的决定作为参照，然后讲你受启发后做出的决定，比如学习计算机、学编程或参加比赛。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>在团队中工作</td>
+            <td>Describe a time when you worked in a group</td>
+            <td>
+                <span class="text-en">Use Microsoft's early story as a lead-in: Gates did not build everything alone. Then describe a school project where teamwork, leadership, and clear roles mattered.</span>
+                <span class="text-cn">可以用 Microsoft 早期故事引入：盖茨并不是一个人完成所有事情。然后讲你自己的小组项目，突出分工、领导力和合作。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>想见的名人</td>
+            <td>Describe a famous person you would like to meet</td>
+            <td>
+                <span class="text-en">This is very natural. Say you would like to meet Gates to ask about technology, reading habits, business decisions, and how to use success to solve real-world problems.</span>
+                <span class="text-cn">这个题非常自然。可以说你想见盖茨，问他科技、阅读习惯、商业决策，以及如何用成功解决现实问题。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>乐于助人的人</td>
+            <td>Describe a person who often helps others</td>
+            <td>
+                <span class="text-en">Use his philanthropy. Focus on the Gates Foundation's work in global health, vaccines, education, and poverty, instead of simply saying he is rich.</span>
+                <span class="text-cn">用他的慈善事业来讲。重点放在 Gates Foundation 对全球健康、疫苗、教育和减贫的支持上，而不是简单说他有钱。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>机智解决问题的人</td>
+            <td>Describe a person who solved a problem in a smart way</td>
+            <td>
+                <span class="text-en">Talk about how Gates saw software as the key to making computers useful. This is a smart solution because he focused on the system behind the machine, not just the hardware.</span>
+                <span class="text-cn">可以讲盖茨意识到软件才是让电脑真正有用的关键。这是一个聪明的解决思路，因为他关注的是机器背后的系统，而不只是硬件。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>常做计划的人</td>
+            <td>Describe a person who makes plans a lot</td>
+            <td>
+                <span class="text-en">Use his image as a strategic thinker. Talk about how he planned business moves at Microsoft and later made long-term plans for philanthropy and climate work.</span>
+                <span class="text-cn">可以把他塑造成善于长期规划的人。讲他在 Microsoft 的商业规划，以及后来在慈善和气候领域的长期安排。</span>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="topics-b">B. Usable Bridge Topics</h3>
+    <table>
+        <tr>
+            <th>Chinese Topic Name</th>
+            <th>English Topic Name</th>
+            <th>How to Use / 如何使用</th>
+        </tr>
+        <tr>
+            <td>想要颁布的环保法律</td>
+            <td>Describe an environmental law you would like your country to introduce</td>
+            <td>
+                <span class="text-en">Do not make Gates the main answer. Use him as a reason: after learning about his clean energy work, you want a law that supports clean technology, lower emissions, and practical innovation.</span>
+                <span class="text-cn">不要把盖茨当成答案主体，而是当成原因：了解他的清洁能源工作后，你希望国家出台支持清洁技术、减排和实际创新的环保法律。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>保护环境的法律</td>
+            <td>Describe a law on environmental protection</td>
+            <td>
+                <span class="text-en">Talk about a clean energy or carbon-reduction law, then mention Gates and Breakthrough Energy as an example of why technology and law should work together.</span>
+                <span class="text-cn">可以讲清洁能源或减碳相关法律，再提到盖茨和 Breakthrough Energy，说明科技和法律应该结合起来。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>想颁布的新法律</td>
+            <td>Describe a new law you would like to introduce in your country</td>
+            <td>
+                <span class="text-en">A good bridge is a law about AI education, data privacy, or clean energy. Gates can be used as a technology figure who reminds us that innovation needs rules.</span>
+                <span class="text-cn">可以桥接到 AI 教育、数据隐私或清洁能源法律。盖茨可以作为科技人物，说明创新也需要规则。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>名人出演的广告</td>
+            <td>Describe an advertisement with a famous person in it</td>
+            <td>
+                <span class="text-en">Use a public-service campaign, Microsoft-related video, or charity message featuring Gates. Focus on credibility: people trust the message more because he is linked to technology and philanthropy.</span>
+                <span class="text-cn">可以讲盖茨出现在公益宣传、Microsoft 相关视频或慈善宣传中。重点讲可信度：因为他和科技、慈善联系紧密，所以观众更容易相信这个信息。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>最近看过的电视/网络节目</td>
+            <td>Describe a TV show/online program you have watched recently</td>
+            <td>
+                <span class="text-en">Use a documentary, interview, or online program about Gates. Explain what it was about: his brain, reading, Microsoft, global health, or climate change.</span>
+                <span class="text-cn">可以讲关于盖茨的纪录片、采访或网络节目。说明它讲了什么：他的思考方式、阅读、Microsoft、全球健康或气候变化。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>有趣视频</td>
+            <td>Describe an interesting video</td>
+            <td>
+                <span class="text-en">Choose a TED talk, interview, or short video where Gates explains a big problem in a simple way. The speaking focus is the video, not his whole life story.</span>
+                <span class="text-cn">选择盖茨的 TED 演讲、采访或短视频，讲他如何把一个大问题解释得很简单。口语重点是视频本身，不是他的完整人生。</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>有趣视频</td>
+            <td>Describe an interesting video</td>
+            <td>
+                <span class="text-en">Choose a video where Gates talks about pickleball, tennis, technology, or philanthropy. The pickleball angle is especially student-friendly because it shows that even a world-famous businessman has simple hobbies and ways to relax.</span>
+                <span class="text-cn">可以选择一个盖茨谈 pickleball、网球、科技或慈善的视频。pickleball 这个角度尤其适合学生，因为它能说明即使是世界知名企业家，也有简单的爱好和放松方式。</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>喜欢的现场体育赛事</td>
+            <td>Describe a live sports event you watched and liked</td>
+            <td>
+                <span class="text-en">Use this carefully. Bill Gates is not a professional athlete, so do not describe him as a sports star. A natural angle is to talk about watching a charity tennis match where he played with Roger Federer, or watching a video about his long-time love of pickleball. Focus on the relaxed, human side of a famous business leader.</span>
+                <span class="text-cn">这个题可以用，但要小心。比尔·盖茨不是职业运动员，所以不要把他说成体育明星。比较自然的角度是：你看过他和 Roger Federer 一起参加的慈善网球赛，或者看过一个关于他长期喜欢 pickleball 的视频。重点不是比赛有多专业，而是通过运动看到一个商业名人更生活化的一面。</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>改变重要想法</td>
+            <td>Describe a time when you changed an important opinion of yours</td>
+            <td>
+                <span class="text-en">Say you used to think rich people only cared about business, but learning about Gates' philanthropy changed your view of wealth, responsibility, and public influence.</span>
+                <span class="text-cn">可以说你以前觉得富人只关心商业，但了解盖茨的慈善事业后，你改变了对财富、责任和公共影响力的看法。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>近期改变</td>
+            <td>Describe a change that you made recently</td>
+            <td>
+                <span class="text-en">Make this personal: after watching a Gates interview, you changed your reading habit, started learning coding, or began using technology more productively.</span>
+                <span class="text-cn">把题目转到自己身上：看了盖茨的采访后，你改变了阅读习惯、开始学编程，或更高效地使用科技。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>鼓励你保护自然的人</td>
+            <td>Describe a person who encouraged you to protect the nature</td>
+            <td>
+                <span class="text-en">Use Gates carefully as someone who encouraged you to think about climate solutions. Focus on clean energy, innovation, and protecting people as well as nature.</span>
+                <span class="text-cn">可以谨慎地把盖茨讲成鼓励你思考气候解决方案的人。重点放在清洁能源、创新，以及保护自然和人类生活。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>给别人建议</td>
+            <td>Describe a time when you gave advice to others</td>
+            <td>
+                <span class="text-en">Say you advised a friend to learn basic coding, read more, or use technology wisely, and your advice was partly inspired by Gates' life story.</span>
+                <span class="text-cn">可以说你建议朋友学习基础编程、多阅读或理性使用科技，而这个建议部分受到盖茨人生故事的启发。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>发挥想象力</td>
+            <td>Describe a time you needed to use your imagination</td>
+            <td>
+                <span class="text-en">Describe creating a poster, speech, or class presentation about Gates. You had to imagine how to explain computers, charity, and climate in a simple visual way.</span>
+                <span class="text-cn">可以讲你做关于盖茨的海报、演讲或课堂展示，需要想象如何把电脑、慈善和气候议题用简单的视觉方式讲清楚。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>完美工作</td>
+            <td>Describe your perfect job</td>
+            <td>
+                <span class="text-en">Bridge from Gates to yourself. Your perfect job could combine technology and social impact, such as working for an educational technology company or a foundation.</span>
+                <span class="text-cn">从盖茨过渡到你自己。你的完美工作可以是把科技和社会价值结合起来，比如教育科技公司或基金会的工作。</span>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="topics-c">C. Emergency / Slightly Forced Angles</h3>
+    <table>
+        <tr>
+            <th>Chinese Topic Name</th>
+            <th>English Topic Name</th>
+            <th>How to Use / 如何使用</th>
+        </tr>
+        <tr>
+            <td>最近读过的故事</td>
+            <td>Describe a story (e.g. a fairy tale, etc.) you have read recently</td>
+            <td>
+                <span class="text-en">Use his memoir Source Code as a real-life story. This works only if you frame it as a personal story about childhood, curiosity, and the beginning of Microsoft.</span>
+                <span class="text-cn">可以用他的回忆录《Source Code》当作真实人生故事来讲。这个角度只有在你把它说成关于童年、好奇心和 Microsoft 起点的故事时才自然。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>App/程序</td>
+            <td>Describe a program or app on your computer or phone</td>
+            <td>
+                <span class="text-en">Use Microsoft Word, Excel, PowerPoint, or another Microsoft product. Gates is only the background connection, so keep most of the answer about how the program helps you study or work.</span>
+                <span class="text-cn">可以讲 Microsoft Word、Excel、PowerPoint 或其他 Microsoft 产品。盖茨只是背景连接，主体还是这个程序如何帮助你学习或工作。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>想拥有的科技产品</td>
+            <td>Describe a piece of technology (not a phone) that you would like to own</td>
+            <td>
+                <span class="text-en">Mention a laptop, AI tool, or Microsoft-related device. Make the answer natural by saying Gates made you interested in how technology can improve learning and productivity.</span>
+                <span class="text-cn">可以讲电脑、AI 工具或和 Microsoft 间接相关的设备。为了自然，要说盖茨让你对科技如何提升学习和效率产生兴趣。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>使用电子设备碰到的问题</td>
+            <td>Describe a time when you had a problem with using an electronic device</td>
+            <td>
+                <span class="text-en">This is not really about Gates. Use Windows or Microsoft software only as the device background, then focus on your own problem and solution.</span>
+                <span class="text-cn">这个题其实不是讲盖茨。可以把 Windows 或 Microsoft 软件作为背景，但主体必须是你自己遇到的设备问题和解决过程。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>想从事的短期海外工作</td>
+            <td>Describe a short-term job you want to have in a foreign country</td>
+            <td>
+                <span class="text-en">Say you would like to do a short internship or volunteer project at an international foundation or tech-for-good organization inspired by Gates. Do not claim you actually have access to the Gates Foundation.</span>
+                <span class="text-cn">可以说你想在国外的国际基金会或“科技向善”组织做短期实习/志愿项目，灵感来自盖茨。不要说自己真的能进入 Gates Foundation。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>推荐旅行过的地方</td>
+            <td>Describe a place you have travelled to that you would like to recommend to others</td>
+            <td>
+                <span class="text-en">Use Seattle only if you can talk about the city itself: technology culture, museums, lakes, and the Microsoft connection. Do not turn the whole answer into a biography of Gates.</span>
+                <span class="text-cn">只有在你能讲西雅图本身时才用：科技文化、博物馆、湖泊，以及和 Microsoft 的联系。不要把整个答案变成盖茨传记。</span>
+            </td>
+        </tr>
+        <tr>
+            <td>去过的喜欢的城市</td>
+            <td>Describe your favorite city that you have visited</td>
+            <td>
+                <span class="text-en">Seattle can work as an emergency angle because it is connected with Gates and Microsoft. Still, the city must remain the main topic.</span>
+                <span class="text-cn">西雅图可以作为备用角度，因为它和盖茨、Microsoft 有联系。但题目主体必须仍然是城市。</span>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<!-- JavaScript to Handle the English/Chinese Toggle -->
+<script>
+    function toggleLanguage() {
+        const body = document.body;
+        const btn = document.getElementById('langBtn');
+        
+        if (body.classList.contains('show-cn')) {
+            body.classList.remove('show-cn');
+            btn.innerText = '文 ⇄ A (Translate to Chinese)';
+        } else {
+            body.classList.add('show-cn');
+            btn.innerText = 'A ⇄ 文 (Translate to English)';
+        }
+    }
+</script>
+<!-- Research sources checked: Gates Foundation official leadership page, Gates Notes pages about Microsoft and Source Code, the official Giving Pledge page, Penguin Random House Source Code page, Axios on Gates stepping down from Microsoft board, and U.S. DOJ Microsoft findings. :contentReference[oaicite:0]{index=0} -->
+
+</body>
+</html>
+
