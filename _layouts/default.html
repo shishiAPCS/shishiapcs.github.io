@@ -80,10 +80,97 @@
 
   <!-- SimpleJekyllSearch configuration -->
   <script>
+    function escapeSearchHtml(text) {
+      return String(text).replace(/[&<>"']/g, function (character) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[character]
+      })
+    }
+
+    function compactSearchText(text) {
+      return String(text || '').replace(/\s+/g, ' ').trim()
+    }
+
+    function findSearchMatch(text, query) {
+      var normalizedText = compactSearchText(text)
+      var normalizedQuery = compactSearchText(query).toLowerCase()
+
+      if (!normalizedText || !normalizedQuery) {
+        return null
+      }
+
+      var lowerText = normalizedText.toLowerCase()
+      var phraseIndex = lowerText.indexOf(normalizedQuery)
+
+      if (phraseIndex !== -1) {
+        return {
+          text: normalizedText,
+          index: phraseIndex,
+          length: normalizedQuery.length
+        }
+      }
+
+      var words = normalizedQuery.split(' ')
+
+      for (var i = 0; i < words.length; i++) {
+        var word = words[i]
+        var wordIndex = lowerText.indexOf(word)
+
+        if (word && wordIndex !== -1) {
+          return {
+            text: normalizedText,
+            index: wordIndex,
+            length: word.length
+          }
+        }
+      }
+
+      return null
+    }
+
+    function buildSearchSnippet(content, query) {
+      var match = findSearchMatch(content, query)
+
+      if (!match) {
+        return ''
+      }
+
+      var start = Math.max(0, match.index - 50)
+      var end = Math.min(match.text.length, match.index + match.length + 70)
+      var snippet = match.text.slice(start, end)
+
+      if (start > 0) {
+        snippet = '...' + snippet
+      }
+
+      if (end < match.text.length) {
+        snippet += '...'
+      }
+
+      return '<br><small class="search-snippet">' + escapeSearchHtml(snippet) + '</small>'
+    }
+
+    var currentSearchQuery = ''
     var sjs = SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
-      json: '/search.json'
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}">{title}</a>{query}{content}</li>',
+      templateMiddleware: function (prop, value, template) {
+        if (prop === 'query') {
+          currentSearchQuery = value
+          return ''
+        }
+
+        if (prop === 'content') {
+          return buildSearchSnippet(value, currentSearchQuery)
+        }
+      }
     })
   </script>
   <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.14.4"></script>
