@@ -30,6 +30,15 @@
     <script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload="renderMathInElement(document.body)"></script>
   {% endif %}
 
+  <style>
+    #results-container mark.search-highlight {
+      background: #ffe066;
+      color: #212228;
+      border-radius: 2px;
+      padding: 0 .12em;
+    }
+  </style>
+
   {% if site.comments.disqus_shortname and page.layout == "post" %}
     <script src="//{{ site.comments.disqus_shortname }}.disqus.com/embed.js" async></script>
   {% endif %}
@@ -96,6 +105,58 @@
       return String(text || '').replace(/\s+/g, ' ').trim()
     }
 
+    function escapeSearchRegExp(text) {
+      return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    }
+
+    function getSearchHighlightTerms(text, query) {
+      var normalizedQuery = compactSearchText(query)
+
+      if (!text || !normalizedQuery) {
+        return []
+      }
+
+      if (String(text).toLowerCase().indexOf(normalizedQuery.toLowerCase()) !== -1) {
+        return [normalizedQuery]
+      }
+
+      var seen = {}
+      return normalizedQuery.split(' ').filter(function (word) {
+        var key = word.toLowerCase()
+
+        if (!key || seen[key]) {
+          return false
+        }
+
+        seen[key] = true
+        return true
+      }).sort(function (a, b) {
+        return b.length - a.length
+      })
+    }
+
+    function highlightSearchText(text, query) {
+      var value = String(text || '')
+      var terms = getSearchHighlightTerms(value, query)
+
+      if (!terms.length) {
+        return escapeSearchHtml(value)
+      }
+
+      var matcher = new RegExp(terms.map(escapeSearchRegExp).join('|'), 'gi')
+      var highlighted = ''
+      var lastIndex = 0
+
+      value.replace(matcher, function (match, offset) {
+        highlighted += escapeSearchHtml(value.slice(lastIndex, offset))
+        highlighted += '<mark class="search-highlight">' + escapeSearchHtml(match) + '</mark>'
+        lastIndex = offset + match.length
+        return match
+      })
+
+      return highlighted + escapeSearchHtml(value.slice(lastIndex))
+    }
+
     function findSearchMatch(text, query) {
       var normalizedText = compactSearchText(text)
       var normalizedQuery = compactSearchText(query).toLowerCase()
@@ -152,7 +213,7 @@
         snippet += '...'
       }
 
-      return '<br><small class="search-snippet">' + escapeSearchHtml(snippet) + '</small>'
+      return '<br><small class="search-snippet">' + highlightSearchText(snippet, query) + '</small>'
     }
 
     var currentSearchQuery = ''
@@ -160,11 +221,15 @@
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '/search.json',
-      searchResultTemplate: '<li><a href="{url}">{title}</a>{query}{content}</li>',
+      searchResultTemplate: '<li>{query}<a href="{url}">{title}</a>{content}</li>',
       templateMiddleware: function (prop, value, template) {
         if (prop === 'query') {
           currentSearchQuery = value
           return ''
+        }
+
+        if (prop === 'title') {
+          return highlightSearchText(value, currentSearchQuery)
         }
 
         if (prop === 'content') {
