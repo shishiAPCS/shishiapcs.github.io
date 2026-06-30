@@ -31,11 +31,24 @@
   {% endif %}
 
   <style>
+    #results-container {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0 1.5em;
+    }
+
     #results-container mark.search-highlight {
       background: #ffe066;
       color: #212228;
       border-radius: 2px;
       padding: 0 .12em;
+    }
+
+    @media (min-width: 40em) {
+      #results-container {
+        padding-left: calc(40% - 17em);
+        padding-right: calc(40% - 17em);
+      }
     }
   </style>
 
