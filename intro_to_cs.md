@@ -2,8 +2,13 @@
 title: "Intro to CS"
 ---
 
-## 🖥️ A Message for My Introduction to Computer Science Class  
-## *写给我的计算机科学基础班的一封信*
+<details markdown="1">
+<summary>
+<strong><em>A message for my Introduction to Computer Science class 🖥️ </em></strong><br>
+<strong><em>写给我的 计算机科学基础班 的一封信</em></strong>
+</summary>
+
+<br>
 
 Some of you might be asking: *What is this class really about? Can I learn to code? Will I be any good at it?*  
 有些同学可能会想：*这门课到底学什么？我能学会写代码吗？我会不会是那种学不会的？*  
@@ -92,6 +97,8 @@ Let’s explore, debug, and create together.
 让我们一起探索、一起调试、一起创造吧！  
 
 — *Mr. Mou*  
+
+</details>
 
 ---
 
