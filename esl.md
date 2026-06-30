@@ -5,8 +5,13 @@ layout: post
 categories: media
 ---
 
-## *A message for my ESL Speaking class*  
-## *写给我的 ESL 口语班的一封信*
+<details markdown="1">
+<summary>
+<strong><em>A message for my ESL Speaking class</em></strong><br>
+<strong><em>写给我的 ESL 口语班的一封信</em></strong>
+</summary>
+
+<br>
 
 Some of you may feel nervous when you think about speaking English.  
 有些同学一想到开口讲英文，心里可能就有点发慌。  
@@ -96,6 +101,8 @@ I’m building this classroom to be a safe, supportive, and immersive English en
 Let’s keep practicing, growing, and having fun together.  
 一起练，一起成长，也一起享受说英语的快乐吧！  
 — *Mr. Mou*  
+
+</details>
 
 ---
 
