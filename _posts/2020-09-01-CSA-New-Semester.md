@@ -34,6 +34,10 @@ Create Course:     Make course after registering (instructors only) [**不要**�
 
 * [blueJ](https://www.bluej.org/)
 
+## Live Labs
+
+* [learnix.academy](https://learnix.academy/)
+
 ## 在线错题本 Yuque / 语雀
 
 访问 [yuque.com](https://www.yuque.com/)
