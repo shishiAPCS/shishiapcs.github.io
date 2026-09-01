@@ -687,3 +687,27 @@ Before answering a class-method question, check:
 * If a method call is inside an expression, what value does it produce?
 * If `Math.sqrt` or `Math.pow` is used, are you expecting a `double` result?
 
+
+# Unit 1.10 Vocabulary
+## Calling Class Methods
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **static method / class method** / 静态方法、类方法 | A method associated with the class rather than with an individual object. It includes `static` in its header. **Example:** `public static int square(int number)` |
+| V02 | **static** / `static` 关键字、静态 | The keyword that marks a method as a class method. It appears before the return type. **Example:** `public static double divide(double x, double y)` |
+| V03 | **static method header** / 静态方法头 | The first line of a static method: access modifier + `static` + return type + method name + parameters. **Example:** `public static int square(int number)` |
+| V04 | **void method** / `void` 方法、无返回值方法 | A method that does not return a value, so its call is not used as part of an expression. **Example:** `public static void printMessage()` |
+| V05 | **non-void method** / 非 `void` 方法、有返回值方法 | A method that calculates and returns a value of a specific type. **Example:** `square(5)` returns `25`. |
+| V06 | **return type** / 返回类型 | The data type of the value a method returns. It appears before the method name in the header. **Example:** `int` in `public static int square(int number)` |
+| V07 | **return value** / 返回值 | The value sent back to the calling code by a non-void method. **Example:** `square(5)` returns the value `25`. |
+| V08 | **return statement** / `return` 语句 | Sends a value back to the calling code and immediately ends the method execution. **Example:** `return number * number;` |
+| V09 | **using a return value** / 使用返回值 | A returned value should be stored in a variable or used as part of an expression. **Example:** `int y = square(5);` or `System.out.println(square(4));` |
+| V10 | **return-type compatibility** / 返回类型匹配 | The returned value must be compatible with the return type declared in the method header. **Example:** a method declared `double` should return a `double`-compatible value. |
+| V11 | **argument compatibility** / 实参与形参匹配 | Arguments in a method call must match what the method expects in **number, order, and compatible types**. **Example:** `divide(double x, double y)` needs two numeric arguments in the correct order. |
+| V12 | **type mismatch** / 类型不匹配 | An error caused when a value is used with an incompatible data type. **Example:** a `double` return value cannot be stored directly in an `int` variable. |
+| V13 | **method outside the class** / 调用其他类中的方法 | When calling a class method defined in another class, include the class name before the method name. **Example:** `MathFunctions.square(3)` |
+| V14 | **dot operator** / 点运算符 | The dot `.` connects a class name to the class method being called. **Example:** `Math.sqrt(9)` |
+| V15 | **class method call** / 类方法调用、静态方法调用 | Class methods are typically called with `ClassName.methodName(arguments)`. Inside the defining class, the class name is optional. **Example:** `Math.pow(3, 2)` |
+| V16 | **Math.sqrt()** / `Math.sqrt()`、平方根方法 | A `Math` class method that returns the square root of a number. **Example:** `Math.sqrt(9)` returns `3.0`. |
+| V17 | **Math.pow()** / `Math.pow()`、幂运算方法 | A `Math` class method that raises a base to an exponent. **Example:** `Math.pow(3, 2)` returns `9.0`. |
+
