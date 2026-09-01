@@ -618,3 +618,26 @@ Before answering a method-signature question, check:
 * Are you accidentally including the return type in the signature?
 * If methods are overloaded, which signature matches the call?
 * If a parameter changes inside a method, does the outside variable actually change?
+
+
+# Unit 1.9 Vocabulary
+## Method Signatures
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **method** / 方法 | A named block of code that performs a task when it is called. **Example:** `chorus();` runs the code inside `chorus`. |
+| V02 | **procedural abstraction** / 过程抽象 | Using a method by knowing what it does without needing to know how it works. **Example:** call `println()` without knowing its implementation. |
+| V03 | **method call** / 方法调用 | Runs a method by using its name and parentheses; arguments go inside if needed. **Example:** `verse("cow", "moo");` |
+| V04 | **flow of control** / 控制流 | The order in which statements execute. A method call jumps into the method, then returns to the next statement after the call. **Example:** `intro();` → run `intro` → continue after `intro();` |
+| V05 | **main method** / main 方法（主方法） | Where execution begins in a Java program. **Example:** `public static void main(String[] args)` |
+| V06 | **tracing** / 代码跟踪、代码追踪 | Following the code step by step to determine what it does or prints. **Example:** trace calls from `main()` into `print()`, `eat()`, and `fruit()`. |
+| V07 | **method header** / 方法头 | The first line of a method; includes the method name, return type, and parameter list. **Example:** `public static void verse(String animal, String sound)` |
+| V08 | **method signature** / 方法签名 | Method name + ordered parameter types. The return type is **not** included. **Example:** `verse(String, String)` |
+| V09 | **return type / void** / 返回类型、void（无返回值） | The return type tells us what type of value a method returns. `void` means it returns no value. **Example:** `void println(String x)` |
+| V10 | **parameter list** / 参数列表 | The parameters inside a method header, enclosed in parentheses and separated by commas. It may also be empty. **Example:** `(String animal, String sound)` |
+| V11 | **parameter vs. argument** / 参数（形参）vs. 实参 | A **parameter** is a variable in the method header; an **argument** is the actual value in the method call. **Example:** `animal` is a parameter; `"cow"` is an argument. |
+| V12 | **formal parameter / actual parameter** / 形式参数（形参）、实际参数（实参） | **Formal parameter** is another name for parameter; **actual parameter** is another name for argument. **Example:** `animal` is formal; `"cow"` is actual. |
+| V13 | **method header vs. method call** / 方法头 vs. 方法调用 | A header declares parameter types and names; a call supplies values only, not parameter types. **Example:** `verse(String animal, String sound)` vs. `verse("cow", "moo");` |
+| V14 | **argument compatibility** / 实参与形参的匹配 | Arguments must match the method signature in **number, order, and compatible data types**. **Example:** `verse(String, String)` → `verse("duck", "quack");` |
+| V15 | **call by value** / 值传递 | A copy of each argument value is stored in the parameter when the method is called. **Example:** `"cow"` is copied into `animal`. |
+| V16 | **overloaded method / overloading** / 重载方法、方法重载 | Multiple methods have the same name but different method signatures, meaning different numbers or types of parameters. **Example:** `println()`, `println(String)`, `println(int)` |
