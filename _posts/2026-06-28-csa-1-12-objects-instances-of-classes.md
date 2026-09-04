@@ -575,3 +575,18 @@ Before answering an objects question, check:
 * Does the method call include parentheses?
 * Is the inheritance detail only vocabulary, not something you need to design?
 
+# Unit 1.12 Vocabulary
+## Objects — Instances of Classes
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **object-oriented programming (OOP)** / 面向对象编程 | A way of organizing programs around objects that combine data and the code that works with that data. Java is an object-oriented programming language. |
+| V02 | **class** / 类 | A blueprint that defines a new data type and describes the attributes and behaviors its objects will have. **Example:** `Turtle` is a class used to create turtle objects. |
+| V03 | **object / instance** / 对象、实例 | A specific instance of a class with its own attribute values. Many different objects can be created from the same class. **Example:** `yertle` and `myrtle` can both be objects of the `Turtle` class. |
+| V04 | **attribute / instance variable** / 属性、实例变量 | Data or properties that an object knows about itself. Different objects can have different values for the same attributes. **Example:** a turtle's color, size, or position. |
+| V05 | **behavior / method** / 行为、方法 | Something an object can do. Behaviors are implemented as methods. **Example:** a turtle can `forward()`, `turnLeft()`, or `turnRight()`. |
+| V06 | **reference type** / 引用类型 | A data type whose variables refer to objects rather than directly storing a primitive value. **Example:** `Turtle` is a reference type in `Turtle yertle;`. |
+| V07 | **object reference** / 对象引用 | The value stored in a reference-type variable that refers to an object in memory. It can be thought of as the object's memory address. **Example:** `yertle` holds a reference to a `Turtle` object. |
+| V08 | **creating an object** / 创建对象 | An object is created from a class and stored in a reference variable. The general form is `ClassName variableName = new ClassName(arguments);`. **Example:** `Turtle yertle = new Turtle(habitat);` |
+| V09 | **object method call** / 对象方法调用 | Calls a method on a particular object using the dot operator: `objectName.methodName(arguments)`. **Example:** `yertle.forward(50);` asks the `yertle` object to move forward 50 pixels. |
+
