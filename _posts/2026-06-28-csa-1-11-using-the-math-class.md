@@ -613,3 +613,17 @@ Before answering a `Math` class question, check:
 * Are you accidentally off by one?
 * For distance, did you use `Math.abs(a - b)`?
 
+
+# Unit 1.11 Vocabulary
+## Using the Math Class
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **Math class** / Math 类 | A built-in Java class that provides useful mathematical methods. **Example:** `Math.sqrt(9)` |
+| V02 | **Math.abs()** / `Math.abs()`、绝对值方法 | Returns the absolute value of an `int` or `double`. The result has the same type as the argument. **Example:** `Math.abs(-4)` returns `4`. |
+| V03 | **Math.pow()** / `Math.pow()`、幂运算方法 | Raises the first argument (**base**) to the power of the second argument (**exponent**) and returns a `double`. **Example:** `Math.pow(2, 3)` returns `8.0`. |
+| V04 | **Math.sqrt()** / `Math.sqrt()`、平方根方法 | Returns the positive square root of a number as a `double`. **Example:** `Math.sqrt(9)` returns `3.0`. |
+| V05 | **Math.random()** / `Math.random()`、随机数方法 | Returns a random `double` from `0.0` inclusive to `1.0` exclusive. **Example:** `0.0 <= Math.random() < 1.0` |
+| V06 | **inclusive** / 包含端点 | The endpoint is included in the possible values of a range. **Example:** `0.0` is inclusive in the range produced by `Math.random()`. |
+| V07 | **exclusive** / 不包含端点 | The endpoint is not included in the possible values of a range. **Example:** `1.0` is exclusive in the range produced by `Math.random()`. |
+
