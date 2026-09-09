@@ -36,7 +36,7 @@ categories: media
 }
 </style>
 <div class="ielts-page-shell">
-<div class="source-note"><strong>更新：</strong>2026-09-09。话题清单依据公开的 2026年9-12月中国大陆回忆题交叉整理；主分类以 Zip IELTS 为准，并用 Joe Speaking 补充核对。<strong>为避免把第三方整理文本整页照搬，当前快照中的 cue points / Part 3 统一改写为课堂练习版，话题标题保留。</strong> 若需要直接抓取公开页面当前显示的详细问题，请运行同目录的 <code>ielts_post_builder.py</code>。</div>
+<div class="source-note"><strong>更新：</strong>2026-09-09。话题清单依据公开的 2026年9-12月中国大陆回忆题交叉整理；主分类以 Zip IELTS 为准，并用 Joe Speaking 补充核对。</div>
 <div class="ielts-layout">
 <aside class="ielts-sidebar">
 <details class="nav-group" open><summary>一、新题 [🔥 更新中...]</summary><div class="nav-inner">
