@@ -662,3 +662,18 @@ Before answering a constructor question, check:
 * Is the constructor overloaded?
 * If multiple constructors exist, which one matches the call?
 
+# Unit 1.13 Vocabulary
+## Creating and Initializing Objects: Constructors
+
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **constructor** / 构造器、构造方法 | Special code in a class used to initialize a newly created object. A constructor has the **same name as the class**. **Example:** `public Date(int year, int month, int day)` |
+| V02 | **initialize / initialization** / 初始化 | Giving an object's attributes their starting values when the object is created. **Example:** `new World(300, 400)` initializes the world's width and height. |
+| V03 | **new keyword** / `new` 关键字 | Used with a constructor call to create a new object. **Example:** `Turtle t = new Turtle(habitat);` |
+| V04 | **no-argument constructor** / 无参构造器 | A constructor that takes no arguments. It often gives the object's attributes default values. **Example:** `new World()` creates a default-sized world. |
+| V05 | **overloaded constructor / constructor overloading** / 构造器重载 | A class has multiple constructors with different signatures. They must differ in the number, type, or order of parameters. **Example:** `World()` and `World(int width, int height)` |
+| V06 | **constructor signature** / 构造器签名 | The constructor name plus the ordered list of parameter types. **Example:** `Turtle(World)` and `Turtle(int, int, World)` are different signatures. |
+| V07 | **null** / `null`、空引用 | A special reference value meaning that a variable currently refers to no object. **Example:** `Turtle t = null;` |
+| V08 | **constructor argument matching** / 构造器实参匹配 | Arguments passed to a constructor must match its parameters in **number, order, and compatible types**. **Example:** if the constructor is `Turtle(int x, int y, World w)`, then `new Turtle(50, 100, world1)` is valid. |
+
