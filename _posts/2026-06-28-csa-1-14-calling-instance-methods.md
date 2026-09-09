@@ -606,3 +606,15 @@ Before answering an instance-method question, check:
 * Did you update the object's state after each method call?
 * After a method returns, which statement runs next?
 * Is the error a compile-time error, runtime error, or logic error?
+
+
+# Unit 1.14 Vocabulary
+## Calling Instance Methods
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **instance method / object method** / 实例方法、对象方法 | A method that is called on a particular object and can access or change that object's attributes. Unlike a class method, it is not `static`. **Example:** `yertle.forward();` changes the `yertle` object's position. |
+| V02 | **instance method call** / 实例方法调用 | Calls a method on a specific object using `objectName.methodName(arguments)`. **Example:** `yertle.forward(50);` calls `forward` on the object `yertle`. |
+| V03 | **class method vs. instance method** / 类方法 vs. 实例方法 | A class method is called using the **class name**, while an instance method is called using an **object**. **Example:** `Math.sqrt(25)` vs. `yertle.forward()`. |
+| V04 | **NullPointerException** / 空指针异常 | An error that occurs when you try to call an instance method on a reference whose value is `null`. **Example:** if `Turtle yertle = null;`, then `yertle.forward();` causes a `NullPointerException`. |
+| V05 | **accessor / getter** / 访问器、getter 方法 | A non-void method that returns information about an object's attributes, usually without changing the object. Getter names often begin with `get`. **Example:** `yertle.getWidth()` returns the turtle's width. |
