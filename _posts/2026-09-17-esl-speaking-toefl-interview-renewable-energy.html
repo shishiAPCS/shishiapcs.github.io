@@ -1,629 +1,1175 @@
 ---
+title: "新托福口语 Renewable Energy：四道 Interview 题怎么打开思路？"
+mathjax: true
 layout: post
-title: "新托福口语renewable energy 打开思路"
-date: 2026-09-17
-categories: [ESL, TOEFL, Speaking]
+categories: media
+render_with_liquid: false
 ---
 
 <style>
-.interview-guide {
+/* =========================================================
+   TOEFL Interview Thinking Lab
+   Theme-native version for shishiapcs.github.io / Contrast
+   Principle: inherit the site's colors; only add subtle layers.
+   ========================================================= */
+
+.toefl-interview-lab {
   max-width: 980px;
   margin: 0 auto;
-  line-height: 1.75;
+  color: inherit;
+  line-height: 1.72;
+  font-size: 1.02rem;
+
+  --ti-surface: rgba(127, 127, 127, 0.08);
+  --ti-surface-strong: rgba(127, 127, 127, 0.14);
+  --ti-border: rgba(127, 127, 127, 0.34);
+  --ti-border-strong: rgba(127, 127, 127, 0.58);
+  --ti-muted: rgba(160, 160, 160, 0.95);
+}
+
+.toefl-interview-lab * {
+  box-sizing: border-box;
+}
+
+.toefl-interview-lab h2,
+.toefl-interview-lab h3,
+.toefl-interview-lab h4 {
+  line-height: 1.3;
+  color: inherit;
+}
+
+.toefl-interview-lab h2 {
+  margin-top: 2.8rem;
+  padding-top: .3rem;
+}
+
+.toefl-interview-lab h3 {
+  margin-top: 1.6rem;
+}
+
+.toefl-interview-lab button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- Intro ---------- */
+
+.toefl-interview-lab .intro {
+  color: inherit;
+  opacity: .92;
+  font-size: 1.06rem;
+}
+
+.toefl-interview-lab .core {
+  margin: 1.2rem 0 1.6rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--ti-border);
+  border-left: 4px solid currentColor;
+  border-radius: 0 10px 10px 0;
+  background: var(--ti-surface);
+  color: inherit;
+}
+
+/* ---------- Top map ---------- */
+
+.toefl-interview-lab .question-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1.3rem 0 2rem;
+}
+
+.toefl-interview-lab .map-card {
+  min-width: 0;
+  min-height: 118px;
+  padding: .85rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 10px;
+  background: var(--ti-surface);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.toefl-interview-lab .map-card:hover,
+.toefl-interview-lab .map-card:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.toefl-interview-lab .map-card:hover {
+  transform: translateY(-2px);
+}
+
+.toefl-interview-lab .map-q {
+  display: block;
+  margin-bottom: .2rem;
+  font-weight: 800;
+  font-size: .88rem;
+  opacity: .72;
+}
+
+.toefl-interview-lab .map-type {
+  display: block;
+  font-weight: 800;
   font-size: 1.02rem;
 }
-.interview-guide h1,
-.interview-guide h2,
-.interview-guide h3 {
-  line-height: 1.3;
+
+.toefl-interview-lab .map-formula {
+  display: block;
+  margin-top: .45rem;
+  font-size: .84rem;
+  line-height: 1.42;
+  opacity: .7;
 }
-.interview-guide .lead {
-  font-size: 1.08rem;
-  color: #444;
+
+/* ---------- Common components ---------- */
+
+.toefl-interview-lab .section {
+  scroll-margin-top: 1rem;
 }
-.interview-guide .question {
-  padding: 1rem 1.1rem;
-  margin: 1rem 0 1.25rem;
-  border-left: 4px solid #555;
-  background: #f7f7f7;
+
+.toefl-interview-lab .question {
+  margin: .8rem 0 1.1rem;
+  padding: 1rem 1.05rem;
+  border-left: 4px solid currentColor;
+  border-radius: 0 8px 8px 0;
+  background: var(--ti-surface);
+  color: inherit;
 }
-.interview-guide .key {
-  padding: 1rem 1.1rem;
-  margin: 1.1rem 0;
+
+.toefl-interview-lab .tag {
+  display: inline-block;
+  margin-bottom: .35rem;
+  padding: .27rem .58rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: .79rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  opacity: .82;
+}
+
+.toefl-interview-lab .formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .38rem;
+  margin: .9rem 0 1.15rem;
+}
+
+.toefl-interview-lab .formula-step {
+  padding: .4rem .68rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 999px;
+  background: var(--ti-surface);
+  color: inherit;
+  font-weight: 750;
+}
+
+.toefl-interview-lab .arrow {
+  opacity: .48;
+  font-weight: 900;
+}
+
+.toefl-interview-lab .instruction {
+  color: inherit;
+  opacity: .88;
+}
+
+.toefl-interview-lab .micro {
+  color: inherit;
+  opacity: .66;
+  font-size: .91rem;
+}
+
+/* ---------- Interactive controls ---------- */
+
+.toefl-interview-lab .btn,
+.toefl-interview-lab .option-btn,
+.toefl-interview-lab .branch-btn,
+.toefl-interview-lab .pick-btn,
+.toefl-interview-lab .primary-btn {
+  min-height: 44px;
+  padding: .65rem .8rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 9px;
+  background: var(--ti-surface);
+  color: inherit;
+  cursor: pointer;
+}
+
+.toefl-interview-lab .btn:hover,
+.toefl-interview-lab .btn:focus-visible,
+.toefl-interview-lab .option-btn:hover,
+.toefl-interview-lab .option-btn:focus-visible,
+.toefl-interview-lab .branch-btn:hover,
+.toefl-interview-lab .branch-btn:focus-visible,
+.toefl-interview-lab .pick-btn:hover,
+.toefl-interview-lab .pick-btn:focus-visible,
+.toefl-interview-lab .primary-btn:hover,
+.toefl-interview-lab .primary-btn:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.toefl-interview-lab button.is-selected {
+  border-color: currentColor;
+  background: var(--ti-surface-strong);
+  font-weight: 800;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.toefl-interview-lab .primary-btn {
+  font-weight: 800;
+}
+
+/* ---------- Q1 ---------- */
+
+.toefl-interview-lab .version-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+  margin: .9rem 0;
+}
+
+.toefl-interview-lab .version-panel,
+.toefl-interview-lab .vote-box,
+.toefl-interview-lab .q1-result,
+.toefl-interview-lab .signal,
+.toefl-interview-lab .scene-output,
+.toefl-interview-lab .branch-output,
+.toefl-interview-lab .builder-column,
+.toefl-interview-lab .tradeoff-output,
+.toefl-interview-lab .final-card,
+.toefl-interview-lab .practice-box {
+  border: 1px solid var(--ti-border);
   border-radius: 10px;
-  background: #f4f7fb;
+  background: var(--ti-surface);
+  color: inherit;
 }
-.interview-guide .warning {
-  padding: 1rem 1.1rem;
-  margin: 1.1rem 0;
-  border-radius: 10px;
-  background: #fff7e8;
+
+.toefl-interview-lab .version-panel {
+  padding: 1rem 1.05rem;
 }
-.interview-guide .answer {
-  padding: 1rem 1.1rem;
-  margin: 0.8rem 0 1.2rem;
-  border-radius: 10px;
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
+
+.toefl-interview-lab .version-panel[hidden],
+.toefl-interview-lab .q1-result[hidden] {
+  display: none;
 }
-.interview-guide .model {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.08rem;
-  padding: 0.8rem 1rem;
+
+.toefl-interview-lab .vote-box {
   margin: 1rem 0;
-  background: #f2f2f2;
-  border-radius: 8px;
+  padding: 1rem;
 }
-.interview-guide table {
+
+.toefl-interview-lab .vote-title {
+  margin: 0 0 .7rem;
+  font-weight: 800;
+}
+
+.toefl-interview-lab .vote-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.toefl-interview-lab .q1-result {
+  margin-top: .9rem;
+  padding: 1rem;
+  border-left: 4px solid currentColor;
+}
+
+.toefl-interview-lab .ranking {
+  margin: 0 0 .75rem;
+  font-size: 1.08rem;
+  font-weight: 850;
+}
+
+.toefl-interview-lab .signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .65rem;
+  margin-top: .85rem;
+}
+
+.toefl-interview-lab .signal {
+  padding: .8rem;
+}
+
+.toefl-interview-lab .signal b {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.toefl-interview-lab .logic-line {
+  margin: .95rem 0;
+  padding: .9rem 1rem;
+  border-left: 3px solid currentColor;
+  background: var(--ti-surface);
+  color: inherit;
+}
+
+/* ---------- Q2 ---------- */
+
+.toefl-interview-lab .four-step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .6rem;
+  margin: 1rem 0;
+}
+
+.toefl-interview-lab .step-card {
+  padding: .82rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 10px;
+  background: var(--ti-surface);
+}
+
+.toefl-interview-lab .step-card b {
+  display: block;
+  margin-bottom: .22rem;
+}
+
+.toefl-interview-lab .step-card span {
+  opacity: .66;
+  font-size: .9rem;
+}
+
+.toefl-interview-lab .scene-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: .8rem 0;
+}
+
+.toefl-interview-lab .scene-output {
+  margin-top: .8rem;
+  padding: 1rem;
+}
+
+.toefl-interview-lab .scene-title {
+  margin-bottom: .55rem;
+  font-weight: 850;
+}
+
+.toefl-interview-lab .scene-line {
+  margin: .28rem 0;
+}
+
+/* ---------- Q3 ---------- */
+
+.toefl-interview-lab .branch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+  margin: .9rem 0;
+}
+
+.toefl-interview-lab .branch-btn {
+  padding: .9rem;
+  text-align: left;
+}
+
+.toefl-interview-lab .branch-btn b {
+  display: block;
+  margin-bottom: .18rem;
+}
+
+.toefl-interview-lab .branch-output {
+  padding: 1rem;
+}
+
+.toefl-interview-lab .branch-heading {
+  margin-bottom: .6rem;
+  font-weight: 850;
+}
+
+.toefl-interview-lab .impact-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .7rem;
+}
+
+.toefl-interview-lab .impact-chip {
+  padding: .35rem .58rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: .88rem;
+  opacity: .86;
+}
+
+/* ---------- Q4 ---------- */
+
+.toefl-interview-lab .tradeoff-builder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.toefl-interview-lab .builder-column {
+  padding: .9rem;
+}
+
+.toefl-interview-lab .builder-column h4 {
+  margin: 0 0 .55rem;
+  font-size: 1rem;
+}
+
+.toefl-interview-lab .pick-btn {
   width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0 1.5rem;
-}
-.interview-guide th,
-.interview-guide td {
-  border: 1px solid #ddd;
-  padding: 0.7rem 0.8rem;
-  vertical-align: top;
-}
-.interview-guide th {
-  background: #f5f5f5;
-}
-.interview-guide code {
-  white-space: normal;
-}
-.interview-guide .small {
-  color: #666;
-  font-size: 0.94rem;
+  margin-top: .42rem;
+  text-align: left;
 }
 
-
-/* ===== ShiShi AP Center Dark Theme ===== */
-
-.interview-guide {
-  color: #eeeeee;
+.toefl-interview-lab .tradeoff-output {
+  padding: 1rem;
+  border-left: 4px solid currentColor;
 }
 
-/* 开头说明文字 */
-.interview-guide .lead {
-  color: #c5c8cf;
+/* ---------- Final review ---------- */
+
+.toefl-interview-lab .final-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1rem 0;
 }
 
-/* 题目框 */
-.interview-guide .question {
-  background: #2b2d34;
-  color: #f5f5f5;
-  border-left-color: #7f8cff;
+.toefl-interview-lab .final-card {
+  padding: .9rem;
 }
 
-/* 核心提示框 */
-.interview-guide .key {
-  background: #30364a;
-  color: #f5f6ff;
-  border: 1px solid #464e6b;
+.toefl-interview-lab .final-card .num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-right: .35rem;
+  border: 1px solid var(--ti-border-strong);
+  border-radius: 50%;
+  font-weight: 900;
 }
 
-/* 提示 / 注意 */
-.interview-guide .warning {
-  background: #393326;
-  color: #f2ead6;
-  border: 1px solid #5c5137;
+.toefl-interview-lab .final-formula {
+  margin-top: .45rem;
+  opacity: .78;
 }
 
-/* 三个答案 */
-.interview-guide .answer {
-  background: #292b31;
-  color: #eeeeee;
-  border-color: #44474f;
+.toefl-interview-lab .practice-box {
+  margin-top: 1.2rem;
+  padding: 1rem;
 }
 
-/* 思维模型 */
-.interview-guide .model {
-  background: #31343c;
-  color: #ffffff;
-  border: 1px solid #484b55;
+.toefl-interview-lab .practice-box summary {
+  font-weight: 800;
+  cursor: pointer;
 }
 
-/* 表格 */
-.interview-guide table {
-  color: #eeeeee;
+/* ---------- Theme-specific readability ----------
+   Contrast uses system dark mode. These rules only fine-tune
+   muted text; all main text keeps inheriting from the site. */
+
+@media (prefers-color-scheme: dark) {
+  .toefl-interview-lab {
+    --ti-surface: rgba(255, 255, 255, 0.045);
+    --ti-surface-strong: rgba(255, 255, 255, 0.085);
+    --ti-border: rgba(255, 255, 255, 0.16);
+    --ti-border-strong: rgba(255, 255, 255, 0.34);
+  }
 }
 
-.interview-guide th {
-  background: #30323a;
-  color: #ffffff;
+@media (prefers-color-scheme: light) {
+  .toefl-interview-lab {
+    --ti-surface: rgba(0, 0, 0, 0.035);
+    --ti-surface-strong: rgba(0, 0, 0, 0.07);
+    --ti-border: rgba(0, 0, 0, 0.14);
+    --ti-border-strong: rgba(0, 0, 0, 0.30);
+  }
 }
 
-.interview-guide td {
-  background: #26282e;
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+  .toefl-interview-lab .question-map,
+  .toefl-interview-lab .signal-grid,
+  .toefl-interview-lab .four-step-grid,
+  .toefl-interview-lab .tradeoff-builder,
+  .toefl-interview-lab .final-map,
+  .toefl-interview-lab .branch-grid,
+  .toefl-interview-lab .version-tabs {
+    grid-template-columns: 1fr;
+  }
 }
-
-.interview-guide th,
-.interview-guide td {
-  border-color: #484b53;
-}
-
-/* 次要文字 */
-.interview-guide .small {
-  color: #aeb2bb;
-}
-
-/* 链接 */
-.interview-guide a {
-  color: #9eafff;
-}
-
-
-  
 </style>
 
-<div class="interview-guide">
+<div class="toefl-interview-lab" id="toeflInterviewLab">
 
-<p class="lead">
-这组题目都围绕 <strong>renewable energy</strong>，但四道题真正考的并不是同一种思路。
-有的题需要表达观点，有的题需要讲经历，有的题需要观察现实，还有的题要求你比较利弊。
-如果所有题都用同一种“观点 + 原因”的方式回答，答案很容易变得重复、空泛。
+<p class="intro">
+这组题都围绕 <strong>renewable energy</strong>，但四道题要求你做的事情并不一样：
+有的题要表达观点，有的题要讲经历，有的题要观察现实，还有的题要比较两边。
+<strong>先识别题型，再选择思路。</strong>
 </p>
 
-<div class="key">
-<strong>这一组题最值得记住的一句话：</strong><br>
-Simple + clear + developed is usually better than complex + inaccurate.<br>
-<strong>简单、清楚、展开充分，通常比复杂但错误很多更好。</strong>
+<div class="core">
+  <strong>这一组题的核心原则：</strong><br>
+  Simple + clear + developed.<br>
+  <strong>先把一个清楚的想法讲完整，再增加语言复杂度。</strong>
+</div>
+
+<div class="question-map" aria-label="四道题导航">
+  <button type="button" class="map-card" data-jump="renewable-q1">
+    <span class="map-q">QUESTION 1</span>
+    <span class="map-type">Opinion</span>
+    <span class="map-formula">Opinion → Reason → Example</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="renewable-q2">
+    <span class="map-q">QUESTION 2</span>
+    <span class="map-type">Experience</span>
+    <span class="map-formula">Situation → Action → Difficulty → Result</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="renewable-q3">
+    <span class="map-q">QUESTION 3</span>
+    <span class="map-type">Observation</span>
+    <span class="map-formula">What → Where → Impact</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="renewable-q4">
+    <span class="map-q">QUESTION 4</span>
+    <span class="map-type">Evaluation</span>
+    <span class="map-formula">Position → Benefit → Drawback → Compare</span>
+  </button>
 </div>
 
 <hr>
 
-<h2>Question 1：先看三个答案，哪个更好？</h2>
+<!-- ======================================================
+     QUESTION 1
+     ====================================================== -->
+
+<section class="section" id="renewable-q1">
+
+<span class="tag">Q1 · OPINION</span>
+<h2>Question 1：先看三个答案，你会选哪一个？</h2>
 
 <div class="question">
-<strong>Thanks for your participation. I'd like to discuss your views on renewable energy. To start, how important is the issue of renewable energy, such as wind and solar power, to you personally? Why would you say you feel that way?</strong>
+<strong>
+Thanks for your participation. I'd like to discuss your views on renewable energy.
+To start, how important is the issue of renewable energy, such as wind and solar power,
+to you personally? Why would you say you feel that way?
+</strong>
 </div>
 
-<p>
-这是一道典型的 <strong>Opinion Question</strong>。你需要先明确回答自己的看法，再解释原因，最好再加一个具体例子。
+<p class="instruction">
+先读三个版本。点击 Version 切换答案。读完以后，先做一次自己的判断，再看分析。
 </p>
 
-<h3>Version 1</h3>
+<div class="version-tabs" role="group" aria-label="三个回答版本">
+  <button type="button" class="btn is-selected" data-version="version1">Version 1</button>
+  <button type="button" class="btn" data-version="version2">Version 2</button>
+  <button type="button" class="btn" data-version="version3">Version 3</button>
+</div>
 
-<div class="answer">
-I think it's very important to develop renewable energy, like wind power and solar power, especially in rural areas, where other forms of power are not easy to access. For example, in some areas in Southeast Asia, people live far away from cities, so they use solar power to generate electricity because there are no power plants near where they live.
+<div class="version-panel" id="version1">
+I think it's very important to develop renewable energy, like wind power and solar power,
+especially in rural areas, where other forms of power are not easy to access.
+For example, in some areas in Southeast Asia, people live far away from cities,
+so they use solar power to generate electricity because there are no power plants near where they live.
 <br><br>
 So it's very important to develop these kinds of energy.
 </div>
 
-<h3>Version 2</h3>
-
-<div class="answer">
-I think renewable energy is essential in the foreseeable future, whether it's wind power, solar power, or any other source of clean energy. Because as we burn more coal and use more fossil fuels, they're going to be depleted in the end.
+<div class="version-panel" id="version2" hidden>
+I think renewable energy is essential in the foreseeable future, whether it's wind power,
+solar power, or any other source of clean energy.
+Because as we burn more coal and use more fossil fuels, they're going to be depleted in the end.
 <br><br>
-So we have to find alternatives. And in some places, people don't have coal to burn to generate electricity, nor do they have any, like, dams to use to generate electricity. Wind power and solar power would be a great choice.
+So we have to find alternatives. And in some places, people don't have coal to burn to generate electricity,
+nor do they have any, like, dams to use to generate electricity.
+Wind power and solar power would be a great choice.
 </div>
 
-<h3>Version 3</h3>
-
-<div class="answer">
-Well, I think renewable energy is essential, especially in the future, when there's not enough fossil fuel for us to use. Whether it's wind power or solar power, renewable energy makes it easy for people to have access to electricity.
+<div class="version-panel" id="version3" hidden>
+Well, I think renewable energy is essential, especially in the future,
+when there's not enough fossil fuel for us to use.
+Whether it's wind power or solar power, renewable energy makes it easy for people to have access to electricity.
 <br><br>
-Think about remote areas where people have no hydropower or coal to burn. Wind power and solar power would be very ideal ways for them to power up their entire house or apartment.
+Think about remote areas where people have no hydropower or coal to burn.
+Wind power and solar power would be very ideal ways for them to power up their entire house or apartment.
 </div>
 
-<h3>三个版本怎么比较？</h3>
+<div class="vote-box">
+  <p class="vote-title">你的选择：哪个版本最强？</p>
+  <div class="vote-row" role="group" aria-label="选择最佳版本">
+    <button type="button" class="option-btn" data-vote="1">Version 1</button>
+    <button type="button" class="option-btn" data-vote="2">Version 2</button>
+    <button type="button" class="option-btn" data-vote="3">Version 3</button>
+    <button type="button" class="primary-btn" id="showQ1Analysis">看分析</button>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>版本</th>
-      <th>优点</th>
-      <th>主要问题</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Version 1</strong></td>
-      <td>逻辑最稳定；有具体场景；例子和观点直接相关</td>
-      <td>词汇和句型比较简单</td>
-    </tr>
-    <tr>
-      <td><strong>Version 2</strong></td>
-      <td>词汇更高级；涉及 fossil fuels、alternatives 等概念</td>
-      <td>想表达的内容太多，语言控制变弱；复杂度上升后更容易出错</td>
-    </tr>
-    <tr>
-      <td><strong>Version 3</strong></td>
-      <td>比较像真实聊天；“Think about...” 有口语感</td>
-      <td>部分表达不够自然，句子控制不如 Version 1 稳定</td>
-    </tr>
-  </tbody>
-</table>
+  <div class="q1-result" id="q1Analysis" hidden aria-live="polite">
+    <p class="ranking">如果只看逐字稿：Version 1 ＞ Version 3 ＞ Version 2</p>
 
-<div class="key">
-<strong>如果只看逐字稿：</strong><br>
-Version 1 &gt; Version 3 &gt; Version 2
+    <p>
+      Version 1 最强的地方，是它始终沿着<strong>一条清楚的逻辑线</strong>展开：
+      renewable energy 很重要 → 偏远地区需要电力 → 当地离传统电厂很远 → solar power 可以解决这个问题。
+    </p>
+
+    <div class="signal-grid">
+      <div class="signal">
+        <b>一个中心</b>
+        整段只发展一个主要理由，所以容易跟上。
+      </div>
+      <div class="signal">
+        <b>一个具体场景</b>
+        Southeast Asia、remote areas、far from cities，让理由变得具体。
+      </div>
+      <div class="signal">
+        <b>语言控制稳定</b>
+        句型没有刻意变复杂，因此更容易保持准确、清楚和流畅。
+      </div>
+    </div>
+  </div>
 </div>
 
-<p>
-为什么 Version 1 最好？不是因为它用了更高级的词，而是因为它完成了一件更重要的事：
-<strong>选了一个很具体的角度，然后把这个角度讲清楚。</strong>
-</p>
+<h3>把这道题压缩成三个问题</h3>
 
-<div class="model">
-Opinion → Reason → Example
+<div class="formula">
+  <span class="formula-step">Opinion</span>
+  <span class="arrow">→</span>
+  <span class="formula-step">Reason</span>
+  <span class="arrow">→</span>
+  <span class="formula-step">Example</span>
 </div>
 
-<p>
-Version 1 的思路其实非常简单：
-</p>
+<ol>
+  <li><strong>What do I think?</strong> — 我对这个话题的态度是什么？</li>
+  <li><strong>Why?</strong> — 哪一个理由最容易解释？</li>
+  <li><strong>What's one concrete example?</strong> — 什么现实场景可以把这个理由讲清楚？</li>
+</ol>
 
-<p>
+<div class="logic-line">
+<strong>Version 1 的思路：</strong><br>
 renewable energy is important
 → remote areas need electricity
-→ some places are far from power plants
+→ power plants may be far away
 → solar power can help
-</p>
-
-<p>
-整个回答一直沿着同一条线向前发展，没有突然切换话题。
-</p>
-
-<div class="warning">
-<strong>常见误区：</strong><br>
-很多同学会觉得“高级词越多，分数越高”。于是开始加入 fossil fuels、depletion、hydropower、infrastructure 等很多概念。
-问题是：如果语言控制跟不上，答案反而会变得更难理解。<br><br>
-<strong>不要为了“显得高级”而同时讲太多东西。</strong>
 </div>
 
-<h3>第一题最适合的思维模型</h3>
-
-<div class="model">
-OPINION → REASON → EXAMPLE
-</div>
-
-<p>
-看到这种题，先问自己三个问题：
-</p>
-
-<ol>
-  <li><strong>What do I think?</strong> 我的观点是什么？</li>
-  <li><strong>Why?</strong> 最主要的一个原因是什么？</li>
-  <li><strong>Can I give one concrete example?</strong> 有没有一个具体例子？</li>
-</ol>
+</section>
 
 <hr>
 
-<h2>Question 2：不要议论，讲一件具体发生过的事</h2>
+<!-- ======================================================
+     QUESTION 2
+     ====================================================== -->
+
+<section class="section" id="renewable-q2">
+
+<span class="tag">Q2 · EXPERIENCE</span>
+<h2>Question 2：先找一个生活场景，再讲成一个小故事</h2>
 
 <div class="question">
-<strong>Now, describe a time when you or someone you know tried to reduce energy use. What actions were taken and what made it easy or difficult?</strong>
+<strong>
+Now, describe a time when you or someone you know tried to reduce energy use.
+What actions were taken and what made it easy or difficult?
+</strong>
 </div>
 
-<p>
-这题和第一题已经完全不同了。
-它不是让你继续解释“为什么节约能源很重要”，而是让你讲一个 <strong>experience</strong>。
+<p class="instruction">
+这题需要一段具体经历。先找到一个熟悉的小场景，再按四步把故事搭起来。
 </p>
 
-<div class="model">
-Situation → Action → Difficulty → Result
+<div class="four-step-grid">
+  <div class="step-card">
+    <b>1. Situation</b>
+    <span>什么时候？在哪里？</span>
+  </div>
+  <div class="step-card">
+    <b>2. Action</b>
+    <span>具体做了什么？</span>
+  </div>
+  <div class="step-card">
+    <b>3. Difficulty</b>
+    <span>什么让它容易或困难？</span>
+  </div>
+  <div class="step-card">
+    <b>4. Result</b>
+    <span>最后怎么样？</span>
+  </div>
 </div>
 
-<p>可以把题目拆成四个小问题：</p>
+<h3>选一个你最熟悉的场景</h3>
 
-<ol>
-  <li><strong>When / Where?</strong> 什么时候？在哪里？</li>
-  <li><strong>What did you do?</strong> 具体采取了什么行动？</li>
-  <li><strong>What made it easy or difficult?</strong> 什么让它变得容易或困难？</li>
-  <li><strong>What happened in the end?</strong> 最后结果怎么样？</li>
-</ol>
-
-<h3>最容易找到的生活场景</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>场景</th>
-      <th>可以做什么</th>
-      <th>Easy / Difficult</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>夏天少开空调</td>
-      <td>set the AC to 26°C / use a fan</td>
-      <td>天气太热，很难坚持</td>
-    </tr>
-    <tr>
-      <td>离开房间关灯</td>
-      <td>turn off the lights</td>
-      <td>动作很简单，但容易忘</td>
-    </tr>
-    <tr>
-      <td>电脑、游戏机不用待机</td>
-      <td>turn them off completely</td>
-      <td>简单，但有时候觉得麻烦</td>
-    </tr>
-    <tr>
-      <td>短距离不开车</td>
-      <td>walk / bike / take public transport</td>
-      <td>天气好的时候容易，下雨时困难</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>怎么把思路“问出来”？</h3>
-
-<p>
-如果你一时想不到完整答案，不要逼自己马上组织一段话。先连续回答几个小问题：
-</p>
-
-<p>
-<strong>What's the biggest thing that uses electricity in your home?</strong><br>
-→ The air conditioner.
-</p>
-
-<p>
-<strong>Have you ever tried to use it less?</strong><br>
-→ Yes.
-</p>
-
-<p>
-<strong>What did you do?</strong><br>
-→ We set it to 26 degrees.
-</p>
-
-<p>
-<strong>Was it easy?</strong><br>
-→ Not really.
-</p>
-
-<p>
-<strong>Why not?</strong><br>
-→ Because it was extremely hot.
-</p>
-
-<p>
-到这里，一个答案的骨架已经出来了。
-</p>
-
-<div class="warning">
-<strong>这题最容易犯的错误：</strong><br>
-看到 reduce energy use，就重新开始说：
-“Saving energy is very important because...”<br><br>
-这会把第二题说回第一题。<br>
-第二题的关键词是：<strong>describe a time</strong>。
+<div class="scene-buttons" role="group" aria-label="选择第二题生活场景">
+  <button type="button" class="option-btn is-selected" data-scene="ac">Air conditioner</button>
+  <button type="button" class="option-btn" data-scene="lights">Lights</button>
+  <button type="button" class="option-btn" data-scene="devices">Computer / game console</button>
+  <button type="button" class="option-btn" data-scene="transport">Short trips</button>
 </div>
+
+<div class="scene-output" id="sceneOutput" aria-live="polite">
+  <div class="scene-title">Air conditioner</div>
+  <div class="scene-line"><b>Situation:</b> It was a very hot summer.</div>
+  <div class="scene-line"><b>Action:</b> We set the AC to 26°C and used a fan more often.</div>
+  <div class="scene-line"><b>Difficulty:</b> It became difficult on extremely hot days.</div>
+  <div class="scene-line"><b>Result:</b> We still managed to use the AC less most of the time.</div>
+</div>
+
+<p class="micro">
+先把四格想清楚，再把四格连成一段自然口语。你不需要一开始就“想出完整答案”。
+</p>
+
+</section>
 
 <hr>
 
-<h2>Question 3：观察现实，再解释影响</h2>
+<!-- ======================================================
+     QUESTION 3
+     ====================================================== -->
+
+<section class="section" id="renewable-q3">
+
+<span class="tag">Q3 · OBSERVATION / SOLUTION</span>
+<h2>Question 3：先选择你的路线</h2>
 
 <div class="question">
-<strong>Great. In your daily life, have you noticed any renewable energy initiatives in your community? If yes, what have you seen and how do they impact your area? If not, what's an initiative that might be beneficial for your community?</strong>
+<strong>
+Great. In your daily life, have you noticed any renewable energy initiatives in your community?
+If yes, what have you seen and how do they impact your area?
+If not, what's an initiative that might be beneficial for your community?
+</strong>
 </div>
 
-<p>
-这题不是让你讲经历，而是让你说：
-<strong>我在现实生活中看到了什么，以及它有什么作用。</strong>
+<p class="instruction">
+题目已经给了两条路线。选择更符合你情况的一条，然后继续展开。
 </p>
 
-<p>
-而且这道题有两个分支。
-</p>
+<div class="branch-grid" role="group" aria-label="第三题回答路线">
+  <button type="button" class="branch-btn is-selected" data-branch="seen">
+    <b>Yes, I've seen one.</b>
+    描述现实中见过的 renewable energy initiative。
+  </button>
 
-<h3>如果你见过</h3>
-
-<div class="model">
-WHAT → WHERE → IMPACT
+  <button type="button" class="branch-btn" data-branch="idea">
+    <b>No, not really.</b>
+    提出一个适合自己社区的 renewable energy idea。
+  </button>
 </div>
 
-<p>
-比如你见过：
-</p>
+<div class="branch-output" id="branchOutput" aria-live="polite">
+  <div class="branch-heading">路线 A：WHAT → WHERE → IMPACT</div>
+  <p><strong>What?</strong> Solar streetlights / rooftop solar panels / solar-powered signs</p>
+  <p><strong>Where?</strong> Near my neighborhood / on school buildings / along some roads</p>
+  <p><strong>Impact?</strong> 选择一个最容易解释的实际影响：</p>
 
-<ul>
-  <li>solar streetlights</li>
-  <li>solar panels on rooftops</li>
-  <li>solar-powered signs or cameras</li>
-  <li>wind turbines</li>
-  <li>solar water heaters</li>
-</ul>
-
-<p>
-这时不要只停在：
-</p>
-
-<p><em>There are some solar panels near my home.</em></p>
-
-<p>
-因为题目后面还有更重要的一部分：
-</p>
-
-<p><strong>How do they impact your area?</strong></p>
-
-<p>
-可以从这些影响入手：
-</p>
-
-<ul>
-  <li>save electricity</li>
-  <li>lower energy costs</li>
-  <li>reduce pollution</li>
-  <li>provide power in remote areas</li>
-  <li>make the community greener</li>
-</ul>
-
-<h3>如果你没见过</h3>
-
-<div class="model">
-IDEA → PLACE → BENEFIT
+  <div class="impact-chips">
+    <span class="impact-chip">save electricity</span>
+    <span class="impact-chip">lower energy costs</span>
+    <span class="impact-chip">reduce pollution</span>
+    <span class="impact-chip">provide local power</span>
+  </div>
 </div>
 
+<h3>把描述继续推进一步</h3>
+
 <p>
-这时不需要设计什么复杂政策。选一个简单而具体的方案就够了：
+说完 <em>“There are some solar panels on buildings near my home.”</em> 后，
+继续问自己：
+<strong>What difference do they make?</strong>
 </p>
 
 <p>
-<strong>install solar panels on school buildings</strong>
+这个问题会把答案自然带到题目的核心：<strong>impact</strong>。
 </p>
 
-<p>
-然后继续问：
-</p>
-
-<ul>
-  <li>Where should they be installed?</li>
-  <li>Why there?</li>
-  <li>Who would benefit?</li>
-</ul>
-
-<p>
-例如：
-</p>
-
-<p>
-on the roof of our school<br>
-→ it gets a lot of sunlight<br>
-→ the school can generate some of its own electricity<br>
-→ it may reduce electricity costs
-</p>
-
-<div class="warning">
-<strong>这题的关键：</strong><br>
-“看到什么”只是前半部分。<br>
-真正要继续展开的是：<strong>So what? What difference does it make?</strong>
-</div>
+</section>
 
 <hr>
 
-<h2>Question 4：不是列优缺点，而是做比较</h2>
+<!-- ======================================================
+     QUESTION 4
+     ====================================================== -->
+
+<section class="section" id="renewable-q4">
+
+<span class="tag">Q4 · EVALUATION</span>
+<h2>Question 4：选一边，再做一次真正的权衡</h2>
 
 <div class="question">
-<strong>Thought-provoking. Many believe transitioning to renewable energy is crucial for environmental sustainability, while others worry about the costs involved. Do you think the benefits of renewable energy outweigh the drawbacks? Why or why not?</strong>
+<strong>
+Thought-provoking. Many believe transitioning to renewable energy is crucial for environmental sustainability,
+while others worry about the costs involved.
+Do you think the benefits of renewable energy outweigh the drawbacks? Why or why not?
+</strong>
 </div>
 
-<p>
-这题和第一题一样，都需要表达观点。
-但它多了一层：你必须处理一个 <strong>trade-off</strong>，也就是“好处和坏处之间的权衡”。
-</p>
-
-<div class="model">
-Position → Benefit → Drawback → Why the benefit matters more
+<div class="formula">
+  <span class="formula-step">Position</span>
+  <span class="arrow">→</span>
+  <span class="formula-step">Benefit</span>
+  <span class="arrow">→</span>
+  <span class="formula-step">Drawback</span>
+  <span class="arrow">→</span>
+  <span class="formula-step">Why one matters more</span>
 </div>
 
-<h3>先不要列很多点</h3>
-
-<p>
-最简单的做法是只抓住：
+<p class="instruction">
+选择一个主要 benefit，再选择一个主要 drawback。页面会把它们连成一条完整的比较逻辑。
 </p>
 
-<ul>
-  <li><strong>一个主要 benefit</strong></li>
-  <li><strong>一个主要 drawback</strong></li>
-  <li><strong>最后解释为什么其中一边更重要</strong></li>
-</ul>
+<div class="tradeoff-builder">
 
-<table>
-  <thead>
-    <tr>
-      <th>Benefit</th>
-      <th>Drawback</th>
-      <th>比较方式</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>less pollution</td>
-      <td>expensive to build</td>
-      <td>long-term environmental benefit</td>
-    </tr>
-    <tr>
-      <td>reduce fossil fuel use</td>
-      <td>high initial cost</td>
-      <td>fossil fuels are limited</td>
-    </tr>
-    <tr>
-      <td>lower energy costs later</td>
-      <td>installation is expensive</td>
-      <td>pay more first, save later</td>
-    </tr>
-    <tr>
-      <td>cleaner air</td>
-      <td>solar and wind are not always stable</td>
-      <td>different energy sources can work together</td>
-    </tr>
-  </tbody>
-</table>
+  <div class="builder-column">
+    <h4>Choose one main benefit</h4>
+    <button type="button" class="pick-btn is-selected" data-benefit="pollution">Less pollution</button>
+    <button type="button" class="pick-btn" data-benefit="fossil">Less dependence on fossil fuels</button>
+    <button type="button" class="pick-btn" data-benefit="cost">Lower costs in the long run</button>
+    <button type="button" class="pick-btn" data-benefit="remote">More options for remote areas</button>
+  </div>
 
-<h3>最容易展开的一组</h3>
+  <div class="builder-column">
+    <h4>Choose one main drawback</h4>
+    <button type="button" class="pick-btn is-selected" data-drawback="initial">High initial cost</button>
+    <button type="button" class="pick-btn" data-drawback="unstable">Unstable output</button>
+    <button type="button" class="pick-btn" data-drawback="space">Space and infrastructure</button>
+  </div>
 
-<p>
-<strong>high initial cost vs. long-term benefit</strong>
-</p>
-
-<p>
-这个思路很自然：
-</p>
-
-<p>
-Yes, the benefits outweigh the drawbacks.<br>
-→ The main benefit is less pollution.<br>
-→ Of course, renewable energy can be expensive to build at first.<br>
-→ But the cost is mostly short-term, while the environmental benefits can last for many years.
-</p>
-
-<div class="warning">
-<strong>两个常见问题：</strong><br><br>
-<strong>1. 只讲 benefits，不讲 drawbacks。</strong><br>
-这样没有真正回应 outweigh。<br><br>
-<strong>2. 只是列清单。</strong><br>
-“It is clean. It is renewable. It is expensive. It needs space.”<br>
-这只是 pros and cons，不是比较。
 </div>
+
+<div class="tradeoff-output" id="tradeoffOutput" aria-live="polite">
+<strong>Your logic line</strong><br><br>
+I think the benefits outweigh the drawbacks.
+Renewable energy can reduce pollution.
+Of course, it can be expensive to build at first,
+but the cost is mainly short-term while the environmental benefits can last for many years.
+</div>
+
+<p class="micro">
+这里真正要完成的是 <strong>compare</strong>：
+先承认另一边的代价，再解释为什么你的主要理由更重要。
+</p>
+
+</section>
 
 <hr>
 
-<h2>最后：四道题，其实是四种不同的思维模型</h2>
+<!-- ======================================================
+     FINAL MAP
+     ====================================================== -->
 
-<table>
-  <thead>
-    <tr>
-      <th>题目</th>
-      <th>题型</th>
-      <th>最适合的思路</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Q1</td>
-      <td>Opinion</td>
-      <td><strong>Opinion → Reason → Example</strong></td>
-    </tr>
-    <tr>
-      <td>Q2</td>
-      <td>Experience</td>
-      <td><strong>Situation → Action → Difficulty → Result</strong></td>
-    </tr>
-    <tr>
-      <td>Q3</td>
-      <td>Observation / Solution</td>
-      <td><strong>What → Where → Impact</strong><br>或 <strong>Idea → Place → Benefit</strong></td>
-    </tr>
-    <tr>
-      <td>Q4</td>
-      <td>Evaluation</td>
-      <td><strong>Position → Benefit → Drawback → Why one matters more</strong></td>
-    </tr>
-  </tbody>
-</table>
+<section class="section" id="renewable-summary">
 
-<div class="key">
-<strong>真正要练的不是“背四个答案”，而是看到问题后知道自己应该用哪一种思路。</strong>
-</div>
+<h2>最后：四道题，四张思维卡</h2>
 
-<p>
-如果你能先判断题型，再用合适的结构打开思路，回答通常会更快、更清楚，也更容易继续展开。
-</p>
+<div class="final-map">
 
-<p class="small">
-注：上面的比较主要基于逐字稿本身。真实口语表现还会受到语速、停顿、发音、节奏和现场表达流畅度的影响。
-</p>
+  <div class="final-card">
+    <span class="num">1</span>
+    <b>Opinion</b>
+    <div class="final-formula">Opinion → Reason → Example</div>
+  </div>
+
+  <div class="final-card">
+    <span class="num">2</span>
+    <b>Experience</b>
+    <div class="final-formula">Situation → Action → Difficulty → Result</div>
+  </div>
+
+  <div class="final-card">
+    <span class="num">3</span>
+    <b>Observation / Solution</b>
+    <div class="final-formula">What → Where → Impact<br>Idea → Place → Benefit</div>
+  </div>
+
+  <div class="final-card">
+    <span class="num">4</span>
+    <b>Evaluation</b>
+    <div class="final-formula">Position → Benefit → Drawback → Why one matters more</div>
+  </div>
 
 </div>
+
+<div class="core">
+<strong>考试时先判断题目要求你做什么：</strong><br>
+表达观点？讲经历？描述观察？还是比较两边？<br>
+题型判断清楚以后，再用对应的结构打开思路。
+</div>
+
+<details class="practice-box">
+  <summary>30 秒自测：不看上面，你还能说出四种结构吗？</summary>
+  <p>
+    <strong>Q1:</strong> Opinion → Reason → Example<br>
+    <strong>Q2:</strong> Situation → Action → Difficulty → Result<br>
+    <strong>Q3:</strong> What → Where → Impact / Idea → Place → Benefit<br>
+    <strong>Q4:</strong> Position → Benefit → Drawback → Why one matters more
+  </p>
+</details>
+
+<p class="micro" style="margin-top:1.3rem;">
+注：Q1 的比较主要基于逐字稿。真实 TOEFL Speaking 表现还会受到发音、语速、节奏、停顿和整体流畅度影响。
+</p>
+
+</section>
+
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('toeflInterviewLab');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  // Smooth navigation
+  root.querySelectorAll('[data-jump]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const target = document.getElementById(button.dataset.jump);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Q1: version tabs
+  const versionButtons = Array.from(root.querySelectorAll('[data-version]'));
+  const versionPanels = Array.from(root.querySelectorAll('.version-panel'));
+
+  versionButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      versionButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+
+      versionPanels.forEach(function (panel) {
+        panel.hidden = panel.id !== button.dataset.version;
+      });
+    });
+  });
+
+  // Q1: vote
+  let q1Vote = null;
+  const voteButtons = Array.from(root.querySelectorAll('[data-vote]'));
+  const showQ1Analysis = document.getElementById('showQ1Analysis');
+  const q1Analysis = document.getElementById('q1Analysis');
+
+  voteButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      q1Vote = button.dataset.vote;
+
+      voteButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+    });
+  });
+
+  if (showQ1Analysis && q1Analysis) {
+    showQ1Analysis.addEventListener('click', function () {
+      q1Analysis.hidden = false;
+
+      if (q1Vote) {
+        const message = document.createElement('div');
+        message.className = 'micro';
+        message.style.marginTop = '.7rem';
+
+        if (q1Vote === '1') {
+          message.textContent = '你的选择和分析结果一致。继续看下面：关键不是“词难”，而是“逻辑完整”。';
+        } else {
+          message.textContent = '继续看下面的三个理由，再回头比较你刚才选择的版本。';
+        }
+
+        const old = q1Analysis.querySelector('.vote-feedback');
+        if (old) old.remove();
+
+        message.classList.add('vote-feedback');
+        q1Analysis.appendChild(message);
+      }
+    });
+  }
+
+  // Q2: scene builder
+  const scenes = {
+    ac: {
+      title: 'Air conditioner',
+      situation: 'It was a very hot summer.',
+      action: 'We set the AC to 26°C and used a fan more often.',
+      difficulty: 'It became difficult on extremely hot days.',
+      result: 'We still managed to use the AC less most of the time.'
+    },
+    lights: {
+      title: 'Lights',
+      situation: 'My family noticed that lights were often left on in empty rooms.',
+      action: 'We started turning them off whenever we left a room.',
+      difficulty: 'The action itself was easy, but remembering it took some time.',
+      result: 'After a while, it became a habit.'
+    },
+    devices: {
+      title: 'Computer / game console',
+      situation: 'Some devices at home stayed on or in standby mode for long periods.',
+      action: 'We started shutting them down completely when we finished using them.',
+      difficulty: 'It took a little extra effort each time.',
+      result: 'Gradually, it became part of our routine.'
+    },
+    transport: {
+      title: 'Short trips',
+      situation: 'Some places we often visited were close to home.',
+      action: 'We walked, biked, or used public transportation more often.',
+      difficulty: 'It worked well in good weather but was harder on rainy days.',
+      result: 'We used the car less for short trips.'
+    }
+  };
+
+  const sceneButtons = Array.from(root.querySelectorAll('[data-scene]'));
+  const sceneOutput = document.getElementById('sceneOutput');
+
+  function renderScene(key) {
+    const scene = scenes[key];
+    if (!scene || !sceneOutput) return;
+
+    sceneOutput.innerHTML =
+      '<div class="scene-title">' + scene.title + '</div>' +
+      '<div class="scene-line"><b>Situation:</b> ' + scene.situation + '</div>' +
+      '<div class="scene-line"><b>Action:</b> ' + scene.action + '</div>' +
+      '<div class="scene-line"><b>Difficulty:</b> ' + scene.difficulty + '</div>' +
+      '<div class="scene-line"><b>Result:</b> ' + scene.result + '</div>';
+  }
+
+  sceneButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      sceneButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+      renderScene(button.dataset.scene);
+    });
+  });
+
+  // Q3: two branches
+  const branchContent = {
+    seen:
+      '<div class="branch-heading">路线 A：WHAT → WHERE → IMPACT</div>' +
+      '<p><strong>What?</strong> Solar streetlights / rooftop solar panels / solar-powered signs</p>' +
+      '<p><strong>Where?</strong> Near my neighborhood / on school buildings / along some roads</p>' +
+      '<p><strong>Impact?</strong> 选择一个最容易解释的实际影响：</p>' +
+      '<div class="impact-chips">' +
+      '<span class="impact-chip">save electricity</span>' +
+      '<span class="impact-chip">lower energy costs</span>' +
+      '<span class="impact-chip">reduce pollution</span>' +
+      '<span class="impact-chip">provide local power</span>' +
+      '</div>',
+
+    idea:
+      '<div class="branch-heading">路线 B：IDEA → PLACE → BENEFIT</div>' +
+      '<p><strong>Idea?</strong> Install solar panels.</p>' +
+      '<p><strong>Place?</strong> On the roof of our school or community buildings.</p>' +
+      '<p><strong>Benefit?</strong> Generate some electricity locally and reduce long-term energy costs.</p>' +
+      '<div class="impact-chips">' +
+      '<span class="impact-chip">school rooftops</span>' +
+      '<span class="impact-chip">local electricity</span>' +
+      '<span class="impact-chip">lower long-term costs</span>' +
+      '</div>'
+  };
+
+  const branchButtons = Array.from(root.querySelectorAll('[data-branch]'));
+  const branchOutput = document.getElementById('branchOutput');
+
+  branchButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      branchButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+
+      if (branchOutput && branchContent[button.dataset.branch]) {
+        branchOutput.innerHTML = branchContent[button.dataset.branch];
+      }
+    });
+  });
+
+  // Q4: trade-off builder
+  const benefits = {
+    pollution: {
+      sentence: 'Renewable energy can reduce pollution.',
+      comparison: 'the environmental benefits can last for many years'
+    },
+    fossil: {
+      sentence: 'Renewable energy can reduce our dependence on fossil fuels.',
+      comparison: 'fossil fuels are limited, so finding alternatives matters in the long run'
+    },
+    cost: {
+      sentence: 'Renewable energy can lower energy costs over time.',
+      comparison: 'the long-term savings can eventually make up for some of the early expense'
+    },
+    remote: {
+      sentence: 'Renewable energy can give remote areas more ways to generate electricity.',
+      comparison: 'reliable access to electricity can have a lasting impact on daily life'
+    }
+  };
+
+  const drawbacks = {
+    initial: 'it can be expensive to build at first',
+    unstable: 'solar and wind power do not produce the same amount of energy all the time',
+    space: 'large renewable-energy projects can require space and new infrastructure'
+  };
+
+  let selectedBenefit = 'pollution';
+  let selectedDrawback = 'initial';
+
+  const benefitButtons = Array.from(root.querySelectorAll('[data-benefit]'));
+  const drawbackButtons = Array.from(root.querySelectorAll('[data-drawback]'));
+  const tradeoffOutput = document.getElementById('tradeoffOutput');
+
+  function renderTradeoff() {
+    if (!tradeoffOutput) return;
+
+    const benefit = benefits[selectedBenefit];
+    const drawback = drawbacks[selectedDrawback];
+
+    tradeoffOutput.innerHTML =
+      '<strong>Your logic line</strong><br><br>' +
+      'I think the benefits outweigh the drawbacks. ' +
+      benefit.sentence + ' ' +
+      'Of course, ' + drawback + ', but ' + benefit.comparison + '.';
+  }
+
+  benefitButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      benefitButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+      selectedBenefit = button.dataset.benefit;
+      renderTradeoff();
+    });
+  });
+
+  drawbackButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      drawbackButtons.forEach(function (item) {
+        item.classList.remove('is-selected');
+      });
+
+      button.classList.add('is-selected');
+      selectedDrawback = button.dataset.drawback;
+      renderTradeoff();
+    });
+  });
+})();
+</script>
