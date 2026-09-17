@@ -78,113 +78,79 @@ categories: [ESL, TOEFL, Speaking]
 }
 
 
-/* ===== ShiShi AP Center Dark Theme Fix ===== */
+/* ===== ShiShi AP Center Dark Theme ===== */
 
-.interview-lab {
-  --ink: #f2f2f2;
-  --muted: #b0b3bb;
-  --line: #444852;
-
-  --soft: #282a31;
-  --soft-2: #30333b;
-
-  --accent: #9aabff;
-  --accent-soft: #303750;
-
-  --good: #83d8a5;
-  --good-soft: #23372c;
-
-  --warm: #e7c56b;
-  --warm-soft: #3a3324;
-
-  color: var(--ink);
+.interview-guide {
+  color: #eeeeee;
 }
 
-/* 顶部介绍 */
-.interview-lab .hero {
-  background: #282a31;
-  border-color: var(--line);
+/* 开头说明文字 */
+.interview-guide .lead {
+  color: #c5c8cf;
 }
 
-/* 所有浅色卡片统一改成深色 */
-.interview-lab .map-card,
-.interview-lab .formula-step,
-.interview-lab .choice-btn,
-.interview-lab .scene-btn,
-.interview-lab .branch-btn,
-.interview-lab .pick-btn,
-.interview-lab .answer-card,
-.interview-lab .signal,
-.interview-lab .mini-step,
-.interview-lab .scene-output,
-.interview-lab .branch-output,
-.interview-lab .build-output,
-.interview-lab .final-card,
-.interview-lab .builder-panel .pick-btn {
-  background: #282a31;
-  color: var(--ink);
-  border-color: var(--line);
+/* 题目框 */
+.interview-guide .question {
+  background: #2b2d34;
+  color: #f5f5f5;
+  border-left-color: #7f8cff;
 }
 
-/* 题目 */
-.interview-lab .question-box,
-.interview-lab .thinking-box,
-.interview-lab .builder-panel,
-.interview-lab details {
-  background: #26282f;
-  color: var(--ink);
-  border-color: var(--line);
+/* 核心提示框 */
+.interview-guide .key {
+  background: #30364a;
+  color: #f5f6ff;
+  border: 1px solid #464e6b;
 }
 
-/* 选中状态 */
-.interview-lab button.is-selected {
-  background: var(--accent-soft);
-  border-color: var(--accent);
+/* 提示 / 注意 */
+.interview-guide .warning {
+  background: #393326;
+  color: #f2ead6;
+  border: 1px solid #5c5137;
+}
+
+/* 三个答案 */
+.interview-guide .answer {
+  background: #292b31;
+  color: #eeeeee;
+  border-color: #44474f;
+}
+
+/* 思维模型 */
+.interview-guide .model {
+  background: #31343c;
+  color: #ffffff;
+  border: 1px solid #484b55;
+}
+
+/* 表格 */
+.interview-guide table {
+  color: #eeeeee;
+}
+
+.interview-guide th {
+  background: #30323a;
   color: #ffffff;
 }
 
-/* hover */
-.interview-lab .map-card:hover,
-.interview-lab .map-card:focus-visible,
-.interview-lab .choice-btn:hover,
-.interview-lab .choice-btn:focus-visible,
-.interview-lab .scene-btn:hover,
-.interview-lab .scene-btn:focus-visible,
-.interview-lab .branch-btn:hover,
-.interview-lab .branch-btn:focus-visible,
-.interview-lab .pick-btn:hover,
-.interview-lab .pick-btn:focus-visible {
-  background: #343846;
-  color: #ffffff;
+.interview-guide td {
+  background: #26282e;
 }
 
-/* 绿色结果框 */
-.interview-lab .result {
-  background: var(--good-soft);
-  color: var(--ink);
-  border-color: #41634e;
-}
-
-/* 黄色提示框 */
-.interview-lab .callout {
-  background: var(--warm-soft);
-  color: var(--ink);
-  border-color: #665a35;
-}
-
-/* 蓝色核心提示 */
-.interview-lab .big-idea {
-  background: var(--accent-soft);
-  color: var(--ink);
+.interview-guide th,
+.interview-guide td {
+  border-color: #484b53;
 }
 
 /* 次要文字 */
-.interview-lab .micro,
-.interview-lab .status,
-.interview-lab .research-note,
-.interview-lab .map-card .formula,
-.interview-lab .mini-step span {
-  color: var(--muted);
+.interview-guide .small {
+  color: #aeb2bb;
+}
+
+/* 链接 */
+.interview-guide a {
+  color: #9eafff;
 }
 
 
