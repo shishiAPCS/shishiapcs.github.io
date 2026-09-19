@@ -1,0 +1,1113 @@
+---
+layout: post
+title: "College Board 登录太慢？可以试试这招"
+date: 2026-09-19
+categories: [AP, College Board]
+---
+
+<style>
+.cb-guide {
+  --accent: #60a5fa;
+  --accent-2: #a78bfa;
+  --good: #34d399;
+  --warn: #fbbf24;
+  --soft: rgba(127, 127, 127, 0.10);
+  --soft-2: rgba(127, 127, 127, 0.16);
+  --line: rgba(127, 127, 127, 0.30);
+  color: inherit;
+  line-height: 1.75;
+  position: relative;
+}
+
+.cb-guide * {
+  box-sizing: border-box;
+}
+
+.cb-guide h1,
+.cb-guide h2,
+.cb-guide h3 {
+  line-height: 1.3;
+}
+
+.cb-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 .75rem;
+}
+
+.cb-lang-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .45rem .85rem;
+  background: var(--soft);
+  color: inherit;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: border-color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.cb-lang-toggle:hover {
+  border-color: var(--accent);
+  background: rgba(96,165,250,.11);
+  transform: translateY(-1px);
+}
+
+.cb-language[hidden] {
+  display: none !important;
+}
+
+.cb-hero {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  margin: 0 0 1.4rem;
+  background:
+    radial-gradient(circle at top right, rgba(96,165,250,.16), transparent 38%),
+    var(--soft);
+}
+
+.cb-hero .eyebrow {
+  font-size: .78rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .72;
+  margin-bottom: .35rem;
+}
+
+.cb-hero h2 {
+  margin: 0 0 .7rem;
+  font-size: 1.45rem;
+}
+
+.cb-hero p {
+  margin: .5rem 0 0;
+}
+
+.cb-signal {
+  display: inline-block;
+  margin-top: .8rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: rgba(52,211,153,.14);
+  border: 1px solid rgba(52,211,153,.35);
+  font-size: .9rem;
+}
+
+.cb-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 1rem 0;
+  background: var(--soft);
+}
+
+.cb-note {
+  border-left: 4px solid var(--accent);
+  padding: .75rem 1rem;
+  margin: 1rem 0;
+  background: rgba(96,165,250,.09);
+  border-radius: 0 12px 12px 0;
+}
+
+.cb-warning {
+  border-left-color: var(--warn);
+  background: rgba(251,191,36,.09);
+}
+
+.cb-good {
+  border-left-color: var(--good);
+  background: rgba(52,211,153,.09);
+}
+
+.cb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.cb-mini {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--soft);
+}
+
+.cb-mini h3 {
+  margin: 0 0 .4rem;
+  font-size: 1rem;
+}
+
+.cb-mini p {
+  margin: 0;
+  font-size: .94rem;
+}
+
+.cb-flow {
+  display: grid;
+  gap: .55rem;
+  margin: 1rem 0;
+}
+
+.cb-flow div {
+  padding: .75rem .9rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+}
+
+.cb-flow .arrow {
+  text-align: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  opacity: .55;
+  font-size: 1.15rem;
+}
+
+/* Browser cards */
+.cb-browser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.cb-browser-card {
+  width: 100%;
+  text-align: left;
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--soft);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  position: relative;
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.cb-browser-card:hover {
+  border-color: var(--accent);
+  background: rgba(96,165,250,.08);
+  transform: translateY(-2px);
+}
+
+.cb-browser-card.is-active {
+  border-color: var(--accent);
+  background: rgba(96,165,250,.12);
+  box-shadow: 0 0 0 2px rgba(96,165,250,.10);
+}
+
+.cb-browser-card h3 {
+  margin: 0 2rem .45rem 0;
+  font-size: 1.05rem;
+}
+
+.cb-browser-card p {
+  margin: .35rem 0 0;
+  font-size: .93rem;
+  opacity: .86;
+}
+
+.cb-browser-arrow {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 1.1rem;
+  opacity: .65;
+  transition: transform .2s ease;
+}
+
+.cb-browser-card.is-active .cb-browser-arrow {
+  transform: rotate(180deg);
+}
+
+/* Hidden detail panels */
+.cb-browser-panel {
+  display: none;
+  margin: .25rem 0 1.5rem;
+  padding-top: .15rem;
+}
+
+.cb-browser-panel.is-open {
+  display: block;
+  animation: cbReveal .22s ease-out;
+}
+
+@keyframes cbReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cb-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin: .4rem 0 .9rem;
+}
+
+.cb-panel-heading h2 {
+  margin: 0;
+}
+
+.cb-panel-badge {
+  display: inline-block;
+  padding: .2rem .55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft);
+  font-size: .78rem;
+  opacity: .8;
+}
+
+.cb-steps {
+  counter-reset: step;
+  margin: 1rem 0;
+}
+
+.cb-step {
+  position: relative;
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 1rem 4rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--soft);
+}
+
+.cb-step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  background: var(--accent);
+  color: #08111f;
+}
+
+.cb-step h3 {
+  margin: 0 0 .45rem;
+  font-size: 1.05rem;
+}
+
+.cb-step p {
+  margin: .35rem 0;
+}
+
+.cb-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem;
+  margin: .8rem 0;
+}
+
+.cb-path span {
+  padding: .35rem .58rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--soft-2);
+  font-size: .9rem;
+}
+
+.cb-path b {
+  opacity: .55;
+}
+
+.cb-code {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: .7rem 0;
+}
+
+.cb-code code {
+  display: inline-block;
+  padding: .55rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(0,0,0,.18);
+  color: inherit;
+  overflow-wrap: anywhere;
+}
+
+.cb-copy {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: .5rem .72rem;
+  background: var(--soft-2);
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cb-copy:hover {
+  border-color: var(--accent);
+}
+
+.cb-check {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cb-check li {
+  margin: .55rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.cb-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--good);
+  font-weight: 700;
+}
+
+.cb-small {
+  font-size: .88rem;
+  opacity: .76;
+}
+
+.cb-guide a {
+  color: var(--accent);
+}
+
+@media (max-width: 680px) {
+  .cb-grid,
+  .cb-browser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cb-step {
+    padding-left: 3.5rem;
+  }
+
+  .cb-step::before {
+    left: .85rem;
+  }
+
+  .cb-toolbar {
+    margin-bottom: .6rem;
+  }
+}
+</style>
+
+<div class="cb-guide">
+
+  <div class="cb-toolbar">
+    <button
+      class="cb-lang-toggle"
+      id="cb-lang-toggle"
+      type="button"
+      aria-label="Switch to English"
+    >English</button>
+  </div>
+
+  <!-- ==================== 中文 ==================== -->
+  <div class="cb-language" data-lang="zh">
+
+    <div class="cb-hero">
+      <div class="eyebrow">AP / College Board · Troubleshooting</div>
+      <h2>College Board 打开很慢，开无痕窗口反而很快？</h2>
+      <p>
+        先别急着换电脑，也不用把整个浏览器的数据全部清掉。
+        可以先<strong>只清理 College Board 自己保存的 Cookies 和网站数据</strong>，
+        让浏览器重新建立一次干净的登录会话。
+      </p>
+      <span class="cb-signal">典型信号：普通窗口慢 → 无痕窗口明显更快</span>
+    </div>
+
+    <div class="cb-note">
+      <strong>先说明：</strong>
+      我们平时会简单地说“清一下 CB 缓存”，但这里更准确的说法是
+      <strong>清除 College Board 的 Cookies + Site Data（网站数据）</strong>。
+      这<strong>不保证</strong>网络本身会变快，但如果问题来自旧登录状态、过期会话或异常网站数据，
+      这样做经常可以解决登录慢、反复跳转或页面一直转圈的问题。
+    </div>
+
+    <h2>为什么无痕模式有时反而更快？</h2>
+
+    <div class="cb-grid">
+      <div class="cb-mini">
+        <h3>普通浏览器窗口</h3>
+        <p>会继续使用之前留下的 Cookie、登录会话和网站本地数据。</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>无痕 / InPrivate / 私人浏览</h3>
+        <p>相当于从一个比较“干净”的临时浏览环境开始，不会直接沿用普通窗口里的旧网站数据。</p>
+      </div>
+    </div>
+
+    <div class="cb-flow">
+      <div>旧的 College Board 登录信息</div>
+      <div class="arrow">↓</div>
+      <div>网站检查旧 Session / Cookie</div>
+      <div class="arrow">↓</div>
+      <div>如果状态异常：可能重新验证、跳转、等待</div>
+      <div class="arrow">↓</div>
+      <div>页面看起来就会特别慢</div>
+    </div>
+
+    <p>
+      所以，如果你发现<strong>同一台电脑、同一个网络，无痕模式明显更快</strong>，
+      那么可以先尝试清理 College Board 的网站数据。
+    </p>
+
+    <h2>选择你的浏览器</h2>
+    <p>点击下面的浏览器卡片，查看详细操作步骤。再次点击当前卡片可以收起。</p>
+
+    <div class="cb-browser-grid">
+      <button class="cb-browser-card" type="button" data-browser="chrome" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Chrome</h3>
+        <p>只清 College Board 的 Cookie 和网站数据。</p>
+      </button>
+
+      <button class="cb-browser-card" type="button" data-browser="edge" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Microsoft Edge</h3>
+        <p>通过 Edge 的 Cookie / 网站数据设置删除指定站点。</p>
+      </button>
+
+      <button class="cb-browser-card" type="button" data-browser="safari" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Safari（Mac）</h3>
+        <p>通过“管理网站数据”只移除 College Board。</p>
+      </button>
+    </div>
+
+    <!-- Chrome -->
+    <section class="cb-browser-panel" data-browser-panel="chrome">
+      <div class="cb-panel-heading">
+        <h2>Chrome 详细步骤</h2>
+        <span class="cb-panel-badge">Chrome</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>打开“网站数据”页面</h3>
+          <p>最直接的方法是在 Chrome 地址栏输入：</p>
+
+          <div class="cb-code">
+            <code>chrome://settings/content/all</code>
+            <button class="cb-copy" type="button" data-copy="chrome://settings/content/all" data-copy-default="复制" data-copy-done="已复制">复制</button>
+          </div>
+
+          <p>如果这个地址在你的 Chrome 版本里跳转了，也可以从设置里进入：</p>
+
+          <div class="cb-path">
+            <span>Chrome 设置</span>
+            <b>→</b>
+            <span>隐私和安全</span>
+            <b>→</b>
+            <span>第三方 Cookie</span>
+            <b>→</b>
+            <span>查看所有网站数据和权限</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>搜索 College Board</h3>
+          <p>在网站数据页面搜索 <code>collegeboard</code>。</p>
+          <p>你可能会看到 <code>collegeboard.org</code> 或它的相关子域名。</p>
+        </div>
+
+        <div class="cb-step">
+          <h3>删除 College Board 的网站数据</h3>
+          <p>
+            点击 College Board 条目旁边的<strong>删除 / 垃圾桶图标</strong>，
+            删除与 <code>collegeboard.org</code> 有关的网站数据。
+          </p>
+
+          <div class="cb-note cb-warning">
+            <strong>注意：</strong>删除后，你会从 College Board 退出登录。这是正常现象。
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>关闭旧页面并重新登录</h3>
+          <p>
+            关闭所有 College Board、My AP、AP Classroom 标签页，
+            再重新打开 My AP 并登录。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Edge -->
+    <section class="cb-browser-panel" data-browser-panel="edge">
+      <div class="cb-panel-heading">
+        <h2>Microsoft Edge 详细步骤</h2>
+        <span class="cb-panel-badge">Edge</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>打开 Cookie 和网站数据设置</h3>
+          <div class="cb-path">
+            <span>Edge 设置</span>
+            <b>→</b>
+            <span>Cookie 和网站权限</span>
+            <b>→</b>
+            <span>管理和删除 Cookie 和站点数据</span>
+            <b>→</b>
+            <span>查看所有 Cookie 和网站数据</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>搜索 College Board</h3>
+          <p>
+            搜索 <code>collegeboard</code>，
+            找到 College Board 相关条目。
+          </p>
+        </div>
+
+        <div class="cb-step">
+          <h3>删除并重新登录</h3>
+          <p>
+            删除对应的 Cookie 和网站数据，
+            然后关闭所有 College Board / My AP / AP Classroom 标签页，
+            再重新打开并登录。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safari -->
+    <section class="cb-browser-panel" data-browser-panel="safari">
+      <div class="cb-panel-heading">
+        <h2>Safari（Mac）详细步骤</h2>
+        <span class="cb-panel-badge">Safari</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>打开“管理网站数据”</h3>
+          <div class="cb-path">
+            <span>Safari</span>
+            <b>→</b>
+            <span>设置</span>
+            <b>→</b>
+            <span>隐私</span>
+            <b>→</b>
+            <span>管理网站数据</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>搜索并移除 College Board</h3>
+          <p>
+            搜索 <code>collegeboard</code>，
+            选中 College Board 相关网站数据后点击<strong>移除</strong>，
+            最后点击<strong>完成</strong>。
+          </p>
+        </div>
+
+        <div class="cb-step">
+          <h3>重新打开 College Board</h3>
+          <p>
+            关闭之前打开的 College Board 页面，
+            再用普通 Safari 窗口重新进入 My AP / AP Classroom 并登录。
+          </p>
+
+          <div class="cb-note cb-warning">
+            <strong>这里指 Mac 版 Safari。</strong>
+            iPhone / iPad 的 Safari 设置路径不同。如果只是解决 College Board 的问题，
+            不要直接选择“移除所有网站数据”，否则会影响其他网站的登录状态。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cb-note cb-good">
+      <strong>三个浏览器最后都一样：</strong>
+      清完后关闭所有 College Board / My AP / AP Classroom 标签页，
+      再重新打开并登录。
+    </div>
+
+    <h2>这样做会删除什么？</h2>
+
+    <div class="cb-card">
+      <ul class="cb-check">
+        <li>College Board 的 Cookie</li>
+        <li>之前保存的登录 / Session 信息</li>
+        <li>College Board 在浏览器本地保存的网站数据</li>
+        <li>可能出现异常的旧网站状态</li>
+      </ul>
+    </div>
+
+    <h2>这样做不会影响什么？</h2>
+
+    <div class="cb-card">
+      <ul class="cb-check">
+        <li>不会把其他网站一起退出登录</li>
+        <li>不会删除整个浏览器的浏览历史</li>
+        <li>不会删除书签</li>
+        <li>不会删除浏览器密码管理器里保存的密码</li>
+        <li>不会删除你的 College Board 账号、课程或 AP Classroom 作业</li>
+      </ul>
+    </div>
+
+    <div class="cb-note cb-warning">
+      <strong>不要一上来就点“清除全部浏览数据”。</strong>
+      如果只是 College Board 有问题，优先只清 College Board。
+      这样改动最小，也不会把其他网站的登录状态一起清掉。
+    </div>
+
+    <h2>什么时候值得试？</h2>
+
+    <div class="cb-grid">
+      <div class="cb-mini">
+        <h3>✅ 值得先试</h3>
+        <p>普通窗口很慢，但无痕窗口明显正常。</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>✅ 值得先试</h3>
+        <p>登录后反复跳转、一直转圈，或者突然打不开 AP Classroom。</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>🤔 不一定有用</h3>
+        <p>普通窗口和无痕窗口都一样慢。</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>🤔 不一定有用</h3>
+        <p>全班所有设备同时变慢——这时更可能是网络或 College Board 服务本身的问题。</p>
+      </div>
+    </div>
+
+    <div class="cb-note cb-good">
+      <strong>记住这个排查思路：</strong><br>
+      <strong>无痕快、普通慢 → 先怀疑浏览器里的旧网站数据。</strong><br>
+      先清 College Board 自己的数据，再重新登录，而不是先清整个浏览器。
+    </div>
+
+    <p class="cb-small">
+      参考：Google Chrome Help、Microsoft Support、Apple Support 关于按网站管理 Cookie / 网站数据的官方说明。<br>
+      浏览器菜单名称可能会随版本更新略有变化，但原则不变：优先只删除 College Board 的网站数据，而不是清空整个浏览器。
+    </p>
+
+  </div>
+
+  <!-- ==================== English ==================== -->
+  <div class="cb-language" data-lang="en" lang="en" hidden>
+
+    <div class="cb-hero">
+      <div class="eyebrow">AP / College Board · Troubleshooting</div>
+      <h2>College Board slow in a regular window but faster in private browsing?</h2>
+      <p>
+        You probably do not need to switch computers or wipe all of your browser data.
+        A good first step is to <strong>clear only College Board's cookies and site data</strong>
+        so the browser can start a fresh login session.
+      </p>
+      <span class="cb-signal">A useful clue: regular window is slow → private window is noticeably faster</span>
+    </div>
+
+    <div class="cb-note">
+      <strong>One quick clarification:</strong>
+      people often call this “clearing the College Board cache,” but what we are really doing here is
+      <strong>removing College Board cookies and site data</strong>.
+      This will not make your internet connection itself faster. However, if the slowdown is caused by
+      an expired login session, stale cookies, or problematic local site data, it can fix slow sign-ins,
+      repeated redirects, or pages that keep spinning.
+    </div>
+
+    <h2>Why can private browsing feel faster?</h2>
+
+    <div class="cb-grid">
+      <div class="cb-mini">
+        <h3>Regular browser window</h3>
+        <p>It keeps using cookies, login sessions, and local site data left over from earlier visits.</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>Incognito / InPrivate / Private Browsing</h3>
+        <p>It starts with a much cleaner temporary browser state instead of reusing most of that existing site data.</p>
+      </div>
+    </div>
+
+    <div class="cb-flow">
+      <div>Old College Board login data</div>
+      <div class="arrow">↓</div>
+      <div>College Board checks an existing session or cookie</div>
+      <div class="arrow">↓</div>
+      <div>If something is stale: extra checks, redirects, or delays may happen</div>
+      <div class="arrow">↓</div>
+      <div>The page feels unusually slow</div>
+    </div>
+
+    <p>
+      So if <strong>the same computer on the same network is much faster in private browsing</strong>,
+      clearing College Board's site data is a sensible first troubleshooting step.
+    </p>
+
+    <h2>Choose your browser</h2>
+    <p>Click a browser card to open the detailed instructions. Click the same card again to collapse them.</p>
+
+    <div class="cb-browser-grid">
+      <button class="cb-browser-card" type="button" data-browser="chrome" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Chrome</h3>
+        <p>Remove only College Board cookies and site data.</p>
+      </button>
+
+      <button class="cb-browser-card" type="button" data-browser="edge" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Microsoft Edge</h3>
+        <p>Delete College Board data from Edge's cookies and site-data settings.</p>
+      </button>
+
+      <button class="cb-browser-card" type="button" data-browser="safari" aria-expanded="false">
+        <span class="cb-browser-arrow">⌄</span>
+        <h3>Safari (Mac)</h3>
+        <p>Use Manage Website Data to remove College Board only.</p>
+      </button>
+    </div>
+
+    <!-- Chrome -->
+    <section class="cb-browser-panel" data-browser-panel="chrome">
+      <div class="cb-panel-heading">
+        <h2>Chrome: detailed steps</h2>
+        <span class="cb-panel-badge">Chrome</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>Open the site-data page</h3>
+          <p>The quickest method is to enter this in the Chrome address bar:</p>
+
+          <div class="cb-code">
+            <code>chrome://settings/content/all</code>
+            <button class="cb-copy" type="button" data-copy="chrome://settings/content/all" data-copy-default="Copy" data-copy-done="Copied">Copy</button>
+          </div>
+
+          <p>If Chrome redirects that address in your version, you can also go through Settings:</p>
+
+          <div class="cb-path">
+            <span>Chrome Settings</span>
+            <b>→</b>
+            <span>Privacy and security</span>
+            <b>→</b>
+            <span>Third-party cookies</span>
+            <b>→</b>
+            <span>See all site data and permissions</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>Search for College Board</h3>
+          <p>Search for <code>collegeboard</code> on the site-data page.</p>
+          <p>You may see <code>collegeboard.org</code> along with related College Board subdomains.</p>
+        </div>
+
+        <div class="cb-step">
+          <h3>Remove College Board site data</h3>
+          <p>
+            Use the <strong>delete / trash icon</strong> next to the College Board entries
+            and remove the data associated with <code>collegeboard.org</code>.
+          </p>
+
+          <div class="cb-note cb-warning">
+            <strong>Note:</strong> this will sign you out of College Board. That is expected.
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>Close the old tabs and sign in again</h3>
+          <p>
+            Close every College Board, My AP, and AP Classroom tab.
+            Then reopen My AP and sign in again.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Edge -->
+    <section class="cb-browser-panel" data-browser-panel="edge">
+      <div class="cb-panel-heading">
+        <h2>Microsoft Edge: detailed steps</h2>
+        <span class="cb-panel-badge">Edge</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>Open cookies and site-data settings</h3>
+          <div class="cb-path">
+            <span>Edge Settings</span>
+            <b>→</b>
+            <span>Cookies and site permissions</span>
+            <b>→</b>
+            <span>Manage and delete cookies and site data</span>
+            <b>→</b>
+            <span>See all cookies and site data</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>Search for College Board</h3>
+          <p>
+            Search for <code>collegeboard</code> and find the College Board entries.
+          </p>
+        </div>
+
+        <div class="cb-step">
+          <h3>Delete the data and sign in again</h3>
+          <p>
+            Remove the College Board cookies and site data.
+            Then close every College Board / My AP / AP Classroom tab,
+            reopen the site, and sign in again.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safari -->
+    <section class="cb-browser-panel" data-browser-panel="safari">
+      <div class="cb-panel-heading">
+        <h2>Safari (Mac): detailed steps</h2>
+        <span class="cb-panel-badge">Safari</span>
+      </div>
+
+      <div class="cb-steps">
+        <div class="cb-step">
+          <h3>Open Manage Website Data</h3>
+          <div class="cb-path">
+            <span>Safari</span>
+            <b>→</b>
+            <span>Settings</span>
+            <b>→</b>
+            <span>Privacy</span>
+            <b>→</b>
+            <span>Manage Website Data</span>
+          </div>
+        </div>
+
+        <div class="cb-step">
+          <h3>Find and remove College Board</h3>
+          <p>
+            Search for <code>collegeboard</code>, select the College Board entries,
+            click <strong>Remove</strong>, and then click <strong>Done</strong>.
+          </p>
+        </div>
+
+        <div class="cb-step">
+          <h3>Reopen College Board</h3>
+          <p>
+            Close the College Board pages you already had open.
+            Then open My AP / AP Classroom again in a regular Safari window and sign in.
+          </p>
+
+          <div class="cb-note cb-warning">
+            <strong>This section is for Safari on Mac.</strong>
+            Safari on iPhone and iPad uses a different settings path.
+            If College Board is the only site having trouble, avoid removing all website data,
+            because that can sign you out of other websites too.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cb-note cb-good">
+      <strong>The final step is the same in all three browsers:</strong>
+      after clearing the site data, close every College Board / My AP / AP Classroom tab,
+      reopen the site, and sign in again.
+    </div>
+
+    <h2>What will this remove?</h2>
+
+    <div class="cb-card">
+      <ul class="cb-check">
+        <li>College Board cookies</li>
+        <li>Previously saved login and session information</li>
+        <li>College Board site data stored locally by the browser</li>
+        <li>Potentially stale or broken site state</li>
+      </ul>
+    </div>
+
+    <h2>What will this NOT affect?</h2>
+
+    <div class="cb-card">
+      <ul class="cb-check">
+        <li>It will not sign you out of unrelated websites</li>
+        <li>It will not erase your full browsing history</li>
+        <li>It will not delete your bookmarks</li>
+        <li>It will not delete passwords saved in your browser's password manager</li>
+        <li>It will not delete your College Board account, courses, or AP Classroom assignments</li>
+      </ul>
+    </div>
+
+    <div class="cb-note cb-warning">
+      <strong>Do not start by clearing all browsing data.</strong>
+      If College Board is the only site having trouble, remove College Board's data first.
+      It is a much smaller change and avoids signing you out of unrelated sites.
+    </div>
+
+    <h2>When is this worth trying?</h2>
+
+    <div class="cb-grid">
+      <div class="cb-mini">
+        <h3>✅ Good time to try it</h3>
+        <p>The regular window is slow, but private browsing works normally.</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>✅ Good time to try it</h3>
+        <p>College Board keeps redirecting, spinning, or suddenly refuses to load AP Classroom.</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>🤔 It may not help</h3>
+        <p>Both regular and private windows are equally slow.</p>
+      </div>
+
+      <div class="cb-mini">
+        <h3>🤔 It may not help</h3>
+        <p>Everyone in the class becomes slow at the same time. That points more toward the network or the College Board service itself.</p>
+      </div>
+    </div>
+
+    <div class="cb-note cb-good">
+      <strong>Remember the troubleshooting pattern:</strong><br>
+      <strong>Private browsing is fast, regular browsing is slow → suspect old browser site data first.</strong><br>
+      Clear College Board's own data and sign in again before wiping the whole browser.
+    </div>
+
+    <p class="cb-small">
+      References: official Google Chrome Help, Microsoft Support, and Apple Support documentation on managing cookies and website data by site.<br>
+      Menu labels can change slightly between browser versions, but the principle stays the same:
+      remove College Board's data first instead of clearing the entire browser.
+    </p>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  const guide = document.querySelector(".cb-guide");
+  if (!guide) return;
+
+  const langToggle = guide.querySelector("#cb-lang-toggle");
+  let currentLang = "zh";
+  let openBrowser = null;
+
+  function getActiveLanguagePanel() {
+    return guide.querySelector('.cb-language[data-lang="' + currentLang + '"]');
+  }
+
+  function syncBrowserState() {
+    guide.querySelectorAll(".cb-language").forEach(function (languagePanel) {
+      const cards = languagePanel.querySelectorAll(".cb-browser-card");
+      const panels = languagePanel.querySelectorAll(".cb-browser-panel");
+
+      cards.forEach(function (card) {
+        const active = card.dataset.browser === openBrowser;
+        card.classList.toggle("is-active", active);
+        card.setAttribute("aria-expanded", active ? "true" : "false");
+      });
+
+      panels.forEach(function (panel) {
+        const open = panel.dataset.browserPanel === openBrowser;
+        panel.classList.toggle("is-open", open);
+      });
+    });
+  }
+
+  guide.addEventListener("click", function (event) {
+    const browserCard = event.target.closest(".cb-browser-card");
+
+    if (browserCard && browserCard.closest('.cb-language[data-lang="' + currentLang + '"]')) {
+      const selectedBrowser = browserCard.dataset.browser;
+      openBrowser = openBrowser === selectedBrowser ? null : selectedBrowser;
+      syncBrowserState();
+
+      if (openBrowser) {
+        const activePanel = getActiveLanguagePanel().querySelector(
+          '.cb-browser-panel[data-browser-panel="' + openBrowser + '"]'
+        );
+
+        if (activePanel) {
+          setTimeout(function () {
+            activePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 80);
+        }
+      }
+      return;
+    }
+
+    const copyButton = event.target.closest(".cb-copy");
+    if (copyButton) {
+      const textToCopy = copyButton.dataset.copy;
+      const defaultText = copyButton.dataset.copyDefault || copyButton.textContent;
+      const doneText = copyButton.dataset.copyDone || "Copied";
+
+      function showCopied() {
+        copyButton.textContent = doneText;
+        setTimeout(function () {
+          copyButton.textContent = defaultText;
+        }, 1400);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(showCopied);
+      } else {
+        const temp = document.createElement("textarea");
+        temp.value = textToCopy;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        temp.remove();
+        showCopied();
+      }
+    }
+  });
+
+  langToggle.addEventListener("click", function () {
+    currentLang = currentLang === "zh" ? "en" : "zh";
+
+    guide.querySelectorAll(".cb-language").forEach(function (panel) {
+      panel.hidden = panel.dataset.lang !== currentLang;
+    });
+
+    if (currentLang === "zh") {
+      langToggle.textContent = "English";
+      langToggle.setAttribute("aria-label", "Switch to English");
+    } else {
+      langToggle.textContent = "中文";
+      langToggle.setAttribute("aria-label", "切换到中文");
+    }
+
+    syncBrowserState();
+  });
+
+  syncBrowserState();
+})();
+</script>
