@@ -5,242 +5,153 @@ categories: media
 render_with_liquid: false
 ---
 
-In Topic 3.1, you decided what data and behaviors a class should have. Now you will see how those ideas appear in actual Java code: **instance variables store object data, constructors initialize that data, and methods define object behaviors**.
+在 Unit 1 中，我们一直在**使用别人已经写好的类**：例如 `String`、`Turtle`，以及它们的对象和方法。从这一课开始，我们反过来学习：**一个 Java 类本身是怎样组成的，以及怎样设计自己的类。**
 
-在 3.1 中，我们学习了如何决定一个类需要哪些数据和行为。现在，我们来看这些设计如何真正写进 Java：**实例变量保存对象的数据，构造器初始化数据，方法定义对象的行为。**
+> **一个类的主体通常由三部分组成：实例变量（instance variables）保存对象的数据，构造器（constructor）负责初始化对象，方法（methods）定义对象能做什么。**
 
-> **A class is a blueprint. Each object gets its own instance-variable values, while the constructor and methods define how those objects are created and used.**
-> **类是一张蓝图。每个对象拥有自己的一份实例变量数据，而构造器和方法决定对象如何被创建和使用。**
-
-# Core Concepts:<br>核心知识点
+# 核心知识点
 
 <div class="markmap-container">
 <div class="markmap">
 <script type="text/template">
 
-# AP CSA 3.3 Java 类的结构<br>Anatomy of a Java Class
+# AP CSA 3.3 Java 类的结构（Anatomy of a Java Class）
 
-## 类与对象<br>Class and Object
+## 类的骨架（Class Structure）
 
-* `class` 定义创建对象的蓝图<br>A class defines a blueprint for objects
-* 对象是类的实例<br>An object is an instance of a class
-* `new` 创建新的对象<br>`new` creates a new object
+* `public class ClassName`
+* `{ }` 中是类的主体（class body）
+* 主体通常包含三部分
+  * 实例变量（instance variables）
+  * 构造器（constructor）
+  * 方法（methods）
 
-## 类的三个主要部分<br>Three Main Parts
+## 实例变量（Instance Variables）
 
-* 实例变量：保存对象数据<br>Instance variables store object data
-* 构造器：初始化实例变量<br>Constructors initialize instance variables
-* 实例方法：定义对象行为<br>Instance methods define object behavior
+* 保存对象的属性和数据（attributes / data）
+* 通常写在类的顶部、方法之外
+* AP CSA 中通常声明为 `private`
+* 每个对象都有自己的一份实例变量
 
-## 实例变量<br>Instance Variables
+## 构造器（Constructor）
 
-* 每个对象拥有自己的一份<br>Each object has its own copy
-* AP CSA 中通常声明为 `private`<br>Usually declared `private` in AP CSA
-* 基本格式：`private type name;`
+* 创建对象时初始化实例变量
+* 名字与类名相同
+* AP CSA 中构造器使用 `public`
+* 具体写法在 3.4 继续学习
 
-## 构造器<br>Constructors
+## 实例方法（Instance Methods）
 
-* 创建对象时运行<br>Runs when an object is created
-* 用于初始化对象数据<br>Initializes object data
-* 名称与类名相同<br>Has the same name as the class
-* AP CSA 中构造器为 `public`<br>Constructors are `public` in AP CSA
+* 定义对象的行为<br>behaviors
+* 可以直接访问该对象的实例变量
+* 需要让类外调用时通常使用 `public`
+* 只在类内部使用的辅助方法可以是 `private`
 
-## 实例方法<br>Instance Methods
+## `public` 与 `private`（Access Modifiers）
 
-* 定义对象能够做什么<br>Define what an object can do
-* 可以直接访问对象的实例变量<br>Can directly access the object's instance variables
-* 通过对象和点运算符调用<br>Called using an object and the dot operator
+* `public`：类外代码可以访问
+* `private`：只能在当前类内部访问
+* 实例变量通常设为 `private`
+* 这是数据封装（data encapsulation）的基础
 
-## 数据封装<br>Data Encapsulation
+## 每个对象各自保存数据
 
-* 隐藏类的内部数据与实现细节<br>Hide internal data and implementation details
-* 实例变量使用 `private`<br>Instance variables are `private`
-* 对外需要使用的操作通常使用 `public` 方法<br>Operations intended for outside use are usually `public`
+* 同一个类可以创建多个对象
+* 每个对象都有相同种类的实例变量
+* 但这些变量可以保存不同的值
+* 对某个对象调用方法时，使用的是那个对象自己的数据
 
-## AP 考试陷阱<br>Common AP Traps
+## AP 常见考法
 
-* 把实例变量声明为 `public`<br>Declaring instance variables `public`
-* 把构造器声明为 `private`<br>Declaring the constructor `private`
-* 忘记每个对象有独立的实例变量<br>Forgetting that each object has its own data
-* 混淆实例变量、构造器和方法<br>Confusing fields, constructors, and methods
+* 识别 class / instance variable / constructor / method
+* 为不同成员选择合适的 `public` / `private`
+* 判断哪些数据属于每个对象
+* 判断类外代码能否直接访问某个成员
+* 补全一个合理的 class declaration
 
 </script>
 </div>
 </div>
 
-# 1. Recognize the Correct Class Structure<br>先判断正确的类结构
+# 1. 第一个 AP 核心考法
 
-Suppose a `Cat` class needs to store a cat's `name` and `age`. Other classes must also be able to create `Cat` objects.
+下面的 `Cat` 类需要保存猫的名字和年龄，并提供一个构造器：
 
-假设 `Cat` 类需要保存猫的 `name` 和 `age`，并且其他类需要能够创建 `Cat` 对象。
+```java
+public class Cat
+{
+    /* missing code */
+}
+```
 
-Which class design is most appropriate?
+哪一种设计最合理？
 
-哪一种设计最合适？
-
-**A.**
+### A
 
 ```java
 public String name;
 public int age;
+
+public Cat(String n, int a)
+{
+    // implementation not shown
+}
+```
+
+### B
+
+```java
+private String name;
+private int age;
+
+public Cat(String n, int a)
+{
+    // implementation not shown
+}
+```
+
+### C
+
+```java
+private String name;
+private int age;
 
 private Cat(String n, int a)
 {
-    name = n;
-    age = a;
+    // implementation not shown
 }
 ```
 
-**B.**
+**答案：B**
 
-```java
-private String name;
-private int age;
-
-public Cat(String n, int a)
-{
-    name = n;
-    age = a;
-}
-```
-
-**C.**
-
-```java
-public String name;
-public int age;
-
-public Cat(String n, int a)
-{
-    name = n;
-    age = a;
-}
-```
-
-**Answer: B**
-
-For AP CSA class design:
-
-在 AP CSA 的类设计中：
-
-```java
-private String name;
-private int age;
-```
-
-The instance variables should normally be `private`.
-
-实例变量通常应该声明为 `private`。
-
-```java
-public Cat(String n, int a)
-```
-
-The constructor should be `public` so that other code can create `Cat` objects.
-
-构造器应该是 `public`，这样其他代码才能创建 `Cat` 对象。
-
-This pattern is one of the most important ideas in Topic 3.3:
-
-这是 3.3 最重要的结构之一：
+这里先记住两个 AP CSA 中非常重要的设计习惯：
 
 ```text
-private data
-public constructor
-public methods when outside access is needed
+实例变量 → private
+构造器   → public
 ```
 
-# 2. A Class Is a Blueprint for Objects<br>类是创建对象的蓝图
+为什么要这样设计，会在下面逐步解释。
 
-A class defines what data its objects have and what those objects can do.
+# 2. 一个 Java 类由什么组成？
 
-类规定了对象拥有哪些数据，以及这些对象能够做什么。
-
-A basic class begins like this:
-
-一个基本的类从下面的结构开始：
-
-```java
-public class Person
-{
-    // class body
-}
-```
-
-The keyword:
-
-关键字：
-
-```java
-class
-```
-
-tells Java that we are defining a class.
-
-告诉 Java 我们正在定义一个类。
-
-`Person` is the class name, and everything between `{` and `}` belongs to the class body.
-
-`Person` 是类名，`{` 和 `}` 之间的内容属于类的主体。
-
-After defining the class, we can create objects:
-
-定义好类之后，就可以创建对象：
-
-```java
-Person p1 = new Person();
-Person p2 = new Person();
-```
-
-`p1` and `p2` are two different **instances** of the `Person` class.
-
-`p1` 和 `p2` 是 `Person` 类的两个不同 **instance（实例）**。
-
-> **Class = blueprint**
-> **Object = one instance created from that blueprint**
-
-> **类 = 蓝图**
-> **对象 = 根据这张蓝图创建出的一个实例**
-
-# 3. The Three Main Parts of a Class<br>类的三个主要部分
-
-A class usually contains three important parts:
-
-一个类通常包含三个重要部分：
+先看一个完整但很小的 `Person` 类：
 
 ```java
 public class Person
 {
     // 1. instance variables
-
-    // 2. constructor
-
-    // 3. methods
-}
-```
-
-| Part               | Main job                                         | 中文理解         |
-| ------------------ | ------------------------------------------------ | ------------ |
-| Instance variables | Store data for each object.                      | 保存每个对象自己的数据。 |
-| Constructor        | Initialize the object's data when it is created. | 创建对象时初始化数据。  |
-| Instance methods   | Define what the object can do.                   | 定义对象能够做什么。   |
-
-Consider:
-
-观察下面这个类：
-
-```java
-public class Person
-{
     private String name;
     private String email;
 
-    public Person(String initName, String initEmail)
+    // 2. constructor
+    public Person(String n, String e)
     {
-        name = initName;
-        email = initEmail;
+        name = n;
+        email = e;
     }
 
+    // 3. method
     public void print()
     {
         System.out.println(name + " " + email);
@@ -248,43 +159,137 @@ public class Person
 }
 ```
 
-The roles are:
+一个典型的类可以先看成下面这个骨架：
 
-各部分的作用是：
+```java
+public class ClassName
+{
+    // instance variables
 
-```text
-name, email       → instance variables
-Person(...)       → constructor
-print()           → instance method
+    // constructor
+
+    // methods
+}
 ```
 
-When reading an AP question about a class, first identify these three parts.
+| 部分 | 作用 | AP CSA 中常见写法 |
+|---|---|---|
+| 类（class） | 定义一种新的对象类型 | `public class Person` |
+| 实例变量（instance variables） | 保存对象的数据 | 通常 `private` |
+| 构造器（constructor） | 创建对象时初始化数据 | `public` |
+| 方法（methods） | 定义对象能做什么 | 根据是否需要类外访问决定 `public` / `private` |
 
-做 AP 类相关题目时，可以先找出这三个部分。
+在 AP CSA 本课程范围内，类写成 `public class ClassName`，构造器使用 `public`，实例变量通常使用 `private`。
 
-# 4. Instance Variables Store Each Object's Data<br>实例变量保存每个对象自己的数据
+这节课最重要的不是马上学会把每一部分都写出来，而是先能够**认出这些部分，并理解它们各自负责什么。**
 
-An **instance variable** stores data associated with an object.
+# 3. 实例变量：对象保存的数据
 
-**Instance variable（实例变量）**用于保存某个对象的数据。
+实例变量（instance variables）保存一个对象的属性或状态。
+
+例如：
+
+```java
+private String name;
+private String email;
+```
+
+它们写在类的主体中，但写在构造器和方法之外。
 
 ```java
 public class Person
 {
     private String name;
-    private int age;
+    private String email;
+
+    // constructor and methods...
 }
 ```
 
-The standard AP CSA pattern is:
+这里的 `name` 和 `email` 不是某一个特定人的数据，而是在说明：
 
-AP CSA 中的常见写法是：
+> **每一个 `Person` 对象都应该拥有一个 `name` 和一个 `email`。**
+
+例如：
+
+```java
+Person ada = new Person("Ada", "ada@example.com");
+Person alan = new Person("Alan", "alan@example.com");
+```
+
+这两个对象来自同一个 `Person` 类，但它们各自保存自己的数据：
+
+| 对象 | `name` | `email` |
+|---|---|---|
+| `ada` | `"Ada"` | `"ada@example.com"` |
+| `alan` | `"Alan"` | `"alan@example.com"` |
+
+这就是实例变量中的 **instance**：
+
+> **每个实例（object / instance）都有自己的一份变量。**
+
+改变 `ada` 的数据，不代表 `alan` 的数据也一起改变。
+
+# 4. `public`、`private` 与数据封装
+
+`public` 和 `private` 叫作访问修饰符（access modifiers）。它们决定代码可以从哪里访问一个成员。
+
+| 修饰符 | 含义 |
+|---|---|
+| `public` | 当前类内部和其他类都可以访问 |
+| `private` | 只能在声明它的类内部访问 |
+
+例如：
+
+```java
+public class Person
+{
+    private String name;
+
+    public void print()
+    {
+        System.out.println(name);
+    }
+}
+```
+
+`name` 是 `private`，所以类外代码不应该直接这样做：
+
+```java
+Person p = new Person("Ada", "ada@example.com");
+p.name = "Grace";     // cannot directly access a private field
+```
+
+但 `print()` 是 `public`，所以类外代码可以调用：
+
+```java
+p.print();
+```
+
+这种设计背后的概念叫 **数据封装（data encapsulation）**：
+
+> 把对象内部的数据和实现细节保护在类里面，只把需要使用的操作暴露给外部代码。
+
+可以把它理解成：
+
+```text
+外部代码
+   ↓
+public methods
+   ↓
+-----------------
+类的内部
+private instance variables
+-----------------
+```
+
+所以在 AP CSA 中，除非题目特别说明，实例变量通常写成：
 
 ```java
 private type variableName;
 ```
 
-For example:
+例如：
 
 ```java
 private String name;
@@ -292,704 +297,252 @@ private int age;
 private double balance;
 ```
 
-The important behavior is:
+# 5. 构造器和实例方法在类中的位置
 
-最重要的是理解：
+## 构造器（constructor）
 
-> **Each object gets its own copy of the instance variables.**
-
-> **每一个对象都有自己的一份实例变量。**
-
-Suppose:
+构造器的任务是在对象创建时初始化对象的数据。
 
 ```java
-Person p1 = new Person("Maya", 16);
-Person p2 = new Person("Leo", 17);
-```
-
-Conceptually:
-
-可以理解为：
-
-```text
-p1 object
-name → "Maya"
-age  → 16
-
-p2 object
-name → "Leo"
-age  → 17
-```
-
-Changing `p1`'s age does not automatically change `p2`'s age.
-
-改变 `p1` 的年龄，不会自动改变 `p2` 的年龄。
-
-They are two different objects with separate instance-variable values.
-
-它们是两个不同的对象，各自拥有独立的数据。
-
-# 5. Why Instance Variables Are `private`<br>为什么实例变量使用 `private`
-
-Consider:
-
-```java
-private int age;
-```
-
-The keyword `private` means that this variable can be accessed directly only by code inside the class where it is declared.
-
-`private` 表示这个变量只能被声明它的类内部代码直接访问。
-
-This supports **data encapsulation**.
-
-这就是 **data encapsulation（数据封装）**。
-
-Data encapsulation keeps a class's implementation details hidden from external classes.
-
-数据封装会把类内部的数据和实现细节隐藏起来。
-
-Think of the class as having an inside and an outside:
-
-可以把类想成“内部”和“外部”：
-
-```text
-Inside Person
-    private name
-    private age
-    methods can access them directly
-
-Outside Person
-    cannot directly access private data
-    interacts through allowed public operations
-```
-
-For example, code inside the class can do this:
-
-类内部的方法可以直接写：
-
-```java
-age++;
-```
-
-But code in another class cannot directly access:
-
-但是其他类中的代码不能直接访问：
-
-```java
-person.age
-```
-
-when `age` is `private`.
-
-如果 `age` 是 `private`，这种直接访问是不允许的。
-
-# 6. `public` and `private` Control Access<br>`public` 与 `private` 控制访问权限
-
-`public` and `private` are **access modifiers**.
-
-`public` 和 `private` 叫作 **access modifiers（访问修饰符）**。
-
-| Modifier  | Access                                                                       |
-| --------- | ---------------------------------------------------------------------------- |
-| `public`  | Can be accessed from outside the declaring class.<br>可以从类外部访问。               |
-| `private` | Can be accessed directly only inside the declaring class.<br>只能在声明它的类内部直接访问。 |
-
-For Topic 3.3, remember these AP conventions:
-
-对于 3.3，请重点记住下面这些 AP 规则：
-
-```java
-public class Cat
-```
-
-Classes you write in this course are `public`.
-
-本课程中编写的类使用 `public`。
-
-```java
-private String name;
-private int age;
-```
-
-Instance variables should normally be `private`.
-
-实例变量通常应该是 `private`。
-
-```java
-public Cat(...)
-```
-
-Constructors are `public` in this course.
-
-本课程中的构造器使用 `public`。
-
-A method that another class needs to call should also be `public`.
-
-如果某个方法需要从类外调用，它也应该是 `public`。
-
-# 7. Constructors Initialize Object Data<br>构造器负责初始化对象数据
-
-A constructor runs when an object is created with `new`.
-
-使用 `new` 创建对象时，会运行构造器。
-
-```java
-Person p = new Person("Maya", 16);
-```
-
-The constructor might be:
-
-构造器可能是：
-
-```java
-public Person(String initName, int initAge)
+public Person(String n, String e)
 {
-    name = initName;
-    age = initAge;
+    name = n;
+    email = e;
 }
 ```
 
-Its job is to copy the starting values into the object's instance variables.
+这一课先认出它即可：
 
-它的作用是把创建对象时传入的初始值保存到对象的实例变量中。
+* 构造器的名字和类名相同
+* AP CSA 中构造器写成 `public`
+* 它通常出现在实例变量之后、其他方法之前
 
-After:
+构造器内部具体发生什么，会在 **3.4 Constructors** 中继续学习。
 
-执行：
+## 实例方法（instance methods）
+
+实例方法定义对象的行为。
 
 ```java
-Person p = new Person("Maya", 16);
+public void print()
+{
+    System.out.println(name + " " + email);
+}
 ```
 
-the object contains:
+这个方法能够直接使用 `name` 和 `email`，因为这些变量属于同一个类中的对象。
 
-对象中保存的是：
+在 Unit 1 中，我们已经一直在调用这种方法：
+
+```java
+p.print();
+```
+
+这里的重点是：
+
+> **对哪个对象调用方法，方法就使用哪个对象自己的实例变量。**
+
+例如：
+
+```java
+ada.print();
+alan.print();
+```
+
+`ada.print()` 使用的是 `ada` 自己的 `name` 和 `email`；`alan.print()` 使用的是 `alan` 自己的数据。
+
+方法是否使用 `public` 或 `private`，取决于它是否需要被类外代码调用：
 
 ```text
-name → "Maya"
-age  → 16
+需要给外部使用 → public
+只在类内部辅助使用 → private
 ```
 
-For now, focus on recognizing the constructor's role.
+# 6. 设计一个类时，先问两个问题
 
-现阶段重点是认出构造器的作用。
+写类并不是先想 Java 语法，而是先决定这个类要表示什么。
 
-Topic 3.4 will cover how to write constructors in more detail.
+假设要设计一个 `Book` 类，可以先问：
 
-3.4 会进一步学习如何编写构造器。
+### 1. 这个对象需要保存什么数据？
 
-A constructor has the **same name as the class**:
-
-构造器的**名称必须与类名相同**：
-
-```java
-public class Person
-{
-    public Person(...)
-    {
-        ...
-    }
-}
-```
-
-# 8. Instance Methods Define Object Behavior<br>实例方法定义对象行为
-
-Instance methods define what an object can do.
-
-实例方法定义对象能够执行哪些操作。
-
-Consider:
-
-```java
-public class Pet
-{
-    private int health;
-
-    public Pet(int initHealth)
-    {
-        health = initHealth;
-    }
-
-    public void feed()
-    {
-        health++;
-    }
-}
-```
-
-The `feed()` method can directly access:
-
-`feed()` 方法可以直接访问：
-
-```java
-health
-```
-
-because `health` is an instance variable in the same class.
-
-因为 `health` 是同一个类中的实例变量。
-
-Suppose we create two objects:
-
-假设创建两个对象：
-
-```java
-Pet p1 = new Pet(5);
-Pet p2 = new Pet(8);
-
-p1.feed();
-```
-
-After the call:
-
-调用之后：
+例如：
 
 ```text
-p1 health → 6
-p2 health → 8
+title
+author
+pages
 ```
 
-Why did only `p1` change?
-
-为什么只有 `p1` 改变？
-
-Because:
-
-因为：
+这些通常会变成实例变量：
 
 ```java
-p1.feed();
+private String title;
+private String author;
+private int pages;
 ```
 
-calls `feed()` on the `p1` object. The method therefore uses **p1's instance variable**.
+### 2. 这个对象需要做什么？
 
-方法是在 `p1` 对象上调用的，因此它使用的是 **p1 自己的实例变量**。
-
-This idea is extremely important when tracing object code.
-
-在追踪对象代码时，这一点非常重要。
-
-# 9. Calling an Instance Method<br>调用实例方法
-
-To call an instance method, use an object reference followed by the dot operator:
-
-调用实例方法时，使用对象引用和点运算符：
-
-```java
-objectName.methodName();
-```
-
-Example:
-
-```java
-Person p1 = new Person("Sana", "sana@example.com");
-
-p1.print();
-```
-
-This means:
-
-它的意思是：
-
-> Call `print()` on the object referenced by `p1`.
-
-> 在 `p1` 指向的对象上调用 `print()`。
-
-If another object calls the same method:
-
-如果另一个对象调用相同方法：
-
-```java
-p2.print();
-```
-
-the method uses the instance-variable values belonging to `p2`.
-
-这个方法使用的就是 `p2` 自己的实例变量值。
-
-The method code is defined once in the class, but different objects use their own data.
-
-方法代码在类中只定义一次，但不同对象会使用各自的数据。
-
-# 10. Choosing the Correct Access Modifiers<br>选择正确的访问修饰符
-
-Suppose a `Party` class needs:
-
-假设 `Party` 类需要：
-
-* three attributes;
-
-* a constructor that other classes can use;
-
-* a `startParty()` method that other classes should be able to call.
-
-* 三个属性；
-
-* 一个可以从其他类调用的构造器；
-
-* 一个可以从其他类调用的 `startParty()` 方法。
-
-A good design is:
-
-合理的设计是：
-
-```java
-public class Party
-{
-    private int numOfPeople;
-    private int volumeOfMusic;
-    private int numOfBoxesOfPizza;
-
-    public Party()
-    {
-        // initialize object
-    }
-
-    public void startParty()
-    {
-        // perform behavior
-    }
-}
-```
-
-Notice the pattern:
-
-注意这个结构：
+例如：
 
 ```text
-class              → public
-instance variables → private
-constructor        → public
-outside method     → public
+printInfo()
+isLongBook()
 ```
 
-This is exactly the kind of class-design decision that can appear in an AP multiple-choice question.
+这些通常会变成方法。
 
-这正是 AP 选择题中常见的类设计判断。
+所以可以把面向对象设计最开始的思路压缩成：
 
-# 11. Common Beginner Mistakes<br>常见初学者错误
-
-| Mistake                                                                                                   | Why it is wrong                                                                   | Correct understanding                                                                        |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Declaring instance variables `public`.<br>把实例变量声明为 `public`。                                              | Outside code can directly access the internal data.<br>外部代码可以直接访问内部数据。            | AP CSA instance variables should normally be `private`.<br>AP CSA 中实例变量通常使用 `private`。       |
-| Declaring a constructor `private` when other classes must create objects.<br>需要从外部创建对象，却把构造器写成 `private`。 | Outside code cannot call that constructor.<br>类外无法调用这个构造器。                        | Constructors in this course are `public`.<br>本课程中构造器使用 `public`。                             |
-| Thinking all objects share one instance variable.<br>认为所有对象共享一份实例变量。                                      | Each object has its own copy.<br>每个对象都有自己的一份。                                     | Trace the data separately for each object.<br>分别追踪每个对象的数据。                                   |
-| Thinking a constructor is an instance variable.<br>把构造器当成实例变量。                                            | A constructor initializes the object's data.<br>构造器负责初始化对象数据。                     | Identify fields, constructors, and methods separately.<br>分别识别实例变量、构造器和方法。                   |
-| Adding `static` to an ordinary instance method.<br>给普通实例方法添加 `static`。                                    | Instance methods operate on a particular object's data.<br>实例方法用于操作某个具体对象的数据。     | Ordinary object behaviors are instance methods and are not marked `static`.<br>普通对象行为使用实例方法。 |
-| Trying to access a private variable directly from another class.<br>从另一个类直接访问私有变量。                        | `private` restricts direct access to the declaring class.<br>`private` 限制了类外直接访问。 | Interact through the class's public methods.<br>通过类提供的公共方法进行交互。                              |
-
-# 12. Debugging Example<br>调试例子
-
-Suppose the specification says:
-
-假设题目要求：
-
-* `Dog` stores a `name`;
-
-* its data should be encapsulated;
-
-* other classes must be able to create a `Dog`;
-
-* other classes must be able to call `bark()`.
-
-* `Dog` 保存 `name`；
-
-* 数据应该被封装；
-
-* 其他类必须能够创建 `Dog`；
-
-* 其他类必须能够调用 `bark()`。
-
-Buggy code:
-
-错误代码：
-
-```java
-public class Dog
-{
-    public String name;
-
-    private Dog(String initName)
-    {
-        name = initName;
-    }
-
-    private void bark()
-    {
-        System.out.println("Woof");
-    }
-}
+```text
+对象“有什么” → instance variables
+对象“能做什么” → methods
 ```
 
-There are three design problems.
+构造器则负责在创建对象时，把一开始的数据放进这些实例变量中。
 
-这里有三个设计问题。
+# 7. 常见初学者错误
 
-### Problem 1
+| 错误 | 错误想法 / 代码 | 为什么不合适 | 正确理解 |
+|---|---|---|---|
+| 把实例变量写成 `public` | `public int age;` | 类外代码可以直接改内部数据 | AP CSA 中通常使用 `private int age;` |
+| 把构造器写成 `private` | `private Person(...)` | 在本课程的 class design 中，构造器应允许外部创建对象 | 使用 `public Person(...)` |
+| 以为多个对象共享同一份实例变量 | 改 `ada.name` 后以为 `alan.name` 也会变 | 每个对象都有自己的实例变量 | `ada` 和 `alan` 各有自己的 `name` |
+| 把类和对象混为一谈 | 说 `Person` 是某一个具体的人 | `Person` 是蓝图 / 类型 | `ada` 才是一个 `Person` 对象的引用变量 |
+| 从类外直接访问 `private` 字段 | `p.name` | `private` 只允许当前类内部访问 | 通过类提供的 `public` 方法与对象交互 |
+| 认为所有方法都必须 `public` | helper method 也一定 `public` | 有些方法只需要在类内部使用 | 外部要调用用 `public`；内部辅助可用 `private` |
 
-```java
-public String name;
-```
+# 8. 小练习（Mini Practice）
 
-The instance variable should be `private`.
+## Practice 1：识别类的三个主要部分
 
-实例变量应该使用 `private`。
-
-### Problem 2
-
-```java
-private Dog(String initName)
-```
-
-Outside classes are supposed to create `Dog` objects, so the constructor must be `public`.
-
-题目要求其他类能够创建 `Dog` 对象，因此构造器必须是 `public`。
-
-### Problem 3
+下面代码中的 `name`、`Student(...)` 和 `printName()` 分别是什么？
 
 ```java
-private void bark()
-```
-
-Outside classes are supposed to call `bark()`, so the method must be `public`.
-
-题目要求类外能够调用 `bark()`，因此这个方法必须是 `public`。
-
-### Fixed code
-
-```java
-public class Dog
+public class Student
 {
     private String name;
 
-    public Dog(String initName)
+    public Student(String n)
     {
-        name = initName;
+        name = n;
     }
 
-    public void bark()
+    public void printName()
     {
-        System.out.println("Woof");
-    }
-}
-```
-
-| Part                  | Bug                   | Fix                    |
-| --------------------- | --------------------- | ---------------------- |
-| Instance variable     | `public String name;` | `private String name;` |
-| Constructor           | `private Dog(...)`    | `public Dog(...)`      |
-| Outside-facing method | `private void bark()` | `public void bark()`   |
-
-# 13. Mini Practice<br>小练习
-
-## Practice 1: Identify the Instance Variables<br>练习一：识别实例变量
-
-Which lines declare instance variables?
-
-哪些语句声明了实例变量？
-
-```java
-public class Name
-{
-    private String first;
-    private String last;
-
-    public Name(String theFirst, String theLast)
-    {
-        first = theFirst;
-        last = theLast;
-    }
-
-    public void print()
-    {
-        System.out.println(first + " " + last);
+        System.out.println(name);
     }
 }
 ```
 
-**Answer:**
-
-```java
-private String first;
-private String last;
-```
-
-They are declared inside the class but outside the constructor and methods.
-
-它们定义在类中，但位于构造器和方法之外。
-
----
-
-## Practice 2: Constructor or Method?<br>练习二：构造器还是方法？
-
-Consider:
-
-观察：
-
-```java
-public Student(String name)
-{
-    // implementation
-}
-```
-
-Is this a constructor or an ordinary method?
-
-这是构造器还是普通方法？
-
-**Answer: Constructor**
-
-Its name is the same as the class name, and its job is to initialize a new object.
-
-它的名称与类名相同，用于初始化新对象。
-
----
-
-## Practice 3: Separate Object Data<br>练习三：区分不同对象的数据
-
-Suppose:
-
-```java
-Pet a = new Pet(4);
-Pet b = new Pet(9);
-
-a.feed();
-```
-
-and `feed()` increases `health` by `1`.
-
-如果 `feed()` 会让 `health` 增加 `1`。
-
-What are the values afterward?
-
-之后两个对象的值是多少？
-
-**Answer:**
+**答案：**
 
 ```text
-a health → 5
-b health → 9
+name         → instance variable
+Student(...) → constructor
+printName()  → method
 ```
-
-The method call changes the instance variable belonging to `a`, not `b`.
-
-这个方法调用改变的是 `a` 自己的实例变量，而不是 `b` 的。
 
 ---
 
-## Practice 4: Choose the Best Declaration<br>练习四：选择最佳声明
-
-A `Book` class needs an instance variable named `pages`.
-
-Which declaration is most appropriate?
-
-哪个声明最合适？
-
-A.
+## Practice 2：每个对象的数据
 
 ```java
-public int pages;
+Student a = new Student("Amy");
+Student b = new Student("Ben");
 ```
 
-B.
+哪一种说法正确？
 
-```java
-private int pages;
-```
+A. `a` 和 `b` 共用同一个 `name` 变量  
+B. `a` 和 `b` 各自有自己的 `name` 变量  
+C. 只有第一个创建的对象有实例变量
 
-C.
+**答案：B**
 
-```java
-public pages int;
-```
-
-D.
-
-```java
-private pages int;
-```
-
-**Answer: B**
-
-```java
-private int pages;
-```
-
-AP CSA instance variables should normally be private.
-
-AP CSA 中的实例变量通常应该使用 `private`。
+同一个类创建出的每个对象都有自己的一份实例变量，因此 `a` 可以保存 `"Amy"`，`b` 可以保存 `"Ben"`。
 
 ---
 
-## Practice 5: Public or Private?<br>练习五：public 还是 private？
+## Practice 3：选择合适的访问权限
 
-A method called `startParty()` must be called from another class.
+一个 `Party` 类需要：
 
-How should it normally begin?
+* 保存参加人数 `numPeople`
+* 提供构造器创建 `Party` 对象
+* 提供 `startParty()` 给其他类调用
 
-这个方法通常应该怎样声明？
+下面哪种设计最合理？
 
-**Answer:**
+### A
 
 ```java
-public void startParty()
+public int numPeople;
+private Party(int n) { }
+private void startParty() { }
 ```
 
-Because outside code must be able to access it.
+### B
 
-因为类外代码需要能够调用它。
+```java
+private int numPeople;
+public Party(int n) { }
+public void startParty() { }
+```
 
-# Quick Checklist<br>快速检查清单
+### C
 
-Before answering a Topic 3.3 question, check:
+```java
+private int numPeople;
+private Party(int n) { }
+public void startParty() { }
+```
 
-做 3.3 的题目之前，检查：
+**答案：B**
 
-* What is the class name?
-  类名是什么？
+* 实例变量属于对象内部数据 → `private`
+* AP CSA 中构造器 → `public`
+* `startParty()` 需要让类外调用 → `public`
 
-* Is the class declared `public`?
-  类是否使用了 `public`？
+---
 
-* Which declarations are **instance variables**?
-  哪些声明属于**实例变量**？
+## Practice 4：哪一行不能从类外直接访问？
 
-* Are the instance variables `private`?
-  实例变量是否使用了 `private`？
+假设有：
 
-* Does each object have its own copy of those variables?
-  每个对象是否都有自己的一份实例变量？
+```java
+public class Account
+{
+    private double balance;
 
-* Which part is the **constructor**?
-  哪一部分是**构造器**？
+    public void printBalance()
+    {
+        System.out.println(balance);
+    }
+}
+```
 
-* Does the constructor have the same name as the class?
-  构造器名称是否与类名相同？
+并且变量 `a` 已经指向一个 `Account` 对象。下面哪一行在另一个类中不应该被允许？
 
-* Is the constructor `public`?
-  构造器是否是 `public`？
+A. `a.printBalance();`  
+B. `System.out.println(a.balance);`
 
-* Which parts are **instance methods**?
-  哪些部分属于**实例方法**？
+**答案：B**
 
-* Can an instance method directly use the object's instance variables?
-  实例方法是否可以直接使用该对象的实例变量？
+`balance` 是 `private`，只能在 `Account` 类内部直接访问；`printBalance()` 是 `public`，所以类外代码可以调用。
 
-* Which object is calling the method?
-  是哪个对象在调用方法？
+# Unit 3.3 核心词汇（Vocabulary）
 
-* Whose instance-variable values will the method use?
-  方法会使用哪个对象的实例变量值？
-
-* Does outside code need to call this method?
-  类外代码是否需要调用这个方法？
-
-* If yes, should the method be `public`?
-  如果需要，它是否应该使用 `public`？
-
-* Is any private data being accessed directly from outside the class?
-  是否存在从类外直接访问私有数据的情况？
-
-* Does the class preserve data encapsulation?
-  这个类是否保持了数据封装？
+| Vocabulary | 中文理解 | 核心理解 / Example |
+|---|---|---|
+| class / 类 | 创建对象的蓝图或类型 | `public class Person` |
+| class body / 类主体 | 类的 `{ }` 中定义成员的部分 | 包含实例变量、构造器和方法 |
+| instance variable / 实例变量 | 每个对象自己拥有的数据 | `private String name;` |
+| attribute / field / 属性、字段 | 常用来指对象保存的数据 | 在本课中通常就是 instance variable |
+| constructor / 构造器 | 创建对象时初始化数据的特殊代码 | `public Person(...)` |
+| instance method / 实例方法 | 定义对象行为的方法 | `p.print()` |
+| access modifier / 访问修饰符 | 控制成员能从哪里访问 | `public`、`private` |
+| public / 公有 | 类外代码也可以访问 | 常用于需要对外提供的 constructor / method |
+| private / 私有 | 只能在当前类内部直接访问 | 实例变量通常使用 `private` |
+| data encapsulation / 数据封装 | 隐藏类的内部数据和实现细节 | 外部通过公开的方法与对象交互 |
