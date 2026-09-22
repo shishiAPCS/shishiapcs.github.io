@@ -1,5 +1,5 @@
 ---
-title:  "雅思口语 2026年9月-12月题库"
+title:  "雅思口语 2026年9月-12月题库滚动更新"
 mathjax: true
 layout: post
 categories: media
@@ -36,7 +36,7 @@ categories: media
 }
 </style>
 <div class="ielts-page-shell">
-<div class="source-note"><strong>更新：</strong>2026-09-09。话题清单依据公开的 2026年9-12月中国大陆回忆题交叉整理；主分类以 Zip IELTS 为准，并用 Joe Speaking 补充核对。</div>
+<div class="source-note"><strong>更新：</strong>2026-09-22。当前中国大陆主库共 <strong>88 个话题</strong>（Part 1：32；Part 2&amp;3：56）。话题清单依据公开的 2026年9-12月中国大陆回忆题交叉整理；主分类以 Zip IELTS（更新至9月20日）为准，并用魔语雅思（更新至9月21日）和 Joe Speaking 补充核对。<strong>cue points / Part 3 继续统一改写为课堂练习版，话题标题保留。</strong></div>
 <div class="ielts-layout">
 <aside class="ielts-sidebar">
 <details class="nav-group" open><summary>一、新题 [🔥 更新中...]</summary><div class="nav-inner">
@@ -51,6 +51,7 @@ categories: media
 <li><a href="#sec-1-p1-8">Paper</a></li>
 <li><a href="#sec-1-p1-9">Secondary school</a></li>
 <li><a href="#sec-1-p1-10">Name</a></li>
+<li><a href="#sec-1-p1-11">Opportunities</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>人物类</summary><ul>
 <li><a href="#sec-1-c1-1">做困难事情并成功的人</a></li>
@@ -74,6 +75,7 @@ categories: media
 </ul></details>
 <details class="nav-subgroup"><summary>事物类</summary><ul>
 <li><a href="#sec-1-c3-1">最不喜欢的电影</a></li>
+<li><a href="#sec-1-c3-2">令人兴奋的一本书</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事件类</summary><ul>
 <li><a href="#sec-1-c4-1">对结果开心的重要决定</a></li>
@@ -85,6 +87,7 @@ categories: media
 <li><a href="#sec-1-c4-7">和朋友度过的愉快夜晚</a></li>
 <li><a href="#sec-1-c4-8">浪费时间的活动</a></li>
 <li><a href="#sec-1-c4-9">印象深刻的聚会</a></li>
+<li><a href="#sec-1-c4-10">帮助他人的一次经历</a></li>
 </ul></details>
 </div></details>
 <details class="nav-group"><summary>二、保留题</summary><div class="nav-inner">
@@ -158,9 +161,6 @@ categories: media
 </ul></details>
 <details class="nav-subgroup"><summary>人物类</summary><ul>
 <li><a href="#sec-4-c1-1">遇到困难但成功的人（相近题）</a></li>
-</ul></details>
-<details class="nav-subgroup"><summary>事物类</summary><ul>
-<li><a href="#sec-4-c3-1">令人兴奋的一本书</a></li>
 </ul></details>
 <details class="nav-subgroup"><summary>事件类</summary><ul>
 <li><a href="#sec-4-c4-1">使用电子设备遇到问题（相近题）</a></li>
@@ -257,6 +257,15 @@ categories: media
 <li>What helps you remember a new name?</li>
 <li>How do you feel when someone forgets your name?</li>
 <li>Are some names especially common where you live?</li>
+</ol>
+<p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
+</details>
+<details class="topic-card" id="sec-1-p1-11"><summary>Opportunities <span class="topic-meta">(9月新题)</span></summary>
+<ol>
+<li>Did you get many chances to try new activities when you were a child?</li>
+<li>Do you think people should try many different things?</li>
+<li>Do you like trying new opportunities?</li>
+<li>Do new opportunities come to you often?</li>
 </ol>
 <p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
 </details>
@@ -552,6 +561,23 @@ categories: media
 </ul></div>
 <p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
 </details>
+<details class="topic-card" id="sec-1-c3-2"><summary>令人兴奋的一本书 <span class="topic-meta">(9月新题)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe an exciting book that you enjoyed reading</p>
+<p><strong>You should say:</strong></p><ul>
+<li>What kind of book it was</li>
+<li>Why you chose to read it</li>
+<li>What it was mainly about</li>
+<li>And explain why you found it exciting</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div><ul>
+<li>What kinds of books are popular with different age groups?</li>
+<li>Do boys and girls tend to prefer different kinds of books?</li>
+<li>Why can a film adaptation disappoint people who enjoyed the book?</li>
+</ul></div>
+<p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
+</details>
 <h3>事件类</h3>
 <details class="topic-card" id="sec-1-c4-1"><summary>对结果开心的重要决定 <span class="topic-meta">(9月新题)</span></summary>
 <div class="topic-block"><div class="topic-subheading">Part 2</div>
@@ -703,6 +729,23 @@ categories: media
 <li>Why do people celebrate special events together?</li>
 <li>Do younger and older people enjoy the same kinds of social activities?</li>
 <li>What helps family members and friends stay close?</li>
+</ul></div>
+<p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
+</details>
+<details class="topic-card" id="sec-1-c4-10"><summary>帮助他人的一次经历 <span class="topic-meta">(9月新题)</span></summary>
+<div class="topic-block"><div class="topic-subheading">Part 2</div>
+<p>Describe a time when you helped someone</p>
+<p><strong>You should say:</strong></p><ul>
+<li>Who the person was</li>
+<li>Why the person needed help</li>
+<li>What you did to help</li>
+<li>And explain how you felt about the experience</li>
+</ul>
+</div>
+<div class="topic-block"><div class="topic-subheading">Part 3</div><ul>
+<li>Why are some people more willing to help others than others are?</li>
+<li>Should children be taught to help other people?</li>
+<li>How has technology changed the ways people can help one another?</li>
 </ul></div>
 <p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
 </details>
@@ -1408,24 +1451,6 @@ categories: media
 <li>What qualities make a person respected or successful?</li>
 <li>Are these qualities mainly learned or natural?</li>
 <li>How can families and schools help young people develop good qualities?</li>
-</ul></div>
-<p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
-</details>
-<h3>事物类</h3>
-<details class="topic-card" id="sec-4-c3-1"><summary>令人兴奋的一本书 <span class="topic-meta">(补充报告)</span></summary>
-<div class="topic-block"><div class="topic-subheading">Part 2</div>
-<p>Describe an exciting book that you enjoyed reading</p>
-<p><strong>You should say:</strong></p><ul>
-<li>What it is</li>
-<li>When or where you first experienced it</li>
-<li>What is special about it</li>
-<li>And explain why it is memorable or important to you</li>
-</ul>
-</div>
-<div class="topic-block"><div class="topic-subheading">Part 3</div><ul>
-<li>What kinds of books are popular with young people?</li>
-<li>Why do some people prefer films to books?</li>
-<li>How can parents and schools encourage children to read more?</li>
 </ul></div>
 <p class="topic-note">Practice wording standardized for classroom use; the reported topic title is retained.</p>
 </details>
