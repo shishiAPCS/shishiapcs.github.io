@@ -508,7 +508,7 @@
 
       border-radius: 10px;
 
-      padding: 8px 11px;
+      padding: 10px 15px;
 
       background: transparent;
 
@@ -516,8 +516,10 @@
 
       cursor: pointer;
 
-      font:
-        700 13px/1.1 inherit;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.2;
     }
 
     .ielts-picker__filter.is-active {
@@ -1000,7 +1002,7 @@
           type="button"
           data-status="all"
         >
-          All
+          全部
         </button>
 
         <button
@@ -1008,7 +1010,7 @@
           type="button"
           data-status="new"
         >
-          New
+          新题
         </button>
 
         <button
@@ -1016,7 +1018,7 @@
           type="button"
           data-status="retained"
         >
-          Retained
+          保留题
         </button>
       </div>
 
@@ -1029,7 +1031,7 @@
           type="button"
           data-category="all"
         >
-          All types
+          全部类型
         </button>
 
         <button
@@ -1100,7 +1102,7 @@
           type="button"
           data-action="undo"
         >
-          ↩ Undo
+          ↩ 撤销
         </button>
 
         <button
@@ -1111,7 +1113,7 @@
           type="button"
           data-action="reset-used"
         >
-          Reset used
+          重置已用题目
         </button>
       </div>
 
@@ -1123,7 +1125,7 @@
         type="button"
         data-action="next"
       >
-        🎲 Pick next topic
+        🎲 抽取下一题
       </button>
 
       <div class="ielts-picker__right">
@@ -1380,8 +1382,8 @@
 
     els.statusChip.textContent =
       topic.section === 'new'
-        ? 'NEW'
-        : 'RETAINED';
+        ? '新题'
+        : '保留题';
 
     els.statusChip.classList.toggle(
       'ielts-picker__chip--retained',
