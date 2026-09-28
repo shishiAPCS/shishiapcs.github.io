@@ -1,0 +1,962 @@
+---
+title: "新托福口语 Social Gatherings：四道 Interview 题怎么打开思路？"
+mathjax: true
+layout: post
+categories: media
+render_with_liquid: false
+---
+
+<style>
+/* =========================================================
+   TOEFL Interview Thinking Lab — Social Gatherings
+   Theme-native version for shishiapcs.github.io / Contrast
+   Goal: straightforward analysis + useful click-to-brainstorm tools
+   ========================================================= */
+
+.toefl-interview-lab {
+  max-width: 980px;
+  margin: 0 auto;
+  color: inherit;
+  line-height: 1.72;
+  font-size: 1.02rem;
+
+  --ti-surface: rgba(127, 127, 127, 0.08);
+  --ti-surface-strong: rgba(127, 127, 127, 0.14);
+  --ti-border: rgba(127, 127, 127, 0.34);
+  --ti-border-strong: rgba(127, 127, 127, 0.58);
+}
+
+.toefl-interview-lab * { box-sizing: border-box; }
+
+.toefl-interview-lab h2,
+.toefl-interview-lab h3,
+.toefl-interview-lab h4 {
+  color: inherit;
+  line-height: 1.3;
+}
+
+.toefl-interview-lab h2 {
+  margin-top: 2.8rem;
+  padding-top: .25rem;
+}
+
+.toefl-interview-lab h3 { margin-top: 1.6rem; }
+
+.toefl-interview-lab button {
+  font: inherit;
+  color: inherit;
+}
+
+.toefl-interview-lab .intro {
+  font-size: 1.06rem;
+  opacity: .94;
+}
+
+.toefl-interview-lab .core,
+.toefl-interview-lab .analysis-box,
+.toefl-interview-lab .sample-box,
+.toefl-interview-lab .vocab-box,
+.toefl-interview-lab .builder-output,
+.toefl-interview-lab .final-card,
+.toefl-interview-lab .practice-box {
+  border: 1px solid var(--ti-border);
+  border-radius: 10px;
+  background: var(--ti-surface);
+}
+
+.toefl-interview-lab .core {
+  margin: 1.2rem 0 1.6rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid currentColor;
+  border-radius: 0 10px 10px 0;
+}
+
+/* ---------- Top navigation ---------- */
+.toefl-interview-lab .question-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1.3rem 0 2rem;
+}
+
+.toefl-interview-lab .map-card {
+  min-width: 0;
+  min-height: 122px;
+  padding: .88rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 10px;
+  background: var(--ti-surface);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.toefl-interview-lab .map-card:hover,
+.toefl-interview-lab .map-card:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.toefl-interview-lab .map-card:hover { transform: translateY(-2px); }
+
+.toefl-interview-lab .map-q {
+  display: block;
+  margin-bottom: .18rem;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  opacity: .68;
+}
+
+.toefl-interview-lab .map-type {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 850;
+  font-size: 1.05rem;
+}
+
+.toefl-interview-lab .map-formula {
+  display: block;
+  opacity: .76;
+  font-size: .9rem;
+}
+
+/* ---------- Shared section elements ---------- */
+.toefl-interview-lab .tag {
+  display: inline-block;
+  margin-bottom: .15rem;
+  padding: .22rem .48rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .035em;
+  opacity: .78;
+}
+
+.toefl-interview-lab .question {
+  margin: .95rem 0 1.15rem;
+  padding: 1rem 1.08rem;
+  border-left: 4px solid currentColor;
+  background: var(--ti-surface);
+  border-radius: 0 10px 10px 0;
+}
+
+.toefl-interview-lab .formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .42rem;
+  margin: 1rem 0;
+}
+
+.toefl-interview-lab .formula-step {
+  padding: .4rem .65rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 8px;
+  background: var(--ti-surface);
+  font-weight: 800;
+}
+
+.toefl-interview-lab .arrow {
+  opacity: .48;
+  font-weight: 900;
+}
+
+.toefl-interview-lab .analysis-box,
+.toefl-interview-lab .sample-box,
+.toefl-interview-lab .vocab-box {
+  margin: 1rem 0;
+  padding: 1rem 1.08rem;
+}
+
+.toefl-interview-lab .analysis-box h3,
+.toefl-interview-lab .sample-box h3,
+.toefl-interview-lab .vocab-box h3 {
+  margin-top: 0;
+}
+
+.toefl-interview-lab .route {
+  margin: .75rem 0;
+  padding: .72rem .86rem;
+  border-left: 3px solid currentColor;
+  background: var(--ti-surface);
+}
+
+.toefl-interview-lab .warning {
+  margin: .8rem 0;
+  padding: .75rem .9rem;
+  border: 1px dashed var(--ti-border-strong);
+  border-radius: 9px;
+}
+
+.toefl-interview-lab .sample-answer {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.toefl-interview-lab .vocab-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .42rem .9rem;
+  margin: .2rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.toefl-interview-lab .micro {
+  font-size: .91rem;
+  opacity: .7;
+}
+
+/* ---------- Click-to-brainstorm builders ---------- */
+.toefl-interview-lab .builder {
+  margin: 1.15rem 0;
+}
+
+.toefl-interview-lab .builder h3 {
+  margin-bottom: .5rem;
+}
+
+.toefl-interview-lab .choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: .7rem 0;
+}
+
+.toefl-interview-lab .choice-btn,
+.toefl-interview-lab .side-btn {
+  min-height: 44px;
+  padding: .62rem .78rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 9px;
+  background: var(--ti-surface);
+  cursor: pointer;
+}
+
+.toefl-interview-lab .choice-btn:hover,
+.toefl-interview-lab .choice-btn:focus-visible,
+.toefl-interview-lab .side-btn:hover,
+.toefl-interview-lab .side-btn:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.toefl-interview-lab button.is-selected {
+  border-color: currentColor;
+  background: var(--ti-surface-strong);
+  font-weight: 850;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.toefl-interview-lab .builder-output {
+  margin-top: .8rem;
+  padding: 1rem;
+}
+
+.toefl-interview-lab .builder-label {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 850;
+}
+
+.toefl-interview-lab .logic-line {
+  margin: .65rem 0 0;
+  font-weight: 750;
+}
+
+.toefl-interview-lab .idea-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .55rem;
+  margin: .8rem 0;
+}
+
+.toefl-interview-lab .idea-card {
+  padding: .72rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 9px;
+  background: var(--ti-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.toefl-interview-lab .idea-card b {
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.toefl-interview-lab .idea-card span {
+  display: block;
+  font-size: .85rem;
+  opacity: .68;
+}
+
+/* ---------- Summary ---------- */
+.toefl-interview-lab .final-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1rem 0;
+}
+
+.toefl-interview-lab .final-card { padding: .9rem; }
+
+.toefl-interview-lab .final-card .num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-right: .35rem;
+  border: 1px solid var(--ti-border-strong);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.toefl-interview-lab .final-formula {
+  margin-top: .45rem;
+  opacity: .78;
+}
+
+.toefl-interview-lab .practice-box {
+  margin-top: 1.2rem;
+  padding: 1rem;
+}
+
+.toefl-interview-lab .practice-box summary {
+  font-weight: 850;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .toefl-interview-lab {
+    --ti-surface: rgba(255, 255, 255, 0.045);
+    --ti-surface-strong: rgba(255, 255, 255, 0.085);
+    --ti-border: rgba(255, 255, 255, 0.16);
+    --ti-border-strong: rgba(255, 255, 255, 0.34);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .toefl-interview-lab {
+    --ti-surface: rgba(0, 0, 0, 0.035);
+    --ti-surface-strong: rgba(0, 0, 0, 0.07);
+    --ti-border: rgba(0, 0, 0, 0.14);
+    --ti-border-strong: rgba(0, 0, 0, 0.30);
+  }
+}
+
+@media (max-width: 760px) {
+  .toefl-interview-lab .question-map,
+  .toefl-interview-lab .final-map,
+  .toefl-interview-lab .vocab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .toefl-interview-lab .idea-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+</style>
+
+<div class="toefl-interview-lab" id="socialGatheringsLab">
+
+<p class="intro">
+这组题都围绕 <strong>social gatherings</strong>，但四道题并不是在考同一种能力。
+有的题让你做选择，有的题让你讲经历，有的题问你的日常习惯，最后一道则要求你解释一个观点。
+<strong>真正需要练习的，不是背四个答案，而是听到题目以后迅速判断：我现在应该用哪一种思路？</strong>
+</p>
+
+<div class="core">
+  <strong>这一组题的核心原则：</strong><br>
+  Don't search for the “perfect” idea. Find one idea you can develop.<br>
+  <strong>考试时先找一个最容易讲清楚的点，再把它讲完整。</strong>
+</div>
+
+<div class="question-map" aria-label="四道题导航">
+  <button type="button" class="map-card" data-jump="social-q1">
+    <span class="map-q">QUESTION 1</span>
+    <span class="map-type">Preference</span>
+    <span class="map-formula">Choice → Reason → Benefit</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="social-q2">
+    <span class="map-q">QUESTION 2</span>
+    <span class="map-type">Past Experience</span>
+    <span class="map-formula">Event → Moment → Meaning</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="social-q3">
+    <span class="map-q">QUESTION 3</span>
+    <span class="map-type">Routine</span>
+    <span class="map-formula">Preparation → Priority → Why</span>
+  </button>
+
+  <button type="button" class="map-card" data-jump="social-q4">
+    <span class="map-q">QUESTION 4</span>
+    <span class="map-type">Opinion</span>
+    <span class="map-formula">Position → Mechanism → Benefit → Example</span>
+  </button>
+</div>
+
+<hr>
+
+<!-- ======================================================
+     QUESTION 1
+     ====================================================== -->
+<section id="social-q1">
+  <span class="tag">Q1 · PREFERENCE</span>
+  <h2>Question 1：A or B？不要纠结，先选容易讲的一边</h2>
+
+  <div class="question">
+    <strong>Thank you for being part of the study. I'd like to ask you some questions about your experiences with social gatherings. First, do you enjoy attending large social gatherings or do you prefer smaller, more private gatherings? Why is that?</strong>
+  </div>
+
+  <div class="formula" aria-label="Q1 structure">
+    <span class="formula-step">Choice</span><span class="arrow">→</span>
+    <span class="formula-step">Reason</span><span class="arrow">→</span>
+    <span class="formula-step">Benefit</span>
+  </div>
+
+  <div class="analysis-box">
+    <h3>答题思路</h3>
+    <p>这是非常典型的 <strong>Preference + Reasons</strong> 题。考试时最浪费时间的做法，是认真比较两个选项到底哪个“更好”。TOEFL 并不在乎你的选择本身，而在乎你能不能快速找到一个清楚、能展开的理由。</p>
+
+    <p>最实用的问题不是“哪个更好？”，而是：</p>
+    <div class="route"><strong>Which choice gives me something useful?</strong><br>这个选择能给我带来什么？</div>
+
+    <p>如果选择 smaller gatherings，很容易形成一条自然的因果链：</p>
+    <div class="route"><strong>smaller group → quieter atmosphere → easier conversation → deeper connection</strong></div>
+
+    <p>这里不需要强行找两个完全不同的理由。像 “quieter” 和 “deeper conversations” 本来就可以连成一条逻辑链。相比两个松散的理由，一条有因果关系的链条通常更好讲，也更自然。</p>
+
+    <div class="warning"><strong>常见问题：</strong>不要只说 “Smaller gatherings are better because they are quieter.” 一定继续解释：quieter 以后带来了什么？</div>
+  </div>
+
+  <div class="builder" data-builder="q1">
+    <h3>点击打开思路：先选一边</h3>
+    <div class="choice-row" role="group" aria-label="选择 gathering size">
+      <button type="button" class="side-btn is-selected" data-q1-side="small">Smaller gatherings</button>
+      <button type="button" class="side-btn" data-q1-side="large">Large gatherings</button>
+    </div>
+
+    <p class="micro">再选一个最容易解释的方向。你只需要一个主要理由，其他内容用来展开它。</p>
+
+    <div class="idea-grid" aria-label="Q1 brainstorming triggers">
+      <button type="button" class="idea-card is-selected" data-q1-trigger="comfort"><b>Comfort</b><span>Which feels easier?</span></button>
+      <button type="button" class="idea-card" data-q1-trigger="connection"><b>Connection</b><span>Which helps relationships?</span></button>
+      <button type="button" class="idea-card" data-q1-trigger="energy"><b>Energy</b><span>Which feels more exciting?</span></button>
+      <button type="button" class="idea-card" data-q1-trigger="opportunity"><b>Opportunity</b><span>Which gives more chances?</span></button>
+      <button type="button" class="idea-card" data-q1-trigger="convenience"><b>Convenience</b><span>Which is easier to handle?</span></button>
+    </div>
+
+    <div class="builder-output" id="q1Output" aria-live="polite"></div>
+  </div>
+
+  <div class="sample-box">
+    <h3>Sample Answer</h3>
+    <p class="sample-answer">I definitely prefer smaller social gatherings. For one thing, they tend to be quieter and more relaxed, so it’s much easier to have a real conversation without being distracted by loud music or other people. More importantly, because there are fewer people around, I can spend more time talking to each person and have more meaningful, in-depth conversations. So for me, smaller gatherings make it much easier to actually connect with people.</p>
+  </div>
+
+  <div class="vocab-box">
+    <h3>Core Vocabulary & Chunks</h3>
+    <ul class="vocab-list">
+      <li><strong>prefer smaller social gatherings</strong> — 更喜欢小型社交聚会</li>
+      <li><strong>quieter and more relaxed</strong> — 更安静、更放松</li>
+      <li><strong>have a real conversation</strong> — 真正好好聊一聊</li>
+      <li><strong>be distracted by...</strong> — 被……分散注意力</li>
+      <li><strong>spend more time talking to each person</strong> — 有更多时间和每个人交流</li>
+      <li><strong>meaningful, in-depth conversations</strong> — 有意义、深入的交流</li>
+      <li><strong>connect with people</strong> — 与别人建立联系</li>
+      <li><strong>For one thing...</strong> — 首先 / 其中一个原因是……</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<!-- ======================================================
+     QUESTION 2
+     ====================================================== -->
+<section id="social-q2">
+  <span class="tag">Q2 · PAST EXPERIENCE</span>
+  <h2>Question 2：不要讲完整流水账，抓住一个 Moment</h2>
+
+  <div class="question">
+    <strong>Thank you! Can you describe a memorable social gathering you attended recently? What made it special?</strong>
+  </div>
+
+  <div class="formula" aria-label="Q2 structure">
+    <span class="formula-step">Event</span><span class="arrow">→</span>
+    <span class="formula-step">Moment</span><span class="arrow">→</span>
+    <span class="formula-step">Meaning</span>
+  </div>
+
+  <div class="analysis-box">
+    <h3>答题思路</h3>
+    <p>这是一道 <strong>Past Experience + Significance</strong> 题。题目表面上让你 “describe a memorable gathering”，但真正决定答案质量的是第二问：</p>
+    <div class="route"><strong>What made it special?</strong></div>
+
+    <p>很多回答的问题是：从到场开始，按时间顺序把整场活动讲一遍。这样很容易变成流水账，而且最后没有时间解释为什么 memorable。</p>
+
+    <p>更好用的办法是：</p>
+    <div class="route"><strong>Event → zoom in on ONE moment → explain why that moment mattered</strong></div>
+
+    <p>脑子里只要记住四个词：</p>
+    <div class="route"><strong>What — Who — Moment — Meaning</strong></div>
+
+    <div class="warning"><strong>常见问题：</strong>讲完故事不要马上停。最后一定补一句 “What made it memorable was...” 或者解释这个经历为什么对你有意义。</div>
+  </div>
+
+  <div class="builder" data-builder="q2">
+    <h3>点击一个“特别”的来源</h3>
+    <p class="micro">先想清楚为什么特别，再决定要讲哪些细节。这样故事会短很多，也更聚焦。</p>
+
+    <div class="choice-row" role="group" aria-label="Q2 specialness triggers">
+      <button type="button" class="choice-btn is-selected" data-q2-trigger="reconnect">Reconnect</button>
+      <button type="button" class="choice-btn" data-q2-trigger="learn">Learn something</button>
+      <button type="button" class="choice-btn" data-q2-trigger="celebrate">Celebrate</button>
+      <button type="button" class="choice-btn" data-q2-trigger="unexpected">Unexpected moment</button>
+      <button type="button" class="choice-btn" data-q2-trigger="rare">Rare chance</button>
+    </div>
+
+    <div class="builder-output" id="q2Output" aria-live="polite"></div>
+  </div>
+
+  <div class="sample-box">
+    <h3>Sample Answer</h3>
+    <p class="sample-answer">Last week, I went to a small party with some friends, and I ran into a friend I hadn’t talked to in a long time. We started catching up, and she showed me an app she had been building for WeChat. Since I also enjoy developing programs and apps, we ended up exchanging ideas about how we built our projects. What made the gathering memorable was that I not only reconnected with an old friend, but also learned something new from her.</p>
+  </div>
+
+  <div class="vocab-box">
+    <h3>Core Vocabulary & Chunks</h3>
+    <ul class="vocab-list">
+      <li><strong>go to a small party</strong> — 参加一个小型聚会</li>
+      <li><strong>run into a friend</strong> — 偶遇一位朋友</li>
+      <li><strong>hadn’t talked to ... in a long time</strong> — 很久没有和……聊过了</li>
+      <li><strong>start catching up</strong> — 开始叙旧、聊近况</li>
+      <li><strong>show someone an app</strong> — 给某人展示一个 App</li>
+      <li><strong>end up doing something</strong> — 最后做起了某事</li>
+      <li><strong>exchange ideas</strong> — 交流想法</li>
+      <li><strong>reconnect with an old friend</strong> — 与老朋友重新建立联系</li>
+      <li><strong>What made it memorable was...</strong> — 让它难忘的是……</li>
+      <li><strong>not only..., but also...</strong> — 不仅……而且……</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<!-- ======================================================
+     QUESTION 3
+     ====================================================== -->
+<section id="social-q3">
+  <span class="tag">Q3 · ROUTINE</span>
+  <h2>Question 3：可以列两步，但一定要选出“最重要的一步”</h2>
+
+  <div class="question">
+    <strong>Very good! How do you usually prepare for a social gathering? What do you focus on most?</strong>
+  </div>
+
+  <div class="formula" aria-label="Q3 structure">
+    <span class="formula-step">Preparation</span><span class="arrow">→</span>
+    <span class="formula-step">Main Priority</span><span class="arrow">→</span>
+    <span class="formula-step">Why</span>
+  </div>
+
+  <div class="analysis-box">
+    <h3>答题思路</h3>
+    <p>这是 <strong>Routine + Priority</strong> 题。第一问很容易回答：穿什么、几点出门、怎么去、要不要带东西……真正容易丢掉的是第二问：</p>
+    <div class="route"><strong>What do you focus on most?</strong></div>
+
+    <p>所以可以快速提到一两个普通准备步骤，然后立刻用一句话把重点拉出来：</p>
+    <div class="route"><strong>But what I focus on most is...</strong></div>
+
+    <p>一个通用的脑内问题是：</p>
+    <div class="route"><strong>Before I do X, what do I usually check, prepare, or think about?</strong></div>
+
+    <p>然后再问：哪一个最值得解释？对于 social gathering，<strong>conversation topics</strong> 往往比“选衣服”更容易展开，因为你可以继续讲避免 awkward silence、找到共同话题、让交流更自然。</p>
+
+    <div class="warning"><strong>常见问题：</strong>不要把回答变成 checklist。题目不是问 “List everything you do.” 而是问你最重视什么。</div>
+  </div>
+
+  <div class="builder" data-builder="q3">
+    <h3>你最关注什么？点击一个方向</h3>
+
+    <div class="idea-grid" aria-label="Q3 preparation triggers">
+      <button type="button" class="idea-card" data-q3-trigger="appearance"><b>Appearance</b><span>look appropriate</span></button>
+      <button type="button" class="idea-card" data-q3-trigger="logistics"><b>Logistics</b><span>time + route</span></button>
+      <button type="button" class="idea-card" data-q3-trigger="people"><b>People</b><span>who will be there?</span></button>
+      <button type="button" class="idea-card is-selected" data-q3-trigger="conversation"><b>Conversation</b><span>what can I talk about?</span></button>
+      <button type="button" class="idea-card" data-q3-trigger="mood"><b>Mood</b><span>relax + be open</span></button>
+    </div>
+
+    <div class="builder-output" id="q3Output" aria-live="polite"></div>
+  </div>
+
+  <div class="sample-box">
+    <h3>Sample Answer</h3>
+    <p class="sample-answer">Before a social gathering, I usually make sure I’m dressed appropriately and plan my transportation in advance so I can arrive on time. But what I focus on most is preparing a few conversation topics. I’ll think about who I’m going to meet and what we might have in common. That way, when I talk to people, I have something interesting to bring up and I can respond more naturally instead of worrying about awkward silences.</p>
+  </div>
+
+  <div class="vocab-box">
+    <h3>Core Vocabulary & Chunks</h3>
+    <ul class="vocab-list">
+      <li><strong>dress appropriately</strong> — 穿着得体</li>
+      <li><strong>plan my transportation in advance</strong> — 提前安排交通</li>
+      <li><strong>arrive on time</strong> — 准时到达</li>
+      <li><strong>what I focus on most is...</strong> — 我最关注的是……</li>
+      <li><strong>prepare a few conversation topics</strong> — 准备几个聊天话题</li>
+      <li><strong>have something in common</strong> — 有共同点</li>
+      <li><strong>bring up a topic</strong> — 提起一个话题</li>
+      <li><strong>respond more naturally</strong> — 回应得更自然</li>
+      <li><strong>awkward silence</strong> — 尴尬的沉默</li>
+      <li><strong>That way,...</strong> — 这样一来……</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<!-- ======================================================
+     QUESTION 4
+     ====================================================== -->
+<section id="social-q4">
+  <span class="tag">Q4 · OPINION</span>
+  <h2>Question 4：不要重复观点，要解释它“怎么发生”</h2>
+
+  <div class="question">
+    <strong>Some people believe that social gatherings are important opportunities for building and maintaining professional relationships. Do you agree or disagree with this idea? Why or why not?</strong>
+  </div>
+
+  <div class="formula" aria-label="Q4 structure">
+    <span class="formula-step">Position</span><span class="arrow">→</span>
+    <span class="formula-step">Mechanism</span><span class="arrow">→</span>
+    <span class="formula-step">Benefit</span><span class="arrow">→</span>
+    <span class="formula-step">Example</span>
+  </div>
+
+  <div class="analysis-box">
+    <h3>答题思路</h3>
+    <p>这是四道题里最抽象的一道。最容易出现的弱回答是：</p>
+    <div class="route"><strong>Social gatherings are important because networking is important.</strong></div>
+
+    <p>这其实只是换了一种说法重复题目。Opinion 题真正需要补的是中间那一段：<strong>How does it work?</strong></p>
+
+    <p>如果选择 agree，一条非常自然的逻辑链是：</p>
+    <div class="route"><strong>informal setting → easier conversation → personal connection → trust → future cooperation</strong></div>
+
+    <p>你也可以保留 “learn from each other / exchange ideas” 这样的内容，但要让它服务于 professional relationship，而不是把答案变成“参加聚会可以学习知识”。</p>
+
+    <p>如果选择 disagree，也完全可以：</p>
+    <div class="route"><strong>daily cooperation → reliability → trust → strong professional relationship</strong></div>
+    <p>也就是说，可以认为社交活动有帮助，但并不是建立职业关系的必要条件。</p>
+
+    <div class="warning"><strong>常见问题：</strong>不要只给结论或抽象名词。把观点变成一条 cause-and-effect chain，答案就会自然很多。</div>
+  </div>
+
+  <div class="builder" data-builder="q4">
+    <h3>先选立场，再看完整逻辑链</h3>
+    <div class="choice-row" role="group" aria-label="Q4 position">
+      <button type="button" class="side-btn is-selected" data-q4-side="agree">Agree</button>
+      <button type="button" class="side-btn" data-q4-side="disagree">Disagree</button>
+    </div>
+
+    <div class="builder-output" id="q4Output" aria-live="polite"></div>
+  </div>
+
+  <div class="sample-box">
+    <h3>Sample Answer</h3>
+    <p class="sample-answer">Yes, I agree that social gatherings can be great opportunities to build professional relationships. They give people a more relaxed environment to talk outside of their normal work setting. That makes it easier to exchange ideas, learn about each other’s interests, and build trust. For example, you might discover that someone is working on a project similar to yours, and that conversation could eventually lead to collaboration. So these gatherings can strengthen both personal connections and professional relationships.</p>
+  </div>
+
+  <div class="vocab-box">
+    <h3>Core Vocabulary & Chunks</h3>
+    <ul class="vocab-list">
+      <li><strong>build professional relationships</strong> — 建立职业关系</li>
+      <li><strong>a more relaxed environment</strong> — 更轻松的环境</li>
+      <li><strong>outside of the normal work setting</strong> — 在日常工作场景之外</li>
+      <li><strong>exchange ideas</strong> — 交流想法</li>
+      <li><strong>learn about each other’s interests</strong> — 了解彼此的兴趣</li>
+      <li><strong>build trust</strong> — 建立信任</li>
+      <li><strong>work on a similar project</strong> — 做类似的项目</li>
+      <li><strong>lead to collaboration</strong> — 促成合作</li>
+      <li><strong>strengthen personal connections</strong> — 加强个人联系</li>
+      <li><strong>daily cooperation</strong> — 日常合作</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<!-- ======================================================
+     FINAL SUMMARY
+     ====================================================== -->
+<section id="social-summary">
+  <h2>最后：四道题，四张思维卡</h2>
+
+  <div class="final-map">
+    <div class="final-card">
+      <span class="num">1</span><b>Preference</b>
+      <div class="final-formula">Choice → Reason → Benefit</div>
+    </div>
+
+    <div class="final-card">
+      <span class="num">2</span><b>Past Experience</b>
+      <div class="final-formula">Event → Moment → Meaning</div>
+    </div>
+
+    <div class="final-card">
+      <span class="num">3</span><b>Routine</b>
+      <div class="final-formula">Preparation → Priority → Why</div>
+    </div>
+
+    <div class="final-card">
+      <span class="num">4</span><b>Opinion</b>
+      <div class="final-formula">Position → Mechanism → Benefit → Example</div>
+    </div>
+  </div>
+
+  <div class="core">
+    <strong>考试时不要先想漂亮句子，先判断题型。</strong><br>
+    A or B？→ 选一边，讲清楚一个好处。<br>
+    Past experience？→ 抓住一个 moment，再解释 meaning。<br>
+    Routine？→ 快速提准备步骤，但重点说 priority。<br>
+    Opinion？→ 不要重复观点，解释 how it works。
+  </div>
+
+  <details class="practice-box">
+    <summary>30 秒自测：不看上面，你还能说出四种结构吗？</summary>
+    <p>
+      <strong>Q1:</strong> Choice → Reason → Benefit<br>
+      <strong>Q2:</strong> Event → Moment → Meaning<br>
+      <strong>Q3:</strong> Preparation → Priority → Why<br>
+      <strong>Q4:</strong> Position → Mechanism → Benefit → Example
+    </p>
+  </details>
+
+  <details class="practice-box">
+    <summary>再进一步：四种题最关键的脑内问题</summary>
+    <p>
+      <strong>Preference:</strong> Which choice gives me something useful?<br>
+      <strong>Past Experience:</strong> What one moment made it memorable?<br>
+      <strong>Routine:</strong> What do I focus on most, and why?<br>
+      <strong>Opinion:</strong> How does my reason actually work?
+    </p>
+  </details>
+</section>
+
+</div>
+
+<script>
+(function () {
+  const root = document.getElementById('socialGatheringsLab');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  // Smooth navigation
+  root.querySelectorAll('[data-jump]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const target = document.getElementById(button.dataset.jump);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  function selectWithin(selector, selected) {
+    root.querySelectorAll(selector).forEach(function (item) {
+      item.classList.toggle('is-selected', item === selected);
+    });
+  }
+
+  // ---------------- Q1 ----------------
+  const q1Data = {
+    small: {
+      comfort: {
+        idea: 'A smaller group feels calmer and less overwhelming.',
+        line: 'Smaller group → quieter atmosphere → easier conversation → more relaxed experience'
+      },
+      connection: {
+        idea: 'With fewer people, you can spend more time with each person and talk in more depth.',
+        line: 'Fewer people → more time per person → deeper conversation → stronger connection'
+      },
+      energy: {
+        idea: 'You may prefer a calmer atmosphere instead of a loud, highly energetic one.',
+        line: 'Less noise → less pressure → easier to focus on the people you are with'
+      },
+      opportunity: {
+        idea: 'A small gathering gives you a better chance to really know the people who are there.',
+        line: 'More focused interaction → better understanding → closer relationships'
+      },
+      convenience: {
+        idea: 'Smaller gatherings are easier to organize and easier to move around in socially.',
+        line: 'Fewer people → simpler plans → less waiting / less noise → more comfortable experience'
+      }
+    },
+    large: {
+      comfort: {
+        idea: 'Some people actually feel less pressure in a crowd because they are not expected to talk deeply to everyone.',
+        line: 'More people → less pressure on one conversation → easier to move between groups'
+      },
+      connection: {
+        idea: 'A large gathering lets you reconnect with many people in the same place.',
+        line: 'More people together → more conversations → more chances to reconnect'
+      },
+      energy: {
+        idea: 'Large gatherings often feel lively and exciting because there is more activity around you.',
+        line: 'Bigger crowd → more activity → lively atmosphere → more excitement'
+      },
+      opportunity: {
+        idea: 'You can meet people outside your usual circle and make new friends or professional contacts.',
+        line: 'More people → wider social circle → new connections → new opportunities'
+      },
+      convenience: {
+        idea: 'One big event can be an efficient way to meet many friends or colleagues at once.',
+        line: 'One event → many people in one place → more interaction in less time'
+      }
+    }
+  };
+
+  let q1Side = 'small';
+  let q1Trigger = 'comfort';
+  const q1Output = document.getElementById('q1Output');
+
+  function renderQ1() {
+    const item = q1Data[q1Side][q1Trigger];
+    q1Output.innerHTML = '<span class="builder-label">One idea you can develop</span>' +
+      '<div>' + item.idea + '</div>' +
+      '<div class="logic-line">' + item.line + '</div>';
+  }
+
+  root.querySelectorAll('[data-q1-side]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      q1Side = button.dataset.q1Side;
+      selectWithin('[data-q1-side]', button);
+      renderQ1();
+    });
+  });
+
+  root.querySelectorAll('[data-q1-trigger]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      q1Trigger = button.dataset.q1Trigger;
+      selectWithin('[data-q1-trigger]', button);
+      renderQ1();
+    });
+  });
+
+  // ---------------- Q2 ----------------
+  const q2Data = {
+    reconnect: {
+      idea: 'You met someone you had not seen for a long time and finally had a chance to catch up.',
+      line: 'Event → old friend → catching up → reconnected after a long time'
+    },
+    learn: {
+      idea: 'Someone showed you something interesting, taught you a skill, or shared an idea you had never considered before.',
+      line: 'Event → interesting conversation → learned something new → memorable because it changed your thinking'
+    },
+    celebrate: {
+      idea: 'The gathering marked an achievement such as a birthday, graduation, promotion, or finished project.',
+      line: 'Event → shared achievement → celebration → strong positive emotion'
+    },
+    unexpected: {
+      idea: 'Something funny, surprising, or completely unplanned happened and became the moment everyone remembered.',
+      line: 'Normal gathering → unexpected moment → strong reaction → lasting memory'
+    },
+    rare: {
+      idea: 'People who are usually busy or live far apart were finally in the same place.',
+      line: 'Rare chance → everyone together → meaningful time → special because it does not happen often'
+    }
+  };
+
+  const q2Output = document.getElementById('q2Output');
+  function renderQ2(key) {
+    const item = q2Data[key];
+    q2Output.innerHTML = '<span class="builder-label">Build the story around this</span>' +
+      '<div>' + item.idea + '</div>' +
+      '<div class="logic-line">' + item.line + '</div>';
+  }
+
+  root.querySelectorAll('[data-q2-trigger]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      selectWithin('[data-q2-trigger]', button);
+      renderQ2(button.dataset.q2Trigger);
+    });
+  });
+
+  // ---------------- Q3 ----------------
+  const q3Data = {
+    appearance: {
+      idea: 'Choose clothes that fit the occasion so you feel comfortable and make a good impression.',
+      line: 'appropriate clothes → feel confident → make a good first impression'
+    },
+    logistics: {
+      idea: 'Check the location, estimate travel time, and decide whether to drive, take a taxi, or use public transportation.',
+      line: 'check route → estimate time → choose transportation → arrive on time'
+    },
+    people: {
+      idea: 'Think about who will be there so you know who you want to talk to and what you may have in common.',
+      line: 'who will be there? → shared interests → easier conversation'
+    },
+    conversation: {
+      idea: 'Prepare two or three possible topics so you can start conversations naturally and avoid awkward silence.',
+      line: 'prepare topics → easier opening → smoother response → more natural interaction'
+    },
+    mood: {
+      idea: 'Give yourself time to relax so you arrive open-minded and ready to talk instead of feeling rushed.',
+      line: 'slow down → feel relaxed → be more open → communicate better'
+    }
+  };
+
+  const q3Output = document.getElementById('q3Output');
+  function renderQ3(key) {
+    const item = q3Data[key];
+    q3Output.innerHTML = '<span class="builder-label">Make this your main priority</span>' +
+      '<div>' + item.idea + '</div>' +
+      '<div class="logic-line">' + item.line + '</div>';
+  }
+
+  root.querySelectorAll('[data-q3-trigger]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      selectWithin('[data-q3-trigger]', button);
+      renderQ3(button.dataset.q3Trigger);
+    });
+  });
+
+  // ---------------- Q4 ----------------
+  const q4Data = {
+    agree: {
+      idea: 'A social gathering gives coworkers or professional contacts a more relaxed setting than a normal meeting.',
+      line: 'informal setting → easier conversation → personal connection → trust → future cooperation',
+      example: 'Example: You discover that someone is working on a project similar to yours, and the conversation later leads to collaboration.'
+    },
+    disagree: {
+      idea: 'Professional relationships are built mainly through daily work, reliability, and good communication rather than social events.',
+      line: 'daily cooperation → reliability → trust → strong professional relationship',
+      example: 'Example: A reliable coworker can become a trusted professional contact even if that person rarely attends parties or networking events.'
+    }
+  };
+
+  const q4Output = document.getElementById('q4Output');
+  function renderQ4(key) {
+    const item = q4Data[key];
+    q4Output.innerHTML = '<span class="builder-label">Mechanism</span>' +
+      '<div>' + item.idea + '</div>' +
+      '<div class="logic-line">' + item.line + '</div>' +
+      '<p style="margin-bottom:0;">' + item.example + '</p>';
+  }
+
+  root.querySelectorAll('[data-q4-side]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      selectWithin('[data-q4-side]', button);
+      renderQ4(button.dataset.q4Side);
+    });
+  });
+
+  // Default states
+  renderQ1();
+  renderQ2('reconnect');
+  renderQ3('conversation');
+  renderQ4('agree');
+})();
+</script>
