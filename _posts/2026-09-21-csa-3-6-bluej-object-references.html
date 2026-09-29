@@ -6,24 +6,43 @@ render_with_liquid: false
 ---
 
 <style>
+/* =========================================================
+   AP CSA 3.6 BlueJ Object References
+   Theme-native version for shishiapcs.github.io / Contrast
+
+   IMPORTANT:
+   - Inherit the site's text color.
+   - Use translucent surfaces instead of white/light-only cards.
+   - Adapt automatically to system dark/light mode.
+   ========================================================= */
+
 .bluej-guide {
-  --bg-soft: #f7f8fa;
-  --panel: #ffffff;
-  --line: #d9dee7;
-  --text-soft: #5b6472;
-  --code-bg: #111827;
-  --code-text: #f3f4f6;
-  --accent-soft: #eef4ff;
-  --accent-border: #b8cdf7;
-  --success-soft: #eefbf3;
-  --warn-soft: #fff8e8;
   max-width: 980px;
   margin: 0 auto;
-  line-height: 1.7;
+  color: inherit;
+  line-height: 1.72;
+  font-size: 1.02rem;
+
+  --br-surface: rgba(127, 127, 127, 0.08);
+  --br-surface-strong: rgba(127, 127, 127, 0.14);
+  --br-border: rgba(127, 127, 127, 0.34);
+  --br-border-strong: rgba(127, 127, 127, 0.58);
+  --br-code-surface: rgba(127, 127, 127, 0.10);
 }
 
 .bluej-guide * {
   box-sizing: border-box;
+}
+
+.bluej-guide h2,
+.bluej-guide h3,
+.bluej-guide h4,
+.bluej-guide p,
+.bluej-guide li,
+.bluej-guide strong,
+.bluej-guide button,
+.bluej-guide summary {
+  color: inherit;
 }
 
 .bluej-guide .hero {
@@ -36,13 +55,15 @@ render_with_liquid: false
 
 .bluej-guide .hero .lead {
   font-size: 1.08rem;
+  opacity: .94;
 }
 
 .bluej-guide .key-question {
   margin: 1rem 0 1.35rem;
   padding: 0.9rem 1rem;
-  border-left: 4px solid #5477c8;
-  background: var(--accent-soft);
+  border: 1px solid var(--br-border);
+  border-left: 4px solid currentColor;
+  background: var(--br-surface);
   border-radius: 0 10px 10px 0;
   font-weight: 700;
 }
@@ -57,8 +78,8 @@ render_with_liquid: false
 .bluej-guide .ui-btn,
 .bluej-guide .copy-btn {
   appearance: none;
-  border: 1px solid var(--line);
-  background: #fff;
+  border: 1px solid var(--br-border);
+  background: var(--br-surface);
   color: inherit;
   border-radius: 8px;
   padding: 0.42rem 0.72rem;
@@ -69,9 +90,12 @@ render_with_liquid: false
 }
 
 .bluej-guide .ui-btn:hover,
-.bluej-guide .copy-btn:hover {
-  background: var(--bg-soft);
-  border-color: #aab3c0;
+.bluej-guide .ui-btn:focus-visible,
+.bluej-guide .copy-btn:hover,
+.bluej-guide .copy-btn:focus-visible {
+  background: var(--br-surface-strong);
+  border-color: var(--br-border-strong);
+  outline: none;
 }
 
 .bluej-guide .ui-btn:active,
@@ -82,9 +106,9 @@ render_with_liquid: false
 .bluej-guide .concept-shell {
   margin: 1.2rem 0 1.5rem;
   padding: 1rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   border-radius: 14px;
-  background: var(--bg-soft);
+  background: var(--br-surface);
 }
 
 .bluej-guide .concept-shell h2 {
@@ -99,21 +123,23 @@ render_with_liquid: false
 
 .bluej-guide .concept-card {
   width: 100%;
-  text-align: left;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: inherit;
-  border-radius: 12px;
-  padding: 0.85rem 0.9rem;
-  cursor: pointer;
   min-height: 112px;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--br-border);
+  border-radius: 12px;
+  background: var(--br-surface);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
 }
 
-.bluej-guide .concept-card:hover {
+.bluej-guide .concept-card:hover,
+.bluej-guide .concept-card:focus-visible {
   transform: translateY(-2px);
-  border-color: var(--accent-border);
-  box-shadow: 0 6px 18px rgba(30, 45, 70, 0.08);
+  border-color: var(--br-border-strong);
+  background: var(--br-surface-strong);
+  outline: none;
 }
 
 .bluej-guide .concept-card .num {
@@ -122,10 +148,11 @@ render_with_liquid: false
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  font-weight: 800;
   margin-bottom: 0.4rem;
+  border: 1px solid var(--br-border-strong);
+  border-radius: 999px;
+  background: transparent;
+  font-weight: 800;
 }
 
 .bluej-guide .concept-card strong {
@@ -135,8 +162,9 @@ render_with_liquid: false
 
 .bluej-guide .concept-card small {
   display: block;
-  color: var(--text-soft);
+  color: inherit;
   line-height: 1.45;
+  opacity: .68;
 }
 
 .bluej-guide .mini-rule {
@@ -150,17 +178,18 @@ render_with_liquid: false
   padding: 0.7rem;
   text-align: center;
   border-radius: 10px;
-  background: #fff;
-  border: 1px solid var(--line);
+  background: var(--br-surface);
+  border: 1px solid var(--br-border);
   font-weight: 700;
 }
 
 .bluej-guide details.lesson {
   margin: 0.8rem 0;
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   border-radius: 12px;
   overflow: hidden;
-  background: var(--panel);
+  background: var(--br-surface);
+  color: inherit;
 }
 
 .bluej-guide details.lesson > summary {
@@ -168,7 +197,7 @@ render_with_liquid: false
   cursor: pointer;
   padding: 0.9rem 1rem;
   font-weight: 800;
-  background: #fafbfc;
+  background: var(--br-surface);
   display: flex;
   align-items: center;
   gap: 0.65rem;
@@ -182,7 +211,11 @@ render_with_liquid: false
   content: "＋";
   margin-left: auto;
   font-size: 1.15rem;
-  color: var(--text-soft);
+  opacity: .66;
+}
+
+.bluej-guide details.lesson[open] > summary {
+  background: var(--br-surface-strong);
 }
 
 .bluej-guide details.lesson[open] > summary::after {
@@ -195,8 +228,9 @@ render_with_liquid: false
   justify-content: center;
   min-width: 2rem;
   height: 2rem;
+  border: 1px solid var(--br-border-strong);
   border-radius: 999px;
-  background: var(--accent-soft);
+  background: transparent;
   font-weight: 800;
 }
 
@@ -211,19 +245,18 @@ render_with_liquid: false
 .bluej-guide .callout {
   margin: 0.9rem 0;
   padding: 0.8rem 0.95rem;
-  border-radius: 10px;
-  background: var(--accent-soft);
-  border: 1px solid var(--accent-border);
+  border: 1px solid var(--br-border);
+  border-left: 4px solid currentColor;
+  border-radius: 0 10px 10px 0;
+  background: var(--br-surface);
+  color: inherit;
 }
 
-.bluej-guide .callout.success {
-  background: var(--success-soft);
-  border-color: #b9e4c8;
-}
-
+.bluej-guide .callout.success,
 .bluej-guide .callout.question {
-  background: var(--warn-soft);
-  border-color: #efd594;
+  background: var(--br-surface);
+  border-color: var(--br-border);
+  border-left-color: currentColor;
 }
 
 .bluej-guide .compare-grid {
@@ -234,10 +267,11 @@ render_with_liquid: false
 }
 
 .bluej-guide .compare-card {
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   border-radius: 10px;
   padding: 0.85rem;
-  background: #fff;
+  background: var(--br-surface);
+  color: inherit;
 }
 
 .bluej-guide .compare-card h4 {
@@ -246,10 +280,11 @@ render_with_liquid: false
 
 .bluej-guide .code-card {
   margin: 0.9rem 0 1rem;
-  border: 1px solid #2b3445;
+  border: 1px solid var(--br-border);
   border-radius: 12px;
   overflow: hidden;
-  background: var(--code-bg);
+  background: var(--br-code-surface);
+  color: inherit;
 }
 
 .bluej-guide .code-head {
@@ -258,8 +293,9 @@ render_with_liquid: false
   align-items: center;
   gap: 0.7rem;
   padding: 0.55rem 0.7rem;
-  background: #1f2937;
-  color: #e5e7eb;
+  border-bottom: 1px solid var(--br-border);
+  background: var(--br-surface);
+  color: inherit;
   font-size: 0.88rem;
 }
 
@@ -267,31 +303,18 @@ render_with_liquid: false
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-.bluej-guide .copy-btn {
-  border-color: #4b5563;
-  background: #111827;
-  color: #f9fafb;
-  padding: 0.32rem 0.62rem;
-  font-size: 0.82rem;
-}
-
-.bluej-guide .copy-btn:hover {
-  background: #293244;
-  border-color: #6b7280;
-}
-
 .bluej-guide pre {
   margin: 0;
   padding: 0.9rem 1rem;
   overflow-x: auto;
-  background: var(--code-bg);
-  color: var(--code-text);
+  background: transparent;
+  color: inherit;
   line-height: 1.55;
 }
 
 .bluej-guide pre code {
-  background: transparent;
-  color: inherit;
+  background: transparent !important;
+  color: inherit !important;
   padding: 0;
   font-size: 0.92rem;
 }
@@ -300,49 +323,61 @@ render_with_liquid: false
   margin: 0.85rem 0;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #2b3445;
+  border: 1px solid var(--br-border);
+  background: var(--br-code-surface);
+  color: inherit;
 }
 
 .bluej-guide .diagram pre {
-  color: #f3f4f6;
+  background: transparent;
+  color: inherit;
 }
 
 .bluej-guide table {
   width: 100%;
   border-collapse: collapse;
   margin: 0.9rem 0;
+  color: inherit;
 }
 
 .bluej-guide th,
 .bluej-guide td {
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   padding: 0.55rem 0.65rem;
   vertical-align: top;
 }
 
 .bluej-guide th {
-  background: var(--bg-soft);
+  background: var(--br-surface-strong);
+  color: inherit;
+}
+
+.bluej-guide td {
+  background: var(--br-surface);
+  color: inherit;
 }
 
 .bluej-guide .prediction {
   margin: 0.8rem 0;
   padding: 0.75rem 0.9rem;
-  border: 1px dashed #c3a34f;
-  background: var(--warn-soft);
+  border: 1px dashed var(--br-border-strong);
+  background: var(--br-surface);
   border-radius: 10px;
+  color: inherit;
 }
 
 .bluej-guide .answer-zone {
   margin-top: 1.7rem;
-  border-top: 2px solid var(--line);
+  border-top: 2px solid var(--br-border);
   padding-top: 1rem;
 }
 
 .bluej-guide details.answer {
   margin: 0.7rem 0;
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   border-radius: 10px;
-  background: #fff;
+  background: var(--br-surface);
+  color: inherit;
   overflow: hidden;
 }
 
@@ -350,7 +385,12 @@ render_with_liquid: false
   cursor: pointer;
   padding: 0.75rem 0.9rem;
   font-weight: 800;
-  background: var(--success-soft);
+  background: var(--br-surface);
+  color: inherit;
+}
+
+.bluej-guide details.answer[open] > summary {
+  background: var(--br-surface-strong);
 }
 
 .bluej-guide details.answer .answer-body {
@@ -360,9 +400,32 @@ render_with_liquid: false
 .bluej-guide .final-model {
   margin: 1rem 0;
   padding: 1rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--br-border);
   border-radius: 12px;
-  background: var(--bg-soft);
+  background: var(--br-surface);
+  color: inherit;
+}
+
+/* Contrast theme follows system appearance.
+   These variables add only subtle layers and never replace the site theme. */
+@media (prefers-color-scheme: dark) {
+  .bluej-guide {
+    --br-surface: rgba(255, 255, 255, 0.045);
+    --br-surface-strong: rgba(255, 255, 255, 0.085);
+    --br-border: rgba(255, 255, 255, 0.16);
+    --br-border-strong: rgba(255, 255, 255, 0.34);
+    --br-code-surface: rgba(0, 0, 0, 0.20);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .bluej-guide {
+    --br-surface: rgba(0, 0, 0, 0.035);
+    --br-surface-strong: rgba(0, 0, 0, 0.07);
+    --br-border: rgba(0, 0, 0, 0.14);
+    --br-border-strong: rgba(0, 0, 0, 0.30);
+    --br-code-surface: rgba(0, 0, 0, 0.045);
+  }
 }
 
 @media (max-width: 760px) {
