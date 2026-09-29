@@ -1,0 +1,1493 @@
+---
+title: "AP CSA 3.6：用 BlueJ 看懂对象引用"
+layout: post
+categories: media
+render_with_liquid: false
+---
+
+<style>
+.bluej-guide {
+  --bg-soft: #f7f8fa;
+  --panel: #ffffff;
+  --line: #d9dee7;
+  --text-soft: #5b6472;
+  --code-bg: #111827;
+  --code-text: #f3f4f6;
+  --accent-soft: #eef4ff;
+  --accent-border: #b8cdf7;
+  --success-soft: #eefbf3;
+  --warn-soft: #fff8e8;
+  max-width: 980px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.bluej-guide * {
+  box-sizing: border-box;
+}
+
+.bluej-guide .hero {
+  padding: 1.2rem 0 0.4rem;
+}
+
+.bluej-guide .hero p {
+  margin: 0.35rem 0;
+}
+
+.bluej-guide .hero .lead {
+  font-size: 1.08rem;
+}
+
+.bluej-guide .key-question {
+  margin: 1rem 0 1.35rem;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid #5477c8;
+  background: var(--accent-soft);
+  border-radius: 0 10px 10px 0;
+  font-weight: 700;
+}
+
+.bluej-guide .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.9rem 0 1.1rem;
+}
+
+.bluej-guide .ui-btn,
+.bluej-guide .copy-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.42rem 0.72rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.bluej-guide .ui-btn:hover,
+.bluej-guide .copy-btn:hover {
+  background: var(--bg-soft);
+  border-color: #aab3c0;
+}
+
+.bluej-guide .ui-btn:active,
+.bluej-guide .copy-btn:active {
+  transform: translateY(1px);
+}
+
+.bluej-guide .concept-shell {
+  margin: 1.2rem 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-soft);
+}
+
+.bluej-guide .concept-shell h2 {
+  margin-top: 0;
+}
+
+.bluej-guide .concept-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.bluej-guide .concept-card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: inherit;
+  border-radius: 12px;
+  padding: 0.85rem 0.9rem;
+  cursor: pointer;
+  min-height: 112px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.bluej-guide .concept-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-border);
+  box-shadow: 0 6px 18px rgba(30, 45, 70, 0.08);
+}
+
+.bluej-guide .concept-card .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.bluej-guide .concept-card strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.bluej-guide .concept-card small {
+  display: block;
+  color: var(--text-soft);
+  line-height: 1.45;
+}
+
+.bluej-guide .mini-rule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+}
+
+.bluej-guide .mini-rule div {
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-weight: 700;
+}
+
+.bluej-guide details.lesson {
+  margin: 0.8rem 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.bluej-guide details.lesson > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.9rem 1rem;
+  font-weight: 800;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.bluej-guide details.lesson > summary::-webkit-details-marker {
+  display: none;
+}
+
+.bluej-guide details.lesson > summary::after {
+  content: "＋";
+  margin-left: auto;
+  font-size: 1.15rem;
+  color: var(--text-soft);
+}
+
+.bluej-guide details.lesson[open] > summary::after {
+  content: "−";
+}
+
+.bluej-guide .step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-weight: 800;
+}
+
+.bluej-guide .lesson-body {
+  padding: 0.25rem 1rem 1rem;
+}
+
+.bluej-guide .lesson-body h3 {
+  margin-top: 1.15rem;
+}
+
+.bluej-guide .callout {
+  margin: 0.9rem 0;
+  padding: 0.8rem 0.95rem;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+}
+
+.bluej-guide .callout.success {
+  background: var(--success-soft);
+  border-color: #b9e4c8;
+}
+
+.bluej-guide .callout.question {
+  background: var(--warn-soft);
+  border-color: #efd594;
+}
+
+.bluej-guide .compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 0.9rem 0;
+}
+
+.bluej-guide .compare-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem;
+  background: #fff;
+}
+
+.bluej-guide .compare-card h4 {
+  margin: 0 0 0.45rem;
+}
+
+.bluej-guide .code-card {
+  margin: 0.9rem 0 1rem;
+  border: 1px solid #2b3445;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--code-bg);
+}
+
+.bluej-guide .code-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.7rem;
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 0.88rem;
+}
+
+.bluej-guide .code-head strong {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.bluej-guide .copy-btn {
+  border-color: #4b5563;
+  background: #111827;
+  color: #f9fafb;
+  padding: 0.32rem 0.62rem;
+  font-size: 0.82rem;
+}
+
+.bluej-guide .copy-btn:hover {
+  background: #293244;
+  border-color: #6b7280;
+}
+
+.bluej-guide pre {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  background: var(--code-bg);
+  color: var(--code-text);
+  line-height: 1.55;
+}
+
+.bluej-guide pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 0.92rem;
+}
+
+.bluej-guide .diagram {
+  margin: 0.85rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2b3445;
+}
+
+.bluej-guide .diagram pre {
+  color: #f3f4f6;
+}
+
+.bluej-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.9rem 0;
+}
+
+.bluej-guide th,
+.bluej-guide td {
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.65rem;
+  vertical-align: top;
+}
+
+.bluej-guide th {
+  background: var(--bg-soft);
+}
+
+.bluej-guide .prediction {
+  margin: 0.8rem 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px dashed #c3a34f;
+  background: var(--warn-soft);
+  border-radius: 10px;
+}
+
+.bluej-guide .answer-zone {
+  margin-top: 1.7rem;
+  border-top: 2px solid var(--line);
+  padding-top: 1rem;
+}
+
+.bluej-guide details.answer {
+  margin: 0.7rem 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.bluej-guide details.answer > summary {
+  cursor: pointer;
+  padding: 0.75rem 0.9rem;
+  font-weight: 800;
+  background: var(--success-soft);
+}
+
+.bluej-guide details.answer .answer-body {
+  padding: 0.15rem 0.9rem 0.9rem;
+}
+
+.bluej-guide .final-model {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+
+@media (max-width: 760px) {
+  .bluej-guide .concept-path,
+  .bluej-guide .mini-rule,
+  .bluej-guide .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bluej-guide .concept-card {
+    min-height: auto;
+  }
+}
+</style>
+
+<div class="bluej-guide">
+
+  <section class="hero">
+    <p class="lead">
+      3.6 最需要建立的是一个清楚的 <strong>reference mental model</strong>：
+      object 在哪里？reference 指向哪里？
+    </p>
+
+    <div class="key-question">
+      每次看代码，都问两个问题：<br>
+      ① 现在一共有几个 object？　② 哪些 reference 指向同一个 object？
+    </div>
+  </section>
+
+  <section class="concept-shell">
+    <h2>先看整条路线</h2>
+    <p>点击任意卡片，直接展开对应部分。</p>
+
+    <div class="concept-path">
+      <button class="concept-card" type="button" data-open="section-type">
+        <span class="num">1</span>
+        <strong>Class → Type</strong>
+        <small>自己写的 class name，也可以成为一种 type。</small>
+      </button>
+
+      <button class="concept-card" type="button" data-open="section-inside">
+        <span class="num">2</span>
+        <strong>Object inside Object</strong>
+        <small><code>GameProfile</code> 可以保存一个 <code>Avatar</code> reference。</small>
+      </button>
+
+      <button class="concept-card" type="button" data-open="section-shared">
+        <span class="num">3</span>
+        <strong>Two References, One Object</strong>
+        <small>两个 variable 可以同时指向同一个 object。</small>
+      </button>
+
+      <button class="concept-card" type="button" data-open="section-argument">
+        <span class="num">4</span>
+        <strong>Object as Argument</strong>
+        <small>method parameter 得到的是 reference value 的 copy。</small>
+      </button>
+
+      <button class="concept-card" type="button" data-open="section-change">
+        <span class="num">5</span>
+        <strong>Change Object vs Reference</strong>
+        <small>修改 object 和让 parameter 改指向，是两件不同的事。</small>
+      </button>
+
+      <button class="concept-card" type="button" data-open="section-return">
+        <span class="num">6</span>
+        <strong>Return an Object</strong>
+        <small>return object 时，返回的是 reference value。</small>
+      </button>
+    </div>
+
+    <div class="mini-rule">
+      <div>数 <code>new</code></div>
+      <div>数 object</div>
+      <div>画 reference 箭头</div>
+    </div>
+
+    <div class="toolbar">
+      <button class="ui-btn" type="button" id="expandAll">展开全部</button>
+      <button class="ui-btn" type="button" id="collapseAll">收起全部</button>
+    </div>
+  </section>
+
+
+  <details class="lesson" id="section-type" open>
+    <summary>
+      <span class="step-badge">1</span>
+      Class 怎么会变成一种 Type？
+    </summary>
+
+    <div class="lesson-body">
+      <p>先看三行代码：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Three instance variables</strong>
+        </div>
+        <pre><code>private int level;
+private String username;
+private Avatar avatar;</code></pre>
+      </div>
+
+      <p>
+        第三行中的 <code>Avatar</code> 出现在了 type 的位置。
+        原因是 Java 中：
+      </p>
+
+      <div class="callout success">
+        <strong>定义一个 class，也就定义了一种新的 reference type。</strong>
+      </div>
+
+      <p>当我们写：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Avatar.java</strong></div>
+        <pre><code>public class Avatar
+{
+    ...
+}</code></pre>
+      </div>
+
+      <p>
+        从这一刻开始，<code>Avatar</code> 就可以像 <code>String</code> 一样出现在
+        variable declaration、parameter 和 return type 中。
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>代码</th>
+            <th>Type</th>
+            <th>Variable 中保存什么</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>int level;</code></td>
+            <td>primitive type</td>
+            <td>一个整数值</td>
+          </tr>
+          <tr>
+            <td><code>String username;</code></td>
+            <td>class / reference type</td>
+            <td>一个 object reference</td>
+          </tr>
+          <tr>
+            <td><code>Avatar avatar;</code></td>
+            <td>我们定义的 class / reference type</td>
+            <td>一个 object reference</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="diagram">
+        <pre><code>avatar
+  │
+  │ reference
+  ▼
+┌────────────────┐
+│ Avatar object  │
+└────────────────┘</code></pre>
+      </div>
+
+      <div class="callout question">
+        <strong>检查理解：</strong>
+        <code>String</code> 和 <code>Avatar</code> 有什么共同点？
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-setup">
+    <summary>
+      <span class="step-badge">★</span>
+      BlueJ 准备：建立 Avatar.java
+    </summary>
+
+    <div class="lesson-body">
+      <p>新建 BlueJ Project，例如：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Project name</strong></div>
+        <pre><code>Unit3_6_ObjectReferences</code></pre>
+      </div>
+
+      <p>创建 class：<code>Avatar</code>，然后复制下面的完整代码。</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Avatar.java</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-avatar">复制代码</button>
+        </div>
+        <pre><code id="code-avatar">public class Avatar
+{
+    private String name;
+    private int health;
+
+    public Avatar(String n, int h)
+    {
+        name = n;
+        health = h;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+    public void setHealth(int h)
+    {
+        health = h;
+    }
+
+    public void heal(int amount)
+    {
+        health += amount;
+    }
+
+    public void takeDamage(int amount)
+    {
+        health -= amount;
+    }
+
+    public String toString()
+    {
+        return name + " (HP: " + health + ")";
+    }
+}</code></pre>
+      </div>
+
+      <p>Compile 后，在 Object Bench 创建：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Create an Avatar</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-create-avatar">复制</button>
+        </div>
+        <pre><code id="code-create-avatar">new Avatar("Knight", 80)</code></pre>
+      </div>
+
+      <p>object name 设为：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Object name</strong></div>
+        <pre><code>avatar1</code></pre>
+      </div>
+
+      <p>右键 <code>avatar1</code> → <strong>Inspect</strong>，把它想成：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1
+   │
+   ▼
+┌─────────────────┐
+│ Avatar object   │
+│ name = Knight   │
+│ health = 80     │
+└─────────────────┘</code></pre>
+      </div>
+
+      <div class="callout">
+        BlueJ Object Bench 帮助我们把 reference 可视化。它不是 Java memory 的真实图片，
+        但很适合用来追踪 object。
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-inside">
+    <summary>
+      <span class="step-badge">2</span>
+      BlueJ Task 1：让 GameProfile 拥有一个 Avatar
+    </summary>
+
+    <div class="lesson-body">
+      <p>
+        创建第二个 class：<code>GameProfile</code>。
+        复制下面的 scaffold，再完成其中的空格。
+      </p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>GameProfile.java — scaffold</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-scaffold">复制 Scaffold</button>
+        </div>
+        <pre><code id="code-scaffold">public class GameProfile
+{
+    private String username;
+    private int level;
+
+    // TODO 1
+    // GameProfile has an Avatar.
+    // 这里的 type 应该是什么？
+    private ________ avatar;
+
+
+    // TODO 2
+    // constructor 需要接收一个 Avatar object 的 reference。
+    public GameProfile(String u, int l, ________ a)
+    {
+        username = u;
+        level = l;
+
+        // 把 parameter 中的 reference 存进 instance variable。
+        avatar = ________;
+    }
+
+
+    public void printProfile()
+    {
+        System.out.println("Username: " + username);
+        System.out.println("Level: " + level);
+        System.out.println("Avatar: " + avatar);
+    }
+
+
+    // TODO 3
+    // 接收另一个 Avatar reference，然后让那个 Avatar 恢复 health。
+    public void healAvatar(________ target, int amount)
+    {
+        ________.heal(amount);
+    }
+
+
+    // TODO 4
+    // 返回这个 GameProfile 保存的 Avatar reference。
+    public ________ getAvatar()
+    {
+        return ________;
+    }
+}</code></pre>
+      </div>
+
+      <p>先完成 <strong>TODO 1</strong> 和 <strong>TODO 2</strong>，然后 Compile。</p>
+
+      <div class="callout question">
+        <strong>观察：</strong><br>
+        为什么 <code>String</code> 可以放在 type 的位置？<br>
+        为什么 <code>Avatar</code> 也可以放在 type 的位置？
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h4>String</h4>
+          <p>Java 已经提供的 class。</p>
+          <code>String username;</code>
+        </div>
+        <div class="compare-card">
+          <h4>Avatar</h4>
+          <p>我们自己写的 class。</p>
+          <code>Avatar avatar;</code>
+        </div>
+      </div>
+
+      <p>
+        这时可以用一句很简单的话描述：
+      </p>
+
+      <div class="callout success">
+        <strong>GameProfile has an Avatar.</strong><br>
+        这就是这里需要理解的 <strong>has-a relationship</strong>。
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-shared">
+    <summary>
+      <span class="step-badge">3</span>
+      Experiment：Two References, One Object
+    </summary>
+
+    <div class="lesson-body">
+      <p>Object Bench 上已经有：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Existing object</strong></div>
+        <pre><code>avatar1</code></pre>
+      </div>
+
+      <p>完成并 Compile <code>GameProfile</code> 后，创建：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Create a GameProfile</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-create-profile">复制</button>
+        </div>
+        <pre><code id="code-create-profile">new GameProfile("Alex", 5, avatar1)</code></pre>
+      </div>
+
+      <p>object name 设为：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Object name</strong></div>
+        <pre><code>profile1</code></pre>
+      </div>
+
+      <p>
+        第三个 argument 是 <code>avatar1</code>。这一步没有执行新的
+        <code>new Avatar(...)</code>。
+      </p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ─────────────┐
+                     │
+                     ▼
+                ┌───────────────┐
+                │ Avatar object │
+                │ Knight        │
+                │ HP = 80       │
+                └───────────────┘
+                     ▲
+                     │
+profile1.avatar ─────┘</code></pre>
+      </div>
+
+      <div class="callout success">
+        <strong>两个 reference，一个 Avatar object。</strong>
+      </div>
+
+      <h3>现在让 BlueJ 证明这件事</h3>
+
+      <ol>
+        <li>右键 <code>profile1</code> → 调用 <code>printProfile()</code></li>
+        <li>右键 <code>avatar1</code> → 调用 <code>setHealth(20)</code></li>
+        <li>再次调用 <code>profile1.printProfile()</code></li>
+      </ol>
+
+      <div class="prediction">
+        <strong>先预测：</strong>
+        <code>profile1</code> 看到的 Avatar health 是 <strong>80</strong> 还是 <strong>20</strong>？
+        画一张 reference 图说明理由。
+      </div>
+
+      <h3>Constructor 里发生了什么？</h3>
+
+      <p>创建 <code>profile1</code> 时：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Constructor call</strong></div>
+        <pre><code>new GameProfile("Alex", 5, avatar1)</code></pre>
+      </div>
+
+      <p>parameter <code>a</code> 得到的是 <code>avatar1</code> 中 reference value 的 copy：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ─────┐
+             ▼
+          Avatar
+             ▲
+a ───────────┘</code></pre>
+      </div>
+
+      <p>当 constructor 再执行：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Store the reference</strong></div>
+        <pre><code>avatar = a;</code></pre>
+      </div>
+
+      <p>就形成：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ──────────┐
+a ────────────────┼──► same Avatar object
+profile1.avatar ──┘</code></pre>
+      </div>
+
+      <div class="callout">
+        <strong>Java is pass by value.</strong><br>
+        当 argument 是 object reference 时，被复制的 value 就是那个 reference。
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-argument">
+    <summary>
+      <span class="step-badge">4</span>
+      BlueJ Task 2：Object 也可以作为 Method Argument
+    </summary>
+
+    <div class="lesson-body">
+      <p>现在完成 scaffold 中的 <strong>TODO 3</strong>：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>TODO 3</strong></div>
+        <pre><code>public void healAvatar(________ target, int amount)
+{
+    ________.heal(amount);
+}</code></pre>
+      </div>
+
+      <p>Compile 后，在 BlueJ 中调用：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Method call</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-heal-call">复制</button>
+        </div>
+        <pre><code id="code-heal-call">profile1.healAvatar(avatar1, 30)</code></pre>
+      </div>
+
+      <div class="prediction">
+        <strong>先预测：</strong>
+        调用后，<code>avatar1</code> 的 health 会不会改变？
+      </div>
+
+      <p>
+        method 运行时，<code>target</code> 是一个新的 parameter variable。
+        它得到的是 reference value 的 copy：
+      </p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ─────┐
+             ▼
+          Avatar
+             ▲
+target ──────┘</code></pre>
+      </div>
+
+      <div class="callout question">
+        <strong>关键问题：</strong>
+        <code>target.heal(amount)</code> 改变的是 parameter variable 本身，
+        还是它所指向的 Avatar object？
+      </div>
+
+      <p>实验完成后，再调用：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Check the result</strong></div>
+        <pre><code>profile1.printProfile()</code></pre>
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-change">
+    <summary>
+      <span class="step-badge">5</span>
+      Experiment：修改 Object vs 修改 Reference
+    </summary>
+
+    <div class="lesson-body">
+      <p>在 <code>GameProfile</code> 中加入下面这个 method，并补全 type：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>tryToReplace scaffold</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-replace-scaffold">复制</button>
+        </div>
+        <pre><code id="code-replace-scaffold">public void tryToReplace(________ target)
+{
+    target = new Avatar("Robot", 100);
+}</code></pre>
+      </div>
+
+      <p>Compile 后调用：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Method call</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-replace-call">复制</button>
+        </div>
+        <pre><code id="code-replace-call">profile1.tryToReplace(avatar1)</code></pre>
+      </div>
+
+      <div class="prediction">
+        <strong>先预测：</strong>
+        调用结束后，<code>avatar1</code> 会指向 Knight 还是 Robot？
+      </div>
+
+      <p>method 开始时：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ─────┐
+             ▼
+          Knight
+             ▲
+target ──────┘</code></pre>
+      </div>
+
+      <p>执行：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Reassign the parameter</strong></div>
+        <pre><code>target = new Avatar("Robot", 100);</code></pre>
+      </div>
+
+      <p>完成这张图：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1 ─────────► __________
+
+target  ─────────► __________</code></pre>
+      </div>
+
+      <p>然后在 BlueJ 中依次：</p>
+
+      <ol>
+        <li>调用 <code>tryToReplace</code></li>
+        <li>Inspect <code>avatar1</code></li>
+        <li>调用 <code>profile1.printProfile()</code></li>
+      </ol>
+
+      <h3>把两种操作并排看</h3>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h4>操作 A</h4>
+          <div class="code-card">
+            <div class="code-head"><strong>Modify object</strong></div>
+            <pre><code>target.heal(30);</code></pre>
+          </div>
+          <p>想一想：谁发生了变化？</p>
+        </div>
+
+        <div class="compare-card">
+          <h4>操作 B</h4>
+          <div class="code-card">
+            <div class="code-head"><strong>Reassign reference</strong></div>
+            <pre><code>target = new Avatar("Robot", 100);</code></pre>
+          </div>
+          <p>想一想：谁发生了变化？</p>
+        </div>
+      </div>
+
+      <div class="callout question">
+        完成下面两句：<br><br>
+        <code>target.heal(30)</code> → 修改 ____________________<br>
+        <code>target = new Avatar(...)</code> → 修改 ____________________
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-return">
+    <summary>
+      <span class="step-badge">6</span>
+      BlueJ Task 3：Method 返回一个 Object
+    </summary>
+
+    <div class="lesson-body">
+      <p>现在完成 scaffold 中的 <strong>TODO 4</strong>：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>TODO 4</strong></div>
+        <pre><code>public ________ getAvatar()
+{
+    return ________;
+}</code></pre>
+      </div>
+
+      <div class="callout question">
+        如果 method 返回的是一个 <code>Avatar</code> object 的 reference，
+        return type 应该是什么？
+      </div>
+
+      <p>Compile 后：</p>
+
+      <ol>
+        <li>右键 <code>profile1</code></li>
+        <li>调用 <code>getAvatar()</code></li>
+        <li>让 BlueJ 显示返回的 object</li>
+        <li>如果 BlueJ 提供 <strong>Get</strong>，把返回的 object 放到 Object Bench</li>
+        <li>给它一个名字，例如 <code>avatar2</code></li>
+      </ol>
+
+      <p>现在 Object Bench 上可能有：</p>
+
+      <div class="diagram">
+        <pre><code>avatar1
+profile1
+avatar2</code></pre>
+      </div>
+
+      <div class="prediction">
+        <strong>先判断：</strong>
+        现在一共有几个 Avatar object？<br>
+        用 <code>new Avatar(...)</code> 实际执行了几次来判断。
+      </div>
+
+      <p>如果 <code>avatar2</code> 和 <code>profile1.avatar</code> 指向同一个 object：</p>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Test the returned reference</strong>
+          <button class="copy-btn" type="button" data-copy-target="code-avatar2">复制</button>
+        </div>
+        <pre><code id="code-avatar2">avatar2.setHealth(1)</code></pre>
+      </div>
+
+      <p>然后再次调用：</p>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Check</strong></div>
+        <pre><code>profile1.printProfile()</code></pre>
+      </div>
+
+      <p>观察结果，再画出三个 reference 的箭头。</p>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-method">
+    <summary>
+      <span class="step-badge">✓</span>
+      AP 题怎么追踪 Reference？
+    </summary>
+
+    <div class="lesson-body">
+      <p>代码变长以后，继续使用同一套方法。</p>
+
+      <h3>第一步：数 <code>new</code></h3>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Example</strong></div>
+        <pre><code>Avatar a1 = new Avatar("Knight", 80);
+Avatar a2 = a1;
+Avatar a3 = a2;</code></pre>
+      </div>
+
+      <p>这里真正执行的 <code>new Avatar(...)</code> 只有一次。</p>
+
+      <h3>第二步：数 object</h3>
+
+      <div class="diagram">
+        <pre><code>1 个 Avatar object</code></pre>
+      </div>
+
+      <h3>第三步：画 reference</h3>
+
+      <div class="diagram">
+        <pre><code>a1 ───┐
+a2 ───┼──► Avatar object
+a3 ───┘</code></pre>
+      </div>
+
+      <div class="callout success">
+        <strong>Reference 的数量 ≠ Object 的数量。</strong>
+      </div>
+
+      <h3>Primitive 和 Object 放在一起比较</h3>
+
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h4>Primitive argument</h4>
+          <div class="diagram">
+            <pre><code>score = 80
+   │ copy
+   ▼
+x = 80</code></pre>
+          </div>
+          <p>复制的是 primitive value。</p>
+        </div>
+
+        <div class="compare-card">
+          <h4>Object argument</h4>
+          <div class="diagram">
+            <pre><code>avatar1 ───┐
+           ▼
+        Avatar
+           ▲
+target ────┘</code></pre>
+          </div>
+          <p>复制的是 reference value。</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        Java 的规则始终一致：<strong>pass by value</strong>。<br>
+        区别只是被复制的 value 是 primitive value，还是 reference value。
+      </div>
+    </div>
+  </details>
+
+
+  <details class="lesson" id="section-challenge">
+    <summary>
+      <span class="step-badge">⚡</span>
+      BlueJ Challenge：先画，再运行
+    </summary>
+
+    <div class="lesson-body">
+      <h3>Challenge 1</h3>
+
+      <div class="code-card">
+        <div class="code-head">
+          <strong>Challenge 1</strong>
+          <button class="copy-btn" type="button" data-copy-target="challenge-1">复制</button>
+        </div>
+        <pre><code id="challenge-1">Avatar a1 = new Avatar("Knight", 80);
+Avatar a2 = a1;
+
+a2.setHealth(10);</code></pre>
+      </div>
+
+      <div class="prediction">
+        <code>a1.getHealth()</code> 是多少？
+      </div>
+
+      <h3>Challenge 2</h3>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Method</strong></div>
+        <pre><code>public void change(Avatar target)
+{
+    target.setHealth(5);
+}</code></pre>
+      </div>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Run</strong></div>
+        <pre><code>Avatar a1 = new Avatar("Knight", 80);
+profile1.change(a1);</code></pre>
+      </div>
+
+      <div class="prediction">
+        <code>a1.getHealth()</code> 是多少？
+      </div>
+
+      <h3>Challenge 3</h3>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Method</strong></div>
+        <pre><code>public void change(Avatar target)
+{
+    target = new Avatar("Robot", 100);
+}</code></pre>
+      </div>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Run</strong></div>
+        <pre><code>Avatar a1 = new Avatar("Knight", 80);
+profile1.change(a1);</code></pre>
+      </div>
+
+      <div class="prediction">
+        <code>a1</code> 现在指向 Knight 还是 Robot？
+      </div>
+
+      <h3>Challenge 4</h3>
+
+      <div class="code-card">
+        <div class="code-head"><strong>Return a reference</strong></div>
+        <pre><code>Avatar a2 = profile1.getAvatar();</code></pre>
+      </div>
+
+      <div class="prediction">
+        <code>a2</code> 和 <code>profile1.avatar</code> 是两个不同的 Avatar object，
+        还是两个 reference 指向同一个 Avatar object？
+      </div>
+    </div>
+  </details>
+
+
+  <section class="final-model">
+    <h2>最后的 Mental Model</h2>
+
+    <div class="diagram">
+      <pre><code>avatar1 ────────────┐
+                    │
+profile1.avatar ────┼──► Avatar object
+                    │
+avatar2 ────────────┘</code></pre>
+    </div>
+
+    <p>
+      上图中有 <strong>3 个 reference</strong>，但只有 <strong>1 个 Avatar object</strong>。
+    </p>
+
+    <p><strong>遇到 reference 题：</strong></p>
+
+    <div class="mini-rule">
+      <div>数 <code>new</code></div>
+      <div>数 object</div>
+      <div>画 reference 箭头</div>
+    </div>
+  </section>
+
+
+  <section class="answer-zone">
+    <h2>完成后核对</h2>
+
+    <details class="answer">
+      <summary>GameProfile.java 完整版本</summary>
+      <div class="answer-body">
+        <div class="code-card">
+          <div class="code-head">
+            <strong>GameProfile.java</strong>
+            <button class="copy-btn" type="button" data-copy-target="answer-gameprofile">复制完整代码</button>
+          </div>
+          <pre><code id="answer-gameprofile">public class GameProfile
+{
+    private String username;
+    private int level;
+    private Avatar avatar;
+
+    public GameProfile(String u, int l, Avatar a)
+    {
+        username = u;
+        level = l;
+        avatar = a;
+    }
+
+    public void printProfile()
+    {
+        System.out.println("Username: " + username);
+        System.out.println("Level: " + level);
+        System.out.println("Avatar: " + avatar);
+    }
+
+    public void healAvatar(Avatar target, int amount)
+    {
+        target.heal(amount);
+    }
+
+    public Avatar getAvatar()
+    {
+        return avatar;
+    }
+}</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>Experiment：Two References, One Object</summary>
+      <div class="answer-body">
+        <p>
+          <code>avatar1.setHealth(20)</code> 后，
+          <code>profile1.printProfile()</code> 看到的 health 也是 <strong>20</strong>。
+        </p>
+
+        <div class="diagram">
+          <pre><code>avatar1 ─────────────┐
+                     ▼
+                  Avatar
+                     ▲
+profile1.avatar ─────┘</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>TODO 3：healAvatar</summary>
+      <div class="answer-body">
+        <div class="code-card">
+          <div class="code-head"><strong>Answer</strong></div>
+          <pre><code>public void healAvatar(Avatar target, int amount)
+{
+    target.heal(amount);
+}</code></pre>
+        </div>
+
+        <p>
+          <code>target</code> 和 caller 中的 reference 指向同一个 Avatar object，
+          所以 <code>target.heal(...)</code> 修改的是共享 object。
+        </p>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>tryToReplace</summary>
+      <div class="answer-body">
+        <div class="code-card">
+          <div class="code-head"><strong>Answer</strong></div>
+          <pre><code>public void tryToReplace(Avatar target)
+{
+    target = new Avatar("Robot", 100);
+}</code></pre>
+        </div>
+
+        <p>执行重新赋值后：</p>
+
+        <div class="diagram">
+          <pre><code>avatar1 ─────────► Knight
+
+target  ─────────► Robot</code></pre>
+        </div>
+
+        <p>
+          <code>target</code> 改变了自己保存的 reference。
+          caller 中的 <code>avatar1</code> 仍然指向原来的 Knight object。
+        </p>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>修改 Object vs 修改 Reference</summary>
+      <div class="answer-body">
+        <div class="diagram">
+          <pre><code>target.heal(30)
+→ 修改 target 指向的 object
+
+target = new Avatar(...)
+→ 修改 target 自己保存的 reference</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>TODO 4：getAvatar</summary>
+      <div class="answer-body">
+        <div class="code-card">
+          <div class="code-head"><strong>Answer</strong></div>
+          <pre><code>public Avatar getAvatar()
+{
+    return avatar;
+}</code></pre>
+        </div>
+
+        <p>
+          <code>return avatar;</code> 返回的是 reference value。
+          它不会自动创建一个新的 Avatar object。
+        </p>
+
+        <div class="diagram">
+          <pre><code>profile1.avatar ───┐
+                   ▼
+                Avatar
+                   ▲
+avatar2 ───────────┘</code></pre>
+        </div>
+      </div>
+    </details>
+
+    <details class="answer">
+      <summary>Challenge Answers</summary>
+      <div class="answer-body">
+        <p><strong>Challenge 1：</strong> <code>10</code></p>
+        <p><strong>Challenge 2：</strong> <code>5</code></p>
+        <p><strong>Challenge 3：</strong> <code>a1</code> 仍然指向 <code>Knight</code></p>
+        <p><strong>Challenge 4：</strong> 两个 reference 指向同一个 Avatar object</p>
+      </div>
+    </details>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  const guide = document.querySelector('.bluej-guide');
+  if (!guide) return;
+
+  function openSection(id) {
+    const section = document.getElementById(id);
+    if (!section) return;
+    section.open = true;
+    window.setTimeout(function () {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 40);
+  }
+
+  guide.querySelectorAll('[data-open]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      openSection(button.getAttribute('data-open'));
+    });
+  });
+
+  const expandAll = document.getElementById('expandAll');
+  const collapseAll = document.getElementById('collapseAll');
+
+  if (expandAll) {
+    expandAll.addEventListener('click', function () {
+      guide.querySelectorAll('details.lesson').forEach(function (item) {
+        item.open = true;
+      });
+    });
+  }
+
+  if (collapseAll) {
+    collapseAll.addEventListener('click', function () {
+      guide.querySelectorAll('details.lesson').forEach(function (item) {
+        item.open = false;
+      });
+    });
+  }
+
+  function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  }
+
+  guide.querySelectorAll('.copy-btn').forEach(function (button) {
+    button.addEventListener('click', async function () {
+      const targetId = button.getAttribute('data-copy-target');
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const text = target.textContent;
+      const original = button.textContent;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          fallbackCopy(text);
+        }
+        button.textContent = '已复制 ✓';
+      } catch (err) {
+        try {
+          fallbackCopy(text);
+          button.textContent = '已复制 ✓';
+        } catch (fallbackErr) {
+          button.textContent = '复制失败';
+        }
+      }
+
+      window.setTimeout(function () {
+        button.textContent = original;
+      }, 1400);
+    });
+  });
+})();
+</script>
