@@ -1,0 +1,1443 @@
+---
+layout: post
+title: "IELTS Speaking Part 2: Life of Pi Master Story"
+date: 2026-09-30
+---
+
+<script defer src="{{ '/assets/js/pronunciation.js' | relative_url }}"></script>
+
+<style>
+/* =========================================================
+   Life of Pi Master Story Study Hub
+   Scoped to .life-pi-study so it can live inside the site's
+   existing Contrast theme without changing other posts.
+   ========================================================= */
+
+.life-pi-study {
+  --surface: rgba(127,127,127,.08);
+  --surface-strong: rgba(127,127,127,.14);
+  --border: rgba(127,127,127,.34);
+  --border-strong: rgba(127,127,127,.58);
+  --shadow: 0 14px 40px rgba(0,0,0,.08);
+  --radius-lg: 22px;
+  --radius-md: 15px;
+  --radius-sm: 11px;
+  --space: clamp(1rem, 2.4vw, 1.6rem);
+
+  color: inherit;
+  width: min(1180px, calc(100vw - 2rem));
+  max-width: 1180px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  line-height: 1.72;
+}
+
+@media (prefers-color-scheme: dark) {
+  .life-pi-study {
+    --surface: rgba(255,255,255,.045);
+    --surface-strong: rgba(255,255,255,.085);
+    --border: rgba(255,255,255,.16);
+    --border-strong: rgba(255,255,255,.34);
+    --shadow: 0 16px 42px rgba(0,0,0,.22);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .life-pi-study {
+    --surface: rgba(0,0,0,.035);
+    --surface-strong: rgba(0,0,0,.07);
+    --border: rgba(0,0,0,.14);
+    --border-strong: rgba(0,0,0,.30);
+  }
+}
+
+.life-pi-study *,
+.life-pi-study *::before,
+.life-pi-study *::after {
+  box-sizing: border-box;
+}
+
+.life-pi-study button,
+.life-pi-study summary {
+  font: inherit;
+}
+
+.life-pi-study button {
+  color: inherit;
+}
+
+.life-pi-study a {
+  color: inherit;
+}
+
+.lp-hero {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(127,127,127,.14), transparent 42%),
+    var(--surface);
+  margin: 1.2rem 0 1rem;
+}
+
+.lp-kicker {
+  margin: 0 0 .45rem;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  opacity: .68;
+}
+
+.lp-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.lp-hero-cn {
+  margin: .5rem 0 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  opacity: .72;
+}
+
+.lp-hero-lede {
+  max-width: 780px;
+  margin: 1.2rem 0 0;
+  font-size: 1.08rem;
+}
+
+.lp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: .75rem;
+  margin-top: 1.45rem;
+}
+
+.lp-stat {
+  padding: .95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.lp-stat strong {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.lp-stat span {
+  display: block;
+  margin-top: .25rem;
+  font-size: .82rem;
+  opacity: .68;
+}
+
+.lp-tabs-wrap {
+  position: sticky;
+  top: .65rem;
+  z-index: 20;
+  margin: 0 0 1.1rem;
+}
+
+.lp-tabs {
+  display: flex;
+  gap: .45rem;
+  overflow-x: auto;
+  padding: .45rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, Canvas 86%, transparent);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  scrollbar-width: none;
+}
+
+.lp-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.lp-tab {
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  padding: .72rem 1rem;
+  cursor: pointer;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.lp-tab:hover {
+  background: var(--surface);
+}
+
+.lp-tab[aria-selected="true"] {
+  border-color: var(--border-strong);
+  background: var(--surface-strong);
+}
+
+.life-pi-study:not(.is-enhanced) .lp-panel {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.life-pi-study.is-enhanced .lp-panel {
+  display: none;
+}
+
+.life-pi-study.is-enhanced .lp-panel.is-active {
+  display: block;
+  animation: lpFade .22s ease-out;
+}
+
+@keyframes lpFade {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lp-section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  margin: 1.55rem 0 .9rem;
+}
+
+.lp-section-head h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.15;
+}
+
+.lp-section-head p {
+  margin: .35rem 0 0;
+  opacity: .7;
+  max-width: 720px;
+}
+
+.lp-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.lp-dashboard {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+
+.lp-card,
+.lp-question,
+.lp-answer-card,
+.lp-callout,
+.lp-story-detail,
+.lp-topic-card,
+.lp-anchor-card,
+.lp-chunk-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+}
+
+.lp-card {
+  padding: 1.25rem;
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-card-icon {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.lp-card h3 {
+  margin: .75rem 0 .35rem;
+  font-size: 1.12rem;
+}
+
+.lp-card p {
+  margin: 0;
+  opacity: .76;
+}
+
+.lp-jump {
+  margin-top: auto;
+  padding-top: 1rem;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.lp-jump:hover {
+  text-decoration: underline;
+}
+
+.lp-question {
+  padding: 1.25rem 1.35rem;
+  margin-top: 1rem;
+}
+
+.lp-question h3 {
+  margin: 0 0 .6rem;
+}
+
+.lp-question ul {
+  margin-bottom: 0;
+}
+
+.lp-method {
+  padding: 1rem 1.15rem;
+  border-left: 4px solid currentColor;
+  background: var(--surface);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: 1rem;
+}
+
+.lp-method strong {
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.lp-story-map {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(145px,1fr));
+  gap: .65rem;
+  margin: 1rem 0;
+}
+
+.lp-story-node {
+  position: relative;
+  min-height: 120px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: .95rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.lp-story-node:hover,
+.lp-story-node.is-selected {
+  background: var(--surface-strong);
+  border-color: var(--border-strong);
+}
+
+.lp-story-node::after {
+  content: "→";
+  position: absolute;
+  right: -.58rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .42;
+  font-weight: 900;
+  z-index: 2;
+}
+
+.lp-story-node:nth-child(5)::after,
+.lp-story-node:nth-child(10)::after {
+  display: none;
+}
+
+.lp-node-emoji {
+  display: block;
+  font-size: 1.45rem;
+  margin-bottom: .5rem;
+}
+
+.lp-story-node strong {
+  display: block;
+  line-height: 1.25;
+}
+
+.lp-story-node small {
+  display: block;
+  margin-top: .3rem;
+  opacity: .66;
+  line-height: 1.35;
+}
+
+.lp-story-detail {
+  padding: 1.2rem 1.35rem;
+  margin-top: .8rem;
+}
+
+.lp-story-detail h3 {
+  margin: 0 0 .4rem;
+}
+
+.lp-detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .8rem;
+}
+
+.lp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  padding: .35rem .65rem;
+  font-size: .83rem;
+}
+
+button.lp-pill {
+  cursor: pointer;
+}
+
+button.lp-pill:hover {
+  background: var(--surface-strong);
+}
+
+.lp-answer-toolbar {
+  display: flex;
+  gap: .45rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.lp-mode {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  padding: .55rem .82rem;
+  cursor: pointer;
+  font-weight: 720;
+}
+
+.lp-mode[aria-pressed="true"] {
+  border-color: var(--border-strong);
+  background: var(--surface-strong);
+}
+
+.lp-answer-stack {
+  display: grid;
+  gap: .85rem;
+}
+
+.lp-answer-card {
+  padding: 1.15rem 1.25rem;
+}
+
+.lp-answer-num {
+  display: inline-flex;
+  min-width: 2.2rem;
+  justify-content: center;
+  padding: .18rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 850;
+  margin-bottom: .7rem;
+}
+
+.lp-answer-card p {
+  margin: 0;
+}
+
+.lp-answer-card .lp-cn {
+  margin-top: .7rem;
+  padding-top: .7rem;
+  border-top: 1px dashed var(--border);
+  opacity: .78;
+}
+
+.lp-answer-card[data-answer-mode="en"] .lp-cn,
+.lp-answer-stack.mode-en .lp-cn {
+  display: none;
+}
+
+.lp-answer-stack.mode-cn .lp-en {
+  display: none;
+}
+
+.lp-answer-stack.mode-cn .lp-cn {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  opacity: 1;
+}
+
+.lp-answer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .8rem;
+}
+
+.lp-anchor-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap: .75rem;
+}
+
+.lp-anchor-card {
+  padding: 1rem;
+}
+
+.lp-anchor-no {
+  font-size: .78rem;
+  font-weight: 850;
+  opacity: .58;
+}
+
+.lp-anchor-card .lp-en {
+  margin: .55rem 0 0;
+  font-weight: 700;
+}
+
+.lp-anchor-card .lp-cn {
+  margin: .55rem 0 0;
+  opacity: .7;
+  font-size: .92rem;
+}
+
+.lp-subhead {
+  margin: 1.65rem 0 .75rem;
+  font-size: 1.2rem;
+}
+
+.lp-chunk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .65rem;
+}
+
+.lp-chunk-card {
+  overflow: hidden;
+}
+
+.lp-chunk-card summary {
+  cursor: pointer;
+  padding: .85rem .95rem;
+  font-weight: 750;
+  list-style: none;
+}
+
+.lp-chunk-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-chunk-card summary::after {
+  content: "+";
+  float: right;
+  opacity: .55;
+}
+
+.lp-chunk-card[open] summary::after {
+  content: "–";
+}
+
+.lp-chunk-meaning {
+  padding: 0 .95rem .85rem;
+  opacity: .72;
+}
+
+.lp-topic-key {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: .9rem 0 1rem;
+}
+
+.lp-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .75rem;
+}
+
+.lp-topic-card {
+  overflow: hidden;
+}
+
+.lp-topic-card summary {
+  cursor: pointer;
+  padding: 1rem;
+  min-height: 132px;
+  list-style: none;
+}
+
+.lp-topic-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-topic-card[open] {
+  grid-column: 1 / -1;
+  background: var(--surface-strong);
+  border-color: var(--border-strong);
+}
+
+.lp-topic-card[open] summary {
+  min-height: auto;
+  padding-bottom: .65rem;
+}
+
+.lp-fit {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .2rem .5rem;
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .78;
+}
+
+.lp-topic-card h3 {
+  margin: .65rem 0 .15rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.lp-topic-en {
+  font-size: .86rem;
+  opacity: .64;
+  line-height: 1.35;
+}
+
+.lp-topic-body {
+  padding: 0 1rem 1rem;
+}
+
+.lp-topic-body p {
+  margin: .35rem 0 0;
+}
+
+.lp-topic-route {
+  margin-top: .75rem;
+  padding: .75rem .85rem;
+  border-left: 3px solid currentColor;
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: .92rem;
+}
+
+.lp-mother-story {
+  margin-top: 1.15rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.lp-mother-story code {
+  white-space: normal;
+  color: inherit;
+  background: transparent;
+}
+
+.lp-footer-note {
+  margin: 1.7rem 0 2.5rem;
+  text-align: center;
+  opacity: .58;
+  font-size: .86rem;
+}
+
+@media (max-width: 980px) {
+  .lp-story-map {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  .lp-story-node::after {
+    display: none;
+  }
+  .lp-anchor-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  .lp-topic-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .life-pi-study {
+    width: min(100%, calc(100vw - 1rem));
+  }
+  .lp-hero {
+    padding: 1.25rem;
+  }
+  .lp-stats,
+  .lp-dashboard,
+  .lp-story-map,
+  .lp-anchor-grid,
+  .lp-chunk-grid,
+  .lp-topic-grid {
+    grid-template-columns: 1fr;
+  }
+  .lp-section-head {
+    display: block;
+  }
+  .lp-topic-card[open] {
+    grid-column: auto;
+  }
+  .lp-tabs-wrap {
+    top: .3rem;
+  }
+}
+
+@media print {
+  .life-pi-study {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    transform: none;
+  }
+  .lp-tabs-wrap,
+  .lp-jump,
+  .lp-answer-toolbar {
+    display: none !important;
+  }
+  .life-pi-study.is-enhanced .lp-panel {
+    display: block !important;
+  }
+  .lp-topic-card {
+    break-inside: avoid;
+  }
+}
+
+/* v2 additions */
+.lp-hero .lp-question {
+  margin: 1.15rem 0 0;
+  background: var(--surface-strong);
+}
+
+.lp-hero .lp-question p:first-of-type {
+  font-size: 1.06rem;
+}
+
+.lp-anchor-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.lp-anchor-card summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 2.5rem 1rem 1rem;
+}
+
+.lp-anchor-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-anchor-card summary::after {
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: .55;
+}
+
+.lp-anchor-card[open] summary::after {
+  content: "–";
+}
+
+.lp-anchor-card summary .lp-en {
+  margin: .55rem 0 0;
+}
+
+.lp-anchor-translation {
+  padding: .85rem 1rem 1rem;
+  border-top: 1px dashed var(--border);
+  opacity: .76;
+}
+
+.lp-pron-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: 1rem 0;
+}
+
+.life-pi-study .accent-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: inherit;
+  padding: .58rem .9rem;
+  cursor: pointer;
+  font-weight: 760;
+}
+
+.life-pi-study .accent-button:hover,
+.life-pi-study .accent-button.active {
+  border-color: var(--border-strong);
+  background: var(--surface-strong);
+}
+
+.lp-pron-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: .7rem;
+  margin-top: .9rem;
+}
+
+.life-pi-study .speak-word {
+  min-height: 72px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: inherit;
+  padding: .8rem .9rem;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 760;
+  line-height: 1.3;
+}
+
+.life-pi-study .speak-word:hover,
+.life-pi-study .speak-word.is-playing {
+  border-color: var(--border-strong);
+  background: var(--surface-strong);
+}
+
+.lp-pron-note {
+  margin: .9rem 0 0;
+  padding: .9rem 1rem;
+  border-left: 3px solid currentColor;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--surface);
+  font-size: .92rem;
+}
+
+@media (max-width: 980px) {
+  .lp-pron-grid {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .lp-pron-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+</style>
+
+<div class="life-pi-study" id="lifePiStudy">
+  <header class="lp-hero">
+    <p class="lp-kicker">IELTS Speaking Part 2 · Master Story · 2026 Sep–Dec</p>
+    <h1>Life of Pi</h1>
+    <p class="lp-hero-cn">《少年派的奇幻漂流》· 令人兴奋的一本书</p>
+
+    <article class="lp-question">
+      <h3>Original Question · 原题</h3>
+      <p><strong>Describe an exciting book that you enjoyed reading.</strong></p>
+      <p>You should say:</p>
+      <ul>
+        <li>What kind of book it was</li>
+        <li>Why you chose to read it</li>
+        <li>What it was mainly about</li>
+        <li>And explain why you found it exciting</li>
+      </ul>
+    </article>
+
+    <p class="lp-hero-lede">
+      Learn one clear reading experience, then change the <strong>starting point, focus, and ending</strong>
+      to answer many different Part 2 questions.
+    </p>
+
+    <div class="lp-stats" aria-label="Study guide overview">
+      <div class="lp-stat"><strong>1</strong><span>master story</span></div>
+      <div class="lp-stat"><strong>13</strong><span>possible topics</span></div>
+      <div class="lp-stat"><strong>5</strong><span>anchor sentences</span></div>
+      <div class="lp-stat"><strong>12</strong><span>reusable chunks</span></div>
+    </div>
+  </header>
+
+  <div class="lp-tabs-wrap">
+    <nav class="lp-tabs" role="tablist" aria-label="Life of Pi study sections">
+      <button class="lp-tab" role="tab" aria-selected="true" data-tab="story">🗺️ Story Map</button>
+      <button class="lp-tab" role="tab" aria-selected="false" data-tab="answer">🗣️ Full Answer</button>
+      <button class="lp-tab" role="tab" aria-selected="false" data-tab="language">🧩 Language</button>
+      <button class="lp-tab" role="tab" aria-selected="false" data-tab="pronunciation">🔊 Pronunciation Focus</button>
+      <button class="lp-tab" role="tab" aria-selected="false" data-tab="topics">🔄 Topic Switcher</button>
+    </nav>
+  </div>
+
+  
+
+  <!-- STORY MAP -->
+  <section class="lp-panel is-active" id="lp-panel-story" data-panel="story" role="tabpanel">
+    <div class="lp-section-head">
+      <div>
+        <h2>Story Map</h2>
+        <p>First learn the route. Click any step to see the language and topic connections hidden inside it.</p>
+      </div>
+    </div>
+
+    <div class="lp-story-map" aria-label="Life of Pi master story route">
+      <button class="lp-story-node is-selected"
+        data-title="Friend recommends the book"
+        data-text="A friend recommends Life of Pi, giving the story a natural starting point."
+        data-language="recommend sth. to sb."
+        data-topics="Exciting Book|Important Decision|Changed Opinion">
+        <span class="lp-node-emoji">👤</span><strong>Friend recommends</strong><small>Life of Pi</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Reluctant at first"
+        data-text="You mainly read nonfiction and do not really enjoy novels, so you are reluctant to try it."
+        data-language="be reluctant to do sth."
+        data-topics="Changed Opinion|Important Decision">
+        <span class="lp-node-emoji">😕</span><strong>Reluctant</strong><small>mostly nonfiction</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Come across it in a library"
+        data-text="Later, you unexpectedly see the same book in a library."
+        data-language="come across a book"
+        data-topics="Building You Enjoy Visiting|Exciting Book">
+        <span class="lp-node-emoji">📚</span><strong>Library</strong><small>come across it</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Drawn to the cover"
+        data-text="The cover catches your attention and gives you a reason to pick up the book."
+        data-language="be drawn to its cover"
+        data-topics="Exciting Book">
+        <span class="lp-node-emoji">🎨</span><strong>Cover</strong><small>drawn to it</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Only plan to skim"
+        data-text="You do not plan to read for long. You just want to skim through a few pages."
+        data-language="skim through a book"
+        data-topics="Exciting Book|Important Decision">
+        <span class="lp-node-emoji">👀</span><strong>Skim</strong><small>just a few pages</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Get completely hooked"
+        data-text="After a few pages, you become genuinely interested and end up spending hours reading."
+        data-language="end up doing sth."
+        data-topics="Exciting Book|Changed Opinion|Recent Change">
+        <span class="lp-node-emoji">🔥</span><strong>Hooked</strong><small>hours reading</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Pi and a Bengal tiger"
+        data-text="Pi gets stranded on a lifeboat with a Bengal tiger. The unusual setup makes the story immediately memorable."
+        data-language="get stranded on a lifeboat"
+        data-topics="Book with Animals|Exciting Book">
+        <span class="lp-node-emoji">🐅</span><strong>Pi + Tiger</strong><small>same lifeboat</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Survival at sea"
+        data-text="Pi has to survive at sea while also figuring out how to live alongside a dangerous animal without being eaten."
+        data-language="figure out how to…|live alongside…|find sth. intriguing"
+        data-topics="Exciting Book|Book with Animals">
+        <span class="lp-node-emoji">🛟</span><strong>Survival</strong><small>sea + danger</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Movie night with friends"
+        data-text="After finishing the novel, you watch the movie adaptation with a group of friends."
+        data-language="a movie adaptation"
+        data-topics="Least Favourite Movie|Enjoyable Evening with Friends|Interesting Video">
+        <span class="lp-node-emoji">🎬</span><strong>Movie Night</strong><small>with friends</small>
+      </button>
+
+      <button class="lp-story-node"
+        data-title="Prefer the novel"
+        data-text="The film is a little disappointing because the novel lets you understand Pi through his inner monologue. The experience ends with a lesson: something negative can sometimes help you survive or become stronger."
+        data-language="through his inner monologue"
+        data-topics="Least Favourite Movie|Changed Opinion|Long-term Goal">
+        <span class="lp-node-emoji">📖</span><strong>Novel wins</strong><small>inner monologue + lesson</small>
+      </button>
+    </div>
+
+    <aside class="lp-story-detail" id="storyDetail" aria-live="polite">
+      <h3>Friend recommends the book</h3>
+      <p>A friend recommends <em>Life of Pi</em>, giving the story a natural starting point.</p>
+      <div class="lp-detail-row">
+        <span class="lp-pill">🧩 recommend sth. to sb.</span>
+        <button class="lp-pill" data-open-topic="exciting-book">↗ Exciting Book</button>
+        <button class="lp-pill" data-open-topic="important-decision">↗ Important Decision</button>
+        <button class="lp-pill" data-open-topic="changed-opinion">↗ Changed Opinion</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- FULL ANSWER -->
+  <section class="lp-panel" id="lp-panel-answer" data-panel="answer" role="tabpanel">
+    <div class="lp-section-head">
+      <div>
+        <h2>Full Answer</h2>
+        <p>Use bilingual mode to understand it; switch to English only when you are ready to practice independently.</p>
+      </div>
+    </div>
+
+    <div class="lp-answer-toolbar" role="group" aria-label="Answer language mode">
+      <button class="lp-mode" data-mode="en" aria-pressed="true">English only</button>
+      <button class="lp-mode" data-mode="bi" aria-pressed="false">Bilingual</button>
+    </div>
+
+    <div class="lp-answer-stack mode-en" id="answerStack">
+      <article class="lp-answer-card">
+        <span class="lp-answer-num">01</span>
+        <p class="lp-en">One exciting book that I really enjoyed reading was <em>Life of Pi</em>. A friend of mine recommended it to me first, but I was quite reluctant at the time because I didn't really enjoy reading novels. I mainly read nonfiction.</p>
+        <p class="lp-cn">我非常喜欢的一本令人兴奋的书是《少年派的奇幻漂流》。最初是一位朋友推荐给我的，但当时我不太愿意读，因为我并不怎么喜欢小说，平时主要读非虚构类书籍。</p>
+        <div class="lp-answer-links">
+          <button class="lp-pill" data-open-topic="changed-opinion">↗ Changed Opinion</button>
+          <button class="lp-pill" data-open-topic="important-decision">↗ Important Decision</button>
+        </div>
+      </article>
+
+      <article class="lp-answer-card">
+        <span class="lp-answer-num">02</span>
+        <p class="lp-en">Later, I came across the same book in a library, and I was drawn to its cover. I didn't plan to read it for long. I just wanted to skim through it and see what it was like. But after reading a few pages, I got really interested and ended up spending hours on it.</p>
+        <p class="lp-cn">后来，我在图书馆偶然看到了这本书，被它的封面吸引住了。我本来没打算读很久，只想随手翻翻，看看它写得怎么样。没想到读了几页后，我就产生了浓厚的兴趣，结果一读就是好几个小时。</p>
+        <div class="lp-answer-links">
+          <button class="lp-pill" data-open-topic="building">↗ Building</button>
+          <button class="lp-pill" data-jump="language">🧩 Language Bank</button>
+        </div>
+      </article>
+
+      <article class="lp-answer-card">
+        <span class="lp-answer-num">03</span>
+        <p class="lp-en">The book is basically a survival story about a boy named Pi who gets stranded on a lifeboat with a Bengal tiger. I found the idea incredibly intriguing because he not only has to survive at sea, but also has to figure out how to live alongside a dangerous animal without being eaten.</p>
+        <p class="lp-cn">这本书主要讲的是一个叫派的男孩与一只孟加拉虎被困在救生艇上的求生故事。我觉得这个设定特别引人入胜，因为他不仅要在海上活下去，还得想办法与一只危险的动物共处，避免被它吃掉。</p>
+        <div class="lp-answer-links">
+          <button class="lp-pill" data-open-topic="animals">↗ Book with Animals</button>
+        </div>
+      </article>
+
+      <article class="lp-answer-card">
+        <span class="lp-answer-num">04</span>
+        <p class="lp-en">After I finished the book, I watched the movie adaptation with a group of friends during a movie night. To be honest, I was a little disappointed because I thought the novel was much better. When I read the book, I could understand what Pi was thinking and feeling through his inner monologue, and that's something that's quite difficult to show in a movie.</p>
+        <p class="lp-cn">读完这本书后，我在一次电影之夜和一群朋友一起看了它的电影改编版。说实话，我有一点失望，因为我觉得小说好得多。读小说时，我能通过派的内心独白了解他的想法和感受，而这些在电影中很难表现出来。</p>
+        <div class="lp-answer-links">
+          <button class="lp-pill" data-open-topic="movie">↗ Least Favourite Movie</button>
+          <button class="lp-pill" data-open-topic="evening">↗ Enjoyable Evening</button>
+        </div>
+      </article>
+
+      <article class="lp-answer-card">
+        <span class="lp-answer-num">05</span>
+        <p class="lp-en">Overall, I found the book exciting because the whole situation was so unusual and unpredictable. It also taught me an interesting lesson: sometimes something that seems dangerous or negative at first can actually help you survive or become stronger.</p>
+        <p class="lp-cn">总的来说，我觉得这本书很精彩，因为整个处境非常不同寻常，而且难以预料。它还让我明白了一个有意思的道理：有时，一开始看似危险或负面的东西，反而能帮助你生存下来，或者变得更强大。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section class="lp-panel" id="lp-panel-language" data-panel="language" role="tabpanel">
+    <div class="lp-section-head">
+      <div>
+        <h2>Language Toolkit</h2>
+        <p>Memorize the anchor sentences first. Then use the shorter chunks to rebuild the story in your own words.</p>
+      </div>
+    </div>
+
+    <h3 class="lp-subhead">5 Anchor Sentences · 5 个核心句</h3>
+    <div class="lp-anchor-grid">
+      <details class="lp-anchor-card">
+        <summary>
+          <span class="lp-anchor-no">01</span>
+          <p class="lp-en">I was quite reluctant at the time because I didn't really enjoy reading novels.</p>
+        </summary>
+        <div class="lp-anchor-translation">当时我不太愿意读，因为我并不怎么喜欢小说。</div>
+      </details>
+      <details class="lp-anchor-card">
+        <summary>
+          <span class="lp-anchor-no">02</span>
+          <p class="lp-en">I came across the same book in a library, and I was drawn to its cover.</p>
+        </summary>
+        <div class="lp-anchor-translation">我在图书馆偶然看到这本书，被它的封面吸引了。</div>
+      </details>
+      <details class="lp-anchor-card">
+        <summary>
+          <span class="lp-anchor-no">03</span>
+          <p class="lp-en">I got really interested and ended up spending hours on it.</p>
+        </summary>
+        <div class="lp-anchor-translation">我产生了浓厚的兴趣，结果一读就是好几个小时。</div>
+      </details>
+      <details class="lp-anchor-card">
+        <summary>
+          <span class="lp-anchor-no">04</span>
+          <p class="lp-en">He not only has to survive at sea, but also has to figure out how to live alongside a dangerous animal.</p>
+        </summary>
+        <div class="lp-anchor-translation">他不仅要在海上生存，还要想办法与危险的动物共处。</div>
+      </details>
+      <details class="lp-anchor-card">
+        <summary>
+          <span class="lp-anchor-no">05</span>
+          <p class="lp-en">I could understand what Pi was thinking and feeling through his inner monologue.</p>
+        </summary>
+        <div class="lp-anchor-translation">我能通过派的内心独白了解他的想法和感受。</div>
+      </details>
+    </div>
+
+    <h3 class="lp-subhead">Reusable Chunks · 可复用表达</h3>
+    <div class="lp-chunk-grid">
+      <details class="lp-chunk-card"><summary>recommend sth. to sb.</summary><div class="lp-chunk-meaning">向某人推荐某物</div></details>
+      <details class="lp-chunk-card"><summary>be reluctant to do sth.</summary><div class="lp-chunk-meaning">不太愿意做某事</div></details>
+      <details class="lp-chunk-card"><summary>come across a book</summary><div class="lp-chunk-meaning">偶然看到一本书</div></details>
+      <details class="lp-chunk-card"><summary>be drawn to its cover</summary><div class="lp-chunk-meaning">被它的封面吸引</div></details>
+      <details class="lp-chunk-card"><summary>skim through a book</summary><div class="lp-chunk-meaning">快速翻阅一本书</div></details>
+      <details class="lp-chunk-card"><summary>end up doing sth.</summary><div class="lp-chunk-meaning">结果做了某事</div></details>
+      <details class="lp-chunk-card"><summary>get stranded on a lifeboat</summary><div class="lp-chunk-meaning">被困在救生艇上</div></details>
+      <details class="lp-chunk-card"><summary>find sth. intriguing</summary><div class="lp-chunk-meaning">觉得某事引人入胜</div></details>
+      <details class="lp-chunk-card"><summary>figure out how to...</summary><div class="lp-chunk-meaning">想出如何……</div></details>
+      <details class="lp-chunk-card"><summary>live alongside...</summary><div class="lp-chunk-meaning">与……共处</div></details>
+      <details class="lp-chunk-card"><summary>a movie adaptation</summary><div class="lp-chunk-meaning">电影改编版</div></details>
+      <details class="lp-chunk-card"><summary>through his inner monologue</summary><div class="lp-chunk-meaning">通过他的内心独白</div></details>
+    </div>
+  </section>
+
+  <!-- PRONUNCIATION -->
+  <section class="lp-panel" id="lp-panel-pronunciation" data-panel="pronunciation" role="tabpanel">
+    <div class="lp-section-head">
+      <div>
+        <h2>Pronunciation Focus</h2>
+        <p>重点词汇发音 · Switch accents, then tap a word to hear it.</p>
+      </div>
+    </div>
+
+    <div class="lp-pron-controls" role="group" aria-label="Choose English accent">
+      <button type="button" class="accent-button active" data-accent="us">🇺🇸 American English</button>
+      <button type="button" class="accent-button" data-accent="uk">🇬🇧 British English</button>
+    </div>
+
+    <div class="lp-pron-grid">
+      <button type="button" class="speak-word" data-word="reluctant">reluctant 🔊</button>
+      <button type="button" class="speak-word" data-word="nonfiction">nonfiction 🔊</button>
+      <button type="button" class="speak-word" data-word="library">library 🔊</button>
+      <button type="button" class="speak-word" data-word="Bengal">Bengal 🔊</button>
+      <button type="button" class="speak-word" data-word="lifeboat">lifeboat 🔊</button>
+      <button type="button" class="speak-word" data-word="stranded">stranded 🔊</button>
+      <button type="button" class="speak-word" data-word="intriguing">intriguing 🔊</button>
+      <button type="button" class="speak-word" data-word="survival">survival 🔊</button>
+      <button type="button" class="speak-word" data-word="alongside">alongside 🔊</button>
+      <button type="button" class="speak-word" data-word="adaptation">adaptation 🔊</button>
+      <button type="button" class="speak-word" data-word="monologue">monologue 🔊</button>
+      <button type="button" class="speak-word" data-word="unpredictable">unpredictable 🔊</button>
+    </div>
+
+    <div class="lp-pron-note">
+      <strong>Practice tip:</strong> Listen once, repeat once, then use the word in one sentence.
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="lp-panel" id="lp-panel-topics" data-panel="topics" role="tabpanel">
+    <div class="lp-section-head">
+      <div>
+        <h2>Topic Switcher</h2>
+        <p>The position of a topic on this page does not show importance. Open the topic you need and change only the necessary angle.</p>
+      </div>
+    </div>
+
+    <div class="lp-method">
+      <strong>Core rule · 核心方法</strong>
+      Keep the same reading experience. Change the <strong>starting point, focus, and ending</strong>.
+      Strong-fit topics can reuse the original story; adaptable topics need extra details.
+    </div>
+
+    <div class="lp-topic-key">
+      <span class="lp-pill">★ Strong fit · 强适配</span>
+      <span class="lp-pill">↗ Adaptable · 可改编</span>
+    </div>
+
+    <div class="lp-topic-grid">
+      <details class="lp-topic-card" id="topic-exciting-book" data-topic="exciting-book">
+        <summary>
+          <span class="lp-fit">★ Strong fit</span>
+          <h3>令人兴奋的一本书</h3>
+          <div class="lp-topic-en">Describe an exciting book that you enjoyed reading</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>直接用原故事：推荐 → 图书馆偶遇 → 求生情节 → 电影对比 → 兴奋的原因。</p>
+          <div class="lp-topic-route">Friend recommendation → library → survival → movie comparison → why it was exciting</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-animals" data-topic="animals">
+        <summary>
+          <span class="lp-fit">★ Strong fit</span>
+          <h3>有动物的故事 / 书</h3>
+          <div class="lp-topic-en">Describe a story/book with animals in it</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>重点放在 Bengal tiger：与 Pi 共处带来的危险、紧张感，以及老虎对求生的意义。</p>
+          <div class="lp-topic-route">Make Richard Parker / the Bengal tiger the center of the answer.</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-movie" data-topic="movie">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>最不喜欢的电影</h3>
+          <div class="lp-topic-en">Describe your least favourite movie</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>突出期待与失望、小说的心理描写；需解释为什么是 <em>least favourite</em>，仅说 <em>a little disappointed</em> 不够。</p>
+          <div class="lp-topic-route">Expectation → movie night → disappointment → inner monologue missing → why the film ranks poorly for you</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-video" data-topic="video">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>有趣的视频</h3>
+          <div class="lp-topic-en">Describe an interesting video you watched</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>补充看过 trailer / 幕后短片的经历；讲具体画面、内容和感受，书的情节只作背景。</p>
+          <div class="lp-topic-route">Video becomes the main event; the novel becomes background context.</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-building" data-topic="building">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>喜欢去的建筑</h3>
+          <div class="lp-topic-en">Describe a building you enjoy visiting</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>主角换成 library；补充位置、外观、阅读区与常去的原因，偶遇这本书作为例子。</p>
+          <div class="lp-topic-route">Library first → location / appearance / reading area → why you return → Life of Pi as one memorable visit</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-positive-decision" data-topic="positive-decision">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>重要决定 + 好结果</h3>
+          <div class="lp-topic-en">Describe an important decision that led to a positive result</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>决定认真尝试读小说；补充持续阅读带来的变化，解释为什么这个决定对你重要。</p>
+          <div class="lp-topic-route">Reluctance → decision to try the novel seriously → new reading habit → positive result</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-important-decision" data-topic="important-decision">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>重要决定</h3>
+          <div class="lp-topic-en">Describe an important decision you made</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>仍用开始读小说的决定；重点放在犹豫、朋友的影响，以及最终下决心的过程。</p>
+          <div class="lp-topic-route">Reluctance → friend's influence → decision → what happened after you started reading</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-changed-opinion" data-topic="changed-opinion">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>改变重要看法</h3>
+          <div class="lp-topic-en">Describe a time when you changed an important opinion</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>从 <em>novels are not for me</em> 到 <em>novels can be fascinating</em>；补充改变前后，并解释这对你的意义。</p>
+          <div class="lp-topic-route">“Novels are not for me.” → Life of Pi → “Novels can be fascinating.”</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-recent-change" data-topic="recent-change">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>近期变化</h3>
+          <div class="lp-topic-en">Describe a recent change in your life</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>补充新习惯：睡前阅读代替刷手机；交代何时开始、如何坚持，以及对生活的影响。</p>
+          <div class="lp-topic-route">Life of Pi as the trigger → reading before bed → less phone scrolling → effect on daily life</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-long-term-goal" data-topic="long-term-goal">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>长期目标</h3>
+          <div class="lp-topic-en">Describe a long-term goal you would like to achieve</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>把这本书作为起点；补充一年读几本英文小说、每周计划、困难及进度。</p>
+          <div class="lp-topic-route">Life of Pi → new goal → number of English novels → weekly plan → difficulty + progress</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-evening" data-topic="evening">
+        <summary>
+          <span class="lp-fit">★ Strong fit</span>
+          <h3>和朋友度过的愉快夜晚</h3>
+          <div class="lp-topic-en">Describe an enjoyable evening you spent with friends</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>重点转到 movie night：补充地点、朋友和观后讨论；电影略失望，聚会仍然愉快。</p>
+          <div class="lp-topic-route">Friends + place → movie night → reactions → discussion → why the evening was enjoyable</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-help" data-topic="help">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>帮助别人</h3>
+          <div class="lp-topic-en">Describe a time when you helped someone</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>补充向不爱读书的朋友推荐 / 借出这本书；交代对方的困难、你的帮助和结果。</p>
+          <div class="lp-topic-route">Friend has a reading problem → recommend / lend Life of Pi → explain why → result</div>
+        </div>
+      </details>
+
+      <details class="lp-topic-card" id="topic-shopping" data-topic="shopping">
+        <summary>
+          <span class="lp-fit">↗ Adaptable</span>
+          <h3>好的购物 / 客服体验</h3>
+          <div class="lp-topic-en">Describe a good shopping experience / good customer service</div>
+        </summary>
+        <div class="lp-topic-body">
+          <p>另加书店购买经历；重点是店员如何推荐、找书或解决问题，不能只讲图书馆借书。</p>
+          <div class="lp-topic-route">Bookstore visit → staff recommendation / finding the book / solving a problem → why the service was good</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="lp-mother-story">
+      <strong>Mother material · 母素材</strong><br>
+      <code>friend recommends → library → cover → skim → hooked → boy + tiger → survival → movie night → prefer the novel</code>
+      <p style="margin:.55rem 0 0;">习惯、目标、助人和购物属于可补充的延伸情节。</p>
+    </div>
+  </section>
+
+  <p class="lp-footer-note">2026 年 9–12 月雅思口语 Master Story · Mr. Mou @ ShiShi AP Center</p>
+</div>
+
+<script>
+(() => {
+  const app = document.getElementById('lifePiStudy');
+  if (!app) return;
+  app.classList.add('is-enhanced');
+
+  const tabs = [...app.querySelectorAll('.lp-tab')];
+  const panels = [...app.querySelectorAll('.lp-panel')];
+
+  function openTab(name, updateHash = true) {
+    tabs.forEach(tab => {
+      tab.setAttribute('aria-selected', tab.dataset.tab === name ? 'true' : 'false');
+    });
+    panels.forEach(panel => {
+      panel.classList.toggle('is-active', panel.dataset.panel === name);
+    });
+    if (updateHash && history.replaceState) {
+      history.replaceState(null, '', '#study-' + name);
+    }
+    const activeTab = tabs.find(t => t.dataset.tab === name);
+    if (activeTab) activeTab.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => openTab(tab.dataset.tab));
+  });
+
+  app.querySelectorAll('[data-jump]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.jump;
+      openTab(target);
+      const scrollId = btn.dataset.scroll;
+      if (scrollId) {
+        setTimeout(() => document.getElementById(scrollId)?.scrollIntoView({behavior:'smooth', block:'start'}), 80);
+      } else {
+        setTimeout(() => app.querySelector(`[data-panel="${target}"]`)?.scrollIntoView({behavior:'smooth', block:'start'}), 80);
+      }
+    });
+  });
+
+  // Story-map interconnections
+  const storyDetail = document.getElementById('storyDetail');
+  const nodes = [...app.querySelectorAll('.lp-story-node')];
+
+  function renderStoryDetail(node) {
+    nodes.forEach(n => n.classList.toggle('is-selected', n === node));
+    const phrases = (node.dataset.language || '').split('|').filter(Boolean);
+    const topics = (node.dataset.topics || '').split('|').filter(Boolean);
+
+    const topicMap = {
+      'Exciting Book': 'exciting-book',
+      'Important Decision': 'important-decision',
+      'Changed Opinion': 'changed-opinion',
+      'Building You Enjoy Visiting': 'building',
+      'Recent Change': 'recent-change',
+      'Book with Animals': 'animals',
+      'Least Favourite Movie': 'movie',
+      'Enjoyable Evening with Friends': 'evening',
+      'Interesting Video': 'video',
+      'Long-term Goal': 'long-term-goal'
+    };
+
+    storyDetail.innerHTML = `
+      <h3>${node.dataset.title}</h3>
+      <p>${node.dataset.text}</p>
+      <div class="lp-detail-row">
+        ${phrases.map(p => `<span class="lp-pill">🧩 ${p}</span>`).join('')}
+        ${topics.map(t => topicMap[t]
+          ? `<button class="lp-pill" data-open-topic="${topicMap[t]}">↗ ${t}</button>`
+          : `<span class="lp-pill">↗ ${t}</span>`
+        ).join('')}
+      </div>`;
+  }
+
+  nodes.forEach(node => node.addEventListener('click', () => renderStoryDetail(node)));
+
+  // Answer-language modes
+  const answerStack = document.getElementById('answerStack');
+  app.querySelectorAll('.lp-mode').forEach(btn => {
+    btn.addEventListener('click', () => {
+      app.querySelectorAll('.lp-mode').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      answerStack.classList.remove('mode-bi', 'mode-en', 'mode-cn');
+      answerStack.classList.add('mode-' + btn.dataset.mode);
+    });
+  });
+
+  // Topic links from anywhere on the page.
+  app.addEventListener('click', event => {
+    const btn = event.target.closest('[data-open-topic]');
+    if (!btn) return;
+
+    const topic = btn.dataset.openTopic;
+    openTab('topics');
+    const card = app.querySelector(`[data-topic="${topic}"]`);
+    if (!card) return;
+
+    app.querySelectorAll('.lp-topic-card[open]').forEach(d => {
+      if (d !== card) d.removeAttribute('open');
+    });
+    card.setAttribute('open', '');
+    setTimeout(() => card.scrollIntoView({behavior:'smooth', block:'center'}), 100);
+  });
+
+  // Only one topic card open at a time in enhanced mode.
+  app.querySelectorAll('.lp-topic-card').forEach(card => {
+    card.addEventListener('toggle', () => {
+      if (!card.open) return;
+      app.querySelectorAll('.lp-topic-card[open]').forEach(other => {
+        if (other !== card) other.removeAttribute('open');
+      });
+    });
+  });
+
+  // Deep-link support for the five main study areas.
+  const hash = location.hash.replace('#study-', '');
+  if (['story','answer','language','pronunciation','topics'].includes(hash)) {
+    openTab(hash, false);
+  }
+})();
+</script>
