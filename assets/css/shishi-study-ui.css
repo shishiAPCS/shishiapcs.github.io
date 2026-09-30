@@ -1,0 +1,181 @@
+/* =========================================================
+   ShiShi Study UI
+   Shared visual system for interactive study posts
+   ========================================================= */
+
+:root {
+  --study-surface: rgba(0, 0, 0, 0.035);
+  --study-surface-strong: rgba(0, 0, 0, 0.07);
+
+  --study-border: rgba(0, 0, 0, 0.14);
+  --study-border-strong: rgba(0, 0, 0, 0.30);
+
+  --study-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+
+  --study-radius-lg: 22px;
+  --study-radius-md: 15px;
+  --study-radius-sm: 11px;
+}
+
+/* Contrast dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --study-surface: rgba(255, 255, 255, 0.045);
+    --study-surface-strong: rgba(255, 255, 255, 0.085);
+
+    --study-border: rgba(255, 255, 255, 0.16);
+    --study-border-strong: rgba(255, 255, 255, 0.34);
+
+    --study-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
+  }
+}
+
+
+/* =========================================================
+   Generic Study Components
+   ========================================================= */
+
+.study-ui {
+  color: inherit;
+}
+
+.study-card,
+.study-panel,
+.study-question,
+.study-callout {
+  color: inherit;
+  background: var(--study-surface);
+  border: 1px solid var(--study-border);
+  border-radius: var(--study-radius-md);
+}
+
+.study-card:hover {
+  background: var(--study-surface-strong);
+  border-color: var(--study-border-strong);
+}
+
+
+/* Navigation / tabs */
+
+.study-tabs {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+
+  padding: 0.45rem;
+
+  color: inherit;
+  background: var(--study-surface-strong);
+
+  border: 1px solid var(--study-border);
+  border-radius: 999px;
+
+  box-shadow: var(--study-shadow);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  scrollbar-width: none;
+}
+
+.study-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.study-tab {
+  flex: 0 0 auto;
+
+  color: inherit;
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  padding: 0.72rem 1rem;
+
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.study-tab:hover {
+  background: var(--study-surface);
+}
+
+.study-tab.active,
+.study-tab[aria-selected="true"] {
+  background: var(--study-surface-strong);
+  border-color: var(--study-border-strong);
+}
+
+
+/* Expandable cards */
+
+.study-details {
+  color: inherit;
+  background: var(--study-surface);
+
+  border: 1px solid var(--study-border);
+  border-radius: var(--study-radius-md);
+
+  overflow: hidden;
+}
+
+.study-details summary {
+  cursor: pointer;
+}
+
+
+/* Pills / small buttons */
+
+.study-pill {
+  display: inline-flex;
+  align-items: center;
+
+  color: inherit;
+  background: var(--study-surface);
+
+  border: 1px solid var(--study-border);
+  border-radius: 999px;
+
+  padding: 0.35rem 0.65rem;
+}
+
+.study-pill:hover {
+  background: var(--study-surface-strong);
+  border-color: var(--study-border-strong);
+}
+
+
+/* Tables */
+
+article table {
+  width: 100%;
+}
+
+article th {
+  background: var(--study-surface-strong);
+}
+
+article th,
+article td {
+  border-color: var(--study-border);
+}
+
+
+/* Details used in normal Markdown posts */
+
+article details {
+  background: var(--study-surface);
+  border-color: var(--study-border);
+}
+
+
+/* Never force text to black or white */
+
+.study-ui,
+.study-ui button,
+.study-ui summary,
+.study-ui a {
+  color: inherit;
+}
