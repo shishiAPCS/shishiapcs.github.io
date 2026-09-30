@@ -180,8 +180,8 @@ permalink: /csa-3-6-bluej-object-references/
   <button class="path-btn" type="button" data-open="step-0"><span class="path-num">0</span><strong>准备 Avatar</strong><small>先得到一个可以观察和修改的 object。</small></button>
   <button class="path-btn" type="button" data-open="step-1"><span class="path-num">1</span><strong>Class → Type</strong><small><code>Avatar</code> 也可以成为 instance variable 的 type。</small></button>
   <button class="path-btn" type="button" data-open="step-2"><span class="path-num">2</span><strong>Two References</strong><small>两个 reference 可以指向同一个 object。</small></button>
-  <button class="path-btn" type="button" data-open="step-3"><span class="path-num">3</span><strong>Object Argument</strong><small>parameter 得到 reference value 的 copy。</small></button>
-  <button class="path-btn" type="button" data-open="step-4"><span class="path-num">4</span><strong>Object vs Reference</strong><small>修改 object 与重新赋值 parameter 的区别。</small></button>
+  <button class="path-btn" type="button" data-open="step-3"><span class="path-num">3</span><strong>Object Argument</strong><small>argument 用来初始化 method 内的临时 parameter。</small></button>
+  <button class="path-btn" type="button" data-open="step-4"><span class="path-num">4</span><strong>Argument vs Parameter</strong><small><code>avatar2</code> 和 <code>target</code> 到底是什么关系？</small></button>
   <button class="path-btn" type="button" data-open="step-5"><span class="path-num">5</span><strong>Return Reference</strong><small>method 可以返回一个 object reference。</small></button>
 </div>
 <div class="toolbar">
@@ -372,7 +372,7 @@ profile1.avatar ─────► Knight</code></pre></div>
 avatar2 ─────┐
              ├──────► Mage
 target ──────┘</code></pre></div>
-<p><code>target</code> 是新的 parameter variable，但它得到的是 <code>avatar2</code> 中 reference value 的 copy。</p>
+<p><code>target</code> 是 method 运行时创建的临时 parameter variable。调用时，Java 用 <code>avatar2</code> 当前保存的 reference 来初始化 <code>target</code>。因此它们一开始指向同一个 Mage object，但它们不是同一个 variable。</p>
 <h3>Method 结束后</h3>
 <div class="diagram"><pre><code>profile1.avatar ─────► Knight
 
@@ -384,42 +384,42 @@ target → method 结束后离开它的 scope</code></pre></div>
 </details>
 
 <details class="lesson" id="step-4">
-<summary><span class="step">4</span> 修改 Object vs 修改 Reference</summary>
+<summary><span class="step">4</span> Argument 和 Parameter：不是同一个 Variable</summary>
 <div class="body">
-<p>上一步通过 <code>target</code> 修改了 object。现在比较另一种操作：让 <code>target</code> 自己改指向。</p>
-<p>把下面的 method 加到 <code>GameProfile</code> class 中。scaffold 本身仍然可以 Compile。</p>
-<div class="code-card"><div class="code-head"><strong>Add to GameProfile</strong><button class="copy-btn" type="button" data-copy-target="replace-scaffold">复制 Method Scaffold</button></div><pre><code id="replace-scaffold">public void replaceLocalAvatar(Avatar target)
-{
-    // TODO：创建一个新的 Avatar("Robot", 100)，
-    //       并把这个新 object 的 reference 赋值给 target
+<p>这一步不再创建新的 Robot，也不让 <code>target</code> 改指向。我们只把上一步真正发生的事情拆开看清楚。</p>
 
-}</code></pre></div>
-<p>写完整的一行 Java，然后 Compile。</p>
-<div class="bluej-action"><span class="label">BLUEJ 实验</span>
-右键 <code>profile1</code> → <code>replaceLocalAvatar(Avatar target)</code><br>
-<code>target</code>: <code>avatar2</code>
-</div>
-<div class="predict"><strong>先预测：</strong>method 结束后，Object Bench 上的 <code>avatar2</code> 会指向 Mage 还是 Robot？</div>
-<h3>刚进入 method</h3>
-<div class="diagram"><pre><code>avatar2 ─────┐
-             ├────► Mage
-target ──────┘</code></pre></div>
-<h3>执行 <code>new Avatar("Robot", 100)</code> 之后</h3>
-<div class="diagram"><pre><code>avatar2 ─────────────► Mage
+<div class="code-card"><div class="code-head"><strong>Method call</strong></div><pre><code>profile1.healAvatar(avatar2, 30);</code></pre></div>
 
-target ──────────────► Robot</code></pre></div>
-<p>这时真的执行了一次新的 <code>new Avatar(...)</code>，所以 Robot 是一个<strong>新的 Avatar object</strong>。</p>
-<h3>Method 结束后</h3>
-<div class="diagram"><pre><code>avatar2 ─────────────► Mage
-
-target → method 结束后离开它的 scope
-
-Robot：这个实验中的 variables 已经没有 reference 可以继续访问它</code></pre></div>
 <div class="two-col">
-  <div class="mini-card"><h4>修改 Object</h4><div class="code-card"><div class="code-head"><strong>Example</strong></div><pre><code>target.heal(amount);</code></pre></div><p>调用 method，改变的是 target 指向的 object。</p></div>
-  <div class="mini-card"><h4>修改 Parameter Reference</h4><div class="code-card"><div class="code-head"><strong>Example</strong></div><pre><code>target = new Avatar("Robot", 100);</code></pre></div><p>重新赋值，改变的是 local parameter <code>target</code> 自己保存的 reference。</p></div>
+  <div class="mini-card"><h4>Argument：<code>avatar2</code></h4><p><code>avatar2</code> 是 method 外面已经存在的 variable。它指向 Mage。</p></div>
+  <div class="mini-card"><h4>Parameter：<code>target</code></h4><p><code>target</code> 是 method 开始运行时创建的临时 variable。method 结束后，它离开 scope。</p></div>
 </div>
-<div class="callout"><strong>核心区别：</strong><br>通过 reference 调用 method，可以修改共享 object。<br>给 parameter 重新赋值，只改变这个 parameter 接下来指向哪里。</div>
+
+<h3>调用开始时发生什么？</h3>
+<p>Java 创建 parameter <code>target</code>，并用 <code>avatar2</code> 当前保存的 reference 来初始化它。为了理解，可以把这一瞬间想成：</p>
+<div class="code-card"><div class="code-head"><strong>Conceptual model</strong></div><pre><code>Avatar target = avatar2;</code></pre></div>
+<div class="notation-note"><span class="label">注意</span>这不是你需要额外写进程序的一行代码，只是帮助理解 method call 时 parameter 怎样得到初始值。</div>
+
+<div class="diagram"><pre><code>avatar2 ─────┐
+             ├────► Mage (HP 40)
+target  ─────┘</code></pre></div>
+
+<div class="callout"><strong>最重要的一点：</strong><code>target</code> 不是 <code>avatar2</code> 的另一个名字。它们是两个不同的 variables；只是 method 刚开始时，它们指向同一个 Mage object。</div>
+
+<h3>然后执行 <code>target.heal(30)</code></h3>
+<p><code>target</code> 顺着自己的 reference 找到 Mage，并修改这个 Mage object。因为 <code>avatar2</code> 也指向同一个 Mage，所以 method 结束后，从 <code>avatar2</code> 也能看到 HP 已经变成 70。</p>
+<div class="diagram"><pre><code>method 运行时：
+
+avatar2 ─────┐
+             ├────► Mage (HP 70)
+target  ─────┘
+
+method 结束后：
+
+avatar2 ─────────► Mage (HP 70)
+target → 离开 scope</code></pre></div>
+
+<div class="callout"><strong><code>target</code> 存在的意义：</strong><br>它是 method 内部对“这一次传进来的 Avatar”使用的临时 variable。<br>因此同一个 <code>healAvatar</code> method 可以处理 <code>avatar1</code>、<code>avatar2</code> 或其他 Avatar，而不需要为每个 object 写一个新的 method。</div>
 </div>
 </details>
 
@@ -495,11 +495,8 @@ a2.setHealth(10);</code></pre></div>
 }</code></pre></div>
 <div class="predict">如果把一个 health = 80 的 Avatar reference 传进去，method 结束后原来的 Avatar health 是多少？</div>
 <h3>Challenge 3</h3>
-<div class="code-card"><div class="code-head"><strong>Predict</strong></div><pre><code>public void replaceReference(Avatar target)
-{
-    target = new Avatar("Robot", 100);
-}</code></pre></div>
-<div class="predict">如果 caller 原来的 reference 指向 Knight，method 结束后 caller 的 reference 指向 Knight 还是 Robot？</div>
+<div class="code-card"><div class="code-head"><strong>Predict</strong></div><pre><code>profile1.healAvatar(avatar2, 30);</code></pre></div>
+<div class="predict">method 运行时，<code>avatar2</code> 和 parameter <code>target</code> 是同一个 variable 吗？它们是否指向同一个 object？</div>
 <h3>Challenge 4</h3>
 <div class="code-card"><div class="code-head"><strong>Predict</strong></div><pre><code>Avatar a2 = profile1.getAvatar();</code></pre></div>
 <div class="predict">如果 <code>getAvatar()</code> 只是 <code>return avatar;</code>，这一行创建了新的 Avatar object 吗？</div>
@@ -524,12 +521,12 @@ a2.setHealth(10);</code></pre></div>
 <p>Mage 从 HP 40 变成 HP 70；Knight 不受影响。</p>
 </div></details>
 
-<details class="answer"><summary>Stage 4：replaceLocalAvatar</summary><div class="answer-body">
-<div class="code-card"><div class="code-head"><strong>Answer</strong></div><pre><code>public void replaceLocalAvatar(Avatar target)
-{
-    target = new Avatar("Robot", 100);
-}</code></pre></div>
-<p><code>avatar2</code> 仍然指向 Mage。被重新赋值的是 local parameter <code>target</code>。</p>
+<details class="answer"><summary>Stage 4：Argument vs Parameter</summary><div class="answer-body">
+<p><code>avatar2</code> 是 argument；<code>target</code> 是 method 运行时创建的临时 parameter variable。它们不是同一个 variable。</p>
+<div class="diagram"><pre><code>avatar2 ─────┐
+             ├────► Mage
+target  ─────┘</code></pre></div>
+<p>method 刚开始时，它们指向同一个 Mage。<code>target.heal(...)</code> 修改的是这个共享的 Mage object；method 结束后 <code>target</code> 离开 scope，<code>avatar2</code> 仍然存在。</p>
 </div></details>
 
 <details class="answer"><summary>Stage 5：getAvatar</summary><div class="answer-body">
@@ -566,10 +563,6 @@ a2.setHealth(10);</code></pre></div>
         target.heal(amount);
     }
 
-    public void replaceLocalAvatar(Avatar target)
-    {
-        target = new Avatar("Robot", 100);
-    }
 
     public Avatar getAvatar()
     {
@@ -582,7 +575,7 @@ a2.setHealth(10);</code></pre></div>
 <ul class="compact-list">
 <li><strong>Challenge 1：</strong><code>10</code>。<code>a1</code> 和 <code>a2</code> 指向同一个 object。</li>
 <li><strong>Challenge 2：</strong><code>5</code>。method 修改了共享 object。</li>
-<li><strong>Challenge 3：</strong>caller 的 reference 仍然指向 Knight。</li>
+<li><strong>Challenge 3：</strong>不是同一个 variable；但 method 运行时，<code>avatar2</code> 和 <code>target</code> 指向同一个 Mage object。</li>
 <li><strong>Challenge 4：</strong>没有创建新的 Avatar object；得到的是另一个 reference。</li>
 </ul>
 </div></details>
