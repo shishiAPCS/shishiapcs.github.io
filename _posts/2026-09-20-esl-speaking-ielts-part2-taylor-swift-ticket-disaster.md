@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IELTS Speaking Part 2 Master Story: Taylor Swift Ticket Disaster"
+title: "雅思口语 Part 2: Taylor Swift Ticket Disaster"
 date: 2026-09-20
 categories: [ESL, IELTS, Speaking]
 tags: [ielts-speaking, part-2, master-story, taylor-swift]
