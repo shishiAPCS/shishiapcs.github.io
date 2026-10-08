@@ -1,0 +1,758 @@
+---
+title: "新托福口语 Shopping Habits：四道 Interview 题怎么打开思路？"
+mathjax: true
+layout: post
+categories: media
+render_with_liquid: false
+---
+
+<style>
+/* =========================================================
+   TOEFL Interview Thinking Lab — Shopping Habits
+   Theme-native version for shishiapcs.github.io / Contrast
+   Goal: straightforward analysis + useful click-to-brainstorm tools
+   ========================================================= */
+
+.shopping-interview-lab {
+  max-width: 980px;
+  margin: 0 auto;
+  color: inherit;
+  line-height: 1.72;
+  font-size: 1.02rem;
+
+  /* ShiShi Study UI: all colors and theme states come from the global stylesheet. */
+  --ti-surface: var(--study-surface);
+  --ti-surface-strong: var(--study-surface-strong);
+  --ti-border: var(--study-border);
+  --ti-border-strong: var(--study-border-strong);
+  --ti-shadow: var(--study-shadow);
+  --ti-radius-lg: var(--study-radius-lg);
+  --ti-radius-md: var(--study-radius-md);
+  --ti-radius-sm: var(--study-radius-sm);
+}
+
+.shopping-interview-lab * { box-sizing: border-box; }
+
+.shopping-interview-lab h2,
+.shopping-interview-lab h3,
+.shopping-interview-lab h4 {
+  color: inherit;
+  line-height: 1.3;
+}
+
+.shopping-interview-lab h2 {
+  margin-top: 2.8rem;
+  padding-top: .25rem;
+}
+
+.shopping-interview-lab h3 { margin-top: 1.6rem; }
+
+.shopping-interview-lab button {
+  font: inherit;
+  color: inherit;
+}
+
+.shopping-interview-lab .intro {
+  font-size: 1.06rem;
+  opacity: .94;
+}
+
+.shopping-interview-lab .core,
+.shopping-interview-lab .analysis-box,
+.shopping-interview-lab .sample-box,
+.shopping-interview-lab .vocab-box,
+.shopping-interview-lab .builder-output,
+.shopping-interview-lab .final-card,
+.shopping-interview-lab .practice-box {
+  border: 1px solid var(--ti-border);
+  border-radius: var(--ti-radius-lg);
+  background: var(--ti-surface);
+}
+
+.shopping-interview-lab .core {
+  margin: 1.2rem 0 1.6rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid currentColor;
+  border-radius: 0 var(--ti-radius-lg) var(--ti-radius-lg) 0;
+}
+
+/* ---------- Top navigation ---------- */
+.shopping-interview-lab .question-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1.3rem 0 2rem;
+}
+
+.shopping-interview-lab .map-card {
+  min-width: 0;
+  min-height: 122px;
+  padding: .88rem;
+  border: 1px solid var(--ti-border);
+  border-radius: var(--ti-radius-lg);
+  background: var(--ti-surface);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+
+.shopping-interview-lab .map-card:hover,
+.shopping-interview-lab .map-card:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.shopping-interview-lab .map-card:hover { transform: translateY(-2px); box-shadow: var(--ti-shadow); }
+
+.shopping-interview-lab .map-q {
+  display: block;
+  margin-bottom: .18rem;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  opacity: .68;
+}
+
+.shopping-interview-lab .map-type {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 850;
+  font-size: 1.05rem;
+}
+
+.shopping-interview-lab .map-formula {
+  display: block;
+  opacity: .76;
+  font-size: .9rem;
+}
+
+/* ---------- Shared section elements ---------- */
+.shopping-interview-lab .tag {
+  display: inline-block;
+  margin-bottom: .15rem;
+  padding: .22rem .48rem;
+  border: 1px solid var(--ti-border);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .035em;
+  opacity: .78;
+}
+
+.shopping-interview-lab .question {
+  margin: .95rem 0 1.15rem;
+  padding: 1rem 1.08rem;
+  border-left: 4px solid currentColor;
+  background: var(--ti-surface);
+  border-radius: 0 var(--ti-radius-lg) var(--ti-radius-lg) 0;
+}
+
+.shopping-interview-lab .formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .42rem;
+  margin: 1rem 0;
+}
+
+.shopping-interview-lab .formula-step {
+  padding: .4rem .65rem;
+  border: 1px solid var(--ti-border);
+  border-radius: var(--ti-radius-sm);
+  background: var(--ti-surface);
+  font-weight: 800;
+}
+
+.shopping-interview-lab .arrow {
+  opacity: .48;
+  font-weight: 900;
+}
+
+.shopping-interview-lab .analysis-box,
+.shopping-interview-lab .sample-box,
+.shopping-interview-lab .vocab-box {
+  margin: 1rem 0;
+  padding: 1rem 1.08rem;
+}
+
+.shopping-interview-lab .analysis-box h3,
+.shopping-interview-lab .sample-box h3,
+.shopping-interview-lab .vocab-box h3 {
+  margin-top: 0;
+}
+
+.shopping-interview-lab .route {
+  margin: .75rem 0;
+  padding: .72rem .86rem;
+  border-left: 3px solid currentColor;
+  background: var(--ti-surface);
+}
+
+.shopping-interview-lab .warning {
+  margin: .8rem 0;
+  padding: .75rem .9rem;
+  border: 1px dashed var(--ti-border-strong);
+  border-radius: var(--ti-radius-md);
+}
+
+.shopping-interview-lab .sample-answer {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.shopping-interview-lab .vocab-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .42rem .9rem;
+  margin: .2rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.shopping-interview-lab .micro {
+  font-size: .91rem;
+  opacity: .7;
+}
+
+/* ---------- Click-to-brainstorm builders ---------- */
+.shopping-interview-lab .builder {
+  margin: 1.15rem 0;
+}
+
+.shopping-interview-lab .builder h3 {
+  margin-bottom: .5rem;
+}
+
+.shopping-interview-lab .choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: .7rem 0;
+}
+
+.shopping-interview-lab .choice-btn,
+.shopping-interview-lab .side-btn {
+  min-height: 44px;
+  padding: .62rem .78rem;
+  border: 1px solid var(--ti-border);
+  border-radius: var(--ti-radius-md);
+  background: var(--ti-surface);
+  cursor: pointer;
+}
+
+.shopping-interview-lab .choice-btn:hover,
+.shopping-interview-lab .choice-btn:focus-visible,
+.shopping-interview-lab .side-btn:hover,
+.shopping-interview-lab .side-btn:focus-visible {
+  border-color: var(--ti-border-strong);
+  background: var(--ti-surface-strong);
+  outline: none;
+}
+
+.shopping-interview-lab button.is-selected {
+  border-color: currentColor;
+  background: var(--ti-surface-strong);
+  font-weight: 850;
+  outline: 1px solid currentColor; outline-offset: -2px;
+}
+
+.shopping-interview-lab .builder-output {
+  margin-top: .8rem;
+  padding: 1rem;
+}
+
+.shopping-interview-lab .builder-label {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 850;
+}
+
+.shopping-interview-lab .logic-line {
+  margin: .65rem 0 0;
+  font-weight: 750;
+}
+
+.shopping-interview-lab .idea-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .55rem;
+  margin: .8rem 0;
+}
+
+.shopping-interview-lab .idea-card {
+  padding: .72rem;
+  border: 1px solid var(--ti-border);
+  border-radius: var(--ti-radius-md);
+  background: var(--ti-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.shopping-interview-lab .idea-card b {
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.shopping-interview-lab .idea-card span {
+  display: block;
+  font-size: .85rem;
+  opacity: .68;
+}
+
+/* ---------- Summary ---------- */
+.shopping-interview-lab .final-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 1rem 0;
+}
+
+.shopping-interview-lab .final-card { padding: .9rem; }
+
+.shopping-interview-lab .final-card .num {
+  display: inline-grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-right: .35rem;
+  border: 1px solid var(--ti-border-strong);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.shopping-interview-lab .final-formula {
+  margin-top: .45rem;
+  opacity: .78;
+}
+
+.shopping-interview-lab .practice-box {
+  margin-top: 1.2rem;
+  padding: 1rem;
+}
+
+.shopping-interview-lab .practice-box summary {
+  font-weight: 850;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 760px) {
+  .shopping-interview-lab .question-map,
+  .shopping-interview-lab .final-map,
+  .shopping-interview-lab .vocab-list {
+    grid-template-columns: 1fr;
+  }
+
+  .shopping-interview-lab .idea-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Shopping lesson refinements: keyboard-friendly cards, disclosure and copy controls. */
+.shopping-interview-lab section { scroll-margin-top: 1.5rem; }
+.shopping-interview-lab .question-map .map-card { display: block; color: inherit; text-decoration: none; }
+.shopping-interview-lab .map-card:focus-visible, .shopping-interview-lab button:focus-visible,
+.shopping-interview-lab .practice-box summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.shopping-interview-lab .map-card:focus-visible { text-decoration: none; }
+.shopping-interview-lab .meta-line { display:flex; align-items:center; flex-wrap:wrap; gap: .5rem; margin-bottom: .8rem; }
+.shopping-interview-lab .deck { margin: 0 0 1.1rem; font-size: 1.08rem; }
+.shopping-interview-lab .question strong { font-weight: 660; }
+.shopping-interview-lab .micro { line-height: 1.62; }
+.shopping-interview-lab .builder-output p { margin: .45rem 0; }
+.shopping-interview-lab .output-pair { display:grid; grid-template-columns: 105px minmax(0,1fr); gap:.35rem .8rem; align-items:start; }
+.shopping-interview-lab .output-pair dt { font-weight: 800; opacity: .72; }
+.shopping-interview-lab .output-pair dd { margin: 0; }
+.shopping-interview-lab .builder-label { font-size: .94rem; }
+.shopping-interview-lab .idea-grid.four { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.shopping-interview-lab .idea-grid.three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.shopping-interview-lab .divider-line { border:0; border-top:1px solid var(--ti-border); margin:1.9rem 0; }
+.shopping-interview-lab .sample-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap:wrap; gap:.6rem; margin-bottom:.5rem; }
+.shopping-interview-lab .sample-heading h3 { margin:0; }
+.shopping-interview-lab .copy-btn { padding:.37rem .7rem; border:1px solid var(--ti-border); border-radius:var(--ti-radius-sm); background:transparent; cursor:pointer; font-size:.84rem; }
+.shopping-interview-lab .copy-btn:hover { background:var(--ti-surface-strong); }
+.shopping-interview-lab .copy-status { min-height:1em; margin:.3rem 0 0; font-size:.83rem; opacity:.76; }
+.shopping-interview-lab .vocab-list li { break-inside: avoid; margin-bottom:.2rem; }
+.shopping-interview-lab .vocab-list strong { font-weight: 780; }
+.shopping-interview-lab .quick-check { border: 1px solid var(--ti-border); padding:.9rem 1rem; border-radius:10px; margin:1rem 0; }
+.shopping-interview-lab .quick-check summary { cursor:pointer; font-weight:800; }
+.shopping-interview-lab .quick-check p:last-child { margin-bottom:0; }
+.shopping-interview-lab .skill-tag { letter-spacing:.01em; text-transform: none; }
+.shopping-interview-lab .sample-note { margin-top:.65rem; font-size:.9rem; opacity:.77; }
+.shopping-interview-lab .top-link { display:inline-block; margin: .6rem 0 0; font-size:.85rem; }
+.shopping-interview-lab .trigger-instruction { margin:.2rem 0 .7rem; }
+.shopping-interview-lab .formula { margin: 1rem 0 1.25rem; }
+.shopping-interview-lab .final-map .final-card b { display:inline; }
+.shopping-interview-lab .idea-card[aria-pressed='true'], .shopping-interview-lab .side-btn[aria-pressed='true'] {
+ border-color: currentColor; background: var(--ti-surface-strong); font-weight:800;
+ outline: 1px solid currentColor; outline-offset: -2px;
+}
+@media (max-width: 760px) {
+  .shopping-interview-lab .question-map { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .shopping-interview-lab .idea-grid.four, .shopping-interview-lab .idea-grid.three { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .shopping-interview-lab .map-card { min-height: 90px; }
+  .shopping-interview-lab .output-pair { grid-template-columns: 1fr; gap:.12rem; }
+  .shopping-interview-lab .output-pair dd { margin-bottom:.4rem; }
+}
+@media (max-width:400px) {
+ .shopping-interview-lab .idea-grid, .shopping-interview-lab .idea-grid.four, .shopping-interview-lab .idea-grid.three { grid-template-columns:1fr 1fr; }
+ .shopping-interview-lab .choice-btn,.shopping-interview-lab .side-btn { flex:1 1 auto; }
+}
+@media (prefers-reduced-motion:reduce) { .shopping-interview-lab * { scroll-behavior:auto !important; transition:none !important; } }
+</style>
+
+<div class="shopping-interview-lab" id="shoppingInterviewLab">
+  <p class="intro">这组 <strong>Shopping Habits</strong> Interview 题看似都在聊购物，其实在考四种不同的表达能力：<strong>选择偏好、解释标准、讲述经历、论证观点</strong>。不用背四篇孤立的答案，学会识别题型，再根据关键词快速搭建一条能说清楚的逻辑链。</p>
+  <div class="core"><strong>本课最重要的训练目标：</strong> 不要只停留在观点或关键词上，而要说清楚 <strong>“为什么”以及“所以怎么样”</strong>。<br><span lang="en">Idea → Reason → Concrete detail → Result.</span></div>
+
+  <div class="question-map" aria-label="跳转到四道题" id="shopping-map">
+    <a class="map-card" href="#shopping-q1"><span class="map-q">QUESTION 1</span><span class="map-type">Preference</span><span class="map-formula">Choice → Reason → Benefit</span></a>
+    <a class="map-card" href="#shopping-q2"><span class="map-q">QUESTION 2</span><span class="map-type">Priority</span><span class="map-formula">Factor → Trade-off → Value</span></a>
+    <a class="map-card" href="#shopping-q3"><span class="map-q">QUESTION 3</span><span class="map-type">Past Experience</span><span class="map-formula">Product → Evidence → Satisfaction</span></a>
+    <a class="map-card" href="#shopping-q4"><span class="map-q">QUESTION 4</span><span class="map-type">Opinion</span><span class="map-formula">Position → Reason → Example</span></a>
+  </div>
+  <p class="micro">使用方法：点击上方题型跳转；每题点击思路卡，观察它如何从一个词变成可以说出口的理由；最后再读 Sample Answer。</p>
+  <hr class="divider-line">
+
+  <section id="shopping-q1" aria-labelledby="shopping-q1-title">
+    <div class="meta-line"><span class="tag">Q1 · PREFERENCE</span><span class="micro">二选一 + 两个理由 / 一条因果链</span></div>
+    <h2 id="shopping-q1-title">Question 1：购物渠道二选一，理由要“落到自己身上”</h2>
+    <div class="question" lang="en"><strong>Thank you for participating in our study. I'd like to learn more about your shopping habits. Do you shop more frequently online or in physical stores? And why?</strong></div>
+    <div class="formula" aria-label="Q1 answer structure"><span class="formula-step">Choice</span><span class="arrow">→</span><span class="formula-step">Reason</span><span class="arrow">→</span><span class="formula-step">Concrete detail</span><span class="arrow">→</span><span class="formula-step">Personal benefit</span></div>
+    <div class="analysis-box">
+      <h3>答题思路：选最容易展开的一边</h3>
+      <p>这类 <strong>Preference + Reasons</strong> 题，第一句就回答选择，不要花时间讨论哪种购物方式“客观上更好”。听到 <strong>online or in physical stores</strong>，可以迅速从以下几类词联想：<strong>Convenience（方便）、Time（时间）、Choice（选择）、Experience（体验）</strong>。</p>
+      <p>原始回答里“手机下单、比价、无须出门、节省陪伴家人的时间”都很好。升级时要把它们整理成两层：<strong>操作更方便</strong>，以及<strong>省出来的时间可以做别的事</strong>。</p>
+      <div class="route"><strong lang="en">shop on my phone → compare prices → order in a few taps → more convenient</strong><br><strong lang="en">no travel or waiting → save time → spend time with family</strong></div>
+      <div class="warning"><strong>注意：</strong>只说 <span lang="en">"It's convenient and saves time"</span> 很容易显得空泛。再补一个动作细节（比价、排队、通勤）和一个个人结果，内容立刻充实。</div>
+    </div>
+    <div class="builder" data-builder="q1">
+      <h3>点击打开思路：选择渠道 + 选择理由</h3>
+      <div class="choice-row" role="group" aria-label="Choose shopping preference">
+        <button class="side-btn is-selected" type="button" data-q1-side="online" aria-pressed="true">Online shopping</button>
+        <button class="side-btn" type="button" data-q1-side="store" aria-pressed="false">Physical stores</button>
+      </div>
+      <p class="micro trigger-instruction">再点击一个切入点，看它如何展开成逻辑链。范文选的是 <strong>Online + Convenience / Time</strong>。</p>
+      <div class="idea-grid four" role="group" aria-label="Q1 brainstorming triggers">
+        <button class="idea-card is-selected" type="button" data-q1-trigger="convenience" aria-pressed="true"><b>Convenience</b><span>Easy to shop?</span></button>
+        <button class="idea-card" type="button" data-q1-trigger="time" aria-pressed="false"><b>Time</b><span>Save time?</span></button>
+        <button class="idea-card" type="button" data-q1-trigger="choice" aria-pressed="false"><b>Choice</b><span>More options?</span></button>
+        <button class="idea-card" type="button" data-q1-trigger="experience" aria-pressed="false"><b>Experience</b><span>Better shopping feel?</span></button>
+      </div>
+      <div class="builder-output" id="shoppingQ1Output" aria-live="polite">
+        <span class="builder-label">核心思路</span><p>线上购物随时随地可操作，买东西不受营业时间限制。</p>
+        <div class="logic-line" lang="en">shop on my phone → compare prices → place an order in a few taps → convenient</div>
+      </div>
+    </div>
+    <div class="sample-box">
+    <div class="sample-heading"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="q1-answer" aria-label="Copy Q1 sample answer">Copy answer</button></div>
+    <p class="sample-answer" id="q1-answer" lang="en">I do most of my shopping online these days, mainly because it&#x27;s so convenient. I can browse different products, compare prices and brands, and place an order right on my phone in just a few taps. Another big advantage is that it saves me a lot of time. I don&#x27;t have to travel to a physical store or wait in line. Instead, I can use that extra time to study or spend quality time with my family. So overall, online shopping just fits my lifestyle better.</p>
+    <p class="copy-status" aria-live="polite" data-copy-status="q1-answer"></p>
+  </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3>
+      <ul class="vocab-list">
+        <li><strong lang="en">do most of my shopping online</strong> — 大部分购物都在网上进行</li>
+        <li><strong lang="en">browse different products</strong> — 浏览不同商品</li>
+        <li><strong lang="en">compare prices and brands</strong> — 对比价格与品牌</li>
+        <li><strong lang="en">place an order</strong> — 下单</li>
+        <li><strong lang="en">in just a few taps</strong> — 点几下就完成</li>
+        <li><strong lang="en">a physical store</strong> — 实体店</li>
+        <li><strong lang="en">wait in line</strong> — 排队</li>
+        <li><strong lang="en">spend quality time with my family</strong> — 和家人共度高质量时光</li>
+        <li><strong lang="en">fit my lifestyle better</strong> — 更符合我的生活方式</li>
+      </ul>
+    </div>
+    <details class="quick-check"><summary>举一反三：这套思路还能回答什么？</summary><p>“你更喜欢在线学习还是线下上课？”“你更喜欢自己做饭还是出去吃？”都可以从 <strong>Convenience / Time / Experience</strong> 出发，再补动作细节与个人收益。</p></details>
+    <a class="top-link" href="#shopping-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="divider-line">
+
+  <section id="shopping-q2" aria-labelledby="shopping-q2-title">
+    <div class="meta-line"><span class="tag">Q2 · PRIORITY</span><span class="micro">标准 + 取舍 + 长期价值</span></div>
+    <h2 id="shopping-q2-title">Question 2：回答“最看重什么”，不要只罗列因素</h2>
+    <div class="question" lang="en"><strong>Thanks for sharing. Can you tell me about one or two factors that most influence your decision to purchase a product? For example, do you consider price, brand or quality? Why?</strong></div>
+    <div class="formula" aria-label="Q2 answer structure"><span class="formula-step">Main factor</span><span class="arrow">→</span><span class="formula-step">Trade-off</span><span class="arrow">→</span><span class="formula-step">Example</span><span class="arrow">→</span><span class="formula-step">Long-term value</span></div>
+    <div class="analysis-box">
+      <h3>答题思路：先确定第一优先级，再说明取舍</h3>
+      <p>这是 <strong>Priority + Justification</strong> 题。题目给了 <strong>price / brand / quality</strong> 三个例子，但不是要求你逐个介绍，而是问：<strong>你最重视什么？为什么？</strong></p>
+      <p>你原来的好思路是：<strong>quality 不是单纯“贵、好”，而是 durable，能够长期使用</strong>。因此很适合引出“虽然买时贵一点，但长期更划算”的取舍关系。</p>
+      <div class="route"><strong lang="en">quality → durability → fewer replacements → better value in the long run</strong></div>
+      <p>一个非常实用的句型是 <strong lang="en">I'd rather A than B</strong>，在两个方案之间明确你的优先标准。</p>
+      <div class="warning"><strong>注意：</strong>不要回答 <span lang="en">"I care about quality because quality is important."</span>。这只是重复关键词。问自己：<strong>高质量会带来什么具体结果？</strong></div>
+    </div>
+    <div class="builder" data-builder="q2">
+      <h3>点击一个购买因素，看“标准 → 取舍 → 价值”</h3>
+      <p class="micro trigger-instruction">范文选择 <strong>Quality</strong>；其他方向提供练习用的替代思路。</p>
+      <div class="idea-grid four" role="group" aria-label="Q2 purchase factor">
+        <button class="idea-card is-selected" type="button" data-q2-trigger="quality" aria-pressed="true"><b>Quality</b><span>How long will it last?</span></button>
+        <button class="idea-card" type="button" data-q2-trigger="price" aria-pressed="false"><b>Price</b><span>Can I afford it?</span></button>
+        <button class="idea-card" type="button" data-q2-trigger="brand" aria-pressed="false"><b>Brand</b><span>Can I trust it?</span></button>
+        <button class="idea-card" type="button" data-q2-trigger="reviews" aria-pressed="false"><b>Reviews</b><span>What do users say?</span></button>
+      </div>
+      <div class="builder-output" id="shoppingQ2Output" aria-live="polite">
+        <span class="builder-label">Quality → 一句话展开</span><p>愿意多花一点钱，换取可靠、耐用和更长的使用寿命。</p>
+        <div class="logic-line" lang="en">higher quality → longer lifespan → fewer replacements → better value</div>
+      </div>
+    </div>
+    <div class="sample-box">
+    <div class="sample-heading"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="q2-answer" aria-label="Copy Q2 sample answer">Copy answer</button></div>
+    <p class="sample-answer" id="q2-answer" lang="en">For me, quality is definitely the most important factor when buying something. Of course, I compare prices and brands, but what matters most is whether the product is built to last. For example, when I&#x27;m buying a computer, I&#x27;d rather pay a little more for a reliable, well-built model than choose a cheaper one that might need replacing sooner. That&#x27;s one reason I tend to choose Apple computers. They may cost more upfront, but I like their build quality, and I expect to use them for years. So to me, quality means better value in the long run.</p>
+    <p class="copy-status" aria-live="polite" data-copy-status="q2-answer"></p>
+  </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3>
+      <ul class="vocab-list">
+        <li><strong lang="en">the most important factor</strong> — 最重要的因素</li>
+        <li><strong lang="en">what matters most is...</strong> — 最重要的是……</li>
+        <li><strong lang="en">be built to last</strong> — 经久耐用</li>
+        <li><strong lang="en">compare prices and brands</strong> — 比较价格与品牌</li>
+        <li><strong lang="en">I'd rather A than B</strong> — 我宁可 A 也不愿 B</li>
+        <li><strong lang="en">a reliable, well-built model</strong> — 可靠、做工扎实的型号</li>
+        <li><strong lang="en">need replacing sooner</strong> — 更早需要更换</li>
+        <li><strong lang="en">cost more upfront</strong> — 前期购买价格更高</li>
+        <li><strong lang="en">build quality</strong> — 做工质量</li>
+        <li><strong lang="en">better value in the long run</strong> — 长期来看更划算</li>
+      </ul>
+    </div>
+    <details class="quick-check"><summary>举一反三：非购物话题也能用吗？</summary><p>可以。比如“选大学最重视什么”“挑工作最看重什么”，先明确 <strong>Main factor</strong>，再说明你愿意放弃什么、换来什么。这比同时列出五个因素更容易说深。</p></details>
+    <a class="top-link" href="#shopping-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="divider-line">
+
+  <section id="shopping-q3" aria-labelledby="shopping-q3-title">
+    <div class="meta-line"><span class="tag">Q3 · PAST EXPERIENCE</span><span class="micro">真实经历 + 具体证据 + 满意原因</span></div>
+    <h2 id="shopping-q3-title">Question 3：讲一个买过的东西，关键是证明“满意”</h2>
+    <div class="question" lang="en"><strong>I appreciate your insights. Now, thinking back to a recent shopping experience, can you describe a product you bought that you were particularly satisfied with and explain why?</strong></div>
+    <div class="formula" aria-label="Q3 answer structure"><span class="formula-step">Product</span><span class="arrow">→</span><span class="formula-step">Specific evidence</span><span class="arrow">→</span><span class="formula-step">Satisfaction</span></div>
+    <div class="analysis-box">
+      <h3>答题思路：产品名称很容易，难的是“证据”</h3>
+      <p>这是 <strong>Past Experience + Evaluation</strong> 题。第一句话交代买了什么，接下来就应证明它为什么让你满意。不能只说 <span lang="en">"It's really good"</span>；要给能验证这个判断的个人细节。</p>
+      <p>可从两个大方向找证据：<strong>Product（产品本身）</strong> 和 <strong>Shopping Process（购买体验）</strong>。原始回答讲了 Kindle 品牌的可靠性和次日送达的顺畅体验，这些材料足够组成完整答案。</p>
+      <div class="route"><strong lang="en">Kindle Scribe → years of reliable Kindle use → confidence in the brand → next-day delivery → satisfied purchase</strong></div>
+      <div class="warning"><strong>注意：</strong>“过去十年的 Kindle 还好用”可以说明购买时为什么信任这个品牌，但严格来说，不能直接证明新 Scribe 的实际耐用性。如果有真实使用体验，还可以补屏幕、书写或阅读感受。<strong>范文在这里保留已经确认的原始内容。</strong></div>
+    </div>
+    <div class="builder" data-builder="q3">
+      <h3>点击寻找满意的原因：不必什么都讲</h3>
+      <p class="micro trigger-instruction">在真实经历中，挑一两个有证据支撑的点。范文重点是 <strong>Reliability + Delivery</strong>。</p>
+      <div class="idea-grid four" role="group" aria-label="Q3 satisfaction trigger">
+        <button class="idea-card is-selected" type="button" data-q3-trigger="reliability" aria-pressed="true"><b>Reliability</b><span>Did it earn your trust?</span></button>
+        <button class="idea-card" type="button" data-q3-trigger="features" aria-pressed="false"><b>Features</b><span>What can it do?</span></button>
+        <button class="idea-card" type="button" data-q3-trigger="delivery" aria-pressed="false"><b>Delivery</b><span>Was it smooth?</span></button>
+        <button class="idea-card" type="button" data-q3-trigger="value" aria-pressed="false"><b>Value</b><span>Was it worth it?</span></button>
+      </div>
+      <div class="builder-output" id="shoppingQ3Output" aria-live="polite">
+        <span class="builder-label">Reliability → 找证据</span><p>以前买过的同品牌产品用了很多年，因此对新购买更有信心。</p>
+        <div class="logic-line" lang="en">reliable past experience → confidence in the brand → satisfied with the decision</div>
+      </div>
+    </div>
+    <div class="sample-box">
+    <div class="sample-heading"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="q3-answer" aria-label="Copy Q3 sample answer">Copy answer</button></div>
+    <p class="sample-answer" id="q3-answer" lang="en">One of my recent purchases that I&#x27;m really happy with is a Kindle Scribe, an 11-inch e-reader. I&#x27;ve been using Kindles for years, and I&#x27;ve always found them incredibly reliable. In fact, one of my older models is over ten years old and still works perfectly fine. So I felt pretty confident about buying another one. I was also impressed by how smooth the shopping experience was. I ordered it from Amazon, and it was delivered the very next day. Overall, I was really pleased with both the brand&#x27;s reliability and the hassle-free shopping experience.</p>
+    <p class="copy-status" aria-live="polite" data-copy-status="q3-answer"></p>
+  </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3>
+      <ul class="vocab-list">
+        <li><strong lang="en">a recent purchase</strong> — 最近购买的东西</li>
+        <li><strong lang="en">an 11-inch e-reader</strong> — 一台 11 英寸电子阅读器</li>
+        <li><strong lang="en">I've been using ... for years</strong> — 我使用……已经很多年</li>
+        <li><strong lang="en">incredibly reliable</strong> — 非常可靠</li>
+        <li><strong lang="en">still works perfectly fine</strong> — 现在仍然正常好用</li>
+        <li><strong lang="en">feel confident about buying...</strong> — 对购买……很有信心</li>
+        <li><strong lang="en">a smooth shopping experience</strong> — 顺畅的购物体验</li>
+        <li><strong lang="en">be delivered the very next day</strong> — 次日送达</li>
+        <li><strong lang="en">hassle-free</strong> — 省心、无麻烦的</li>
+        <li><strong lang="en">be pleased with...</strong> — 对……感到满意</li>
+      </ul>
+    </div>
+    <details class="quick-check"><summary>举一反三：讲“难忘经历”和讲“满意的购买”有何不同？</summary><p>“难忘经历”通常抓 <strong>Moment + Meaning</strong>；“满意的购买”抓 <strong>Evidence + Evaluation</strong>。两者都讲过去的事，但收尾要回答不同的问题。</p></details>
+    <a class="top-link" href="#shopping-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="divider-line">
+
+  <section id="shopping-q4" aria-labelledby="shopping-q4-title">
+    <div class="meta-line"><span class="tag">Q4 · OPINION</span><span class="micro">观点 + 原因 + 具体反例</span></div>
+    <h2 id="shopping-q4-title">Question 4：看到 obsolete，抓住绝对化观点的漏洞</h2>
+    <div class="question" lang="en"><strong>Interesting. As online shopping continues to grow, some people believe that physical stores will become obsolete. Do you agree or disagree with this viewpoint? Why or why not?</strong></div>
+    <div class="formula" aria-label="Q4 answer structure"><span class="formula-step">Position</span><span class="arrow">→</span><span class="formula-step">Mechanism / Reason</span><span class="arrow">→</span><span class="formula-step">Concrete example</span><span class="arrow">→</span><span class="formula-step">Conclusion</span></div>
+    <div class="analysis-box">
+      <h3>答题思路：看清观点的强度，再找反例</h3>
+      <p><strong>obsolete</strong> 不是简单的“没有以前受欢迎”，而是“不再被使用、被淘汰”。题目实际上要求判断：<strong>网上购物增长，是否意味着实体店最终会被彻底取代？</strong> 可以承认线上购物越来越方便，同时反对“完全消失”这个更强的结论。</p>
+      <p>反对立场最容易展开的一条路径是：<strong>有些产品要亲自试、亲自摸、亲眼看</strong>。用衣服举例，动作细节（try on / feel the fabric / check the fit）天然构成了论据。</p>
+      <div class="route"><strong lang="en">need to try products in person → check fit and texture → hands-on experience → physical stores still matter</strong></div>
+      <div class="warning"><strong>注意：</strong>不要说 <span lang="en">"You can't buy clothes online."</span>。当然可以买！真正的论点是 <strong>online shopping can't fully replace the in-person experience</strong>，论证会更准确。</div>
+    </div>
+    <div class="builder" data-builder="q4">
+      <h3>点击立场，再观察论证路径</h3>
+      <div class="choice-row" role="group" aria-label="Q4 agree disagree">
+        <button class="side-btn is-selected" type="button" data-q4-side="disagree" aria-pressed="true">Disagree</button>
+        <button class="side-btn" type="button" data-q4-side="agree" aria-pressed="false">Agree</button>
+      </div>
+      <p class="micro trigger-instruction">范文选择 <strong>Disagree</strong>。同意也可以回答，但要真正解释为什么认为线下门店最终不再有存在的必要。</p>
+      <div class="builder-output" id="shoppingQ4Output" aria-live="polite">
+        <span class="builder-label">Disagree → 线下体验不可完全替代</span><p>衣服需要试穿、看版型、摸材质；线上图片与描述无法完整取代这些体验。</p>
+        <div class="logic-line" lang="en">try on clothes → check the fit → feel the fabric → physical stores still have a role</div>
+      </div>
+    </div>
+    <div class="sample-box">
+    <div class="sample-heading"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="q4-answer" aria-label="Copy Q4 sample answer">Copy answer</button></div>
+    <p class="sample-answer" id="q4-answer" lang="en">I definitely disagree. Even though online shopping is becoming more popular, I don&#x27;t think physical stores will ever completely disappear. The main reason is that some products are simply better purchased in person. Take clothes, for example. When you shop online, you can&#x27;t actually try them on or feel the fabric. But in a physical store, you can see how something fits, check how it looks in the mirror, and decide whether it&#x27;s right for you. That kind of hands-on shopping experience is really hard to replicate online. So I think physical stores will always have a place.</p>
+    <p class="copy-status" aria-live="polite" data-copy-status="q4-answer"></p>
+  </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3>
+      <ul class="vocab-list">
+        <li><strong lang="en">become obsolete</strong> — 过时、被淘汰、不再使用</li>
+        <li><strong lang="en">I definitely disagree</strong> — 我明确反对</li>
+        <li><strong lang="en">completely disappear</strong> — 彻底消失</li>
+        <li><strong lang="en">purchase something in person</strong> — 亲自到店购买</li>
+        <li><strong lang="en">Take clothes, for example.</strong> — 就拿衣服举例</li>
+        <li><strong lang="en">try them on</strong> — 试穿它们</li>
+        <li><strong lang="en">feel the fabric</strong> — 摸摸布料</li>
+        <li><strong lang="en">see how something fits</strong> — 看看是否合身</li>
+        <li><strong lang="en">a hands-on shopping experience</strong> — 亲身试用、接触商品的购物体验</li>
+        <li><strong lang="en">be hard to replicate online</strong> — 很难在线上复制</li>
+        <li><strong lang="en">always have a place</strong> — 始终有其存在价值</li>
+      </ul>
+    </div>
+    <details class="quick-check"><summary>举一反三：遇到“技术将彻底取代……”怎么办？</summary><p>注意题目是否用了 <strong>completely / always / never / obsolete</strong> 这样的强词。可以先承认科技趋势，再找一个难以替代的场景，用具体反例支持自己的立场。</p></details>
+    <a class="top-link" href="#shopping-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="divider-line">
+
+  <section id="shopping-summary" aria-labelledby="shopping-summary-title">
+    <h2 id="shopping-summary-title">最后：四道题，四张思维卡</h2>
+    <div class="final-map">
+      <div class="final-card"><span class="num">1</span><b>Preference</b><div class="final-formula">Choice → Reason → Benefit</div></div>
+      <div class="final-card"><span class="num">2</span><b>Priority</b><div class="final-formula">Factor → Trade-off → Value</div></div>
+      <div class="final-card"><span class="num">3</span><b>Past Experience</b><div class="final-formula">Product → Evidence → Satisfaction</div></div>
+      <div class="final-card"><span class="num">4</span><b>Opinion</b><div class="final-formula">Position → Reason → Example</div></div>
+    </div>
+    <div class="core"><strong>真正可以迁移到其他题目的，不是四篇范文，而是四个反应：</strong><br>二选一 → 想自己最看重的收益。<br>问标准 → 定第一优先级，解释取舍。<br>讲购买经历 → 拿具体事实证明为什么满意。<br>问观点 → 说出立场，用一个真实场景把论证讲完整。</div>
+    <details class="practice-box"><summary>30 秒自测：先不看答案，想出四种结构</summary>
+      <p><strong>Q1</strong> — <span lang="en">Choice → Reason → Concrete detail → Personal benefit</span><br>
+      <strong>Q2</strong> — <span lang="en">Main factor → Trade-off → Example → Long-term value</span><br>
+      <strong>Q3</strong> — <span lang="en">Product → Specific evidence → Satisfaction</span><br>
+      <strong>Q4</strong> — <span lang="en">Position → Reason → Concrete example → Conclusion</span></p>
+    </details>
+    <details class="practice-box"><summary>脱离购物话题，再练四句关键问题</summary>
+      <p lang="en"><strong>Preference:</strong> Which option fits my life better, and why?<br>
+      <strong>Priority:</strong> What matters most, and what am I willing to trade off?<br>
+      <strong>Past Experience:</strong> What specific detail proves I felt that way?<br>
+      <strong>Opinion:</strong> What real example shows my argument is reasonable?</p>
+    </details>
+    <p class="micro">课堂练习建议：先点卡片口头讲 15 秒思路，再用自己的例子讲一次，最后才参考 Sample Answer。目标是学会快速组织，而不是逐句背诵。</p>
+  </section>
+</div>
+
+
+<script>
+(function () {
+  'use strict';
+  const root = document.getElementById('shoppingInterviewLab');
+  if (!root) return;
+
+  // Keep button groups keyboard-accessible and mutually exclusive.
+  function choose(groupSelector, chosen) {
+    root.querySelectorAll(groupSelector).forEach(function (button) {
+      const selected = button === chosen;
+      button.classList.toggle('is-selected', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+  }
+  function show(id, title, explanation, chain, phrase) {
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.textContent = '';
+    const heading = document.createElement('span');
+    heading.className = 'builder-label';
+    heading.textContent = title;
+    const p = document.createElement('p');
+    p.textContent = explanation;
+    const logic = document.createElement('div');
+    logic.className = 'logic-line';
+    logic.lang = 'en';
+    logic.textContent = chain;
+    element.append(heading, p, logic);
+    if (phrase) {
+      const example = document.createElement('p');
+      example.lang = 'en';
+      example.textContent = phrase;
+      element.append(example);
+    }
+  }
+
+  // Q1: preference x brainstorming trigger.
+  const q1Data = {
+    online: {
+      convenience: ['Online + Convenience', '线上购物操作简单，可以用手机浏览、比价、下单，随时随地完成。', 'shop on my phone → compare prices → order in a few taps → convenient', 'I can place an order right on my phone in just a few taps.'],
+      time: ['Online + Time', '不用出门或排队，腾出时间学习或陪家人。', 'no travel → no waiting → save time → spend time with family', 'Online shopping saves me time that I can spend with my family.'],
+      choice: ['Online + Choice', '不同品牌的产品可以快速放在一起比较，更容易找到适合自己的选择。', 'more products → easy comparison → informed choice', 'I can compare prices and brands before making a decision.'],
+      experience: ['Online + Experience', '不用应对拥挤商场，购物节奏自己控制，更轻松。', 'shop at my own pace → less pressure → relaxed experience', 'I prefer browsing products at my own pace.']
+    },
+    store: {
+      convenience: ['Physical Stores + Convenience', '如果商店离家很近，急需的物品可以直接买走，不用等配送。', 'nearby store → buy immediately → no delivery wait', 'I can walk into a nearby store and take the product home right away.'],
+      time: ['Physical Stores + Time', '需要确认尺寸或材质时，现场比较和试用有时比线上反复下单、退货更省事。', 'try it once → make a decision → avoid returns', 'Trying something in person can save me the trouble of returning it.'],
+      choice: ['Physical Stores + Choice', '门店里的试用品和店员解释能帮助你缩小选择范围。', 'see products firsthand → ask questions → choose confidently', 'I can compare a few models in person and ask for advice.'],
+      experience: ['Physical Stores + Experience', '可以摸材质、试穿、实际感受，判断更直观。', 'try on → feel the material → check the fit → confidence', 'I like being able to see and touch a product before buying it.']
+    }
+  };
+  let q1Side = 'online', q1Trigger = 'convenience';
+  function renderQ1() { show('shoppingQ1Output', ...q1Data[q1Side][q1Trigger]); }
+  root.querySelectorAll('[data-q1-side]').forEach(function (b) {
+    b.addEventListener('click', function () { q1Side = b.dataset.q1Side; choose('[data-q1-side]',b); renderQ1(); });
+  });
+  root.querySelectorAll('[data-q1-trigger]').forEach(function (b) {
+    b.addEventListener('click', function () { q1Trigger = b.dataset.q1Trigger; choose('[data-q1-trigger]',b); renderQ1(); });
+  });
+
+  // Q2: prioritizing factors and illustrating tradeoffs.
+  const q2Data = {
+    quality: ['Quality → Long-term value', '愿意多花一点钱，换取更可靠的产品和更长的使用寿命。', 'better build quality → longer lifespan → fewer replacements → better value', "I'd rather pay a little more for something that's built to last."],
+    price: ['Price → Stay within budget', '先确定预算，再在预算内找到满足需要的选项；不必为了品牌付溢价。', 'set a budget → compare options → avoid overspending', 'I try to find a product that offers good value without going over my budget.'],
+    brand: ['Brand → Trust', '熟悉的品牌和以往可靠的使用经验，可以降低购买时的不确定感。', 'good past experience → trust → confidence in purchase', "I've had good experiences with this brand, so I know what to expect."],
+    reviews: ['Reviews → Evidence from users', '查看真实用户评论，可以提前了解常见问题，减少买错的风险。', 'read reviews → learn strengths and weaknesses → make informed decision', 'I usually check customer reviews before making a purchase.']
+  };
+  function renderQ2(key) { show('shoppingQ2Output',...q2Data[key]); }
+  root.querySelectorAll('[data-q2-trigger]').forEach(function (b) {
+    b.addEventListener('click', function () { choose('[data-q2-trigger]',b); renderQ2(b.dataset.q2Trigger); });
+  });
+
+  // Q3: separating satisfaction with product from purchase process.
+  const q3Data = {
+    reliability: ['Reliability → 信任的证据', '以前买过的同品牌产品用了很多年，因此对新购买更有信心；这说明品牌信任，不直接证明新产品已经耐用。', 'reliable past experience → trust in brand → confidence in the decision', 'One of my older models is over ten years old and still works perfectly fine.'],
+    features: ['Features → 产品的具体好处', '挑一个亲自使用过的功能，讲它解决了什么问题。只有确实体验过才能这样讲。', 'specific feature → easier task → real daily benefit', 'The larger display makes it easier to read and annotate documents.'],
+    delivery: ['Delivery → 顺畅的购买过程', '配送快、安排清楚、没有额外麻烦，也是“购物体验满意”的有力证据。', 'easy ordering → next-day delivery → hassle-free experience', 'I ordered it from Amazon, and it arrived the very next day.'],
+    value: ['Value → 值不值得', '把花的钱和实际获得的收益联系起来，例如长期使用、使用频率或省下的麻烦。', 'reasonable cost → repeated use → worthwhile purchase', 'I use it regularly, so it feels like money well spent.']
+  };
+  function renderQ3(key) { show('shoppingQ3Output',...q3Data[key]); }
+  root.querySelectorAll('[data-q3-trigger]').forEach(function (b) {
+    b.addEventListener('click', function () { choose('[data-q3-trigger]',b); renderQ3(b.dataset.q3Trigger); });
+  });
+
+  // Q4: thesis/antithesis with grounded scenarios.
+  const q4Data = {
+    disagree: ['Disagree → 线下体验不能完全替代', '衣服需要试穿、看版型、摸材质；线上图片和描述无法完整复制这些体验。承认电商发展，不等于实体店会彻底消失。', 'try on clothes → check the fit → feel the fabric → physical stores still matter', 'That kind of hands-on shopping experience is hard to replicate online.'],
+    agree: ['Agree → 线上购物可能逐步取代部分门店', '如果支持这个强观点，可以强调配送完善、线上选择更多、实体运营成本高，推测未来消费者越来越少依赖传统门店。但要说明这是预测，而不是事实。', 'convenient delivery + wider selection → fewer store visits → declining demand for physical shops', 'As delivery gets faster, more people may feel they have little reason to visit a store.']
+  };
+  function renderQ4(key) { show('shoppingQ4Output',...q4Data[key]); }
+  root.querySelectorAll('[data-q4-side]').forEach(function (b) {
+    b.addEventListener('click', function () { choose('[data-q4-side]',b); renderQ4(b.dataset.q4Side); });
+  });
+
+  // Copy answers without changing the approved text.
+  root.querySelectorAll('[data-copy]').forEach(function (button) {
+    button.addEventListener('click', async function () {
+      const id = button.getAttribute('data-copy');
+      const target = document.getElementById(id);
+      const status = root.querySelector('[data-copy-status="' + id + '"]');
+      if (!target) return;
+      const value = target.textContent.trim();
+      try {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(value);
+        if (status) status.textContent = '已复制 Sample Answer。';
+      } catch (e) {
+        if (status) status.textContent = '浏览器无法自动复制，请手动选中上方范文复制。';
+      }
+    });
+  });
+})();
+</script>
