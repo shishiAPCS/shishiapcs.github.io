@@ -1,0 +1,182 @@
+---
+layout: post
+title: "AP CSA 3.6｜BlueJ 小练习：谁改了 Alex 的地址？"
+date: 2026-10-08
+categories: media
+permalink: /csa-3-6-address-reference-bluej/
+render_with_liquid: false
+---
+
+<!-- Uses the site's globally loaded /assets/css/shishi-study-ui.css.
+     The rules below handle spacing only and inherit the shared theme tokens. -->
+<style>
+  .ref-lab { color: inherit; }
+  .ref-lab .lab-lead { font-size: 1.06rem; line-height: 1.65; }
+  .ref-lab .lab-meta { display: flex; flex-wrap: wrap; gap: .5rem; margin: .85rem 0 1.25rem; }
+  .ref-lab .lab-card { padding: 1rem 1.2rem; margin: 1rem 0; }
+  .ref-lab .lab-card h2 { margin: 0 0 .7rem; font-size: 1.25rem; }
+  .ref-lab .lab-card h3 { margin: .9rem 0 .4rem; font-size: 1.06rem; }
+  .ref-lab .lab-card p { margin: .55rem 0; }
+  .ref-lab .lab-card ol, .ref-lab .lab-card ul { padding-left: 1.45rem; margin: .55rem 0; }
+  .ref-lab .lab-card li { margin: .3rem 0; }
+  .ref-lab .lab-two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .85rem; }
+  .ref-lab .lab-two-col > div { min-width: 0; }
+  .ref-lab pre {
+    overflow-x: auto;
+    padding: .85rem 1rem;
+    margin: .6rem 0;
+    border: 1px solid var(--study-border);
+    border-radius: var(--study-radius-sm);
+    background: var(--study-surface-strong);
+    color: inherit;
+    line-height: 1.5;
+    font-size: .88rem;
+  }
+  .ref-lab pre code { background: none; color: inherit; padding: 0; border: 0; }
+  .ref-lab .lab-diagram { font-size: .84rem; }
+  .ref-lab .lab-prompt { font-weight: 700; }
+  .ref-lab details.study-details { padding: .7rem 1rem; margin: .75rem 0; }
+  .ref-lab details.study-details summary { font-weight: 700; }
+  .ref-lab details.study-details[open] summary { margin-bottom: .55rem; }
+  .ref-lab .lab-note { padding: .7rem .85rem; margin: .8rem 0; border-left: 3px solid var(--study-border-strong); background: var(--study-surface); border-radius: var(--study-radius-sm); }
+  .ref-lab .lab-footer { margin-top: 1.1rem; font-weight: 600; }
+</style>
+
+<div class="study-ui ref-lab">
+  <p class="lab-lead"><strong>Who Changed My Address?</strong> Alex 的地址明明是在创建对象时复制的，为什么后来还是会被别人修改？用 BlueJ 的 <strong>Object Bench</strong> 亲自找出原因。</p>
+  <div class="lab-meta">
+    <span class="study-pill">AP CSA 3.6 · Object References</span>
+    <span class="study-pill">约 15 分钟</span>
+    <span class="study-pill">Predict → Test → Explain → Fix</span>
+  </div>
+
+  <section class="study-card lab-card" aria-labelledby="setup-title">
+    <h2 id="setup-title">0 · 准备两个 Class（3 min）</h2>
+    <p>在 BlueJ 新建项目 <code>ReferenceLab</code>，分别创建 <code>Address</code> 和 <code>Person</code>，复制代码后 <strong>Compile</strong>。</p>
+    <div class="lab-two-col">
+      <div>
+        <h3>Address.java</h3>
+<pre><code>public class Address
+{
+    private String city;
+
+    public Address(String c)
+    {
+        city = c;
+    }
+
+    // Copy constructor
+    public Address(Address other)
+    {
+        city = other.getCity();
+    }
+
+    public String getCity()
+    {
+        return city;
+    }
+
+    public void setCity(String c)
+    {
+        city = c;
+    }
+}</code></pre>
+      </div>
+      <div>
+        <h3>Person.java</h3>
+<pre><code>public class Person
+{
+    private String name;
+    private Address addr;
+
+    public Person(String n, Address a)
+    {
+        name = n;
+        addr = new Address(a);
+    }
+
+    public String getCity()
+    {
+        return addr.getCity();
+    }
+
+    public Address getAddress()
+    {
+        return addr;
+    }
+}</code></pre>
+      </div>
+    </div>
+    <p class="lab-note"><strong>观察重点：</strong>每出现一次 <code>new</code>，就画一个新 object；每出现一次 reference 赋值或返回，就画一条箭头。</p>
+  </section>
+
+  <section class="study-card lab-card" aria-labelledby="exp1-title">
+    <h2 id="exp1-title">1 · Experiment A：改变 home（4 min）</h2>
+    <ol>
+      <li>在 Object Bench 创建 <code>new Address("Chengdu")</code>，命名为 <code>home</code>。</li>
+      <li>创建 <code>new Person("Alex", home)</code>，命名为 <code>alex</code>。</li>
+      <li><strong>先预测：</strong>修改 <code>home</code> 后，Alex 会住在哪里？</li>
+      <li>右键 <code>home</code> → <code>setCity("Shanghai")</code>；再右键 <code>alex</code> → <code>getCity()</code>。</li>
+    </ol>
+    <p class="lab-prompt">Predict: <code>alex.getCity()</code> → Chengdu / Shanghai ?</p>
+    <details class="study-details">
+      <summary>查看结果与 Reference 图</summary>
+      <p><strong>Chengdu.</strong> <code>Person</code> constructor 中的 <code>new Address(a)</code> 创建了独立的地址对象（defensive copy）。</p>
+<pre class="lab-diagram"><code>home      ──► Address #1: Shanghai
+alex.addr ──► Address #2: Chengdu</code></pre>
+    </details>
+  </section>
+
+  <section class="study-card lab-card" aria-labelledby="exp2-title">
+    <h2 id="exp2-title">2 · Experiment B：改变 returned（4 min）</h2>
+    <ol>
+      <li>右键 <code>alex</code> → <code>getAddress()</code>。</li>
+      <li>在返回对象的窗口中点击 <strong>Get</strong>，把它放到 Object Bench，命名为 <code>returned</code>。</li>
+      <li><strong>先预测：</strong>改变 <code>returned</code> 会影响 Alex 吗？</li>
+      <li>右键 <code>returned</code> → <code>setCity("Beijing")</code>；再调用 <code>alex.getCity()</code>。</li>
+    </ol>
+    <p class="lab-prompt">Predict: <code>alex.getCity()</code> → Chengdu / Beijing ?</p>
+    <details class="study-details">
+      <summary>查看结果与 Reference 图</summary>
+      <p><strong>Beijing!</strong> <code>getAddress()</code> 直接 <code>return addr;</code>，所以 <code>returned</code> 与 <code>alex.addr</code> 指向同一个对象（aliasing）。</p>
+<pre class="lab-diagram"><code>alex.addr ──┐
+            ├──► Address #2: Beijing
+returned ───┘</code></pre>
+      <p>即使 <code>addr</code> 是 <code>private</code>，返回其 reference 仍可能允许外部代码修改内部对象。</p>
+    </details>
+  </section>
+
+  <section class="study-card lab-card" aria-labelledby="fix-title">
+    <h2 id="fix-title">3 · Fix it：只改一行（3 min）</h2>
+    <p><strong>任务：</strong>只修改 <code>Person.getAddress()</code> 中的一行，让返回的地址成为独立 object。</p>
+<pre><code>public Address getAddress()
+{
+    return ____________;
+}</code></pre>
+    <p>改完后 <strong>Compile</strong>，重新创建 <code>home</code>、<code>alex</code> 和 <code>returned</code>，再重复 Experiment B。旧 Object Bench 中的对象不要继续使用。</p>
+    <details class="study-details">
+      <summary>查看修复代码</summary>
+<pre><code>public Address getAddress()
+{
+    return new Address(addr);
+}</code></pre>
+      <p>现在修改 <code>returned</code> 不会影响 <code>alex</code>，因为 getter 返回了新的 Address object。</p>
+    </details>
+  </section>
+
+  <section class="study-card lab-card" aria-labelledby="exit-title">
+    <h2 id="exit-title">4 · Exit Ticket（1 min）</h2>
+    <p>不用运行代码，直接预测：</p>
+<pre><code>Address a = new Address("Chengdu");
+Address b = a;
+Address c = new Address(a);
+b.setCity("Tokyo");</code></pre>
+    <p><strong>Questions:</strong> ① 创建了几个 Address objects？② <code>a</code>、<code>b</code>、<code>c</code> 各自的城市是什么？</p>
+    <details class="study-details">
+      <summary>查看答案</summary>
+      <p><strong>2 个 objects。</strong> <code>a</code> 和 <code>b</code> 都是 Tokyo；<code>c</code> 仍然是 Chengdu。</p>
+    </details>
+  </section>
+
+  <p class="lab-footer">Remember: <code>Address b = a;</code> copies a <strong>reference</strong>. <code>new Address(a)</code> creates a new <strong>object</strong>.</p>
+</div>
