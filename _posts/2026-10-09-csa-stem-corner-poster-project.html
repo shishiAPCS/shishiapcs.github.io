@@ -1,0 +1,286 @@
+---
+layout: post
+title: "AP CSA Project｜把 STEM Corner 变成计算机科学展览"
+date: 2026-10-09
+categories: media
+permalink: /apcsa-stem-corner-poster-project/
+render_with_liquid: false
+---
+
+<!--
+  ShiShi Study UI · AP CSA Student Project
+  Uses the globally loaded /assets/css/shishi-study-ui.css.
+  Only page-specific spacing/layout rules are defined below.
+-->
+<style>
+  .poster-project { color: inherit; }
+  .poster-project * { box-sizing: border-box; }
+  .poster-project .poster-lead { font-size: 1.09rem; line-height: 1.75; margin: .65rem 0 1rem; }
+  .poster-project .poster-meta { display: flex; flex-wrap: wrap; gap: .55rem; margin: .9rem 0 1.5rem; }
+  .poster-project .poster-section { padding: 1.15rem 1.25rem; margin: 1.1rem 0; }
+  .poster-project .poster-section h2 { font-size: 1.3rem; margin: 0 0 .65rem; }
+  .poster-project .poster-section h3 { font-size: 1.07rem; margin: .2rem 0 .55rem; }
+  .poster-project .poster-section p { margin: .5rem 0 .8rem; line-height: 1.7; }
+  .poster-project .poster-section ol,
+  .poster-project .poster-section ul { padding-left: 1.4rem; margin: .5rem 0 .8rem; }
+  .poster-project .poster-section li { margin: .45rem 0; line-height: 1.65; }
+  .poster-project .poster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); gap: .8rem; margin: .9rem 0; }
+  .poster-project .poster-tile { padding: 1rem 1.05rem; min-width: 0; }
+  .poster-project .poster-tile p { margin: .35rem 0; font-size: .96rem; }
+  .poster-project .poster-kicker { font-size: .82rem; font-weight: 700; opacity: .72; letter-spacing: .035em; margin-bottom: .25rem; }
+  .poster-project .poster-note { background: var(--study-surface); border-left: 3px solid var(--study-border-strong); border-radius: var(--study-radius-sm); padding: .7rem .9rem; margin: .9rem 0; line-height: 1.7; }
+  .poster-project .poster-sequence { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: .65rem; margin: 1rem 0; }
+  .poster-project .poster-sequence .study-panel { padding: .85rem .95rem; }
+  .poster-project .poster-sequence strong { display: block; margin: .25rem 0; }
+  .poster-project .poster-sequence p { font-size: .94rem; margin: .3rem 0; }
+  .poster-project .poster-table-wrap { overflow-x: auto; margin: .7rem 0 1rem; }
+  .poster-project .poster-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .poster-project .poster-table th, .poster-project .poster-table td { padding: .76rem .6rem; text-align: left; vertical-align: top; }
+  .poster-project .poster-table th:nth-child(2), .poster-project .poster-table td:nth-child(2) { text-align: center; white-space: nowrap; font-weight: 700; }
+  .poster-project .poster-table tfoot td { font-weight: 700; border-top: 2px solid var(--study-border-strong); }
+  .poster-project details.study-details { padding: .75rem .95rem; margin: .8rem 0; }
+  .poster-project details.study-details summary { font-weight: 700; }
+  .poster-project details.study-details[open] summary { margin-bottom: .65rem; }
+  .poster-project .poster-code { overflow-x: auto; white-space: pre-wrap; word-break: break-word; background: var(--study-surface-strong); border: 1px solid var(--study-border); border-radius: var(--study-radius-sm); padding: .95rem; font-size: .9rem; line-height: 1.65; }
+  .poster-project .poster-action { font: inherit; font-weight: 700; color: inherit; background: var(--study-surface-strong); border: 1px solid var(--study-border-strong); padding: .55rem .95rem; border-radius: 999px; cursor: pointer; }
+  .poster-project .poster-action:hover { background: var(--study-surface); }
+  .poster-project .poster-action:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  .poster-project .poster-idea-output { border-left: 3px solid var(--study-border-strong); padding: .5rem .8rem; margin-top: .75rem; min-height: 2.8rem; }
+  .poster-project .poster-check { display: flex; align-items: flex-start; gap: .65rem; line-height: 1.5; margin: .65rem 0; cursor: pointer; }
+  .poster-project .poster-check input { flex: 0 0 auto; width: 1.05rem; height: 1.05rem; margin-top: .22rem; accent-color: currentColor; }
+  .poster-project .poster-fine { font-size: .92rem; opacity: .8; }
+  .poster-project .poster-signoff { font-weight: 700; font-size: 1.08rem; margin: 1.3rem 0; line-height: 1.7; }
+  @media (max-width: 560px) {
+    .poster-project .poster-section { padding: .95rem; }
+    .poster-project .poster-table { font-size: .87rem; }
+    .poster-project .poster-table th, .poster-project .poster-table td { padding: .6rem .35rem; }
+  }
+  @media print {
+    .poster-project .poster-action { display: none; }
+    .poster-project .poster-section, .poster-project .poster-tile { break-inside: avoid; }
+  }
+</style>
+
+<div class="study-ui poster-project">
+  <p class="poster-lead">想象一下：一位从没学过 Java 的同学路过 STEM Corner，突然在你的海报前停下了脚步。<strong>30 秒后，他会记住什么？</strong> 这次，你们来决定计算机科学在走廊里是什么样子。</p>
+
+  <div class="poster-meta" aria-label="项目概况">
+    <span class="study-pill">AP Computer Science A</span>
+    <span class="study-pill">STEM Corner · Hallway Poster</span>
+    <span class="study-pill">100 分项目作业</span>
+    <span class="study-pill">创意自由，标准清晰</span>
+  </div>
+
+  <section class="study-card poster-section" aria-labelledby="mission-title">
+    <h2 id="mission-title">🎯 你的任务：让路过的人也能读懂 CS</h2>
+    <p>为学校 STEM 展示区设计<strong>一张与 Computer Science（计算机科学）有关的海报</strong>。你的作品将有机会真实展示在走廊里，观众不只是 AP CSA 同学，还有可能是完全没学过编程的老师和学生。</p>
+    <p>形式可以是知识图解、漫画、时间线、趣味挑战、人物故事，或你提出的其他好点子。<strong>不规定统一主题，也不要求人人画得像艺术家。</strong></p>
+    <div class="poster-note"><strong>成功标准：</strong>别人愿意停下来 → 看得懂 → 带走一个有价值的 CS 想法。<br><em>Make someone stop, think, and learn something.</em></div>
+    <p class="poster-fine">成绩说明：本海报是<strong>一次 Project 成绩（满分 100）</strong>。本课程的 Project 类别合计占总成绩 <strong>20%</strong>；不是说这一张海报单独占课程总成绩的 20%。</p>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="inspiration-title">
+    <h2 id="inspiration-title">💡 没灵感？从这里开始</h2>
+    <p>以下只是 <strong>idea starters（灵感起点）</strong>，不是规定选题。你可以组合、改造，也可以完全不选它们。</p>
+    <div class="poster-grid">
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">01 · CONCEPT</div>
+        <h3>用一张图解释一个概念</h3>
+        <p>Classes vs. Objects、Java 的 <code>pass by value</code>、两个 references 指向同一个 object 会怎样？</p>
+      </div>
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">02 · CHALLENGE</div>
+        <h3>让观众来解题</h3>
+        <p>Predict the Output、Find the Bug、三选一小挑战。别忘了提供正确答案和简洁解释。</p>
+      </div>
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">03 · STORY</div>
+        <h3>讲一个计算机科学故事</h3>
+        <p>Ada Lovelace、Grace Hopper、一个改变了互联网的想法，或者编程语言背后的故事。</p>
+      </div>
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">04 · EVERYDAY CS</div>
+        <h3>把算法带进日常生活</h3>
+        <p>地图导航为什么会推荐路线？搜索为什么这么快？生活中有哪些看不见的 algorithms？</p>
+      </div>
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">05 · HUMOR</div>
+        <h3>把技术笑点讲明白</h3>
+        <p>Debugging 像破案？程序员最害怕的错误是什么？有趣可以，但不能只有段子、没有知识。</p>
+      </div>
+      <div class="study-panel poster-tile">
+        <div class="poster-kicker">06 · YOUR IDEA</div>
+        <h3>完全不同？更好</h3>
+        <p>漫画、手绘、折叠翻页、视觉谜题……大胆提出方案，只要能安全、清楚地在走廊展示。</p>
+      </div>
+    </div>
+    <details class="study-details">
+      <summary>🎲 灵感卡住了？点开抽一张随机挑战卡</summary>
+      <p>随机建议仅供启发，你可以忽略它，或把它改成自己的想法。</p>
+      <button class="poster-action" id="poster-idea-button" type="button">给我一个灵感 ✨</button>
+      <p class="poster-idea-output" id="poster-idea-output" aria-live="polite">点击按钮，看看今天的灵感是什么。</p>
+    </details>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="requirements-title">
+    <h2 id="requirements-title">📌 创作自由，但有 5 条底线</h2>
+    <ol>
+      <li><strong>真的与 CS 有关：</strong>不能只是科技风图案。海报必须传达至少一个具体、正确的计算机科学知识、思路或故事。</li>
+      <li><strong>内容准确：</strong>出现代码，要检查逻辑与运行结果；出现事实与历史信息，要查证。不能为了搞笑把错误知识当成事实。</li>
+      <li><strong>普通观众能看懂：</strong>有清楚的标题、主要信息和合理的阅读顺序。想象观众站在约 1–2 米外：第一眼知道这张海报讲什么吗？</li>
+      <li><strong>适合公开展示：</strong>内容尊重他人、符合校园环境。借用文字或图片要注明来源；使用 AI 辅助可以，但必须自己核查并说明用途，遵守学校相关规定。</li>
+      <li><strong>先获得批准再制作：</strong>老师要先确认选题、作品形式、尺寸和安装方案。<strong>请不要在批准前自行付费打印。</strong></li>
+    </ol>
+    <div class="poster-note"><strong>小提醒：</strong>QR code、翻页机关、互动设计都可以提案，但<strong>不强制</strong>。不能扫码时，海报本身也应该让人学到东西。</div>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">🛠️ 从想法到上墙：4 步完成</h2>
+    <div class="poster-sequence" aria-label="项目流程">
+      <div class="study-panel">
+        <span class="study-pill">STEP 1</span>
+        <strong>Idea &amp; Proposal</strong>
+        <p>选定主题，写短提案，并画一个粗略布局草图。</p>
+      </div>
+      <div class="study-panel">
+        <span class="study-pill">STEP 2</span>
+        <strong>Get Approval</strong>
+        <p>和老师确认方向，以及你自己的 10 分挑战目标。</p>
+      </div>
+      <div class="study-panel">
+        <span class="study-pill">STEP 3</span>
+        <strong>Create &amp; Revise</strong>
+        <p>制作初稿，检查事实、代码、字数和远距离可读性。</p>
+      </div>
+      <div class="study-panel">
+        <span class="study-pill">STEP 4</span>
+        <strong>Submit &amp; Display</strong>
+        <p>提交定稿和简短说明，老师确认后安排实际展示。</p>
+      </div>
+    </div>
+    <p><strong>完成形式：</strong>默认每人独立完成。如果想两人合作，需要在提案中说明各自分工，并事先获得批准；合作作品须分别提交个人贡献说明。</p>
+    <p><strong>最后交什么：</strong>① 已批准的 Proposal；② 最终海报（电子作品优先提交 PDF，同时保留可编辑源文件；手工作品提交清晰照片并按老师要求交实物）；③ 使用的资料/图片来源及 AI 工具说明（如有）；④ 2–3 句 Reflection：你改进了什么，为什么？</p>
+    <p class="poster-fine">提案、初稿、定稿的具体截止时间和提交入口，以课堂通知为准；海报大小与布展方式在 Proposal 获批后确认。</p>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="proposal-title">
+    <h2 id="proposal-title">📝 先交 Proposal，不是直接开画</h2>
+    <p>提案不用写成长篇论文。用自己的话，把下面几个问题说清楚即可。<strong>重点不是你已经做完了什么，而是你打算让别人看懂什么。</strong></p>
+    <pre class="poster-code" id="poster-proposal-template">STEM Corner Poster · Proposal
+
+Name / 姓名：
+Working Title / 暂定标题：
+
+1. 我的主题是什么？它与 Computer Science 有什么关系？
+
+2. 我的观众是谁？他/她看完后应该记住哪一个想法？
+
+3. 我打算如何呈现？（图解、漫画、互动题、故事……）
+
+4. 我的布局草图是什么样的？（另附手绘草图或示意图）
+
+5. 我的 Student-defined Challenge（自选 10 分目标）是什么？
+   请写一个能观察或检查是否完成的具体目标。
+
+6. 我预计会参考哪些资料或使用哪些工具？
+
+如果申请两人合作：成员名单及各自分工：</pre>
+    <button class="poster-action" id="poster-copy-button" type="button">复制 Proposal 模板</button>
+    <span id="poster-copy-status" role="status" aria-live="polite" class="poster-fine"></span>
+    <details class="study-details">
+      <summary>查看一个合格的 Proposal 示例</summary>
+      <p><strong>标题：</strong>Two Names, One Object</p>
+      <p><strong>主题：</strong>解释两个 Java object references 为什么可能指向同一个 object。</p>
+      <p><strong>观众收获：</strong>即使没学过 Java，也能通过一张箭头示意图理解“两个变量不一定代表两个对象”。</p>
+      <p><strong>形式：</strong>上半部分画两个遥控器控制同一台机器人；下半部分给出简短 Java 代码和预测结果。</p>
+      <p><strong>自选挑战：</strong>设计一道有答案的 Predict the Output 小题，并请两位没学过 Java 的同学试读，根据反馈至少修改一次。</p>
+      <p><strong>资料：</strong>课堂笔记、BlueJ 自己测试的代码截图。</p>
+    </details>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="rubric-title">
+    <h2 id="rubric-title">📊 Rubric：100 分怎么算？</h2>
+    <p>老师会提前公开标准，但你仍有创作自由。评分不是“谁画得最漂亮谁就赢”。<strong>理解、表达和完成质量</strong>更重要。</p>
+    <div class="poster-table-wrap">
+      <table class="poster-table">
+        <thead>
+          <tr><th scope="col">评分项目</th><th scope="col">分值</th><th scope="col">高质量作品的表现</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>CS Accuracy</strong><br>知识准确性</td><td>30</td><td>概念和术语正确；例子、代码或事实经得起检查；选题有实质性的 CS 内容。</td></tr>
+          <tr><td><strong>Communication</strong><br>表达与讲解</td><td>20</td><td>标题抓住重点；不懂编程的观众也能抓住核心信息；内容简洁、解释清楚。</td></tr>
+          <tr><td><strong>Visual Organization</strong><br>视觉组织</td><td>10</td><td>排版有层次；字体、图形与留白帮助理解；从走廊里看也容易阅读。</td></tr>
+          <tr><td><strong>Planning &amp; Execution</strong><br>计划与执行</td><td>10</td><td>按要求提交提案与定稿；回应反馈；资料标注清楚；作品完成度高。</td></tr>
+          <tr><td><strong>Creativity &amp; Impact</strong><br>创意与吸引力</td><td>20</td><td>呈现方式有自己的想法；能够吸引观众停留；创意确实帮助观众理解内容。</td></tr>
+          <tr><td><strong>Student-defined Challenge</strong><br>自定挑战目标</td><td>10</td><td>提案中提出、并获得老师批准的具体目标被认真实现，有可检查的证据。</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>总分</td><td>100</td><td>准确 + 清楚 + 有想法 + 做到位</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <details class="study-details">
+      <summary>什么样的“自定挑战目标”才算好？</summary>
+      <p><strong>太模糊：</strong>“我要让我的海报很好看。”——无法客观检查，所有人都可以这么说。</p>
+      <p><strong>更具体：</strong>“我要制作一张带有正确解答的 Java 找 Bug 挑战海报，并邀请两位非 CSA 同学试读，根据他们的反馈完成一次修改。”</p>
+      <p>你可以挑战自己：设计能被理解的互动题、做出清楚的对比图、采访目标观众并修改作品……<strong>难度和可行性由老师在制作前审核</strong>，不能在交稿后临时修改标准。</p>
+    </details>
+  </section>
+
+  <section class="study-card poster-section" aria-labelledby="check-title">
+    <h2 id="check-title">✅ 提交前，自己做一次 Debugging</h2>
+    <p>你的海报不需要“完美”，但至少应该通过下面的自查。勾选只是方便你检查，<strong>不会自动提交作业</strong>。</p>
+    <label class="poster-check"><input type="checkbox"> <span>我能用一句话说清：观众看完会学到什么。</span></label>
+    <label class="poster-check"><input type="checkbox"> <span>我检查了技术内容、示例代码或历史事实，没有明显错误。</span></label>
+    <label class="poster-check"><input type="checkbox"> <span>我试着从远一点的地方看海报，标题和关键信息依然清楚。</span></label>
+    <label class="poster-check"><input type="checkbox"> <span>我列出了借用内容的来源，并说明使用的 AI 工具（如有）。</span></label>
+    <label class="poster-check"><input type="checkbox"> <span>我完成了老师批准的 Student-defined Challenge，并能证明这一点。</span></label>
+    <label class="poster-check"><input type="checkbox"> <span>我准备好了所有需要提交的文件和简短 Reflection。</span></label>
+  </section>
+
+  <p class="poster-signoff">最后记住：<br>不是把一张纸填满，而是让一个好想法被更多人看见。<br><em>Don't just decorate the wall. Teach the hallway something.</em></p>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var ideaButton = document.getElementById('poster-idea-button');
+  var ideaOutput = document.getElementById('poster-idea-output');
+  var ideas = [
+    '把一个 Java 常见误区画成四格漫画：看完的人能纠正哪一个错误？',
+    '做一个 “Predict the Output” 小挑战，答案和解释藏在翻页机关里。',
+    '用日常生活的例子解释 algorithm，并告诉读者这个比喻哪里不完全准确。',
+    '给 debugging 画一张侦探案件板：线索、Bug、修复结果分别是什么？',
+    '用箭头和少量代码解释两个 references 如何指向同一个 object。',
+    '做一条时间线，介绍一位计算机科学家和一个改变世界的想法。',
+    '设计一个 “Which one is faster?” 的搜索算法比较图。',
+    '将“代码是怎么变成屏幕上的结果的？”变成适合非 CS 学生阅读的视觉故事。'
+  ];
+  var lastIdea = -1;
+  if (ideaButton && ideaOutput) {
+    ideaButton.addEventListener('click', function () {
+      var next = Math.floor(Math.random() * ideas.length);
+      if (ideas.length > 1 && next === lastIdea) next = (next + 1) % ideas.length;
+      lastIdea = next;
+      ideaOutput.textContent = ideas[next];
+    });
+  }
+
+  var copyButton = document.getElementById('poster-copy-button');
+  var template = document.getElementById('poster-proposal-template');
+  var copyStatus = document.getElementById('poster-copy-status');
+  if (copyButton && template && copyStatus) {
+    copyButton.addEventListener('click', function () {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+        copyStatus.textContent = '请手动选择上方文字复制。';
+        return;
+      }
+      navigator.clipboard.writeText(template.textContent).then(function () {
+        copyStatus.textContent = ' 已复制。可以粘贴到文档里填写。';
+      }).catch(function () {
+        copyStatus.textContent = ' 复制未成功，请手动选择上方文字。';
+      });
+    });
+  }
+})();
+</script>
