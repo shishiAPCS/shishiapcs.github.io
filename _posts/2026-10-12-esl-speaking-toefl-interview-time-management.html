@@ -1,0 +1,309 @@
+---
+title: "新托福口语 Time Management：四道 Interview 题怎么打开思路？"
+layout: post
+categories: media
+render_with_liquid: false
+---
+
+<link rel="stylesheet" href="/assets/css/shishi-study-ui.css">
+
+<style>
+/* Time Management — Jekyll article layout only. All colors/shape come from ShiShi Study UI tokens. */
+.time-interview-lab {
+  max-width: 980px; margin: 0 auto; color: inherit; line-height: 1.72; font-size: 1.01rem;
+  --ti-surface: var(--study-surface);
+  --ti-surface-strong: var(--study-surface-strong);
+  --ti-border: var(--study-border);
+  --ti-border-strong: var(--study-border-strong);
+  --ti-shadow: var(--study-shadow);
+  --ti-radius-lg: var(--study-radius-lg);
+  --ti-radius-md: var(--study-radius-md);
+  --ti-radius-sm: var(--study-radius-sm);
+}
+.time-interview-lab * { box-sizing: border-box; }
+.time-interview-lab h2, .time-interview-lab h3, .time-interview-lab h4 { color: inherit; line-height: 1.33; }
+.time-interview-lab h2 { margin: .3rem 0 1.05rem; }
+.time-interview-lab h3 { margin: 0 0 .6rem; font-size: 1.15rem; }
+.time-interview-lab p { overflow-wrap: anywhere; }
+.time-interview-lab button { font: inherit; color: inherit; }
+.time-interview-lab section { scroll-margin-top: 1.5rem; }
+.time-interview-lab .intro { font-size: 1.06rem; }
+.time-interview-lab .minor { font-size:.89rem; opacity:.72; line-height:1.55; }
+.time-interview-lab .deck { margin:.45rem 0 1.1rem; }
+.time-interview-lab .lesson-core, .time-interview-lab .analysis-box, .time-interview-lab .sample-box,
+.time-interview-lab .vocab-box, .time-interview-lab .builder-output, .time-interview-lab .final-card,
+.time-interview-lab .practice-box, .time-interview-lab .question-card, .time-interview-lab .teaching-box {
+ border:1px solid var(--ti-border); border-radius:var(--ti-radius-lg); background:var(--ti-surface);
+}
+.time-interview-lab .lesson-core { padding:1rem 1.15rem; margin:1.1rem 0 1.45rem; border-left:4px solid currentColor; border-radius:0 var(--ti-radius-lg) var(--ti-radius-lg) 0; }
+.time-interview-lab .question-map, .time-interview-lab .final-map { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1.15rem 0; }
+.time-interview-lab .map-card {
+ color:inherit; text-decoration:none; display:block; min-height:128px; padding:.88rem;
+ border:1px solid var(--ti-border); border-radius:var(--ti-radius-lg); background:var(--ti-surface);
+ transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.time-interview-lab .map-card:hover { transform:translateY(-2px); border-color:var(--ti-border-strong); background:var(--ti-surface-strong); box-shadow:var(--ti-shadow); text-decoration:none; }
+.time-interview-lab .map-card:focus-visible, .time-interview-lab button:focus-visible, .time-interview-lab summary:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+.time-interview-lab .map-q { display:block; opacity:.65; letter-spacing:.07em; font-weight:800; font-size:.78rem; }
+.time-interview-lab .map-type { display:block; margin:.2rem 0 .38rem; font-weight:850; font-size:1.02rem; }
+.time-interview-lab .map-formula { display:block; opacity:.76; font-size:.86rem; line-height:1.45; }
+.time-interview-lab .section-divider { border:0; border-top:1px solid var(--ti-border); margin:2.1rem 0; }
+.time-interview-lab .eyebrow { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; margin-bottom:.7rem; }
+.time-interview-lab .tag { border:1px solid var(--ti-border); border-radius:999px; font-size:.78rem; font-weight:850; padding:.16rem .55rem; }
+.time-interview-lab .question-card { padding:1rem 1.08rem; border-left:4px solid currentColor; border-radius:0 var(--ti-radius-lg) var(--ti-radius-lg) 0; margin:.8rem 0 1rem; font-size:1.05rem; font-weight:640; }
+.time-interview-lab .formula { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; margin:1.05rem 0; }
+.time-interview-lab .formula-step { display:inline-block; padding:.35rem .6rem; font-weight:780; border:1px solid var(--ti-border); border-radius:var(--ti-radius-sm); background:var(--ti-surface); }
+.time-interview-lab .arrow { opacity:.55; font-weight:900; }
+.time-interview-lab .analysis-box,.time-interview-lab .sample-box,.time-interview-lab .vocab-box,.time-interview-lab .teaching-box { margin:1rem 0; padding:1.1rem 1.15rem; }
+.time-interview-lab .analysis-box p { margin:.6rem 0; }
+.time-interview-lab .route { margin:.85rem 0; border-left:3px solid currentColor; padding:.75rem .85rem; font-weight:750; }
+.time-interview-lab .caution { margin:.85rem 0 0; padding:.78rem .88rem; border:1px dashed var(--ti-border-strong); border-radius:var(--ti-radius-md); }
+.time-interview-lab .builder { margin:1.35rem 0; }
+.time-interview-lab .trigger-instruction { margin:.3rem 0 .75rem; }
+.time-interview-lab .idea-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.58rem; }
+.time-interview-lab .idea-grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.time-interview-lab .idea-card { min-width:0; min-height:92px; text-align:left; cursor:pointer; border:1px solid var(--ti-border); border-radius:var(--ti-radius-md); background:var(--ti-surface); padding:.73rem .75rem; }
+.time-interview-lab .idea-card b { display:block; margin:0 0 .24rem; font-weight:810; }
+.time-interview-lab .idea-card span { display:block; font-size:.84rem; opacity:.72; line-height:1.4; }
+.time-interview-lab .idea-card:hover { border-color:var(--ti-border-strong); background:var(--ti-surface-strong); }
+.time-interview-lab .idea-card[aria-pressed='true'] { font-weight:800; border-color:currentColor; background:var(--ti-surface-strong); outline:1px solid currentColor; outline-offset:-2px; }
+.time-interview-lab .builder-output { margin-top:.75rem; padding:1rem 1.06rem; }
+.time-interview-lab .builder-output p { margin:.38rem 0; }
+.time-interview-lab .builder-label { font-weight:850; display:block; }
+.time-interview-lab .logic-line { font-weight:750; opacity:.87; }
+.time-interview-lab .spoken-line { margin-top:.6rem !important; padding-top:.5rem; border-top:1px solid var(--ti-border); }
+.time-interview-lab .time-strip { display:grid; grid-template-columns: 1fr 2.5fr 1fr; gap:.4rem; margin:.75rem 0 .9rem; }
+.time-interview-lab .time-strip div { border:1px solid var(--ti-border); border-radius:var(--ti-radius-sm); padding:.45rem .3rem; text-align:center; font-size:.86rem; background:var(--ti-surface-strong); }
+.time-interview-lab .time-strip strong { display:block; font-size:.98rem; }
+.time-interview-lab .sample-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem; margin-bottom:.6rem; }
+.time-interview-lab .sample-header h3 { margin:0; }
+.time-interview-lab .sample-answer { font-size:1.035rem; line-height:1.85; margin:.25rem 0; }
+.time-interview-lab .copy-btn { border:1px solid var(--ti-border); border-radius:var(--ti-radius-sm); padding:.35rem .74rem; background:var(--ti-surface); cursor:pointer; font-size:.85rem; min-height:38px; }
+.time-interview-lab .copy-btn:hover { background:var(--ti-surface-strong); }
+.time-interview-lab .copy-status { min-height:1.1em; margin:.36rem 0 0; font-size:.85rem; opacity:.77; }
+.time-interview-lab .vocab-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.32rem .95rem; margin:.25rem 0; padding-left:1.25rem; }
+.time-interview-lab .vocab-list li { padding:0 0 .1rem; break-inside:avoid; }
+.time-interview-lab .vocab-list strong { font-weight:810; }
+.time-interview-lab details { margin:1.05rem 0; border:1px solid var(--ti-border); border-radius:var(--ti-radius-md); padding:.77rem .9rem; }
+.time-interview-lab summary { cursor:pointer; font-weight:780; }
+.time-interview-lab details p { margin:.6rem 0 .2rem; }
+.time-interview-lab .top-link { display:inline-block; margin:.35rem 0; font-size:.88rem; }
+.time-interview-lab .final-card { padding:.83rem; }
+.time-interview-lab .final-card .num { display:inline-grid; place-items:center; width:1.8rem; height:1.8rem; border:1px solid var(--ti-border-strong); border-radius:50%; margin-right:.3rem; font-weight:900; }
+.time-interview-lab .final-card .final-formula { display:block; margin-top:.65rem; opacity:.76; font-size:.89rem; }
+.time-interview-lab .correction-table { width:100%; border-collapse:collapse; font-size:.94rem; }
+.time-interview-lab .correction-table th,.time-interview-lab .correction-table td { padding:.58rem .65rem; border-bottom:1px solid var(--ti-border); text-align:left; vertical-align:top; }
+.time-interview-lab .correction-table th { font-weight:850; }
+.time-interview-lab .correction-table tr:last-child td { border-bottom:0; }
+.time-interview-lab .table-wrap { overflow-x:auto; }
+.time-interview-lab .practice-box { margin-top:1rem; padding:1.05rem 1.15rem; }
+@media (max-width:760px) {
+ .time-interview-lab .question-map, .time-interview-lab .final-map { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .time-interview-lab .idea-grid, .time-interview-lab .idea-grid.three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .time-interview-lab .map-card { min-height:106px; }
+ .time-interview-lab .vocab-list { grid-template-columns:1fr; }
+}
+@media (max-width:410px) {
+ .time-interview-lab .question-map,.time-interview-lab .final-map { gap:.45rem; }
+ .time-interview-lab .map-card { padding:.7rem; }
+ .time-interview-lab .map-type { font-size:.93rem; }
+ .time-interview-lab .question-card { padding:.85rem; }
+ .time-interview-lab .analysis-box,.time-interview-lab .sample-box,.time-interview-lab .vocab-box { padding:.85rem; }
+ .time-interview-lab .time-strip { gap:.25rem; }
+}
+@media (prefers-reduced-motion:reduce) { .time-interview-lab .map-card { transition:none; } }
+</style>
+<div class="time-interview-lab" id="timeInterviewLab">
+  <p class="intro">这一组 <strong>Time Management</strong> Interview 题讨论工具、日常安排、多任务冲突，以及效率与压力。看似同一个主题，其实要求四种不同的思考：<strong>说明方法、整合双问、讲述解决问题的经历、权衡观点</strong>。</p>
+  <div class="lesson-core"><strong>本课核心：</strong>在 45 秒左右的口述中，把<strong>具体动作和结果</strong>说出来，而不是只堆砌抽象的“高效”“自律”。尤其 Q2，记住<strong>双问题要整合，不要拆成两篇独立答案</strong>。</div>
+  <div class="question-map" id="time-map" aria-label="Jump to four interview questions"><a class="map-card" href="#time-q1"><span class="map-q">QUESTION 1</span><span class="map-type" lang="en">Tools + Techniques</span><span class="map-formula" lang="en">Tool → Technique → Example → Benefit</span></a>
+<a class="map-card" href="#time-q2"><span class="map-q">QUESTION 2</span><span class="map-type" lang="en">Routine + Strategy</span><span class="map-formula" lang="en">Routine → Strategy → Result</span></a>
+<a class="map-card" href="#time-q3"><span class="map-q">QUESTION 3</span><span class="map-type" lang="en">Past Challenge</span><span class="map-formula" lang="en">Situation → Action → Result</span></a>
+<a class="map-card" href="#time-q4"><span class="map-q">QUESTION 4</span><span class="map-type" lang="en">Opinion + Balance</span><span class="map-formula" lang="en">Position → Reason → Concession → Conclusion</span></a></div>
+  <p class="minor">使用方法：点击上方题型卡跳转；每题先读中文分析，再点不同思路卡生成逻辑链，最后练习英文 Sample Answer。互动卡中的其他方向用于迁移训练，不代表你必须背下所有版本。</p>
+  <hr class="section-divider"/>
+  <section id="time-q1" aria-labelledby="time-q1-title">
+    <div class="eyebrow"><span class="tag">Q1 · TOOLS + TECHNIQUES</span><span class="minor">工具 + 例子</span></div>
+    <h2 id="time-q1-title">Question 1：工具与方法：别只报工具名称，要说清楚怎么用</h2>
+    <div class="question-card" lang="en">Thank you for agreeing to participate. I&#x27;d like to ask you some questions about your time management habits. First, do you use any tools or techniques to manage your time effectively? Please give some examples.</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Tool</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Technique</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Example</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Benefit</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+    <p>这是 <strong>Method + Example</strong> 题。题目不是只问“用不用工具”，还要求举例。可以先用一句话确定工具，再补一个<strong>操作方法</strong>，最后用具体事务证明它真的能帮你安排时间。</p>
+<p>原始回答里的 <strong>Apple Calendar + 按重要性、紧急程度排序</strong> 是一组很好的搭配。不过，学生如果只说“我会标日程、我会分轻重缓急”，还是偏抽象。再给出一个真实感强的小例子，如<strong>工作截止日期和家庭预约</strong>，回答就完整了。</p><div class="route" lang="en">Apple Calendar → note upcoming commitments → rank by urgency and importance → avoid missing deadlines</div>
+    <div class="caution"><strong>常见问题：</strong>题干出现 <strong>“Please give some examples”</strong>，就必须出现具体事项。不要把“我会先做重要的事”误当作例子。</div></div>
+    <div class="builder" data-builder="q1"><h3>点击一个管理工具，观察“工具 → 方法 → 具体例子”</h3><p class="minor trigger-instruction">范文使用 Calendar + Priorities；其他卡片是可迁移的练习思路。</p>
+     
+     <div class="idea-grid" role="group" aria-label="Q1 brainstorm choices"><button type="button" class="idea-card" data-key="calendar" aria-pressed="true"><b lang="en">Calendar</b><span>记住什么事要做</span></button>
+<button type="button" class="idea-card" data-key="list" aria-pressed="false"><b lang="en">To-do list</b><span>理清今天的任务</span></button>
+<button type="button" class="idea-card" data-key="priority" aria-pressed="false"><b lang="en">Priorities</b><span>决定先做哪件</span></button>
+<button type="button" class="idea-card" data-key="blocks" aria-pressed="false"><b lang="en">Time blocks</b><span>给任务预留时间</span></button></div>
+     <div class="builder-output" aria-live="polite"><strong class="builder-label">Calendar → 如何使用</strong><p class="builder-description">把工作任务和家庭事项都记到日历里，再检查哪些事情即将发生。</p><p class="logic-line" lang="en">events → reminders → fewer forgotten commitments</p><p class="spoken-line" lang="en">I add deadlines and family appointments to my calendar so nothing slips my mind.</p></div>
+    </div>
+    <div class="sample-box"><div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="time-q1-answer" aria-label="Copy Q1 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="time-q1-answer" lang="en">Yes, I do. I use Apple Calendar to keep track of important events and deadlines, so I don&#x27;t forget what&#x27;s coming up. I also prioritize my tasks based on how urgent and important they are. For example, if I have a work deadline and a family appointment on the same day, I put both on my calendar and make sure I deal with the more urgent task first. This helps me stay organized and makes my daily routine a lot easier to manage.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list"><li><strong lang="en">keep track of</strong> — 记录并随时掌握</li>
+<li><strong lang="en">important events and deadlines</strong> — 重要事项与截止日期</li>
+<li><strong lang="en">what&#x27;s coming up</strong> — 接下来有什么安排</li>
+<li><strong lang="en">prioritize my tasks</strong> — 为任务排序</li>
+<li><strong lang="en">based on urgency and importance</strong> — 按照紧急性和重要性</li>
+<li><strong lang="en">a family appointment</strong> — 家庭预约事项</li>
+<li><strong lang="en">deal with the more urgent task</strong> — 先处理更紧急的任务</li>
+<li><strong lang="en">stay organized</strong> — 保持做事有条理</li></ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“你会用哪些方法准备考试？”也能用 Tool → Technique → Example → Benefit；只需把日历改成错题本、复习计划或提醒事项。</p></details>
+    <a class="top-link" href="#time-map">↑ 返回四题导航</a>
+  </section><hr class="section-divider"/><section id="time-q2" aria-labelledby="time-q2-title">
+    <div class="eyebrow"><span class="tag">Q2 · ROUTINE + STRATEGY</span><span class="minor">日常 + 方法</span></div>
+    <h2 id="time-q2-title">Question 2：45 秒双问题：把时间管理嵌入一天的时间线</h2>
+    <div class="question-card" lang="en">Thank you. Can you describe a typical day&#x27;s events for you and how you organize your time?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Routine</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Strategy</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Result</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+    <p>这题是本组最值得训练的一题，因为它同时问<strong>典型一天做什么</strong>和<strong>怎样安排时间</strong>。口述第二版已经完整覆盖了早上、工作和晚上，但遗漏了“如何组织时间”；第一版则只讲到早上就结束。两次尝试刚好说明：<strong>两问不能拆开各讲一半，更不能漏掉其中一问。</strong></p>
+<p>更高效的解决办法是：用<strong>早上 → 工作日 → 晚上</strong>建立时间线，把<strong>查日历、排优先级</strong>放进工作日的描述中。最后一句说明规划的好处，两个问题就自然连在一起。</p><div class="route" lang="en">Morning (routine) → Workday (tasks + priorities) → Evening (family + benefit)</div>
+    <div class="caution"><strong>常见问题：</strong>不要把 45 秒全部用来罗列起床、洗漱、吃饭、通勤，也不要只说“我教课、备课”而忘了 <strong>how you organize your time</strong>。</div></div>
+    <div class="builder" data-builder="q2"><h3>点击时间段：一边描述生活，一边回答管理方法</h3><p class="minor trigger-instruction">建议按 10 秒 / 25 秒 / 10 秒分配内容（并非硬性计时）。工作日部分最关键。</p>
+     <div class="time-strip" aria-label="45-second suggested allocation"><div><strong>10s</strong>Morning</div><div><strong>25s</strong>Workday + Strategy</div><div><strong>10s</strong>Evening</div></div>
+     <div class="idea-grid three" role="group" aria-label="Q2 brainstorm choices"><button type="button" class="idea-card" data-key="morning" aria-pressed="false"><b lang="en">Morning</b><span>10 秒：迅速交代背景</span></button>
+<button type="button" class="idea-card" data-key="work" aria-pressed="true"><b lang="en">Workday</b><span>25 秒：活动 + 安排</span></button>
+<button type="button" class="idea-card" data-key="evening" aria-pressed="false"><b lang="en">Evening</b><span>10 秒：收尾 + 收益</span></button></div>
+     <div class="builder-output" aria-live="polite"><strong class="builder-label">Workday → 重点展开</strong><p class="builder-description">把教课、备课和行政事务简洁概括，再嵌入每天如何安排优先级。</p><p class="logic-line" lang="en">teach / plan lessons → check calendar → prioritize urgent tasks</p><p class="spoken-line" lang="en">I teach AP Computer Science and ESL, and I check my calendar to deal with urgent tasks first.</p></div>
+    </div>
+    <div class="sample-box"><div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="time-q2-answer" aria-label="Copy Q2 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="time-q2-answer" lang="en">On a typical weekday, I get up at around six thirty and leave for work around eight. During the day, I teach classes, from AP Computer Science to ESL, and I also handle paperwork and lesson planning. To stay organized, I check my calendar and deal with the most urgent or important tasks first. I usually finish work around five. In the evening, I watch movies with my wife or play games with my kids. Planning ahead helps me get things done at work and enjoy more family time afterward.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list"><li><strong lang="en">on a typical weekday</strong> — 在一个普通工作日</li>
+<li><strong lang="en">leave for work</strong> — 出门上班</li>
+<li><strong lang="en">handle paperwork</strong> — 处理文书／行政工作</li>
+<li><strong lang="en">lesson planning</strong> — 备课</li>
+<li><strong lang="en">check my calendar</strong> — 查看日历</li>
+<li><strong lang="en">deal with ... first</strong> — 优先处理……</li>
+<li><strong lang="en">finish work around five</strong> — 大约五点下班</li>
+<li><strong lang="en">planning ahead</strong> — 提前规划</li>
+<li><strong lang="en">enjoy more family time</strong> — 有更多时间陪伴家人</li></ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“你通常如何度过周末，并确保学习任务完成？”仍然可以用 Routine → Strategy → Result：先交代一天的主要活动，再把学习安排嵌入时间线。</p></details>
+    <a class="top-link" href="#time-map">↑ 返回四题导航</a>
+  </section><hr class="section-divider"/><section id="time-q3" aria-labelledby="time-q3-title">
+    <div class="eyebrow"><span class="tag">Q3 · PAST CHALLENGE</span><span class="minor">冲突 + 解决</span></div>
+    <h2 id="time-q3-title">Question 3：多任务经历：只讲一个冲突、一个办法、一个结果</h2>
+    <div class="question-card" lang="en">Interesting. Tell me about a time when you had to manage multiple tasks or responsibilities at once. How did you handle it?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Situation</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Action</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Result</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+    <p>这是一道 <strong>Past Experience / Problem-solving</strong> 题。最重要的不是展示你做了多少事，而是讲清楚<strong>两件事为什么冲突、你采取了什么实际行动、最后结果如何</strong>。</p>
+<p>原始回答中的家庭经历很适合口语：一边要照看孩子，一边有工作截止日期。安排孩子看视频、利用短暂的安静时间完成紧急工作，简单但真实。最后承认 <strong>“It wasn't an ideal solution, but it worked.”</strong> 反而让故事更可信。</p><div class="route" lang="en">work deadline + childcare → competing demands → short-term solution → work completed</div>
+    <div class="caution"><strong>常见问题：</strong>不要把这一题说成抽象观点，如 “Multitasking is important”。题干的 <strong>“Tell me about a time”</strong> 明确要求一段过去的具体经历。</div></div>
+    <div class="builder" data-builder="q3"><h3>换一个冲突情境，套用 Situation → Action → Result</h3><p class="minor trigger-instruction">范文保留“工作截止日期 + 照顾孩子”的真实生活情境。</p>
+     
+     <div class="idea-grid" role="group" aria-label="Q3 brainstorm choices"><button type="button" class="idea-card" data-key="family" aria-pressed="true"><b lang="en">Work + Kids</b><span>既要工作又要带娃</span></button>
+<button type="button" class="idea-card" data-key="deadlines" aria-pressed="false"><b lang="en">Two Deadlines</b><span>两份作业同时截止</span></button>
+<button type="button" class="idea-card" data-key="project" aria-pressed="false"><b lang="en">Group Project</b><span>组员任务与个人任务</span></button>
+<button type="button" class="idea-card" data-key="exams" aria-pressed="false"><b lang="en">Exams + Activities</b><span>考试与课外活动撞期</span></button></div>
+     <div class="builder-output" aria-live="polite"><strong class="builder-label">Work + Kids → 真实冲突</strong><p class="builder-description">孩子需要关注，但工作必须按时完成；用短时间安抚孩子，优先完成最急的工作。</p><p class="logic-line" lang="en">deadline + children → create a short quiet window → finish urgent work</p><p class="spoken-line" lang="en">I put on a video for my kids and used that quiet time to finish the urgent part of my work.</p></div>
+    </div>
+    <div class="sample-box"><div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="time-q3-answer" aria-label="Copy Q3 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="time-q3-answer" lang="en">There was one time when I had an important deadline at work, but I also needed to take care of my kids at home. It was difficult because I had to concentrate on my computer while they kept asking for my attention. So I put on a video for them and used that quiet time to get my work done. It wasn&#x27;t an ideal solution, since I don&#x27;t want them watching too much TV, but it worked in that situation. I managed to finish my work while still looking after my kids.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list"><li><strong lang="en">have an important deadline</strong> — 有一个重要截止日期</li>
+<li><strong lang="en">take care of my kids</strong> — 照看孩子</li>
+<li><strong lang="en">concentrate on my work</strong> — 专心工作</li>
+<li><strong lang="en">keep asking for my attention</strong> — 不断需要我的关注</li>
+<li><strong lang="en">put on a video</strong> — 播放一段视频</li>
+<li><strong lang="en">use that quiet time to...</strong> — 利用那段安静时间……</li>
+<li><strong lang="en">get my work done</strong> — 把工作完成</li>
+<li><strong lang="en">It wasn&#x27;t an ideal solution, but it worked</strong> — 虽然不是理想方法，但奏效了</li></ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“说一次你必须同时完成学校任务和家庭责任的经历”也适用。只要保留 Situation → Action → Result 三段，事情不需要惊天动地。</p></details>
+    <a class="top-link" href="#time-map">↑ 返回四题导航</a>
+  </section><hr class="section-divider"/><section id="time-q4" aria-labelledby="time-q4-title">
+    <div class="eyebrow"><span class="tag">Q4 · OPINION + BALANCE</span><span class="minor">立场 + 让步</span></div>
+    <h2 id="time-q4-title">Question 4：效率还是压力：承认缺点，但立场不要摇摆</h2>
+    <div class="question-card" lang="en">Great. Some people believe that managing your time wisely can lead to higher productivity, while others think it can cause unnecessary stress and prefer a looser schedule. What is your opinion on this and why?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Position</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Reason</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Concession</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Conclusion</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+    <p>这是 <strong>Opinion + Trade-off</strong> 题：两方分别强调<strong>效率</strong>和<strong>压力</strong>。你不需要选择极端观点，可以先站一边，再用一句让步说明另一边也有道理。</p>
+<p>原始回答的立场明确：现代生活中工作、考试、家庭责任多，管理时间很重要。改进的关键是给抽象主张一个具体后果：<strong>不安排时间 → 临时赶工 → 反而更焦虑</strong>。于是“管理时间会有压力”这一反方论点可以被合理回应。</p><div class="route" lang="en">good planning → finish important tasks → less last-minute rushing → more control</div>
+    <div class="caution"><strong>常见问题：</strong>别用 “Even though ..., but ...” 双重转折。用 <strong>Even though ... , ...</strong> 或 <strong>..., but ...</strong> 即可。另外，面对 <strong>while others think...</strong>，最好明确自己更认同哪一边。</div></div>
+    <div class="builder" data-builder="q4"><h3>点击立场，观察“观点 → 理由 → 让步”的逻辑</h3><p class="minor trigger-instruction">范文选择管理时间更重要，同时承认过度严格的日程可能造成压力。</p>
+     
+     <div class="idea-grid three" role="group" aria-label="Q4 brainstorm choices"><button type="button" class="idea-card" data-key="planning" aria-pressed="true"><b lang="en">Good Planning</b><span>有规划才能更高效</span></button>
+<button type="button" class="idea-card" data-key="flexible" aria-pressed="false"><b lang="en">Flexible Schedule</b><span>太严格反而焦虑</span></button>
+<button type="button" class="idea-card" data-key="balanced" aria-pressed="false"><b lang="en">Balanced Approach</b><span>规划 + 留有余地</span></button></div>
+     <div class="builder-output" aria-live="polite"><strong class="builder-label">Good Planning → 主张效率</strong><p class="builder-description">合理规划能帮人及时完成任务，减少最后一刻的匆忙和压力。</p><p class="logic-line" lang="en">clear plan → fewer missed deadlines → less last-minute stress</p><p class="spoken-line" lang="en">Managing time wisely helps me meet deadlines and avoid rushing at the last minute.</p></div>
+    </div>
+    <div class="sample-box"><div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="time-q4-answer" aria-label="Copy Q4 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="time-q4-answer" lang="en">I think managing your time wisely is essential, especially in today&#x27;s world. Most of us have a lot of responsibilities, whether it&#x27;s meeting deadlines at work, studying for exams, or taking care of our families. Without a clear plan, we can end up rushing to finish things at the last minute, which can be even more stressful. Of course, an overly strict schedule can also put pressure on people, so I think some flexibility is important. But overall, good time management helps us get things done and leaves more time for the things we care about.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list"><li><strong lang="en">manage your time wisely</strong> — 合理管理时间</li>
+<li><strong lang="en">higher productivity</strong> — 更高的效率</li>
+<li><strong lang="en">a looser schedule</strong> — 更灵活、宽松的日程</li>
+<li><strong lang="en">have a lot of responsibilities</strong> — 肩负许多责任</li>
+<li><strong lang="en">meet deadlines</strong> — 按时完成任务</li>
+<li><strong lang="en">at the last minute</strong> — 在最后关头</li>
+<li><strong lang="en">an overly strict schedule</strong> — 过于严格的时间表</li>
+<li><strong lang="en">some flexibility is important</strong> — 保留灵活性很重要</li>
+<li><strong lang="en">get things done</strong> — 把事情做完</li></ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“严格计划比随性安排更好吗？”“学生每天都需要学习计划吗？”都可以用 Position → Reason → Concession → Conclusion，体现立场与平衡。</p></details>
+    <a class="top-link" href="#time-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="section-divider"/>
+  <section id="time-summary" aria-labelledby="time-summary-title">
+    <h2 id="time-summary-title">四道题，四个可复用的思维模型</h2>
+    <p>听到新题时，不用先想华丽词汇。先判断：它是让你<strong>说明方法、描述日常、讲述经历，还是做观点权衡</strong>？选择对应框架，再填入个人信息。</p>
+    <div class="final-map"><div class="final-card"><span class="num">1</span><strong lang="en">Tools + Techniques</strong><span class="final-formula" lang="en">Tool → Technique → Example → Benefit</span></div>
+<div class="final-card"><span class="num">2</span><strong lang="en">Routine + Strategy</strong><span class="final-formula" lang="en">Routine → Strategy → Result</span></div>
+<div class="final-card"><span class="num">3</span><strong lang="en">Past Challenge</strong><span class="final-formula" lang="en">Situation → Action → Result</span></div>
+<div class="final-card"><span class="num">4</span><strong lang="en">Opinion + Balance</strong><span class="final-formula" lang="en">Position → Reason → Concession → Conclusion</span></div></div>
+    <div class="teaching-box"><h3>45 秒自检：回答完整了吗？</h3>
+      <p><strong>Q1：</strong>是否举了一个具体事项，而不只是说“我会规划”？</p>
+      <p><strong>Q2：</strong>是否既讲了典型的一天，也说明了怎么安排时间？</p>
+      <p><strong>Q3：</strong>是否出现了一个明确的冲突、实际行动和结果？</p>
+      <p><strong>Q4：</strong>是否立场明确，并能用具体后果来解释理由？</p>
+    </div>
+    <details class="practice-box"><summary>纠错加餐：原始口述中值得记住的表达</summary><p>以下只选取了原始转写中有教学价值的表达。部分显然属于语音转写错误；不要把所有拼写问题都当作口语语法错误。</p><div class="table-wrap"><table class="correction-table"><thead><tr><th>Original wording / transcript</th><th>More natural expression</th></tr></thead><tbody><tr><td lang="en">mark events on my calendar</td><td lang="en"><strong>add events to my calendar</strong></td></tr>
+<tr><td lang="en">anything happening in your future</td><td lang="en"><strong>anything coming up</strong></td></tr>
+<tr><td lang="en">organize my data routine</td><td lang="en"><strong>organize my daily routine</strong></td></tr>
+<tr><td lang="en">according to their urginess</td><td lang="en"><strong>based on their urgency</strong></td></tr>
+<tr><td lang="en">I have deadline</td><td lang="en"><strong>I had a deadline</strong></td></tr>
+<tr><td lang="en">I got my things down</td><td lang="en"><strong>I got my work done</strong></td></tr>
+<tr><td lang="en">matching time wisely</td><td lang="en"><strong>managing time wisely</strong></td></tr>
+<tr><td lang="en">we can give things more things down</td><td lang="en"><strong>we can get more things done</strong></td></tr>
+<tr><td lang="en">Even though ..., but ...</td><td lang="en"><strong>Even though ..., ...</strong></td></tr></tbody></table></div><p>特别注意：<strong lang="en">get things done</strong> 是描述执行力非常自然的口语短语；<strong lang="en">even though</strong> 和 <strong lang="en">but</strong> 不要在同一句中重复承担转折功能。</p></details>
+    <p class="minor">说明：范文依据课堂讨论中的口述内容、补充建议与答题框架整理；上传的聊天记录未包含最后一次汇总回复的完整范文正文，因此此处为忠实原意的教学整理稿，并非导出文本的逐字复制。</p>
+  </section>
+</div>
+<script>
+(function(){
+  'use strict';
+  const root = document.getElementById('timeInterviewLab');
+  if (!root) return;
+  const routes = {"q1":{"calendar":["Calendar → 如何使用","把工作任务和家庭事项都记到日历里，再检查哪些事情即将发生。","events → reminders → fewer forgotten commitments","I add deadlines and family appointments to my calendar so nothing slips my mind."],"list":["To-do list → 如何使用","早上列出今天要做的事，完成一项就划掉一项。","list tasks → track progress → stay organized","I make a short to-do list every morning and check things off as I finish them."],"priority":["Priorities → 如何使用","遇到多项任务，先判断是否紧急、是否重要，再决定顺序。","identify urgency → decide what matters → tackle key tasks first","I handle urgent deadlines first and leave less important tasks for later."],"blocks":["Time blocks → 如何使用","把固定的一段时间留给某项任务，尽量减少来回切换。","reserve focused time → avoid distractions → work efficiently","I set aside half an hour for lesson planning before I move on to other tasks."]},"q2":{"morning":["Morning → 简洁交代","一句话交代起床和出门时间就够了，不需要讲每个洗漱步骤。","get up → leave for work → start the day","On a typical weekday, I get up at six thirty and leave for work around eight."],"work":["Workday → 重点展开","把教课、备课和行政事务简洁概括，再嵌入每天如何安排优先级。","teach / plan lessons → check calendar → prioritize urgent tasks","I teach AP Computer Science and ESL, and I check my calendar to deal with urgent tasks first."],"evening":["Evening → 生活 + 结果","用家庭活动收尾，再解释合理安排时间带来的具体好处。","finish work → family time → keep work from taking over","After work, I spend time with my family. Planning ahead helps me keep my evenings free."]},"q3":{"family":["Work + Kids → 真实冲突","孩子需要关注，但工作必须按时完成；用短时间安抚孩子，优先完成最急的工作。","deadline + children → create a short quiet window → finish urgent work","I put on a video for my kids and used that quiet time to finish the urgent part of my work."],"deadlines":["Two Deadlines → 时间排序","两份任务同一天交；估算所需时间，先处理耗时更多或更急的一份。","two deadlines → rank urgency → divide work into steps","I broke both assignments into smaller tasks and finished the more urgent one first."],"project":["Group Project → 沟通与分工","小组合作与个人任务重叠；先和组员协调分工，再预留自己专注工作的时间。","competing responsibilities → communicate → divide tasks","I talked to my teammates, divided up the work, and set aside time for my own part."],"exams":["Exams + Activities → 灵活调整","考试临近又有活动；保留最重要的学习安排，把可调整的任务推后。","exam + activities → adjust schedule → protect study time","I moved a less important activity to the weekend so I could focus on exam preparation."]},"q4":{"planning":["Good Planning → 主张效率","合理规划能帮人及时完成任务，减少最后一刻的匆忙和压力。","clear plan → fewer missed deadlines → less last-minute stress","Managing time wisely helps me meet deadlines and avoid rushing at the last minute."],"flexible":["Flexible Schedule → 主张弹性","如果每一分钟都安排得很死，计划一变就会焦虑；弹性反而让人更专注。","rigid schedule → unexpected changes → stress","I prefer a flexible schedule because strict plans can make everyday life unnecessarily stressful."],"balanced":["Balanced Approach → 综合观点","给重要任务设优先级，同时保留可以调整的空档。","priorities + breathing room → productivity without rigidity","I like having a clear plan, but I also leave room for unexpected things."]}};
+  root.querySelectorAll('[data-builder]').forEach(builder => {
+    const group = builder.getAttribute('data-builder');
+    const output = builder.querySelector('.builder-output');
+    const btns = Array.from(builder.querySelectorAll('[data-key]'));
+    const activate = (key) => {
+      const data = routes[group] && routes[group][key];
+      if (!data) return;
+      btns.forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.key === key)));
+      output.querySelector('.builder-label').textContent = data[0];
+      output.querySelector('.builder-description').textContent = data[1];
+      output.querySelector('.logic-line').textContent = data[2];
+      output.querySelector('.spoken-line').textContent = data[3];
+    };
+    btns.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.key)));
+  });
+  root.querySelectorAll('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
+    const target = root.querySelector('#' + btn.dataset.copy);
+    const status = btn.closest('.sample-box').querySelector('.copy-status');
+    if (!target) return;
+    try {
+      await navigator.clipboard.writeText(target.textContent.trim());
+      status.textContent = '已复制英文范文';
+    } catch (err) {
+      status.textContent = '复制不可用：请选中范文后手动复制';
+    }
+  }));
+})();
+</script>
