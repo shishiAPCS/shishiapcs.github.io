@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Pixel Roster Picker & Pixel Name Wheel｜像素风课堂随机点名工具"
-date: 2026-05-17
+date: 2026-10-12
 categories: CS
 tags: CS Tools Classroom JavaScript GitHub-Pages Random-Name-Picker
 ---
 
-## 在线使用 · Choose Your Style
+## 两种版本在线使用 
 
 **同一份班级名单，两种点名玩法。** 想要终端扫描的紧张感，就用经典版；想让课堂像 GBA 小游戏一样热闹，就切换到转盘版。
 
