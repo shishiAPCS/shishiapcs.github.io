@@ -1,0 +1,398 @@
+---
+layout: post
+title: "雅思口语 Part 2: 老友重聚与开菲尔 Kefir"
+date: 2026-10-15
+permalink: /esl-speaking-ielts-part2-kefir-reunion/
+---
+
+<script defer src="{{ '/assets/js/pronunciation.js' | relative_url }}"></script>
+<style>
+/* Kefir Reunion Master Story — page-scoped ShiShi Study UI.
+   IMPORTANT: respect the site's existing article column; no 1180px breakout. */
+.kefir-study {
+  --surface: var(--study-surface, rgba(128,128,135,.075));
+  --surface-strong: var(--study-surface-strong, rgba(128,128,135,.14));
+  --border: var(--study-border, rgba(145,145,155,.26));
+  --border-strong: var(--study-border-strong, rgba(155,155,165,.43));
+  --shadow: var(--study-shadow, 0 12px 32px rgba(0,0,0,.12));
+  --radius-lg: var(--study-radius-lg, 18px);
+  --radius-md: var(--study-radius-md, 12px);
+  --radius-sm: var(--study-radius-sm, 8px);
+  box-sizing: border-box;
+  display: block;
+  width: 100%; max-width: 100%; min-width: 0;
+  margin: 0; padding: 0; transform: none;
+  color: inherit; line-height: 1.72;
+  overflow-wrap: break-word;
+}
+.kefir-study *, .kefir-study *::before, .kefir-study *::after { box-sizing: border-box; }
+.kefir-study button,.kefir-study summary { font: inherit; }
+.kefir-study button,.kefir-study a { color: inherit; }
+.kefir-study button { -webkit-tap-highlight-color: transparent; }
+.kefir-study button:focus-visible,.kefir-study summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.kefir-study .kr-hero {
+  padding: clamp(1.1rem, 3vw, 2.6rem);
+  margin: 1.1rem 0 .85rem;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top right, var(--surface-strong), transparent 48%), var(--surface);
+}
+.kr-kicker { margin: 0 0 .3rem; font-size: .77rem; font-weight: 800; letter-spacing: .075em; opacity: .67; }
+.kefir-study .kr-hero h1 { margin: .1rem 0; font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.08; letter-spacing: -.035em; }
+.kr-hero-cn { margin: .5rem 0 0; font-size: 1.04rem; opacity: .78; }
+.kr-question { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.1rem; margin-top: 1.05rem; background: var(--surface-strong); }
+.kr-question h2 { font-size: .96rem; margin: 0 0 .4rem; }
+.kr-question p { margin: .45rem 0; }
+.kr-question ul { padding-left: 1.35rem; margin: .4rem 0 0; }
+.kr-question li { margin: .12rem 0; }
+.kr-hero-note { margin: 1rem 0 .3rem; font-size: .95rem; }
+.kr-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .55rem; margin-top: 1.05rem; }
+.kr-stat { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius-md); padding: .75rem .85rem; min-width: 0; }
+.kr-stat strong { display: block; font-size: 1.37rem; line-height: 1.18; font-weight: 800; }
+.kr-stat span { display: block; font-size: .73rem; margin-top: .16rem; opacity: .72; }
+.kr-tabs-wrap { position: sticky; top: .4rem; z-index: 30; max-width: 100%; margin: 0 0 1rem; }
+.kr-tabs { display: flex; gap: .2rem; overflow-x: auto; overscroll-behavior-x: contain; padding: .38rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-strong); box-shadow: var(--shadow); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); scrollbar-width: none; max-width: 100%; }
+.kr-tabs::-webkit-scrollbar { display: none; }
+.kr-tab { flex: 0 0 auto; white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; padding: .55rem .68rem; font-size: .84rem !important; cursor: pointer; font-weight: 700 !important; }
+.kr-tab:hover { background: var(--surface); }
+.kr-tab[aria-selected="true"] { border-color: var(--border-strong); background: var(--surface-strong); }
+.kefir-study:not(.is-enhanced) .kr-panel { display: block; margin-bottom: 2rem; }
+.kefir-study.is-enhanced .kr-panel { display: none; }
+.kefir-study.is-enhanced .kr-panel.is-active { display: block; animation: krFade .2s ease-out; }
+@keyframes krFade { from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none} }
+.kr-section-head { margin: 1.25rem 0 .8rem; }
+.kefir-study .kr-section-head h2 { margin: 0; font-size: clamp(1.5rem,3vw,2rem); line-height:1.2; }
+.kr-section-head p { margin:.35rem 0 0; opacity:.73; font-size:.94rem; }
+.kr-panel { min-width: 0; }
+.kr-callout,.kr-detail,.kr-answer-card,.kr-anchor-card,.kr-chunk-card,.kr-topic-card,.kr-note {
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); min-width: 0;
+}
+.kr-callout { padding: .85rem 1rem; margin: .6rem 0 .85rem; font-size: .91rem; }
+.kr-callout strong { display: block; margin-bottom: .25rem; }
+.kr-story-map { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .62rem; margin:.95rem 0; }
+.kr-story-node { position: relative; min-width: 0; padding: .85rem .9rem; min-height: 116px; cursor:pointer; text-align:left; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); }
+.kr-story-node:hover,.kr-story-node.is-selected { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-story-node:not(:nth-child(3n))::after { content:"→"; position:absolute; right:-.55rem; top:50%; transform:translateY(-50%); z-index:1; font-weight:800; opacity:.48; pointer-events:none; }
+.kr-node-icon { display: block; font-size: 1.4rem; margin-bottom: .4rem; }
+.kr-story-node strong { display: block; font-size: .94rem; line-height:1.3; }
+.kr-story-node small { display:block; font-size:.76rem; opacity:.7; margin-top:.24rem; line-height:1.38; }
+.kr-detail { padding:1rem 1.1rem; margin-top:.7rem; }
+.kr-detail h3 { margin:0 0 .42rem; font-size:1.06rem; }
+.kr-detail p { margin:0; }
+.kr-detail-links { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.75rem; }
+.kr-pill { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; padding:.3rem .58rem; border:1px solid var(--border); border-radius:999px; background:var(--surface); font-size:.79rem; line-height:1.4; }
+button.kr-pill { cursor:pointer; }
+button.kr-pill:hover { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-answer-stack { display:grid; gap:.72rem; }
+.kr-answer-card { padding:1.05rem 1.15rem; }
+.kr-answer-num { display:inline-block; border:1px solid var(--border); border-radius:999px; font-size:.75rem; font-weight:800; padding:.08rem .5rem; margin-bottom:.5rem; }
+.kr-answer-card p { margin:0; }
+.kr-answer-card .kr-cn { border-top:1px dashed var(--border); padding-top:.65rem; margin-top:.72rem; opacity:.78; }
+.kr-micro-note { margin:.7rem 0 0; opacity:.75; font-size:.87rem; }
+.kr-subhead { font-size:1.12rem; margin:1.4rem 0 .65rem; }
+.kr-anchor-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:.6rem; }
+.kr-anchor-card, .kr-chunk-card, .kr-topic-card { overflow:hidden; }
+.kr-anchor-card summary,.kr-chunk-card summary,.kr-topic-card summary { cursor:pointer; list-style:none; }
+.kr-anchor-card summary::-webkit-details-marker,.kr-chunk-card summary::-webkit-details-marker,.kr-topic-card summary::-webkit-details-marker { display:none; }
+.kr-anchor-card summary { padding:.83rem .9rem; font-weight:650; }
+.kr-anchor-card summary::after,.kr-chunk-card summary::after { content:"+"; float:right; opacity:.62; font-weight:800; }
+.kr-anchor-card[open] summary::after,.kr-chunk-card[open] summary::after { content:"−"; }
+.kr-anchor-num { font-size:.77rem; opacity:.64; font-weight:850; }
+.kr-anchor-en { margin:.4rem 0 0; line-height:1.48; }
+.kr-anchor-cn { padding:.7rem .9rem .85rem; border-top:1px dashed var(--border); opacity:.8; }
+.kr-chunk-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.55rem; }
+.kr-chunk-card summary { padding:.7rem .85rem; font-size:.87rem; font-weight:720; line-height:1.5; }
+.kr-chunk-cn { padding:0 .85rem .8rem; font-size:.85rem; opacity:.79; }
+.kr-chunk-example { margin-top:.35rem; font-style:italic; opacity:.9; }
+.kr-pron-controls { display:flex; flex-wrap:wrap; gap:.48rem; margin:.75rem 0; }
+.kefir-study .accent-button { border:1px solid var(--border); border-radius:999px; padding:.54rem .85rem; background:var(--surface); cursor:pointer; font-weight:700; }
+.kefir-study .accent-button:hover,.kefir-study .accent-button.active { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.6rem; }
+.kefir-study .speak-word { min-width:0; min-height:76px; padding:.8rem .8rem; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); text-align:left; cursor:pointer; }
+.kefir-study .speak-word:hover,.kefir-study .speak-word.is-playing { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-word { display:block; font-weight:800; font-size:1.02rem; }
+.kr-pron-hint { display:block; opacity:.65; font-size:.75rem; line-height:1.35; margin-top:.25rem; }
+.kr-pron-note { margin-top:.95rem; padding:.8rem 1rem; border-left:3px solid currentColor; border-radius:0 var(--radius-sm) var(--radius-sm) 0; background:var(--surface); font-size:.89rem; }
+.kr-topic-key { display:flex; flex-wrap:wrap; gap:.5rem; margin:.7rem 0 .95rem; }
+.kr-topic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; align-items:start; }
+.kr-topic-card summary { padding:.85rem .95rem; }
+.kr-topic-card[open] { grid-column:1/-1; background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-topic-card h3 { margin:.5rem 0 .2rem; font-size:.97rem; }
+.kr-topic-en { font-size:.82rem; line-height:1.36; opacity:.7; }
+.kr-fit { display:inline-flex; padding:.16rem .44rem; font-size:.7rem; font-weight:780; border:1px solid var(--border); border-radius:999px; }
+.kr-topic-body { padding:0 .95rem 1rem; }
+.kr-topic-body p { margin:.4rem 0 0; }
+.kr-route { margin-top:.65rem; padding:.7rem .8rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; border-left:3px solid currentColor; background:var(--surface); font-size:.87rem; }
+.kr-sample { margin-top:.68rem; padding:.75rem .8rem; border:1px dashed var(--border); border-radius:var(--radius-sm); }
+.kr-sample strong { font-size:.77rem; opacity:.75; }
+.kr-sample p { margin:.3rem 0 0; }
+.kr-mother { border:1px dashed var(--border-strong); border-radius:var(--radius-md); padding: .9rem 1.05rem; margin-top:1rem; background:var(--surface); font-size:.89rem; }
+.kr-mother p { margin:.35rem 0 0; }
+.kr-footer { font-size:.8rem; text-align:center; margin:1.8rem 0 2.3rem; opacity:.62; }
+@media (max-width: 720px) {
+  .kr-story-map { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-story-node::after { display:none !important; }
+  .kr-chunk-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-topic-grid { grid-template-columns:1fr; }
+  .kr-topic-card[open] { grid-column:auto; }
+}
+@media (max-width: 490px) {
+  .kefir-study .kr-hero { padding:1rem; }
+  .kr-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .kr-story-map { grid-template-columns:1fr; }
+  .kr-story-node { min-height:auto; }
+  .kr-anchor-grid,.kr-chunk-grid { grid-template-columns:1fr; }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-tab { padding:.53rem .65rem; }
+}
+@media (prefers-reduced-motion: reduce) { .kefir-study.is-enhanced .kr-panel.is-active {animation:none} }
+@media print {
+  .kefir-study { width:100%; max-width:none; margin:0; transform:none; }
+  .kr-tabs-wrap { display:none !important; }
+  .kefir-study.is-enhanced .kr-panel { display:block !important; }
+  .kr-hero,.kr-answer-card,.kr-detail,.kr-story-node,.kr-topic-card { break-inside:avoid; }
+  .kr-anchor-grid,.kr-chunk-grid,.kr-topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+</style>
+<div class="kefir-study" id="kefirStudy">
+<header class="kr-hero">
+  <p class="kr-kicker">IELTS SPEAKING PART 2 · MASTER STORY · 2026 SEP–DEC</p>
+  <h1>The Kefir Reunion</h1>
+  <p class="kr-hero-cn">老友重聚 · 开菲尔初体验 · 从一次聚会延伸到多个雅思话题</p>
+  <article class="kr-question">
+    <h2>Original Question · 原题</h2>
+    <p><strong>Describe a party for a special event that impressed you a lot.</strong></p>
+    <p>You should say:</p>
+    <ul>
+      <li>When and where it happened</li>
+      <li>Who was involved</li>
+      <li>What happened</li>
+      <li>And explain how you felt about the experience</li>
+    </ul>
+  </article>
+  <p class="kr-hero-note">先把<strong>一次真实自然的重聚经历</strong>讲清楚，再根据题目调整<strong>开头、重点和结尾</strong>。不需要为了覆盖更多题目而硬编戏剧性情节。</p>
+  <div class="kr-stats" aria-label="学习内容总览">
+    <div class="kr-stat"><strong>1</strong><span>核心故事</span></div>
+    <div class="kr-stat"><strong>10</strong><span>可探索话题（含拓展）</span></div>
+    <div class="kr-stat"><strong>5</strong><span>核心句</span></div>
+    <div class="kr-stat"><strong>12</strong><span>可复用表达</span></div>
+  </div>
+</header>
+<div class="kr-tabs-wrap">
+  <nav class="kr-tabs" role="tablist" aria-label="雅思故事学习分区">
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-story" aria-controls="kr-panel-story" aria-selected="true" tabindex="0" data-tab="story">🗺️ 故事地图</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-answer" aria-controls="kr-panel-answer" aria-selected="false" tabindex="-1" data-tab="answer">🗣️ 完整答案</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-language" aria-controls="kr-panel-language" aria-selected="false" tabindex="-1" data-tab="language">🧩 语言积累</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-pronunciation" aria-controls="kr-panel-pronunciation" aria-selected="false" tabindex="-1" data-tab="pronunciation">🔊 发音重点</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-topics" aria-controls="kr-panel-topics" aria-selected="false" tabindex="-1" data-tab="topics">🔄 话题迁移</button>
+  </nav>
+</div>
+<!-- 01 故事地图 -->
+<section class="kr-panel is-active" id="kr-panel-story" role="tabpanel" aria-labelledby="kr-tab-story" data-panel="story">
+  <div class="kr-section-head"><h2>故事地图</h2><p>先记住“事情是怎么一步步发生的”。点击任意步骤，查看这一步的作用、关键表达和可以迁移的话题。</p></div>
+  <div class="kr-callout"><strong>故事主线一句话</strong>老朋友从挪威回来 → 发小组织欢迎聚会 → 大家带着自制食物重聚 → 我发现了开菲尔 → 带走了老回忆和新做法。</div>
+  <div class="kr-story-map" aria-label="老友重聚故事发展过程">
+    <button class="kr-story-node is-selected" type="button" data-step="0" aria-pressed="true"><span class="kr-node-icon" aria-hidden="true">📱</span><strong>发小联系我</strong><small>有人主动提议聚一聚</small></button>
+    <button class="kr-story-node" type="button" data-step="1" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">✈️</span><strong>挪威好友归来</strong><small>重逢有了特殊意义</small></button>
+    <button class="kr-story-node" type="button" data-step="2" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">💬</span><strong>微信群组局</strong><small>邀请朋友、约定带食物</small></button>
+    <button class="kr-story-node" type="button" data-step="3" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">📍</span><strong>找到聚会场地</strong><small>准备完成，大家赴约</small></button>
+    <button class="kr-story-node" type="button" data-step="4" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🥳</span><strong>老友终于重聚</strong><small>气氛温馨，像回到童年</small></button>
+    <button class="kr-story-node" type="button" data-step="5" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🇳🇴</span><strong>挪威语小惊喜</strong><small>为老朋友的成长高兴</small></button>
+    <button class="kr-story-node" type="button" data-step="6" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🥛</span><strong>第一次尝开菲尔</strong><small>酸爽，却又浓郁顺滑</small></button>
+    <button class="kr-story-node" type="button" data-step="7" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">📝</span><strong>请教制作方法</strong><small>从品尝延伸到学习</small></button>
+    <button class="kr-story-node" type="button" data-step="8" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">❤️</span><strong>带走两份收获</strong><small>老回忆 + 新配方</small></button>
+  </div>
+  <aside class="kr-detail" id="krStoryDetail" aria-live="polite">
+    <h3>发小联系我</h3>
+    <p>故事从一个微信消息开始。一位发小联系我，带来老朋友即将回国的消息。这一步负责交代人物关系，也自然引出聚会的原因。</p>
+    <div class="kr-detail-links"><span class="kr-pill">🧩 a childhood friend of mine</span><button type="button" class="kr-pill" data-open-topic="childhood">↗ 童年好友</button><button type="button" class="kr-pill" data-open-topic="party">↗ 印象深刻的聚会</button></div>
+  </aside>
+</section>
+<!-- 02 完整答案 -->
+<section class="kr-panel" id="kr-panel-answer" role="tabpanel" aria-labelledby="kr-tab-answer" data-panel="answer">
+  <div class="kr-section-head"><h2>完整答案 · 中英对照</h2><p>保留原始口述稿经语法与自然表达润色后的版本。每段英文下方直接配中文，不再切换语言模式。</p></div>
+  <div class="kr-answer-stack" id="krAnswerStack">
+    <article class="kr-answer-card"><span class="kr-answer-num">01</span><p lang="en">Well, there was this one time when a childhood friend of mine contacted me and said that another close friend of ours, who had moved to Norway, was coming back, and that we should have a get-together, you know, throw him a party.</p><p class="kr-cn" lang="zh-CN">有一次，我的一位发小联系我，说我们另一个搬去挪威的好朋友要回国了，我们应该聚一聚，给他办个欢迎派对。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">02</span><p lang="en">So he set up a WeChat group, added all of us, and suggested that we each bring something special to share, preferably something homemade. And that was how it all started. He also found a venue for all of us.</p><p class="kr-cn" lang="zh-CN">于是他建了一个微信群，把我们都拉了进去，还提议每个人带点特别的食物来分享，最好是自己做的。事情就是这样开始的。他还帮大家找好了聚会地点。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">03</span><p lang="en">A few days later, we finally got together, and one of the guys brought a special kind of drink. He told me it wasn&#x27;t actually yogurt. Meanwhile, our friend who had returned from Norway had learned to speak Norwegian, and I was really happy for him.</p><p class="kr-cn" lang="zh-CN">几天后，我们终于聚到一起。有个朋友带来一种特别的饮品，他告诉我那其实不是酸奶。与此同时，从挪威回来的朋友居然已经学会说挪威语了，我真为他高兴。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">04</span><p lang="en">The atmosphere was really nice and cozy, and it just felt like we were back in our childhood days.</p><p class="kr-cn" lang="zh-CN">当时的氛围特别温馨、放松，感觉我们好像一下子回到了小时候。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">05</span><p lang="en">Later on, I tried that yogurt-like drink, and it left a deep impression on me. It was tangy and slightly sour, but it still had this really creamy texture. I asked my friend how to make it, and he explained the process to me.</p><p class="kr-cn" lang="zh-CN">后来我尝了那种有点像酸奶的饮品，印象非常深刻。它的味道酸酸的，很有特点，但口感又十分顺滑、浓郁。我问朋友怎么做，他就向我解释了制作过程。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">06</span><p lang="en">So I came away from that party not only with some wonderful memories of the old days, but also with a new recipe for making a drink I&#x27;d never tried before.</p><p class="kr-cn" lang="zh-CN">所以，那次聚会带给我的不仅是关于往昔的美好回忆，还有一种我从没喝过的饮品的制作方法。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">07</span><p lang="en">It was quite a different experience for me, and I felt like that was exactly the kind of party I really enjoyed. Not only did I get to learn something new, but I also got to catch up with my old friends and have some really meaningful conversations.</p><p class="kr-cn" lang="zh-CN">对我来说，那是一次很不一样的经历。我觉得这正是我真正喜欢的聚会：不仅学到了新东西，还能和老朋友叙旧，聊一些有意义的话题。</p></article>
+  </div>
+  <p class="kr-micro-note">💡 实战提示：为照顾“尽量不改原文”的要求，英语答案仍沿用 <em>a special kind of drink</em>。想让食物主题更明确，可以在那句后<strong>自行</strong>补一句 <em>It was called kefir.</em>，而不改变整段故事。</p>
+</section>
+<!-- 03 语言积累 -->
+<section class="kr-panel" id="kr-panel-language" role="tabpanel" aria-labelledby="kr-tab-language" data-panel="language">
+  <div class="kr-section-head"><h2>语言积累</h2><p>先学 5 个核心句，再掌握 12 个可以放进其他故事里的短语。点击卡片可查看中文和示例。</p></div>
+  <h3 class="kr-subhead">5 个核心句 · Anchor Sentences</h3>
+  <div class="kr-anchor-grid">
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">01</span><p class="kr-anchor-en" lang="en">Well, there was this one time when a childhood friend of mine contacted me…</p></summary><div class="kr-anchor-cn" lang="zh-CN">有一次，一位发小联系了我……（自然开启过去的经历）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">02</span><p class="kr-anchor-en" lang="en">We should have a get-together, you know, throw him a party.</p></summary><div class="kr-anchor-cn" lang="zh-CN">我们应该聚一聚，给他办个派对。（口语化补充说明）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">03</span><p class="kr-anchor-en" lang="en">He set up a WeChat group, added all of us, and suggested that we each bring something special to share.</p></summary><div class="kr-anchor-cn" lang="zh-CN">他建了微信群，把大家拉进来，还建议每个人带点特别的东西分享。（组织活动）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">04</span><p class="kr-anchor-en" lang="en">It was tangy and slightly sour, but it still had this really creamy texture.</p></summary><div class="kr-anchor-cn" lang="zh-CN">味道酸酸的、很鲜明，但质地依然顺滑浓郁。（感官对比）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">05</span><p class="kr-anchor-en" lang="en">I came away from that party not only with some wonderful memories of the old days, but also with a new recipe.</p></summary><div class="kr-anchor-cn" lang="zh-CN">那次聚会让我既重拾旧回忆，也带走了一个新配方。（双重收获式结尾）</div></details>
+  </div>
+  <h3 class="kr-subhead">12 个可复用表达 · Reusable Chunks</h3>
+  <div class="kr-chunk-grid">
+    <details class="kr-chunk-card"><summary lang="en">a childhood friend of mine</summary><div class="kr-chunk-cn"><div>我的一位发小；比 “my childhood friend” 更口语化</div><div class="kr-chunk-example" lang="en">A childhood friend of mine contacted me.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">throw someone a party</summary><div class="kr-chunk-cn"><div>给某人举办派对；throw 在这里不是“扔”</div><div class="kr-chunk-example" lang="en">We decided to throw him a party.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">set up a WeChat group</summary><div class="kr-chunk-cn"><div>建一个微信群；set up 表示创建、安排</div><div class="kr-chunk-example" lang="en">He set up a WeChat group.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">bring something to share</summary><div class="kr-chunk-cn"><div>带一些东西来给大家分享</div><div class="kr-chunk-example" lang="en">We each brought something to share.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">something homemade</summary><div class="kr-chunk-cn"><div>自己做的食物或饮品；home-made 也可见，但 homemade 更常用</div><div class="kr-chunk-example" lang="en">Preferably something homemade.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">get together</summary><div class="kr-chunk-cn"><div>相聚；既可作动词，也可写成名词 get-together</div><div class="kr-chunk-example" lang="en">We finally got together.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">be happy for someone</summary><div class="kr-chunk-cn"><div>替某人高兴，而不只是“因为某人而高兴”</div><div class="kr-chunk-example" lang="en">I was really happy for him.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a nice, cozy atmosphere</summary><div class="kr-chunk-cn"><div>温馨、让人放松的氛围；cozy 美式常用</div><div class="kr-chunk-example" lang="en">The atmosphere was really cozy.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">leave a deep impression on someone</summary><div class="kr-chunk-cn"><div>给某人留下深刻印象</div><div class="kr-chunk-example" lang="en">It left a deep impression on me.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">tangy and slightly sour</summary><div class="kr-chunk-cn"><div>味道鲜明、微酸；tangy 多指明亮刺激的酸味</div><div class="kr-chunk-example" lang="en">The drink was tangy and slightly sour.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a creamy texture</summary><div class="kr-chunk-cn"><div>细腻、顺滑的质地；texture 是口感，不是味道</div><div class="kr-chunk-example" lang="en">It had a really creamy texture.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">catch up with old friends</summary><div class="kr-chunk-cn"><div>与老朋友叙旧，互相聊聊近况</div><div class="kr-chunk-example" lang="en">I got to catch up with my old friends.</div></div></details>
+  </div>
+</section>
+<!-- 04 发音 -->
+<section class="kr-panel" id="kr-panel-pronunciation" role="tabpanel" aria-labelledby="kr-tab-pronunciation" data-panel="pronunciation">
+  <div class="kr-section-head"><h2>发音重点</h2><p>保留网站原有发音按钮：切换美式／英式发音，点击词语聆听。</p></div>
+  <div class="kr-pron-controls" role="group" aria-label="选择发音口音">
+    <button type="button" class="accent-button active" data-accent="us">🇺🇸 美式英语</button>
+    <button type="button" class="accent-button" data-accent="uk">🇬🇧 英式英语</button>
+  </div>
+  <div class="kr-pron-grid">
+    <button type="button" class="speak-word" data-word="kefir" aria-label="朗读 kefir"><span class="kr-pron-word">kefir 🔊</span><span class="kr-pron-hint">开菲尔：两种常见英语读法并存</span></button>
+    <button type="button" class="speak-word" data-word="reunion" aria-label="朗读 reunion"><span class="kr-pron-word">reunion 🔊</span><span class="kr-pron-hint">重聚，重逢；注意音节重音</span></button>
+    <button type="button" class="speak-word" data-word="Norwegian" aria-label="朗读 Norwegian"><span class="kr-pron-word">Norwegian 🔊</span><span class="kr-pron-hint">挪威的／挪威语；注意重音</span></button>
+    <button type="button" class="speak-word" data-word="homemade" aria-label="朗读 homemade"><span class="kr-pron-word">homemade 🔊</span><span class="kr-pron-hint">自制的；home + made</span></button>
+    <button type="button" class="speak-word" data-word="venue" aria-label="朗读 venue"><span class="kr-pron-word">venue 🔊</span><span class="kr-pron-hint">活动场所；不是 avenue</span></button>
+    <button type="button" class="speak-word" data-word="cozy" aria-label="朗读 cozy"><span class="kr-pron-word">cozy 🔊</span><span class="kr-pron-hint">温馨舒适的</span></button>
+    <button type="button" class="speak-word" data-word="yogurt" aria-label="朗读 yogurt"><span class="kr-pron-word">yogurt 🔊</span><span class="kr-pron-hint">酸奶；美式 yogurt</span></button>
+    <button type="button" class="speak-word" data-word="tangy" aria-label="朗读 tangy"><span class="kr-pron-word">tangy 🔊</span><span class="kr-pron-hint">带刺激性酸味的；注意 /ŋ/</span></button>
+    <button type="button" class="speak-word" data-word="creamy" aria-label="朗读 creamy"><span class="kr-pron-word">creamy 🔊</span><span class="kr-pron-hint">奶油般顺滑的</span></button>
+    <button type="button" class="speak-word" data-word="texture" aria-label="朗读 texture"><span class="kr-pron-word">texture 🔊</span><span class="kr-pron-hint">质地、口感；注意 x 的音</span></button>
+    <button type="button" class="speak-word" data-word="impression" aria-label="朗读 impression"><span class="kr-pron-word">impression 🔊</span><span class="kr-pron-hint">印象；重音落在第二音节</span></button>
+    <button type="button" class="speak-word" data-word="meaningful" aria-label="朗读 meaningful"><span class="kr-pron-word">meaningful 🔊</span><span class="kr-pron-hint">有意义的</span></button>
+  </div>
+  <div class="kr-pron-note"><strong>提示：</strong><em>kefir</em> 本身有不止一种常见英语发音，不必把某一种当作唯一正确答案；<em>tangy</em> 不是简单的 <em>sour</em>，更强调鲜明的酸味。发音按钮使用本站 <code>pronunciation.js</code>。</div>
+</section>
+<!-- 05 话题迁移 -->
+<section class="kr-panel" id="kr-panel-topics" role="tabpanel" aria-labelledby="kr-tab-topics" data-panel="topics">
+  <div class="kr-section-head"><h2>话题迁移</h2><p>以下 10 道题来自 2026 年 9–12 月题库。并非每道题都能直接套用：要学会判断“原故事已经有的”与“必须补充的新事实”。</p></div>
+  <div class="kr-topic-key"><span class="kr-pill">★ 直接适用：基本不改</span><span class="kr-pill">↗ 换重心：改变叙述重点</span><span class="kr-pill">＋ 需拓展：必须增加真实细节</span></div>
+  <div class="kr-topic-grid">
+    <details class="kr-topic-card" id="kr-topic-party" data-topic="party"><summary><span class="kr-fit">直接适用</span><h3>印象深刻的聚会</h3><div class="kr-topic-en" lang="en">Describe a party for a special event that impressed you a lot</div></summary><div class="kr-topic-body"><p>主角就是“归国欢迎聚会”。说明为什么是特殊场合、谁组织、做了什么、开菲尔为何让你记住这次聚会。不要让介绍饮品占满整段。</p><div class="kr-route"><strong>答题路径：</strong>欢迎好友归国 → 微信群筹备 → 大家赴约 → 开菲尔惊喜 → 温馨氛围 + 双重收获</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">One party that really impressed me was a get-together we organized for a childhood friend who had just returned from Norway.</p><strong>结尾怎么换</strong><p lang="en">What I loved most was that I got to reconnect with old friends and try something completely new.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-evening" data-topic="evening"><summary><span class="kr-fit">直接适用</span><h3>和朋友度过的愉快夜晚</h3><div class="kr-topic-en" lang="en">Describe an enjoyable evening you had with your friends</div></summary><div class="kr-topic-body"><p>突出老朋友们终于见面、叙旧和聊天的感觉。开菲尔是有趣的小插曲，不能替代“为什么这个晚上开心”的回答。</p><div class="kr-route"><strong>答题路径：</strong>久未见面 → 晚上聚会 → 聊过去和近况 → 尝新饮品 → 愉快与亲密感</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">One evening I really enjoyed was when I got together with a group of childhood friends after one of them returned from Norway.</p><strong>结尾怎么换</strong><p lang="en">It felt just like old times, and I was glad we had the chance to catch up.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-childhood" data-topic="childhood"><summary><span class="kr-fit">换重心即可</span><h3>童年好友</h3><div class="kr-topic-en" lang="en">Describe a friend from your childhood</div></summary><div class="kr-topic-body"><p>把回国的朋友置于中心：你们小时候怎么认识、曾一起做什么、后来为什么分开。聚会只作为你们重新见面的故事证据。</p><div class="kr-route"><strong>答题路径：</strong>认识他 → 儿时关系 → 搬去挪威 → 重逢 → 你为什么重视这段友谊</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">I’d like to talk about a childhood friend of mine who moved to Norway several years ago.</p><strong>结尾怎么换</strong><p lang="en">Our reunion reminded me how much that friendship still means to me.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-organized" data-topic="organized"><summary><span class="kr-fit">需突出人物</span><h3>有条理的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who is very organized</div></summary><div class="kr-topic-body"><p>选择建微信群的那位朋友。原文已有“拉群、建议带菜、找场地”三件事；再补充如何提前确认人数和时间会更完整。</p><div class="kr-route"><strong>答题路径：</strong>介绍组织者 → 建群 → 分工带菜 → 安排场地 → 对他的评价</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">One person I know who is incredibly organized is a childhood friend who arranged a reunion for our group.</p><strong>结尾怎么换</strong><p lang="en">Without his planning, I doubt we would have managed to get everyone together.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-language-person" data-topic="language-person"><summary><span class="kr-fit">需突出人物</span><h3>擅长学习外语的人</h3><div class="kr-topic-en" lang="en">Describe a person who is good at learning and speaking new languages</div></summary><div class="kr-topic-body"><p>聚会是“发现他会挪威语”的场景，不是答案主体。要补充朋友在挪威学语言的方法、进步和使用语言的具体表现。</p><div class="kr-route"><strong>答题路径：</strong>介绍回国好友 → 刚去挪威的挑战 → 如何学挪威语 → 重逢时的表现 → 为什么佩服</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">A friend of mine who’s really good at learning languages is someone I grew up with. He later moved to Norway.</p><strong>结尾怎么换</strong><p lang="en">I was genuinely impressed by how much effort he must have put into learning Norwegian.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-food" data-topic="food"><summary><span class="kr-fit">需调整切入点</span><h3>特殊场合吃的食物</h3><div class="kr-topic-en" lang="en">Describe a food that people eat on special occasions/events</div></summary><div class="kr-topic-body"><p>开菲尔通常是日常饮品，并非挪威传统节庆食品。可以说朋友特意为这次欢迎聚会自制了开菲尔，重点落在“这场聚会的特色饮品”；但不要声称它普遍只在节日喝。</p><div class="kr-route"><strong>答题路径：</strong>欢迎聚会上的特色饮品 → 谁带来的 → 味道与口感 → 制作方法 → 为什么记得</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">One unusual drink I tried at a special gathering was homemade kefir, which a friend brought to our reunion.</p><strong>结尾怎么换</strong><p lang="en">For me, its taste will always bring back memories of that special reunion.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-skill" data-topic="skill"><summary><span class="kr-fit">需要补充后续</span><h3>教你新技能的人</h3><div class="kr-topic-en" lang="en">Describe a person who taught you a new skill</div></summary><div class="kr-topic-body"><p>原稿只是朋友解释制作过程。为了贴题，需要追加“我后来在家尝试制作、朋友如何指导、我学会了什么”。不要把听过一次讲解说成已经熟练掌握。</p><div class="kr-route"><strong>答题路径：</strong>谁带来开菲尔 → 为什么想学 → 对方如何教 → 后来实际尝试 → 学习感受</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">A friend of mine introduced me to kefir at a reunion and later taught me how to make it at home.</p><strong>结尾怎么换</strong><p lang="en">Learning that simple new skill made the reunion even more memorable.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-change" data-topic="change"><summary><span class="kr-fit">需要补充后续</span><h3>最近做出的改变</h3><div class="kr-topic-en" lang="en">Describe a change that you made recently</div></summary><div class="kr-topic-body"><p>如果你后来真的开始自己做或经常喝开菲尔，可以把聚会当作改变的契机。需要补充改变前后、持续了多久，以及带来的影响。</p><div class="kr-route"><strong>答题路径：</strong>过去没喝过 → 聚会第一次尝 → 学到做法 → 近期开始尝试 → 改变的感受</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">A recent change I made was adding a homemade drink called kefir to my routine, after trying it at a friends’ reunion.</p><strong>结尾怎么换</strong><p lang="en">It was a small change, but it made me more willing to try unfamiliar foods.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-group" data-topic="group"><summary><span class="kr-fit">需要新情节</span><h3>团队合作经历</h3><div class="kr-topic-en" lang="en">Describe a time when you worked in a group</div></summary><div class="kr-topic-body"><p>仅加入微信群不算团队合作。必须补充你实际做过的工作：例如帮忙定时间、协调食物、布置场地，且说明如何分工及结果。</p><div class="kr-route"><strong>答题路径：</strong>迎接归国好友的共同目标 → 分工 → 我具体负责什么 → 大家如何配合 → 顺利重聚</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">One time I worked together with a group of friends was when we organized a welcome-back party.</p><strong>结尾怎么换</strong><p lang="en">I was pleased that everyone contributed and we managed to make the reunion happen.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-difficult" data-topic="difficult"><summary><span class="kr-fit">需要新情节</span><h3>克服困难并成功的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who did something difficult and was successful</div></summary><div class="kr-topic-body"><p>把回国好友学会挪威语作为一个可能的成功案例，但必须补充真正的困难、付出的努力和可观察的成果，不能只说他“会说挪威语”。</p><div class="kr-route"><strong>答题路径：</strong>好友在挪威生活 → 语言障碍 → 练习与坚持 → 学有所成 → 我的佩服</div><div class="kr-sample"><strong>开头怎么换</strong><p lang="en">I’d like to talk about a close friend who worked hard to learn Norwegian after moving abroad.</p><strong>结尾怎么换</strong><p lang="en">Seeing how far he had come made me feel genuinely proud of him.</p></div></div></details>
+  </div>
+  <div class="kr-mother"><strong>母素材 · 不要机械套题</strong><p>发小联系 → 挪威好友回国 → 微信群组织 → 每人带特别的食物 → 温馨重聚 → 挪威语进步 → 尝到开菲尔 → 学到制作方法 → 老回忆 + 新收获</p><p>人物、技能、改变和团队合作题需要把对应事件扩写成主体。原答案中没有的事情，不要说成已经发生。</p><p><a href="https://shishiapcs.github.io/esl-speaking-ielts-topics-september-to-december-2026/" rel="noopener">↗ 查看 2026 年 9–12 月完整 Part 2 题库</a></p></div>
+</section>
+<p class="kr-footer">2026 年 9–12 月雅思口语 Master Story · Mr. Mou @ ShiShi AP Center</p>
+</div>
+<script>
+(() => {
+  "use strict";
+  const app = document.getElementById('kefirStudy');
+  if (!app) return;
+  const tabs = [...app.querySelectorAll('.kr-tab')];
+  const panels = [...app.querySelectorAll('.kr-panel')];
+  const valid = new Set(['story','answer','language','pronunciation','topics']);
+  const hashTab = window.location.hash.startsWith('#study-') ? window.location.hash.slice(7) : 'story';
+
+  function openTab(name, updateHash=true) {
+    if (!valid.has(name)) return;
+    tabs.forEach(tab => {
+      const selected = tab.dataset.tab === name;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      const active = panel.dataset.panel === name;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    if (updateHash && history.replaceState) {
+      history.replaceState(null, '', '#study-' + name);
+    }
+  }
+  function jumpToPanel(name) {
+    openTab(name);
+    app.querySelector('.kr-tabs-wrap').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => jumpToPanel(tab.dataset.tab));
+    tab.addEventListener('keydown', event => {
+      let next = null;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length-1;
+      if (next === null) return;
+      event.preventDefault();
+      tabs[next].focus();
+      openTab(tabs[next].dataset.tab);
+    });
+  });
+
+  const storySteps = [{"title": "发小联系我", "detail": "故事从一个微信消息开始。一位发小联系我，带来老朋友即将回国的消息。这一步负责交代人物关系，也自然引出聚会的原因。", "phrase": "a childhood friend of mine", "topics": ["childhood", "party"]}, {"title": "挪威好友归来", "detail": "我们的共同好友之前搬去了挪威，如今终于回来了。聚会不只是普通吃饭，而是一次为久别重逢而举办的欢迎派对。", "phrase": "who had moved to Norway", "topics": ["party", "childhood", "language-person"]}, {"title": "微信群组局", "detail": "发起人建了微信群，邀请大家参加，提出每人带一份特别的食物、最好自己做。这个细节能帮助回答“有条理的人”，但要让那个人成为主角，还需要进一步介绍他的安排能力。", "phrase": "set up a WeChat group", "topics": ["organized", "party"]}, {"title": "找到聚会场地", "detail": "朋友还找好了聚会地点。原答案没有指定餐馆或公寓，所以不必擅自补充；考场上只要交代一个真实可信的具体地点即可。", "phrase": "found a venue for all of us", "topics": ["party", "evening"]}, {"title": "老友终于重聚", "detail": "几天后大家终于见面了，氛围很轻松、温暖，让我有种回到童年时光的感觉。事件题的重点在这里：人物、氛围和真实的感受。", "phrase": "back in our childhood days", "topics": ["party", "evening", "childhood"]}, {"title": "挪威语小惊喜", "detail": "回国的朋友已经学会了挪威语，我真心替他高兴。这是人物题的重要线索，但若要回答“擅长学习语言的人”，还应补充他如何练习、克服了什么困难。", "phrase": "learned to speak Norwegian", "topics": ["language-person", "difficult"]}, {"title": "第一次尝开菲尔", "detail": "另一个朋友带来了一种看着像酸奶、其实不同的饮品——开菲尔（kefir）。它微酸、带点刺激性的风味，口感却很顺滑，是最鲜明的感官记忆。注意：原答案没有直接说出 kefir，可在实战时自选补充。", "phrase": "tangy and slightly sour", "topics": ["food", "evening"]}, {"title": "请教制作方法", "detail": "我主动问了做法，朋友解释了制作过程。这在原答案中已经出现；不过“听别人讲解”不等于“学会技能”，若转做技能题，要补充之后亲手制作和遇到的步骤。", "phrase": "explained the process to me", "topics": ["skill", "change"]}, {"title": "带走两份收获", "detail": "故事落在一个自然的对比上：既重温了旧时光，又收获了一个新配方。最后再说这样的聚会适合我，因为既能学点东西，又能与老朋友深入交流。", "phrase": "came away from that party", "topics": ["party", "evening", "change"]}];
+  const nodeButtons = [...app.querySelectorAll('.kr-story-node')];
+  const storyDetail = app.querySelector('#krStoryDetail');
+  const topicTitles = {"party": "印象深刻的聚会", "evening": "和朋友度过的愉快夜晚", "childhood": "童年好友", "organized": "有条理的人", "language-person": "擅长学习外语的人", "food": "特殊场合吃的食物", "skill": "教你新技能的人", "change": "最近做出的改变", "group": "团队合作经历", "difficult": "克服困难并成功的人"};
+  function renderStep(index) {
+    const s = storySteps[index];
+    if (!s) return;
+    nodeButtons.forEach((node, i) => {
+      node.classList.toggle('is-selected', i === index);
+      node.setAttribute('aria-pressed', String(i === index));
+    });
+    storyDetail.replaceChildren();
+    const title = document.createElement('h3');
+    title.textContent = s.title;
+    const desc = document.createElement('p');
+    desc.textContent = s.detail;
+    const links = document.createElement('div');
+    links.className = 'kr-detail-links';
+    const phrase = document.createElement('span');
+    phrase.className = 'kr-pill';
+    phrase.textContent = '🧩 ' + s.phrase;
+    links.appendChild(phrase);
+    s.topics.forEach(id => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'kr-pill';
+      btn.dataset.openTopic = id;
+      btn.textContent = '↗ ' + (topicTitles[id] || id);
+      links.appendChild(btn);
+    });
+    storyDetail.append(title, desc, links);
+  }
+  nodeButtons.forEach((node, i) => node.addEventListener('click', () => renderStep(i)));
+
+  app.addEventListener('click', event => {
+    const button = event.target.closest('[data-open-topic]');
+    if (!button || !app.contains(button)) return;
+    const topic = button.dataset.openTopic;
+    const card = app.querySelector('[data-topic="' + topic + '"]');
+    if (!card) return;
+    openTab('topics');
+    app.querySelectorAll('.kr-topic-card[open]').forEach(el => {
+      if (el !== card) el.open = false;
+    });
+    card.open = true;
+    card.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  app.querySelectorAll('.kr-topic-card').forEach(card => {
+    card.addEventListener('toggle', () => {
+      if (!card.open) return;
+      app.querySelectorAll('.kr-topic-card[open]').forEach(other => {
+        if (other !== card) other.open = false;
+      });
+    });
+  });
+  app.classList.add('is-enhanced');
+  openTab(valid.has(hashTab) ? hashTab : 'story', false);
+})();
+</script>
