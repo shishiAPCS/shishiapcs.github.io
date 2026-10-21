@@ -482,3 +482,19 @@ Before answering a Topic 2.1 question, check:
 * Would changing the order change the outcome?
   改变步骤顺序是否会改变结果？
 
+
+# Unit 2.1 Vocabulary
+## Algorithms with Selection and Repetition
+
+These are the key terms and concepts from Unit 2.1.
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **algorithm** / 算法 | A sequence of steps designed to solve a problem or complete a task. **Example:** A morning routine that tells you how to get ready for school. |
+| V02 | **sequencing** / 顺序执行 | Executing steps in a specific order, one after another. The order of steps can affect the result. **Example:** Wake up → Brush teeth → Eat breakfast. |
+| V03 | **selection / branching** / 选择结构、分支 | Choosing which steps to execute based on a true or false condition. **Example:** If it's raining, take an umbrella. |
+| V04 | **repetition / iteration / looping** / 重复、迭代、循环 | Executing a set of steps repeatedly until a specified condition is met. **Example:** Keep packing items until your schoolbag is ready. |
+| V05 | **condition** / 条件 | A test that evaluates to `true` or `false` and helps determine which steps to execute or repeat. **Example:** `total >= 10` checks whether you have at least $10. |
+| V06 | **pseudocode** / 伪代码 | An informal, human-readable way to describe an algorithm without following the exact syntax of a programming language. **Example:** `IF total >= 10, buy a cake.` |
+| V07 | **flowchart** / 流程图 | A diagram that uses shapes and arrows to show the steps and decisions in an algorithm. **Example:** A flowchart showing two different paths depending on whether it is raining. |
+
