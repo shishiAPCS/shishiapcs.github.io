@@ -692,3 +692,19 @@ Before answering a Topic 2.2 question, check:
 
 * For divisibility, does the remainder need to be `0`?
   判断整除时，余数是否应该为 `0`？
+
+
+
+# Unit 2.2 Vocabulary
+## Boolean Expressions
+
+These are the key terms and concepts from Unit 2.2.
+
+| Card | Vocabulary | Meaning & Example |
+| --- | --- | --- |
+| V01 | **Boolean expression** / 布尔表达式 | An expression that evaluates to either `true` or `false`. **Example:** `age >= 18` evaluates to `true` if age is at least 18. |
+| V02 | **relational operators** / 关系运算符 | Operators that compare two values and produce a Boolean result. They include `==` (equal to), `!=` (not equal to), `<` (less than), `>` (greater than), `<=` (less than or equal to), and `>=` (greater than or equal to). **Example:** `5 >= 3` evaluates to `true`. |
+| V03 | **assignment vs. equality** / 赋值与相等比较 | The assignment operator `=` stores a value in a variable, while the equality operator `==` checks whether two values are equal. **Example:** `age = 15;` assigns a value, while `age == 15` tests equality. |
+| V04 | **primitive vs. reference equality** / 基本类型值比较与引用比较 | With primitive types, `==` compares actual values. With reference types, `==` checks whether two references point to the same object. **Example:** `5 == 5` is `true`; two references to the same `Turtle` object also compare equal. |
+| V05 | **alias** / 别名 | Another reference variable that refers to the same object in memory. **Example:** after `Turtle friend = mia;`, both `friend` and `mia` refer to the same Turtle object, so `friend == mia` is `true`. |
+| V06 | **remainder operator (%)** / 取余运算符 | Returns the remainder after integer division. It can test whether a number is divisible by another number. **Example:** `7 % 3` returns `1`; `number % 2 == 0` tests whether a number is even, while `number % 2 != 0` tests whether it is odd. |
