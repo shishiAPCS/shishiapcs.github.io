@@ -1,0 +1,371 @@
+---
+title: "新托福口语 Social Interactions：四道 Interview 题怎么回答得自然、有逻辑？"
+layout: post
+categories: media
+render_with_liquid: false
+---
+<link rel="stylesheet" href="/assets/css/shishi-study-ui.css">
+<style>
+/* Social Interactions — same layout and shared ShiShi Study UI design tokens as Time Management post. */
+.social-interview-lab {
+ max-width:980px; margin:0 auto; color:inherit; line-height:1.72; font-size:1.01rem;
+ --si-surface:var(--study-surface); --si-surface-strong:var(--study-surface-strong);
+ --si-border:var(--study-border); --si-border-strong:var(--study-border-strong);
+ --si-shadow:var(--study-shadow); --si-radius-lg:var(--study-radius-lg);
+ --si-radius-md:var(--study-radius-md); --si-radius-sm:var(--study-radius-sm);
+}
+.social-interview-lab * { box-sizing:border-box; }
+.social-interview-lab h2,.social-interview-lab h3,.social-interview-lab h4 { color:inherit; line-height:1.33; }
+.social-interview-lab h2 { margin:.3rem 0 1.05rem; }
+.social-interview-lab h3 { margin:0 0 .6rem; font-size:1.15rem; }
+.social-interview-lab p { overflow-wrap:anywhere; }
+.social-interview-lab button { font:inherit; color:inherit; }
+.social-interview-lab section { scroll-margin-top:1.5rem; }
+.social-interview-lab .intro { font-size:1.06rem; }
+.social-interview-lab .minor { font-size:.89rem; opacity:.72; line-height:1.55; }
+.social-interview-lab .deck { margin:.45rem 0 1.1rem; }
+.social-interview-lab .lesson-core,.social-interview-lab .analysis-box,.social-interview-lab .sample-box,
+.social-interview-lab .vocab-box,.social-interview-lab .builder-output,.social-interview-lab .final-card,
+.social-interview-lab .practice-box,.social-interview-lab .question-card,.social-interview-lab .teaching-box {
+ border:1px solid var(--si-border); border-radius:var(--si-radius-lg); background:var(--si-surface);
+}
+.social-interview-lab .lesson-core { padding:1rem 1.15rem; margin:1.1rem 0 1.45rem; border-left:4px solid currentColor; border-radius:0 var(--si-radius-lg) var(--si-radius-lg) 0; }
+.social-interview-lab .question-map,.social-interview-lab .final-map { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; margin:1.15rem 0; }
+.social-interview-lab .map-card {
+ color:inherit; text-decoration:none; display:block; min-height:128px; padding:.88rem;
+ border:1px solid var(--si-border); border-radius:var(--si-radius-lg); background:var(--si-surface);
+ transition:transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.social-interview-lab .map-card:hover { transform:translateY(-2px); border-color:var(--si-border-strong); background:var(--si-surface-strong); box-shadow:var(--si-shadow); text-decoration:none; }
+.social-interview-lab .map-card:focus-visible,.social-interview-lab button:focus-visible,.social-interview-lab summary:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+.social-interview-lab .map-q { display:block; opacity:.65; letter-spacing:.07em; font-weight:800; font-size:.78rem; }
+.social-interview-lab .map-type { display:block; margin:.2rem 0 .38rem; font-weight:850; font-size:1.02rem; }
+.social-interview-lab .map-formula { display:block; opacity:.76; font-size:.86rem; line-height:1.45; }
+.social-interview-lab .section-divider { border:0; border-top:1px solid var(--si-border); margin:2.1rem 0; }
+.social-interview-lab .eyebrow { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; margin-bottom:.7rem; }
+.social-interview-lab .tag { border:1px solid var(--si-border); border-radius:999px; font-size:.78rem; font-weight:850; padding:.16rem .55rem; }
+.social-interview-lab .question-card { padding:1rem 1.08rem; border-left:4px solid currentColor; border-radius:0 var(--si-radius-lg) var(--si-radius-lg) 0; margin:.8rem 0 1rem; font-size:1.05rem; font-weight:640; }
+.social-interview-lab .formula { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; margin:1.05rem 0; }
+.social-interview-lab .formula-step { display:inline-block; padding:.35rem .6rem; font-weight:780; border:1px solid var(--si-border); border-radius:var(--si-radius-sm); background:var(--si-surface); }
+.social-interview-lab .arrow { opacity:.55; font-weight:900; }
+.social-interview-lab .analysis-box,.social-interview-lab .sample-box,.social-interview-lab .vocab-box,.social-interview-lab .teaching-box { margin:1rem 0; padding:1.1rem 1.15rem; }
+.social-interview-lab .analysis-box p { margin:.6rem 0; }
+.social-interview-lab .route { margin:.85rem 0; border-left:3px solid currentColor; padding:.75rem .85rem; font-weight:750; }
+.social-interview-lab .caution { margin:.85rem 0 0; padding:.78rem .88rem; border:1px dashed var(--si-border-strong); border-radius:var(--si-radius-md); }
+.social-interview-lab .builder { margin:1.35rem 0; }
+.social-interview-lab .trigger-instruction { margin:.3rem 0 .75rem; }
+.social-interview-lab .idea-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.58rem; }
+.social-interview-lab .idea-grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.social-interview-lab .idea-card { min-width:0; min-height:92px; text-align:left; cursor:pointer; border:1px solid var(--si-border); border-radius:var(--si-radius-md); background:var(--si-surface); padding:.73rem .75rem; }
+.social-interview-lab .idea-card b { display:block; margin:0 0 .24rem; font-weight:810; }
+.social-interview-lab .idea-card span { display:block; font-size:.84rem; opacity:.72; line-height:1.4; }
+.social-interview-lab .idea-card:hover { border-color:var(--si-border-strong); background:var(--si-surface-strong); }
+.social-interview-lab .idea-card[aria-pressed='true'] { font-weight:800; border-color:currentColor; background:var(--si-surface-strong); outline:1px solid currentColor; outline-offset:-2px; }
+.social-interview-lab .builder-output { margin-top:.75rem; padding:1rem 1.06rem; }
+.social-interview-lab .builder-output p { margin:.38rem 0; }
+.social-interview-lab .builder-label { font-weight:850; display:block; }
+.social-interview-lab .logic-line { font-weight:750; opacity:.87; }
+.social-interview-lab .spoken-line { margin-top:.6rem !important; padding-top:.5rem; border-top:1px solid var(--si-border); }
+.social-interview-lab .time-strip { display:grid; grid-template-columns:1fr 2.5fr 1fr; gap:.4rem; margin:.75rem 0 .9rem; }
+.social-interview-lab .time-strip div { border:1px solid var(--si-border); border-radius:var(--si-radius-sm); padding:.45rem .3rem; text-align:center; font-size:.86rem; background:var(--si-surface-strong); }
+.social-interview-lab .time-strip strong { display:block; font-size:.98rem; }
+.social-interview-lab .sample-header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.5rem; margin-bottom:.6rem; }
+.social-interview-lab .sample-header h3 { margin:0; }
+.social-interview-lab .sample-answer { font-size:1.035rem; line-height:1.85; margin:.25rem 0; }
+.social-interview-lab .copy-btn { border:1px solid var(--si-border); border-radius:var(--si-radius-sm); padding:.35rem .74rem; background:var(--si-surface); cursor:pointer; font-size:.85rem; min-height:38px; }
+.social-interview-lab .copy-btn:hover { background:var(--si-surface-strong); }
+.social-interview-lab .copy-status { min-height:1.1em; margin:.36rem 0 0; font-size:.85rem; opacity:.77; }
+.social-interview-lab .vocab-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.32rem .95rem; margin:.25rem 0; padding-left:1.25rem; }
+.social-interview-lab .vocab-list li { padding:0 0 .1rem; break-inside:avoid; }
+.social-interview-lab .vocab-list strong { font-weight:810; }
+.social-interview-lab details { margin:1.05rem 0; border:1px solid var(--si-border); border-radius:var(--si-radius-md); padding:.77rem .9rem; }
+.social-interview-lab summary { cursor:pointer; font-weight:780; }
+.social-interview-lab details p { margin:.6rem 0 .2rem; }
+.social-interview-lab .top-link { display:inline-block; margin:.35rem 0; font-size:.88rem; }
+.social-interview-lab .final-card { padding:.83rem; }
+.social-interview-lab .final-card .num { display:inline-grid; place-items:center; width:1.8rem; height:1.8rem; border:1px solid var(--si-border-strong); border-radius:50%; margin-right:.3rem; font-weight:900; }
+.social-interview-lab .final-card .final-formula { display:block; margin-top:.65rem; opacity:.76; font-size:.89rem; }
+.social-interview-lab .correction-table { width:100%; border-collapse:collapse; font-size:.94rem; }
+.social-interview-lab .correction-table th,.social-interview-lab .correction-table td { padding:.58rem .65rem; border-bottom:1px solid var(--si-border); text-align:left; vertical-align:top; }
+.social-interview-lab .correction-table th { font-weight:850; }
+.social-interview-lab .correction-table tr:last-child td { border-bottom:0; }
+.social-interview-lab .table-wrap { overflow-x:auto; }
+.social-interview-lab .practice-box { margin-top:1rem; padding:1.05rem 1.15rem; }
+@media (max-width:760px) {
+ .social-interview-lab .question-map,.social-interview-lab .final-map { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .social-interview-lab .idea-grid,.social-interview-lab .idea-grid.three { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .social-interview-lab .map-card { min-height:106px; }
+ .social-interview-lab .vocab-list { grid-template-columns:1fr; }
+}
+@media (max-width:410px) {
+ .social-interview-lab .question-map,.social-interview-lab .final-map { gap:.45rem; }
+ .social-interview-lab .map-card { padding:.7rem; }
+ .social-interview-lab .map-type { font-size:.93rem; }
+ .social-interview-lab .question-card { padding:.85rem; }
+ .social-interview-lab .analysis-box,.social-interview-lab .sample-box,.social-interview-lab .vocab-box { padding:.85rem; }
+ .social-interview-lab .time-strip { gap:.25rem; }
+}
+@media (prefers-reduced-motion:reduce) { .social-interview-lab .map-card { transition:none; } }
+</style>
+<div class="social-interview-lab" id="socialInterviewLab">
+  <p class="intro">这一组 <strong>Social Interactions</strong> Interview 题围绕社区活动、社交与健康、沟通方式的变化，以及线上交流是否会取代线下互动。四题的重点分别是：<strong>讲一个具体活动、解释双层好处、比较过去与现在、给出明确观点</strong>。</p>
+  <div class="lesson-core"><strong>本课核心：</strong>直接回答问题，再用一个具体例子或清晰的理由展开。练习时可以把每题控制在<strong>约 45 秒</strong>，但不必机械背诵；优先记住<strong>逻辑顺序和高频表达块</strong>。</div>
+  <div class="question-map" id="social-map" aria-label="Jump to four interview questions">
+    <a class="map-card" href="#social-q1"><span class="map-q">QUESTION 1</span><span class="map-type" lang="en">Activity + Example</span><span class="map-formula" lang="en">Activity → Example → Personal Value</span></a>
+    <a class="map-card" href="#social-q2"><span class="map-q">QUESTION 2</span><span class="map-type" lang="en">Benefits + Health</span><span class="map-formula" lang="en">Position → Practical Benefit → Emotional Benefit</span></a>
+    <a class="map-card" href="#social-q3"><span class="map-q">QUESTION 3</span><span class="map-type" lang="en">Change + Evaluation</span><span class="map-formula" lang="en">Change → Then vs. Now → Evaluation</span></a>
+    <a class="map-card" href="#social-q4"><span class="map-q">QUESTION 4</span><span class="map-type" lang="en">Opinion + Reason</span><span class="map-formula" lang="en">Position → Key Reason → Contrast → Conclusion</span></a>
+  </div>
+  <p class="minor">使用方法：先点击四题导航，再读中文答题分析；尝试点击不同思路卡，看英文逻辑链如何变化；最后朗读 Sample Answer 并练习其中的词块。每题的互动选项是迁移训练，范文只是其中一个自然的答法。</p>
+  <hr class="section-divider">
+  <section id="social-q1" aria-labelledby="social-q1-title">
+    <div class="eyebrow"><span class="tag">Q1 · COMMUNITY ACTIVITY</span><span class="minor">活动 + 例子</span></div>
+    <h2 id="social-q1-title">Question 1：社区活动：用一个具体场景解释你为什么喜欢</h2>
+    <div class="question-card" lang="en">Thank you for joining the interview. Today we’ll discuss social interactions within communities. Do you participate in community activities or groups? If so, what kinds do you enjoy? If not, what kind of group might you want to join and why?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Activity</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Example</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Personal Value</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+      <p>这是 <strong>Personal Experience + Preference</strong> 题。不仅要回答“是否参与”，还需要说明<strong>具体做什么</strong>和<strong>为什么喜欢</strong>。先说活动名称，再用节日期间的一个真实场景展开，最后说出它带来的社交价值。</p>
+      <p>原始回答中<strong>国庆节布置小区、挂国旗、摆放鲜花</strong>的画面感很好。新版保留这个细节，但把结尾从“看起来很好”推进到<strong>邻居更熟悉、社区归属感更强</strong>，从而真正回答 <em>what kinds do you enjoy</em>。</p>
+      <div class="route" lang="en">holiday decorations → national flags + flowers → neighbors work together → a stronger sense of community</div>
+      <div class="caution"><strong>常见问题：</strong>不要在“我们怎样装饰”上花完所有时间。题目问 <strong>enjoy</strong>，结尾一定要点明活动带来的快乐或人与人之间的联系。</div>
+    </div>
+    <div class="builder" data-builder="q1">
+      <h3>换一种社区活动，也能使用 Activity → Example → Personal Value</h3>
+      <p class="minor trigger-instruction">范文采用 Holiday Decorations；其他选项用于拓展同类话题。</p>
+      <div class="idea-grid" role="group" aria-label="Q1 brainstorm choices">
+        <button type="button" class="idea-card" data-key="decorations" aria-pressed="true"><b lang="en">Holiday Decorations</b><span>节日布置小区</span></button>
+        <button type="button" class="idea-card" data-key="cleanup" aria-pressed="false"><b lang="en">Neighborhood Cleanup</b><span>一起清理公共区域</span></button>
+        <button type="button" class="idea-card" data-key="sports" aria-pressed="false"><b lang="en">Community Sports</b><span>参加社区运动活动</span></button>
+        <button type="button" class="idea-card" data-key="festival" aria-pressed="false"><b lang="en">Community Festival</b><span>参加社区节庆活动</span></button>
+      </div>
+      <div class="builder-output" aria-live="polite"><strong class="builder-label">Holiday Decorations → 节日布置</strong><p class="builder-description">在重要节日和邻居一起挂旗、摆花，公共空间变得有节日氛围。</p><p class="logic-line" lang="en">decorating together → shared experience → closer neighbors</p><p class="spoken-line" lang="en">We decorate our apartment complex together during holidays, and it brings everyone closer.</p></div>
+    </div>
+    <div class="sample-box">
+      <div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="social-q1-answer" aria-label="Copy Q1 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="social-q1-answer" lang="en">Yes, I do. One community activity I particularly enjoy is decorating our residential complex for major holidays, like National Day. For example, last year, my neighbors and I put up national flags around our apartment buildings and decorated the walkways with flowers. It was a lot of fun, and the whole neighborhood looked really festive. What I like most is that these activities bring neighbors together. They give us a chance to get to know each other better and create a stronger sense of community.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list">
+      <li><strong lang="en">take part in community activities</strong> — 参加社区活动</li>
+      <li><strong lang="en">particularly enjoy</strong> — 特别喜欢</li>
+      <li><strong lang="en">residential complex / apartment complex</strong> — 住宅小区 / 公寓住宅区</li>
+      <li><strong lang="en">major holidays</strong> — 重要节日</li>
+      <li><strong lang="en">put up national flags</strong> — 悬挂国旗</li>
+      <li><strong lang="en">decorate the walkways with flowers</strong> — 用鲜花装饰步道</li>
+      <li><strong lang="en">look really festive</strong> — 看起来特别有节日气氛</li>
+      <li><strong lang="en">bring neighbors together</strong> — 拉近邻居之间的距离</li>
+      <li><strong lang="en">get to know each other better</strong> — 加深彼此了解</li>
+      <li><strong lang="en">create a stronger sense of community</strong> — 增强社区归属感</li>
+      <li><strong lang="en">common areas</strong> — 公共区域（词汇拓展）</li>
+    </ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“你最喜欢哪项学校活动？”也可以先说活动、举一个场景，再说它如何让你和同学更熟悉。结构不变，只换内容。</p></details>
+    <a class="top-link" href="#social-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="section-divider">
+  <section id="social-q2" aria-labelledby="social-q2-title">
+    <div class="eyebrow"><span class="tag">Q2 · BENEFITS + HEALTH</span><span class="minor">观点 + 两层好处</span></div>
+    <h2 id="social-q2-title">Question 2：社会交往与健康：从实际帮助讲到心理健康</h2>
+    <div class="question-card" lang="en">Thank you. How important do you think social interactions are for maintaining a healthy lifestyle? Please explain why.</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Position</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Practical Benefit</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Emotional Benefit</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+      <p>这是 <strong>Opinion + Explanation</strong> 题。题目的关键词是 <strong>healthy lifestyle</strong>，因此只列举生活便利还不够，要把邻里互助和<strong>情绪、心理健康</strong>联系起来。</p>
+      <p>原回答提到邻居会在受伤时帮忙，也可以借用厨房用品。这些细节很接地气。升级时，可以先保留一个<strong>日常求助的例子</strong>，再补充 <strong>a sense of belonging / feel less isolated</strong>，从物质便利自然过渡到心理支持。</p>
+      <div class="route" lang="en">social connections → help with everyday needs → sense of belonging → better well-being</div>
+      <div class="caution"><strong>常见问题：</strong>不要偏题成“邻居能借盐，所以健康”。具体的生活便利只能是第一层理由；更重要的是解释<strong>人与人的联系如何减少孤独感</strong>。</div>
+    </div>
+    <div class="builder" data-builder="q2">
+      <h3>点击一个角度：把抽象的 healthy lifestyle 变成可说的具体理由</h3>
+      <p class="minor trigger-instruction">范文采用 Everyday Help + Belonging 两层论证。</p>
+      <div class="time-strip" aria-label="Suggested 45-second speaking plan"><div><strong>10s</strong>Position</div><div><strong>20s</strong>Practical Example</div><div><strong>15s</strong>Emotional Benefit</div></div>
+      <div class="idea-grid" role="group" aria-label="Q2 brainstorm choices">
+        <button type="button" class="idea-card" data-key="help" aria-pressed="true"><b lang="en">Everyday Help</b><span>遇到小困难有人帮忙</span></button>
+        <button type="button" class="idea-card" data-key="belonging" aria-pressed="false"><b lang="en">Sense of Belonging</b><span>减少孤独、增加归属感</span></button>
+        <button type="button" class="idea-card" data-key="support" aria-pressed="false"><b lang="en">Emotional Support</b><span>压力大时有人可以倾诉</span></button>
+        <button type="button" class="idea-card" data-key="active" aria-pressed="false"><b lang="en">Active Lifestyle</b><span>一起运动更容易坚持</span></button>
+      </div>
+      <div class="builder-output" aria-live="polite"><strong class="builder-label">Everyday Help → 实际帮助</strong><p class="builder-description">有事情需要搭把手，或者临时缺少做饭的材料，可以找邻居。</p><p class="logic-line" lang="en">nearby neighbors → quick practical help → easier daily life</p><p class="spoken-line" lang="en">If I run out of a cooking ingredient, I can simply ask a neighbor for some.</p></div>
+    </div>
+    <div class="sample-box">
+      <div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="social-q2-answer" aria-label="Copy Q2 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="social-q2-answer" lang="en">I think social interactions are essential for both our mental and physical well-being, especially for people living in big cities. For one thing, having good relationships with your neighbors can make everyday life much easier. For example, if you need help with something or run out of a cooking ingredient, you can always turn to a neighbor. More importantly, these connections give people a sense of belonging and make them feel less isolated. So I think maintaining good social relationships is an important part of a healthy lifestyle.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list">
+      <li><strong lang="en">social interactions</strong> — 社会交往</li>
+      <li><strong lang="en">mental and physical well-being</strong> — 身心健康</li>
+      <li><strong lang="en">having good relationships with your neighbors</strong> — 与邻居保持良好关系</li>
+      <li><strong lang="en">everyday life</strong> — 日常生活</li>
+      <li><strong lang="en">run out of a cooking ingredient</strong> — 做饭时某种食材/调料用完了</li>
+      <li><strong lang="en">turn to a neighbor</strong> — 向邻居求助</li>
+      <li><strong lang="en">For one thing ... More importantly ...</strong> — 一方面……更重要的是……</li>
+      <li><strong lang="en">a sense of belonging</strong> — 归属感</li>
+      <li><strong lang="en">feel less isolated</strong> — 不那么孤立 / 减少孤独感</li>
+      <li><strong lang="en">maintain good social relationships</strong> — 维持良好社交关系</li>
+      <li><strong lang="en">a healthy lifestyle</strong> — 健康的生活方式</li>
+    </ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>把“社区”换成“学校”：同学之间互相帮助是第一层；获得支持、减少压力是第二层。同样适用于“友谊对学生有多重要？”</p></details>
+    <a class="top-link" href="#social-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="section-divider">
+  <section id="social-q3" aria-labelledby="social-q3-title">
+    <div class="eyebrow"><span class="tag">Q3 · CHANGE + EVALUATION</span><span class="minor">过去与现在 + 评价</span></div>
+    <h2 id="social-q3-title">Question 3：社交方式的变化：先比较，再表达你的评价</h2>
+    <div class="question-card" lang="en">I see. What’s one change you’ve noticed in the ways you or your friends interact socially over the past few years? Was this change good or bad in your opinion?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Change</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Then vs. Now</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Evaluation</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+      <p>这是 <strong>Change + Evaluation</strong> 题，包含两个明确任务：<strong>变化是什么</strong>，以及<strong>你怎么看</strong>。最容易掌控的答法是先用一句点明变化，再用过去与现在的对比举例，最后判断利弊。</p>
+      <p>原始回答把 WeChat、手机、短信、语音和视频通话都提到了，但顺序稍显分散。新版把它们串成一条对比线：<strong>以前写信或打普通电话 → 现在随时发消息、视频通话 → 联系远方亲友更方便</strong>。</p>
+      <div class="route" lang="en">more online communication → letters / phone calls vs. messages / video calls → easier long-distance relationships</div>
+      <div class="caution"><strong>常见问题：</strong>别连续罗列很多 App 或技术名词而忘记评价。题目明确问 <strong>good or bad</strong>，需要说出立场及<strong>为什么这个变化有意义</strong>。</div>
+    </div>
+    <div class="builder" data-builder="q3">
+      <h3>选择一个“社交变化”，练习过去—现在—评价的三步逻辑</h3>
+      <p class="minor trigger-instruction">范文使用 Online Communication；也可以迁移到其他社会趋势。</p>
+      <div class="idea-grid" role="group" aria-label="Q3 brainstorm choices">
+        <button type="button" class="idea-card" data-key="online" aria-pressed="true"><b lang="en">Online Communication</b><span>更多使用线上沟通</span></button>
+        <button type="button" class="idea-card" data-key="video" aria-pressed="false"><b lang="en">Video Calls</b><span>从听声音到能见面</span></button>
+        <button type="button" class="idea-card" data-key="groups" aria-pressed="false"><b lang="en">Group Chats</b><span>群聊让活动组织更高效</span></button>
+        <button type="button" class="idea-card" data-key="less" aria-pressed="false"><b lang="en">Less In-Person Time</b><span>线下见面次数减少</span></button>
+      </div>
+      <div class="builder-output" aria-live="polite"><strong class="builder-label">Online Communication → 联系更方便</strong><p class="builder-description">微信、短信、语音和视频通话使联系远方亲友更便利。</p><p class="logic-line" lang="en">letters / calls → instant messages → easier contact</p><p class="spoken-line" lang="en">Apps like WeChat make it much easier to stay in touch with people who live far away.</p></div>
+    </div>
+    <div class="sample-box">
+      <div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="social-q3-answer" aria-label="Copy Q3 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="social-q3-answer" lang="en">One major change I&#x27;ve noticed is that people rely much more on online communication than they used to. Thanks to smartphones and apps like WeChat, we can now stay in touch with friends and family almost anytime, anywhere. Instead of writing letters or making traditional phone calls, we can simply send a text, leave a voice message, or make a video call. Overall, I think this is a positive change because it makes communication faster and more convenient. It also helps us maintain close relationships with people who live far away.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list">
+      <li><strong lang="en">one major change I’ve noticed</strong> — 我注意到的一个重大变化</li>
+      <li><strong lang="en">rely much more on</strong> — 更加依赖……</li>
+      <li><strong lang="en">online communication</strong> — 线上交流</li>
+      <li><strong lang="en">thanks to smartphones and apps</strong> — 多亏了智能手机和应用程序</li>
+      <li><strong lang="en">stay in touch with</strong> — 与……保持联系</li>
+      <li><strong lang="en">almost anytime, anywhere</strong> — 几乎随时随地</li>
+      <li><strong lang="en">instead of doing something</strong> — 不是做……而是……</li>
+      <li><strong lang="en">send a text</strong> — 发一条文字消息</li>
+      <li><strong lang="en">leave a voice message</strong> — 发一条语音留言</li>
+      <li><strong lang="en">make a video call</strong> — 打视频电话</li>
+      <li><strong lang="en">a positive change</strong> — 积极的变化</li>
+      <li><strong lang="en">maintain close relationships</strong> — 维系亲密关系</li>
+    </ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“这几年学生的学习方式发生了什么变化？”可以套用 Change → Then vs. Now → Evaluation：以前纸笔查资料，现在用在线工具，最后评价效率或分心问题。</p></details>
+    <a class="top-link" href="#social-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="section-divider">
+  <section id="social-q4" aria-labelledby="social-q4-title">
+    <div class="eyebrow"><span class="tag">Q4 · OPINION + REASON</span><span class="minor">立场 + 核心理由</span></div>
+    <h2 id="social-q4-title">Question 4：线上能替代线下吗？抓住“非语言信息”这条主线</h2>
+    <div class="question-card" lang="en">Good insights. One more question: Do you think online social platforms will eventually replace face-to-face interactions, or will personal interactions remain indispensable? Why do you think so?</div>
+    <div class="formula" aria-label="Answer structure"><span class="formula-step" lang="en">Position</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Key Reason</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Contrast</span><span class="arrow" aria-hidden="true">→</span><span class="formula-step" lang="en">Conclusion</span></div>
+    <div class="analysis-box"><h3>答题思路：先抓住题目真正要你回答的内容</h3>
+      <p>这是 <strong>Future Prediction + Opinion</strong> 题。你不必预测技术发展的每个细节，重点是说明<strong>为什么线下面对面互动仍然不可替代</strong>。先给立场，再围绕一个有说服力的理由展开。</p>
+      <p>原始回答中的<strong>肢体语言、面部表情、语气</strong>是最值得保留的核心材料。新版先概括“交流不只是信息传递”，再说明这些细微线索如何帮助我们理解情绪，最后承认线上交流方便，但仍需要线下互动建立信任。</p>
+      <div class="route" lang="en">face-to-face still matters → body language + facial expressions + tone → understand feelings → build trust</div>
+      <div class="caution"><strong>常见问题：</strong>注意 <strong>tone of voice</strong> 既可能在线上语音中出现，也可能在线下出现；更准确的说法是<strong>面对面能把语言、语气、表情和肢体动作结合起来</strong>，而不是说线上完全看不到任何表情。</div>
+    </div>
+    <div class="builder" data-builder="q4">
+      <h3>点击不同论据，练习把“不可替代”解释具体</h3>
+      <p class="minor trigger-instruction">范文以 Nonverbal Cues 为主；其他卡片是可以替换的支持理由。</p>
+      <div class="idea-grid" role="group" aria-label="Q4 brainstorm choices">
+        <button type="button" class="idea-card" data-key="cues" aria-pressed="true"><b lang="en">Nonverbal Cues</b><span>面部表情与肢体语言</span></button>
+        <button type="button" class="idea-card" data-key="trust" aria-pressed="false"><b lang="en">Build Trust</b><span>建立信任</span></button>
+        <button type="button" class="idea-card" data-key="emotion" aria-pressed="false"><b lang="en">Emotional Connection</b><span>情感联系更强</span></button>
+        <button type="button" class="idea-card" data-key="balance" aria-pressed="false"><b lang="en">Online + Offline</b><span>线上方便、线下重要</span></button>
+      </div>
+      <div class="builder-output" aria-live="polite"><strong class="builder-label">Nonverbal Cues → 非语言线索</strong><p class="builder-description">面对面能结合语气、表情、姿态，理解对方真正的感受。</p><p class="logic-line" lang="en">facial expressions + body language → better understanding</p><p class="spoken-line" lang="en">In person, we can pick up on subtle cues that are easy to miss online.</p></div>
+    </div>
+    <div class="sample-box">
+      <div class="sample-header"><h3>Sample Answer</h3><button type="button" class="copy-btn" data-copy="social-q4-answer" aria-label="Copy Q4 sample answer">Copy answer</button></div>
+      <p class="sample-answer" id="social-q4-answer" lang="en">No, I don&#x27;t think online platforms will ever completely replace face-to-face interactions. The main reason is that human communication involves much more than just exchanging information. When we talk to someone in person, we can pick up on subtle cues, like their facial expressions, body language, and tone of voice. These details help us understand how someone really feels. While online communication is convenient, I believe face-to-face interactions are still essential for building trust and maintaining meaningful relationships.</p>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </div>
+    <div class="vocab-box"><h3>Core Vocabulary &amp; Chunks</h3><ul class="vocab-list">
+      <li><strong lang="en">face-to-face interactions</strong> — 面对面的互动</li>
+      <li><strong lang="en">remain indispensable</strong> — 仍然不可或缺</li>
+      <li><strong lang="en">completely replace</strong> — 完全取代</li>
+      <li><strong lang="en">human communication involves much more than ...</strong> — 人与人交流远不止……</li>
+      <li><strong lang="en">exchange information</strong> — 交换信息</li>
+      <li><strong lang="en">in person</strong> — 亲自 / 面对面</li>
+      <li><strong lang="en">pick up on subtle cues</strong> — 察觉细微线索</li>
+      <li><strong lang="en">facial expressions</strong> — 面部表情</li>
+      <li><strong lang="en">body language</strong> — 肢体语言</li>
+      <li><strong lang="en">tone of voice</strong> — 说话的语气</li>
+      <li><strong lang="en">build trust</strong> — 建立信任</li>
+      <li><strong lang="en">maintain meaningful relationships</strong> — 维持有意义的人际关系</li>
+    </ul></div>
+    <details><summary>举一反三：这种题型还能怎么用？</summary><p>“AI 能否取代教师？”也可以先说立场，再聚焦一个难以替代的核心价值，如情感理解或实时反馈，最后用让步句承认技术的便利。</p></details>
+    <a class="top-link" href="#social-map">↑ 返回四题导航</a>
+  </section>
+  <hr class="section-divider">
+  <section id="social-summary" aria-labelledby="social-summary-title">
+    <h2 id="social-summary-title">四道题，四个可复用的思维模型</h2>
+    <p>口语表达不需要每题都想新模板。先判断：题目是在问<strong>参加什么、为什么重要、发生了什么变化，还是未来会怎样</strong>？选对结构，然后填入真实生活中的细节。</p>
+    <div class="final-map">
+      <div class="final-card"><span class="num">1</span><strong lang="en">Activity + Example</strong><span class="final-formula" lang="en">Activity → Example → Personal Value</span></div>
+      <div class="final-card"><span class="num">2</span><strong lang="en">Benefits + Health</strong><span class="final-formula" lang="en">Position → Practical Benefit → Emotional Benefit</span></div>
+      <div class="final-card"><span class="num">3</span><strong lang="en">Change + Evaluation</strong><span class="final-formula" lang="en">Change → Then vs. Now → Evaluation</span></div>
+      <div class="final-card"><span class="num">4</span><strong lang="en">Opinion + Reason</strong><span class="final-formula" lang="en">Position → Key Reason → Contrast → Conclusion</span></div>
+    </div>
+    <div class="teaching-box"><h3>45 秒自检：回答完整了吗？</h3>
+      <p><strong>Q1：</strong>有没有说出一个具体活动，并解释自己<strong>为什么喜欢</strong>？</p>
+      <p><strong>Q2：</strong>有没有把社交从<strong>生活便利</strong>推进到<strong>心理或身体健康</strong>？</p>
+      <p><strong>Q3：</strong>有没有交代过去与现在的<strong>对比</strong>，并明确判断好坏？</p>
+      <p><strong>Q4：</strong>有没有明确的立场、一个核心理由和一句有说服力的总结？</p>
+    </div>
+    <details class="practice-box"><summary>纠错加餐：原始口述中值得记住的自然表达</summary>
+      <p>这里保留具有教学价值的用词与句法对照；个别词（如 <span lang="en">official expressions</span>）可能是语音转写识别错误，不必认定为说话者真正使用的词。</p>
+      <div class="table-wrap"><table class="correction-table"><thead><tr><th>Original wording / transcript</th><th>More natural expression</th></tr></thead><tbody>
+      <tr><td lang="en">on the 2 sides of the pathway</td><td lang="en"><strong>on both sides of the walkway</strong></td></tr>
+      <tr><td lang="en">how our nation was found</td><td lang="en"><strong>how our nation was founded</strong></td></tr>
+      <tr><td lang="en">during national holiday</td><td lang="en"><strong>during the National Day holiday</strong></td></tr>
+      <tr><td lang="en">people who near you</td><td lang="en"><strong>people who live near you</strong></td></tr>
+      <tr><td lang="en">provide basic needs</td><td lang="en"><strong>help with everyday needs</strong></td></tr>
+      <tr><td lang="en">it’s satisfactory</td><td lang="en"><strong>it gives people a sense of belonging</strong></td></tr>
+      <tr><td lang="en">comparing with, in old times</td><td lang="en"><strong>compared with the past / in the past</strong></td></tr>
+      <tr><td lang="en">we might wrote letters</td><td lang="en"><strong>we might have written letters</strong></td></tr>
+      <tr><td lang="en">find our friends or families</td><td lang="en"><strong>keep in touch with friends and family</strong></td></tr>
+      <tr><td lang="en">we can video call them, which we can see their face</td><td lang="en"><strong>we can make video calls and see their faces</strong></td></tr>
+      <tr><td lang="en">build a relationship with others</td><td lang="en"><strong>build relationships with others</strong></td></tr>
+      <tr><td lang="en">pick our language cue</td><td lang="en"><strong>pick up on subtle cues</strong></td></tr>
+      <tr><td lang="en">official expressions [可能为转写错误]</td><td lang="en"><strong>facial expressions</strong></td></tr>
+      <tr><td lang="en">Interactions with others is more than exchange of message</td><td lang="en"><strong>Interacting with others is about more than exchanging messages</strong></td></tr>
+      </tbody></table></div>
+      <p>重点对比：<strong lang="en">get in touch</strong> 表示联系上某人，<strong lang="en">keep in touch</strong> 更侧重长期保持联系；<strong lang="en">pick up on cues</strong> 表示察觉语气、表情等细微信号。</p>
+    </details>
+    <p class="minor">说明：四段英文 Sample Answers 来自本次 Social Interactions 口语修改后的示范回答；中文分析、可点击思路卡和词块用于课堂训练。用词以自然口语为目标，不建议逐字死记。</p>
+  </section>
+</div>
+<script>
+(function(){
+  'use strict';
+  const root = document.getElementById('socialInterviewLab');
+  if (!root) return;
+  const routes = {"q1":{"decorations":["Holiday Decorations → 节日布置","在重要节日和邻居一起挂旗、摆花，公共空间变得有节日氛围。","decorating together → shared experience → closer neighbors","We decorate our apartment complex together during holidays, and it brings everyone closer."],"cleanup":["Neighborhood Cleanup → 社区清洁","周末一起清理步道、捡垃圾，让环境更干净，也顺便认识邻居。","clean up shared spaces → meet neighbors → build community","I enjoy neighborhood cleanups because we can improve our surroundings and meet new people."],"sports":["Community Sports → 运动活动","小区组织慢跑、羽毛球或周末运动，既能锻炼也能社交。","exercise together → talk naturally → feel connected","Playing badminton with my neighbors helps me stay active and make new friends."],"festival":["Community Festival → 社区节庆","小区举办节日聚会，邻居分享食物、聊天，营造轻松氛围。","festival gathering → share food → stronger friendships","Community festivals are fun because people can share food and get to know one another."]},"q2":{"help":["Everyday Help → 实际帮助","有事情需要搭把手，或者临时缺少做饭的材料，可以找邻居。","nearby neighbors → quick practical help → easier daily life","If I run out of a cooking ingredient, I can simply ask a neighbor for some."],"belonging":["Sense of Belonging → 心理健康","熟悉的邻里关系使人感到被接纳，尤其在大城市里更重要。","regular interaction → less loneliness → emotional well-being","Good relationships with neighbors give people a sense of belonging."],"support":["Emotional Support → 情绪支持","遇到压力时和朋友聊一聊，可以获得理解和鼓励。","share concerns → feel supported → reduce stress","Talking with friends can help people feel supported when life gets stressful."],"active":["Active Lifestyle → 身体健康","约邻居或朋友运动，社交与身体锻炼可以同时发生。","exercise with others → motivation → healthy routines","Joining a walking group can make regular exercise more enjoyable."]},"q3":{"online":["Online Communication → 联系更方便","微信、短信、语音和视频通话使联系远方亲友更便利。","letters / calls → instant messages → easier contact","Apps like WeChat make it much easier to stay in touch with people who live far away."],"video":["Video Calls → 沟通更直观","现在随时可以视频，远方亲友能看到彼此的表情。","phone calls → video calls → more personal connection","Video calls let us see each other even when we live in different cities."],"groups":["Group Chats → 组织更方便","朋友可以在一个群里同时确定聚会的地点和时间。","individual calls → group chat → easy coordination","A group chat makes it much easier to plan a get-together with friends."],"less":["Less In-Person Time → 便利也有代价","虽然沟通更多，但有些人更少主动约朋友面对面见面。","more screen time → fewer meetups → weaker personal connection","Online chats are convenient, but they can sometimes replace meaningful face-to-face time."]},"q4":{"cues":["Nonverbal Cues → 非语言线索","面对面能结合语气、表情、姿态，理解对方真正的感受。","facial expressions + body language → better understanding","In person, we can pick up on subtle cues that are easy to miss online."],"trust":["Build Trust → 信任感","共同经历与真实的互动更容易建立稳固的关系。","shared experiences → stronger trust → closer relationships","Spending time together in person helps people build trust."],"emotion":["Emotional Connection → 情感连接","面对面交流更容易感受到对方的反应与关心。","presence + immediate response → emotional connection","Face-to-face conversations often feel more personal and meaningful."],"balance":["Online + Offline → 平衡观点","线上保持频繁联系，线下维系更深层的关系。","online convenience + in-person depth → healthy balance","Online platforms help us stay connected, but they should complement real-life interactions."]}};
+  root.querySelectorAll('[data-builder]').forEach(builder => {
+    const group = builder.getAttribute('data-builder');
+    const output = builder.querySelector('.builder-output');
+    const btns = Array.from(builder.querySelectorAll('[data-key]'));
+    const activate = key => {
+      const data = routes[group] && routes[group][key];
+      if (!data || !output) return;
+      btns.forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.key === key)));
+      output.querySelector('.builder-label').textContent = data[0];
+      output.querySelector('.builder-description').textContent = data[1];
+      output.querySelector('.logic-line').textContent = data[2];
+      output.querySelector('.spoken-line').textContent = data[3];
+    };
+    btns.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.key)));
+  });
+  root.querySelectorAll('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
+    const target = root.querySelector('#' + btn.dataset.copy);
+    const status = btn.closest('.sample-box').querySelector('.copy-status');
+    if (!target) return;
+    try {
+      await navigator.clipboard.writeText(target.textContent.trim());
+      status.textContent = '已复制英文范文';
+    } catch (err) {
+      status.textContent = '复制不可用：请选中范文后手动复制';
+    }
+  }));
+})();
+</script>
