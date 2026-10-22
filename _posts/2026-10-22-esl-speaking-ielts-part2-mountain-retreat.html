@@ -1,0 +1,406 @@
+---
+layout: post
+title: "雅思口语 Part 2: 青城山下的家与餐厅 The Mountain Retreat"
+date: 2026-10-22
+permalink: /esl-speaking-ielts-part2-mountain-retreat/
+---
+
+<script defer src="{{ '/assets/js/pronunciation.js' | relative_url }}"></script>
+<style>
+/* Mountain Retreat Master Story — page-scoped ShiShi Study UI.
+   IMPORTANT: respect the site's existing article column; no 1180px breakout. */
+.mountain-study {
+  --surface: var(--study-surface, rgba(128,128,135,.075));
+  --surface-strong: var(--study-surface-strong, rgba(128,128,135,.14));
+  --border: var(--study-border, rgba(145,145,155,.26));
+  --border-strong: var(--study-border-strong, rgba(155,155,165,.43));
+  --shadow: var(--study-shadow, 0 12px 32px rgba(0,0,0,.12));
+  --radius-lg: var(--study-radius-lg, 18px);
+  --radius-md: var(--study-radius-md, 12px);
+  --radius-sm: var(--study-radius-sm, 8px);
+  box-sizing: border-box;
+  display: block;
+  width: 100%; max-width: 100%; min-width: 0;
+  margin: 0; padding: 0; transform: none;
+  color: inherit; line-height: 1.72;
+  overflow-wrap: break-word;
+}
+.mountain-study *, .mountain-study *::before, .mountain-study *::after { box-sizing: border-box; }
+.mountain-study button,.mountain-study summary { font: inherit; }
+.mountain-study button,.mountain-study a { color: inherit; }
+.mountain-study button { -webkit-tap-highlight-color: transparent; }
+.mountain-study button:focus-visible,.mountain-study summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.mountain-study .kr-hero {
+  padding: clamp(1.1rem, 3vw, 2.6rem);
+  margin: 1.1rem 0 .85rem;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top right, var(--surface-strong), transparent 48%), var(--surface);
+}
+.kr-kicker { margin: 0 0 .3rem; font-size: .77rem; font-weight: 800; letter-spacing: .075em; opacity: .67; }
+.mountain-study .kr-hero h1 { margin: .1rem 0; font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.08; letter-spacing: -.035em; }
+.kr-hero-cn { margin: .5rem 0 0; font-size: 1.04rem; opacity: .78; }
+.kr-question { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.1rem; margin-top: 1.05rem; background: var(--surface-strong); }
+.kr-question h2 { font-size: .96rem; margin: 0 0 .4rem; }
+.kr-question p { margin: .45rem 0; }
+.kr-question ul { padding-left: 1.35rem; margin: .4rem 0 0; }
+.kr-question li { margin: .12rem 0; }
+.kr-hero-note { margin: 1rem 0 .3rem; font-size: .95rem; }
+.kr-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .55rem; margin-top: 1.05rem; }
+.kr-stat { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius-md); padding: .75rem .85rem; min-width: 0; }
+.kr-stat strong { display: block; font-size: 1.37rem; line-height: 1.18; font-weight: 800; }
+.kr-stat span { display: block; font-size: .73rem; margin-top: .16rem; opacity: .72; }
+.kr-tabs-wrap { position: sticky; top: .4rem; z-index: 30; max-width: 100%; margin: 0 0 1rem; }
+.kr-tabs { display: flex; gap: .2rem; overflow-x: auto; overscroll-behavior-x: contain; padding: .38rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-strong); box-shadow: var(--shadow); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); scrollbar-width: none; max-width: 100%; }
+.kr-tabs::-webkit-scrollbar { display: none; }
+.kr-tab { flex: 0 0 auto; white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; padding: .55rem .68rem; font-size: .84rem !important; cursor: pointer; font-weight: 700 !important; }
+.kr-tab:hover { background: var(--surface); }
+.kr-tab[aria-selected="true"] { border-color: var(--border-strong); background: var(--surface-strong); }
+.mountain-study:not(.is-enhanced) .kr-panel { display: block; margin-bottom: 2rem; }
+.mountain-study.is-enhanced .kr-panel { display: none; }
+.mountain-study.is-enhanced .kr-panel.is-active { display: block; animation: krFade .2s ease-out; }
+@keyframes krFade { from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none} }
+.kr-section-head { margin: 1.25rem 0 .8rem; }
+.mountain-study .kr-section-head h2 { margin: 0; font-size: clamp(1.5rem,3vw,2rem); line-height:1.2; }
+.kr-section-head p { margin:.35rem 0 0; opacity:.73; font-size:.94rem; }
+.kr-panel { min-width: 0; }
+.kr-callout,.kr-detail,.kr-answer-card,.kr-anchor-card,.kr-chunk-card,.kr-topic-card,.kr-note {
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); min-width: 0;
+}
+.kr-callout { padding: .85rem 1rem; margin: .6rem 0 .85rem; font-size: .91rem; }
+.kr-callout strong { display: block; margin-bottom: .25rem; }
+.kr-story-map { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .62rem; margin:.95rem 0; }
+.kr-story-node { position: relative; min-width: 0; padding: .85rem .9rem; min-height: 116px; cursor:pointer; text-align:left; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); }
+.kr-story-node:hover,.kr-story-node.is-selected { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-story-node:not(:nth-child(3n))::after { content:"→"; position:absolute; right:-.55rem; top:50%; transform:translateY(-50%); z-index:1; font-weight:800; opacity:.48; pointer-events:none; }
+.kr-node-icon { display: block; font-size: 1.4rem; margin-bottom: .4rem; }
+.kr-story-node strong { display: block; font-size: .94rem; line-height:1.3; }
+.kr-story-node small { display:block; font-size:.76rem; opacity:.7; margin-top:.24rem; line-height:1.38; }
+.kr-detail { padding:1rem 1.1rem; margin-top:.7rem; }
+.kr-detail h3 { margin:0 0 .42rem; font-size:1.06rem; }
+.kr-detail p { margin:0; }
+.kr-detail-links { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.75rem; }
+.kr-pill { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; padding:.3rem .58rem; border:1px solid var(--border); border-radius:999px; background:var(--surface); font-size:.79rem; line-height:1.4; }
+button.kr-pill { cursor:pointer; }
+button.kr-pill:hover { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-answer-stack { display:grid; gap:.72rem; }
+.kr-answer-card { padding:1.05rem 1.15rem; }
+.kr-answer-num { display:inline-block; border:1px solid var(--border); border-radius:999px; font-size:.75rem; font-weight:800; padding:.08rem .5rem; margin-bottom:.5rem; }
+.kr-answer-card p { margin:0; }
+.kr-answer-card .kr-cn { border-top:1px dashed var(--border); padding-top:.65rem; margin-top:.72rem; opacity:.78; }
+.kr-micro-note { margin:.7rem 0 0; opacity:.75; font-size:.87rem; }
+.kr-subhead { font-size:1.12rem; margin:1.4rem 0 .65rem; }
+.kr-anchor-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:.6rem; }
+.kr-anchor-card, .kr-chunk-card, .kr-topic-card { overflow:hidden; }
+.kr-anchor-card summary,.kr-chunk-card summary,.kr-topic-card summary { cursor:pointer; list-style:none; }
+.kr-anchor-card summary::-webkit-details-marker,.kr-chunk-card summary::-webkit-details-marker,.kr-topic-card summary::-webkit-details-marker { display:none; }
+.kr-anchor-card summary { padding:.83rem .9rem; font-weight:650; }
+.kr-anchor-card summary::after,.kr-chunk-card summary::after { content:"+"; float:right; opacity:.62; font-weight:800; }
+.kr-anchor-card[open] summary::after,.kr-chunk-card[open] summary::after { content:"−"; }
+.kr-anchor-num { font-size:.77rem; opacity:.64; font-weight:850; }
+.kr-anchor-en { margin:.4rem 0 0; line-height:1.48; }
+.kr-anchor-cn { padding:.7rem .9rem .85rem; border-top:1px dashed var(--border); opacity:.8; }
+.kr-chunk-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.55rem; }
+.kr-chunk-card summary { padding:.7rem .85rem; font-size:.87rem; font-weight:720; line-height:1.5; }
+.kr-chunk-cn { padding:0 .85rem .8rem; font-size:.85rem; opacity:.79; }
+.kr-chunk-example { margin-top:.35rem; font-style:italic; opacity:.9; }
+.kr-pron-controls { display:flex; flex-wrap:wrap; gap:.48rem; margin:.75rem 0; }
+.mountain-study .accent-button { border:1px solid var(--border); border-radius:999px; padding:.54rem .85rem; background:var(--surface); cursor:pointer; font-weight:700; }
+.mountain-study .accent-button:hover,.mountain-study .accent-button.active { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.6rem; }
+.mountain-study .speak-word { min-width:0; min-height:76px; padding:.8rem .8rem; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); text-align:left; cursor:pointer; }
+.mountain-study .speak-word:hover,.mountain-study .speak-word.is-playing { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-word { display:block; font-weight:800; font-size:1.02rem; }
+.kr-pron-hint { display:block; opacity:.65; font-size:.75rem; line-height:1.35; margin-top:.25rem; }
+.kr-pron-note { margin-top:.95rem; padding:.8rem 1rem; border-left:3px solid currentColor; border-radius:0 var(--radius-sm) var(--radius-sm) 0; background:var(--surface); font-size:.89rem; }
+.kr-topic-key { display:flex; flex-wrap:wrap; gap:.5rem; margin:.7rem 0 .95rem; }
+.kr-topic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; align-items:start; }
+.kr-topic-card summary { padding:.85rem .95rem; }
+.kr-topic-card[open] { grid-column:1/-1; background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-topic-card h3 { margin:.5rem 0 .2rem; font-size:.97rem; }
+.kr-topic-en { font-size:.82rem; line-height:1.36; opacity:.7; }
+.kr-fit { display:inline-flex; padding:.16rem .44rem; font-size:.7rem; font-weight:780; border:1px solid var(--border); border-radius:999px; }
+.kr-topic-body { padding:0 .95rem 1rem; }
+.kr-topic-body p { margin:.4rem 0 0; }
+.kr-route { margin-top:.65rem; padding:.7rem .8rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; border-left:3px solid currentColor; background:var(--surface); font-size:.87rem; }
+.kr-sample { margin-top:.68rem; padding:.75rem .8rem; border:1px dashed var(--border); border-radius:var(--radius-sm); }
+.kr-sample strong { font-size:.77rem; opacity:.75; }
+.kr-sample p { margin:.3rem 0 0; }
+.kr-mother { border:1px dashed var(--border-strong); border-radius:var(--radius-md); padding: .9rem 1.05rem; margin-top:1rem; background:var(--surface); font-size:.89rem; }
+.kr-mother p { margin:.35rem 0 0; }
+.kr-footer { font-size:.8rem; text-align:center; margin:1.8rem 0 2.3rem; opacity:.62; }
+@media (max-width: 720px) {
+  .kr-story-map { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-story-node::after { display:none !important; }
+  .kr-chunk-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-topic-grid { grid-template-columns:1fr; }
+  .kr-topic-card[open] { grid-column:auto; }
+}
+@media (max-width: 490px) {
+  .mountain-study .kr-hero { padding:1rem; }
+  .kr-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .kr-story-map { grid-template-columns:1fr; }
+  .kr-story-node { min-height:auto; }
+  .kr-anchor-grid,.kr-chunk-grid { grid-template-columns:1fr; }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-tab { padding:.53rem .65rem; }
+}
+@media (prefers-reduced-motion: reduce) { .mountain-study.is-enhanced .kr-panel.is-active {animation:none} }
+@media print {
+  .mountain-study { width:100%; max-width:none; margin:0; transform:none; }
+  .kr-tabs-wrap { display:none !important; }
+  .mountain-study.is-enhanced .kr-panel { display:block !important; }
+  .kr-hero,.kr-answer-card,.kr-detail,.kr-story-node,.kr-topic-card { break-inside:avoid; }
+  .kr-anchor-grid,.kr-chunk-grid,.kr-topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+</style>
+<div class="mountain-study" id="mountainStudy">
+<header class="kr-hero">
+  <p class="kr-kicker">IELTS SPEAKING PART 2 · MASTER STORY · 2026 SEP–DEC</p>
+  <h1>The Mountain Retreat</h1>
+  <p class="kr-hero-cn">青城山脚下的家与餐厅 · 喜欢拜访，却不想长住 · 一故事多用</p>
+  <article class="kr-question">
+    <h2>Original Question · 原题</h2>
+    <p><strong>Describe a home that you like to visit but do not want to live in.</strong></p>
+    <p>You should say:</p>
+    <ul>
+      <li>Where the place is</li>
+      <li>When and why you went there</li>
+      <li>What the place was like</li>
+      <li>And explain how you felt about the place</li>
+    </ul>
+  </article>
+  <p class="kr-hero-note">先讲好<strong>一次真实的乡间家访</strong>：朋友家兼餐厅、菜园与小动物、美食与宁静、生活的不方便。再尝试迁移到人物、技能、习惯等话题：<strong>这些延伸题需要新的真实细节，不能直接照搬。</strong></p>
+  <div class="kr-stats" aria-label="学习内容总览">
+    <div class="kr-stat"><strong>1</strong><span>核心故事</span></div>
+    <div class="kr-stat"><strong>14</strong><span>关联话题（含拓展）</span></div>
+    <div class="kr-stat"><strong>5</strong><span>核心句</span></div>
+    <div class="kr-stat"><strong>17</strong><span>可复用表达</span></div>
+  </div>
+</header>
+<div class="kr-tabs-wrap">
+  <nav class="kr-tabs" role="tablist" aria-label="雅思故事学习分区">
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-story" aria-controls="kr-panel-story" aria-selected="true" tabindex="0" data-tab="story">🗺️ 故事地图</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-answer" aria-controls="kr-panel-answer" aria-selected="false" tabindex="-1" data-tab="answer">🗣️ 完整答案</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-language" aria-controls="kr-panel-language" aria-selected="false" tabindex="-1" data-tab="language">🧩 语言积累</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-pronunciation" aria-controls="kr-panel-pronunciation" aria-selected="false" tabindex="-1" data-tab="pronunciation">🔊 发音重点</button>
+    <button class="kr-tab" type="button" role="tab" id="kr-tab-topics" aria-controls="kr-panel-topics" aria-selected="false" tabindex="-1" data-tab="topics">🔄 话题迁移</button>
+  </nav>
+</div>
+<!-- 01 故事地图 -->
+<section class="kr-panel is-active" id="kr-panel-story" role="tabpanel" aria-labelledby="kr-tab-story" data-panel="story">
+  <div class="kr-section-head"><h2>故事地图</h2><p>先记住故事的发展顺序。点击任意步骤，查看关键表达以及可以延伸的话题。</p></div>
+  <div class="kr-callout"><strong>故事主线一句话</strong>朋友把家变成餐厅 → 青城山脚下初访 → 菜园的食材上桌 → 兔子、秋千、绿植 → 美食与放松 → 远离城市的不便 → 周末好去处，但不适合长期居住。</div>
+  <div class="kr-story-map" aria-label="青城山家与餐厅的故事发展过程">
+    <button class="kr-story-node is-selected" type="button" data-step="0" aria-pressed="true"><span class="kr-node-icon" aria-hidden="true">🏡</span><strong>朋友的家兼餐厅</strong><small>先交代地点的独特之处</small></button>
+    <button class="kr-story-node" type="button" data-step="1" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">⛰️</span><strong>青城山脚下</strong><small>距成都约两小时车程</small></button>
+    <button class="kr-story-node" type="button" data-step="2" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">👀</span><strong>上个月初访</strong><small>第一眼就被景色惊艳</small></button>
+    <button class="kr-story-node" type="button" data-step="3" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🥬</span><strong>自家种的蔬菜</strong><small>菜园食材进入餐厅菜单</small></button>
+    <button class="kr-story-node" type="button" data-step="4" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🐇</span><strong>兔子、秋千、花木</strong><small>庭院里的视觉细节</small></button>
+    <button class="kr-story-node" type="button" data-step="5" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🍽️</span><strong>田园氛围与美食</strong><small>放松、用餐、亲近自然</small></button>
+    <button class="kr-story-node" type="button" data-step="6" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🌿</span><strong>饭后在院子里坐坐</strong><small>放慢节奏，反思城市生活</small></button>
+    <button class="kr-story-node" type="button" data-step="7" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">📶</span><strong>生活上的不方便</strong><small>通勤、购物、网络都麻烦</small></button>
+    <button class="kr-story-node" type="button" data-step="8" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">💭</span><strong>周末很好，长住不行</strong><small>短暂体验与长期生活的对比</small></button>
+  </div>
+  <aside class="kr-detail" id="krStoryDetail" aria-live="polite">
+    <h3>朋友的家兼餐厅</h3>
+    <p>朋友将自家的一部分改为餐厅，提供了故事的独特背景。原题描述的是一处‘喜欢去，但不想住’的家，因此先强调它仍然是朋友的住所。</p>
+    <div class="kr-detail-links"><span class="kr-pill">🧩 turned part of it into a restaurant</span><button type="button" class="kr-pill" data-open-topic="home">↗ 喜欢去但不想住的家</button><button type="button" class="kr-pill" data-open-topic="recommend">↗ 推荐的旅行地点</button></div>
+  </aside>
+</section>
+<!-- 02 完整答案 -->
+<section class="kr-panel" id="kr-panel-answer" role="tabpanel" aria-labelledby="kr-tab-answer" data-panel="answer">
+  <div class="kr-section-head"><h2>完整答案 · 中英对照</h2><p>经过升级的高分口语示范（约 250 词）。每段英文紧跟中文译文；保持自然、流畅，不堆砌难词。</p></div>
+  <div class="kr-answer-stack" id="krAnswerStack">
+    <article class="kr-answer-card"><span class="kr-answer-num">01</span><p lang="en">Well, one place that immediately springs to mind is a friend&#x27;s home at the foot of Mount Qingcheng, about a two-hour drive from downtown Chengdu. He&#x27;s turned part of it into a restaurant, so it&#x27;s an unusual combination of a private residence and a place to eat.</p><p class="kr-cn" lang="zh-CN">嗯，我脑海中立刻浮现的是一位朋友位于青城山脚下的家，开车从成都市区过去大约要两个小时。他把家里的一部分改成了餐厅，所以那里既是私人住宅，又是用餐的地方，组合挺特别的。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">02</span><p lang="en">I visited last month and was genuinely blown away by the surroundings. As soon as I arrived, I spotted a lush vegetable garden where he grows a wide variety of produce, much of which ends up on the restaurant&#x27;s menu. It doesn&#x27;t get much fresher than that!</p><p class="kr-cn" lang="zh-CN">上个月我去了一趟，周围的环境真的让我惊艳。一到那儿，我就看到一大片郁郁葱葱的菜园，里面种着各种蔬菜和农产品，其中很多都会成为餐厅菜品的食材。真的是新鲜得不能再新鲜了！</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">03</span><p lang="en">The whole property has an almost idyllic atmosphere. There are rabbits in their enclosures, swings in the courtyard, and flowers and greenery everywhere. It&#x27;s the perfect spot to unwind and escape the hustle and bustle of city life. And the food was absolutely phenomenal, especially knowing some of the ingredients had been grown just a few steps away.</p><p class="kr-cn" lang="zh-CN">整处院落几乎有种田园诗般的氛围。兔子待在自己的围栏里，院子里有秋千，放眼望去到处都是鲜花和绿植。这里简直是放松身心、暂时逃离都市喧嚣的绝佳去处。而且饭菜真的好吃极了，尤其想到有些食材就在几步之外种出来的，更让人觉得特别。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">04</span><p lang="en">After lunch, I just sat in the courtyard for a while, enjoying the fresh air and wondering why city life always seems to move so fast.</p><p class="kr-cn" lang="zh-CN">午饭后，我就在院子里坐了一会儿，呼吸着新鲜空气，心里不禁想着：为什么城市生活总是那么匆忙呢？</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">05</span><p lang="en">Having said that, I couldn&#x27;t imagine settling down there. Its remote location would make everyday errands and commuting a major hassle. On top of that, the internet is painfully slow, so I&#x27;d feel cut off from the outside world.</p><p class="kr-cn" lang="zh-CN">话虽如此，我实在无法想象自己在这里长期定居。地处偏远，意味着买东西、跑日常事务或者上下班通勤都会变得相当麻烦。更不用说这里的网速慢得让人难受，会让我有一种与外界失去联系的感觉。</p></article>
+    <article class="kr-answer-card"><span class="kr-answer-num">06</span><p lang="en">So while it&#x27;s ideal for a weekend getaway, I suspect the novelty would wear off pretty quickly. It&#x27;s a wonderful place to escape to, but not somewhere I&#x27;d want to call home.</p><p class="kr-cn" lang="zh-CN">所以，虽然这里非常适合周末短暂放松，但我猜这种新鲜感很快就会消退。它是一个很棒的短暂避世之所，却不是我愿意长期安家的地方。</p></article>
+  </div>
+  <p class="kr-micro-note">💡 实战提示：这篇的核心不是“山里的房子很美”，而是<strong>短期去玩很棒，长期生活却不方便</strong>。说到 why you went there 时，可以自然补一句 <em>My friend invited me to try his restaurant.</em>，但请根据真实经历调整。</p>
+</section>
+<!-- 03 语言积累 -->
+<section class="kr-panel" id="kr-panel-language" role="tabpanel" aria-labelledby="kr-tab-language" data-panel="language">
+  <div class="kr-section-head"><h2>语言积累</h2><p>先掌握 5 个核心句，再练习 17 个可以灵活迁移的地道表达。点击卡片查看中文和例句。</p></div>
+  <h3 class="kr-subhead">5 个核心句 · Anchor Sentences</h3>
+  <div class="kr-anchor-grid">
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">01</span><p class="kr-anchor-en" lang="en">Well, one place that immediately springs to mind is a friend&#x27;s home at the foot of Mount Qingcheng…</p></summary><div class="kr-anchor-cn" lang="zh-CN">脑海里立刻想到的地方，是青城山脚下的一位朋友家。（自然开场 + 地点）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">02</span><p class="kr-anchor-en" lang="en">I visited last month and was genuinely blown away by the surroundings.</p></summary><div class="kr-anchor-cn" lang="zh-CN">我上个月去了那里，周围的环境真的让我惊艳。（时间 + 第一印象）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">03</span><p class="kr-anchor-en" lang="en">It&#x27;s the perfect spot to unwind and escape the hustle and bustle of city life.</p></summary><div class="kr-anchor-cn" lang="zh-CN">这里非常适合放松，逃离都市生活的喧嚣。（环境带来的感受）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">04</span><p class="kr-anchor-en" lang="en">Having said that, I couldn&#x27;t imagine settling down there.</p></summary><div class="kr-anchor-cn" lang="zh-CN">话虽如此，我没法想象自己在那里定居。（让步与观点转折）</div></details>
+    <details class="kr-anchor-card"><summary><span class="kr-anchor-num">05</span><p class="kr-anchor-en" lang="en">I suspect the novelty would wear off pretty quickly.</p></summary><div class="kr-anchor-cn" lang="zh-CN">我猜新鲜感很快就会消退。（深入说明‘为何不想长住’）</div></details>
+  </div>
+  <h3 class="kr-subhead">17 个可复用表达 · Reusable Chunks</h3>
+  <div class="kr-chunk-grid">
+    <details class="kr-chunk-card"><summary lang="en">spring to mind</summary><div class="kr-chunk-cn"><div>浮现在脑海里；用来自然引出人物或地点</div><div class="kr-chunk-example" lang="en">One place that springs to mind is my friend&#x27;s house.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">at the foot of a mountain</summary><div class="kr-chunk-cn"><div>在山脚下；foot 在这里指山的底部</div><div class="kr-chunk-example" lang="en">The house sits at the foot of Mount Qingcheng.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">turn part of something into</summary><div class="kr-chunk-cn"><div>把某个空间的一部分改造成另一用途</div><div class="kr-chunk-example" lang="en">He turned part of his home into a restaurant.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">be blown away by</summary><div class="kr-chunk-cn"><div>被……深深惊艳／震撼；自然的口语表达</div><div class="kr-chunk-example" lang="en">I was blown away by the surroundings.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a lush vegetable garden</summary><div class="kr-chunk-cn"><div>郁郁葱葱、长势茂盛的菜园</div><div class="kr-chunk-example" lang="en">A lush vegetable garden greeted us.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a wide variety of produce</summary><div class="kr-chunk-cn"><div>丰富多样的农产品、蔬菜水果；produce 此处为名词</div><div class="kr-chunk-example" lang="en">He grows a wide variety of produce.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">end up on the menu</summary><div class="kr-chunk-cn"><div>最终出现在菜单上；强调结果</div><div class="kr-chunk-example" lang="en">Many vegetables end up on the menu.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">an idyllic atmosphere</summary><div class="kr-chunk-cn"><div>田园诗般恬静美好的氛围</div><div class="kr-chunk-example" lang="en">The property has an idyllic atmosphere.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">unwind</summary><div class="kr-chunk-cn"><div>放松身心，卸下压力</div><div class="kr-chunk-example" lang="en">It&#x27;s a lovely place to unwind.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">escape the hustle and bustle</summary><div class="kr-chunk-cn"><div>逃离繁忙嘈杂的生活节奏</div><div class="kr-chunk-example" lang="en">We wanted to escape the hustle and bustle of city life.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">absolutely phenomenal</summary><div class="kr-chunk-cn"><div>特别出色、好得惊人；可评价食物或体验</div><div class="kr-chunk-example" lang="en">The food was absolutely phenomenal.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">settle down</summary><div class="kr-chunk-cn"><div>定居、安定下来</div><div class="kr-chunk-example" lang="en">I couldn&#x27;t imagine settling down there.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a major hassle</summary><div class="kr-chunk-cn"><div>一件很麻烦的事</div><div class="kr-chunk-example" lang="en">Commuting would be a major hassle.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">painfully slow</summary><div class="kr-chunk-cn"><div>慢得让人难受；尤其形容网速或进度</div><div class="kr-chunk-example" lang="en">The internet is painfully slow.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">feel cut off from</summary><div class="kr-chunk-cn"><div>感觉与……隔绝、失去联系</div><div class="kr-chunk-example" lang="en">I&#x27;d feel cut off from the outside world.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">the novelty would wear off</summary><div class="kr-chunk-cn"><div>新鲜感会逐渐消退；wear off 表示影响逐渐减弱</div><div class="kr-chunk-example" lang="en">The novelty would wear off pretty quickly.</div></div></details>
+    <details class="kr-chunk-card"><summary lang="en">a place to call home</summary><div class="kr-chunk-cn"><div>真正愿意安家的地方；带感情色彩的结尾</div><div class="kr-chunk-example" lang="en">It&#x27;s not somewhere I&#x27;d want to call home.</div></div></details>
+  </div>
+</section>
+<!-- 04 发音 -->
+<section class="kr-panel" id="kr-panel-pronunciation" role="tabpanel" aria-labelledby="kr-tab-pronunciation" data-panel="pronunciation">
+  <div class="kr-section-head"><h2>发音重点</h2><p>沿用本站发音组件：切换美式／英式发音，点击单词聆听。</p></div>
+  <div class="kr-pron-controls" role="group" aria-label="选择发音口音">
+    <button type="button" class="accent-button active" data-accent="us">🇺🇸 美式英语</button>
+    <button type="button" class="accent-button" data-accent="uk">🇬🇧 英式英语</button>
+  </div>
+  <div class="kr-pron-grid">
+    <button type="button" class="speak-word" data-word="Qingcheng" aria-label="朗读 Qingcheng"><span class="kr-pron-word">Qingcheng 🔊</span><span class="kr-pron-hint">青城；地名发音可结合中文原名练习</span></button>
+    <button type="button" class="speak-word" data-word="surroundings" aria-label="朗读 surroundings"><span class="kr-pron-word">surroundings 🔊</span><span class="kr-pron-hint">周边环境；注意重音与复数尾音</span></button>
+    <button type="button" class="speak-word" data-word="lush" aria-label="朗读 lush"><span class="kr-pron-word">lush 🔊</span><span class="kr-pron-hint">草木茂盛的；/ʃ/ 收尾</span></button>
+    <button type="button" class="speak-word" data-word="produce" aria-label="朗读 produce"><span class="kr-pron-word">produce 🔊</span><span class="kr-pron-hint">农产品（名词）；与动词 produce 重音不同</span></button>
+    <button type="button" class="speak-word" data-word="idyllic" aria-label="朗读 idyllic"><span class="kr-pron-word">idyllic 🔊</span><span class="kr-pron-hint">田园诗般的；重音在第二音节</span></button>
+    <button type="button" class="speak-word" data-word="enclosures" aria-label="朗读 enclosures"><span class="kr-pron-word">enclosures 🔊</span><span class="kr-pron-hint">动物围栏；注意 /ʒ/ 音</span></button>
+    <button type="button" class="speak-word" data-word="courtyard" aria-label="朗读 courtyard"><span class="kr-pron-word">courtyard 🔊</span><span class="kr-pron-hint">庭院；court + yard</span></button>
+    <button type="button" class="speak-word" data-word="phenomenal" aria-label="朗读 phenomenal"><span class="kr-pron-word">phenomenal 🔊</span><span class="kr-pron-hint">非常出色的；多音节重音</span></button>
+    <button type="button" class="speak-word" data-word="unwind" aria-label="朗读 unwind"><span class="kr-pron-word">unwind 🔊</span><span class="kr-pron-hint">放松；注意 wind 此处的读音</span></button>
+    <button type="button" class="speak-word" data-word="commuting" aria-label="朗读 commuting"><span class="kr-pron-word">commuting 🔊</span><span class="kr-pron-hint">通勤；重音在第二音节</span></button>
+    <button type="button" class="speak-word" data-word="hassle" aria-label="朗读 hassle"><span class="kr-pron-word">hassle 🔊</span><span class="kr-pron-hint">麻烦事；自然清楚地发音</span></button>
+    <button type="button" class="speak-word" data-word="novelty" aria-label="朗读 novelty"><span class="kr-pron-word">novelty 🔊</span><span class="kr-pron-hint">新鲜感；注意第一个音节重音</span></button>
+  </div>
+  <div class="kr-pron-note"><strong>提示：</strong><em>produce</em> 作名词（农产品）时，重音常在第一个音节；作动词（生产）时，重音常在第二个音节。发音按钮沿用本站 <code>pronunciation.js</code>。地名 <em>Qingcheng</em> 的合成语音仅供参考，请以中文地名实际读音为准。</div>
+</section>
+<!-- 05 话题迁移 -->
+<section class="kr-panel" id="kr-panel-topics" role="tabpanel" aria-labelledby="kr-tab-topics" data-panel="topics">
+  <div class="kr-section-head"><h2>话题迁移 · Adapt Your Story</h2><p>把我们头脑风暴时想到的关联话题放在这里。<strong>只有原题可直接使用这篇答案</strong>；人物、技能、经历等题目要调整焦点，并补充真实信息。这里是练习方向，不代表所有题目都是本季官方题目原文。</p></div>
+  <div class="kr-topic-key"><span class="kr-pill">★ 直接适用：原故事就能回答</span><span class="kr-pill">↗ 换重心：原素材有线索，但要补细节</span><span class="kr-pill">＋ 需拓展：原稿没有的事实必须另补</span></div>
+  <div class="kr-topic-grid">
+    <details class="kr-topic-card" id="kr-topic-home" data-topic="home"><summary><span class="kr-fit">直接适用</span><h3>喜欢去但不想住的家</h3><div class="kr-topic-en" lang="en">Describe a home that you like to visit but do not want to live in</div></summary><div class="kr-topic-body"><p>这就是本篇原题。原故事已经包含 where、when、what it was like，以及喜欢参观却不愿长住的原因。</p><div class="kr-route"><strong>答题路径：</strong>朋友家兼餐厅 → 青城山位置 → 菜园、兔子、秋千 → 美食与放松 → 通勤不便 + 网络慢</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">One place that immediately springs to mind is a friend&#x27;s home at the foot of Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">It&#x27;s a wonderful place to escape to, but not somewhere I&#x27;d want to call home.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-plants" data-topic="plants"><summary><span class="kr-fit">换重心＋补细节</span><h3>喜欢种植物的人</h3><div class="kr-topic-en" lang="en">Describe a person who grows plants</div></summary><div class="kr-topic-body"><p>原故事说明朋友种了很多蔬菜、餐厅会使用这些食材。要把‘人’放在中心，补充他何时开始种植、如何照顾植物、为什么喜欢种。</p><div class="kr-route"><strong>答题路径：</strong>介绍朋友 → 菜园规模 → 种植方法与习惯（新增）→ 食材用于餐厅 → 你为什么欣赏他</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">A friend of mine who really enjoys growing plants runs a small restaurant near Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">What impresses me is how much care he puts into growing ingredients for his own restaurant.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-older" data-topic="older"><summary><span class="kr-fit">需引入真实长者</span><h3>你尊敬的一位长者</h3><div class="kr-topic-en" lang="en">Describe an older person you respect</div></summary><div class="kr-topic-body"><p>原故事中的主角是朋友，没有说他是长者。只有确实有一位年长亲友或长辈参与，而且你了解他的生活和性格，才能迁移到这题。</p><div class="kr-route"><strong>答题路径：</strong>介绍真实长者（新增）→ 你们的关系 → 他在家或菜园里做的事 → 一次交谈（新增）→ 为什么尊敬</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">An older person I really respect is a relative who has taught me a lot about living a simpler life.</p><strong>示例结尾</strong><p lang="en">I admire his patience and the way he finds satisfaction in everyday things.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-handmade" data-topic="handmade"><summary><span class="kr-fit">需新增手作事实</span><h3>擅长手工制作的人</h3><div class="kr-topic-en" lang="en">Describe a person who is good at making things by hand</div></summary><div class="kr-topic-body"><p>秋千和兔笼只是场景，不能推断朋友亲手做的。若他或家人真的做过木工、编织或修理，可围绕一件作品展开。</p><div class="kr-route"><strong>答题路径：</strong>介绍动手能力强的人 → 他做的具体物件（新增）→ 制作过程 → 成品和用途 → 为什么佩服</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">Someone I know who&#x27;s great at making things by hand is a friend who loves working with wood.</p><strong>示例结尾</strong><p lang="en">Seeing what he can create with his hands has made me appreciate practical skills much more.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-skill" data-topic="skill"><summary><span class="kr-fit">需补学习经过</span><h3>教会你一项新技能的人</h3><div class="kr-topic-en" lang="en">Describe a person who taught you a new skill</div></summary><div class="kr-topic-body"><p>原故事没有发生‘学习技能’的事情。可以延伸到朋友教你种菜、修兔笼、烹饪，但要有你亲手练习、得到指导的具体过程。</p><div class="kr-route"><strong>答题路径：</strong>为什么想学 → 谁教你 → 现场演示（新增）→ 自己尝试与困难（新增）→ 最终学到什么</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">A friend who runs a countryside restaurant once showed me how to grow vegetables properly.</p><strong>示例结尾</strong><p lang="en">It was a small skill, but learning it firsthand made the visit much more meaningful.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-history" data-topic="history"><summary><span class="kr-fit">需新增人物证据</span><h3>热爱历史的人</h3><div class="kr-topic-en" lang="en">Describe a person who loves history</div></summary><div class="kr-topic-body"><p>山脚下的院落不等于历史故事。可另加他收藏老照片、介绍当地建筑或青城山历史的真实经历，并说明这个人如何表现出兴趣。</p><div class="kr-route"><strong>答题路径：</strong>介绍朋友/家人 → 热爱历史的证据（新增）→ 一段他讲过的故事（新增）→ 你学到了什么</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">One person I know who is fascinated by local history is a friend who lives near Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">He makes the past feel surprisingly real rather than just something you read about in books.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-health" data-topic="health"><summary><span class="kr-fit">需补日常习惯</span><h3>生活习惯健康的人</h3><div class="kr-topic-en" lang="en">Describe a person who has healthy habits</div></summary><div class="kr-topic-body"><p>菜园和新鲜食材提供了很好的线索，但不能只凭种菜就判断一个人的生活方式很健康。需要真实的作息、饮食、运动等细节。</p><div class="kr-route"><strong>答题路径：</strong>介绍朋友 → 健康饮食 → 规律作息或运动（新增）→ 保持习惯的方法（新增）→ 对你的影响</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">A friend of mine who owns a countryside restaurant is very conscious of his daily habits.</p><strong>示例结尾</strong><p lang="en">His lifestyle reminds me that good health often comes from small, consistent choices.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-early" data-topic="early"><summary><span class="kr-fit">需新增早起事件</span><h3>一次早起的经历</h3><div class="kr-topic-en" lang="en">Describe a time when you got up early</div></summary><div class="kr-topic-body"><p>原故事只说上个月去过一次，没有提到早起。可以回忆一次真的清晨出发、赶早采摘或准备午餐的访问，补出时间和原因。</p><div class="kr-route"><strong>答题路径：</strong>为什么要早起（新增）→ 几点出发 → 清晨路上与菜园的景象 → 当天收获 → 早起的感受</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">One morning I got up unusually early to visit a friend&#x27;s place near Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">Even though I was tired at first, seeing the place so early in the day was worth it.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-help" data-topic="help"><summary><span class="kr-fit">需新增真实问题</span><h3>帮助解决问题的一次经历</h3><div class="kr-topic-en" lang="en">Describe a time when you helped solve a problem</div></summary><div class="kr-topic-body"><p>现有版本没有解决问题的场景。若访问期间实际帮忙修过水龙头、整理兔笼或处理厨房问题，可增加问题—尝试—结果。</p><div class="kr-route"><strong>答题路径：</strong>出现什么问题（新增）→ 为什么需要帮忙 → 你做了什么 → 怎么解决 → 你的感受</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">During a visit to my friend&#x27;s countryside restaurant, we ran into a small problem that I helped him deal with.</p><strong>示例结尾</strong><p lang="en">It felt good to do something useful instead of just being a guest.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-photos" data-topic="photos"><summary><span class="kr-fit">需补摄影人物</span><h3>喜欢摄影的人</h3><div class="kr-topic-en" lang="en">Describe a person who likes taking photos</div></summary><div class="kr-topic-body"><p>庭院景色适合摄影，但原文没有出现摄影爱好者。可以加入朋友如何拍菜园、食物、兔子，以及为什么喜欢记录生活。</p><div class="kr-route"><strong>答题路径：</strong>介绍摄影爱好者 → 常拍什么（新增）→ 一次在院子里的拍摄（新增）→ 拍摄习惯或作品 → 你的看法</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">A friend of mine who loves photography often takes pictures around his countryside home and restaurant.</p><strong>示例结尾</strong><p lang="en">I like how his photos capture the little details that most people would overlook.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-change" data-topic="change"><summary><span class="kr-fit">需交代前后变化</span><h3>一次改变看法的经历</h3><div class="kr-topic-en" lang="en">Describe a time when you changed your opinion</div></summary><div class="kr-topic-body"><p>‘被景色惊艳’不是完整的观点转变。要明确原来怎么想、什么经历改变了你、现在又怎么想；不必改变‘我仍不想定居’这一结论。</p><div class="kr-route"><strong>答题路径：</strong>原先以为乡村餐厅会很无聊（若属实）→ 到访 → 菜园与美食 → 看法转变 → 仍不想长期定居</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">I used to think that restaurants far outside the city weren&#x27;t really worth the journey, but one visit changed my mind.</p><strong>示例结尾</strong><p lang="en">I still wouldn&#x27;t want to live there, but now I can see why people enjoy escaping the city.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-recommend" data-topic="recommend"><summary><span class="kr-fit">换重点＋补建议</span><h3>你愿意推荐的旅行地点</h3><div class="kr-topic-en" lang="en">Describe a place you would recommend tourists visit</div></summary><div class="kr-topic-body"><p>环境、食物、位置都已具备。还要面向‘游客’说明适合谁、交通安排、游玩内容和注意事项，不要仅介绍自己的家访感受。</p><div class="kr-route"><strong>答题路径：</strong>介绍青城山周边 → 推荐的餐厅院落 → 看什么、吃什么 → 如何安排交通 → 为什么值得</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">If someone was visiting Chengdu and wanted a relaxing day trip, I&#x27;d recommend a place near Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">It&#x27;s a great way to slow down and experience a quieter side of the region.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-trip" data-topic="trip"><summary><span class="kr-fit">需真实的重复经历</span><h3>经常走但不喜欢的一段短途行程</h3><div class="kr-topic-en" lang="en">Describe a short trip you often take but do not like</div></summary><div class="kr-topic-body"><p>原故事只有一次到访，不能说经常走。若你确实多次往返，并且路途拥堵或耗时，可以用‘路不好走，但终点很值得’作对比。</p><div class="kr-route"><strong>答题路径：</strong>为什么经常去（新增）→ 行程路线 → 路上最不喜欢的部分 → 到达后的反差 → 为什么仍继续去</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">A journey I take fairly often but don&#x27;t particularly enjoy is the drive out to a friend&#x27;s restaurant near Mount Qingcheng.</p><strong>示例结尾</strong><p lang="en">I always enjoy being there, but I wish getting there were a lot easier.</p></div></div></details>
+    <details class="kr-topic-card" id="kr-topic-possession" data-topic="possession"><summary><span class="kr-fit">需新增家庭物件</span><h3>家中保存的重要物品</h3><div class="kr-topic-en" lang="en">Describe something important that has been kept in your family</div></summary><div class="kr-topic-body"><p>朋友家里种菜和开餐厅，并没有涉及你的家庭珍藏。要改成家人家中的真实物件（老照片、手工家具等），讲清由谁保存、为什么有价值。</p><div class="kr-route"><strong>答题路径：</strong>介绍家中老物件（新增）→ 来历与保存人 → 一次看到/使用它的经历 → 情感或历史意义</div><div class="kr-sample"><strong>示例开头（需以真实经历为准）</strong><p lang="en">One thing that&#x27;s been in my family for years is an old photo album that my grandparents have carefully kept.</p><strong>示例结尾</strong><p lang="en">To me, it&#x27;s much more than an old object—it&#x27;s a connection to my family&#x27;s past.</p></div></div></details>
+  </div>
+  <div class="kr-mother"><strong>母素材 · 不要机械套题</strong><p>朋友家兼餐厅 → 青城山脚下 → 上个月到访 → 茂盛菜园 + 自产食材 → 兔子 + 秋千 + 绿植 → 美味的一餐 → 远离都市喧嚣 → 交通与网络不方便 → 新鲜感消退，适合短住不适合定居。</p><p>人物题需要写<strong>人</strong>的性格和行为；技能题需要写<strong>真正学会的过程</strong>；事件题需要具体的<strong>起因、经过、结果</strong>。原故事没发生过的事，只能作为条件性的延伸灵感，不能假装已经发生。</p><p><a href="https://shishiapcs.github.io/esl-speaking-ielts-topics-september-to-december-2026/" rel="noopener">↗ 查看 2026 年 9–12 月完整 Part 2 题库</a></p></div>
+</section>
+<p class="kr-footer">2026 年 9–12 月雅思口语 Master Story · Mr. Mou @ ShiShi AP Center</p>
+</div>
+<script>
+(() => {
+  "use strict";
+  const app = document.getElementById('mountainStudy');
+  if (!app) return;
+  const tabs = [...app.querySelectorAll('.kr-tab')];
+  const panels = [...app.querySelectorAll('.kr-panel')];
+  const valid = new Set(['story','answer','language','pronunciation','topics']);
+  const hashTab = window.location.hash.startsWith('#study-') ? window.location.hash.slice(7) : 'story';
+
+  function openTab(name, updateHash=true) {
+    if (!valid.has(name)) return;
+    tabs.forEach(tab => {
+      const selected = tab.dataset.tab === name;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      const active = panel.dataset.panel === name;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    if (updateHash && history.replaceState) {
+      history.replaceState(null, '', '#study-' + name);
+    }
+  }
+  function jumpToPanel(name) {
+    openTab(name);
+    app.querySelector('.kr-tabs-wrap').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => jumpToPanel(tab.dataset.tab));
+    tab.addEventListener('keydown', event => {
+      let next = null;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length-1;
+      if (next === null) return;
+      event.preventDefault();
+      tabs[next].focus();
+      openTab(tabs[next].dataset.tab);
+    });
+  });
+
+  const storySteps = [{"title": "朋友的家兼餐厅", "detail": "朋友将自家的一部分改为餐厅，提供了故事的独特背景。原题描述的是一处‘喜欢去，但不想住’的家，因此先强调它仍然是朋友的住所。", "phrase": "turned part of it into a restaurant", "topics": ["home", "recommend"]}, {"title": "青城山脚下", "detail": "明确 where：青城山脚下，离成都市区约两个小时。这一距离也为后文‘日常不便’埋下伏笔。", "phrase": "at the foot of Mount Qingcheng", "topics": ["home", "trip"]}, {"title": "上个月初访", "detail": "明确 when：上个月。第一印象用 was genuinely blown away，把简单的 nice 变成更有画面感的表达。", "phrase": "blown away by the surroundings", "topics": ["home", "change"]}, {"title": "自家种的蔬菜", "detail": "lush vegetable garden 和 wide variety of produce 是最有辨识度的细节。注意：原文只说朋友种蔬菜，还没有展示他的种植经验或日常管理。", "phrase": "much of which ends up on the menu", "topics": ["plants", "health"]}, {"title": "兔子、秋千、花木", "detail": "兔子在围栏里、庭院有秋千、鲜花绿植随处可见。这些具体画面让 idyllic atmosphere 不再是空洞的形容词。", "phrase": "rabbits in their enclosures", "topics": ["photos", "handmade"]}, {"title": "田园氛围与美食", "detail": "把景色带来的感受与食物连接起来：享受一顿用院子里新鲜食材做的饭，远离都市的忙碌。重点是‘游客体验’。", "phrase": "escape the hustle and bustle", "topics": ["home", "recommend"]}, {"title": "饭后在院子里坐坐", "detail": "一个很小但真实的动作，使叙述有停顿和情绪层次。可迁移到‘观点变化’，但还需要明确变化前与变化后的想法。", "phrase": "wondering why city life moves so fast", "topics": ["change", "history"]}, {"title": "生活上的不方便", "detail": "直接回答为什么不愿居住：距离远、日常跑腿和通勤麻烦、网络很慢。这里只是生活不便，并没有实际发生的技术故障或事故。", "phrase": "a major hassle / cut off from", "topics": ["home", "trip"]}, {"title": "周末很好，长住不行", "detail": "结尾用 novelty would wear off 表达新鲜感可能消退，再以 somewhere I'd want to call home 完成首尾呼应。", "phrase": "the novelty would wear off", "topics": ["home", "change"]}];
+   const nodeButtons = [...app.querySelectorAll('.kr-story-node')];
+  const storyDetail = app.querySelector('#krStoryDetail');
+  const topicTitles = {"home": "喜欢去但不想住的家", "plants": "喜欢种植物的人", "older": "你尊敬的一位长者", "handmade": "擅长手工制作的人", "skill": "教会你一项新技能的人", "history": "热爱历史的人", "health": "生活习惯健康的人", "early": "一次早起的经历", "help": "帮助解决问题的一次经历", "photos": "喜欢摄影的人", "change": "一次改变看法的经历", "recommend": "你愿意推荐的旅行地点", "trip": "经常走但不喜欢的一段短途行程", "possession": "家中保存的重要物品"};
+   function renderStep(index) {
+    const s = storySteps[index];
+    if (!s) return;
+    nodeButtons.forEach((node, i) => {
+      node.classList.toggle('is-selected', i === index);
+      node.setAttribute('aria-pressed', String(i === index));
+    });
+    storyDetail.replaceChildren();
+    const title = document.createElement('h3');
+    title.textContent = s.title;
+    const desc = document.createElement('p');
+    desc.textContent = s.detail;
+    const links = document.createElement('div');
+    links.className = 'kr-detail-links';
+    const phrase = document.createElement('span');
+    phrase.className = 'kr-pill';
+    phrase.textContent = '🧩 ' + s.phrase;
+    links.appendChild(phrase);
+    s.topics.forEach(id => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'kr-pill';
+      btn.dataset.openTopic = id;
+      btn.textContent = '↗ ' + (topicTitles[id] || id);
+      links.appendChild(btn);
+    });
+    storyDetail.append(title, desc, links);
+  }
+  nodeButtons.forEach((node, i) => node.addEventListener('click', () => renderStep(i)));
+
+  app.addEventListener('click', event => {
+    const button = event.target.closest('[data-open-topic]');
+    if (!button || !app.contains(button)) return;
+    const topic = button.dataset.openTopic;
+    const card = app.querySelector('[data-topic="' + topic + '"]');
+    if (!card) return;
+    openTab('topics');
+    app.querySelectorAll('.kr-topic-card[open]').forEach(el => {
+      if (el !== card) el.open = false;
+    });
+    card.open = true;
+    card.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  app.querySelectorAll('.kr-topic-card').forEach(card => {
+    card.addEventListener('toggle', () => {
+      if (!card.open) return;
+      app.querySelectorAll('.kr-topic-card[open]').forEach(other => {
+        if (other !== card) other.open = false;
+      });
+    });
+  });
+  app.classList.add('is-enhanced');
+  openTab(valid.has(hashTab) ? hashTab : 'story', false);
+})();
+</script>
