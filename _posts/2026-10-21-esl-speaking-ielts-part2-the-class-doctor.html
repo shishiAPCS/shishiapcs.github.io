@@ -1,0 +1,419 @@
+---
+layout: post
+title: "雅思口语 Part 2: 未来的医生 The Class Doctor · Dr. Leo"
+date: 2026-10-30
+permalink: /esl-speaking-ielts-part2-the-class-doctor/
+---
+
+<script defer src="{{ '/assets/js/pronunciation.js' | relative_url }}"></script>
+<style>
+/* Dr. Leo Master Story — page-scoped ShiShi Study UI.
+   IMPORTANT: respect the site's existing article column; no 1180px breakout. */
+.doctor-study {
+  --surface: var(--study-surface, rgba(128,128,135,.075));
+  --surface-strong: var(--study-surface-strong, rgba(128,128,135,.14));
+  --border: var(--study-border, rgba(145,145,155,.26));
+  --border-strong: var(--study-border-strong, rgba(155,155,165,.43));
+  --shadow: var(--study-shadow, 0 12px 32px rgba(0,0,0,.12));
+  --radius-lg: var(--study-radius-lg, 18px);
+  --radius-md: var(--study-radius-md, 12px);
+  --radius-sm: var(--study-radius-sm, 8px);
+  box-sizing: border-box;
+  display: block;
+  width: 100%; max-width: 100%; min-width: 0;
+  margin: 0; padding: 0; transform: none;
+  color: inherit; line-height: 1.72;
+  overflow-wrap: break-word;
+}
+.doctor-study *, .doctor-study *::before, .doctor-study *::after { box-sizing: border-box; }
+.doctor-study button,.doctor-study summary { font: inherit; }
+.doctor-study button,.doctor-study a { color: inherit; }
+.doctor-study button { -webkit-tap-highlight-color: transparent; }
+.doctor-study button:focus-visible,.doctor-study summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.doctor-study .kr-hero {
+  padding: clamp(1.1rem, 3vw, 2.6rem);
+  margin: 1.1rem 0 .85rem;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top right, var(--surface-strong), transparent 48%), var(--surface);
+}
+.kr-kicker { margin: 0 0 .3rem; font-size: .77rem; font-weight: 800; letter-spacing: .075em; opacity: .67; }
+.doctor-study .kr-hero h1 { margin: .1rem 0; font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.08; letter-spacing: -.035em; }
+.kr-hero-cn { margin: .5rem 0 0; font-size: 1.04rem; opacity: .78; }
+.kr-question { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.1rem; margin-top: 1.05rem; background: var(--surface-strong); }
+.kr-question h2 { font-size: .96rem; margin: 0 0 .4rem; }
+.kr-question p { margin: .45rem 0; }
+.kr-question ul { padding-left: 1.35rem; margin: .4rem 0 0; }
+.kr-question li { margin: .12rem 0; }
+.kr-hero-note { margin: 1rem 0 .3rem; font-size: .95rem; }
+.kr-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .55rem; margin-top: 1.05rem; }
+.kr-stat { border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius-md); padding: .75rem .85rem; min-width: 0; }
+.kr-stat strong { display: block; font-size: 1.37rem; line-height: 1.18; font-weight: 800; }
+.kr-stat span { display: block; font-size: .73rem; margin-top: .16rem; opacity: .72; }
+.kr-tabs-wrap { position: sticky; top: .4rem; z-index: 30; max-width: 100%; margin: 0 0 1rem; }
+.kr-tabs { display: flex; gap: .2rem; overflow-x: auto; overscroll-behavior-x: contain; padding: .38rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-strong); box-shadow: var(--shadow); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); scrollbar-width: none; max-width: 100%; }
+.kr-tabs::-webkit-scrollbar { display: none; }
+.kr-tab { flex: 0 0 auto; white-space: nowrap; border: 1px solid transparent; border-radius: 999px; background: transparent; padding: .55rem .68rem; font-size: .84rem !important; cursor: pointer; font-weight: 700 !important; }
+.kr-tab:hover { background: var(--surface); }
+.kr-tab[aria-selected="true"] { border-color: var(--border-strong); background: var(--surface-strong); }
+.doctor-study:not(.is-enhanced) .kr-panel { display: block; margin-bottom: 2rem; }
+.doctor-study.is-enhanced .kr-panel { display: none; }
+.doctor-study.is-enhanced .kr-panel.is-active { display: block; animation: krFade .2s ease-out; }
+@keyframes krFade { from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none} }
+.kr-section-head { margin: 1.25rem 0 .8rem; }
+.doctor-study .kr-section-head h2 { margin: 0; font-size: clamp(1.5rem,3vw,2rem); line-height:1.2; }
+.kr-section-head p { margin:.35rem 0 0; opacity:.73; font-size:.94rem; }
+.kr-panel { min-width: 0; }
+.kr-callout,.kr-detail,.kr-answer-card,.kr-anchor-card,.kr-chunk-card,.kr-topic-card,.kr-note {
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); min-width: 0;
+}
+.kr-callout { padding: .85rem 1rem; margin: .6rem 0 .85rem; font-size: .91rem; }
+.kr-callout strong { display: block; margin-bottom: .25rem; }
+.kr-story-map { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .62rem; margin:.95rem 0; }
+.kr-story-node { position: relative; min-width: 0; padding: .85rem .9rem; min-height: 116px; cursor:pointer; text-align:left; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); }
+.kr-story-node:hover,.kr-story-node.is-selected { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-story-node:not(:nth-child(3n))::after { content:"→"; position:absolute; right:-.55rem; top:50%; transform:translateY(-50%); z-index:1; font-weight:800; opacity:.48; pointer-events:none; }
+.kr-node-icon { display: block; font-size: 1.4rem; margin-bottom: .4rem; }
+.kr-story-node strong { display: block; font-size: .94rem; line-height:1.3; }
+.kr-story-node small { display:block; font-size:.76rem; opacity:.7; margin-top:.24rem; line-height:1.38; }
+.kr-detail { padding:1rem 1.1rem; margin-top:.7rem; }
+.kr-detail h3 { margin:0 0 .42rem; font-size:1.06rem; }
+.kr-detail p { margin:0; }
+.kr-detail-links { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.75rem; }
+.kr-pill { display:inline-flex; align-items:center; gap:.3rem; max-width:100%; padding:.3rem .58rem; border:1px solid var(--border); border-radius:999px; background:var(--surface); font-size:.79rem; line-height:1.4; }
+button.kr-pill { cursor:pointer; }
+button.kr-pill:hover { background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-answer-stack { display:grid; gap:.72rem; }
+.kr-answer-card { padding:1.05rem 1.15rem; }
+.kr-answer-num { display:inline-block; border:1px solid var(--border); border-radius:999px; font-size:.75rem; font-weight:800; padding:.08rem .5rem; margin-bottom:.5rem; }
+.kr-answer-card p { margin:0; }
+.kr-answer-card .kr-cn { border-top:1px dashed var(--border); padding-top:.65rem; margin-top:.72rem; opacity:.78; }
+.kr-micro-note { margin:.7rem 0 0; opacity:.75; font-size:.87rem; }
+.kr-subhead { font-size:1.12rem; margin:1.4rem 0 .65rem; }
+.kr-anchor-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:.6rem; }
+.kr-anchor-card, .kr-chunk-card, .kr-topic-card { overflow:hidden; }
+.kr-anchor-card summary,.kr-chunk-card summary,.kr-topic-card summary { cursor:pointer; list-style:none; }
+.kr-anchor-card summary::-webkit-details-marker,.kr-chunk-card summary::-webkit-details-marker,.kr-topic-card summary::-webkit-details-marker { display:none; }
+.kr-anchor-card summary { padding:.83rem .9rem; font-weight:650; }
+.kr-anchor-card summary::after,.kr-chunk-card summary::after { content:"+"; float:right; opacity:.62; font-weight:800; }
+.kr-anchor-card[open] summary::after,.kr-chunk-card[open] summary::after { content:"−"; }
+.kr-anchor-num { font-size:.77rem; opacity:.64; font-weight:850; }
+.kr-anchor-en { margin:.4rem 0 0; line-height:1.48; }
+.kr-anchor-cn { padding:.7rem .9rem .85rem; border-top:1px dashed var(--border); opacity:.8; }
+.kr-chunk-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.55rem; }
+.kr-chunk-card summary { padding:.7rem .85rem; font-size:.87rem; font-weight:720; line-height:1.5; }
+.kr-chunk-cn { padding:0 .85rem .8rem; font-size:.85rem; opacity:.79; }
+.kr-chunk-example { margin-top:.35rem; font-style:italic; opacity:.9; }
+.kr-pron-controls { display:flex; flex-wrap:wrap; gap:.48rem; margin:.75rem 0; }
+.doctor-study .accent-button { border:1px solid var(--border); border-radius:999px; padding:.54rem .85rem; background:var(--surface); cursor:pointer; font-weight:700; }
+.doctor-study .accent-button:hover,.doctor-study .accent-button.active { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.6rem; }
+.doctor-study .speak-word { min-width:0; min-height:76px; padding:.8rem .8rem; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); text-align:left; cursor:pointer; }
+.doctor-study .speak-word:hover,.doctor-study .speak-word.is-playing { border-color:var(--border-strong); background:var(--surface-strong); }
+.kr-pron-word { display:block; font-weight:800; font-size:1.02rem; }
+.kr-pron-hint { display:block; opacity:.65; font-size:.75rem; line-height:1.35; margin-top:.25rem; }
+.kr-pron-note { margin-top:.95rem; padding:.8rem 1rem; border-left:3px solid currentColor; border-radius:0 var(--radius-sm) var(--radius-sm) 0; background:var(--surface); font-size:.89rem; }
+.kr-topic-key { display:flex; flex-wrap:wrap; gap:.5rem; margin:.7rem 0 .95rem; }
+.kr-topic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; align-items:start; }
+.kr-topic-card summary { padding:.85rem .95rem; }
+.kr-topic-card[open] { grid-column:1/-1; background:var(--surface-strong); border-color:var(--border-strong); }
+.kr-topic-card h3 { margin:.5rem 0 .2rem; font-size:.97rem; }
+.kr-topic-en { font-size:.82rem; line-height:1.36; opacity:.7; }
+.kr-fit { display:inline-flex; padding:.16rem .44rem; font-size:.7rem; font-weight:780; border:1px solid var(--border); border-radius:999px; }
+.kr-topic-body { padding:0 .95rem 1rem; }
+.kr-topic-body p { margin:.4rem 0 0; }
+.kr-route { margin-top:.65rem; padding:.7rem .8rem; border-radius:0 var(--radius-sm) var(--radius-sm) 0; border-left:3px solid currentColor; background:var(--surface); font-size:.87rem; }
+.kr-sample { margin-top:.68rem; padding:.75rem .8rem; border:1px dashed var(--border); border-radius:var(--radius-sm); }
+.kr-sample strong { font-size:.77rem; opacity:.75; }
+.kr-sample p { margin:.3rem 0 0; }
+.kr-mother { border:1px dashed var(--border-strong); border-radius:var(--radius-md); padding: .9rem 1.05rem; margin-top:1rem; background:var(--surface); font-size:.89rem; }
+.kr-mother p { margin:.35rem 0 0; }
+.kr-footer { font-size:.8rem; text-align:center; margin:1.8rem 0 2.3rem; opacity:.62; }
+@media (max-width: 720px) {
+  .kr-story-map { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-story-node::after { display:none !important; }
+  .kr-chunk-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-topic-grid { grid-template-columns:1fr; }
+  .kr-topic-card[open] { grid-column:auto; }
+}
+@media (max-width: 490px) {
+  .doctor-study .kr-hero { padding:1rem; }
+  .kr-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .kr-story-map { grid-template-columns:1fr; }
+  .kr-story-node { min-height:auto; }
+  .kr-anchor-grid,.kr-chunk-grid { grid-template-columns:1fr; }
+  .kr-pron-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .kr-tab { padding:.53rem .65rem; }
+}
+@media (prefers-reduced-motion: reduce) { .doctor-study.is-enhanced .kr-panel.is-active {animation:none} }
+@media print {
+  .doctor-study { width:100%; max-width:none; margin:0; transform:none; }
+  .kr-tabs-wrap { display:none !important; }
+  .doctor-study.is-enhanced .kr-panel { display:block !important; }
+  .kr-hero,.kr-answer-card,.kr-detail,.kr-story-node,.kr-topic-card { break-inside:avoid; }
+  .kr-anchor-grid,.kr-chunk-grid,.kr-topic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
+/* Long adaptation list: compact, accessible filter controls. */
+.kr-rating {font-weight:850;letter-spacing:.02em;}
+.kr-topic-controls {display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin:.7rem 0 .8rem;}
+.doctor-study .kr-filter {cursor:pointer;border:1px solid var(--border);border-radius:999px;background:var(--surface);padding:.34rem .67rem;font-size:.81rem;font-weight:700;}
+.doctor-study .kr-filter[aria-pressed="true"] {background:var(--surface-strong);border-color:var(--border-strong);}
+.kr-filter-count {margin-left:auto;font-size:.8rem;opacity:.7;}
+.kr-topic-card[hidden] {display:none!important;}
+.kr-pron-selection {margin:.6rem 0 .9rem;font-size:.87rem;opacity:.8;}
+</style>
+<div class="doctor-study" id="doctorStudy">
+<header class="kr-hero">
+  <p class="kr-kicker">IELTS SPEAKING PART 2 · MASTER STORY · 2026 SEP–DEC</p>
+  <h1>The Class Doctor</h1>
+  <p class="kr-hero-cn">Dr. Leo · 想当医生的同学 · 幽默、热心与一段难忘的成长经历</p>
+  <article class="kr-question">
+    <h2>Original Question · 原题</h2>
+    <p><strong>Describe a person you know who would like to choose a career in the medical field (e.g. a doctor, a nurse).</strong></p>
+    <p>You should say:</p>
+    <ul><li>Who this person is</li><li>How you know this person</li><li>What this person did or what quality they have</li><li>And explain why this person stands out to you</li></ul>
+  </article>
+  <p class="kr-hero-note">先讲清楚<strong>一位令人印象深刻的同学</strong>：外号 Dr. Leo、乐观幽默、乐于助人、因童年经历而立志成为医生。再把这些素材迁移到<strong>人物、经历、决策、地点、物品</strong>等话题：适配度不等于能直接套用，越低星级需要新增的真实经历越多。</p>
+  <div class="kr-stats" aria-label="学习内容总览">
+    <div class="kr-stat"><strong>1</strong><span>核心故事</span></div>
+    <div class="kr-stat"><strong>34</strong><span>关联话题（含拓展）</span></div>
+    <div class="kr-stat"><strong>5</strong><span>核心句</span></div>
+    <div class="kr-stat"><strong>17</strong><span>可复用表达</span></div>
+  </div>
+</header>
+<div class="kr-tabs-wrap"><nav class="kr-tabs" role="tablist" aria-label="雅思故事学习分区">
+  <button class="kr-tab" type="button" role="tab" id="kr-tab-story" aria-controls="kr-panel-story" aria-selected="true" tabindex="0" data-tab="story">🗺️ 故事地图</button>
+  <button class="kr-tab" type="button" role="tab" id="kr-tab-answer" aria-controls="kr-panel-answer" aria-selected="false" tabindex="-1" data-tab="answer">🗣️ 完整答案</button>
+  <button class="kr-tab" type="button" role="tab" id="kr-tab-language" aria-controls="kr-panel-language" aria-selected="false" tabindex="-1" data-tab="language">🧩 语言积累</button>
+  <button class="kr-tab" type="button" role="tab" id="kr-tab-pronunciation" aria-controls="kr-panel-pronunciation" aria-selected="false" tabindex="-1" data-tab="pronunciation">🔊 发音重点</button>
+  <button class="kr-tab" type="button" role="tab" id="kr-tab-topics" aria-controls="kr-panel-topics" aria-selected="false" tabindex="-1" data-tab="topics">🔄 话题迁移</button>
+</nav></div>
+<section class="kr-panel is-active" id="kr-panel-story" role="tabpanel" aria-labelledby="kr-tab-story" data-panel="story">
+<div class="kr-section-head"><h2>故事地图</h2><p>先记住人物和事件的推进顺序。点击任意步骤，查看关键表达与可延伸题目。</p></div>
+<div class="kr-callout"><strong>故事主线一句话</strong>Leo 是高中同学 → 大家叫他 Dr. Leo → 幽默、好学、乐于帮忙 → 童年生病 → 尝试不同治疗 → 后来逐渐康复 → 对医疗领域产生兴趣 → 为理想付诸行动。</div>
+<div class="kr-story-map" aria-label="Dr. Leo 故事发展过程">
+<button type="button" class="kr-story-node is-selected" data-step="0" aria-pressed="true"><span class="kr-node-icon" aria-hidden="true">👋</span><strong>介绍 Dr. Leo</strong><small>同班同学 + 有趣的绰号</small></button>
+<button type="button" class="kr-story-node" data-step="1" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🎯</span><strong>梦想与努力</strong><small>想当医生，确实在努力</small></button>
+<button type="button" class="kr-story-node" data-step="2" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">😄</span><strong>幽默又受欢迎</strong><small>会开玩笑、容易相处</small></button>
+<button type="button" class="kr-story-node" data-step="3" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🧮</span><strong>遇到难题就找他</strong><small>耐心讲解数学题</small></button>
+<button type="button" class="kr-story-node" data-step="4" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🏥</span><strong>小时候的一场病</strong><small>看了多位医生，仍不见明显好转</small></button>
+<button type="button" class="kr-story-node" data-step="5" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">🌿</span><strong>一次中医经历</strong><small>尝试草药调理，后来身体渐渐恢复</small></button>
+<button type="button" class="kr-story-node" data-step="6" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">💡</span><strong>兴趣被点燃</strong><small>从经历变成职业理想</small></button>
+<button type="button" class="kr-story-node" data-step="7" aria-pressed="false"><span class="kr-node-icon" aria-hidden="true">✨</span><strong>首尾呼应</strong><small>不只说梦想，也真正行动</small></button>
+</div>
+<aside class="kr-detail" id="krStoryDetail" aria-live="polite">
+<h3>介绍 Dr. Leo</h3>
+<p>开头直接交代 who 和 how you know him：Leo 是从十年级就认识的同学，大家都叫他 Dr. Leo。别把昵称误说成双关语（pun）。</p>
+<div class="kr-detail-links"><span class="kr-pill">🧩 one person who really stands out to me</span>
+<button type="button" class="kr-pill" data-open-topic="medical">↗ 想从事医疗行业的人</button>
+<button type="button" class="kr-pill" data-open-topic="popular">↗ 受欢迎的人</button>
+</div>
+</aside>
+</section>
+<section class="kr-panel" id="kr-panel-answer" role="tabpanel" aria-labelledby="kr-tab-answer" data-panel="answer">
+<div class="kr-section-head"><h2>完整答案 · 中英对照</h2><p>约 253 个英文词。每段英文后面紧跟中文译文；适当使用地道口语，不为了高级词汇牺牲真实感。</p></div>
+<div class="kr-answer-stack" id="krAnswerStack">
+<article class="kr-answer-card"><span class="kr-answer-num">01</span><p lang="en">Well, one person who really stands out to me is a classmate of mine. We all call him Dr. Leo.</p><p class="kr-cn" lang="zh-CN">嗯，有一个人让我印象特别深，他是我的一位同班同学。我们都叫他‘Leo 医生’。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">02</span><p lang="en">We gave him that nickname for two reasons. First, he&#x27;s always had his heart set on becoming a doctor, and second, he&#x27;s incredibly hardworking. In fact, he&#x27;s exactly the kind of person I can picture getting into medical school one day.</p><p class="kr-cn" lang="zh-CN">我们给他起这个外号有两个原因。首先，他一直一心想当医生；其次，他真的非常努力。说实话，我完全能想象他将来考上医学院的样子。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">03</span><p lang="en">I&#x27;ve known him since tenth grade, and he&#x27;s one of the most popular guys in our class. He&#x27;s got a great sense of humor and is always cracking jokes. But what I admire most is how helpful he is. Whenever we&#x27;re stuck on a tricky math problem, he&#x27;s the person we turn to. He&#x27;s always more than happy to walk us through it, no matter how busy he is.</p><p class="kr-cn" lang="zh-CN">我从十年级就认识他了，他是班上最受欢迎的人之一。他特别有幽默感，经常讲笑话。不过，我最欣赏的还是他乐于助人。每当我们被一道难题卡住，都会去找他。无论多忙，他都很乐意一步一步地给我们讲明白。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">04</span><p lang="en">Now, there&#x27;s actually a pretty interesting story behind his career choice. When he was little, he fell seriously ill. His parents took him to several doctors, but nothing seemed to help much.</p><p class="kr-cn" lang="zh-CN">其实，他为什么选择这条职业道路，背后还有一个挺有意思的故事。小时候他生过一场重病，父母带他看了好几位医生，但情况似乎一直没有明显好转。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">05</span><p lang="en">Eventually, a family friend suggested trying traditional Chinese medicine. So they gave it a shot, and after he started taking some herbal remedies, he gradually began to recover.</p><p class="kr-cn" lang="zh-CN">后来，一位家里的朋友建议试试中医。于是他们就试了一下；在开始服用一些中草药后，他的身体逐渐好转。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">06</span><p lang="en">That whole experience really stuck with him and sparked his interest in the field. Ever since then, he&#x27;s been determined to help people going through similar situations.</p><p class="kr-cn" lang="zh-CN">这段经历让他一直难以忘怀，也激发了他对这个领域的兴趣。从那以后，他就下定决心，希望将来帮助那些经历类似困难的人。</p></article>
+<article class="kr-answer-card"><span class="kr-answer-num">07</span><p lang="en">And what I admire most is that he&#x27;s not just dreaming about his future. He&#x27;s actually putting in the work to make it happen. Who knows? Maybe one day he&#x27;ll really live up to his nickname!</p><p class="kr-cn" lang="zh-CN">而我最佩服的是，他并不只是空想未来，而是真的在为梦想付出努力。谁知道呢？也许有一天，他真的会像这个外号说的那样，成为一名医生！</p></article>
+</div>
+<p class="kr-micro-note">💡 <strong>考试提示：</strong>描述的是“想从事医疗行业的一个人”，重点在 <em>who → personality → motivation → why you admire him</em>。Leo 的童年康复经历属于<strong>他自己的回忆</strong>；故事只说治疗之后情况改善，不意味着能够据此判断草药的医学疗效。<strong>不必背满每一个词</strong>；2 分钟内重点保证表达自然。</p>
+</section>
+<section class="kr-panel" id="kr-panel-language" role="tabpanel" aria-labelledby="kr-tab-language" data-panel="language">
+<div class="kr-section-head"><h2>语言积累</h2><p>先记住 5 个核心句，再练习 17 个可用于其他 IELTS Part 2 题目的地道表达。点击卡片查看中文和例句。</p></div>
+<h3 class="kr-subhead">5 个核心句 · Anchor Sentences</h3>
+<div class="kr-anchor-grid">
+<details class="kr-anchor-card"><summary><span class="kr-anchor-num">01</span><p class="kr-anchor-en" lang="en">Well, one person who really stands out to me is a classmate of mine.</p></summary><div class="kr-anchor-cn" lang="zh-CN">自然开场；点出要描述的人。</div></details>
+<details class="kr-anchor-card"><summary><span class="kr-anchor-num">02</span><p class="kr-anchor-en" lang="en">He&#x27;s always had his heart set on becoming a doctor.</p></summary><div class="kr-anchor-cn" lang="zh-CN">直接说明长期职业理想。</div></details>
+<details class="kr-anchor-card"><summary><span class="kr-anchor-num">03</span><p class="kr-anchor-en" lang="en">Whenever we&#x27;re stuck on a tricky math problem, he&#x27;s the person we turn to.</p></summary><div class="kr-anchor-cn" lang="zh-CN">用具体行为呈现他乐于助人。</div></details>
+<details class="kr-anchor-card"><summary><span class="kr-anchor-num">04</span><p class="kr-anchor-en" lang="en">That whole experience really stuck with him and sparked his interest in the field.</p></summary><div class="kr-anchor-cn" lang="zh-CN">从亲身经历过渡到兴趣与动机。</div></details>
+<details class="kr-anchor-card"><summary><span class="kr-anchor-num">05</span><p class="kr-anchor-en" lang="en">He&#x27;s actually putting in the work to make it happen.</p></summary><div class="kr-anchor-cn" lang="zh-CN">从“想做”走向“付诸行动”，用于自然结尾。</div></details>
+</div>
+<h3 class="kr-subhead">17 个可复用表达 · Reusable Chunks</h3>
+<div class="kr-chunk-grid">
+<details class="kr-chunk-card"><summary lang="en">stand out to someone</summary><div class="kr-chunk-cn"><div>给某人留下深刻印象；用于人物题开头</div><div class="kr-chunk-example" lang="en">One person who really stands out to me is my classmate Leo.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">have one’s heart set on</summary><div class="kr-chunk-cn"><div>一心想做某事，表达长期决心</div><div class="kr-chunk-example" lang="en">He has his heart set on becoming a doctor.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">picture someone doing something</summary><div class="kr-chunk-cn"><div>能够想象某人未来做某事</div><div class="kr-chunk-example" lang="en">I can picture him working in a hospital one day.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">get into medical school</summary><div class="kr-chunk-cn"><div>考入医学院；强调还在努力争取</div><div class="kr-chunk-example" lang="en">He hopes to get into medical school.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">have a great sense of humor</summary><div class="kr-chunk-cn"><div>很有幽默感；适用于人物描述</div><div class="kr-chunk-example" lang="en">He has a great sense of humor.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">crack jokes</summary><div class="kr-chunk-cn"><div>讲笑话、逗大家开心</div><div class="kr-chunk-example" lang="en">He is always cracking jokes before class.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">be stuck on something</summary><div class="kr-chunk-cn"><div>在问题上卡住、想不出来</div><div class="kr-chunk-example" lang="en">We were stuck on a difficult equation.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">be the person someone turns to</summary><div class="kr-chunk-cn"><div>成为别人遇到困难时会求助的人</div><div class="kr-chunk-example" lang="en">She is the person I turn to for advice.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">walk someone through something</summary><div class="kr-chunk-cn"><div>一步一步地讲解、带着别人完成</div><div class="kr-chunk-example" lang="en">He walked me through the calculation.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">there’s a story behind something</summary><div class="kr-chunk-cn"><div>某个选择或特点背后有故事</div><div class="kr-chunk-example" lang="en">There is a story behind his career choice.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">fall seriously ill</summary><div class="kr-chunk-cn"><div>患重病；自然表达经历而不必虚构病名</div><div class="kr-chunk-example" lang="en">He fell seriously ill when he was young.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">give it a shot</summary><div class="kr-chunk-cn"><div>尝试一下；适用于新方法、活动等</div><div class="kr-chunk-example" lang="en">We had never tried it before, but we gave it a shot.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">gradually begin to recover</summary><div class="kr-chunk-cn"><div>逐渐开始康复；慎用于疾病结果</div><div class="kr-chunk-example" lang="en">Over time, he gradually began to recover.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">stick with someone</summary><div class="kr-chunk-cn"><div>某件事让某人久久难忘</div><div class="kr-chunk-example" lang="en">That conversation really stuck with me.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">spark someone’s interest in</summary><div class="kr-chunk-cn"><div>激发某人对……的兴趣</div><div class="kr-chunk-example" lang="en">The experience sparked his interest in science.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">put in the work</summary><div class="kr-chunk-cn"><div>真正投入时间与努力</div><div class="kr-chunk-example" lang="en">She is willing to put in the work.</div></div></details>
+<details class="kr-chunk-card"><summary lang="en">live up to a nickname</summary><div class="kr-chunk-cn"><div>名副其实、符合这个外号所代表的期待</div><div class="kr-chunk-example" lang="en">Maybe he will live up to his nickname one day.</div></div></details>
+</div>
+</section>
+<section class="kr-panel" id="kr-panel-pronunciation" role="tabpanel" aria-labelledby="kr-tab-pronunciation" data-panel="pronunciation">
+<div class="kr-section-head"><h2>发音重点</h2><p>点击单词听发音，并切换美式／英式英语。只选这篇里真正容易读错、具有迁移价值的词汇。</p></div>
+<p class="kr-pron-selection">选择标准：重音容易放错、多音节不易连贯、或两种口音确有差异。<strong>不选 Dr. Leo 等名字</strong>，也不把简单词全部塞进发音表。</p>
+<div class="kr-pron-controls" role="group" aria-label="选择发音口音"><button type="button" class="accent-button active" data-accent="us">🇺🇸 美式英语</button><button type="button" class="accent-button" data-accent="uk">🇬🇧 英式英语</button></div>
+<div class="kr-pron-grid">
+<button class="speak-word" type="button" data-word="incredibly" aria-label="朗读 incredibly"><span class="kr-pron-word">incredibly 🔊</span><span class="kr-pron-hint">难度适中的多音节副词；重音在第二音节</span></button>
+<button class="speak-word" type="button" data-word="humor" aria-label="朗读 humor"><span class="kr-pron-word">humor 🔊</span><span class="kr-pron-hint">幽默；注意美式 /ˈhjuːmər/ 或 /ˈjuːmər/</span></button>
+<button class="speak-word" type="button" data-word="seriously" aria-label="朗读 seriously"><span class="kr-pron-word">seriously 🔊</span><span class="kr-pron-hint">严重地；注意连读和主重音</span></button>
+<button class="speak-word" type="button" data-word="eventually" aria-label="朗读 eventually"><span class="kr-pron-word">eventually 🔊</span><span class="kr-pron-hint">最终；不要漏掉中间音节</span></button>
+<button class="speak-word" type="button" data-word="traditional" aria-label="朗读 traditional"><span class="kr-pron-word">traditional 🔊</span><span class="kr-pron-hint">传统的；重音位置与词尾 -tional</span></button>
+<button class="speak-word" type="button" data-word="herbal" aria-label="朗读 herbal"><span class="kr-pron-word">herbal 🔊</span><span class="kr-pron-hint">草药的；美式多不读 h，英式通常读 h</span></button>
+<button class="speak-word" type="button" data-word="remedies" aria-label="朗读 remedies"><span class="kr-pron-word">remedies 🔊</span><span class="kr-pron-hint">治疗方法／药剂（复数）；注意三音节和词尾</span></button>
+<button class="speak-word" type="button" data-word="gradually" aria-label="朗读 gradually"><span class="kr-pron-word">gradually 🔊</span><span class="kr-pron-hint">逐渐地；注意 /dʒ/ 与自然节奏</span></button>
+<button class="speak-word" type="button" data-word="recover" aria-label="朗读 recover"><span class="kr-pron-word">recover 🔊</span><span class="kr-pron-hint">恢复；重音在第二音节</span></button>
+<button class="speak-word" type="button" data-word="determined" aria-label="朗读 determined"><span class="kr-pron-word">determined 🔊</span><span class="kr-pron-hint">坚定的；注意第二音节重音与 -ed 结尾</span></button>
+<button class="speak-word" type="button" data-word="medical" aria-label="朗读 medical"><span class="kr-pron-word">medical 🔊</span><span class="kr-pron-hint">医学的；重音在第一个音节</span></button>
+</div>
+<div class="kr-pron-note"><strong>特别提醒：</strong><em>herbal</em> 在常见美式发音中 h 不发音（类似 <em>erb-al</em>），英式发音通常读出 h。发音按钮沿用本站 <code>assets/js/pronunciation.js</code>，由设备或浏览器语音合成，不等同于雅思考官的真人标准示范。</div>
+</section>
+<section class="kr-panel" id="kr-panel-topics" role="tabpanel" aria-labelledby="kr-tab-topics" data-panel="topics">
+<div class="kr-section-head"><h2>话题迁移 · Adapt Your Story</h2><p>按“母故事可复用的素材量”评级，而非预测 IELTS 分数。<strong>5★ 可以直接用或换侧重点；4★ 要补少量细节；3★ 需增添一个具体事件；2★ 只是拓展灵感，通常要重写大半篇。</strong></p></div>
+<div class="kr-topic-key"><span class="kr-pill">★★★★★ 直接／非常贴合</span><span class="kr-pill">★★★★ 轻度调整</span><span class="kr-pill">★★★ 新增情节</span><span class="kr-pill">★★ 重度改编</span></div>
+<div class="kr-topic-controls" role="group" aria-label="按适配程度筛选话题"><button type="button" class="kr-filter" data-filter="all" aria-pressed="true">全部 34</button><button type="button" class="kr-filter" data-filter="high" aria-pressed="false">优先 4–5★</button><button type="button" class="kr-filter" data-filter="3" aria-pressed="false">3★</button><button type="button" class="kr-filter" data-filter="2" aria-pressed="false">2★</button><span class="kr-filter-count" id="krFilterCount" aria-live="polite">显示 34 / 34 题</span></div>
+<div class="kr-topic-grid">
+<details class="kr-topic-card" data-topic="medical" id="kr-topic-medical" data-rating="5"><summary><span class="kr-fit"><span class="kr-rating" aria-label="5 星适配度">★★★★★</span> · 直接适用</span><h3>想从事医疗行业的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who would like to choose a career in the medical field (e.g. a doctor, a nurse)</div></summary><div class="kr-topic-body"><p>原题：已经写清楚 Leo 是谁、如何认识、为什么想做医生，以及你对他的评价。</p><div class="kr-route"><strong>答题路径：</strong>认识 Leo → 绰号 → 幽默又热心 → 童年生病的经历 → 职业理想与努力</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One person who really stands out to me is a classmate of mine. We all call him Dr. Leo.</p><strong>示例结尾</strong><p lang="en">Who knows? Maybe one day he&#x27;ll really live up to his nickname!</p></div></div></details>
+<details class="kr-topic-card" data-topic="popular" id="kr-topic-popular" data-rating="5"><summary><span class="kr-fit"><span class="kr-rating" aria-label="5 星适配度">★★★★★</span> · 直接适用</span><h3>受欢迎的人</h3><div class="kr-topic-en" lang="en">Describe a popular person</div></summary><div class="kr-topic-body"><p>现有故事已明确说他受同学欢迎，也提供了幽默与热心讲题的证据；缩短疾病背景，把重点放在人际吸引力。</p><div class="kr-route"><strong>答题路径：</strong>Dr. Leo 的绰号 → 爱讲笑话 → 同学求助时耐心解释 → 大家喜欢他的原因</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One of the most popular guys in my class is a friend we jokingly call Dr. Leo.</p><strong>示例结尾</strong><p lang="en">It&#x27;s no surprise that almost everyone in our class enjoys being around him.</p></div></div></details>
+<details class="kr-topic-card" data-topic="happy" id="kr-topic-happy" data-rating="4"><summary><span class="kr-fit"><span class="kr-rating" aria-label="4 星适配度">★★★★</span> · 轻度调整</span><h3>快乐的人</h3><div class="kr-topic-en" lang="en">Describe a happy person you know</div></summary><div class="kr-topic-body"><p>笑话能证明幽默，不一定能证明乐观。增加一次考试压力下他依然能鼓励大家的真实例子。</p><div class="kr-route"><strong>答题路径：</strong>介绍 Leo → 总是乐观开朗 → 考前仍会逗大家笑（新增）→ 给你的积极影响</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One of the most cheerful people I know is my classmate Leo.</p><strong>示例结尾</strong><p lang="en">Being around him almost always puts me in a better mood.</p></div></div></details>
+<details class="kr-topic-card" data-topic="opinion" id="kr-topic-opinion" data-rating="4"><summary><span class="kr-fit"><span class="kr-rating" aria-label="4 星适配度">★★★★</span> · 轻度调整</span><h3>改变重要看法的一次经历</h3><div class="kr-topic-en" lang="en">Describe a time when you changed an important opinion of yours</div></summary><div class="kr-topic-body"><p>从 Leo 的病中经历改成“我的观点转变”：先补你以前对医生职业的看法，再说明听完故事后如何改变。</p><div class="kr-route"><strong>答题路径：</strong>原先只关注职业收入（新增）→ 听到 Leo 的童年经历 → 意识到医护也需要同理心 → 观点变化</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I used to think people chose medicine mainly for the money, but a conversation with my classmate Leo changed my mind.</p><strong>示例结尾</strong><p lang="en">It completely changed the way I look at healthcare workers.</p></div></div></details>
+<details class="kr-topic-card" data-topic="skill" id="kr-topic-skill" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>教你新技能的人</h3><div class="kr-topic-en" lang="en">Describe a person who taught you a new skill</div></summary><div class="kr-topic-body"><p>现有“讲解数学题”还不等于真正教会一项新技能。补一项具体方法、练习过程及你后来能够独立使用的证据。</p><div class="kr-route"><strong>答题路径：</strong>数学题卡住 → Leo 教会你拆分步骤（新增）→ 自己练习 → 掌握方法</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">Someone who taught me a really useful study skill is my classmate Leo.</p><strong>示例结尾</strong><p lang="en">I still use that technique whenever I run into a complicated problem.</p></div></div></details>
+<details class="kr-topic-card" data-topic="organized" id="kr-topic-organized" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>很有条理的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who is very organized</div></summary><div class="kr-topic-body"><p>努力不能自动证明有条理。补日程表、复习计划、分配时间的真实细节。</p><div class="kr-route"><strong>答题路径：</strong>认识 Leo → 自制每周学习计划（新增）→ 做作业与帮助同学都安排得当 → 为什么佩服</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">The most organized person I know is a classmate of mine called Leo.</p><strong>示例结尾</strong><p lang="en">I wish I could manage my time half as well as he does.</p></div></div></details>
+<details class="kr-topic-card" data-topic="success" id="kr-topic-success" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>做困难事情并成功的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who did something difficult and was successful</div></summary><div class="kr-topic-body"><p>希望考上医学院还不是已经成功。可补一段真实的考试瓶颈和最终取得的结果，明确困难与成果。</p><div class="kr-route"><strong>答题路径：</strong>Leo 科目薄弱（新增）→ 改进方法（新增）→ 持续努力 → 最终达到目标（新增）</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I&#x27;d like to talk about my classmate Leo, who managed to overcome a major academic challenge.</p><strong>示例结尾</strong><p lang="en">What impressed me wasn&#x27;t just the result, but the effort he put in to get there.</p></div></div></details>
+<details class="kr-topic-card" data-topic="healthy" id="kr-topic-healthy" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>健康习惯和规律作息的人</h3><div class="kr-topic-en" lang="en">Describe a person you know who has healthy habits and a regular daily routine</div></summary><div class="kr-topic-body"><p>想从事医疗职业不代表生活习惯健康。需明确运动、饮食、睡眠和每天坚持的时间安排。</p><div class="kr-route"><strong>答题路径：</strong>Leo 注重健康（新增）→ 具体运动与睡眠习惯（新增）→ 如何坚持 → 对你有什么启发</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A classmate of mine named Leo takes his daily routine really seriously.</p><strong>示例结尾</strong><p lang="en">His consistency has encouraged me to take better care of myself.</p></div></div></details>
+<details class="kr-topic-card" data-topic="help" id="kr-topic-help" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>帮助别人解决问题的一次经历</h3><div class="kr-topic-en" lang="en">Describe a time when you helped someone solve a problem</div></summary><div class="kr-topic-body"><p>原故事中是 Leo 帮你，不是你帮他。保留关系，改为他准备英语演讲时遇到困难，你主动帮忙。</p><div class="kr-route"><strong>答题路径：</strong>Leo 演讲准备受阻（新增）→ 你帮他修改英文稿（新增）→ 一起排练 → 最终解决</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One time I helped a friend solve a problem was when Leo was preparing a presentation in English.</p><strong>示例结尾</strong><p lang="en">It felt good to return the favor after he&#x27;d helped me so many times.</p></div></div></details>
+<details class="kr-topic-card" data-topic="group" id="kr-topic-group" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>一次团队合作经历</h3><div class="kr-topic-en" lang="en">Describe a time when you worked in a group</div></summary><div class="kr-topic-body"><p>补一个双方共同参与的生物展示项目，重点放在分工、困难和结果，而非描述 Leo 的职业理想。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 分组（新增）→ 研究人体话题 → 分工与磨合 → 完成课堂展示</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I once worked with my classmate Leo on a biology presentation about the human body.</p><strong>示例结尾</strong><p lang="en">By the end, we&#x27;d learned just as much about teamwork as we had about biology.</p></div></div></details>
+<details class="kr-topic-card" data-topic="decision" id="kr-topic-decision" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>你做过的重要决定</h3><div class="kr-topic-en" lang="en">Describe an important decision you made</div></summary><div class="kr-topic-body"><p>职业选择必须是你自己的决定。可以因 Leo 的热情而决定加入急救或科学社团；需要真实的权衡与行动。</p><div class="kr-route"><strong>答题路径：</strong>受到 Leo 鼓励 → 犹豫是否加入社团（新增）→ 作出决定 → 学到东西</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">An important decision I made was to join a school science club after talking to my classmate Leo.</p><strong>示例结尾</strong><p lang="en">Looking back, I&#x27;m glad I stepped out of my comfort zone.</p></div></div></details>
+<details class="kr-topic-card" data-topic="happydecision" id="kr-topic-happydecision" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>令你满意的重要决定</h3><div class="kr-topic-en" lang="en">Describe an important decision you made that had a positive result</div></summary><div class="kr-topic-body"><p>沿用加入社团的选择，但必须具体补出好结果，比如认识朋友、学到技能或获得展示机会。</p><div class="kr-route"><strong>答题路径：</strong>考虑加入社团 → 决定参加 → 遇到困难 → 取得积极结果（新增）</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One decision I&#x27;m really glad I made was joining our school&#x27;s science club.</p><strong>示例结尾</strong><p lang="en">It turned out to be one of the most rewarding choices I&#x27;ve made.</p></div></div></details>
+<details class="kr-topic-card" data-topic="recentchange" id="kr-topic-recentchange" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>最近做出的改变</h3><div class="kr-topic-en" lang="en">Describe a change that you made recently</div></summary><div class="kr-topic-body"><p>Leo 的学习态度可以是灵感，但题目必须讲你近期实际改变了什么、何时开始以及效果。</p><div class="kr-route"><strong>答题路径：</strong>曾经拖延（新增）→ 受到 Leo 启发 → 采用固定复习计划（新增）→ 看到了改变</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A recent change I&#x27;ve made is becoming much more consistent with my study routine.</p><strong>示例结尾</strong><p lang="en">It&#x27;s a small adjustment, but it&#x27;s already made a difference.</p></div></div></details>
+<details class="kr-topic-card" data-topic="video" id="kr-topic-video" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>一个有趣的视频</h3><div class="kr-topic-en" lang="en">Describe an interesting video</div></summary><div class="kr-topic-body"><p>把 Leo 对人体的兴趣转化为推荐视频的情节；要补视频的实际内容、观看场景和有趣之处。</p><div class="kr-route"><strong>答题路径：</strong>Leo 分享人体科普视频（新增）→ 视频内容与讲解方式（新增）→ 你的反应 → 为什么难忘</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">An interesting video I watched was a short science clip my classmate Leo recommended.</p><strong>示例结尾</strong><p lang="en">It made a complicated topic surprisingly easy to understand.</p></div></div></details>
+<details class="kr-topic-card" data-topic="evening" id="kr-topic-evening" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>与朋友共度的愉快夜晚</h3><div class="kr-topic-en" lang="en">Describe an enjoyable evening with friends</div></summary><div class="kr-topic-body"><p>利用 Leo 的幽默和讲题经历，新增一个具体晚上、地点与互动过程。</p><div class="kr-route"><strong>答题路径：</strong>考前约在一起复习（新增）→ Leo 开玩笑 → 互相帮助 → 度过愉快一晚</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One evening I really enjoyed was a study night with a few classmates, including Leo.</p><strong>示例结尾</strong><p lang="en">What I remember most is how much we laughed, even though we had an exam the next day.</p></div></div></details>
+<details class="kr-topic-card" data-topic="crowded" id="kr-topic-crowded" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>去过的拥挤场所</h3><div class="kr-topic-en" lang="en">Describe a crowded place that you have visited</div></summary><div class="kr-topic-body"><p>借用 Leo 的科学兴趣，新增一次亲自去科技展或学校科展的经历；重点在拥挤的场面。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 参观科展（新增）→ 到场人数很多 → 排队与走动不便 → 你的感受</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A crowded place I&#x27;ve visited was a science exhibition I went to with my classmate Leo.</p><strong>示例结尾</strong><p lang="en">It was a bit overwhelming, but the exhibits were worth the crowds.</p></div></div></details>
+<details class="kr-topic-card" data-topic="noisy" id="kr-topic-noisy" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>去过的嘈杂场所</h3><div class="kr-topic-en" lang="en">Describe a noisy place you have been to</div></summary><div class="kr-topic-body"><p>和拥挤场所可共用科学展设定，但需要讲声音来源、体验及感受，不能只说人很多。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 参观科展（新增）→ 扩音器与互动展示 → 噪音干扰交谈 → 感受</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A really noisy place I remember visiting was a school science fair with Leo.</p><strong>示例结尾</strong><p lang="en">It was exciting, although we could barely hear each other at times.</p></div></div></details>
+<details class="kr-topic-card" data-topic="struggleperson" id="kr-topic-struggleperson" data-rating="3"><summary><span class="kr-fit"><span class="kr-rating" aria-label="3 星适配度">★★★</span> · 情节扩展</span><h3>遇到困难最终成功的人（补充题）</h3><div class="kr-topic-en" lang="en">Describe a person who faced difficulties but eventually succeeded</div></summary><div class="kr-topic-body"><p>与“做困难事情并成功的人”共用一条新增的完整克服困难经历；这是补充题，可能与主库题目重叠。</p><div class="kr-route"><strong>答题路径：</strong>Leo 遇到挫折（新增）→ 调整学习方法 → 坚持 → 获得具体成果（新增）</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">Someone who kept going despite setbacks is my classmate Leo.</p><strong>示例结尾</strong><p lang="en">His experience showed me that persistence really does pay off.</p></div></div></details>
+<details class="kr-topic-card" data-topic="older" id="kr-topic-older" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>比你年长且敬佩的人</h3><div class="kr-topic-en" lang="en">Describe someone who is older than you that you admire</div></summary><div class="kr-topic-body"><p>Leo 是同班同学，不能无依据地变成长者。可以改讲当年帮助他的医生，但需要你与那位医生的真实关系和接触经历。</p><div class="kr-route"><strong>答题路径：</strong>改讲真正认识的年长医生（新增）→ 做了什么 → 你如何了解他 → 欣赏原因</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">An older person I really admire is a doctor who made a lasting impression on my family.</p><strong>示例结尾</strong><p lang="en">I admire the way he treats people with patience and respect.</p></div></div></details>
+<details class="kr-topic-card" data-topic="early" id="kr-topic-early" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>一次早起经历</h3><div class="kr-topic-en" lang="en">Describe a time when you got up early</div></summary><div class="kr-topic-body"><p>原文没有早起时间。可以在参加晨间科学活动时加入时间和起床原因，但要有真实的完整经历。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 参加清晨活动（新增）→ 早起准备 → 抵达学校 → 活动结果</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I once got up much earlier than usual to help Leo prepare for a school event.</p><strong>示例结尾</strong><p lang="en">I was exhausted at first, but the morning turned out to be worthwhile.</p></div></div></details>
+<details class="kr-topic-card" data-topic="changedplan" id="kr-topic-changedplan" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>近期改变计划的一次经历</h3><div class="kr-topic-en" lang="en">Describe a plan you had to change recently</div></summary><div class="kr-topic-body"><p>原文没有临时变更。新增一起做生物展示、场地或成员临时改变，并解释如何调整。</p><div class="kr-route"><strong>答题路径：</strong>原计划 → 临时障碍（新增）→ 你和 Leo 调整安排 → 最终结果</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A plan I had to change recently involved a biology project I was doing with Leo.</p><strong>示例结尾</strong><p lang="en">We had to improvise, but things worked out in the end.</p></div></div></details>
+<details class="kr-topic-card" data-topic="tech" id="kr-topic-tech" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>遇到过的科技难题</h3><div class="kr-topic-en" lang="en">Describe a challenging technological problem you faced</div></summary><div class="kr-topic-body"><p>需新增真实设备故障，不能把讲数学题当科技问题。可围绕课堂展示时电脑或文件出错。</p><div class="kr-route"><strong>答题路径：</strong>准备与 Leo 的展示 → 电脑故障（新增）→ 排查与临时替代方案（新增）→ 结果</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One technical problem I faced happened right before a presentation with my classmate Leo.</p><strong>示例结尾</strong><p lang="en">We managed to finish the presentation, but it was stressful.</p></div></div></details>
+<details class="kr-topic-card" data-topic="device" id="kr-topic-device" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>使用电子设备遇到的问题（补充题）</h3><div class="kr-topic-en" lang="en">Describe a problem you had when using an electronic device</div></summary><div class="kr-topic-body"><p>与科技难题共用一条新增设备故障经历；题目主体必须是你使用设备的过程。</p><div class="kr-route"><strong>答题路径：</strong>使用电脑或平板 → 故障现象（新增）→ 求助 Leo 或自行解决 → 感受</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I once ran into a frustrating problem with my laptop while preparing a project with Leo.</p><strong>示例结尾</strong><p lang="en">Since then, I&#x27;ve made a habit of keeping backups.</p></div></div></details>
+<details class="kr-topic-card" data-topic="noresponse" id="kr-topic-noresponse" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>长时间没收到回复的信息</h3><div class="kr-topic-en" lang="en">Describe a time when you sent a message or an email to someone but received no reply for a long time</div></summary><div class="kr-topic-body"><p>Leo 可以保留为收件人，但需要新增确切的发送原因、等待多久、为何没有回复及结果。</p><div class="kr-route"><strong>答题路径：</strong>考前给 Leo 发消息（新增）→ 很久没收到回复 → 改用其他办法 → 最终解释</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">I once sent Leo an important message before a test and didn&#x27;t hear back for ages.</p><strong>示例结尾</strong><p lang="en">It taught me not to rely entirely on last-minute messages.</p></div></div></details>
+<details class="kr-topic-card" data-topic="waste" id="kr-topic-waste" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>经常浪费时间的活动</h3><div class="kr-topic-en" lang="en">Describe an activity you do regularly that you think is a waste of time</div></summary><div class="kr-topic-body"><p>要讲你自己的重复行为。可以与 Leo 的勤奋形成对比，补你如何经常刷手机拖延。</p><div class="kr-route"><strong>答题路径：</strong>你经常刷短视频（新增）→ 与 Leo 的作息对比 → 造成的影响 → 你的反思</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">One thing I waste far too much time on is checking my phone when I should be studying.</p><strong>示例结尾</strong><p lang="en">Watching Leo work so consistently has made me more aware of that habit.</p></div></div></details>
+<details class="kr-topic-card" data-topic="building" id="kr-topic-building" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>喜欢去的一栋建筑</h3><div class="kr-topic-en" lang="en">Describe a building you enjoy visiting</div></summary><div class="kr-topic-body"><p>需要新增具体去过的科学馆、图书馆或医院开放日，并描述建筑本身的特色，不能只描写 Leo。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 去过的建筑（新增）→ 外观和内部设施 → 活动 → 为什么喜欢</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A building I enjoy visiting is a science center I first went to with my classmate Leo.</p><strong>示例结尾</strong><p lang="en">I keep going back because there&#x27;s always something new to explore.</p></div></div></details>
+<details class="kr-topic-card" data-topic="tall" id="kr-topic-tall" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>喜欢或不喜欢的高楼</h3><div class="kr-topic-en" lang="en">Describe a tall building you like or dislike</div></summary><div class="kr-topic-body"><p>假如确有一次参观医院高楼的经历，可以转成建筑题；必须具体描述高度、楼层、设施与喜恶。</p><div class="kr-route"><strong>答题路径：</strong>与 Leo 去医院高楼（新增）→ 外形与内部 → 使用体验 → 喜欢/不喜欢原因</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A tall building I remember visiting is a modern hospital that Leo showed me around.</p><strong>示例结尾</strong><p lang="en">I was impressed by its design, although the place felt a little intimidating.</p></div></div></details>
+<details class="kr-topic-card" data-topic="boring" id="kr-topic-boring" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>一个无聊的地方</h3><div class="kr-topic-en" lang="en">Describe a boring place</div></summary><div class="kr-topic-body"><p>候诊室只提供医疗背景，仍需要你亲自到访的细节；原稿里生病的是 Leo，不是你。</p><div class="kr-route"><strong>答题路径：</strong>一次亲自经历的候诊（新增）→ 环境单调 → 等待很久 → 无聊的感受</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A place I found surprisingly boring was a hospital waiting area I visited once.</p><strong>示例结尾</strong><p lang="en">It felt as if time had completely slowed down.</p></div></div></details>
+<details class="kr-topic-card" data-topic="shorttrip" id="kr-topic-shorttrip" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>经常走但不喜欢的短途行程</h3><div class="kr-topic-en" lang="en">Describe a short trip you often take but do not like</div></summary><div class="kr-topic-body"><p>必须是你经常走的一段路，并描述交通与原因；Leo 可以作为目的地活动的联系人。</p><div class="kr-route"><strong>答题路径：</strong>经常去校外科学活动（新增）→ 路线和时间 → 拥堵或折腾 → 讨厌原因</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A short journey I don&#x27;t enjoy is the bus ride to an after-school science program.</p><strong>示例结尾</strong><p lang="en">The program is great, but getting there is a real hassle.</p></div></div></details>
+<details class="kr-topic-card" data-topic="law" id="kr-topic-law" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>希望颁布的一项新法律</h3><div class="kr-topic-en" lang="en">Describe a new law you would like to introduce</div></summary><div class="kr-topic-body"><p>Leo 的故事可启发你重视健康教育，但必须清楚提出具体法律、对象、措施与预期作用。</p><div class="kr-route"><strong>答题路径：</strong>受 Leo 故事启发 → 希望学校普及急救教育（新增）→ 具体要求 → 社会好处</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">If I could introduce a new law, I&#x27;d make basic first-aid education compulsory in schools.</p><strong>示例结尾</strong><p lang="en">I think it could help ordinary people respond more confidently in emergencies.</p></div></div></details>
+<details class="kr-topic-card" data-topic="localnews" id="kr-topic-localnews" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>一则人们关注的本地新闻</h3><div class="kr-topic-en" lang="en">Describe a piece of local news that people are interested in</div></summary><div class="kr-topic-body"><p>需要一则真实发生且你见过的本地新闻，不能凭空把 Leo 的个人经历当作新闻。</p><div class="kr-route"><strong>答题路径：</strong>本地真实健康新闻（新增）→ 从哪看到 → 大家为什么关心 → 你和 Leo 的讨论</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A local news story that caught my attention was about a new health initiative in my city.</p><strong>示例结尾</strong><p lang="en">It sparked a lot of discussion, especially among people interested in healthcare.</p></div></div></details>
+<details class="kr-topic-card" data-topic="goal" id="kr-topic-goal" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>你想实现的长期目标</h3><div class="kr-topic-en" lang="en">Describe a long-term goal you want to achieve</div></summary><div class="kr-topic-body"><p>Leo 想当医生不是“我的”目标。借用他坚持梦想的方式，另讲你自己的长期目标及步骤。</p><div class="kr-route"><strong>答题路径：</strong>Leo 的行动启发你 → 提出自己的目标（新增）→ 阶段性计划 → 坚持原因</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">A long-term goal I&#x27;d like to achieve is becoming more confident when speaking English.</p><strong>示例结尾</strong><p lang="en">Seeing how determined Leo is reminds me to keep working toward it.</p></div></div></details>
+<details class="kr-topic-card" data-topic="book" id="kr-topic-book" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>读过的一本精彩的书</h3><div class="kr-topic-en" lang="en">Describe an exciting book you enjoyed reading</div></summary><div class="kr-topic-body"><p>需要真实存在且你真正读过的书及情节；Leo 可以是推荐者，但他的经历不能替代书的内容。</p><div class="kr-route"><strong>答题路径：</strong>Leo 推荐一本书（新增）→ 阅读过程 → 书的具体情节 → 为什么精彩</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">An exciting book I enjoyed was a science-themed novel my classmate Leo recommended.</p><strong>示例结尾</strong><p lang="en">It made me look at scientific discoveries in a completely different way.</p></div></div></details>
+<details class="kr-topic-card" data-topic="interview" id="kr-topic-interview" data-rating="2"><summary><span class="kr-fit"><span class="kr-rating" aria-label="2 星适配度">★★</span> · 较大改编</span><h3>被采访的一位名人</h3><div class="kr-topic-en" lang="en">Describe a famous person being interviewed</div></summary><div class="kr-topic-body"><p>要增加真实采访视频、名人身份、采访内容与感受；与 Leo 只是通过医疗主题建立联系，迁移成本很高。</p><div class="kr-route"><strong>答题路径：</strong>Leo 推荐一段真实名人采访（新增）→ 采访对象与话题 → 一句打动你的话 → 感受</div><div class="kr-sample"><strong>示例开头（请以自己的真实经历替换新增情节）</strong><p lang="en">An interview I found memorable featured a well-known scientist discussing why they chose their career.</p><strong>示例结尾</strong><p lang="en">What stayed with me was how honestly the person talked about their motivation.</p></div></div></details>
+</div>
+<div class="kr-mother"><strong>母素材 · 不要机械套题</strong><p><strong>故事原料：</strong>十年级认识的 Leo → 大家叫他 Dr. Leo → 想当医生、非常努力 → 爱开玩笑 → 乐于讲数学题 → 童年一场重病 → 家人听建议尝试中医，后来逐渐恢复 → 因此想从事医疗工作。</p><p><strong>迁移原则：</strong>人物题把“这个人为何符合题目”放在中心；经历题讲清你自己的起因、行动与结果；物品和地点题必须有能描述的具体对象。<strong>34 题不是 34 篇可直接背的答案</strong>：3★ 和 2★ 的新情节必须从真实经历中补充，尤其不要把 Leo 帮你变成“你帮助 Leo”而不交代发生了什么。</p><p><a href="https://shishiapcs.github.io/esl-speaking-ielts-topics-september-to-december-2026/" rel="noopener">↗ 查看 2026 年 9–12 月完整 Part 2 题库</a>（话题名称以题库为准，页面英文问法为课堂练习表述）。</p></div>
+</section>
+<p class="kr-footer">2026 年 9–12 月雅思口语 Master Story · Mr. Mou @ ShiShi AP Center</p>
+</div>
+<script>
+(() => {
+  "use strict";
+  const app = document.getElementById('doctorStudy');
+  if (!app) return;
+  const tabs = [...app.querySelectorAll('.kr-tab')];
+  const panels = [...app.querySelectorAll('.kr-panel')];
+  const valid = new Set(['story','answer','language','pronunciation','topics']);
+  const hashTab = window.location.hash.startsWith('#study-') ? window.location.hash.slice(7) : 'story';
+  function openTab(name, updateHash=true) {
+    if (!valid.has(name)) return;
+    tabs.forEach(tab => {
+      const selected = tab.dataset.tab === name;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      const active = panel.dataset.panel === name;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    if (updateHash && history.replaceState) history.replaceState(null, '', '#study-' + name);
+  }
+  function jumpToPanel(name) {
+    openTab(name);
+    app.querySelector('.kr-tabs-wrap').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => jumpToPanel(tab.dataset.tab));
+    tab.addEventListener('keydown', event => {
+      let next = null;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length-1;
+      if (next === null) return;
+      event.preventDefault();
+      tabs[next].focus();
+      openTab(tabs[next].dataset.tab);
+    });
+  });
+  const storySteps = [{"icon": "👋", "title": "介绍 Dr. Leo", "sub": "同班同学 + 有趣的绰号", "detail": "开头直接交代 who 和 how you know him：Leo 是从十年级就认识的同学，大家都叫他 Dr. Leo。别把昵称误说成双关语（pun）。", "phrase": "one person who really stands out to me", "topics": ["medical", "popular"]}, {"icon": "🎯", "title": "梦想与努力", "sub": "想当医生，确实在努力", "detail": "不是只说一个空泛的梦想：he has his heart set on it，并且 incredibly hardworking。注意仍然没有说他已经考进医学院。", "phrase": "had his heart set on becoming a doctor", "topics": ["medical", "organized"]}, {"icon": "😄", "title": "幽默又受欢迎", "sub": "会开玩笑、容易相处", "detail": "用 cracking jokes 展示性格；如果改答“快乐的人”，需再补遇到压力时仍然乐观的具体例子。", "phrase": "a great sense of humor / cracking jokes", "topics": ["popular", "happy"]}, {"icon": "🧮", "title": "遇到难题就找他", "sub": "耐心讲解数学题", "detail": "他是班里的 go-to person，乐意一步步讲题。若想改答“教会你新技能”，需补具体学习内容和你自己掌握的过程。", "phrase": "turn to him / walk us through it", "topics": ["skill", "help"]}, {"icon": "🏥", "title": "小时候的一场病", "sub": "看了多位医生，仍不见明显好转", "detail": "这是职业动机的起因；用两三句讲清楚即可，不必虚构诊断或疾病名称。", "phrase": "fell seriously ill / nothing seemed to help", "topics": ["medical", "opinion"]}, {"icon": "🌿", "title": "一次中医经历", "sub": "尝试草药调理，后来身体渐渐恢复", "detail": "Leo 回忆家人听取建议，尝试中医，之后病情逐渐改善；不把时间先后当作疗效的医学证明。", "phrase": "gave it a shot / gradually began to recover", "topics": ["medical", "video"]}, {"icon": "💡", "title": "兴趣被点燃", "sub": "从经历变成职业理想", "detail": "故事的转折是他对医疗工作的兴趣被激发，立志帮助遭遇类似困境的人。", "phrase": "stuck with him / sparked his interest", "topics": ["medical", "opinion"]}, {"icon": "✨", "title": "首尾呼应", "sub": "不只说梦想，也真正行动", "detail": "回到 Dr. Leo 这个昵称做结尾。观点应该指向这个人：他的坚持和行动为什么值得你欣赏。", "phrase": "putting in the work / live up to his nickname", "topics": ["medical", "popular"]}];
+  const topicTitles = {"medical": "想从事医疗行业的人", "popular": "受欢迎的人", "happy": "快乐的人", "opinion": "改变重要看法的一次经历", "skill": "教你新技能的人", "organized": "很有条理的人", "success": "做困难事情并成功的人", "healthy": "健康习惯和规律作息的人", "help": "帮助别人解决问题的一次经历", "group": "一次团队合作经历", "decision": "你做过的重要决定", "happydecision": "令你满意的重要决定", "recentchange": "最近做出的改变", "video": "一个有趣的视频", "evening": "与朋友共度的愉快夜晚", "crowded": "去过的拥挤场所", "noisy": "去过的嘈杂场所", "struggleperson": "遇到困难最终成功的人（补充题）", "older": "比你年长且敬佩的人", "early": "一次早起经历", "changedplan": "近期改变计划的一次经历", "tech": "遇到过的科技难题", "device": "使用电子设备遇到的问题（补充题）", "noresponse": "长时间没收到回复的信息", "waste": "经常浪费时间的活动", "building": "喜欢去的一栋建筑", "tall": "喜欢或不喜欢的高楼", "boring": "一个无聊的地方", "shorttrip": "经常走但不喜欢的短途行程", "law": "希望颁布的一项新法律", "localnews": "一则人们关注的本地新闻", "goal": "你想实现的长期目标", "book": "读过的一本精彩的书", "interview": "被采访的一位名人"};
+  const nodeButtons = [...app.querySelectorAll('.kr-story-node')];
+  const storyDetail = app.querySelector('#krStoryDetail');
+  function renderStep(index) {
+    const s = storySteps[index];
+    if (!s) return;
+    nodeButtons.forEach((node,i) => {
+      node.classList.toggle('is-selected',i===index);
+      node.setAttribute('aria-pressed',String(i===index));
+    });
+    storyDetail.replaceChildren();
+    const title=document.createElement('h3');title.textContent=s.title;
+    const desc=document.createElement('p');desc.textContent=s.detail;
+    const links=document.createElement('div');links.className='kr-detail-links';
+    const phrase=document.createElement('span');phrase.className='kr-pill';phrase.textContent='🧩 '+s.phrase;
+    links.appendChild(phrase);
+    s.topics.forEach(id=>{
+      const btn=document.createElement('button');btn.type='button';btn.className='kr-pill';
+      btn.dataset.openTopic=id;btn.textContent='↗ '+(topicTitles[id]||id);links.appendChild(btn);
+    });
+    storyDetail.append(title,desc,links);
+  }
+  nodeButtons.forEach((node,i)=>node.addEventListener('click',()=>renderStep(i)));
+  const filterButtons=[...app.querySelectorAll('.kr-filter')];
+  const cards=[...app.querySelectorAll('.kr-topic-card')];
+  const filterCount=app.querySelector('#krFilterCount');
+  function setFilter(which) {
+    filterButtons.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===which)));
+    let count=0;
+    cards.forEach(card=>{
+      const rating=Number(card.dataset.rating);
+      const show=which==='all'||(which==='high'&&rating>=4)||(which==='3'&&rating===3)||(which==='2'&&rating===2);
+      card.hidden=!show;
+      if (show) count++; else card.open=false;
+    });
+    filterCount.textContent='显示 '+count+' / '+cards.length+' 题';
+  }
+  filterButtons.forEach(btn=>btn.addEventListener('click',()=>setFilter(btn.dataset.filter)));
+  app.addEventListener('click',event=>{
+    const button=event.target.closest('[data-open-topic]');
+    if(!button||!app.contains(button))return;
+    const card=app.querySelector('[data-topic="'+button.dataset.openTopic+'"]');
+    if(!card)return;
+    setFilter('all');
+    openTab('topics');
+    cards.forEach(el=>{if(el!==card)el.open=false});
+    card.open=true;
+    card.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  cards.forEach(card=>card.addEventListener('toggle',()=>{
+    if (!card.open)return;
+    cards.forEach(other=>{if(other!==card&&other.open)other.open=false});
+  }));
+  app.classList.add('is-enhanced');
+  openTab(valid.has(hashTab)?hashTab:'story',false);
+})();
+</script>
