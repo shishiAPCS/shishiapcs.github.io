@@ -271,7 +271,7 @@ String[][] seatingChart = {
 | 创建方式 | 示例 | 适合情况 |
 |---|---|---|
 | 指定尺寸，用默认值填充 | `new int[3][4]` | 已知行数、列数，稍后再逐个赋值 |
-| 使用初始化列表 | `{{1, 2}, {3, 4}}` | 创建时就知道要保存的数据 |
+| 使用初始化列表 | `{% raw %}{{1, 2}, {3, 4}}{% endraw %}` | 创建时就知道要保存的数据 |
 
 # 6. 读取和修改元素（Get and Set Values）
 
@@ -814,8 +814,3 @@ D. 二维数组不能保存对象引用。
 ---
 
 **下一课预告：** 4.11 学会了如何创建二维数组，并准确找到某个单元格。4.12 将继续学习如何使用 **nested loops（嵌套循环）** 按行或按列遍历整张表格。
-
-**主要参考资料：**
-
-- [Runestone Academy — CSAwesome2 4.11: 2D Array Creation and Access](https://runestone.academy/ns/books/published/csawesome2/topic-4-11-2Darrays.html?mode=browsing)
-- [College Board — AP Computer Science A Course and Exam Description (Effective Fall 2025)，Topic 4.11，印刷页 114–115](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf#page=121)
