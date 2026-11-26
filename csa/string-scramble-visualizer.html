@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>String Scramble Visualizer | AP CSA</title>
+<style>
+:root {
+  color-scheme: light;
+  --ink:#17263b; --muted:#5c6c80; --bg:#f2f5fa; --surface:#fff;
+  --line:#dce3ed; --blue:#2558c6; --blue-light:#e7efff; --teal:#087d71;
+  --teal-light:#e3f5ed; --orange:#af5b0a; --orange-light:#fff0d8;
+  --navy:#142338; --code:#dce8f5; --current:#224578; --code-line:#8093ad;
+  --radius:16px; --shadow:0 2px 8px #14233808;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);font-size:15px;line-height:1.5}
+button,input,select{font:inherit}button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.43}
+:focus-visible{outline:3px solid #f2b45d;outline-offset:3px}
+a{color:var(--blue)}
+.page{max-width:1600px;padding:22px 26px 18px;margin:auto}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.11em;color:var(--blue);text-transform:uppercase}
+h1{font-size:clamp(26px,3.2vw,39px);line-height:1.12;margin:3px 0 5px;letter-spacing:-.035em}
+header p{margin:0;color:var(--muted);font-size:14px}
+.badge{background:white;border:1px solid var(--line);padding:7px 12px;border-radius:10px;font-weight:750;font-size:13px;white-space:nowrap}
+.lesson-rule{display:flex;gap:12px;align-items:center;background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line);padding:11px 14px;border-radius:12px;margin-bottom:16px}
+.rule-letters{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.rule-letters span{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:17px;font-weight:800;padding:3px 8px;border-radius:6px;border:1px solid #d6dfe9}
+.rule-letters .a{background:var(--blue-light);color:var(--blue)}.rule-letters .b{background:var(--orange-light);color:var(--orange)}
+.rule-letters b{padding:0 3px;color:var(--muted)}
+.lesson-rule p{margin:0;font-size:13px;color:var(--muted)}
+.lesson-rule strong{color:var(--ink)}
+.lab{display:grid;grid-template-columns:minmax(425px, .95fr) minmax(480px, 1.15fr);gap:16px;align-items:start}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);min-width:0}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 10px}
+.panel-head h2{font-size:17px;letter-spacing:-.01em;margin:0}
+.panel-head small{color:var(--muted);font-size:12px}
+.mode{display:flex;gap:4px;margin:0 14px 12px;background:#eef2f7;border:1px solid var(--line);border-radius:10px;padding:4px}
+.mode button{flex:1;border:0;background:transparent;color:#56677d;font-size:14px;font-weight:750;border-radius:7px;padding:8px}
+.mode button[aria-pressed="true"]{background:var(--surface);color:var(--blue);box-shadow:0 1px 4px #1322381b}
+.codebox{background:var(--navy);border-radius:0;color:var(--code);overflow:hidden}
+.code-toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:8px 13px;border-bottom:1px solid #35475e;background:#1a2d45}
+.code-toolbar span{font-size:12px;color:#a7b9d0;font-weight:650}
+.code-toolbar button{border:1px solid #48617b;color:#e1ecf9;background:transparent;border-radius:7px;padding:4px 9px;font-size:12px}
+.code-scroll{overflow:auto;max-height:460px;padding:7px 0}
+.code-line{display:flex;align-items:center;white-space:pre;font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;font-size:clamp(11px,1.05vw,14px);min-height:22px;line-height:1.55;padding:1px 12px 1px 0;border-left:4px solid transparent}
+.code-line .ln{flex:0 0 31px;margin-right:8px;color:#8295ad;text-align:right;font-size:11.5px;user-select:none}
+.code-line.current{background:var(--current);border-left-color:#76b7ff;color:#fff}
+.code-line.current .ln{color:#fff;font-weight:700}
+.code-line.previous:not(.current){background:#1d344e;border-left-color:#52749c}
+.code-line .kw{color:#a4c8ff;font-weight:650}.code-line .string{color:#f8cc88}
+.code-toggles{display:flex;flex-wrap:wrap;gap:15px;padding:10px 14px;font-size:12px;color:var(--muted)}
+.code-toggles label{display:inline-flex;align-items:center;gap:5px}
+input[type=checkbox]{accent-color:var(--blue)}
+.comparison{padding:0 14px 14px}
+.note{background:#f5f8ff;border:1px solid #dce7ff;border-radius:11px;padding:10px 12px;font-size:13px;color:#425572}
+.note strong{color:#1e4d9f}
+.note code{font-size:12px;color:#204b91}
+.visual-body{padding:0 16px 16px}
+.controls{display:grid;grid-template-columns:minmax(160px,1fr) auto;gap:8px 10px;align-items:end}
+.field label,.control-label{display:block;font-size:12px;font-weight:750;color:var(--muted);margin-bottom:5px}
+.field input{width:100%;height:39px;border:1px solid #bbc9d9;border-radius:9px;padding:7px 11px;color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;letter-spacing:.08em;background:#fff}
+.btn{border:1px solid #c9d4e1;border-radius:9px;background:white;color:var(--ink);padding:8px 13px;font-weight:700;font-size:13px;line-height:1.5;white-space:nowrap}
+.btn:hover:not(:disabled){background:#eef3fa}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+.btn.primary:hover:not(:disabled){background:#1b47aa}
+.btn.play{background:#e7f4ed;color:#116a4f;border:1px solid #bde1cf}
+.btn.play:hover:not(:disabled){background:#d8efdf}
+.examples{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:9px 0 13px}
+.examples span{font-size:12px;color:var(--muted);font-weight:700;margin-right:2px}
+.example{background:#f1f5fa;border:1px solid var(--line);color:#435870;border-radius:7px;font-size:12px;font-weight:750;padding:4px 7px;font-family:ui-monospace,SFMono-Regular,monospace}
+.example.active{color:var(--blue);background:var(--blue-light);border-color:#b8cbf8}
+.error{display:none;color:#a6272e;font-size:12px;margin:5px 0 0;font-weight:650}
+.error.show{display:block}
+.execution{border:1px solid var(--line);border-radius:12px;background:#fbfcff;padding:12px}
+.array-label{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0 0 7px;font-size:13px;font-weight:800}
+.array-label small{color:var(--muted);font-size:11px;font-weight:550}
+.tiles-scroll{overflow-x:auto;padding:0 0 4px}
+.tiles{display:flex;gap:5px;min-width:max-content;align-items:flex-end;min-height:63px}
+.tile{width:clamp(30px,3.1vw,45px);height:40px;position:relative;border-radius:8px;background:white;border:1.5px solid #d3dfec;display:flex;align-items:center;justify-content:center;font-size:clamp(17px,1.65vw,23px);font-weight:800;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;transition:background .16s,border-color .16s}
+.tile-wrap{text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
+.tile-index{font-size:10px;line-height:1.1;color:#667b94;font-family:ui-monospace,monospace}
+.tile.processed{background:var(--teal-light);border-color:#b5dec9;color:#24725b}
+.tile.current{background:var(--blue-light);border-color:#477add;color:#18499f;border-width:2px}
+.tile.next{background:var(--orange-light);border-color:#e0a049;color:#924d08;border-width:2px}
+.tile.result{background:#dff4eb;color:#176f54;border-color:#b3dfc8}
+.tile.appended{animation:pop .29s ease-out;background:#d2ecff;border-color:#4d8cdb;color:#144c9b}
+.tile.swapped{background:#ffe9c7;color:#8d4901;border-color:#dda14c;animation:pop .28s ease-out}
+.tile.placeholder{background:#f7f9fc;border:1.5px dashed #ced7e4;color:#c9d2de}
+.empty{font-size:13px;font-style:italic;color:var(--muted);padding:8px 0}
+@keyframes pop{0%{transform:translateY(5px) scale(.94)}70%{transform:translateY(-2px) scale(1.04)}100%{transform:none}}
+.output-group{margin-top:10px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:8px 0 0}
+.legend span{display:flex;align-items:center;gap:5px}
+.swatch{width:12px;height:12px;border-radius:3px;display:inline-block;border:1px solid #ccc}
+.swatch.current{background:var(--blue-light);border-color:#477add}
+.swatch.next{background:var(--orange-light);border-color:#e0a049}
+.swatch.processed{background:var(--teal-light);border-color:#b5dec9}
+.action{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:center;margin:11px 0;background:#f0f5ff;border:1px solid #d7e5ff;border-radius:11px;padding:10px 12px;min-height:76px}
+.action.swap{background:var(--orange-light);border-color:#f0d19f}
+.action.keep,.action.done{background:#eaf7ef;border-color:#bfe1ce}
+.action-tag{font-size:10px;letter-spacing:.06em;font-weight:850;text-transform:uppercase;color:var(--blue);margin-bottom:2px}
+.swap .action-tag{color:var(--orange)}.keep .action-tag,.done .action-tag{color:var(--teal)}
+.action-title{font-size:15px;font-weight:800;line-height:1.25;margin-bottom:3px}
+.action-text{font-size:12px;color:#4a6078;line-height:1.35}
+.action-example{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(15px,1.7vw,22px);font-weight:850;white-space:normal;align-self:center;text-align:right;max-width:230px;overflow-wrap:anywhere}
+.var-grid{display:grid;grid-template-columns:.65fr 1fr 1fr .9fr;gap:8px;margin-top:9px}
+.var{background:#f5f7fb;border:1px solid var(--line);border-radius:9px;padding:7px 9px;min-width:0}
+.var label{display:block;font-size:10px;font-weight:750;color:var(--muted);white-space:nowrap}
+.var strong{display:block;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:17px;min-height:26px;line-height:1.5;overflow:hidden;text-overflow:ellipsis}
+.result-value{padding:7px 10px;background:#f5f7fb;border:1px solid var(--line);border-radius:9px;margin-top:8px;display:flex;align-items:baseline;gap:10px;min-width:0}
+.result-value span{font-size:11px;font-weight:750;color:var(--muted)}
+.result-value strong{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:15px;color:#0c6c52;overflow-wrap:anywhere}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:7px;padding:8px 1px;color:var(--muted);font-size:12px}
+.stats b{color:var(--ink);font-variant-numeric:tabular-nums}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.player .btn{padding:8px 12px}
+.speed{display:flex;gap:7px;align-items:center;margin-left:auto}
+.speed label{color:var(--muted);font-size:12px;font-weight:700}
+.speed input{width:76px;accent-color:var(--blue)}
+.speed output{min-width:47px;color:var(--muted);font-size:11px;text-align:right;font-variant-numeric:tabular-nums}
+.progress{height:5px;margin-top:10px;border-radius:10px;background:#e8edf4;overflow:hidden}
+.progress-bar{height:100%;background:#4878d5;border-radius:10px;transition:width .16s}
+.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px;margin-top:14px;flex-wrap:wrap}
+.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+.key{font-size:11px;font-family:inherit;border:1px solid #cbd4e0;background:white;border-radius:4px;padding:1px 5px}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1100px){.page{padding:16px}.lab{grid-template-columns:minmax(355px, 1fr) minmax(400px,1.1fr)}.code-line{font-size:12px}.speed{margin-left:0}.action-example{font-size:16px}}
+@media(max-width:825px){.lab{display:flex;flex-direction:column}.lab .panel{width:100%}.visual-panel{order:-1}.code-scroll{max-height:360px}.code-line{font-size:13px}.page{padding:12px}.lesson-rule{align-items:flex-start}.tile{width:38px;height:40px}.var-grid{gap:5px}.var{padding:7px}.player .btn{flex:1}.speed{width:100%;justify-content:flex-end}.action-example{font-size:16px}}
+@media(max-width:440px){.panel-head,.visual-body{padding-left:10px;padding-right:10px}.lesson-rule{flex-direction:column;gap:6px}.action{grid-template-columns:1fr}.action-example{text-align:left;max-width:100%}.code-line{font-size:11.5px}.code-line .ln{flex-basis:23px;margin-right:6px}.var-grid{grid-template-columns:repeat(2,1fr)}.tile{width:34px;height:36px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="page">
+<header>
+  <div>
+    <div class="kicker">AP Computer Science A · Iteration</div>
+    <h1>String Scramble Visualizer</h1>
+    <p>Trace the Java solution and watch how the loop builds a new String.</p>
+  </div>
+  <div class="badge">2014 AP CSA FRQ · Q1(a)</div>
+</header>
+<div class="lesson-rule">
+  <div class="rule-letters" aria-label="A B becomes B A"><span class="a">A</span><span class="b">B</span><b>→</b><span class="b">B</span><span class="a">A</span></div>
+  <p><strong>The rule:</strong> scan left to right. When an A is immediately followed by a letter other than A, append the two letters in reverse order and skip both positions. Otherwise, keep the current letter.</p>
+</div>
+<div class="lab">
+  <section class="panel code-panel" aria-labelledby="codeTitle">
+    <div class="panel-head"><h2 id="codeTitle">Java solution</h2><small>Line-by-line trace</small></div>
+    <div class="mode" aria-label="Choose loop solution">
+      <button type="button" id="whileMode" aria-pressed="true">while loop</button>
+      <button type="button" id="forMode" aria-pressed="false">for loop</button>
+    </div>
+    <div class="codebox">
+      <div class="code-toolbar"><span>ScrambledStrings.java · scrambleWord()</span><button type="button" id="copy">Copy code</button></div>
+      <div class="code-scroll" id="codeScroll" aria-label="Java source code"><div id="code"></div></div>
+    </div>
+    <div class="code-toggles">
+      <label><input type="checkbox" id="follow" checked> Follow code</label>
+      <label><input type="checkbox" id="previousLine" checked> Show previous line</label>
+      <span><span style="color:#2558c6">■</span> Current line</span>
+    </div>
+    <div class="comparison"><div class="note" id="loopNote"></div></div>
+  </section>
+  <section class="panel visual-panel" aria-labelledby="traceTitle">
+    <div class="panel-head"><h2 id="traceTitle">Execution visualizer</h2><small id="modeLabel">while loop</small></div>
+    <div class="visual-body">
+      <form class="controls" id="wordForm">
+        <div class="field"><label for="wordInput">Input word (A–Z, or empty)</label><input id="wordInput" type="text" maxlength="40" autocomplete="off" spellcheck="false" autocapitalize="characters" value="ABRACADABRA"></div>
+        <button class="btn primary" type="submit">Load word</button>
+      </form>
+      <p class="error" role="alert" id="error">Use letters A–Z only. An empty string is also valid.</p>
+      <div class="examples" id="examples"><span>Examples:</span></div>
+      <div class="execution">
+        <div class="array-label"><span>Original <code>word</code></span><small>Unchanged input</small></div>
+        <div class="tiles-scroll" id="sourceScroll"><div class="tiles" id="source"></div></div>
+        <div class="output-group">
+          <div class="array-label"><span>New <code>result</code></span><small>Built left to right</small></div>
+          <div class="tiles-scroll" id="outputScroll"><div class="tiles" id="output"></div></div>
+        </div>
+        <div class="legend"><span><i class="swatch current"></i>Current index</span><span><i class="swatch next"></i>Next character</span><span><i class="swatch processed"></i>Already processed</span></div>
+      </div>
+      <div class="action" id="action" aria-live="polite" aria-atomic="true">
+        <div><div class="action-tag" id="actionTag"></div><div class="action-title" id="actionTitle"></div><div class="action-text" id="actionText"></div></div>
+        <div class="action-example" id="actionExample"></div>
+      </div>
+      <div class="var-grid">
+        <div class="var"><label>i</label><strong id="valueI">—</strong></div>
+        <div class="var"><label>first</label><strong id="valueFirst">—</strong></div>
+        <div class="var"><label>Next letter*</label><strong id="valueNext">—</strong></div>
+        <div class="var"><label>word.length()</label><strong id="valueLength">11</strong></div>
+      </div>
+      <div class="result-value"><span>result</span><strong id="resultValue">""</strong></div>
+      <div class="stats"><span>Step <b id="stepNum">0</b> / <span id="stepTotal">0</span></span><span>Iterations: <b id="iterations">0</b></span><span>Swaps: <b id="swaps">0</b></span><span>Processed: <b id="processed">0</b></span></div>
+      <div class="player">
+        <button type="button" class="btn" id="back" title="Previous step (Left arrow)">← Back</button>
+        <button type="button" class="btn primary" id="step" title="Next step (Right arrow)">Step →</button>
+        <button type="button" class="btn play" id="play" title="Play or pause (Space)">▶ Play</button>
+        <button type="button" class="btn" id="reset">Reset</button>
+        <div class="speed"><label for="speed">Delay</label><input id="speed" type="range" min="200" max="1800" step="100" value="650" aria-label="Milliseconds per step"><output id="speedValue" for="speed">650 ms</output></div>
+      </div>
+      <div class="progress" role="progressbar" id="progress" aria-label="Trace progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+    </div>
+  </section>
+</div>
+<div class="footer">
+  <span>* Next letter is a visual aid, not a separate variable in the Java method. <a href="https://runestone.academy/ns/books/published/csawesome2/FRQstringScrambleA.html?mode=browsing" target="_blank" rel="noopener">Original FRQ on Runestone Academy</a>.</span>
+  <span>Keyboard: <span class="key">←</span> <span class="key">→</span> step · <span class="key">Space</span> play/pause</span>
+</div>
+<noscript><p style="padding:12px;color:#a6272e">Please enable JavaScript to use the interactive trace.</p></noscript>
+</main>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const solutions = {
+  while: [
+    'public static String scrambleWord(String word)',
+    '{',
+    '    String result = "";',
+    '    int i = 0;',
+    '    while (i < word.length())',
+    '    {',
+    '        String first = word.substring(i, i + 1);',
+    '        if (i + 1 < word.length()',
+    '            && first.equals("A")',
+    '            && !word.substring(i + 1, i + 2).equals("A"))',
+    '        {',
+    '            result += word.substring(i + 1, i + 2) + first;',
+    '            i += 2;',
+    '        }',
+    '        else',
+    '        {',
+    '            result += first;',
+    '            i++;',
+    '        }',
+    '    }',
+    '    return result;',
+    '}'
+  ],
+  for: [
+    'public static String scrambleWord(String word)',
+    '{',
+    '    String result = "";',
+    '    for (int i = 0; i < word.length(); i++)',
+    '    {',
+    '        String first = word.substring(i, i + 1);',
+    '        if (i + 1 < word.length()',
+    '            && first.equals("A")',
+    '            && !word.substring(i + 1, i + 2).equals("A"))',
+    '        {',
+    '            result += word.substring(i + 1, i + 2) + first;',
+    '            i++;',
+    '        }',
+    '        else',
+    '        {',
+    '            result += first;',
+    '        }',
+    '    }',
+    '    return result;',
+    '}'
+  ]
+};
+const lines = {
+  while: {init:3,indexInit:4,loop:5,first:7,guard:8,isA:9,nextA:10,swap:12,extra:13,keep:17,increment:18,ret:21},
+  for: {init:3,indexInit:4,loop:4,first:6,guard:7,isA:8,nextA:9,swap:11,extra:12,keep:16,increment:4,ret:19}
+};
+const examples = ["ABRACADABRA","TAN","AARDVARK","WHOA","EGGS","AMAZING","A",""];
+let word="ABRACADABRA", mode="while", trace=[], pos=0, timer=null;
+function quote(s){return '"'+s+'"';}
+// Generate snapshots of the actual control flow of each displayed Java method.
+// The guard and both && operands are separate steps, respecting Java short-circuit evaluation.
+function buildTrace(w, m) {
+  const L=lines[m], frames=[];
+  let i=null, result=null, first=null, iterations=0, swaps=0;
+  function push(line, title, text, opts={}) {
+    frames.push({line,title,text,i,result,first,iterations,swaps,focus:null,next:null,append:0,kind:"normal",tag:"Trace",example:"",...opts});
+  }
+  push(0,"Ready to trace","Choose Step to run one Java statement or condition at a time.",{tag:"Ready",example:quote(w)});
+  result="";
+  push(L.init,"Initialize the result","Create an empty String to accumulate the answer.",{tag:"Initialize",example:'result = ""'});
+  i=0;
+  push(L.indexInit,"Initialize the index","The first character is at index 0.",{tag:"Initialize",example:"i = 0",focus:i});
+  while(true){
+    const valid=i<w.length;
+    first=null;
+    push(L.loop,valid?"Enter the loop":"Loop condition is false",
+      valid?"The current index is within the original String.":"Every input character has been processed.",{tag:"Loop condition",example:i+" < "+w.length+" → "+valid,focus:valid?i:null});
+    if(!valid) break;
+    iterations++;
+    first=w.slice(i,i+1);
+    const probe=i;
+    push(L.first,"Read the current character","substring(i, i + 1) extracts exactly one character.",{tag:"String method",example:"first = "+quote(first),focus:probe});
+    const exists=i+1<w.length;
+    push(L.guard,exists?"A next character exists":"No next character",
+      exists?"It is safe to evaluate the next parts of the condition.":"The first operand is false. Java skips the remaining && operands, avoiding an out-of-bounds substring.",{tag:"Boundary check",example:(i+1)+" < "+w.length+" → "+exists,focus:probe,next:exists?i+1:null});
+    let swap=false;
+    if(exists){
+      const isA=first==="A";
+      push(L.isA,isA?"The first character is A":"The first character is not A",
+        isA?"Check whether the next letter is different from A.":"The condition is false. Java does not evaluate the final operand.",{tag:"Decision",example:quote(first)+'.equals("A") → '+isA,focus:probe,next:i+1});
+      if(isA){
+        const second=w.slice(i+1,i+2);
+        swap=second!=="A";
+        push(L.nextA,swap?"Swap is required":"Both letters are A",
+          swap?"The pair matches the rule. Append the next letter first, then A.":"AA does not satisfy the rule. Keep the first A and reconsider the second A on the next iteration.",{tag:"Decision",kind:swap?"swap":"normal",example:quote(first+second),focus:probe,next:i+1});
+      }
+    }
+    if(swap){
+      const second=w.slice(i+1,i+2);
+      result+=second+first;
+      swaps++;
+      push(L.swap,"Append the swapped pair","The original word stays unchanged; the new result receives the two letters in reverse order.",{kind:"swap",tag:"Swap · append 2",example:first+" "+second+" → "+second+" "+first,focus:probe,next:probe+1,append:2});
+      if(m==="while"){
+        i+=2;
+        push(L.extra,"Advance by two positions","Both letters have been consumed. Do not process either position again.",{kind:"swap",tag:"Index update",example:probe+" → "+i,focus:i<w.length?i:null});
+      }else{
+        i++;
+        push(L.extra,"Extra increment inside the loop","After a swap, the body advances i once. The for-loop update will advance it once more.",{kind:"swap",tag:"Index update · 1 of 2",example:probe+" → "+i,focus:i});
+      }
+    }else{
+      result+=first;
+      push(L.keep,"Keep the current letter","Append only this character. Any next letter remains available for the following iteration.",{kind:"keep",tag:"Keep · append 1",example:first+" → "+first,focus:probe,append:1});
+      if(m==="while"){
+        i++;
+        push(L.increment,"Advance by one position","Only one input position has been consumed.",{kind:"keep",tag:"Index update",example:probe+" → "+i,focus:i<w.length?i:null});
+      }
+    }
+    if(m==="for"){
+      first=null; // first is scoped to the for-loop body.
+      const old=i;
+      i++;
+      push(L.increment,"Run the for-loop update",swap?"The header increment completes the two-position advance.":"The header increment advances one position after keeping a letter.",{kind:swap?"swap":"keep",tag:swap?"Index update · 2 of 2":"Index update",example:old+" → "+i,focus:i<w.length?i:null});
+    }
+  }
+  if(m==="for") i=null; // for-loop index is out of scope after the loop
+  push(L.ret,"Return the finished String","The result contains all input letters, with only the required non-overlapping pairs reversed.",{kind:"done",tag:"Complete",example:result.length<=16?quote(result):"Returned ✓"});
+  return frames;
+}
+function escapeHTML(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function highlight(s){
+  const rx=/("(?:[^"\\]|\\.)*")|\b(public|static|String|int|while|for|if|else|return)\b/g;
+  let out="", last=0;
+  for(const match of s.matchAll(rx)){
+    out+=escapeHTML(s.slice(last,match.index));
+    out+='<span class="'+(match[1]?'string':'kw')+'">'+escapeHTML(match[0])+'</span>';
+    last=match.index+match[0].length;
+  }
+  return out+escapeHTML(s.slice(last));
+}
+function renderCode(){
+  $("code").innerHTML=solutions[mode].map((s,k)=>'<div class="code-line" data-line="'+(k+1)+'"><span class="ln" aria-hidden="true">'+(k+1)+'</span><span>'+highlight(s)+'</span></div>').join("");
+  $("whileMode").setAttribute("aria-pressed",String(mode==="while"));
+  $("forMode").setAttribute("aria-pressed",String(mode==="for"));
+  $("modeLabel").textContent=mode+" loop";
+  $("loopNote").innerHTML=mode==="while" ?
+    '<strong>Why while?</strong> The index update is explicit in each branch: <code>i += 2</code> after a swap, or <code>i++</code> after keeping one letter.' :
+    '<strong>Why for?</strong> The header always runs <code>i++</code>. A swap also runs <code>i++</code> inside the body, so the total advance is two positions.';
+}
+function tile(ch,index,cls,label){
+  const wrap=document.createElement("div");wrap.className="tile-wrap";
+  const idx=document.createElement("div");idx.className="tile-index";idx.textContent=index;
+  const box=document.createElement("div");box.className="tile "+cls;box.textContent=ch;box.setAttribute("aria-label",label);box.title=label;
+  wrap.append(idx,box);return wrap;
+}
+function setText(id,value){$(id).textContent=value;}
+function render(){
+  const f=trace[pos], prev=trace[pos-1];
+  const out=f.result??"", consumed=out.length;
+  const src=$("source"), output=$("output");
+  src.replaceChildren();output.replaceChildren();
+  if(!word.length){
+    const a=document.createElement("span");a.className="empty";a.textContent='"" — empty input';src.append(a);
+    const b=a.cloneNode();b.textContent=f.result===null?'Result not initialized':'"" — empty result';output.append(b);
+  }else{
+    for(let n=0;n<word.length;n++){
+      let cls=n<consumed?"processed":"";
+      if(n===f.focus) cls="current";
+      else if(n===f.next) cls="next";
+      src.append(tile(word[n],n,cls,"Input index "+n+": "+word[n]+(n===f.focus?", current index":n===f.next?", next letter":n<consumed?", processed":"")));
+      const ch=out[n]??"";
+      let outCls=n>=out.length?"placeholder":"result";
+      if(f.append && n>=out.length-f.append && n<out.length) outCls=f.kind==="swap"?"swapped":"appended";
+      output.append(tile(ch,n,outCls,n<out.length?"Result index "+n+": "+ch:"Result position "+n+", not yet filled"));
+    }
+  }
+  const act=$("action");act.className="action "+f.kind;
+  setText("actionTag",f.tag);setText("actionTitle",f.title);setText("actionText",f.text);setText("actionExample",f.example);
+  setText("valueI",f.i===null?"—":f.i);setText("valueFirst",f.first===null?"—":quote(f.first));
+  setText("valueNext",f.next!==null?quote(word[f.next]):"—");
+  setText("valueLength",word.length);
+  setText("resultValue",f.result===null?"—":quote(f.result));
+  setText("stepNum",pos);setText("stepTotal",trace.length-1);setText("iterations",f.iterations);setText("swaps",f.swaps);setText("processed",consumed+" / "+word.length);
+  $("back").disabled=pos===0;$("step").disabled=pos===trace.length-1;$("play").disabled=pos===trace.length-1;
+  const pct=Math.round(pos*100/(trace.length-1));
+  $("progressBar").style.width=pct+"%";$("progress").setAttribute("aria-valuenow",pct);
+  document.querySelectorAll(".code-line").forEach(el=>{
+    const n=Number(el.dataset.line);
+    el.classList.toggle("current",n===f.line);
+    el.classList.toggle("previous",!!prev&&$("previousLine").checked&&n===prev.line&&n!==f.line);
+    if(n===f.line)el.setAttribute("aria-current","step");else el.removeAttribute("aria-current");
+  });
+  if($("follow").checked&&f.line){
+    const cur=$("code").querySelector('[data-line="'+f.line+'"]'), sc=$("codeScroll");
+    if(cur){
+      const a=cur.getBoundingClientRect(), b=sc.getBoundingClientRect();
+      if(a.top<b.top+5||a.bottom>b.bottom-5)sc.scrollTop+=a.top-b.top-sc.clientHeight/2+a.height/2;
+    }
+  }
+  // Follow the scan on long inputs without changing the surrounding page scroll position.
+  function followTile(container, holder, index){
+    if(index===null||index<0||index>=holder.children.length)return;
+    const child=holder.children[index], a=child.getBoundingClientRect(), b=container.getBoundingClientRect();
+    if(a.left<b.left+2)container.scrollLeft-=b.left-a.left+8;
+    else if(a.right>b.right-2)container.scrollLeft+=a.right-b.right+8;
+  }
+  if(f.focus!==null){followTile($("sourceScroll"),src,f.focus);if(f.next!==null)followTile($("sourceScroll"),src,f.next);}
+  if(consumed)followTile($("outputScroll"),output,consumed-1);
+  document.querySelectorAll(".example").forEach(b=>b.classList.toggle("active",b.dataset.word===word));
+}
+function stop(){if(timer!==null){clearTimeout(timer);timer=null;}setText("play","▶ Play");}
+function forward(){if(pos<trace.length-1){pos++;render();}if(pos===trace.length-1)stop();}
+function schedule(){timer=setTimeout(()=>{timer=null;forward();if(pos<trace.length-1&&$("play").textContent==="❚❚ Pause")schedule();},Number($("speed").value));}
+function togglePlay(){if(pos===trace.length-1)return;if(timer!==null){stop();return;}setText("play","❚❚ Pause");schedule();}
+function resetTrace(){stop();trace=buildTrace(word,mode);pos=0;$("sourceScroll").scrollLeft=0;$("outputScroll").scrollLeft=0;$("codeScroll").scrollTop=0;renderCode();render();}
+function loadWord(w){
+  stop();
+  if(!/^[A-Za-z]{0,40}$/.test(w)){$("error").classList.add("show");$("wordInput").setAttribute("aria-invalid","true");return;}
+  $("error").classList.remove("show");$("wordInput").removeAttribute("aria-invalid");
+  word=w.toUpperCase();$("wordInput").value=word;resetTrace();
+}
+function setMode(m){if(m!==mode){mode=m;resetTrace();}}
+$("wordForm").addEventListener("submit",e=>{e.preventDefault();loadWord($("wordInput").value.trim());});
+$("wordInput").addEventListener("input",()=>{$("error").classList.remove("show");$("wordInput").removeAttribute("aria-invalid");});
+examples.forEach(w=>{const b=document.createElement("button");b.type="button";b.className="example";b.dataset.word=w;b.textContent=w||'""';b.title=w?("Load "+w):"Load the empty string";b.addEventListener("click",()=>loadWord(w));$("examples").append(b);});
+$("whileMode").onclick=()=>setMode("while");$("forMode").onclick=()=>setMode("for");
+$("step").onclick=()=>{stop();forward();};
+$("back").onclick=()=>{stop();if(pos>0){pos--;render();}};
+$("play").onclick=togglePlay;$("reset").onclick=resetTrace;
+$("speed").addEventListener("input",()=>{setText("speedValue",$("speed").value+" ms");if(timer!==null){clearTimeout(timer);timer=null;schedule();}});
+$("previousLine").onchange=render;$("follow").onchange=render;
+$("copy").onclick=async()=>{
+  const text=solutions[mode].join("\n");
+  try {
+    if(navigator.clipboard && window.isSecureContext)await navigator.clipboard.writeText(text);
+    else{const t=document.createElement("textarea");t.value=text;t.style.position="fixed";t.style.opacity="0";document.body.append(t);t.select();const ok=document.execCommand("copy");t.remove();if(!ok)throw Error("copy unavailable");}
+    setText("copy","Copied!");
+  } catch {setText("copy","Select code to copy");}
+  setTimeout(()=>setText("copy","Copy code"),1500);
+};
+document.addEventListener("keydown",e=>{
+  if(e.ctrlKey||e.metaKey||e.altKey||e.shiftKey||["INPUT","TEXTAREA","SELECT","BUTTON","A"].includes(e.target.tagName))return;
+  if(e.key==="ArrowRight"){e.preventDefault();stop();forward();}
+  else if(e.key==="ArrowLeft"){e.preventDefault();stop();if(pos>0){pos--;render();}}
+  else if(e.key===" "){e.preventDefault();togglePlay();}
+});
+resetTrace();
+</script>
+</body>
+</html>
